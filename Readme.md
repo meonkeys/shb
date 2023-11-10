@@ -1,6 +1,6 @@
-# Reviewing
+# Dear Reviewer
 
-**THANK YOU**!
+**THANK YOU**! ❤️🧡💛💚💙💜
 
 I need and appreciate your open, honest feedback. With your help this book will be better.
 
