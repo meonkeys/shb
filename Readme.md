@@ -22,7 +22,11 @@ I'd like to wait to release everything publicly once it is ready, so please help
 
 ## Book formats
 
-I use Pandoc to produce multiple typeset versions of the book from a single source file: `src/book.md`. Formatted outputs are available at <https://github.com/meonkeys/shb-review/releases/>.
+I use [Pandoc](https://pandoc.org) to produce multiple typeset versions of the book from a single source file: `src/book.md`.
+
+[Download EPUB, PDF, and HTML versions here](https://github.com/meonkeys/shb-review/releases/).
+
+The book source is Pandoc-specific Markdown. GitHub will try to render the Markdown in a web browser and fail in most respects.
 
 The `Makefile` in `src/` generates an EPUB, a HTML file, and printable and screen-friendly PDFs.
 
