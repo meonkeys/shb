@@ -28,10 +28,13 @@ If you want to generate your own typeset outputs, run `./typeset.sh`. See "Prere
 
 ## Feedback ideas
 
-Here's what I'm looking for:
+By _feedback_ I mean, well, anything you're willing and able to help with!
+
+Here are some ideas:
 
 * What are your first impressions? Cover, table of contents, font, style, page size, book length, etc.
 * Any/all factual, spelling, grammatical, and structural errors.
+* Overall manuscript critique, comprehensive or line edits, copy-editing, proofreading.
 * Inscrutable thrust of a section. Does it make sense what I'm trying to convey and how?
 * Inconsistencies in voice, level of detail, narrative flow.
 * Anywhere a diagram or photo would significantly help to illustrate a point.
@@ -71,3 +74,23 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 ## Copyright and license
 
 This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen. All rights reserved.
+
+## Editing stages reference
+
+From <https://www.ingramspark.com/how-to-self-publish-a-book>...
+
+### Manuscript Critique
+
+This is a high-level examination of your manuscript. It looks at things like narrative voice, plot, and character development. With this type of critique, editors give feedback on items that will help improve your overall story.
+
+### Comprehensive Edit / Line Edit
+
+A comprehensive edit addresses structural issues (similar to a manuscript critique), but it also involves a line edit, which looks closely at writing style and language. With a line edit, an editor focuses on the use of language to communicate your story to a reader.
+
+### Copyedit
+
+A copyedit is often confused with a line edit, but they're very different steps in the editing process. A copyedit reviews technical flaws--issues with spelling, grammar, and punctuation--and looks for internal inconsistencies throughout the text.
+
+### Proofread
+
+This is the final step in the editing process. A proofreader examines the final copy of the manuscript (usually after typesetting) for any awkward page breaks, and he or she might perform some light copyediting.
