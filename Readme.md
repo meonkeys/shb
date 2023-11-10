@@ -67,7 +67,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am13 | remove _Cover art_ section | RESOLVED |
 | am14 | missing _Periodic maintenance_ section (example schedules) | OPEN |
 | am15 | missing style guide | OPEN |
-| am16 | confirm style guide | OPEN |
+| am16 | confirm adherence to style guide | OPEN |
 | am17 | add more photos and illustrations | OPEN |
 | am18 | change _mario_ to use [Duck DNS](https://hub.docker.com/r/linuxserver/duckdns) | OPEN |
 | am19 | PDF and HTML outputs lack cover art | OPEN |
