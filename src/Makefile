@@ -28,7 +28,7 @@ filtered.md: book.md filter.py Makefile
 # - wider left and right margins
 # Note that images are not inlined in HTML.
 SteadfastSelfHosting.html: filtered.md style.inc metadata.yaml Makefile img/*
-	docker run --rm --volume "$(shell pwd):/data" --user $(shell id -u):$(shell id -g) pandoc/core --table-of-contents --toc-depth 2 --standalone --number-sections -t html5 --metadata-file metadata.yaml --highlight-style=tango --include-in-header="style.inc" $< -o $@
+	docker run --rm --volume "$(shell pwd):/data" --user $(shell id -u):$(shell id -g) pandoc/core --table-of-contents --toc-depth 2 --standalone --number-sections -t html5 --metadata-file metadata.yaml --highlight-style=tango --include-in-header="style.inc" --embed-resources $< -o $@
 
 # laptop version (unless/until I set up docker):
 #pandoc --table-of-contents --standalone -t html5 --metadata-file metadata.yaml --highlight-style=tango --include-in-header="style.inc" $< -o $@
