@@ -4,7 +4,9 @@
 
 I need and appreciate your open, honest feedback. With your help this book will be better.
 
-The review deadline is Nov 24, 2023. Please send me feedback in any form: email, text, PRs... whatever is most convenient. Every bit of your feedback helps, even a single sentence. I've got a thick skin so just let me have it as if you're reviewing a book from a complete stranger.
+The review deadline is Nov 24, 2023. I'd like to publish by December 20.
+
+Please send me feedback in any form: email, text, PRs... whatever is most convenient. Every bit of your feedback helps, even a single sentence. I've got a thick skin so just let me have it as if you're reviewing a book from a complete stranger.
 
 I made a list of issues below to capture stuff I'm already aware of and working on. As for what kinds of feedback I'm seeing, please see [Feedback ideas](#feedback-ideas), below.
 
