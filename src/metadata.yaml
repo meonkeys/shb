@@ -1,0 +1,33 @@
+---
+title: Steadfast Self-Hosting
+subtitle: Rapid-Rise Personal Cloud
+author:
+  - Adam Monsen
+# meh, maybe get rid of this
+affiliation: None
+lang: en-US
+mainlang: english
+otherlang: english
+mainfont: DejaVu Sans
+colorlinks: True
+#links-as-notes: True
+cover-image: img/cover.png
+keywords:
+  - self-hosting
+  - data sovereignty
+  - linux
+header-includes:
+  - '\usepackage{xstring}'
+  - '\setlength{\aboverulesep}{0pt}'
+  - '\setlength{\belowrulesep}{0pt}'
+  - '\renewcommand{\arraystretch}{1.3}'
+  - '\makeatletter'
+  - '\patchcmd{\LT@array}{\@mkpream{#2}}{\StrGobbleLeft{#2}{2}[\pream]\StrGobbleRight{\pream}{2}[\pream]\StrSubstitute{\pream}{l}{|l}[\pream]\@mkpream{@{}\pream|@{}}}{}{}'
+  - '\def\midrule{}'
+  - '\apptocmd{\LT@tabularcr}{\hline}{}{}'
+  - '\makeatother'
+# Handy for PDF. use this until I settle on a publication date. Does nothing for HTML (date is not rendered).
+date: \today
+publisher: Sunrise Data Press
+rights: "©2023 Adam Monsen, CC BY-NC-SA 4.0"
+---

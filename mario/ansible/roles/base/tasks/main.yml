@@ -1,0 +1,68 @@
+---
+- name: Configure apt cache
+  apt:
+      cache_valid_time: 86400
+      update_cache: yes
+
+- name: Install packages
+  apt:
+    name:
+      - htop
+      - ufw
+      - zfsutils-linux
+      - zfs-auto-snapshot
+    state: present
+
+- name: Set timezone
+  lineinfile:
+    path: /etc/timezone
+    regexp: '.*'
+    line: "{{ lookup('env', 'TZ') }}"
+  notify:
+    - timedatectl set-timezone
+
+- name: Enable UFW
+  ufw:
+      state: enabled
+
+- name: Disable logging
+  ufw:
+      logging: 'off'
+
+- name: Allow SSH
+  ufw:
+      rule: allow
+      name: OpenSSH
+
+- name: Allow insecure HTTP traffic
+  ufw:
+      rule: allow
+      port: http
+
+# HTTP/3 requires TCP and UDP. This appears to allow both.
+- name: Allow secure HTTP traffic
+  ufw:
+      rule: allow
+      port: https
+
+- name: Allow passwordless sudo
+  copy:
+    src: enable-passwordless-sudo
+    dest: /etc/sudoers.d/
+    owner: root
+    group: root
+    mode: 0400
+
+# This does not affect logging in from a console (e.g. directly connected
+# keyboard and monitor, or a virtual console).
+# 
+# Comment this out to retain the ability to SSH in with username and password.
+- name: Disable tunneled clear text passwords
+  copy:
+    src: disable-ssh-password-auth.conf
+    dest: /etc/ssh/sshd_config.d/
+    owner: root
+    group: root
+    mode: 0400
+  notify:
+    - restart sshd

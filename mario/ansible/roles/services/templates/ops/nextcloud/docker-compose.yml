@@ -1,0 +1,62 @@
+version: '3.5'
+
+services:
+  # FIXME - is there some way to make this service dependent on mail? (see other docker-compose file)
+  app:
+    image: nextcloud:stable
+    environment:
+      MYSQL_HOST: db:3306
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: nextcloud
+      SMTP_HOST: mail
+      REDIS_HOST: redis
+      REDIS_HOST_PASSWORD: redispassword
+      OVERWRITEPROTOCOL: https
+      TRUSTED_PROXIES: traefik_reverse-proxy_1
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nextcloud-https.entrypoints=websecure"
+      - "traefik.http.routers.nextcloud-https.rule=Host(`cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.nextcloud-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only"
+      - "traefik.http.middlewares.nextcloud_headers.headers.stsSeconds=155520011"
+      - "traefik.http.middlewares.nextcloud_headers.headers.stsIncludeSubdomains=true"
+      - "traefik.http.middlewares.nextcloud_headers.headers.stsPreload=true"
+      # These are required for groupware (calendar, contacts, tasks)
+      - "traefik.http.middlewares.nextcloud_redirect.redirectregex.regex=/.well-known/(card|cal)dav"
+      - "traefik.http.middlewares.nextcloud_redirect.redirectregex.replacement=/remote.php/dav/"
+    volumes:
+      - /data/nextcloud/root:/var/www/html:rw
+      - /data/jellyfin/media/tmp-video:/data/tmp-video:rw
+    networks:
+      - nextcloud
+      - mail_default
+      - traefik_default
+    restart: unless-stopped
+  db:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlnextcloudrootpassword
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: nextcloud
+    command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW --skip-innodb-read-only-compressed
+    networks:
+      - nextcloud
+    restart: unless-stopped
+    volumes:
+      - /data/nextcloud/db:/var/lib/mysql
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    command: redis-server --requirepass redispassword
+    networks:
+      - nextcloud
+networks:
+  nextcloud:
+    name: nextcloud
+  mail_default:
+    external: true
+  traefik_default:
+    external: true

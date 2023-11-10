@@ -1,0 +1,159 @@
+---
+# Notes on directory creation:
+# Ansible will automatically create parent directories. When we we mention each
+# parent explicitly it is to ensure owner and group are consistent.
+
+- name: Create root-owned service directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /data
+    - /data/nextcloud
+    - /data/nextcloud/db
+    - /data/nextcloud/root
+    - /data/traefik
+    - /data/traefik/etc
+    - /data/wallabag
+    - /data/wallabag/db
+    - /data/wallabag/home
+    - /data/wallabag/images
+    - /root/ops
+    - /root/ops/dyndns
+    - /root/ops/jellyfin
+    - /root/ops/mail
+    - /root/ops/nextcloud
+    - /root/ops/scratch
+    - /root/ops/scratch/custom
+    - /root/ops/traefik
+    - /root/ops/wallabag
+    - /root/ops/watchtower
+
+# FIXME - simplify this loop code to service names only (see repeated paths below)
+# FIXME - overwrites any changes made directly to files on the server
+- name: Process and sync docker-compose files
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - { src: 'ops/dyndns/docker-compose.yml', dest: '/root/ops/dyndns/docker-compose.yml' }
+    - { src: 'ops/jellyfin/docker-compose.yml', dest: '/root/ops/jellyfin/docker-compose.yml' }
+    - { src: 'ops/mail/docker-compose.yml', dest: '/root/ops/mail/docker-compose.yml' }
+    - { src: 'ops/nextcloud/docker-compose.yml', dest: '/root/ops/nextcloud/docker-compose.yml' }
+    - { src: 'ops/scratch/docker-compose.yml', dest: '/root/ops/scratch/docker-compose.yml' }
+    - { src: 'ops/scratch/custom/Dockerfile', dest: '/root/ops/scratch/custom/Dockerfile' }
+    - { src: 'ops/scratch/custom/webpack.config.js', dest: '/root/ops/scratch/custom/webpack.config.js' }
+    - { src: 'ops/traefik/docker-compose.yml', dest: '/root/ops/traefik/docker-compose.yml' }
+    - { src: 'ops/wallabag/docker-compose.yml', dest: '/root/ops/wallabag/docker-compose.yml' }
+    - { src: 'ops/watchtower/docker-compose.yml', dest: '/root/ops/watchtower/docker-compose.yml' }
+
+- name: Create jellyfin group
+  group:
+    name: "{{ jellyfin_group }}"
+    gid: "{{ jellyfin_gid }}"
+
+- name: Create jellyfin user
+  user:
+    name: jellyfin
+    home: /data/jellyfin/home
+    password_lock: yes
+    uid: "{{ jellyfin_uid }}"
+    group: "{{ jellyfin_group }}"
+    shell: /usr/sbin/nologin
+
+- name: Create jellyfin-owned directories
+  file:
+    path: "{{ item }}"
+    owner: "{{ jellyfin_user }}"
+    group: "{{ jellyfin_group }}"
+    state: directory
+  with_items:
+    - /data/jellyfin
+    - /data/jellyfin/config
+    - /data/jellyfin/home
+    - /data/jellyfin/media
+    - /data/jellyfin/media/home-video
+    - /data/jellyfin/media/movies
+    - /data/jellyfin/media/music
+    - /data/jellyfin/media/tmp-video
+    - /data/jellyfin/media/tv
+
+- name: Check if Nextcloud config file exists
+  stat:
+    path: /data/nextcloud/root/config/config.php
+  register: nextcloud_config
+
+# 'datadirectory' below is an arbitrary choice, it's just something that always
+# should exist in the Nextcloud config file
+
+- name: Fix Nextcloud broken images - use https in cli url per content security policy
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: "\\'overwrite\\.cli\\.url\\'"
+    line: "  'overwrite.cli.url' => 'https://cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}',"
+    insertafter: 'datadirectory'
+  when: nextcloud_config.stat.exists
+
+- name: Fix Nextcloud broken images - use overwriteprotocol https per content security policy
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'overwriteprotocol'
+    line: "  'overwriteprotocol' => 'https',"
+    insertafter: 'datadirectory'
+  when: nextcloud_config.stat.exists
+
+- name: Add phone region to Nextcloud config
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'default_phone_region'
+    line: "  'default_phone_region' => '{{ lookup('env', 'DEFAULT_PHONE_REGION') }}',"
+    insertafter: 'datadirectory'
+  when: nextcloud_config.stat.exists
+
+- name: Add email from address
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'mail_from_address'
+    line: "  'mail_from_address' => '{{ lookup('env', 'MARIO_EMAIL_SENDER') | email_user }}',"
+    insertafter: 'installed'
+  when: nextcloud_config.stat.exists
+
+- name: Add email smtp mode
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'mail_smtpmode'
+    line: "  'mail_smtpmode' => 'smtp',"
+    insertafter: 'mail_from_address'
+  when: nextcloud_config.stat.exists
+
+- name: Add email sendmail mode
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'mail_sendmailmode'
+    line: "  'mail_sendmailmode' => 'smtp',"
+    insertafter: 'mail_smtpmode'
+  when: nextcloud_config.stat.exists
+
+- name: Add email from domain
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'mail_domain'
+    line: "  'mail_domain' => '{{ lookup('env', 'MARIO_EMAIL_SENDER') | email_domain }}',"
+    insertafter: 'mail_sendmailmode'
+  when: nextcloud_config.stat.exists
+
+- name: Add email smtp host
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'mail_smtphost'
+    line: "  'mail_smtphost' => 'mail',"
+    insertafter: 'mail_domain'
+  when: nextcloud_config.stat.exists
+
+- name: Add email smtp port
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'mail_smtpport'
+    line: "  'mail_smtpport' => '25',"
+    insertafter: 'mail_smtphost'
+  when: nextcloud_config.stat.exists

@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    image: traefik
+    environment:
+      AWS_ACCESS_KEY_ID: "{{ lookup('env', 'DNS_API_KEY') }}"
+      AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'DNS_API_SECRET') }}"
+      DUCKDNS_TOKEN: "{{ lookup('env', 'DUCKDNS_TOKEN') }}"
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.network=traefik_default
+      - --providers.docker.exposedbydefault=false
+      - --accesslog=false
+      - --log.level=INFO
+      - --experimental.http3=true
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.websecure.http3
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --certificatesresolvers.myresolver.acme.dnschallenge=true
+      - --certificatesresolvers.myresolver.acme.dnschallenge.provider={{ lookup('env', 'DNS_API_PROVIDER') }}
+      - --certificatesresolvers.myresolver.acme.dnschallenge.delaybeforecheck=30
+      - --certificatesresolvers.myresolver.acme.dnsChallenge.resolvers=1.1.1.1:53,8.8.8.8:53
+      - --certificatesresolvers.myresolver.acme.email={{ lookup('env', 'DNS_RESOLVER_EMAIL') }}
+      - --certificatesresolvers.myresolver.acme.storage=/etc/traefik/acme.json
+      - --global.checknewversion=false
+      - --global.sendanonymoususage=false
+    ports:
+      - "80:80"
+      - "443:443/tcp"
+      - "443:443/udp"
+    volumes:
+      # So that Traefik can listen to Docker events and auto-configure
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # For storing Let's Encrypt cert
+      - /data/traefik/etc:/etc/traefik:rw
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard-https.entrypoints=websecure"
+      - "traefik.http.routers.dashboard-https.rule=Host(`traefik.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.dashboard-https.service=api@internal"
+      - "traefik.http.routers.dashboard-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.dashboard-https.middlewares=lan-only"
+      - "traefik.http.middlewares.lan-only.ipwhitelist.sourcerange={{ lookup('env', 'LAN_ONLY_ALLOWED') }}"
+    restart: unless-stopped

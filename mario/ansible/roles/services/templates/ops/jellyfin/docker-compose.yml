@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+  app:
+    image: linuxserver/jellyfin
+    environment:
+      PUID: "{{ jellyfin_uid }}"
+      PGID: "{{ jellyfin_gid }}"
+      TZ: "{{ lookup('env', 'TZ') }}"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jellyfin-https.entrypoints=websecure"
+      - "traefik.http.routers.jellyfin-https.rule=Host(`jellyfin.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.jellyfin-https.middlewares=lan-only"
+      - "traefik.http.routers.jellyfin-https.tls.certresolver=myresolver"
+    volumes:
+      - /data/jellyfin/media/tv:/data/tv:ro
+      - /data/jellyfin/media/movies:/data/movies:ro
+      - /data/jellyfin/media/home-video:/data/home-video:ro
+      - /data/jellyfin/media/music:/data/music:ro
+      - /data/jellyfin/media/tmp-video:/data/tmp-video:ro
+      - /data/jellyfin/config:/config
+    networks:
+      - jellyfin
+      - traefik_default
+    restart: unless-stopped
+networks:
+  jellyfin:
+    name: jellyfin
+  traefik_default:
+    external: true

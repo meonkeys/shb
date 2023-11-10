@@ -1,0 +1,5 @@
+---
+jellyfin_user: 'jellyfin'
+jellyfin_uid: '1179'
+jellyfin_group: 'jellyfin'
+jellyfin_gid: '1179'

@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  mail:
+    image: ixdotai/smtp
+    environment:
+      GMAIL_USER: "{{ lookup('env', 'MARIO_EMAIL_SENDER') }}"
+      GMAIL_PASSWORD: "{{ lookup('env', 'MAIL_RELAY_PASSWORD') }}"
+    restart: unless-stopped

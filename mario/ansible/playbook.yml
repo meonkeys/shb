@@ -1,0 +1,13 @@
+---
+# provision all hosts in hosts.yml
+- hosts: all
+  # Huge speedup: skip gathering info about hardware, network interfaces, etc.
+  # See https://docs.ansible.com/ansible/glossary.html#term-gather-facts-boolean .
+  gather_facts: no
+  # become root (with sudo)
+  become: yes
+  # Ansible runs are fastest with fewer enabled roles.
+  roles:
+    - base
+    - docker
+    - services

@@ -1,0 +1,17 @@
+version: '3'
+
+# Watchtower fetches updated Docker images and automatically restarts containers
+# Documentation: https://containrrr.dev/watchtower/
+services:
+  sentry:
+    image: containrrr/watchtower
+    environment:
+      TZ: "{{ lookup('env', 'TZ') }}"
+      WATCHTOWER_DEBUG: "false"
+      WATCHTOWER_SCHEDULE: "@daily"
+      WATCHTOWER_RUN_ONCE: "false"
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_MONITOR_ONLY: "false"
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
