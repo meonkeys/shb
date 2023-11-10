@@ -45,6 +45,7 @@ Here are some ideas:
 * Is this something you'd recommend to others?
 * What would you expect to pay for a print copy?
 * What would you expect to pay for a digital copy?
+* Any feedback on the [book website](https://selfhostbook.com)?
 
 ## Issues
 
