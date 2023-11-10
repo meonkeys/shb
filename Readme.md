@@ -20,9 +20,9 @@ I'd like to wait to release everything publicly once it is ready, so please help
 
 ## Book formats
 
-I use Pandoc to produce multiple typeset versions of the book from a single source file: `src/book.md`. Formatted outputs are available at FIXME.
+I use Pandoc to produce multiple typeset versions of the book from a single source file: `src/book.md`. Formatted outputs are available at <https://github.com/meonkeys/shb-review/releases/>.
 
-It generates an EPUB, a HTML file, and printable and screen-friendly PDFs.
+The `Makefile` in `src/` generates an EPUB, a HTML file, and printable and screen-friendly PDFs.
 
 If you want to generate your own typeset outputs, run `./typeset.sh`. See "Prerequisites to build the book" in `src/book.md`.
 
