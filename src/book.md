@@ -1910,7 +1910,7 @@ This book will grow and evolve, and you can be a part of it!
 
 * book source code TODO: add link
 * _mario_ source code TODO: add link
-* chat TODO: add link
+* chat: There's a chat room for readers and fans of this book! Please ping me for an invite (via email? TODO)
 * videos TODO: add link
 * podcasts TODO: add link
 * talks TODO: add link
@@ -1925,8 +1925,6 @@ FIXME
     * email
     * mastodon
     * phone?!
-* You can use these methods to contact me, but you might as well put a note in a bottle in the sea
-    * might as well put a note in a bottle in the sea
 
 # Contributions
 
