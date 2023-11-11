@@ -77,6 +77,11 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am17 | add more photos and illustrations | OPEN |
 | am18 | change _mario_ to use [Duck DNS](https://hub.docker.com/r/linuxserver/duckdns) | OPEN |
 | am19 | PDF and HTML outputs lack cover art | OPEN |
+| am20 | define "attack surface" | RESOLVED |
+| am21 | differentiate style for image captions | OPEN |
+| am22 | add illustration: loaf of bread server | OPEN |
+| am23 | add illustration: squeaky clean chickens | OPEN |
+| am24 | conform voice of _Criminal chickens_ section | OPEN |
 
 ## Copyright and license
 

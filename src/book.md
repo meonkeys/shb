@@ -262,7 +262,7 @@ Here are more related and interesting self-hosting solutions I learned about too
 
 ### Command line
 
-The "command line" mention above is worth a beat, to understand my personal bias. It's more than a [relic from the old days, it's also a source of power and joy](https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line). I use GUIs often, and I often *prefer* the command line and only add a GUI layer when I need one. It's often easier and faster to build and maintain a command line interface. It gives me more control and forces me to learn. It helps me understand what's happening and why. With it I'm able to quickly make changes and automate.
+The "command line" mention above is worth a beat, to understand my personal bias. It's more than a [relic from the old days, it's also a source of power and joy](https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line). I use GUIs often, and I often *prefer* the command line and only add a GUI layer when I need one. It's often easier and faster to build and maintain a command line interface. It gives me more control and forces me to learn. It helps me understand what's happening and why. With it I'm able to quickly make changes and automate. It's also faster and more ergonomic than using a mouse.
 
 ### You'll find your path
 
@@ -349,7 +349,7 @@ So many reasons!
 
 See [nextcloud.com/athome](https://nextcloud.com/athome/) for more self-hosting propaganda and app ideas.
 
-### criminal chickens
+### Criminal chickens
 
 #### Peace of mind
 
@@ -375,7 +375,7 @@ And hey, thanks for the reminder, YouTube! I'll remove my old YouTube API^[Appli
 
 No more quotas / rate limits either. Full speed ahead!
 
-### geo photo search
+### Geo photo search
 
 A while back I was trying to find some photos from a pile of thousands, taking up terabytes on disk. I knew _where_ the photos were taken within about 10 miles, and my photos have embedded geo metadata.
 
@@ -2230,6 +2230,10 @@ AI
 API
 
 : Application programming interface. This is for software engineers writing apps/integrations. They need consistent, documented interfaces to write code against.
+
+attack surface
+
+: Total of possible attack vectors. Fewer is more secure. Example: closing all but the ports you need open reduces yours.
 
 backend
 
