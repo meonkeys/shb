@@ -1512,7 +1512,7 @@ This essential app allows you to search through all content of all documents on 
 
 ### Mobile
 
-Nextcloud works OK as the backend for a mobile device. It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
+Nextcloud works OK as the backend for a mobile device. It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile. You can open files and edit them, but the UI/UX is bad. See [mobile text editing is hard](#mobile-text-editing-is-hard) for a couple workarounds.
 
 I had a [Murena Samsung S9+ phone](https://murena.com/) running /e/ OS for a while. I loved it! Easy to set up with Nextcloud and worked quite well. Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE.
 
@@ -1570,13 +1570,13 @@ Workarounds:
 
 I find [mobile editing cumbersome](https://jenson.org/text/), even in the best of circumstances. This applies to email, plain text, Markdown, and office documents. Email, office documents (spreadsheets and rich text) require a thick(er) client to handle all the various features, so we'll leave those aside for now.
 
-For better text editing, one workaround is to use the Notes app on [Android](https://github.com/nextcloud/notes-android) or [iOS](https://github.com/nextcloud/notes-ios). It features larger fonts, separate editing and viewing modes, and more aggressive synchronization (fewer conflicts).
+For better text editing, one workaround is to use the Notes app on [Android](https://github.com/nextcloud/notes-android) or [iOS](https://github.com/nextcloud/notes-ios). It features larger fonts, separate editing and viewing modes, and more aggressive synchronization (high chance of up-to-date data and fewer conflicts).
 
 Another workaround is [Markor](https://github.com/gsantner/markor). Install that app, then:
 
 1. In the Nextcloud mobile app, "Download" or "Sync" the file you wish to view or edit locally. This caches a copy on your phone.
 1. In the Nextcloud mobile app, choose "open with" for the file. Should open instantly.
-1. If you make changes to the file, save it, then manually "Sync" the file in the Nextcloud app.
+1. If you make changes to the file, save it, then manually "Sync" the file in the Nextcloud app. It appears local changes like these never make it to the server otherwise.
 
 #### cumbersome mobile setup
 
