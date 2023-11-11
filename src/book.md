@@ -467,6 +467,8 @@ Containers are easy to declare (in code), build, deploy, test, and repeat.
 
 I chose Docker to manage containers because it is popular and I have experience with it. Your server is also considered a _host_ since it it is a _host_ to Docker containers.
 
+One downside of Docker is how often root access is assumed in example code and popular publicly images. Running as root makes containers simpler and less secure.
+
 #### OCR
 
 Another smile-worthy advancement is free OCR^[optical character recognition]. I keep trying to "go paperless" by scanning in all my paper files. After scanning I was shouldered with, unsurprisingly, a bunch of PDFs of images. These can be easily processed and searched with tools like [Nextcloud Full text search](https://apps.nextcloud.com/apps/fulltextsearch).
