@@ -2253,7 +2253,7 @@ change management
 
 cloud
 
-: Someone else's hardware. Also knows as "the cloud" or "public cloud". Generally included are many non-FOSS features that add capability and lock you in.
+: Someone else's hardware. Scalable and programmable. Also known as "the cloud" or "public cloud". Generally included are many non-FOSS features that add capability and lock you in.
 
 cluster
 
