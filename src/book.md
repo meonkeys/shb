@@ -1940,6 +1940,8 @@ FIXME - this book is evergreen except versions with ISBNs blah blah blah
     * and (sorry in advance!) I might not respond at all
 * patches welcome! TODO: point users to public source code, finish this section
     * how to contribute (including a contributor agreement / copyright assignment)
+    * explicitly solicit certain kinds of patches
+        * e.g. typos, grammar, broken links, style conformance
     * define acceptance tests, e.g.: check all outputs (attach them to the pull request?), must build without errors on Ubuntu, etc.
 
 ## Translations
