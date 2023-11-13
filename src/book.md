@@ -2052,6 +2052,7 @@ Exercises for individual practice and study groups.
 * Enable GPU transcoding in Jellyfin.
 * Sign the open letter at [Public Money, Public Code](https://publiccode.eu) because software paid for with taxes should be FOSS.
 * Aggregate logs.
+* Create or install a service to monitor outbound network activity from containers.
 * Pick a Docker container that doesn't require outbound network access. Prevent it from making outbound connections and prove to yourself it works.
 * What if the server won't boot?
     * Describe troubleshooting steps, in detail.
