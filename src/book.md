@@ -156,7 +156,7 @@ It does make a difference to [save your own copy](https://www.nytimes.com/2023/0
 
 Saving off data is easy. Self-hosting goes a step beyond that to give you far-reaching control of how your data are used and shared. You'll get reliability and flexibility within a reasonable budget.
 
-Self-hosting means providing computing services by and for individuals, families, and hobbyists in so-called SOHO^[small office / home office] environments.
+Self-hosting means providing computing services by and for individuals, families, and hobbyists in SOHO^[small office / home office] environments.
 
 "Small-community-hosting" is perhaps a more accurate and appropriate term here. You're reading the right book to host services for a small community.
 
