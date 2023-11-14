@@ -533,8 +533,6 @@ Experienced self-hosters can compare my choices to theirs.
 
 ## Mindset
 
-* be kind
-* minimize your ego
 * ask for help
 * ask for feedback
 * listen to users, gather data, adapt accordingly
