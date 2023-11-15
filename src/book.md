@@ -457,6 +457,8 @@ Here are some things that surprised me, both positively and negatively.
 
 With help from a friend (thanks Rob!), I bought a reliable and cheap server. I could've saved a few bucks by buying parts, but I wanted something ready to power on. Still, I thought I'd be tinkering with wires, cards, and CMOS batteries. Not so! I only opened the chassis to see the guts. It looked like normal server guts in there. Took me longer to build a rack for my server than it took me to power it on.
 
+![View inside the server showing two empty PCI-E card slots](img/inside-chassis.jpg){width=80%}
+
 #### Containers
 
 I was pleasantly surprised by containers since most of my earlier experience was with VMs^[virtual machines]. Containers are excellent for a consistent and resilient personal cloud. They are fast and small compared with VMs, allowing higher non-conflicting service density. That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHP^[PHP: Hypertext Processor]).
