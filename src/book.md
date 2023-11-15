@@ -495,7 +495,7 @@ Community support is hit or miss. Nextcloud seems more popular outside the USA.
 
 #### Jitsi
 
-I gave up trying to get Jitsi running in Docker. I recall lots of open ports or port ranges being a problem. This one might be easier in a virtual machine.
+Jitsi is a self-hostable FOSS video call platform. I gave up trying to get Jitsi running in Docker. I recall lots of open ports or port ranges being a problem. This one might be easier in a virtual machine.
 
 I will eventually give it another shot because [logging in is now required](https://jitsi.org/blog/authentication-on-meet-jit-si/) when using the free 8x8-hosted Jitsi service.
 
