@@ -477,7 +477,7 @@ Another smile-worthy advancement is free OCR^[optical character recognition]. I 
 
 #### Jellyfin
 
-I was stoked to see how Jellyfin showed up as an excellent and complete FOSS alternative to Plex.
+Jellyfin is a personal streaming media server. I was stoked to see how Jellyfin showed up as an excellent and complete FOSS alternative to Plex.
 
 ### Bad surprises
 
