@@ -81,7 +81,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am21 | differentiate style for image captions | OPEN |
 | am22 | add illustration: loaf of bread server | OPEN |
 | am23 | add illustration: squeaky clean chickens | OPEN |
-| am24 | conform voice of _Criminal chickens_ section | OPEN |
+| am24 | conform voice of _Criminal chickens_ section | RESOLVED |
 | am25 | tie in 4th-wall-breaking "caveman speak" near "5 Ws" or just leave it out | OPEN |
 | am26 | be less apologetic, limit to perhaps 3 or so apologies | OPEN |
 | am27 | correct "knows as" typo to "known as" | RESOLVED |
