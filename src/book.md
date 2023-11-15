@@ -553,7 +553,7 @@ Experienced self-hosters can compare my choices to theirs.
 
 ## Service stack
 
-A _mario_-built system presents nicely as a simplified stack of colored boxes. These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting.
+A _mario_-built system presents nicely as a simplified stack of colored boxes. These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "Stack" is also commonly used to describe interdependent layers of a system.
 
 ![Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud, Jellyfin, Wallabag](./img/system-design.png){width=80%}
 
