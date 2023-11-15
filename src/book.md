@@ -513,7 +513,7 @@ I hope this book inspires you with many positive surprises and helps you and you
 
 ## Skills
 
-This book assumes some prerequisite skills. You must be able to:
+This book assumes some prerequisite skills. These are not difficult and you can quickly learn how to do them online. You must be able to:
 
 * configure your router and LAN^[local area network]
 * install Linux on a computer (hereafter referred to as your _server_)
@@ -522,7 +522,7 @@ This book assumes some prerequisite skills. You must be able to:
 * edit text files and run commands on your server
 * transfer files to and from your server
 
-Optional, and helpful:
+These additional skills are also helpful:
 
 * familiarity with [git](https://git-scm.com) and [Bash](https://www.gnu.org/software/bash/)
 * forgive my mistakes and inaccuracies and help me improve
@@ -535,9 +535,9 @@ Experienced self-hosters can compare my choices to theirs.
 
 ## Mindset
 
-* ask for help
-* ask for feedback
-* listen to users, gather data, adapt accordingly
+1. ask for help
+1. ask for feedback
+1. listen to users, gather data, adapt accordingly
 
 ## Discipline
 
@@ -545,8 +545,7 @@ Experienced self-hosters can compare my choices to theirs.
     * if only for your future self!
 * train help in case you get hit by a bus
     * made much easier since you've documented everything
-* focus, take breaks, be patient
-* sleep, exercise, eat healthy
+* focus, take breaks, be patient, sleep, exercise, eat healthy
 
 # System design
 
