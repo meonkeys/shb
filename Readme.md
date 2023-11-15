@@ -2,7 +2,7 @@
 
 **THANK YOU**! ❤️🧡💛💚💙💜
 
-I need and appreciate your open, honest feedback. With your help this book will be better.
+Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this shouldn't happen in isolation, it takes a team! I want *this* book to be good. You're an expert and I value your help. I will benefit greatly from your open, honest feedback.
 
 The review deadline is Nov 24, 2023. I'd like to publish by December 20.
 
@@ -87,6 +87,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am27 | correct "knows as" typo to "known as" | RESOLVED |
 | am28 | add photo: bird on server | OPEN |
 | am29 | exclude optional slashes at ends of hyperlinks | RESOLVED |
+| am30 | list reviewers in _Acknowledgments_ | OPEN |
 
 ## Copyright and license
 

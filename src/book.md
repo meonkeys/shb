@@ -2219,6 +2219,12 @@ With self-hosting you can choose to be amused just as much as you need to be. Le
 
 # Acknowledgments
 
+Sometimes I feel more like a project manager than an author, accepting help from so many generous people. I truly couldn't have done this alone.
+
+Thank you to all my reviewers:
+
+* TODO - list reviewers
+
 Thanks to my wife and kids for supporting and believing in me. For all the cooking, talking, listening, art, coding, math, music, and love. Aren't we lucky?!
 
 Thanks to my family and friends for putting up with my FOSS self-hosting experiments.
