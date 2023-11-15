@@ -549,6 +549,10 @@ Experienced self-hosters can compare my choices to theirs.
 
 # System design
 
+[Later on I'll introduce you to _mario_](#mario), a tool you can use to take care of some of the fiddly details of setting up a server. For now we'll cover its output from a high level.
+
+## Service stack
+
 A _mario_-built system presents nicely as a simplified stack of colored boxes. These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting.
 
 ![Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud, Jellyfin, Wallabag](./img/system-design.png){width=80%}
