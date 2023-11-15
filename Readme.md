@@ -86,6 +86,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am26 | be less apologetic, limit to perhaps 3 or so apologies | OPEN |
 | am27 | correct "knows as" typo to "known as" | RESOLVED |
 | am28 | add photo: bird on server | OPEN |
+| am29 | exclude optional slashes at ends of hyperlinks | RESOLVED |
 
 ## Copyright and license
 
@@ -110,3 +111,7 @@ A copyedit is often confused with a line edit, but they're very different steps 
 ### Proofread
 
 This is the final step in the editing process. A proofreader examines the final copy of the manuscript (usually after typesetting) for any awkward page breaks, and he or she might perform some light copyediting.
+
+## Style guide
+
+* exclude optional slashes at ends of hyperlinks

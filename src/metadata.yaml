@@ -10,7 +10,7 @@ mainlang: english
 otherlang: english
 mainfont: DejaVu Sans
 colorlinks: True
-#links-as-notes: True
+links-as-notes: True
 cover-image: img/cover.png
 keywords:
   - self-hosting

@@ -120,7 +120,7 @@ I'm human and error-prone. I'll make it easy to contact me about missing or inco
 
 I'm a dad, tech entrepreneur, and FOSS^[free and open source software] enthusiast. I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write. I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
 
-I'm most proud of my family, growing [Mifos](https://mifos.org/), founding [SeaGL](https://seagl.org), selling [C-SATS](https://csats.com), and writing this book.
+I'm most proud of my family, growing [Mifos](https://mifos.org), founding [SeaGL](https://seagl.org), selling [C-SATS](https://csats.com), and writing this book.
 
 I aspire to always be kind and minimize my ego.
 
@@ -215,7 +215,7 @@ This book is not a manifesto for always/only self-hosting. It's fine to self-hos
 
 This book is not the fastest path to trying out web-based services. You can usually find demo instances running for particular projects. There are cloud providers that will run a service for you and host your data.
 
-There are one-click-install appliances with many ready-to-go apps. [FreedomBox](https://www.freedombox.org/) is one promising contender in this space.
+There are one-click-install appliances with many ready-to-go apps. [FreedomBox](https://www.freedombox.org) is one promising contender in this space.
 
 There are shortcuts and frontends for Linux servers. For example, [openmediavault](https://www.openmediavault.org) looks like a cool way to build a DIY^[do it yourself] NAS^[network attached storage].
 
@@ -657,13 +657,13 @@ We'll use Traefik. I'm told Caddy is also nice, and there are many other options
 
 A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules. We'll direct our traffic using host names.
 
-Traefik provides other handy features too, such as automatic HTTP encryption certificate handling with [Let's Encrypt](https://letsencrypt.org/).
+Traefik provides other handy features too, such as automatic HTTP encryption certificate handling with [Let's Encrypt](https://letsencrypt.org).
 
 ## Identity management
 
 I wanted to include FOSS central identity management in _mario_ but I haven't figured it out yet. That is, some way to log in once and get to all the different services you have access to in your cloud. Authentication and authorization and all that good stuff.
 
-I'm interested in [Authentik](https://goauthentik.io/) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host). I want to see it running well for a good while before adding it to _mario_.
+I'm interested in [Authentik](https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host). I want to see it running well for a good while before adding it to _mario_.
 
 Some of the other self-hosting solutions mentioned above in [What is this book _not_?](#what-is-this-book-not) do include FOSS central identity management.
 
@@ -1514,7 +1514,7 @@ This essential app allows you to search through all content of all documents on 
 
 Nextcloud works OK as the backend for a mobile device. It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile. You can open files and edit them, but the UI/UX is bad. See [mobile text editing is hard](#mobile-text-editing-is-hard) for a couple workarounds.
 
-I had a [Murena Samsung S9+ phone](https://murena.com/) running /e/ OS for a while. I loved it! Easy to set up with Nextcloud and worked quite well. Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE.
+I had a [Murena Samsung S9+ phone](https://murena.com) running /e/ OS for a while. I loved it! Easy to set up with Nextcloud and worked quite well. Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE.
 
 Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA. /e/ OS is up to date with the latest upstream Android code and once again provides a good deal more FOSS-friendliness, privacy, and native Nextcloud integration than other Android-based mobile operating systems. Works with T-Mobile USA 5G, VoLTE, and Wi-Fi calling. 5 years of support.
 
@@ -1525,7 +1525,7 @@ Besides the primary mobile app (called simply "Nextcloud"), there are other mobi
 <center>
 | Mobile app | Works with Nextcloud apps |
 |------------|------------|
-| [DAVx5](https://www.davx5.com/) | Calendar, Contacts, Tasks |
+| [DAVx5](https://www.davx5.com) | Calendar, Contacts, Tasks |
 | [Maps Geofavorites](https://github.com/penguin86/nextcloud-maps-client) | Maps |
 | [NC Passwords](https://gitlab.com/joleaf/nc-passwords-app) | Passwords |
 | [Nextcloud Cookbook](https://github.com/nextcloud/cookbook/) | Cookbook |
@@ -1649,7 +1649,7 @@ See the [AIO readme](https://github.com/nextcloud/all-in-one/) for more informat
 
 ## Jellyfin
 
-[Jellyfin](https://jellyfin.org/) is a personal streaming media server.
+[Jellyfin](https://jellyfin.org) is a personal streaming media server.
 
 _mario_ will set up a basic Jellyfin server.
 
@@ -1803,7 +1803,7 @@ Work through this book in a class or small group. See [discussion topics](#discu
 
 Participate in FOSS communities to learn from and share with others. Pass on what you've learned. File a bug. Post in a forum. It's fun!
 
-Conferences like [SeaGL](https://seagl.org/) bring together bright minds on many topics, including self-hosting. If you've done something cool, share it!
+Conferences like [SeaGL](https://seagl.org) bring together bright minds on many topics, including self-hosting. If you've done something cool, share it!
 
 ## Use GPUs
 
@@ -1878,7 +1878,7 @@ Note that some clients will by default bypass an auto-configured DNS server such
 
 ## Single sign-on
 
-Manage users and groups in one place. Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism. [Authentik](https://goauthentik.io/) can do this.
+Manage users and groups in one place. Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism. [Authentik](https://goauthentik.io) can do this.
 
 ## Self-hosting support
 
@@ -2056,9 +2056,9 @@ Exercises for individual practice and study groups.
     * Describe troubleshooting steps, in detail.
     * Make a plan for system recovery when it fails to boot.
 * Set up [single sign-on](https://en.wikipedia.org/wiki/Single_sign-on).
-* Reorganize _mario_ roles and upload them to [Ansible Galaxy](https://galaxy.ansible.com/) as a playbook bundle.
+* Reorganize _mario_ roles and upload them to [Ansible Galaxy](https://galaxy.ansible.com) as a playbook bundle.
 * Set up [fail2ban](https://www.fail2ban.org). Feed it logs from various services.
-* Set up [suricata](https://suricata.io/) network analysis and threat detection.
+* Set up [suricata](https://suricata.io) network analysis and threat detection.
 * Separate out code for ASCII to SVG diagram conversion from Markdeep. Incorporate it into this book's build system, perhaps as a pandoc filter.
 * Adapt _mario_ to use [podman](https://podman.io).
 * Adapt _mario_ to use [Kubernetes](https://kubernetes.io).
@@ -2314,7 +2314,7 @@ DRM
 
 dVCS
 
-: Distributed version control system. These days that pretty much means [git](https://git-scm.com/).
+: Distributed version control system. These days that pretty much means [git](https://git-scm.com).
 
 fork
 
