@@ -507,7 +507,7 @@ Dogfood what you self-host. Try your best to ensure everything is attractive and
 
 I hope this book inspires you with many positive surprises and helps you and your users avoid many negative ones. It's dangerous to go alone! Take this book. 📖
 
-![Terrible sketch of Iconic Legend of Zelda moment when Link gets his first sword. Text reads: IT'S DANGEROUS TO GO ALONE! TAKE THIS.](img/dangerous-alone.jpg){width=80%}
+![Terrible and original hand-drawn sketch of iconic Legend of Zelda moment when Link gets his first sword. Text reads: IT'S DANGEROUS TO GO ALONE! TAKE THIS.](img/dangerous-alone.jpg){width=80%}
 
 # Prerequisites
 
