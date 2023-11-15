@@ -351,9 +351,7 @@ See [nextcloud.com/athome](https://nextcloud.com/athome/) for more self-hosting 
 
 ### Criminal chickens
 
-#### Peace of mind
-
-Hosting your own data brings peace of mind.
+Here's a real example of a positive outcome I realized from self-hosting.
 
 My family has a [homemade chicken safety system](https://github.com/meonkeys/rpi-chx-code) and the videos are important to me. I used to just plop them on YouTube because hey, it's free and it "just works", right?
 
@@ -363,19 +361,19 @@ Except when it doesn't. YouTube sometimes felt my chickens were being spammy, de
 
 For the record, our chickens are _squeaky clean_.
 
-#### Cut the red tape
+Once I stood up my personal cloud I felt freedom and ease when posting and hosting these videos.
 
-Hosting our own data brings relief from needless bureaucracy.
-
-Yay, I don't need to complete any YouTube paperwork to be able to keep an eye on my chickens! I can safely ignore their audit and its erroneous compliance infringement warning.
+I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens! I can safely ignore their audit and its erroneous compliance infringement warning.
 
 ![Screenshot of a YouTube legal audit for my old API client](img/YT-audit.png){width=80%}
 
-And hey, thanks for the reminder, YouTube! I'll remove my old YouTube API^[Application programming interface] client project, too. Turns out the Nextcloud Talk API is simpler and easier for posting my chicken coop photos & videos anyway.
+I also no longer need to work with YouTube's API^[Application programming interface], including registering an API client and completing periodic audits. After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance. Turns out the Nextcloud Talk API is easier for posting my chicken coop photos & videos anyway.
 
-No more quotas / rate limits either. Full speed ahead!
+With my own cloud I'm also able to tune quotas and rate limits as desired. Full speed ahead!
 
 ### Geo photo search
+
+Here's one more pro-personal-cloud example.
 
 A while back I was trying to find some photos from a pile of thousands, taking up terabytes on disk. I knew _where_ the photos were taken within about 10 miles, and my photos have embedded geo metadata.
 
