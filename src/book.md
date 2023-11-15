@@ -567,7 +567,7 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 
 ## Filesystem
 
-ZFS is our one-stop shop for efficiently and safely making hard drives available for our OS and data. Encryption, automatic lightweight snapshots and RAID^[redundant array of inexpensive disks] are all included and used by _mario_.
+ZFS^[originally: Zettabyte File System] is our one-stop shop for efficiently and safely making hard drives available for our OS and data. Encryption, automatic lightweight snapshots and RAID^[redundant array of inexpensive disks] are all included and used by _mario_.
 
 The root partition is ext4 (not ZFS) for a few reasons:
 
@@ -581,13 +581,13 @@ Docker volumes will be on ZFS. The container's filesystem---everything besides m
 
 ### ZFS trim
 
-Note that if you use SSDs, you may notice your system unexpectedly grinding to a halt once a month as it performs a "trim". This is not an issue with HDDs.
+Note that if you use ZFS with SSDs, you may notice your system unexpectedly grinding to a halt once a month as it performs a "trim". Trimming is a process of reclaiming formerly used space on SSDs. This is not an issue with HDDs.
 
 On my desktop (not my server---I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
 
-I saw this happen once on my desktop. The trim job caused high values in `/proc/pressure/io` and I saw `z_trim_*` kernel threads doing heavy I/O in the process table (hint: use `top` or `htop` to view the process table).
+I will sometimes catch trimming in progress on my desktop. The trim job causes high values in `/proc/pressure/io` and I can see `z_trim_*` kernel threads doing heavy I/O in the process table (hint: use `top` or `htop` to view the process table).
 
-If you run into this issue, give ZFS a couple hours to finish trimming or run `zpool trim --cancel <pool>`, replacing `<pool>` with the name of the pool being trimmed. You can get the name of the pool and monitor trim progress with `zpool status -t`.
+If you run into this issue, give ZFS a couple hours to finish trimming or run `zpool trim --cancel <pool>`, replacing `<pool>` with the name of the pool being trimmed. You can get the name of the pool and monitor trim progress with `zpool status -t`. You can manually resume trimming when convenient with `zpool trim <pool>` or just wait a month for it to run again on its own.
 
 Shout out to [askubuntu: Should I turn on zfs-trim on my pools or should I trim on a schedule using systemd timers or cron?](https://askubuntu.com/questions/1200172/should-i-turn-on-zfs-trim-on-my-pools-or-should-i-trim-on-a-schedule-using-syste), too.
 
@@ -2531,7 +2531,7 @@ Y2K
 
 ZFS
 
-: A fancy, stable filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting.
+: A fancy, stable filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
 # The End
 
