@@ -411,13 +411,15 @@ Still with the caveman. Enough already.
 
 I wrote this in 2023.
 
+And, listen: even blessed cave-dwellers like us should give self-hosting a shot! We got this!
+
 ## Where?
 
 Seattle.
 
 ## Hey now.
 
-Admittedly, those last few exist so I could cover all [5 Ws](https://wikipedia.org/wiki/Five_Ws).
+Admittedly, those last few sections exist [so I could cover all 5 Ws](https://wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
 
 ## A note on FOSS
 
