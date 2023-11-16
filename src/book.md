@@ -48,7 +48,7 @@ This book was generated
 
 The beautiful cover art was created by my daughter using [Krita](https://krita.org)!
 
-# Copyright and License
+# Copyright and license
 
 _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen.
 
@@ -1098,7 +1098,7 @@ Let's back up a step and talk about threat modeling. Your *threat model* is how 
 
 Everyone else: Let's build a simple example threat model for the "everything else" category above.
 
-#### threat model
+#### Threat model
 
 Consider:
 
@@ -1111,7 +1111,7 @@ Consider:
 
 That makes my marketing-friendly threat model acronym **A.A/T/V.M.** (all punctuation is vocalized). Really just rolls off the tongue!
 
-#### example: WAN attack
+#### Example: WAN attack
 
 Let's run "WAN access" through our threat model.
 
@@ -1130,7 +1130,7 @@ Allowing WAN access and not using public mailing lists only obscures an out-of-d
 
 Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "defense in depth".
 
-#### more tips
+#### More tips
 
 * [Maintain useful encrypted backups](#backups) (perform test restores to know they are useful).
 * Use `root` at little as possible.
@@ -1148,7 +1148,7 @@ Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "
     * Freeze your credit after a breach.
 * Learn about compartmentalization and the principle of least privilege.
 
-#### further reading
+#### Further reading
 
 1. [Personal Cybersecurity: How to Avoid and Recover from Cybercrime](https://www.oreilly.com/library/view/personal-cybersecurity-how/9781484224304/) by Marvin Waschke
 1. [Personal Privacy Threat Modeling (With LOTS Of Examples)](https://modernprivatelife.com/how-to-choose-privacy-threat-model/) by Eliza
@@ -1200,11 +1200,11 @@ Please edit 'config' and re-run this script.
 
 Do this.
 
-### domain name
+### Domain name
 
 Buy a domain name from a registrar. A registered domain name is required for HTTPS web traffic encryption.
 
-### public DNS
+### Public DNS
 
 _mario_ expects to be able to use Duck DNS or Amazon Route 53 for DNS. Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
@@ -1234,7 +1234,7 @@ On Amazon IAM, create a user with permission to update this hosted zone. Here's 
 }
 ```
 
-### internal DNS
+### Internal DNS
 
 It is handy to have an _internal_ DNS server in addition to a public one (e.g. Route 53).
 
@@ -1252,7 +1252,7 @@ IP addresses can be repeated because our reverse proxy will direct traffic based
 
 If you don't have a DNS server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
 
-### connect to server
+### Connect to server
 
 _mario_ expects to be able to [connect directly to the server](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#connecting-to-hosts-behavioral-inventory-parameters) using [SSH](https://en.wikipedia.org/wiki/Secure_Shell). Public key authentication eases this. If you have a key pair, use it. If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one. Copy the public key to the server with `ssh-copy-id` or similar.
 
@@ -1283,11 +1283,11 @@ You should only have to do this once. If it succeeds, you can go back to using `
 
 Another security improvement (left as an exercise for the reader) is to move secrets from `config` into an Ansible vault.
 
-### stand up services
+### Stand up services
 
 _mario_ has prepared your server to run a handful of services. Here's how to turn them on and start using them.
 
-#### start reverse proxy
+#### Start reverse proxy
 
 We'll stand up the reverse proxy first.
 
@@ -1324,7 +1324,7 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certifica
 ```
 </div>
 
-#### start other services
+#### Start other services
 
 Starting a _mario_ service is always done with `docker-compose up`. See the "setup" section of a particular service for more detail.
 
@@ -1339,7 +1339,7 @@ done
 
 This will also pull and build images and update containers as necessary.
 
-### check logs
+### Check logs
 
 Examine logs for any service with `docker-compose logs`.
 
@@ -1353,7 +1353,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -R
 ```
 
-## encryption certificates
+## Encryption certificates
 
 _mario_ (well, Traefik) sets up certificates to encrypt HTTP traffic. The certificates are issued using a [DNS challenge](https://doc.traefik.io/traefik/https/acme/#dnschallenge). The DNS challenge is especially handy for servers with zero public-facing inbound ports. There are [other challenge types](https://letsencrypt.org/docs/challenge-types/) you can research, too.
 
@@ -1361,7 +1361,7 @@ If you see certificate errors, confirm DNS works (externally and internally). Al
 
 Finally, try restarting Traefik with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`. That particularly seems to help the first time I stand up a new service.
 
-## tiny test service
+## Tiny test service
 
 How about a little tinkering? Standing up a test service is easy. This is useful to confirm networking is functional for Docker containers running on your host.
 
@@ -1420,7 +1420,7 @@ Nextcloud is daunting to self-host. With _mario_, it is of course easy and fun. 
 
 Nextcloud can be self-hosted for free when installed via _mario_.
 
-### base install
+### Base install
 
 A basic Nextcloud install is focused on remote file management (storage, organization, and sharing). It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional metadata about those files and folders in a database. You access it via a web browser and there is a desktop client to sync files locally, very much like Dropbox, Google Drive, and OneDrive.
 
@@ -1428,11 +1428,11 @@ I've come to _really_ trust desktop file sync. If I see a check mark on my deskt
 
 There are also apps for mobile devices. I'll come back to mobile later.
 
-### security
+### Security
 
 A basic Nextcloud install appears to have excellent security. The source is in heavy use and is backed by a solid company with a reputation that depends on their commitment to security. They make it easy to lock down and vet (it is FOSS after all). The defaults appear secure. They follow best practices. They have a public bounty program and threat model.
 
-### setup
+### Setup
 
 Setting up a new Nextcloud server is well-documented. In brief:
 
@@ -1468,7 +1468,7 @@ Some tips:
     * Configuration: `/data/tmp-video`
     * set users, previews, sharing, and remaining options as desired
 
-### maintenance
+### Maintenance
 
 FIXME
 
@@ -1481,7 +1481,7 @@ FIXME
     * `occ db:add-missing-indices`
     * `occ dav:sync-system-addressbook`
 
-#### release cadence
+#### Release cadence
 
 A new stable release is shipped [every four months](https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html). This is rather frequent, albeit justified. Nextcloud stable releases aren't like major releases you'd see from other software projects. The frequency does force app developers to update their code at least that often, but the updates are usually minimal.
 
@@ -1491,13 +1491,13 @@ FIXME: detail if we pin to a major release in _mario_ or not (we should, so apps
 
 See also: [a thread I started about release cadence on the Nextcloud forum](https://help.nextcloud.com/t/major-release-cadence/161685).
 
-### performance
+### Performance
 
 If you use _mario_ to deploy Nextcloud, you'll start with a nominally performant server. I've included the most important steps from their [server tuning guide](https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html).
 
 Troubleshooting performance issues can be challenging. [This issue about mounts](https://github.com/nextcloud/server/issues/35311) had me under the hood with MariaDB for a while. They've since [fixed the root cause](https://github.com/nextcloud/server/pull/33540) so it isn't a problem for new installations.
 
-### customization
+### Customization
 
 Nextcloud can be used as-is or heavily customized.
 
@@ -1562,7 +1562,7 @@ I had a [Murena Samsung S9+ phone](https://murena.com) running /e/ OS for a whil
 
 Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA. /e/ OS is up to date with the latest upstream Android code and once again provides a good deal more FOSS-friendliness, privacy, and native Nextcloud integration than other Android-based mobile operating systems. Works with T-Mobile USA 5G, VoLTE, and Wi-Fi calling. 5 years of support.
 
-### other mobile apps
+### Other mobile apps
 
 Besides the primary mobile app (called simply "Nextcloud"), there are other mobile apps made to work with Nextcloud apps. Here are the ones I recommend. I don't have an iPhone so these are only Android apps.
 
@@ -1599,9 +1599,9 @@ One way to compare them is via relative activity on GitHub. Doing so it appears 
 Judge for yourself: compare [owncloud core project activity](https://github.com/owncloud/core/pulse) with
  [nextcloud server project activity](https://github.com/nextcloud/server/pulse).
 
-### bugs
+### Bugs
 
-#### spinner on mobile
+#### Spinner on mobile
 
 When you first open the Nextcloud mobile app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app. If you ignore it and tap to navigate your way into a folder or open a file, you may end up tapping a different one than you intended because the folder order can change *as you are tapping the screen*.
 
@@ -1610,7 +1610,7 @@ Workarounds:
 * wait until the spinner completes (usually takes me about one second)
 * reduce chance of reordering with "A - Z" or "Z - A" sorting instead of "Newest first" or "Oldest first"
 
-#### mobile text editing is hard
+#### Mobile text editing is hard
 
 I find [mobile editing cumbersome](https://jenson.org/text/), even in the best of circumstances. This applies to email, plain text, Markdown, and office documents. Email, office documents (spreadsheets and rich text) require a thick(er) client to handle all the various features, so we'll leave those aside for now.
 
@@ -1622,7 +1622,7 @@ Another workaround is [Markor](https://github.com/gsantner/markor). Install that
 1. In the Nextcloud mobile app, choose "open with" for the file. Should open instantly.
 1. If you make changes to the file, save it, then manually "Sync" the file in the Nextcloud app. It appears local changes like these never make it to the server otherwise.
 
-#### cumbersome mobile setup
+#### Cumbersome mobile setup
 
 To sync calendars, tasks, and contacts with your phone's storage of same, you need to install the 3rd party DAVx5 app. [I can't figure out why this is necessary](https://help.nextcloud.com/t/what-does-android-file-sync-do-for-a-nextcloud-account/154330).
 
@@ -1631,7 +1631,7 @@ Workarounds:
 * use /e/ OS: it includes native support for Nextcloud accounts
 * buy a [Murena](https://murena.com) phone: it uses /e/ OS
 
-#### spurious web text editor conflicts
+#### Spurious web text editor conflicts
 
 Collaborating on plain text and Markdown text files sometimes results in spurious conflicts. Editing is interrupted before it starts, and the web-based text file editor shows you two versions of the file side by side. The left side is labeled "Use current version", and the right says "Use the saved version" (or equivalents for your locale or specific client).
 
@@ -1649,7 +1649,7 @@ Why the... never mind, just pick the one on the right.
 
 Related desktop client bug: [Nextcloud-Client creating conflicts when it should not](https://github.com/nextcloud/desktop/issues/2467) - conflicts seem to appear in cases where there shouldn't be any. Workarounds: wait 10 seconds or so between saves until the desktop client syncs and returns to idle (roll your eyes while you wait). Also, check out the [Temporary files lock](https://apps.nextcloud.com/apps/files_lock) app for semi-automated advisory locking ("gimme a minute, I'm editing that Markdown text file locally").
 
-#### can't see file versions
+#### Can't see file versions
 
 Feature request.
 
@@ -1663,7 +1663,7 @@ Workarounds:
 * Manually name versions. Requires at least Nextcloud Hub 4 / Nextcloud version 26.
 * Make multiple copies of files.
 
-#### draw signature in forms
+#### Draw signature in forms
 
 Feature request.
 
@@ -1673,11 +1673,11 @@ There are extant Nextcloud online signature apps that incorporate [digital signa
 
 [nextcloud/forms issue #947](https://github.com/nextcloud/forms/issues/947)
 
-#### release script missing from source
+#### Release script missing from source
 
 Nextcloud is FOSS, [although some release scripts are held back](https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341). They may or may not be required to release those, I don't know. I hope they do decide to release them, for the same reasons the rest of Nextcloud is FOSS.
 
-#### login page loads twice
+#### Login page loads twice
 
 Sometimes I login and immediately have to log in again. Authentik or some other login mechanism might work around this.
 
@@ -1699,39 +1699,39 @@ _mario_ will set up a basic Jellyfin server.
 
 I like mounting local media folders using Nextcloud "external storages", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them. Jellyfin only needs read access to these persistent data, it stores metadata elsewhere. There's one example of a shared persistent data location in the Nextcloud `docker-compose.yml` file. Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
 
-### setup
+### Setup
 
 1. Provision with _mario_.
 1. Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
 1. Navigate to `https://jellyfin.MARIO_DOMAIN_NAME/`
 1. Follow web-based setup steps.
 
-### advanced setup
+### Advanced setup
 
 For DLNA, hardware transcoding and other customizations, see the [installation guide](https://jellyfin.org/docs/general/administration/installing.html#docker).
 
-### maintenance
+### Maintenance
 
 * upgrades
     * change the version number in `roles/services/templates/ops/jellyfin/docker-compose.yml`
     * re-provision from admin computer
     * replace containers on the host with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`
 
-### bugs
+### Bugs
 
-#### share playlists
+#### Share playlists
 
 Feature request.
 
 Playlists are [private by design](https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980). I'd like the [ability to share them](https://features.jellyfin.org/posts/173/share-playlists).
 
-#### clips
+#### Clips
 
 Feature request.
 
 I often want to share, hear, or re-watch a specific part of some media. I think it would be just so cool to be able to [create clips](https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments) without actually creating new media files.
 
-#### offline mobile media
+#### Offline mobile media
 
 Feature request.
 
@@ -1746,7 +1746,7 @@ Workarounds:
 
 [Wallabag](https://wallabag.org) saves articles for distraction-free offline reading.
 
-### setup
+### Setup
 
 1. Provision with _mario_.
 1. Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
@@ -1754,7 +1754,7 @@ Workarounds:
 1. Log in as `wallabag` user with password `wallabag`.
 1. Update password for `wallabag` user.
 
-### maintenance
+### Maintenance
 
 * upgrades
     * change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
@@ -1762,9 +1762,9 @@ Workarounds:
     * replace containers on the host with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`
     * if you run into any issues, try [manually applying database upgrades](#upgrades-break-everything)
 
-### bugs
+### Bugs
 
-#### upgrades break everything
+#### Upgrades break everything
 
 [Database migrations are not (always?) automatically applied](https://github.com/wallabag/wallabag/issues/6649) (there may be other duplicate or related bug reports for this same thing, that's just one example). Luckily, the [workaround is easy](https://github.com/wallabag/docker#upgrading). Here's that fix applied to a _mario_ system:
 
@@ -1782,7 +1782,7 @@ This is idempotent. After the first run, subsequent runs should output: "Applica
 
 It's unclear why this isn't automated. Perhaps it is only necessary in special cases---I've only had to do it twice in a couple years.
 
-#### share with other users
+#### Share with other users
 
 Feature request.
 
@@ -1802,12 +1802,12 @@ Watchtower is handy for keeping your Docker containers up to date. It will disco
 
 [It does not automatically roll back if a container upgrade fails](https://github.com/containrrr/watchtower/issues/90). Granted, this would be challenging to implement. A service might only have one-way database migrations, for example.
 
-### setup
+### Setup
 
 1. Provision with _mario_.
 1. Start Watchtower with `sudo docker-compose --file /root/ops/watchtower/docker-compose.yml up -d`.
 
-### maintenance
+### Maintenance
 
 Check the logs if a service goes down to investigate if an automatic container upgrade caused a problem. For example:
 
@@ -1821,13 +1821,13 @@ Scratch is a popular and very approachable visual programming language geared to
 
 Scratch doesn't require any persistent data, setup, nor auth.
 
-### setup
+### Setup
 
 1. Provision with _mario_.
 1. Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
 1. Navigate to `https://scratch.MARIO_DOMAIN_NAME/`
 
-### maintenance
+### Maintenance
 
 None.
 
@@ -1934,9 +1934,9 @@ How about when you get stuck? Here are some ideas.
 * Try your luck in the [self-hosted subreddit](https://www.reddit.com/r/selfhosted/).
 * Hire me to help you out.
 
-## improve this book
+## Improve this book
 
-### color emoji
+### Color emoji
 
 There are no emoji in the PDF outputs of this book. In fact, I omit nearly all special characters---see `strip-non-ascii.py` and  `Makefile`. This is so I need less customization of pandoc to generate various outputs and have them all look decent.
 
@@ -2202,7 +2202,7 @@ That _truly_ privacy-respecting home data appliance should be FOSS, all the way 
 
 Besides privacy, FOSS is better for attention and focus. FOSS doesn't require your data to exist, so it doesn't require your attention. This makes it easier to focus on the task at hand, for only as long as you need to.
 
-### more FOSS propaganda
+### More FOSS propaganda
 
 * what happens when a company's incentives don't match up with your needs and wants?
 * Google is not an _excellent technology company_, it is first and foremost an _excellent advertising company_

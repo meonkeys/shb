@@ -117,3 +117,4 @@ This is the final step in the editing process. A proofreader examines the final 
 
 * exclude optional slashes at ends of hyperlinks
 * capitalize product/project names in prose as they appear in upstream's branding/docs
+* in general: capitalize only the first letter of the first word of sections/headers
