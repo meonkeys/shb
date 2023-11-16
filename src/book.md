@@ -777,11 +777,13 @@ The sprawling complexity is also risky. "Nextcloud" is not one thing, it is a co
 
 #### Bad for self-hosting
 
+Here are some reasons you may want to reject a service:
+
 * Your users don't want it or won't use it.
 * Unpopular, inactive, or poorly maintained.
     * Few maintainers / contributors.
     * Maintainers are inattentive to contributors.
-* Includes telemetry ("phones home"), especially without your consent.
+* Includes telemetry ("phones home", collects "statistics" or "usage data"), especially without your consent and/or enabled by default.
 * Confusing or opaque governance, roadmap, licensing, source control, contribution intake, issue tracking.
 * Sprawling complexity.
 * Difficult to fork.
