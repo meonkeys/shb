@@ -547,6 +547,45 @@ Experienced self-hosters can compare my choices to theirs.
     * made much easier since you've documented everything
 * focus, take breaks, be patient, sleep, exercise, eat healthy
 
+# Plan
+
+Consider the time and cost of self-hosting. To yourself *and your users*.
+
+I love this part! I get excited about what's to come, and I know a solid plan makes a vision real. I start by capturing my plans in a [Markdeep](https://casual-effects.com/markdeep/) file, including a calendar, budget, network diagram, to-do list and notes.
+
+Make _your_ plan. Maintain and improve your plan along with your server. Share the plan with other admins.
+
+Yep: other admins. You need someone to cover for you when you are not available, or a crystal clear expectation that when you die, the server dies too.
+
+## Budget
+
+How much do you have/want to spend? Write down a number and stick to it.
+
+## Resources
+
+Sketch out your thoughts on resources you'll need. Some ideas:
+
+* Data storage. There's a significant jump in complexity and cost with each jump in unit (for example, GB^[gigabyte] to TB^[terabyte]). This book is appropriate for data storage up to about 10 TB.
+* Electricity. Check your home power bill for the cost per kWh and run some estimates.
+* Support. Who will help you when you get stuck?
+* Physical location. Where will the server live? Will you have to install new wiring for power or network?
+
+## Schedule
+
+Rough out key dates so you and your users can plan ahead. For example:
+
+* Apr 28: Brainstorm, plan.
+* Apr 30: Order hardware.
+* May 3: Pull ethernet from router into garage.
+* May 5: Set up server.
+    * Install hard drives.
+    * Power on!
+    * Install operating system.
+    * Start services.
+* Jun 9: Review result against original goals.
+
+Invite others to participate, starting at the "brainstorm" step. This is a great time to include other people who may help care for the server.
+
 # System design
 
 [Later on I'll introduce you to _mario_](#mario), a tool you can use to take care of some of the fiddly details of setting up a server. For now we'll cover its output from a high level.
@@ -711,44 +750,7 @@ Some of the other self-hosting solutions mentioned above in [What is this book _
 
 # Implementation
 
-## Plan
-
-Consider the time and cost of self-hosting. To yourself *and your users*.
-
-I love this part! I get excited about what's to come, and I know a solid plan makes a vision real. I start by capturing my plans in a [Markdeep](https://casual-effects.com/markdeep/) file, including a calendar, budget, network diagram, to-do list and notes.
-
-Make _your_ plan. Maintain and improve your plan along with your server. Share the plan with other admins.
-
-Yep: other admins. You need someone to cover for you when you are not available, or a crystal clear expectation that when you die, the server dies too.
-
-### Budget
-
-How much do you have/want to spend? Write down a number and stick to it.
-
-### Resources
-
-Sketch out your thoughts on resources you'll need. Some ideas:
-
-* Data storage. There's a significant jump in complexity and cost with each jump in unit (for example, GB^[gigabyte] to TB^[terabyte]). This book is appropriate for data storage up to about 10 TB.
-* Electricity. Check your home power bill for the cost per kWh and run some estimates.
-* Support. Who will help you when you get stuck?
-* Physical location. Where will the server live? Will you have to install new wiring for power or network?
-
-### Schedule
-
-Rough out key dates so you and your users can plan ahead. For example:
-
-* Apr 28: Brainstorm, plan.
-* Apr 30: Order hardware.
-* May 3: Pull ethernet from router into garage.
-* May 5: Set up server.
-    * Install hard drives.
-    * Power on!
-    * Install operating system.
-    * Start services.
-* Jun 9: Review result against original goals.
-
-Invite others to participate, starting at the "brainstorm" step. This is a great time to include other people who may help care for the server.
+## Service plan
 
 ### Choose services
 
