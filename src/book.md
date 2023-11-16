@@ -223,7 +223,7 @@ And there are countless more of these kinds of partial or full-service self-host
 
 * [YunoHost](https://yunohost.org) - not considered, I prefer always using containers
 * [CasaOS](https://casaos.io) - new, interesting, very little documentation
-* [Runtipi](https://www.runtipi.io) - new, interesting, uses docker-compose and traefik
+* [Runtipi](https://www.runtipi.io) - new, interesting, uses docker-compose and Traefik
 
 These look like great ideas. I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs. To evaluate each in depth, one should ask:
 
@@ -555,7 +555,7 @@ Experienced self-hosters can compare my choices to theirs.
 
 A _mario_-built system presents nicely as a simplified stack of colored boxes. These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "Stack" is also commonly used to describe interdependent layers of a system.
 
-![Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud, Jellyfin, Wallabag](./img/system-design.png){width=80%}
+![Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud, Jellyfin, Wallabag](img/system-design.png){width=80%}
 
 I am most often working around the top layers e.g. adding or updating a container.
 
@@ -658,15 +658,52 @@ Think:
 
 ## Reverse Proxy
 
-We'll use Traefik. I'm told Caddy is also nice, and there are many other options as well.
+A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules. We'll use Traefik as our reverse proxy.
 
-A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules. We'll direct our traffic using host names.
+### Traefik architecture
 
-Traefik provides other handy features too, such as automatic HTTP encryption certificate handling with [Let's Encrypt](https://letsencrypt.org).
+Here's a bit about how Traefik works and how we'll use it with Nextcloud and other web-based self-hosted services.
+
+We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service. Study the included Traefik architecture diagram to better understand this process along with the _mario_ sources.
+
+(The diagram is from the MIT-licensed [Traefik source code](https://github.com/traefik/traefik/). Credit to Peka for the gopher logo, licensed CC-BY-3.0. For more information see the Traefik `README.md`)
+
+![Traefik architecture diagram showing how a request reaches a service](img/traefik-architecture.png){width=80%}
+
+In the _mario_ source code (or the snippet below), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
+
+* the `websecure` entrypoint, where we accept HTTPS traffic on port 443
+* the `app` service definition for Nextcloud, which includes Traefik routing labels
+* the ``Host(`cloud.example.com`)`` rule in the `nextcloud-https` router
+
+The routing labels wire together the entrypoint and router with the service under which they are defined. That is: `websecure` to `nextcloud-https` to `app`. We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with [Let's Encrypt](https://letsencrypt.org).
+
+Here's a relevant snippet of the _mario_ source to show how we set up Traefik for Nextcloud:
+
+```yaml
+# this part of traefik/docker-compose.yml ...
+# defines the websecure entrypoint
+services:
+  reverse-proxy:
+    command:
+      - --entrypoints.websecure.address=:443
+
+# this part of nextcloud/docker-compose.yml ...
+# wires together the websecure entrypoint, nextcloud-https
+# router, hostname rule and app service
+# (I've simulated expansion of the MARIO_DOMAIN_NAME variable)
+services:
+  app:
+    labels:
+      - "traefik.http.routers.nextcloud-https.entrypoints=websecure"
+      - "traefik.http.routers.nextcloud-https.rule=Host(`cloud.example.com`)"
+```
+
+Each self-hosted service will have its own router. Every service shares the `websecure` entrypoint.
 
 ## Identity management
 
-I wanted to include FOSS central identity management in _mario_ but I haven't figured it out yet. That is, some way to log in once and get to all the different services you have access to in your cloud. Authentication and authorization and all that good stuff.
+I wanted to include FOSS central identity management in _mario_ but I haven't figured it out yet. When I do, this should give users a way to log in once and get to all the different _mario_-hosted services. It takes care of authentication and authorization and all that good stuff.
 
 I'm interested in [Authentik](https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host). I want to see it running well for a good while before adding it to _mario_.
 
@@ -1252,7 +1289,7 @@ _mario_ has prepared your server to run a handful of services. Here's how to tur
 
 We'll stand up the reverse proxy first.
 
-Start traefik with:
+Start Traefik with:
 
 ```bash
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
@@ -1266,7 +1303,7 @@ You can tail the logs with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 ```
 
-You should see something like this for a working traefik service:
+You should see something like this for a working Traefik service:
 
 FIXME - [code snippets in PDF outputs are not wrapped](https://stackoverflow.com/questions/20788464/pandoc-doesnt-text-wrap-code-blocks-when-converting-to-pdf)
 
@@ -1307,7 +1344,7 @@ Examine logs for any service with `docker-compose logs`.
 Examples:
 
 ```bash
-# follow traefik logs
+# follow Traefik logs
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 
 # page watchtower log output with `less` with terminal colors
@@ -1320,7 +1357,7 @@ _mario_ (well, Traefik) sets up certificates to encrypt HTTP traffic. The certif
 
 If you see certificate errors, confirm DNS works (externally and internally). Also: examine Traefik logs as indicated [above](#start-reverse-proxy). You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml` and re-provisioning.
 
-Finally, try restarting traefik with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`. That particularly seems to help the first time I stand up a new service.
+Finally, try restarting Traefik with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`. That particularly seems to help the first time I stand up a new service.
 
 ## tiny test service
 
@@ -1364,7 +1401,7 @@ The services I'll highlight are a tiny fraction of those available to self-host.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
-Note that _mario_ closes off WAN access by default. Read [digital security](#digital-security) to decide if you want this or not. You may remove this protection by removing the `lan-only` middleware from the corresponding service's traefik labels. For example, to allow WAN access to Nextcloud, make this change:
+Note that _mario_ closes off WAN access by default. Read [digital security](#digital-security) to decide if you want this or not. You may remove this protection by removing the `lan-only` middleware from the corresponding service's Traefik labels. For example, to allow WAN access to Nextcloud, make this change:
 
 ```diff
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
@@ -1849,7 +1886,7 @@ networks:
     external: true
 ```
 
-Note the middleware to only allow traffic from your LAN. This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the traefik container to set up the middleware, for example:
+Note the middleware to only allow traffic from your LAN. This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the Traefik container to set up the middleware, for example:
 
 ```
 traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24
