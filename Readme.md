@@ -2,7 +2,7 @@
 
 **THANK YOU**! ❤️🧡💛💚💙💜
 
-Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this doesn't happen in isolation. It really does take a team. You're on the team! You're an expert and I value your help. I will benefit greatly from your open, honest feedback.
+Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this doesn't happen in isolation. It really does take a team. And hey, you're on the team! You are an expert and I value your help. I will benefit greatly from your open, honest feedback.
 
 The review deadline is Nov 24, 2023. I'd like to publish by December 20.
 
