@@ -2,7 +2,7 @@
 
 **THANK YOU**! ❤️🧡💛💚💙💜
 
-Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this shouldn't happen in isolation, it takes a team! I want *this* book to be good. You're an expert and I value your help. I will benefit greatly from your open, honest feedback.
+Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this doesn't happen in isolation. It really does take a team. You're on the team! You're an expert and I value your help. I will benefit greatly from your open, honest feedback.
 
 The review deadline is Nov 24, 2023. I'd like to publish by December 20.
 
@@ -88,6 +88,8 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am28 | add photo: bird on server | OPEN |
 | am29 | exclude optional slashes at ends of hyperlinks | RESOLVED |
 | am30 | list reviewers in _Acknowledgments_ | OPEN |
+| am31 | build book with Asciidoctor instead | OPEN |
+| am32 | release v2 to reviewers (maybe call it version 1.0.2?) | OPEN |
 
 ## Copyright and license
 
@@ -118,3 +120,6 @@ This is the final step in the editing process. A proofreader examines the final 
 * exclude optional slashes at ends of hyperlinks
 * capitalize product/project names in prose as they appear in upstream's branding/docs
 * in general: capitalize only the first letter of the first word of sections/headers
+* define jargon and acronym twice:
+    * at first appearance, immediately following the term, in parentheses or locale-appropriate delimiters
+    * in the glossary
