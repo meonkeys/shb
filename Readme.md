@@ -14,23 +14,27 @@ I'd like to wait to release everything publicly once it is ready, so please help
 
 ## Directory structure
 
-| path     | description                           |
-|----------|---------------------------------------|
-| `build/` | build outputs appear here             |
-| `src/`   | sources for the book                  |
-| `mario/` | sources for _mario_ provisioning tool |
+| path       | description                           |
+|------------|---------------------------------------|
+| `img/`     | illustrations, diagrams, photos       |
+| `mario/`   | sources for _mario_ provisioning tool |
+| `website/` | sources for https://selfhostbook.com/ |
 
 ## Book formats
 
-I use [Pandoc](https://pandoc.org) to produce multiple typeset versions of the book from a single source file: `src/book.md`.
+I use [AsciiDoctor](https://asciidoctor.org) to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`.
 
-[Download EPUB, PDF, and HTML versions here](https://github.com/meonkeys/shb-review/releases/).
+[Download PDF, HTML, EPUB, MOBI, and FB2 versions here](https://github.com/meonkeys/shb-review/releases/).
 
-The book source is Pandoc-specific Markdown. GitHub will try to render the Markdown in a web browser and fail in most respects.
+FIXME: (double-check this statement) The book source is Pandoc-specific Markdown. GitHub will try to render the Markdown in a web browser and fail in most respects.
 
-The `Makefile` in `src/` generates an EPUB, a HTML file, and printable and screen-friendly PDFs.
+If you want to generate your own typeset outputs, the easiest way is to run `./build-with-docker.sh`.
 
-If you want to generate your own typeset outputs, run `./typeset.sh`. See "Prerequisites to build the book" in `src/book.md`.
+Review outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
+
+That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux. Requires Docker and a few common cli tools.
+
+To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
 
 ## Feedback ideas
 
