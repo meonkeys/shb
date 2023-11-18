@@ -81,9 +81,9 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am29 | exclude optional slashes at ends of hyperlinks | RESOLVED | |
 | am30 | list reviewers in _Acknowledgments_ | OPEN | |
 | am31 | build book with Asciidoctor instead | RESOLVED | |
-| am32 | release v2 to reviewers (maybe call it version 1.0.2?) | OPEN | |
+| am32 | release v2 to reviewers (maybe call it version 1.0.2?) | RESOLVED | |
 | am33 | HTML output lacks cover art | WONTFIX | |
-| am34 | port build to macos | OPEN | |
+| am34 | port build to macos | RESOLVED | had to override `GID` in `build-with-docker.sh` |
 
 ## How to build the book
 
@@ -91,7 +91,7 @@ I use [Asciidoctor](https://asciidoctor.org) to produce multiple typeset version
 
 If you want to generate your own typeset outputs, the easiest way is to run `./build-with-docker.sh`, then review the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
 
-That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux. Requires Docker and a few common cli tools.
+That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux and macOS, maybe Windows too. Requires Docker and a few common cli tools.
 
 To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
 

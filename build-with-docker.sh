@@ -8,7 +8,7 @@ GID="$(id -g)"
 GROUP="$(id -gn)"
 BUILD_DATE_TIME="$(date)"
 BUILD_GIT_COMMIT="$(git log -n 1 --pretty=format:%H || echo FIXME)"
-BUILD_OS_RELEASE="$(lsb_release --short --description)"
+BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
 
 set -o xtrace
 
