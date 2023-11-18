@@ -83,6 +83,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am31 | build book with Asciidoctor instead | RESOLVED | |
 | am32 | release v2 to reviewers (maybe call it version 1.0.2?) | OPEN | |
 | am33 | HTML output lacks cover art | WONTFIX | |
+| am34 | port build to macos | OPEN | |
 
 ## How to build the book
 
