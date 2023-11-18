@@ -22,19 +22,7 @@ I'd like to wait to release everything publicly once it is ready, so please help
 
 ## Book formats
 
-I use [AsciiDoctor](https://asciidoctor.org) to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`.
-
 [Download PDF, HTML, EPUB, MOBI, and FB2 versions here](https://github.com/meonkeys/shb-review/releases/).
-
-FIXME: (double-check this statement) The book source is Pandoc-specific Markdown. GitHub will try to render the Markdown in a web browser and fail in most respects.
-
-If you want to generate your own typeset outputs, the easiest way is to run `./build-with-docker.sh`.
-
-Review outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
-
-That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux. Requires Docker and a few common cli tools.
-
-To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
 
 ## Feedback ideas
 
@@ -94,6 +82,16 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am30 | list reviewers in _Acknowledgments_ | OPEN |
 | am31 | build book with Asciidoctor instead | OPEN |
 | am32 | release v2 to reviewers (maybe call it version 1.0.2?) | OPEN |
+
+## How to build the book
+
+I use [AsciiDoctor](https://asciidoctor.org) to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`. The file is [AsciiDoc](https://asciidoc.org) plain text markup.
+
+If you want to generate your own typeset outputs, the easiest way is to run `./build-with-docker.sh`, then review the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
+
+That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux. Requires Docker and a few common cli tools.
+
+To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
 
 ## Copyright and license
 
