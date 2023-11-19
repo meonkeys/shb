@@ -123,7 +123,15 @@ This is the final step in the editing process. A proofreader examines the final 
 
 * exclude optional slashes at ends of hyperlinks
 * capitalize product/project names in prose as they appear in upstream's branding/docs
-* in general: capitalize only the first letter of the first word of sections/headers
+* capitalize only the first letter of the first word of sections/headers
+    * except: follow styling of proper nouns, acronyms, etc.
 * define jargon and acronym twice:
     * at first appearance, immediately following the term, in parentheses or locale-appropriate delimiters
     * in the glossary
+* footnotes
+    * use footnotes sparingly
+* links
+    * use hyperlinks sparingly
+    * exclude URL scheme from http(s) links
+        * this is handled automatically by asciidoc option `hide-uri-scheme`
+        * `https` is a safe guess/default
