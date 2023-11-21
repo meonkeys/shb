@@ -73,7 +73,7 @@ I am humbled and grateful you are reading this.
 
 Please make copies. I want it to be enjoyed and shared, and I chose a license that explicitly encourages sharing! Check this out:
 
-This book is distributed under the https://creativecommons.org/licenses/by-nc-sa/4.0/[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)] license. Contact me if you are interested in obtaining it under another license.
+This book is distributed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license**. See https://creativecommons.org/licenses/by-nc-sa/4.0/. Contact me if you are interested in obtaining it under another license.
 
 ==== You are free to
 
@@ -493,7 +493,7 @@ One downside of Docker is how often root access is assumed in example code and p
 
 ===== OCR
 
-Another smile-worthy advancement is free OCRfootnote:[optical character recognition]. I keep trying to "go paperless" by scanning in all my paper files. After scanning I was shouldered with, unsurprisingly, a bunch of PDFs of images. These can be easily processed and searched with tools like https://apps.nextcloud.com/apps/fulltextsearch[Nextcloud Full text search].
+Another smile-worthy advancement is free OCR (optical character recognition). I keep trying to "go paperless" by scanning in all my paper files. After scanning I was shouldered with, unsurprisingly, a bunch of PDFs of images. These can be easily processed and searched with tools like Nextcloud Full text search (https://apps.nextcloud.com/apps/fulltextsearch).
 
 ===== Jellyfin
 
@@ -517,7 +517,7 @@ Not all Nextcloud apps are ready for prime time. See <<_customization>>.
 
 Jitsi is a self-hostable FOSS video call platform. I gave up trying to get Jitsi running in Docker. I recall lots of open ports or port ranges being a problem. This one might be easier in a virtual machine.
 
-I will eventually give it another shot because https://jitsi.org/blog/authentication-on-meet-jit-si/[logging in is now required] when using the free 8x8-hosted Jitsi service.
+I will eventually give it another shot because logging in is now required when using the free 8x8-hosted Jitsi service (see https://jitsi.org/blog/authentication-on-meet-jit-si/).
 
 ==== Absorb them all
 
