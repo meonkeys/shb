@@ -1376,7 +1376,7 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certifica
 
 Starting a _mario_ service is always done with `docker-compose up`. See the "Setup" section of a particular service for more detail.
 
-To stand up everything at once, you could use:
+To stand up everything at once, you could use this shell script:
 
 [source,bash]
 ----
@@ -1392,7 +1392,7 @@ This will also pull and build images and update containers as necessary.
 
 Examine logs for any service with `docker-compose logs`.
 
-Examples:
+Example shell commands:
 
 [source,bash]
 ----
