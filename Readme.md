@@ -66,7 +66,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am14 | missing _Periodic maintenance_ section (example schedules) | OPEN | |
 | am15 | missing style guide | RESOLVED | see [below](#style-guide) |
 | am16 | confirm adherence to style guide | OPEN | |
-| am17 | add more photos and illustrations | OPEN | |
+| am17 | add more photos and illustrations | RESOLVED | added one of server guts, will add more if/as necessary |
 | am18 | change _mario_ to use [Duck DNS](https://hub.docker.com/r/linuxserver/duckdns) | OPEN | |
 | am19 | PDF output lacks cover art | RESOLVED | fixed with move to Asciidoctor |
 | am20 | define "attack surface" | RESOLVED | |
