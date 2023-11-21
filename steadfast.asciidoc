@@ -533,7 +533,7 @@ I hope this book inspires you with many positive surprises and helps you and you
 
 This book assumes some prerequisite skills. These are not difficult and you can quickly learn how to do them online. You must be able to:
 
-* configure your router and LANfootnote:[local area network]
+* configure your router and LAN (local area network)
 * install Linux on a computer (hereafter referred to as your _server_)
 * execute programs using a terminal / command line
 * connect to your server with SSH
