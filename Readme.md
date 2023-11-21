@@ -121,6 +121,8 @@ This is the final step in the editing process. A proofreader examines the final 
 
 ## Style guide
 
+* images
+    * center most and constrain to 80% wide
 * exclude optional slashes at ends of hyperlinks
 * capitalize product/project names in prose as they appear in upstream's branding/docs
 * capitalize only the first letter of the first word of sections/headers
