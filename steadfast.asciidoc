@@ -553,7 +553,6 @@ Experienced self-hosters can compare my choices to theirs.
 
 === Mindset
 
-[arabic]
 . ask for help
 . ask for feedback
 . listen to users, gather data, adapt accordingly
@@ -947,9 +946,7 @@ At the very least, restrict physical access.
 
 Here's an abbreviated server setup guide. Take notes and visualize yourself repeating the process.
 
-[arabic]
 . Install Ubuntu Server. Debian might also work; I haven't tested it.
-[arabic]
 .. Use the latest LTS release. I used a "64-bit Ubuntu 22.04 LTS server" image.
 .. https://ubuntu.com/tutorials/install-ubuntu-server[Follow a tutorial] if you prefer.
 .. At each prompt, use defaults or write down exceptions you make to defaults. Anticipate repeating this install process precisely.
@@ -1119,7 +1116,6 @@ I use `zfs-auto-snapshot` locally to be able to quickly get at old versions of f
 
 Here's a quick recipe for the average self-hoster with limited time, considering two classes of data:
 
-[arabic]
 . sensitive data: passwords, credit card numbers, government ID number
 * store _offline only_ if possible
 * if ever saved on a computer, store encrypted
@@ -1260,7 +1256,6 @@ Of the two options I provide, Duck DNS is the easiest and cheapest.
 
 ===== Duck DNS
 
-[arabic]
 . Start at https://www.duckdns.org[duckdns.org].
 . Log in and add a domain.
 
@@ -1486,7 +1481,6 @@ A basic Nextcloud install appears to have excellent security. The source is in h
 
 Setting up a new Nextcloud server is well-documented. In brief:
 
-[arabic]
 . Provision with _mario_.
 . Start Nextcloud containers with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`.
 . Navigate to `\https://cloud.MARIO_DOMAIN_NAME`
@@ -1668,7 +1662,6 @@ For better text editing, one workaround is to use the Notes app on https://githu
 
 Another workaround is https://github.com/gsantner/markor[Markor]. Install that app, then:
 
-[arabic]
 . In the Nextcloud mobile app, "Download" or "Sync" the file you wish to view or edit locally. This caches a copy on your phone.
 . In the Nextcloud mobile app, choose "open with" for the file. Should open instantly.
 . If you make changes to the file, save it, then manually "Sync" the file in the Nextcloud app. It appears local changes like these never make it to the server otherwise.
@@ -1753,7 +1746,6 @@ I like mounting local media folders using Nextcloud "external storages", then I 
 
 ==== Setup
 
-[arabic]
 . Provision with _mario_.
 . Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
 . Navigate to `\https://jellyfin.MARIO_DOMAIN_NAME`
@@ -1801,7 +1793,6 @@ https://wallabag.org[Wallabag] saves articles for distraction-free offline readi
 
 ==== Setup
 
-[arabic]
 . Provision with _mario_.
 . Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
 . Navigate to `\https://wallabag.MARIO_DOMAIN_NAME`
@@ -1859,7 +1850,6 @@ https://github.com/containrrr/watchtower/issues/90[It does not automatically rol
 
 ==== Setup
 
-[arabic]
 . Provision with _mario_.
 . Start Watchtower with `sudo docker-compose --file /root/ops/watchtower/docker-compose.yml up -d`.
 
@@ -1880,7 +1870,6 @@ Scratch doesn't require any persistent data, setup, nor auth.
 
 ==== Setup
 
-[arabic]
 . Provision with _mario_.
 . Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
 . Navigate to `\https://scratch.MARIO_DOMAIN_NAME`
@@ -2079,7 +2068,6 @@ FIXME: document translation process, or put out an invitation for someone to con
 
 === How to build this book
 
-[arabic]
 . Install prerequisites.
 . Run `make`.
 
@@ -2089,7 +2077,6 @@ Patches welcome! My priorities are end-user satisfaction and code maintainabilit
 
 The default build target will output these versions of the book:
 
-[arabic]
 . PDF optimized for reading on a screen
 . PDF optimized for printing
 . HTML
