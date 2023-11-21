@@ -1133,7 +1133,7 @@ One common sticking point is WAN access. That's remote access to the data, throu
 
 Let's back up a step and talk about threat modeling. Your _threat model_ is how you'll consider threats to your data and how you'll mitigate these threats. With your threat model in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
 
-WARNING: If you already know you are a rich target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey. This guide is not sufficient for your threat model.
+WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey. This guide is not sufficient for your threat model.
 
 Everyone else: Let's build a simple example threat model for the "everything else" category above.
 
