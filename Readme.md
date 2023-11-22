@@ -65,17 +65,17 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am13 | remove _Cover art_ section | RESOLVED | |
 | am14 | missing _Periodic maintenance_ section (example schedules) | OPEN | |
 | am15 | missing style guide | RESOLVED | see [below](#style-guide) |
-| am16 | confirm adherence to style guide | OPEN | |
+| am16 | confirm adherence to style guide | RESOLVED | ongoing |
 | am17 | add more photos and illustrations | RESOLVED | added one of server guts, will add more if/as necessary |
 | am18 | change _mario_ to use [Duck DNS](https://hub.docker.com/r/linuxserver/duckdns) | OPEN | |
 | am19 | PDF output lacks cover art | RESOLVED | fixed with move to Asciidoctor |
 | am20 | define "attack surface" | RESOLVED | |
 | am21 | differentiate style for image captions | RESOLVED | fixed with move to Asciidoctor |
-| am22 | add illustration: loaf of bread server | OPEN | |
+| am22 | add illustration: loaf of bread server | RESOLVED | |
 | am23 | add illustration: squeaky clean chickens | OPEN | |
 | am24 | conform voice of _Criminal chickens_ section | RESOLVED | |
 | am25 | tie in 4th-wall-breaking "caveman speak" near "5 Ws" or just leave it out | RESOLVED | |
-| am26 | be less apologetic, limit to perhaps 3 or so apologies | OPEN | |
+| am26 | be less apologetic, limit to perhaps 3 or so apologies | RESOLVED | |
 | am27 | correct "knows as" typo to "known as" | RESOLVED | |
 | am28 | add photo: bird on server | OPEN | |
 | am29 | exclude optional slashes at ends of hyperlinks | RESOLVED | |
