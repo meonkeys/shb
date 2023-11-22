@@ -383,7 +383,7 @@ Once I stood up my personal cloud I felt freedom and ease when posting and hosti
 
 I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens! I can safely ignore their audit and its erroneous compliance infringement warning.
 
-.Screenshot of a YouTube legal audit for my old API client
+.Screenshot of a YouTube legal audit for my old API client.
 image::YT-audit.png[align="center",scaledwidth=80%]
 
 I also no longer need to work with YouTube's APIfootnote:[Application programming interface], including registering an API client and completing periodic audits. After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance. Turns out the Nextcloud Talk API is easier for posting my chicken coop photos & videos anyway.
@@ -474,7 +474,7 @@ Here are some things that surprised me, both positively and negatively.
 
 With help from a friend (thanks Rob!), I bought a reliable and cheap server. I could've saved a few bucks by buying parts, but I wanted something ready to power on. Still, I thought I'd be tinkering with wires, cards, and CMOS batteries. Not so! I only opened the chassis to see the guts. It looked like normal server guts in there. Took me longer to build a rack for my server than it took me to power it on.
 
-.View inside the server showing two empty PCI-E card slots
+.View inside the server showing two empty PCI-E card slots.
 image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers
@@ -607,7 +607,7 @@ In <<_mario>> we'll get to know the tool you can use to take care of some of the
 
 A _mario_-built system presents nicely as a simplified stack of colored boxes. These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "Stack" is also commonly used to describe interdependent layers of a system.
 
-.Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud, Jellyfin, Wallabag
+.Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud, Jellyfin, Wallabag.
 image::service-stack.png[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a container.
@@ -721,7 +721,7 @@ We want HTTPS requests to port 443 bound for cloud.example.com to reach our Next
 
 (The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik/. Credit to Peka for the gopher logo, licensed CC-BY-3.0. For more information see the Traefik `README.md`)
 
-.Traefik architecture diagram showing how a request reaches a service
+.Traefik architecture diagram showing how a request reaches a service.
 image::traefik-architecture.png[]
 
 In the _mario_ source code (or the snippets below), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
@@ -859,7 +859,7 @@ I chose something powerful, cheap, and fast with plenty of storage and room to g
 
 I found a used refurbished 1U rackmount server on eBay for about $1,000. Two 24-core CPUs and 128 GB RAM. Tech companies dump these by the truckload so you can usually find a good deal.
 
-.DIY rackmount server attached to garage ceiling
+.DIY rackmount server attached to garage ceiling.
 image::racked-server.jpg[]
 
 The fans are *way* louder than a desktop, especially when it is under load. It needs decent ventilation, temperature and humidity regulation. It has several enterprise features to ease maintenance such as redundant power supplies, hot-swap drive bays, lots of sensors, and a remote console.
@@ -926,7 +926,7 @@ CAUTION: Port-forwarding allows inbound connections through your WAN boundary to
 
 Here's a simple diagram I created (in https://asciiflow.com[ASCIIflow]) to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram". The router provides electricity to the mini switch using PoEfootnote:[power over ethernet]. There server has two NICsfootnote:[network interface cards]: one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOBfootnote:[out-of-band] computer with IPMIfootnote:[Intelligent Platform Management Interface]. All arrows are ethernet cable.
 
-.WAN into LAN traffic flow diagram
+.WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 
 ==== Electricity
@@ -1963,7 +1963,7 @@ The technique is imperfect, yet simple and effective.
 
 My Pi-hole server sits between my router's DNS server and all clients.
 
-.Pi-hole DNS traffic flow diagram
+.Pi-hole DNS traffic flow diagram.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
 Queries for host names not on any block list will be answered directly or sent upstream. I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my LAN as necessary.
