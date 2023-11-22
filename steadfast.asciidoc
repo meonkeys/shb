@@ -875,6 +875,11 @@ Increment article on phone energy impact::
 
 A rackmount server like mine can handle far more than 5 users, assuming they aren't all trying to transcode video.
 
+It also makes a great heated perch.
+
+.Bird perched on server.
+image::bird-on-server.jpg[align="center",scaledwidth=50%]
+
 ==== Admin computer
 
 It's helpful to have a separate computer from your server to make changes. I usually run _mario_ on a laptop. This connects to and "provisions" my remote server, making changes as necessary to align it with the Ansible configuration files.
