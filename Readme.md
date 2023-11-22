@@ -87,13 +87,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 
 ## How to build the book
 
-I use [Asciidoctor](https://asciidoctor.org) to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`. The file is [AsciiDoc](https://asciidoc.org) plain text markup.
-
-If you want to generate your own typeset outputs, the easiest way is to run `./build-with-docker.sh`, then review the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
-
-That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux and macOS, maybe Windows too. Requires Docker and a few common cli tools.
-
-To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
+See "How to build this book" in the book itself.
 
 ## Copyright and license
 

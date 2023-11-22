@@ -416,13 +416,11 @@ On-premise self-hosting entails additional considerations. You need to ensure su
 
 Why are you talking like a caveman?
 
-I wrote the book in Markdown plain text in my steadfast text editor (Vim). I applied generous amounts of Pandoc, time, and love.
+I wrote the book originally in Markdown plain text in my steadfast text editor, Vim. I applied generous amounts of Pandoc, time, and love. Pandoc (https://pandoc.org) is a fantastic FOSS tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs. While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!). In short order I converted the book to Asciidoctor. This simplified the book build and gave me more and better output formats.
 
-In fact, here's a HUGE shout-out to https://pandoc.org[Pandoc]. That fantastic FOSS tool allowed me to use a single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
+Check out the source code -- you're welcome to hack away at it. See <<_resources>> and <<_how_to_build_this_book>>.
 
-Check out the source code -- you're welcome to hack away at it. See <<_resources>>.
-
-I tried to stick with off-the-shelf software as much as possible, with minimal customization. This helped me focus on the content while keeping the book simple enough to self-publish.
+I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization. This helped me focus on the content while keeping the book simple enough to self-publish.
 
 === When write book?
 
@@ -2070,45 +2068,13 @@ FIXME: document translation process, or put out an invitation for someone to con
 
 === How to build this book
 
-. Install prerequisites.
-. Run `make`.
+I use [Asciidoctor](https://asciidoctor.org) to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`. The file is [AsciiDoc](https://asciidoc.org) plain text markup.
 
-All the software I'll mention is multi-platform FOSS, although I only test this process on Ubuntu 22.04 LTS 64-bit desktop.
+Run `./build-with-docker.sh` to generate your own typeset outputs, then review the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
 
-Patches welcome! My priorities are end-user satisfaction and code maintainability.
+That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux and macOS, maybe Windows too. Requires Docker and a few common cli tools.
 
-The default build target will output these versions of the book:
-
-. PDF optimized for reading on a screen
-. PDF optimized for printing
-. HTML
-. EPUB
-
-==== Prerequisites to build the book
-
-FIXME - table formatting broken for PDF outputs
-
-[width="99%",cols="13%,9%,31%,35%,12%",options="header",]
-|===
-|command |required? |description |used to |package
-|bash |Yes |Bourne-again shell |generate HTML book |bash
-|date |No |GNU date utility |fetch build date |coreutils
-|docker |Yes |Docker Linux container runtime |generate HTML book |docker.io
-|git |No |git version control system |fetch build git commit hash |git
-|id |Yes |GNU user info utility |set Docker container user for HTML book |coreutils
-|lsb_release |No |Linux Standard Base version utility |fetch build OS version info |lsb-release
-|make |Yes |GNU make software build tool |orchestrate book build process |make
-|pandoc |Yes |document conversion tool |typeset book text for all outputs |pandoc
-|pwd |Yes |GNU print working directory |mount Docker volume for HTML book |coreutils
-|python3 |Yes |Python 3 programming language |filter raw book text |python3
-|xelatex |Yes |XeTeX and packages |generate PDF output |texlive-xetex
-|===
-
-If a command is missing, try `sudo apt get install PACKAGE`.
-
-If you disable building the HTML book in the `Makefile`, you can omit HTML-related prerequisites above.
-
-If you disable building the PDF book in the `Makefile`, you can omit PDF-related prerequisites above. FIXME - confirm... I probably put "Yes" under "required?" above for a reason
+To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
 
 == Discussion topics
 
