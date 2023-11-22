@@ -599,6 +599,28 @@ Rough out key dates so you and your users can plan ahead. For example:
 
 Invite others to participate, starting at the "brainstorm" step. This is a great time to include other people who may help care for the server.
 
+=== Transition
+
+Your users already have their data somewhere else. Consider how you'll help them migrate their data onto the server.
+
+The key to this is excellent communication. Include this in your plan and seek buy-in.
+
+To learn more about how to do this well, study _change management_.
+
+=== User support
+
+Let's first get in the right mindset to do the best we can by our users.
+
+Make sure the cloud works well for them. Solicit their input often and take it seriously. Carefully tease out _wants_ vs. _needs_.
+
+Translate the word "users" as necessary. Perhaps: "those most dear to you, those you care about most above all others, those who give you meaning and purpose."
+
+Yeah, that's way over the top. You get the point: we must care about their experience or their experience will be poor.
+
+Know your users. For example: they might not be activists, or might not be activists for your cause. Be thoughtful.
+
+Also: know thyself! I'll go first: I recognize that using the word FOSS is a signal to staunch pragmatists that I'm on the activist spectrum. I solicit feedback from others to balance my idealism with pragmatism.
+
 == System design
 
 In <<_mario>> we'll get to know the tool you can use to take care of some of the fiddly details of setting up a server. For now we'll cover its output from a high level.
@@ -1014,28 +1036,6 @@ zfs list
 # Show I/O stats.
 zpool iostat
 ----
-
-=== Transition
-
-Your users already have their data somewhere else. Consider how you'll help them migrate their data onto the server.
-
-The key to this is excellent communication. Include this in your plan and seek buy-in.
-
-To learn more about how to do this well, study _change management_.
-
-=== User support
-
-Let's first get in the right mindset to do the best we can by our users.
-
-Make sure the cloud works well for them. Solicit their input often and take it seriously. Carefully tease out _wants_ vs. _needs_.
-
-Translate the word "users" as necessary. Perhaps: "those most dear to you, those you care about most above all others, those who give you meaning and purpose."
-
-Yeah, that's way over the top. You get the point: we must care about their experience or their experience will be poor.
-
-Know your users. For example: they might not be activists, or might not be activists for your cause. Be thoughtful.
-
-Also: know thyself! I'll go first: I recognize that using the word FOSS is a signal to staunch pragmatists that I'm on the activist spectrum. I solicit feedback from others to balance my idealism with pragmatism.
 
 === Server maintenance
 
