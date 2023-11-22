@@ -1281,9 +1281,9 @@ It is handy to have an _internal_ DNS server in addition to a public one (e.g. R
 
 Inside your private network you can use handy domain names or even make up your own TLDfootnote:[top-level domain]. I recommend using internal hostnames matching public ones, but pointing to LAN-only private IP addresses. For example:
 
-[cols=",,,",options="header",]
+[%header]
 |===
-|service |hostname |public IP |internal IP
+|Service |Hostname |Public IP |Internal IP
 |Nextcloud |cloud.example.com |175.102.205.1 |10.0.0.5
 |Jellyfin |media.example.com |175.102.205.1 |10.0.0.5
 |Wallabag |read.example.com |175.102.205.1 |10.0.0.5
@@ -1548,7 +1548,7 @@ These _Nextcloud apps_ are installed on the server, expanding the functionality 
 
 Here are some Nextcloud apps I've tried, what they do, and a ruling on whether they're worth looking into. Read "Worth your time?" as "Adam maybe tried this app and has shared his opinion whether others will find this particular app worth the effort to learn and maintain, based on his own experiences projected onto our possibly different use cases?" Grain of salt, in other words. When in doubt: start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
 
-[width="100%",cols="28%,29%,43%",options="header",]
+[%header,cols="1,1,2"]
 |===
 |Nextcloud App |Purpose |Worth your time?
 |Antivirus for files |virus scan uploads |*Yes*. Note: https://github.com/nextcloud/files_antivirus/issues/219[uploads from desktop clients are not scanned for viruses]
@@ -1607,7 +1607,7 @@ Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA.
 
 Besides the primary mobile app (called simply "Nextcloud"), there are other mobile apps made to work with Nextcloud apps. Here are the ones I recommend. I don't have an iPhone so these are only Android apps.
 
-[cols=",",options="header",]
+[%header]
 |===
 |Mobile app |Works with Nextcloud apps
 |https://www.davx5.com[DAVx5] |Calendar, Contacts, Tasks
