@@ -892,7 +892,7 @@ You should also be a user of the stuff you self-host. This is _dogfooding_. Dogf
 
 ==== Hard drives
 
-I use HDDsfootnote:[hard disk drives] for data storage, mainly as a cost-saving measure. The cost of public cloud block storage far exceeds the gigabyte-hour cost of my HDDs. I priced out one month of 5TB HDD block storage on AWS at $228.10. With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_. One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68. That's $535.67 total, which is about what I spent on my drives. So I broke even in a month and the drives should last _years_.
+I use HDDsfootnote:[hard disk drives] for data storage, mainly as a cost-saving measure. The cost of public cloud block storage far exceeds the gigabyte-hour cost of my HDDs. I priced out one month of 5TB HDD block storage on AWS at $228.10. With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_. One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68 on AWS. That's $535.67 total, which is about what I spent on my drives. So I broke even in a month and the drives should last _years_.
 
 For redundancy I recommend purchasing two of the same drive. We'll configure them mirrored (RAID 1). This increases redundancy and read performance (for most reads) and halves usable storage space.
 
