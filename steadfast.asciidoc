@@ -816,27 +816,26 @@ https://habitica.com[Habitica] demonstrates several of these.
 
 ==== Map services to resources
 
-Here's an early, rough resource planning table I used:
+Here's an early, rough resource planning table I used. I go into detail about some of these services later in the book.
 
-[cols=",,,",options="header",]
+[%header]
 |===
-|service |isolation |cores |RAM (GB)
-|plex |Docker |2 |2
-|kahoot-clone |Docker |0 |0
-|poller |Docker |0 |0
-|backuppc |none |0 |0
-|taskd |Docker |0 |0
-|sftp |none |0 |0
-|syncthing |none |1 |1
-|peercoind |none |0 |0
-|nextcloud |Docker |2 |2
-|minecraft |Docker |4 |8
-|irssi |none |0 |0
-|jitsi |Docker |2 |2
-|wallabag |Docker |1 |1
+|Service |Purpose |Isolation |Cores |RAM (GB)
+|jellyfin |streaming music |Docker |2 |2
+|kahoot-clone |quiz game |Docker |0 |0
+|poller |polls |Docker |0 |0
+|backuppc |backups |none |0 |0
+|taskd |task tracking |Docker |0 |0
+|sftp |file transfers |none |0 |0
+|syncthing |file sync |none |1 |1
+|nextcloud |file sharing |Docker |2 |2
+|minetest |game server |Docker |4 |8
+|irssi |chat client |none |0 |0
+|jitsi |video calls |Docker |2 |2
+|wallabag |article saver |Docker |1 |1
 |===
 
-This chart (and link:#_server[more learnings, below]) told me I'd need something more powerful than the latest available Raspberry Pi.
+"Cores" represents relative peak compute requirements. RAM: peak memory. These were fairly wild guesses, based as much as possible on published documentation. The guesses turned out to be accurate enough. I could see right quick I'd need something more powerful than the latest available Raspberry Pi. See <<_server>> for more lessons learned about resource requirements.
 
 === Prepare hardware
 
