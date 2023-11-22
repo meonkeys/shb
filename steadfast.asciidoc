@@ -862,7 +862,7 @@ I found a used refurbished 1U rackmount server on eBay for about $1,000. Two 24-
 .DIY rackmount server attached to garage ceiling.
 image::racked-server.jpg[]
 
-The fans are *way* louder than a desktop, especially when it is under load. It needs decent ventilation, temperature and humidity regulation. It has several enterprise features to ease maintenance such as redundant power supplies, hot-swap drive bays, lots of sensors, and a remote console.
+The fans are *way* louder than a desktop, especially when it is under load. It is supposed to have decent ventilation, temperature and humidity regulation yet has so far been extremely hardy even below freezing and above 100°F for extended periods of time. It has several enterprise features to ease maintenance such as redundant power supplies, hot-swap drive bays, lots of sensors, and remote management via a web browser or IPMI.
 
 Power consumption averages 130W, or about 1,140kWh per year; roughly $138.15 in Seattle. That's about as much as a bright incandescent light bulb, and it's a bit wasteful for one user. Five users though? ~228kWh/year each. That's less than the cloud server hardware required for a mobile device making use of Google's or Apple's clouds. Further reading on this topic:
 
@@ -924,7 +924,7 @@ Learn how to configure your router. Keep it up to date and maintain a strict fir
 
 CAUTION: Port-forwarding allows inbound connections through your WAN boundary to your server. Read <<_digital_security>> before forwarding any ports.
 
-Here's a simple diagram I created (in https://asciiflow.com[ASCIIflow]) to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram". The router provides electricity to the mini switch using PoEfootnote:[power over ethernet]. There server has two NICsfootnote:[network interface cards]: one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOBfootnote:[out-of-band] computer with IPMIfootnote:[Intelligent Platform Management Interface]. All arrows are ethernet cable.
+Here's a simple diagram I created (in https://asciiflow.com[ASCIIflow]) to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram". The router provides electricity to the mini switch using PoEfootnote:[power over ethernet]. There server has two NICsfootnote:[network interface cards]: one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOBfootnote:[out-of-band] remote management computer with IPMIfootnote:[Intelligent Platform Management Interface]. All arrows are ethernet cable.
 
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
@@ -962,7 +962,7 @@ After reading about full-disk encryption and ZFS, pick services (<<_services>>) 
 
 ==== Full-disk encryption
 
-Encrypting prevents data recovery by an attacker. You'll have to enter a password on boot, though. This is inconvenient if you have intermittent power and/or no remote console.
+Encrypting prevents data recovery by an attacker. You'll have to enter a password on boot, though. This is inconvenient if you have intermittent power and/or no remote management capability.
 
 If you decide you want full-disk encryption, choose it during the OS install. The section on link:#_digital_security[digital security] is helpful for deciding whether or not to encrypt.
 
