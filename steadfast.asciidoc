@@ -1796,6 +1796,12 @@ https://wallabag.org[Wallabag] saves articles for distraction-free offline readi
 . Log in as `wallabag` user with password `wallabag`.
 . Update password for `wallabag` user.
 
+Assuming everything above was successful, also:
+
+. Edit `wallabag/docker-compose.yml`, removing `MYSQL_ROOT_PASSWORD` from the `app` service `environment` section.
+. Provision with _mario_.
+. Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`. The config change will be detected and a new `app` container will be created.
+
 ==== Maintenance
 
 * upgrades
