@@ -882,7 +882,7 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 
 ==== Admin computer
 
-It's helpful to have a separate computer from your server to make changes. I usually run _mario_ on a laptop. This connects to and "provisions" my remote server, making changes as necessary to align it with the Ansible configuration files.
+It's helpful to have a separate computer from your server to make changes. I usually run _mario_ on a laptop. This provisions my remote server, making changes as necessary to align it with the Ansible configuration files.
 
 ==== Test devices
 
