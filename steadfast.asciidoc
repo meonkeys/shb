@@ -531,19 +531,16 @@ I hope this book inspires you with many positive surprises and helps you and you
 
 === Skills
 
-This book assumes some prerequisite skills. These are not difficult and you can quickly learn how to do them online. You must be able to:
+This book assumes some prerequisite skills. You must be able to:
 
 * configure your router and LAN (local area network)
 * install Linux on a computer (hereafter referred to as your _server_)
-* execute programs using a terminal / command line
-* connect to your server with SSH
+* execute programs using a command line
+* connect to your server with SSH (secure shell)
 * edit text files and run commands on your server
 * transfer files to and from your server
 
-These additional skills are also helpful:
-
-* familiarity with https://git-scm.com[git] and https://www.gnu.org/software/bash/[Bash]
-* forgive my mistakes and inaccuracies and help me improve
+These are not difficult. You can quickly learn them online.
 
 === Experience level
 
@@ -1209,7 +1206,7 @@ _mario_ is a *practical learning tool*. It comes with sensible, tested defaults.
 
 The first time you run _mario_, follow the instructions as closely as possible. Many assumptions are made so it works "out of the box", and it is meant to be easily customizable.
 
-_mario_ configuration files are *declarative*. You write out the _state_ you want your server to end up at, not all the commands you'd run in a terminal to achieve the same state. _mario_ runs *Ansible*, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner. The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
+_mario_ configuration files are *declarative*. You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state. _mario_ runs *Ansible*, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner. The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
 After getting _mario_ up and running successfully once, run it again. Provisioning with _mario_ is idempotent. The system should not change in any meaningful way after the desired state is reached. Once `provision.sh` completes successfully, it may be run again without making further changes.
 
@@ -1299,7 +1296,7 @@ If you don't have a DNS server yet, use hostname to IP address mappings in `/etc
 
 ==== Connect to server
 
-_mario_ expects to be able to https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#connecting-to-hosts-behavioral-inventory-parameters[connect directly to the server] using https://en.wikipedia.org/wiki/Secure_Shell[SSH]. Public key authentication eases this. If you have a key pair, use it. If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one. Copy the public key to the server with `ssh-copy-id` or similar.
+_mario_ expects to be able to connect directly to the server using SSH. Public key authentication eases this. If you have a key pair, use it. If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one. Copy the public key to the server with `ssh-copy-id` or similar.
 
 Use a stanza like this in your SSH client config:
 
@@ -1394,7 +1391,7 @@ Example shell commands:
 # follow Traefik logs
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 
-# page watchtower log output with `less` with terminal colors
+# page watchtower log output through `less` (with color)
 sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -R
 ----
 
@@ -2456,6 +2453,8 @@ source control::
   A system for tracking changes in source code along with who made the change, why, and when.
 SSD::
   Solid-state drive. A hard drive that doesn't spin.
+SSH::
+  Secure Shell. Provides encrypted remote command line access to a server.
 sysadmin::
   Portmanteau of "systems administrator". A party responsible for the upkeep of a computer system.
 threat model::

@@ -134,6 +134,8 @@ This is the final step in the editing process. A proofreader examines the final 
     * use footnotes sparingly
 * links
     * use hyperlinks sparingly
+    * always include entire URL, never link text directly (this is the best way to ...)
     * exclude URL scheme from http(s) links
         * this is handled automatically by asciidoc option `hide-uri-scheme`
         * `https` is a safe guess/default
+* use "command line" to refer to a Linux text-based interactive user interface
