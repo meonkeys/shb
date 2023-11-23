@@ -2157,7 +2157,7 @@ Everybody loves a puppy, right? Right?!
 I sure hope so! Because--fair warning--if you spend too much time with your "puppy" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
 
 .Open Source is free like a puppy. Pictured: actual puppy.
-image::puppy.jpg[]
+image::puppy.jpg[align="center",scaledwidth=80%]
 
 If your problem is _that_ cute, I suppose it's not too a bad problem to have.
 
