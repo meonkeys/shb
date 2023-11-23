@@ -640,6 +640,83 @@ Less often still I might examine versions of a configuration file stored on disk
 
 Finally, when my server dies, I'll be on that bottom layer fixing or replacing hardware.
 
+=== Digital security
+
+Here's a quick recipe for the average self-hoster with limited time, considering two classes of data:
+
+. sensitive data: passwords, credit card numbers, government ID number
+* store _offline only_ if possible
+* if ever saved on a computer, store encrypted
+* easy fix: *store in a password manager*
+. everything else: notes, photos, documents, personal information
+* store on encrypted media, including backups
+* access only with up-to-date software you trust
+* disallow WAN access to these data
+
+One common sticking point is WAN access. That's remote access to the data, through your router/firewall. Say: port-forwarding HTTPS traffic through your router/firewall to your Nextcloud server. It is risky and convenient.
+
+Let's back up a step and talk about threat modeling. Your _threat model_ is how you'll consider threats to your data and how you'll mitigate these threats. With your threat model in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
+
+WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey. This guide is not sufficient for your threat model.
+
+Everyone else: Let's build a simple example threat model for the "everything else" category above.
+
+==== Threat model
+
+Consider:
+
+* *Assets*
+** Data you are trying to protect (everything digital besides what you store in a password manager).
+* *Actors/Threats/Vectors*
+** People and bots acting badly, and their means of attack. Includes mistakes and bugs.
+* *Mitigations*
+** Steps taken to reduce chances attacks succeed.
+
+That makes my marketing-friendly threat model acronym *A.A/T/V.M.* (all punctuation is vocalized). Really just rolls off the tongue!
+
+==== Example: WAN attack
+
+Let's run "WAN access" through our threat model.
+
+* Asset
+** Personal information stored on out-of-date Nextcloud server.
+* Actor/Threat/Vector
+** Bot finds URL to Nextcloud server on a publicly archived mailing list. Bot automatically attempts exploit against known vulnerability in Nextcloud server. Exploit succeeds, bot owner gains access to personal information and attempts identity theft.
+* Mitigations
+** Keep Nextcloud server up to date.
+** Secure WAN boundary: monitor traffic logs, employ an IPSfootnote:[intrusion prevention system], only cross into LAN using a VPNfootnote:[virtual private network].
+** Close WAN boundary: disallow all inbound WAN traffic.
+
+This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
+
+Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on "security through obscurity".
+
+Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "defense in depth".
+
+==== More tips
+
+* link:#_backups[Maintain useful encrypted backups] (perform test restores to know they are useful).
+* Use `root` at little as possible.
+* Use multi-factor authentication.
+* Use firewalls.
+* Use strong passwords.
+* Be very careful when opening up WAN ports or don't do it at all.
+* Be vigilant about all the usual stuff too: phishing, malware, SMS spoofing, and social attacks.
+** Take caution with email links and attachments.
+** Don't install untrusted software. Always use HTTPS.
+** Use a special passphrase with your mobile carrier.
+** Question urgency and suspicious requests.
+* Send unrecognized calls to voicemail.
+* Pay attention to data breaches and protect your identity.
+** Freeze your credit after a breach.
+* Learn about compartmentalization and the principle of least privilege.
+
+==== Further reading
+
+. _Personal Cybersecurity: How to Avoid and Recover from Cybercrime_ by Marvin Waschke (https://www.oreilly.com/library/view/personal-cybersecurity-how/9781484224304/)
+. _Personal Privacy Threat Modeling (With LOTS Of Examples)_ by Eliza (https://modernprivatelife.com/how-to-choose-privacy-threat-model/)
+. _How I learned to stop worrying (mostly) and love my threat model_ by Sean Gallagher (https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/)
+
 === Filesystem
 
 ZFSfootnote:[originally: Zettabyte File System] is our one-stop shop for efficiently and safely making hard drives available for our OS and data. Encryption, automatic lightweight snapshots and RAIDfootnote:[redundant array of inexpensive disks] are all included and used by _mario_.
@@ -1104,83 +1181,6 @@ I recommend https://restic.net[restic] or https://www.borgbackup.org[Borg].
 https://www.reddit.com/r/BorgBackup/comments/v3bwfg/why_should_i_switch_from_restic_to_borg/[Here's a decent comparison of restic and Borg].
 
 I use `zfs-auto-snapshot` locally to be able to quickly get at old versions of files, but I don't count this as a backup.
-
-=== Digital security
-
-Here's a quick recipe for the average self-hoster with limited time, considering two classes of data:
-
-. sensitive data: passwords, credit card numbers, government ID number
-* store _offline only_ if possible
-* if ever saved on a computer, store encrypted
-* easy fix: *store in a password manager*
-. everything else: notes, photos, documents, personal information
-* store on encrypted media, including backups
-* access only with up-to-date software you trust
-* disallow WAN access to these data
-
-One common sticking point is WAN access. That's remote access to the data, through your router/firewall. Say: port-forwarding HTTPS traffic through your router/firewall to your Nextcloud server. It is risky and convenient.
-
-Let's back up a step and talk about threat modeling. Your _threat model_ is how you'll consider threats to your data and how you'll mitigate these threats. With your threat model in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
-
-WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey. This guide is not sufficient for your threat model.
-
-Everyone else: Let's build a simple example threat model for the "everything else" category above.
-
-==== Threat model
-
-Consider:
-
-* *Assets*
-** Data you are trying to protect (everything digital besides what you store in a password manager).
-* *Actors/Threats/Vectors*
-** People and bots acting badly, and their means of attack. Includes mistakes and bugs.
-* *Mitigations*
-** Steps taken to reduce chances attacks succeed.
-
-That makes my marketing-friendly threat model acronym *A.A/T/V.M.* (all punctuation is vocalized). Really just rolls off the tongue!
-
-==== Example: WAN attack
-
-Let's run "WAN access" through our threat model.
-
-* Asset
-** Personal information stored on out-of-date Nextcloud server.
-* Actor/Threat/Vector
-** Bot finds URL to Nextcloud server on a publicly archived mailing list. Bot automatically attempts exploit against known vulnerability in Nextcloud server. Exploit succeeds, bot owner gains access to personal information and attempts identity theft.
-* Mitigations
-** Keep Nextcloud server up to date.
-** Secure WAN boundary: monitor traffic logs, employ an IPSfootnote:[intrusion prevention system], only cross into LAN using a VPNfootnote:[virtual private network].
-** Close WAN boundary: disallow all inbound WAN traffic.
-
-This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
-
-Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on "security through obscurity".
-
-Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "defense in depth".
-
-==== More tips
-
-* link:#_backups[Maintain useful encrypted backups] (perform test restores to know they are useful).
-* Use `root` at little as possible.
-* Use multi-factor authentication.
-* Use firewalls.
-* Use strong passwords.
-* Be very careful when opening up WAN ports or don't do it at all.
-* Be vigilant about all the usual stuff too: phishing, malware, SMS spoofing, and social attacks.
-** Take caution with email links and attachments.
-** Don't install untrusted software. Always use HTTPS.
-** Use a special passphrase with your mobile carrier.
-** Question urgency and suspicious requests.
-* Send unrecognized calls to voicemail.
-* Pay attention to data breaches and protect your identity.
-** Freeze your credit after a breach.
-* Learn about compartmentalization and the principle of least privilege.
-
-==== Further reading
-
-. _Personal Cybersecurity: How to Avoid and Recover from Cybercrime_ by Marvin Waschke (https://www.oreilly.com/library/view/personal-cybersecurity-how/9781484224304/)
-. _Personal Privacy Threat Modeling (With LOTS Of Examples)_ by Eliza (https://modernprivatelife.com/how-to-choose-privacy-threat-model/)
-. _How I learned to stop worrying (mostly) and love my threat model_ by Sean Gallagher (https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/)
 
 == _mario_
 
