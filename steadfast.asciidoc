@@ -965,22 +965,18 @@ At the very least, restrict physical access.
 
 === Deploy
 
-Here's an abbreviated server setup guide. Take notes and visualize yourself repeating the process.
+Here's an abbreviated server setup guide. It's a good idea to think ahead to disaster recovery: take notes and visualize yourself repeating the process precisely. At each prompt, accept the default or write down your choice.
 
 . Install Ubuntu Server. Debian might also work; I haven't tested it.
-.. Use the latest LTS release. I used a "64-bit Ubuntu 22.04 LTS server" image.
-.. https://ubuntu.com/tutorials/install-ubuntu-server[Follow a tutorial] if you prefer.
-.. At each prompt, use defaults or write down exceptions you make to defaults. Anticipate repeating this install process precisely.
+.. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server. Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption. See below.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`. Let _mario_ install these later.
-. Set up _mario_ on your admin computer (a separate computer from your server).
 . Optional: add two HDDs and format them with ZFS. See below.
+. Set up _mario_ on your admin computer (a separate computer from your server).
 . Run _mario_ on your admin computer to provision your server.
 
-The following sections expand on the details of this process.
-
-After reading about full-disk encryption and ZFS, pick services (<<_services>>) and stand them up with _mario_ (<<_mario>>).
+The following two sections expand on full-disk encryption and ZFS. After reading these, pick services (<<_services>>) and stand them up with _mario_ (<<_mario>>).
 
 ==== Full-disk encryption
 
@@ -990,7 +986,7 @@ If you decide you want full-disk encryption, choose it during the OS install. Th
 
 ==== ZFS
 
-The OS takes care of itself pretty well. For data storage, let's add a couple of HDDs and manage them with ZFS.
+The OS takes care of itself pretty well. For more robust data storage, we can a couple of HDDs and manage them with ZFS.
 
 ZFS adds many features and some complexity. The learning curve is worth it. We'll start with a simple mirrored 2-drive pool.
 
