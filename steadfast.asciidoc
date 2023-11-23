@@ -1200,11 +1200,11 @@ Once our server is online, we can use _mario_ to configure and stand up services
 
 === _mario_ philosophy
 
-_mario_ is a *practical learning tool*. It comes with sensible, tested defaults. It automates some of the tedious, confusing steps of setting up services on a server. _mario_ is *not* a supported and production-ready polished software product. It'll get you started, that's it. Continue with it if you like or just use it to fast-forward your personal cloud setup. Something else does or will do its job better. Here are some suggestions to get the most out of _mario_.
+_mario_ is a practical learning tool. It comes with sensible, tested defaults. It automates some of the tedious, confusing steps of setting up services on a server. _mario_ is not a supported and production-ready polished software product. It'll get you started, that's it. Continue with it if you like or just use it to fast-forward your personal cloud setup. Something else does or will do its job better. Here are some suggestions to get the most out of _mario_.
 
 The first time you run _mario_, follow the instructions as closely as possible. Many assumptions are made so it works "out of the box", and it is meant to be easily customizable.
 
-_mario_ configuration files are *declarative*. You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state. _mario_ runs *Ansible*, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner. The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
+_mario_ configuration files are declarative. You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state. _mario_ runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner. The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
 After getting _mario_ up and running successfully once, run it again. Provisioning with _mario_ is idempotent. The system should not change in any meaningful way after the desired state is reached. Once `provision.sh` completes successfully, it may be run again without making further changes.
 
