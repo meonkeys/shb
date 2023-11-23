@@ -969,14 +969,12 @@ Here's an abbreviated server setup guide. It's a good idea to think ahead to dis
 
 . Install Ubuntu Server. Debian might also work; I haven't tested it.
 .. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server. Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
-.. Optional: use full-disk encryption. See below.
+.. Optional: use full-disk encryption. See <<_full_disk_encryption>>.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`. Let _mario_ install these later.
-. Optional: add two HDDs and format them with ZFS. See below.
+. Optional: add two HDDs and format them with ZFS. See <<_zfs>>.
 . Set up _mario_ on your admin computer (a separate computer from your server).
 . Run _mario_ on your admin computer to provision your server.
-
-The following two sections expand on full-disk encryption and ZFS. After reading these, pick services (<<_services>>) and stand them up with _mario_ (<<_mario>>).
 
 ==== Full-disk encryption
 
