@@ -155,6 +155,8 @@ Also: maybe I can make a buck or two doing this, or at the next thing I do. Mayb
 
 Also: to write the book I wish I had when _I_ started self-hosting.
 
+Also: so there's a _book_ about this. There are countless videos, articles, and chunks of code online for doing everything in this book and more. Many are excellent. This book is your to keep, hold, and refer back to as you try, test, and learn.
+
 Also: there's a stark gap between useful individual computers and useful cloud services. It's easy to pay for cloud, but the true price is obscured: surveillance, lock-in, inflexibility.
 
 Also: I can picture a future where owning a privacy-respecting home data appliance becomes as commonplace as owning a refrigerator. Creating this appliance has been attempted and it'll be attempted again. Until it succeeds and sticks: self-hosting--setting up a server and services for yourself and others--is a great way to go. And when that home data appliance _does_ land, maybe you can buy one from me!
