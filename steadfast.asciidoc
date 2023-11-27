@@ -783,7 +783,9 @@ We'll use Docker.
 
 Not VMsfootnote:[If you intend to self-host Jitsi, you might want to do that in a VM. I had some issues trying to get Docker to handle the ranges of open ports Jitsi requires.].
 
-Not Kubernetes. Too much extra stuff to learn. We don't need it.
+Not Kubernetes. Too much extra stuff to learn. We don't need it for now.
+
+TIP: One major benefit of Kubernetes is high availability via clustering. If one computer in a Kubernetes cluster breaks, services can automatically migrate to working hardware in the cluster. Either way, set a clear expectation to your users as to how long your server might be down when something breaks.
 
 Docker (via `docker-compose`) balances features and usability well, making it easy to run groups of processes necessary to support a whole service (e.g. a web server and its database). Kubernetes has this, along with everything you _don't_ need to learn unless you are building out an entire virtual data center. Docker compose is a good fit for our single-server setup.
 
