@@ -887,7 +887,7 @@ You'll find some services are better choices to self-host than others. They will
 ** Especially a https://docs.docker.com/docker-hub/official_images/[Docker Official Image].
 * Healthy community: chat, forum.
 * Recent source code activity: releases, contributions, news.
-* Uses a FOSS software license such as the AGPL.
+* Uses a FOSS software license.
 * Transparent about owners and sponsors.
 * Public roadmap, issue tracking, continuous integration, working demo, build scripts, bug/security bounties.
 * Well-organized, elegant code.
