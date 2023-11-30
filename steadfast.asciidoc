@@ -965,7 +965,7 @@ I chose something powerful, cheap, and fast with plenty of storage and room to g
 
 I found a used refurbished 1U rackmount server on eBay for about $1,000. Two 24-core CPUs and 128 GB RAM. Tech companies dump these by the truckload so you can usually find a good deal.
 
-.DIY rackmount server attached to garage ceiling.
+.DIY rackmount server attached to garage ceiling. It's fun to look at and is out of the way, but I need a ladder for maintenance and it weighs about 50lbs.
 image::racked-server.jpg[]
 
 The fans are *way* louder than a desktop, especially when it is under load. It is supposed to have decent ventilation, temperature and humidity regulation yet has so far been extremely hardy even below freezing and above 100°F for extended periods of time. It has several enterprise features to ease maintenance such as redundant power supplies, hot-swap drive bays, lots of sensors, and remote management via a web browser or IPMI.
