@@ -727,7 +727,7 @@ The root partition is ext4 (not ZFS) for a few reasons:
 
 * stick as closely as possible to the default Ubuntu install
 * sidestep a Docker annoyance
-** when `/var/lib/docker` is on ZFS, many snapshots are created, perhaps one per container
+** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
 * we have less of a need for backups of the OS
 ** it doesn't/shouldn't change, or at least its changes will be managed upstream (e.g. OS package updates)
 
