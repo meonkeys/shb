@@ -515,7 +515,7 @@ Not all Nextcloud apps are ready for prime time. See <<_customization>>.
 
 ===== Jitsi
 
-Jitsi is a self-hostable FOSS video call platform. I gave up trying to get Jitsi running in Docker. I recall lots of open ports or port ranges being a problem. This one might be easier in a virtual machine.
+Jitsi is a self-hostable FOSS video call platform. I gave up trying to get Jitsi running in Docker. I recall lots of open ports or port ranges being a problem. This one might be easier in a virtual machine. There's also a workaround assigning port ranges to specific IP addresses, but this is beyond the scope of this book.
 
 I will eventually give it another shot because logging in is now required when using the free 8x8-hosted Jitsi service (see https://jitsi.org/blog/authentication-on-meet-jit-si/).
 
