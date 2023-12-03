@@ -735,15 +735,26 @@ Docker volumes will be on ZFS. The container's filesystem--everything besides mo
 
 ==== ZFS trim
 
-Note that if you use ZFS with SSDs, you may notice your system unexpectedly grinding to a halt once a month as it performs a "trim". Trimming is a process of reclaiming formerly used space on SSDs. This is not an issue with HDDs.
+Note that if you use ZFS with SSDs, you may notice your system performing poorly. On my Ubuntu desktop this happens once a month when the scheduled "trim" cron job starts. Trimming is a process of reclaiming formerly used space on SSDs. This is not an issue with HDDs.
 
-On my desktop (not my server--I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
+On my desktop (again: not my server--I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
 
-I will sometimes catch trimming in progress on my desktop. The trim job causes high values in `/proc/pressure/io` and I can see `z_trim_*` kernel threads doing heavy I/O in the process table (hint: use `top` or `htop` to view the process table).
+The trim job causes high values in `/proc/pressure/io` and I can see `z_trim_*` kernel threads doing heavy I/O in the process table (hint: use `top` or `htop` to view the process table).
 
-If you run into this issue, give ZFS a couple hours to finish trimming or run `zpool trim --cancel <pool>`, replacing `<pool>` with the name of the pool being trimmed. You can get the name of the pool and monitor trim progress with `zpool status -t`. You can manually resume trimming when convenient with `zpool trim <pool>` or just wait a month for it to run again on its own.
+It's no big deal and easy to work around. If you run into this issue, give ZFS a couple hours to finish trimming or run `zpool trim --cancel <pool>`, replacing `<pool>` with the name of the pool being trimmed. You can get the name of the pool and monitor trim progress with `zpool status -t`. You can manually resume trimming when convenient with `zpool trim <pool>` or just wait a month for it to run again on its own.
+
+Another approach is to enable `autotrim`. This performs trimming continuously in smaller increments instead of periodically on an entire pool. I'm not yet qualified to recommend one over the other.
 
 Shout out to https://askubuntu.com/questions/1200172/should-i-turn-on-zfs-trim-on-my-pools-or-should-i-trim-on-a-schedule-using-syste[askubuntu: Should I turn on zfs-trim on my pools or should I trim on a schedule using systemd timers or cron?], too.
+
+==== Further reading
+
+Here are a couple decent introductory articles about ZFS on Ars Technica:
+
+. _Bitrot and atomic COWs: Inside "next-gen" filesystems_ by Jim Salter (https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/)
+. _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter (https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/)
+
+If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC (adaptive replacement cache), and `recordsize`.
 
 === Operating system
 
@@ -1894,7 +1905,7 @@ If you like this book, and you want to learn and do more, do it! Ride that wave 
 
 For breadth, check out https://ubuntuserverbook.com[Mastering Ubuntu Server - Fourth Edition by Jay LaCroix]. That looks like a good reference and overview.
 
-For depth, immerse yourself in fundamentals. Take a computer science class in an area supporting something else you want to do. For example, if you want to code your own web services, take a class in programming for the web. If you want to understand how source code makes a computer do things, take a class in compilers.
+For depth, immerse yourself in fundamentals. Push past abstractions and make progress towards first principles. Take a computer science class in an area supporting something else you want to do. For example, if you want to code your own web services, take a class in programming for the web. If you want to understand how source code makes a computer do things, take a class in compilers.
 
 Work through this book in a class or small group. See <<_discussion_topics>> and <<_exercises>>.
 
