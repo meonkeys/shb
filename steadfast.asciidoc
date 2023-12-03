@@ -749,12 +749,11 @@ Shout out to https://askubuntu.com/questions/1200172/should-i-turn-on-zfs-trim-o
 
 ==== Further reading
 
-Here are a couple decent introductory articles about ZFS on Ars Technica:
-
 . _Bitrot and atomic COWs: Inside "next-gen" filesystems_ by Jim Salter (https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/)
 . _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter (https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/)
+. _ZFS_ Debian wiki page by various authors (https://wiki.debian.org/ZFS)
 
-If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC (adaptive replacement cache), and `recordsize`.
+If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC (adaptive replacement cache), `ashift`, and `recordsize`.
 
 === Operating system
 
