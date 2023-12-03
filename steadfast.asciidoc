@@ -1029,7 +1029,7 @@ Use wired ethernet cables to your server, not Wi-Fi.
 
 Here are some typical minimum specs for a home:
 
-* 750mbps up / 750mbps down ISP connection
+* 100mbps up / 100mbps down ISP connection
 * Cat 5 ethernet cable
 * 802.11ac Wi-Fi (for clients)
 
