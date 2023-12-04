@@ -107,7 +107,7 @@ First: the book itself, along with code to create your own derivative works (see
 
 Second: a learning tool called _mario_. _mario_ is a small set of scripts and configuration files to help you set up and maintain your own server. It is mainly a wrapper around https://en.wikipedia.org/wiki/Ansible_%28software%29[Ansible].
 
-The license for all original source code related to this book is the GNU AGPLfootnote:[Affero General Public License] as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+The license for all original source code related to this book is the GNU AGPL (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 A copy of the AGPL is included in `mario/COPYING`.
 
@@ -173,7 +173,7 @@ It does make a difference to https://www.nytimes.com/2023/04/04/arts/dahl-christ
 
 Saving off data is easy. Self-hosting goes a step beyond that to give you far-reaching control of how your data are used and shared. You'll get reliability and flexibility within a reasonable budget.
 
-Self-hosting means providing computing services by and for individuals, families, and hobbyists in SOHOfootnote:[small office / home office] environments.
+Self-hosting means providing computing services by and for individuals, families, and hobbyists in SOHO (small office / home office) environments.
 
 "Small-community-hosting" is perhaps a more accurate and appropriate term here. You're reading the right book to host services for a small community.
 
@@ -235,7 +235,7 @@ This book is not the fastest path to trying out web-based services. You can usua
 
 There are one-click-install appliances with many ready-to-go apps. https://www.freedombox.org[FreedomBox] is one promising contender in this space.
 
-There are shortcuts and frontends for self-hosting. For example, https://www.openmediavault.org[openmediavault] looks like a cool way to build a DIYfootnote:[do it yourself] NASfootnote:[network attached storage].
+There are shortcuts and frontends for self-hosting. For example, https://www.openmediavault.org[openmediavault] looks like a cool way to build a DIY (do it yourself) NAS (network attached storage).
 
 And there are countless more of these kinds of partial or full-service self-hosting solutions. More:
 
@@ -266,7 +266,7 @@ After brief reviews, I find they generally:
 * make opinionated tech choices I don't agree with
 * have a limited list of apps in their app stores and often exclude the ones I want
 * have too many apps in their app store, without good ways to compare quality, privacy, features
-* are GUIfootnote:[graphical user interface]-focused (e.g. beautiful, complex web interface just to install services) where I prefer working on a command line
+* are GUI (graphical user interface)-focused where I prefer working on a command line
 
 Still, check 'em out. They might work better for you if you don't need the level of power and control provided by this book. By the time I publish, they (or some new contenders) might grow to overcome my approach. Please let me know what you discover. If I missed something, I'd love to learn about it!
 
@@ -364,7 +364,7 @@ So many reasons!
 * Unlock new possibilities
 ** view travel lines with phonetrack
 ** apply arbitrary workflows to uploaded files
-** deploy trustworthy, offline generative AIfootnote:[artificial intelligence] models
+** deploy trustworthy, offline generative AI (artificial intelligence) models
 
 See https://nextcloud.com/athome/[nextcloud.com/athome] for more self-hosting propaganda and app ideas.
 
@@ -388,7 +388,7 @@ I no longer needed to complete any YouTube paperwork to be able to keep an eye o
 .Screenshot of a YouTube legal audit for my old API client.
 image::YT-audit.png[align="center",scaledwidth=80%]
 
-I also no longer need to work with YouTube's APIfootnote:[Application programming interface], including registering an API client and completing periodic audits. After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance. Turns out the Nextcloud Talk API is easier for posting my chicken coop photos & videos anyway.
+I also no longer need to work with YouTube's API (Application programming interface), including registering an API client and completing periodic audits. After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance. Turns out the Nextcloud Talk API is easier for posting my chicken coop photos & videos anyway.
 
 With my own cloud I'm also able to tune quotas and rate limits as desired. Full speed ahead!
 
@@ -412,7 +412,7 @@ If something breaks, you're fixing it. Sometimes you get a useful error, sometim
 
 If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
 
-On-premise self-hosting entails additional considerations. You need to ensure sufficient power, connectivity, HVACfootnote:[heating, ventilation, and air conditioning], and security.
+On-premise self-hosting entails additional considerations. You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
 
 === How write book?
 
@@ -481,7 +481,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers
 
-I was pleasantly surprised by containers since most of my earlier experience was with VMsfootnote:[virtual machines]. Containers are excellent for a consistent and resilient personal cloud. They are fast and small compared with VMs, allowing higher non-conflicting service density. That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHPfootnote:[PHP: Hypertext Processor]).
+I was pleasantly surprised by containers since most of my earlier experience was with VMs (virtual machines). Containers are excellent for a consistent and resilient personal cloud. They are fast and small compared with VMs, allowing higher non-conflicting service density. That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHP (PHP: Hypertext Processor)).
 
 Isolation of containers is limited compared to VMs. The kernel is shared, for example. Limited isolation keeps the resource and maintenance costs of container-based isolation low compared with VMs.
 
@@ -580,7 +580,7 @@ How much do you have/want to spend? Write down a number and stick to it.
 
 Sketch out your thoughts on resources you'll need. Some ideas:
 
-* Data storage. There's a significant jump in complexity and cost with each jump in unit (for example, GBfootnote:[gigabyte] to TBfootnote:[terabyte]). This book is appropriate for data storage up to about 10 TB.
+* Data storage. There's a significant jump in complexity and cost with each jump in unit (for example, GB (gigabyte) to TB (terabyte)). This book is appropriate for data storage up to about 10 TB.
 * Electricity. Check your home power bill for the cost per kWh and run some estimates.
 * Support. Who will help you when you get stuck?
 * Physical location. Where will the server live? Will you have to install new wiring for power or network?
@@ -636,7 +636,7 @@ image::service-stack.png[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a container.
 
-Less often I am updating OSfootnote:[operating system] packages.
+Less often I am updating OS (operating system) packages.
 
 Less often still I might examine versions of a configuration file stored on disk from its ZFS automatic snapshots.
 
@@ -686,7 +686,7 @@ Let's run "WAN access" through our threat model.
 ** Bot finds URL to Nextcloud server on a publicly archived mailing list. Bot automatically attempts exploit against known vulnerability in Nextcloud server. Exploit succeeds, bot owner gains access to personal information and attempts identity theft.
 * Mitigations
 ** Keep Nextcloud server up to date.
-** Secure WAN boundary: monitor traffic logs, employ an IPSfootnote:[intrusion prevention system], only cross into LAN using a VPNfootnote:[virtual private network].
+** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
 ** Close WAN boundary: disallow all inbound WAN traffic.
 
 This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
@@ -721,7 +721,7 @@ Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "
 
 === Filesystem
 
-ZFSfootnote:[originally: Zettabyte File System] is our one-stop shop for efficiently and safely making hard drives available for our OS and data. Encryption, automatic lightweight snapshots and RAIDfootnote:[redundant array of inexpensive disks] are all included and used by _mario_.
+ZFS (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data. Encryption, automatic lightweight snapshots and RAID (redundant array of inexpensive disks) are all included and used by _mario_.
 
 The root partition is ext4 (not ZFS) for a few reasons:
 
@@ -759,7 +759,7 @@ If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC 
 
 _mario_ requires a 64-bit Ubuntu server. Other Debian Linux flavors may work as well.
 
-Ubuntu LTSfootnote:[long-term support] releases are the most stable so we'll stick with that.
+Ubuntu LTS (long-term support) releases are the most stable so we'll stick with that.
 
 I sought to minimize customizations to the operating system from a default install to ease its eventual re-creation. I tried to capture any and all necessary customizations in _mario_, or at least to document them.
 
@@ -1008,19 +1008,19 @@ You should also be a user of the stuff you self-host. This is _dogfooding_. Dogf
 
 ==== Hard drives
 
-I use HDDsfootnote:[hard disk drives] for data storage, mainly as a cost-saving measure. The cost of public cloud block storage far exceeds the gigabyte-hour cost of my HDDs. I priced out one month of 5TB HDD block storage on AWS at $228.10. With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_. One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68 on AWS. That's $535.67 total, which is about what I spent on my drives. So I broke even in a month and the drives should last _years_.
+I use HDDs (hard disk drives) for data storage, mainly as a cost-saving measure. The cost of public cloud block storage far exceeds the gigabyte-hour cost of my HDDs. I priced out one month of 5TB HDD block storage on AWS at $228.10. With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_. One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68 on AWS. That's $535.67 total, which is about what I spent on my drives. So I broke even in a month and the drives should last _years_.
 
 For redundancy I recommend purchasing two of the same drive. We'll configure them mirrored (RAID 1). This increases redundancy and read performance (for most reads) and halves usable storage space.
 
-HDDs are plenty fast when measured from the standpoint of self-hosted service response time. The OSfootnote:[operating system] and services do well at caching data served, assuming the server has sufficient RAM. Remote backups can take a while, and that's fine.
+HDDs are plenty fast when measured from the standpoint of self-hosted service response time. The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM. Remote backups can take a while, and that's fine.
 
-I use one SSDfootnote:[solid-state drive] for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
+I use one SSD (solid-state drive) for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 Read more about SSDs and TRIM in <<Filesystem>>.
 
 ==== Networking
 
-If you are hosting at home, you need a reliable WANfootnote:[wide-area network] connection if you want to be able to connect from other places besides your LAN.
+If you are hosting at home, you need a reliable WAN (wide-area network) connection if you want to be able to connect from other places besides your LAN.
 
 Use wired ethernet cables to your server, not Wi-Fi.
 
@@ -1040,7 +1040,7 @@ Learn how to configure your router. Keep it up to date and maintain a strict fir
 
 CAUTION: Port-forwarding allows inbound connections through your WAN boundary to your server. Read <<_digital_security>> before forwarding any ports.
 
-Here's a simple diagram I created (in https://asciiflow.com[ASCIIflow]) to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram". The router provides electricity to the mini switch using PoEfootnote:[power over ethernet]. There server has two NICsfootnote:[network interface cards]: one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOBfootnote:[out-of-band] remote management computer with IPMIfootnote:[Intelligent Platform Management Interface]. All arrows are ethernet cable.
+Here's a simple diagram I created (in https://asciiflow.com[ASCIIflow]) to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram". The router provides electricity to the mini switch using PoE (power over ethernet). There server has two NICs (network interface cards): one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface). All arrows are ethernet cable.
 
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
@@ -1049,7 +1049,7 @@ image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 
 Use a surge protector.
 
-Also consider a UPSfootnote:[uninterruptible power supply] if your power at home is unreliable.
+Also consider a UPS (uninterruptible power supply) if your power at home is unreliable.
 
 ==== Physical security
 
@@ -1168,7 +1168,7 @@ Monitor server health.
 
 Check free disk space with `df -h`.
 
-If things feel slow, check PSIfootnote:[pressure stall information] with
+If things feel slow, check PSI (pressure stall information) with
 
 [source,bash]
 ----
@@ -1293,7 +1293,7 @@ On Amazon IAM, create a user with permission to update this hosted zone. Here's 
 
 It is handy to have an _internal_ DNS server in addition to a public one (e.g. Route 53).
 
-Inside your private network you can use handy domain names or even make up your own TLDfootnote:[top-level domain]. I recommend using internal hostnames matching public ones, but pointing to LAN-only private IP addresses. For example:
+Inside your private network you can use handy domain names or even make up your own TLD (top-level domain). I recommend using internal hostnames matching public ones, but pointing to LAN-only private IP addresses. For example:
 
 [%header]
 |===
@@ -1714,7 +1714,7 @@ See https://github.com/nextcloud/viewer/issues/1469[nextcloud/viewer issue #1469
 
 Workarounds:
 
-* Leverage ZFS snapshots. I use a handy Python script called https://github.com/eborisch/zfs_versions[zfs_versions] to visualize differences in file snapshots. If there's a file I _really_ need great version tracking for, I store it in my favorite dVCSfootnote:[distributed version control system].
+* Leverage ZFS snapshots. I use a handy Python script called https://github.com/eborisch/zfs_versions[zfs_versions] to visualize differences in file snapshots. If there's a file I _really_ need great version tracking for, I store it in my favorite dVCS (distributed version control system).
 * Manually name versions. Requires at least Nextcloud Hub 4 / Nextcloud version 26.
 * Make multiple copies of files.
 
@@ -1924,7 +1924,7 @@ Modern generative AI workloads like large language model chat and image generati
 
 === AI
 
-You can and should run your own image generator and LLMfootnote:[large-language model] at home. Here's a `docker-compose.yaml` that'll work with _mario_ to stand up a https://localai.io[LocalAI server].
+You can and should run your own image generator and LLM (large-language model) at home. Here's a `docker-compose.yaml` that'll work with _mario_ to stand up a https://localai.io[LocalAI server].
 
 [source,yaml]
 ----
@@ -1964,9 +1964,9 @@ Once you get that running, you can use the https://apps.nextcloud.com/apps/integ
 
 === Pi-hole
 
-Running a https://pi-hole.net[Pi-hole] service in your LAN helps block advertisements, trackers, and bad actors using DNSfootnote:[Domain Name System] block lists.
+Running a https://pi-hole.net[Pi-hole] service in your LAN helps block advertisements, trackers, and bad actors using DNS (Domain Name System) block lists.
 
-Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCPfootnote:[Dynamic Host Configuration Protocol] auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
+Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
 The Pi-hole translates host names to IP addresses. If a host name is on a block list, it returns a false IP address such as `0.0.0.0`.
 
@@ -2364,6 +2364,8 @@ FSF::
   Free Software Foundation. They strongly defend the "F" in FOSS.
 frontend::
   The UI for a system or service.
+GB::
+  Gigabyte. 10^9^ (1,000,000,000) bytes if we're talking about HDDs, or 2^30^ (1,073,741,824) bytes if we're talking about RAM.
 good, fast, and cheap::
   Used as a joke in this text because typically we must https://wikipedia.org/wiki/Project_management_triangle[pick two].
 Good Thing::
@@ -2446,6 +2448,8 @@ sysadmin::
   Portmanteau of "systems administrator". A party responsible for the upkeep of a computer system.
 threat model::
   Analysis of risks and defenses of digital assets.
+TB::
+  Terabyte. Like GB, can either be base-10 or base-2, so: 10^12^ (1,000,000,000,000) bytes (if we're talking about HDDs).
 TLD::
   Top-level domain. For `example.com`, `com` is the TLD.
 UI::
