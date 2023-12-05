@@ -2052,20 +2052,6 @@ How about when you get stuck? Here are some ideas.
 * Try your luck in the self-hosted subreddit (https://reddit.com/r/selfhosted/).
 * Hire me to help you out.
 
-=== Improve this book
-
-==== Color emoji
-
-There are no emoji in the PDF outputs of this book. In fact, I omit nearly all special characters--see `strip-non-ascii.py` and `Makefile`. This is so I need less customization of pandoc to generate various outputs and have them all look decent.
-
-Related links, in case we want to get this working someday:
-
-* https://github.com/jgm/pandoc/issues/5236[jgm/pandoc issue #5236]
-* https://groups.google.com/g/pandoc-discuss/c/ri-Je-U87xc/m/ZEdFZFD0AgAJ[pandoc-discuss topic: Is it possible to specify an emoji font for PDFs?]
-* https://stackoverflow.com/questions/60057064/[stackoverflow question: Pandoc with Emoji and Pictographs]
-* https://github.com/masbicudo/Pandoc-Emojis-Filter[masbicudo/Pandoc-Emojis-Filter project on GitHub]
-* https://superuser.com/questions/1366748/rendering-pdf-from-markdown-file-with-literal-emoji-characters-using-pandoc[superuser question re: pandoc, PDF, emoji]
-
 == Resources
 
 This book will grow and evolve, and you can be a part of it!
