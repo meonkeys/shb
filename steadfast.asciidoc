@@ -1593,7 +1593,7 @@ Here are some Nextcloud apps I've tried, what they do, and a ruling on whether t
 |Draw.io |diagram editor |*Yes*.
 |Duplicate Finder |find and cull duplicate files |*No*. Slow and opaque. I recommend rdfind instead (https://github.com/pauldreik/rdfind).
 |Electronic Signatures |e-sign documents |*No*. Requires a 3rd party service. It should work locally and just help folks fill in documents with signatures, dates, text, etc.
-|End-to-End Encryption |encrypts files server-side |*No*. Unnervingly buggy. Confusing UI/UX.
+|End-to-End Encryption |encrypt files server-side, decrypt with client |*No*. Unnervingly buggy. Confusing UI/UX.
 |Files |file management, sharing |*Yes*, although "versions" are not very useful. See "bugs", below.
 |Forms |Google Forms alternative |*Yes*.
 |Full text search |search through all documents |*Yes*. Very fast. Warning: dead/dormant project.
@@ -1606,16 +1606,16 @@ Here are some Nextcloud apps I've tried, what they do, and a ruling on whether t
 |Notes |simple markdown-based note taking |*Yes*. There's an excellent companion mobile app. Replaced Google Notes for me.
 |Passwords |password manager |*Yes*.
 |PhoneTrack |location sharing and tracking |*Yes*. UI is feature-rich and complicated. Traveled movement lines are cool.
-|Photos |photos, sorta |*No*. Slow, clumsy, lacking features compared with other FOSS photo management software.
+|Photos |photos, sorta |*No*. Slow, clumsy, lacking features compared with other FOSS photo management software. Note that it is required by Memories. I do install it just so I can use Memories.
 |Polls |simple polls |*Yes*.
 |Ransomware protection |warns for bad file names on upload |*No*. Too many false positives. Unmaintained.
 |Recognize |face recognition |*No*.
-|Suspicious login |warn about suspicious IPs |*Yes*.
+|Suspicious login |warn about suspicious IPs |*No*. Too many false positives.
 |Tasks |tasks/todos |*Yes*.
 |Talk |video and text chat |*No*. Works, just slower and not as well as other video and text chat services/apps. This is a very competitive and crowded space. I recommend Signal instead (https://signal.org).
 |Temporary files lock |avoid edit conflicts |*Yes*.
-|Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I love pasting in rich text and letting the editor auto-convert it to Markdown.
-|Video converter |transcode videos |*No*. Cool idea but the project is perhaps dead.
+|Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown.
+|Video converter |transcode videos |*No*. Cool idea but the project appears dormant.
 |===
 
 ==== Talk High Performance Backend
@@ -1774,6 +1774,32 @@ Nextcloud is FOSS, although some release scripts are held back (https://help.nex
 Sometimes I login and immediately have to log in again. Authentik or some other login mechanism might work around this.
 
 See: https://github.com/nextcloud/server/issues/9354
+
+==== End-to-End Encryption
+
+I wanted to go into a bit more detail about why I said this app is not worth your time earlier in <<_customization>>.
+
+This app enables folders with encrypted content that can only be decrypted client-side using a passphrase. It's a great idea. It seems close to working, but it feels like early-release software. The UI/UX is confusing, and I ran into a dealbreaker bug that left files decrypted server-side. Furthermore...
+
+Sharing doesn't work.
+
+* https://help.nextcloud.com/t/how-to-setup-e2e-encryption-for-shared-folders/165610
+* https://help.nextcloud.com/t/e2ee-and-file-sharing/145547
+* https://github.com/nextcloud/end_to_end_encryption/issues/520
+
+There's no web client.
+
+* https://github.com/nextcloud/end_to_end_encryption/issues/82
+
+The roadmap is unclear.
+
+* https://github.com/nextcloud/end_to_end_encryption/issues/285
+
+Keys are always stored on the server. They are encrypted, at least.
+
+* https://github.com/nextcloud/end_to_end_encryption/issues/8
+
+I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues, make sure you can live with all that, then test it out thoroughly using a throwaway/sandbox Nextcloud instance. Make sure it works with all clients you plan to use it with (e.g. desktop, mobile).
 
 ==== AIO installer
 
