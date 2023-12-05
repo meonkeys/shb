@@ -13,6 +13,7 @@ Adam Monsen
 :hide-uri-scheme:
 :source-highlighter: pygments
 :pygments-linenums-mode: inline
+:!chapter-signifier:
 
 == Intro
 
