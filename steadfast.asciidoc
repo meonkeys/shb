@@ -2136,64 +2136,64 @@ To build without Docker: install prerequisites, set environment variables, and r
 
 Discussion topics for a class or small group.
 
-* What services do _you_ run? Why? For whom?
-* Review this book for poor security practices. How might it be improved?
-* Why is privacy important, especially with digital information?
-* What's the best part about self-hosting?
-* What are some pitfalls of self-hosting?
-* What is the future of self-hosting?
-* How might this book be adapted for:
-** intermittent power
-** intermittent network
-** local-only network
-** clustered hardware
-* Consider FOSS with respect to human attention and focus. Contrast with non-FOSS.
-* What approaches in this book may be conceptually dangerous or misleading? Why? How could they be improved?
+. What services do _you_ run? Why? For whom?
+. Review this book for poor security practices. How might it be improved?
+. Why is privacy important, especially with digital information?
+. What's the best part about self-hosting?
+. What are some pitfalls of self-hosting?
+. What is the future of self-hosting?
+. How might this book be adapted for:
+.. intermittent power
+.. intermittent network
+.. local-only network
+.. clustered hardware
+. Consider FOSS with respect to human attention and focus. Contrast with non-FOSS.
+. What approaches in this book may be conceptually dangerous or misleading? Why? How could they be improved?
 
 == Exercises
 
 Exercises for individual practice and study groups.
 
-* Stand up a service besides those included with _mario_.
-* Create and stand up a custom service, say, one that reveals if it is time to reboot the server.
-** Hint: check if `/host/var/run/reboot-required` exists.
-* Stand up a second Nextcloud service for experiments.
-** Use it to test out the latest release or a custom app.
-* Stand up a dashboard for your personal cloud (https://awesome-selfhosted.net/tags/personal-dashboards.html).
-* Adapt this guide to a Linux distribution besides Ubuntu.
-* Help resolve a bug mentioned in this book.
-* Contribute to _mario_.
-* Move secrets used by _mario_ into an Ansible vault.
-* Enable GPU transcoding in Jellyfin.
-* Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
-* Aggregate logs.
-* Create or install a service to monitor outbound network activity from containers.
-* Pick a Docker container that doesn't require outbound network access. Prevent it from making outbound connections and prove to yourself it works.
-* What if the server won't boot?
-** Describe troubleshooting steps, in detail.
-** Make a plan for system recovery when it fails to boot.
-* Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
-* Reorganize _mario_ roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
-* Set up Fail2Ban (https://fail2ban.org). Feed it logs from various services.
-* Set up Suricata (https://suricata.io) network analysis and threat detection.
-* Separate out code for ASCII to SVG diagram conversion from Markdeep. Incorporate it into this book's build system, perhaps as a pandoc filter.
-* Adapt _mario_ to use podman (https://podman.io).
-* Adapt _mario_ to use Kubernetes (https://kubernetes.io).
-* Modify _mario_ to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
-* Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
-** Necessary for typing notifications from mobile Nextcloud Talk clients.
-* Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw). Work around this and share your solution with others.
-* Build, configure and deploy an OPNsense firewall (https://opnsense.org).
-* Set up your own headscale VPN for remote LAN access (https://headscale.net).
-* Leverage existing ownership and permission OS security measures.
-** Run containers as unprivileged users.
-** Use appropriate ownership and permissions for persistent container data.
-* Enable preview generation for Nextcloud.
-** Research first: how does default preview generation work? What file types are supported? How much disk space is used? How fast is it, subjectively and objectively? What maintenance will it require once enabled?
-** Create a test bed with a clean install and many preview-able files of various file formats. Write timing scripts for objective performance measurements. Consider both client- and server-side. Keep manual testing notes (subjective measurements).
-** Compare Preview Generator (https://apps.nextcloud.com/apps/previewgenerator), Imaginary (https://github.com/h2non/imaginary), and any other extant solutions.
-** Turn it on.
-** Evaluate the change. Is it noticeable? Does your timing script show any difference? How much disk space is used for previews? How challenging was this to enable?
+. Stand up a service besides those included with _mario_.
+. Create and stand up a custom service, say, one that reveals if it is time to reboot the server.
+.. Hint: check if `/host/var/run/reboot-required` exists.
+. Stand up a second Nextcloud service for experiments.
+.. Use it to test out the latest release or a custom app.
+. Stand up a dashboard for your personal cloud (https://awesome-selfhosted.net/tags/personal-dashboards.html).
+. Adapt this guide to a Linux distribution besides Ubuntu.
+. Help resolve a bug mentioned in this book.
+. Contribute to _mario_.
+. Move secrets used by _mario_ into an Ansible vault.
+. Enable GPU transcoding in Jellyfin.
+. Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
+. Aggregate logs.
+. Create or install a service to monitor outbound network activity from containers.
+. Pick a Docker container that doesn't require outbound network access. Prevent it from making outbound connections and prove to yourself it works.
+. What if the server won't boot?
+.. Describe troubleshooting steps, in detail.
+.. Make a plan for system recovery when it fails to boot.
+. Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
+. Reorganize _mario_ roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
+. Set up Fail2Ban (https://fail2ban.org). Feed it logs from various services.
+. Set up Suricata (https://suricata.io) network analysis and threat detection.
+. Separate out code for ASCII to SVG diagram conversion from Markdeep. Incorporate it into this book's build system, perhaps as a pandoc filter.
+. Adapt _mario_ to use podman (https://podman.io).
+. Adapt _mario_ to use Kubernetes (https://kubernetes.io).
+. Modify _mario_ to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
+. Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
+.. Necessary for typing notifications from mobile Nextcloud Talk clients.
+. Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw). Work around this and share your solution with others.
+. Build, configure and deploy an OPNsense firewall (https://opnsense.org).
+. Set up your own headscale VPN for remote LAN access (https://headscale.net).
+. Leverage existing ownership and permission OS security measures.
+.. Run containers as unprivileged users.
+.. Use appropriate ownership and permissions for persistent container data.
+. Enable preview generation for Nextcloud.
+.. Research first: how does default preview generation work? What file types are supported? How much disk space is used? How fast is it, subjectively and objectively? What maintenance will it require once enabled?
+.. Create a test bed with a clean install and many preview-able files of various file formats. Write timing scripts for objective performance measurements. Consider both client- and server-side. Keep manual testing notes (subjective measurements).
+.. Compare Preview Generator (https://apps.nextcloud.com/apps/previewgenerator), Imaginary (https://github.com/h2non/imaginary), and any other extant solutions.
+.. Turn it on.
+.. Evaluate the change. Is it noticeable? Does your timing script show any difference? How much disk space is used for previews? How challenging was this to enable?
 
 I've included detailed steps to perform and evaluate the final exercise. I've omitted same from other exercises for brevity. Apply these steps to other exercises as desired.
 
