@@ -127,9 +127,15 @@ This is the final step in the editing process. A proofreader examines the final 
 * footnotes
     * use footnotes sparingly
 * links
-    * use hyperlinks sparingly
-    * always include entire URL, never link text directly (this is the best way to ...)
+    * include links next to or very near context, but try to avoid breaking the flow of text
+    * always include typed-out URL, never link text directly
+        * this is to ensure consistent appearance across print and electronic versions
     * exclude URL scheme from http(s) links
         * this is handled automatically by asciidoc option `hide-uri-scheme`
-        * `https` is a safe guess/default
+        * `https` is a safe guess/default (and hopefully people insist on `https` client-side!)
+    * if a link works without `www.` at the beginning of the domain name, omit it
+        * this is bit of a risk: we're prioritizing shorter links in favor of more reliable links (some websites redirect, adding back `www.`)
+    * if a link works without a SEO slug, omit it
+        * example w/slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/why_should_i_switch_from_restic_to_borg/`
+        * example w/o slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/`
 * use "command line" to refer to a Linux text-based interactive user interface
