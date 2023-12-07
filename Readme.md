@@ -6,7 +6,7 @@ Here's my book so far. I should say *our* book because after quite a bit of writ
 
 The review deadline was Nov 24, 2023, but I'm running a bit late. If you still have comments, send them over!
 
-Please send me feedback in any form: email, text, PRs... whatever is most convenient. Every bit of your feedback helps, even a single sentence. I've got a thick skin so just let me have it as if you're reviewing a book from a complete stranger.
+Please send me feedback in any form: email, text, PRs... whatever is most convenient. Anything helps. I've got a thick skin so just let me have it as if you're reviewing a book from a complete stranger.
 
 I made a list of issues below to capture stuff I'm already aware of and working on. As for what kinds of feedback I'm seeing, please see [Feedback ideas](#feedback-ideas), below.
 
