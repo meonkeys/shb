@@ -4,13 +4,17 @@
 
 Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this doesn't happen in isolation. It really does take a team. And hey, you're on the team! You are an expert and I value your help. I will benefit greatly from your open, honest feedback.
 
-The review deadline is Nov 24, 2023. I'd like to publish by December 20.
+The review deadline was Nov 24, 2023, but I'm running a bit late. If you still have comments, send them over!
 
 Please send me feedback in any form: email, text, PRs... whatever is most convenient. Every bit of your feedback helps, even a single sentence. I've got a thick skin so just let me have it as if you're reviewing a book from a complete stranger.
 
 I made a list of issues below to capture stuff I'm already aware of and working on. As for what kinds of feedback I'm seeing, please see [Feedback ideas](#feedback-ideas), below.
 
 I'd like to wait to release everything publicly once it is ready, so please help me keep it secret for now.
+
+If you want/need to be paid to do this, please let me know. We'll work something out.
+
+I'm looking for testimonials! Ping me if you're up for this.
 
 ## Directory structure
 
