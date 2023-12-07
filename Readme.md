@@ -81,7 +81,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am25 | tie in 4th-wall-breaking "caveman speak" near "5 Ws" or just leave it out | RESOLVED | |
 | am26 | be less apologetic, limit to perhaps 3 or so apologies | RESOLVED | |
 | am27 | correct "knows as" typo to "known as" | RESOLVED | |
-| am28 | add photo: bird on server | OPEN | |
+| am28 | add photo: bird on server | RESOLVED | |
 | am29 | exclude optional slashes at ends of hyperlinks | RESOLVED | |
 | am30 | list reviewers in _Acknowledgments_ | OPEN | |
 | am31 | build book with Asciidoctor instead | RESOLVED | |
