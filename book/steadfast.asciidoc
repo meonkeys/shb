@@ -2538,7 +2538,7 @@ WAN::
 Y2K::
   The year 2000. Was approached by humanity with a fair amount of excitement, caution, and fear. Largely unfolded as a non-event. See also: Year 2038 problem (https://en.wikipedia.org/wiki/Year_2038_problem).
 ZFS::
-  A fancy, stable filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
+  A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
 == Thank you
 
