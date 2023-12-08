@@ -143,3 +143,4 @@ This is the final step in the editing process. A proofreader examines the final 
         * example w/slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/why_should_i_switch_from_restic_to_borg/`
         * example w/o slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/`
 * use "command line" to refer to a Linux text-based interactive user interface
+* use [Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
