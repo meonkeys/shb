@@ -27,10 +27,8 @@ mkdir -p ~/Downloads/shb-asciidoctor-outputs
 
 BUILD_TYPE=full
 
-if [[ $# -gt 0 ]]; then
-    if [[ "$1" == "--small" ]] || [[ "$1" == "-s" ]]; then
-        BUILD_TYPE=small
-    fi
+if [[ "${1:-}" == "--small" ]] || [[ "${1:-}" == "-s" ]]; then
+    BUILD_TYPE=small
 fi
 
 sudo docker run \
