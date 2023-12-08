@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Build the book, generating various typeset output formats.
+# Requires Docker.
+
 set -o errexit
 set -o nounset
 set -o pipefail
@@ -22,6 +25,14 @@ sudo docker build \
 
 mkdir -p ~/Downloads/shb-asciidoctor-outputs
 
+BUILD_TYPE=full
+
+if [[ $# -gt 0 ]]; then
+    if [[ "$1" == "--small" ]] || [[ "$1" == "-s" ]]; then
+        BUILD_TYPE=small
+    fi
+fi
+
 sudo docker run \
     --rm \
     --interactive \
@@ -31,4 +42,5 @@ sudo docker run \
     --env BUILD_DATE_TIME="$BUILD_DATE_TIME" \
     --env BUILD_GIT_COMMIT="$BUILD_GIT_COMMIT" \
     --env BUILD_OS_RELEASE="$BUILD_OS_RELEASE" \
+    --env BUILD_TYPE="$BUILD_TYPE" \
     shb-asciidoctor

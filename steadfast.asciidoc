@@ -2155,11 +2155,11 @@ FIXME: document translation process, or put out an invitation for someone to con
 
 I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`. The file is AsciiDoc (https://asciidoc.org) plain text markup.
 
-Run `./build-with-docker.sh` to generate your own typeset outputs, then review the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
+Run `./build.sh` to generate your own typeset outputs. View the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
 
-That script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux and macOS, maybe Windows too. Requires Docker and a few common cli tools.
+The build script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands. It runs in Bash on Linux and macOS, maybe Windows too. Requires Docker and a few common cli tools.
 
-To build without Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
+To build _without_ Docker: install prerequisites, set environment variables, and run `rake`. See `Dockerfile` for prerequisites. See `Rakefile` for environment variables expected at runtime.
 
 == Discussion topics
 

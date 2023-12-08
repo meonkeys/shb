@@ -24,9 +24,9 @@ COPY Gemfile .
 
 RUN bundle install
 
-COPY internal-build.sh Rakefile steadfast.asciidoc .
+COPY .internal-build.sh Rakefile steadfast.asciidoc .
 
 # absolute destination path required so dirs aren't flattened into $HOME
 COPY img/ $HOME/img
 
-CMD ["/bin/bash", "internal-build.sh"]
+CMD ["/bin/bash", ".internal-build.sh"]
