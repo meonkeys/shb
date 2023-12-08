@@ -894,7 +894,7 @@ Each self-hosted service will have its own router. Other web services will also 
 
 I wanted to include FOSS central identity management in _mario_ but I haven't figured it out yet. When I do, this should give users a way to log in once and get to all the different _mario_-hosted services. It takes care of authentication and authorization and all that good stuff.
 
-I'm interested in Authentik -- https://goauthentik.io because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host). I want to see it running well for a good while before adding it to _mario_.
+I'm interested in Authentik (https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host). I want to see it running well for a good while before adding it to _mario_.
 
 Some of the other self-hosting solutions mentioned above in <<_what_is_this_book_not>> do include FOSS central identity management.
 
