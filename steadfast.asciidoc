@@ -176,6 +176,7 @@ The key to reliable self-hosting is data sovereignty. Software will change, serv
 
 It does make a difference to have your own copy. You might lose access to something you "bought" or it might even change right under your nose.
 
+* https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164
 * https://defectivebydesign.org/what_is_drm_digital_restrictions_management
 * https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html
 
