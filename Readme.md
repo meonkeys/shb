@@ -20,7 +20,7 @@ I'm looking for testimonials! Ping me if you're up for this.
 
 | path       | description                           |
 |------------|---------------------------------------|
-| `img/`     | illustrations, diagrams, photos       |
+| `book/`    | sources for the book                  |
 | `mario/`   | sources for _mario_ provisioning tool |
 | `website/` | sources for https://selfhostbook.com/ |
 
