@@ -420,13 +420,15 @@ Then you can move on to saving the world. Just make sure you've got your data!
 
 === Why you should not self-host
 
-Self-hosting is more complex and time-consuming than paying for the same functionality. It takes discipline and patience, like learning a new instrument (however: that instrument eventually plays itself!).
+Self-hosting is more complex and time-consuming than paying for the same functionality, especially at first. It takes discipline and patience, like learning a new instrument (but _this_ instrument eventually plays itself!).
 
 If something breaks, you're fixing it. Sometimes you get a useful error, sometimes you can search the web for a quick fix. Sometimes you don't and can't.
 
 If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
 
-On-premise self-hosting entails additional considerations. You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security. And don't forget remote backups.
+If you don't take care with backups and security, you'll risk time, energy, and trust with people you care about.
+
+On-premise self-hosting entails additional meatspace-specific considerations. You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security. Just don't keep your server outside.
 
 === How write book?
 
