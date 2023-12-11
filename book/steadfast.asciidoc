@@ -770,7 +770,7 @@ Shout out to askubuntu post: _Should I turn on zfs-trim on my pools or should I 
 . _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter (https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/)
 . _ZFS_ Debian wiki page by various authors (https://wiki.debian.org/ZFS)
 
-If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC (adaptive replacement cache), `ashift`, and `recordsize`.
+If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
 
 === Operating system
 
