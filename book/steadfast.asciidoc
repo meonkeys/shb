@@ -81,7 +81,8 @@ _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2023 Adam Mo
 I am humbled and grateful you are reading this.
 
 Please make copies.
-I want it to be enjoyed and shared, and I chose a license that explicitly encourages sharing! Check this out:
+I want it to be enjoyed and shared, and I chose a license that explicitly encourages sharing.
+Check this out:
 
 This book is distributed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license**.
 Contact me if you are interested in obtaining it under another license.
@@ -143,14 +144,16 @@ My opinions are my own.
 I include direct references to many products and companies and add my specific, hard-won lessons on their comparative strengths and weaknesses.
 My intent is to educate and inform.
 
-I will take shortcuts! I will not seek to deeply and exhaustively explore each topic.
+I will take shortcuts.
+I will not seek to deeply and exhaustively explore each topic.
 I want you to get to the good stuff quickly, then decide if, when and where you want to dive deeper.
 
 If you find contradictions to these statements, please let me know.
 
 I'm human and error-prone.
 I'll make it easy to contact me about missing or incorrect information.
-Please do! When you do, include references or other supporting material.
+Please do.
+When you do, include references or other supporting material.
 
 == Background
 
@@ -183,7 +186,8 @@ I wrote this book to promote *data sovereignty*.
 I use that phrase to mean you have full control of your data.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
 Existing books lack a good, fast, and cheap technique for self-hosting on bare metal.
-I figured one out and I think you'll love it! It works fine if you run your server in the cloud too, it just costs a lot more (see <<_server>>).
+I figured one out and I think you'll love it.
+It works fine if you run your server in the cloud too, it just costs a lot more (see <<_server>>).
 
 Also: learning is fun.
 I learn when I write.
@@ -305,7 +309,8 @@ You can and should be aware of them.
 If you feel I've completely omitted proper detail about something critically relevant to my method of self-hosting, please let me know.
 
 This book is not for the heavily-resourced already-done-thats.
-If you have $50k and unlimited time to spend on your concrete bunker homelab... well then, may I have a tour? I would LOVE to see that.
+If you have $50k and unlimited time to spend on your concrete bunker homelab... well then, may I have a tour.
+I would LOVE to see that.
 If you are more curious than certain you may still enjoy learning from my choices and I'd appreciate your feedback.
 
 I'm not writing for hard-line software licensing experts/extremists.
@@ -503,7 +508,8 @@ For the record, our chickens are _squeaky clean_.
 
 Once I stood up my personal cloud I felt freedom and ease when posting and hosting these videos.
 
-I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens! I can safely ignore their audit and its erroneous compliance infringement warning.
+I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens.
+I can safely ignore their audit and its erroneous compliance infringement warning.
 
 .Screenshot of a YouTube legal audit for my old API client.
 image::YT-audit.png[align="center",scaledwidth=80%]
@@ -575,7 +581,8 @@ Enough already.
 
 I wrote this in 2023.
 
-And, listen: even blessed cave-dwellers like us should give self-hosting a shot! We got this!
+And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
+We got this!
 
 === Where?
 
@@ -617,7 +624,8 @@ Continued ad nauseam in <<_more_about_foss>>.
 
 === Surprises
 
-Should you choose to proceed: godspeed, traveler! This is seriously fun stuff.
+Should you choose to proceed: godspeed, traveler.
+This is seriously fun stuff.
 
 You may be surprised by how fast & easy some things are with self-hosting.
 I'd love to know how this goes for you.
@@ -761,7 +769,8 @@ Experienced self-hosters can compare my choices to theirs.
 Consider the time and cost of self-hosting.
 To yourself _and your users_.
 
-I love this part! I get excited about what's to come, and I know a solid plan makes a vision real.
+I love this part.
+I get excited about what's to come, and I know a solid plan makes a vision real.
 I start by capturing my plans in a Markdeep (https://casual-effects.com/markdeep/) file, including a calendar, budget, network diagram, to-do list and notes.
 
 Make _your_ plan.
@@ -773,7 +782,8 @@ You need someone to cover for you when you are not available, or a crystal clear
 
 === Budget
 
-How much do you have/want to spend? Write down a number and stick to it.
+How much do you have/want to spend.
+Write down a number and stick to it.
 
 === Resources
 
@@ -831,7 +841,8 @@ Know your users.
 For example: they might not be activists, or might not be activists for your cause.
 Be thoughtful.
 
-Also: know thyself! I'll go first: I recognize that using the word FOSS is a signal to staunch pragmatists that I'm on the activist spectrum.
+Also: know thyself.
+I'll go first: I recognize that using the word FOSS is a signal to staunch pragmatists that I'm on the activist spectrum.
 I solicit feedback from others to balance my idealism with pragmatism.
 
 == System design
@@ -1266,7 +1277,10 @@ For that and other various reasons I'll focus on bare metal.
 
 You can start with pretty much any old desktop or laptop.
 Use something more powerful and expandable than a Raspberry Pi, though.
-What if your users love it? What about bursty workloads? Adding storage later? If you start with something too small you won't have enough speed nor expandability.
+What if your users love it.
+What about bursty workloads.
+Adding storage later.
+If you start with something too small you won't have enough speed nor expandability.
 
 I've worked with quite a few different servers and I did my homework for this self-hosting adventure, so I had a decent idea of what I wanted.
 
@@ -1579,7 +1593,8 @@ Provisioning with _mario_ is idempotent.
 The system should not change in any meaningful way after the desired state is reached.
 Once `provision.sh` completes successfully, it may be run again without making further changes.
 
-Then: start tinkering! You can find some ideas in <<_exercises>>.
+Then: start tinkering.
+You can find some ideas in <<_exercises>>.
 
 You may want to first provision a virtual machine until you're ready to run _mario_ pointed at your real server.
 
@@ -1798,7 +1813,8 @@ That particularly seems to help the first time I stand up a new service.
 
 === Tiny test service
 
-How about a little tinkering? Standing up a test service is easy.
+How about a little tinkering.
+Standing up a test service is easy.
 This is useful to confirm networking is functional for Docker containers running on your host.
 
 This service demonstrates pinging a public server.
@@ -2053,7 +2069,8 @@ You can open files and edit them, but the UI/UX is bad.
 See <<_mobile_text_editing_is_hard>> for a couple workarounds.
 
 I had a Murena Samsung S9+ phone (https://murena.com) running /e/ OS for a while.
-I loved it! Easy to set up with Nextcloud and worked quite well.
+I loved it.
+Easy to set up with Nextcloud and worked quite well.
 Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE.
 
 Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA. /e/ OS is up to date with the latest upstream Android code and once again provides a good deal more FOSS-friendliness, privacy, and native Nextcloud integration than other Android-based mobile operating systems.
@@ -2451,7 +2468,8 @@ These aren't covered in detail in this book and they aren't included in _mario_.
 
 === Learn more
 
-If you like this book, and you want to learn and do more, do it! Ride that wave of inspiration.
+If you like this book, and you want to learn and do more, do it.
+Ride that wave of inspiration.
 Seek both breadth and depth.
 
 For breadth, check out _Mastering Ubuntu Server - Fourth Edition_ by Jay LaCroix (https://ubuntuserverbook.com).
@@ -2569,7 +2587,8 @@ Authentik (https://goauthentik.io) can do this.
 
 === Self-hosting support
 
-How about when you get stuck? Here are some ideas.
+How about when you get stuck.
+Here are some ideas.
 
 * Ask for help in forums and chats related to a product/project.
 * If you're confident you've found a bug, file an issue for the product/project.
@@ -2741,9 +2760,11 @@ ____
 Open source is free like a puppy is free
 ____
 
-Everybody loves a puppy, right? Right?!
+Everybody loves a puppy, right.
+Right?!
 
-I sure hope so! Because--fair warning--if you spend too much time with your "puppy" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
+I sure hope so.
+Because--fair warning--if you spend too much time with your "puppy" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
 
 .Open Source is free like a puppy. Pictured: actual puppy.
 image::puppy.jpg[align="center",scaledwidth=80%]
@@ -2755,7 +2776,8 @@ Practically it means that you might become attached to something impractical.
 ==== The SMOP trap
 
 With proprietary software, if it can't do something, it's easier to give up.
-Because, what's the point? If the change/customization/feature you want doesn't help _their_ bottom line (or their timeline), _you're_ not going to get it.
+Because, what's the point.
+If the change/customization/feature you want doesn't help _their_ bottom line (or their timeline), _you're_ not going to get it.
 
 That never happens with FOSS.
 At least, not the same way.
@@ -2786,7 +2808,8 @@ Your mileage may vary.
 
 ==== Choices
 
-As in, too many of them! Too much choice is good and challenging problem to have.
+As in, too many of them.
+Too much choice is good and challenging problem to have.
 
 === When FOSS is better
 
@@ -2885,7 +2908,8 @@ Same with YouTube for video, Audible for audio books, Alibaba for flashlights.
 You will not get unlimited content from a self-hosted media server.
 You'll only have the DRM-free content you bought or created and saved.
 
-But do you _need_ unlimited content? The corporations would like you to believe so.
+But do you _need_ unlimited content.
+The corporations would like you to believe so.
 And we all get bored, so they don't have to work hard to convince us of this.
 
 We live in Aldous Huxley's _Brave New World_... we can be amused to death.
