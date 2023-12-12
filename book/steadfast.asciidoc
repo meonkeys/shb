@@ -669,8 +669,8 @@ Running as root makes containers simpler and less secure.
 
 Another smile-worthy advancement is free OCR (optical character recognition).
 I keep trying to "go paperless" by scanning in all my paper files.
-After scanning I was shouldered with, unsurprisingly, a bunch of PDFs of images.
-These can be easily processed and searched with tools like Nextcloud Full text search (https://apps.nextcloud.com/apps/fulltextsearch).
+After scanning papers I am shouldered with, unsurprisingly, a bunch of PDFs of images.
+These can be easily OCR'd and managed with tools like Paperless-ngx (https://docs.paperless-ngx.com/) and Nextcloud Full text search (https://apps.nextcloud.com/apps/fulltextsearch).
 
 ===== Jellyfin
 
