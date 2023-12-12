@@ -899,11 +899,11 @@ Really just rolls off the tongue!
 
 Let's run "WAN access" through our threat model.
 
-* Asset
+* *Assets*
 ** Personal information stored on out-of-date Nextcloud server.
-* Actor/Threat/Vector
+* *Actors/Threats/Vectors*
 ** Bot finds URL to Nextcloud server on a publicly archived mailing list. Bot automatically attempts exploit against known vulnerability in Nextcloud server. Exploit succeeds, bot owner gains access to personal information and attempts identity theft.
-* Mitigations
+* *Mitigations*
 ** Keep Nextcloud server up to date.
 ** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
 ** Close WAN boundary: disallow all inbound WAN traffic.
