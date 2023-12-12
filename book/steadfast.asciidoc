@@ -1081,13 +1081,15 @@ Think:
 * ephemeral
 ** containers are temporary
 ** temporary containers provide robust, reproducible services
-* treat containers like cattle, not pets
+* cattle, not pets
 ** hand-managed VMs are burdensome pets
 ** apologies to the cattle--in this analogy they are expendable
 * stateless
 ** persistent data can and must be defined explicitly
-* phoenix server (https://martinfowler.com/bliki/PhoenixServer.html)
+* phoenix server
 ** a term by Martin Fowler describing the benefits of short-lived servers that can be easily re-created
+
+See: https://martinfowler.com/bliki/PhoenixServer.html.
 
 === Reverse Proxy
 
