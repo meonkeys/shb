@@ -491,7 +491,15 @@ Here are some things that surprised me, both positively and negatively.
 
 ===== Hardware
 
-With help from a friend (thanks Rob!), I bought a reliable and cheap server. I could've saved a few bucks by buying parts, but I wanted something ready to power on. Still, I thought I'd be tinkering with wires, cards, and CMOS batteries. Not so! I only opened the chassis to see the guts. It looked like normal server guts in there. Took me longer to build a rack for my server than it took me to power it on.
+With help from a friend (thanks Rob!), I bought a reliable and cheap refurbished server.
+I thought I'd be tinkering with wires, cards, and CMOS batteries.
+Not so!
+I opened the chassis to see the guts.
+I confirmed the contents were normal server guts, or close enough.
+The CPUs and memory sticks were all there as advertised.
+
+I plugged it in; it worked.
+Took me longer to build a rack for my server than it took me to power it on.
 
 .View inside the server showing two empty PCI-E card slots.
 image::inside-chassis.jpg[align="center",scaledwidth=80%]
