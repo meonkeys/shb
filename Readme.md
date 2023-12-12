@@ -144,3 +144,5 @@ This is the final step in the editing process. A proofreader examines the final 
         * example w/o slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/`
 * use "command line" to refer to a Linux text-based interactive user interface
 * use [Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
+* use [one sentence](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) [per line](https://sive.rs/1s)
+	* for prose paragraphs only
