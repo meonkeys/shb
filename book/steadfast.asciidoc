@@ -716,7 +716,8 @@ Be patient.
 Never try to force people to use whatever you self-host.
 
 I hope this book inspires you with many positive surprises and helps you and your users avoid many negative ones.
-It's dangerous to go alone! Take thisfootnote:[_It's dangerous to go alone! Take this._ references the iconic moment early in the popular _Legend of Zelda_ video game when Link gets his first sword from the old man.] book.
+It's dangerous to go alone!
+Take this bookfootnote:[_It's dangerous to go alone! Take this._ references the iconic moment early in the popular _Legend of Zelda_ video game when Link gets his first sword from the old man.].
 
 == Prerequisites
 
