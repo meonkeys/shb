@@ -1073,7 +1073,7 @@ These should be kept in source control too.
 For sysadmins these conventions provide reproducible images and containers.
 For users: predictable, reliable services.
 
-Containers work best as temporary things.
+Practice treating containers as temporary things.
 You'll gain confidence in your system by creating and destroying them frequently, and you'll enjoy the speed and ease of doing so.
 
 Think:
