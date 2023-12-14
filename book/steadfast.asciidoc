@@ -1864,7 +1864,12 @@ Here are details of self-hosting a handful of useful services.
 
 The services I'll highlight are a tiny fraction of those available to self-host.
 They reflect my users' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
+Getting them running will provide some useful functionality and a good starting point.
 With the help of _mario_ your cloud gets these out of the box and will be flexible enough to accommodate your preferred service choices.
+
+These particular services--while all reasonable choices to make your data useful--may not be the best available choices nor the best fits for your use case.
+That is absolutely fine!
+Plan to add and remove services as desired and as time passes.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
@@ -2150,13 +2155,16 @@ Workarounds:
 
 ===== Mobile text editing is hard
 
-I find mobile text entry and editing cumbersome, even in the best of circumstances.
+Nextcloud makes it easy to get to your stuff via mobile devices, but editing is a pain.
+
+This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
 This applies to email, plain text, Markdown, and office documents.
 
-One workaround is to use the Notes app on Android (https://github.com/nextcloud/notes-android) or iOS (https://github.com/nextcloud/notes-ios).
-It features larger fonts, separate editing and viewing modes, and more aggressive synchronization (high chance of up-to-date data and fewer conflicts).
+In Nextcloud-land, one workaround to improve plain and Markdown text entry is to use the Notes app on Android (https://github.com/nextcloud/notes-android) or iOS (https://github.com/nextcloud/notes-ios).
+It has separate editing and viewing modes and more aggressive synchronization.
+With Notes you have a better chance of up-to-date data and fewer conflicts.
 
-Another workaround is Markor (https://github.com/gsantner/markor).
+Another workaround is to use Markor (https://github.com/gsantner/markor).
 Install that app, then:
 
 . In the Nextcloud mobile app, "Download" or "Sync" the file you wish to view or edit locally. This caches a copy on your phone.
