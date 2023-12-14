@@ -2879,10 +2879,12 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 * Google is not an _excellent technology company_, it is first and foremost an _excellent advertising company_
 * Facebook does not exist to connect you with your friends and family, _it exists to make money selling ads_
 * Facebook (Instagram, WhatsApp), TikTok, Twitter, Google, etc. are not evil, they're just there for *profit*, not necessarily for you
+** Profit is an incentive, and the incentives of for-profit companies don't always align with yours
 * useful, usable software services are _side effects_ of big tech
 * Google has done acts of priceless altruism, yet, all as a side effect of their commitment to profit and growth
-* heck, the military industrial complex brought us the Internet (https://en.wikipedia.org/wiki/History_of_the_Internet), so yeah, sometimes we get lucky with good outcomes regardless of the original incentive
-* You probably have a "smartphone". Consider how amazing that piece of tech is and how essential it is to every day life.
+* heck, the military industrial complex brought us the Internet, so yeah, sometimes we get lucky with good outcomes regardless of the original incentive
+** history lesson: https://en.wikipedia.org/wiki/History_of_the_Internet
+* You probably have a "smart" phone. Consider how amazing that piece of tech is--how essential it is to everyday life.
 * Does your phone do stuff you don't want it to?
 ** what annoying issues are you willing to put up with because the phone is so essential to daily life?
 ** bloatware? planned obsolescence?
