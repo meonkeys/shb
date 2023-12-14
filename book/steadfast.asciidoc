@@ -2026,7 +2026,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |End-to-End Encryption |encrypt files server-side, decrypt with client |*No*. Unnervingly buggy. Confusing UI/UX.
 |Files |file management, sharing |*Yes*, although "versions" are not very useful. See "bugs", below.
 |Forms |Google Forms alternative |*Yes*.
-|Full text search |search through all documents |*Yes*. Very fast. Warning: dead/dormant project.
+|Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project.
 |Holiday Calendars |easily add public holiday calendars |*Yes*. The config for this app shows up under "Personal" -> "Availability" for me, not "Groupware" (although the URL path is `/settings/user/groupware`).
 |Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate metadata.
 |Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yeah, I want to de-Gmail someday.
@@ -2061,7 +2061,7 @@ The AIO installer includes the strukturag/nextcloud-spreed-signaling implementat
 
 ==== Full text search
 
-This essential app allows you to search through all content of all documents on your server.
+This app allows you to search through all content of all documents on your server.
 The search syntax is hard to get right.
 It uses a lot of CPU and is memory-hungry too.
 
