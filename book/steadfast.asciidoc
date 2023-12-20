@@ -924,7 +924,13 @@ This suggests we should only allow WAN traffic if we are keeping Nextcloud up to
 
 Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on "security through obscurity".
 
-Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "defense in depth".
+Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "defense in depth". It's a great idea.
+
+==== open WAN access alternative: Wireguard
+
+A few years ago, VPN technology got a major upgrade with Wireguard. From a user perspective there's no "logging in" as with older VPNs. Wireguard is fast and easy and secure. When you're away from home, you can simply flip it on to teleport back into your LAN.
+
+If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys. Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your attack surface.
 
 ==== More tips
 
@@ -3112,6 +3118,8 @@ volume::
   Docker container data storage location on the host.
 VM::
   Virtual machine. OS isolation technique simulating nearly all aspects of hardware including power, input, and output.
+VPN::
+  Virtual private network. Useful to "teleport home" and behave (from a networking perspective) as if you are inside your home LAN.
 WAN::
   Wide-area network. Everything outside your LAN / home network / router.
 Y2K::
