@@ -1482,6 +1482,18 @@ zpool iostat
 
 === Server maintenance
 
+FIXME - what is the asciidoc syntax for checkboxes?
+
+I use short monthly and yearly maintenance checklists. For example, monthly I might:
+
+- blah
+- foo
+
+And yearly:
+
+- bar
+- baz
+
 ==== Hardware
 
 Plan on hardware failure.
