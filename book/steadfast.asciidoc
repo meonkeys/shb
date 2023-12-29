@@ -1964,7 +1964,7 @@ Some tips:
 ** Configuration: `/data/tmp-video`
 ** set users, previews, sharing, and remaining options as desired
 
-==== Maintenance
+==== Maintenance notes
 
 FIXME
 
@@ -2326,7 +2326,7 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 
 For hardware transcoding see https://jellyfin.org/docs/general/administration/hardware-acceleration/.
 
-==== Maintenance
+==== Maintenance notes
 
 * upgrades
 ** change the version number in `roles/services/templates/ops/jellyfin/docker-compose.yml`
@@ -2384,7 +2384,7 @@ Assuming everything above was successful, also:
 . Provision with _mario_.
 . Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`. The config change will be detected and a new `app` container will be created.
 
-==== Maintenance
+==== Maintenance notes
 
 * upgrades
 ** change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
@@ -2454,7 +2454,7 @@ A service might only have one-way database migrations, for example.
 . Provision with _mario_.
 . Start Watchtower with `sudo docker-compose --file /root/ops/watchtower/docker-compose.yml up -d`.
 
-==== Maintenance
+==== Maintenance notes
 
 Check the logs if a service goes down to investigate if an automatic container upgrade caused a problem.
 For example:
@@ -2478,7 +2478,7 @@ Scratch doesn't require any persistent data, setup, nor auth.
 . Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
 . Navigate to `\https://scratch.MARIO_DOMAIN_NAME`
 
-==== Maintenance
+==== Maintenance notes
 
 None.
 
