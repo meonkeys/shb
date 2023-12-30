@@ -67,7 +67,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am11 | incomplete _Translations section_ | OPEN | |
 | am12 | incomplete _Support future awesome books_ section | OPEN | |
 | am13 | remove _Cover art_ section | RESOLVED | |
-| am14 | missing _Periodic maintenance_ section (example schedules) | OPEN | |
+| am14 | missing _Periodic maintenance_ section (example schedules) | RESOLVED | added to _Server maintenance_ |
 | am15 | missing style guide | RESOLVED | see [below](#style-guide) |
 | am16 | confirm adherence to style guide | RESOLVED | ongoing |
 | am17 | add more photos and illustrations | RESOLVED | added one of server guts, will add more if/as necessary |
