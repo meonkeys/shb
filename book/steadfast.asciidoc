@@ -78,8 +78,6 @@ _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2023 Adam Mo
 
 === Copy this book
 
-I am humbled and grateful you are reading this.
-
 Please make copies.
 I want it to be enjoyed and shared, and I chose a license that explicitly encourages sharing.
 Check this out:
@@ -3149,7 +3147,9 @@ ZFS::
 
 Dear Reader,
 
-This book exists because you exist.
+*This book exists because you exist.*
+
+I am humbled and grateful for your support.
 
 Thank you, thank you, thank you.
 
