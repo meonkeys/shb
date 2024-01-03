@@ -381,6 +381,8 @@ Here are more related and interesting self-hosting solutions I learned about too
 * HomelabOS (https://homelabos.com)
 * Start9 (https://start9.com)
 * MicroCloud (https://canonical.com/microcloud)
+* LibreServer (https://libreserver.org)
+* UBOS (https://ubos.net)
 
 ==== Command line
 
