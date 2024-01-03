@@ -1489,21 +1489,19 @@ zpool iostat
 
 === Server maintenance
 
-FIXME - what is the asciidoc syntax for checkboxes?
-
 I use short monthly and yearly maintenance checklists. For example, monthly I might:
 
-- upgrade OS packages
-- check storage space remaining
-- back up router config
+* [x] upgrade OS packages
+* [x] check storage space remaining
+* [x] back up router config
 
 And yearly:
 
-- test restore from backup
-- review and improve threat model
-- open server chassis and vacuum dead spiders
+* [x] test restore from backup
+* [x] review and improve threat model
+* [x] open server chassis and vacuum dead spiders
 
-I update these about as often as I refer to them.
+I update my checklists about as often as I use them.
 
 The following sections cover specific maintenance tips and tricks.
 
