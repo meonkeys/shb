@@ -119,6 +119,8 @@ This is the final step in the editing process. A proofreader examines the final 
 
 ## Style guide
 
+* pay attention to and follow the existing style
+    * standardize whenever possible and formalize conventions here
 * images
     * center most and constrain to 80% wide
 * exclude optional slashes at ends of hyperlinks
@@ -146,3 +148,19 @@ This is the final step in the editing process. A proofreader examines the final 
 * use [Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
 * use [one sentence](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) [per line](https://sive.rs/1s)
 	* for prose paragraphs only
+* source control
+    * commit early and often
+    * group logically related changes into single commits
+        * consider future maintainers may wish to `git revert`: try to make that easy for them
+    * group a series of related changes in a branch
+    * squashing is OK
+    * before submitting patches:
+        * ensure build passes
+    * commit log messages
+        * the first line of a commit log message is very important: say precisely **what** change you made, save the **why** for the rest
+        * use infinitive verb forms, e.g. "add -q quiet option"
+        * don't wrap body text
+        * see also:
+            * <https://mifosforge.jira.com/wiki/spaces/MIFOS/pages/4456742/Commit+Log+Guide>
+            * <https://lore.kernel.org/git/7vr4waoics.fsf@alter.siamese.dyndns.org/>
+            * <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
