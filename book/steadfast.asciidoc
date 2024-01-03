@@ -1058,17 +1058,18 @@ My OS is more a pet than cattle (see "cattle vs. pets" in <<_glossary>>), althou
 
 We'll use Docker.
 
-Not VMsfootnote:[If you intend to self-host Jitsi, you might want to do that in a VM. I had some issues trying to get Docker to handle the ranges of open ports Jitsi requires.].
-
-Not Kubernetes.
-Too much extra stuff to learn.
-We don't need it for now.
-
-TIP: One major benefit of Kubernetes is high availability via clustering.
+TIP: Docker is but one of many valid choices for where to put your services.
+More interested in VMs?
+That's fine.
+Check out VMs especially if you want to self-host Jitsi--I had some issues trying to get Docker to handle the ranges of open ports Jitsi requires.
+Kubernetes is fine too.
+Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
+I found it to be overkill, personally.
+If I needed high availability via clustering I'd be more likely to use Kubernetes.
 If one computer in a Kubernetes cluster breaks, services can automatically migrate to working hardware in the cluster.
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
-Docker balances features and usability well, making it easy to run one program in isolation.
+Docker balances features and usability well, making it easy to run one service in isolation.
 We'll layer on Docker Compose to run the groups of processes necessary to support a whole service (e.g. a web server and its database).
 Kubernetes can do this too, along with everything you _don't_ need to learn unless you are building out an entire virtual data center.
 Docker compose is a good fit for our single-server setup.
