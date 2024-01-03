@@ -132,7 +132,7 @@ This is the final step in the editing process. A proofreader examines the final 
     * at first appearance, immediately following the term, in parentheses or locale-appropriate delimiters
     * in the glossary
 * footnotes
-    * use footnotes sparingly
+    * don't use footnotes
 * links
     * include links next to or very near context, but try to avoid breaking the flow of text
     * always include typed-out URL, never link text directly
