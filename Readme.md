@@ -89,6 +89,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am33 | HTML output lacks cover art | WONTFIX | |
 | am34 | port build to macos | RESOLVED | had to override `GID` in `build.sh` |
 | am35 | add an index (mainly/only for print) | OPEN | |
+| am36 | EPUB source code line numbers too close to first character (e.g. ZFS setup code) | OPEN | |
 
 ## How to build the book
 
