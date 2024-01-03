@@ -657,22 +657,29 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers
 
-I was pleasantly surprised by containers since most of my earlier experience was with VMs (virtual machines).
-Containers are excellent for a consistent and resilient personal cloud.
+I was pleasantly surprised by containers following my varied earlier experiences with VMs (virtual machines).
+VMs are simple at first because they behave much like physical hardware.
+Installing Linux into a VM is as easy as installing it onto bare metal (sometimes even easier).
+Then you can set up one or more services in the VM.
+The real rub here is with maintenance: maintaining a VM can be as complex as maintaining a bare metal server.
+
+Containers take a different approach and simulate much less of a bare metal server.
 They are fast and small compared with VMs, allowing higher non-conflicting service density.
 That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHP (PHP: Hypertext Processor)).
+One container typically contains only one service.
 
 Isolation of containers is limited compared to VMs.
 The kernel is shared, for example.
 Limited isolation keeps the resource and maintenance costs of container-based isolation low compared with VMs.
 
-Containers are easy to declare (in code), build, deploy, test, and repeat.
+Containers are excellent for a consistent and resilient personal cloud.
+They are easy to declare (in code), build, deploy, test, and repeat.
 
 I chose Docker to manage containers because it is popular and I have experience with it.
 Your server is also considered a _host_ since it it is a _host_ to Docker containers.
 
-One downside of Docker is how often root access is assumed in example code and popular publicly images.
-Running as root makes containers simpler and less secure.
+One downside of Docker is how often root access is assumed in example code and popular public images.
+Running as root makes containers simpler but less secure.
 
 ===== OCR
 
@@ -3111,6 +3118,8 @@ router::
   Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
+server::
+  A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse.
 SOHO::
   Small office / home office.
 source control::
