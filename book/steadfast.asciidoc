@@ -14,6 +14,7 @@ Adam Monsen
 :source-highlighter: pygments
 :pygments-linenums-mode: inline
 :!chapter-signifier:
+:!webfonts:
 
 == Intro
 
