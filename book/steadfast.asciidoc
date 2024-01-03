@@ -165,12 +165,13 @@ I'm most proud of my family, growing Mifos (https://mifos.org), founding SeaGL (
 
 I aspire to always be kind and minimize my ego.
 
-I've been self-hosting throughout my career.
-I started a blog shortly after Y2K and that was enough for years.
-I worked with many services and servers.
-I avoided running my own.
-Once I had a family our data storage needs increased at home, and it became handy as parents to be able to provide more and safer online services for our kids.
-Samba and Syncthing were no longer enough; I wanted better services for managing our data.
+I've been running my own services for decades.
+I started with a humble blog running on a buddy's machine.
+The feeling of freedom and control was exciting and it complemented my effectiveness at work, so I kept on.
+I worked with many services and servers but usually avoided running my own hardware.
+Once I had a family, our data storage needs increased at home.
+It became handy as parents to be able to provide more and safer online services for our kids.
+Samba and Syncthing were no longer enough; I wanted better services for managing our data and the autonomy of our own bare metal.
 
 During the pandemic our family data/service needs increased sharply, and I was wary of companies swooping in to grab mindshare.
 At the same time, I decided to de-Google (https://en.wikipedia.org/wiki/DeGoogle).
@@ -3138,8 +3139,6 @@ VPN::
   Virtual private network. Useful to "teleport home" and behave (from a networking perspective) as if you are inside your home LAN.
 WAN::
   Wide-area network. Everything outside your LAN / home network / router.
-Y2K::
-  The year 2000. Was approached by humanity with a fair amount of excitement, caution, and fear. Largely unfolded as a non-event. See also: Year 2038 problem (https://en.wikipedia.org/wiki/Year_2038_problem).
 ZFS::
   A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
