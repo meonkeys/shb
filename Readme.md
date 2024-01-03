@@ -88,6 +88,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am32 | release v2 to reviewers (maybe call it version 1.0.2?) | RESOLVED | |
 | am33 | HTML output lacks cover art | WONTFIX | |
 | am34 | port build to macos | RESOLVED | had to override `GID` in `build.sh` |
+| am35 | add an index (mainly/only for print) | OPEN | |
 
 ## How to build the book
 
