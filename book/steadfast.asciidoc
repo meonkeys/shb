@@ -253,7 +253,7 @@ _Cloud_ implies scalable, _Personal_ scopes that to scalability to what's reason
 Modern bare metal hardware can scale (to a degree) within its box.
 It can scale automatically by using more or less power according to compute demand, and manually when you upgrade hardware components (say, adding another hard drive).
 
-I'll also admit that my inner child enjoys multiple meanings of the phrase _Personal Cloud_.
+I'll also admit my inner child enjoys multiple meanings of the phrase _Personal Cloud_.
 
 === Who is this for?
 
