@@ -149,6 +149,8 @@ This is the final step in the editing process. A proofreader examines the final 
 * use [Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
 * use [one sentence](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) [per line](https://sive.rs/1s)
 	* for prose paragraphs only
+* code
+    * prefer long form for command line flags, e.g. `--attribute` instead of `-a`
 * source control
     * commit early and often
     * group logically related changes into single commits

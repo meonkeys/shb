@@ -17,7 +17,7 @@ namespace :book do
 
   desc 'build HTML output'
   task :build_html => book_source do
-	sh "bundle exec asciidoctor #{params} -a data-uri #{book_source}"
+	sh "bundle exec asciidoctor #{params} --attribute data-uri #{book_source}"
   end
 
   desc 'build Epub output'
@@ -33,7 +33,7 @@ namespace :book do
   desc 'build Mobi output'
   task :build_mobi => book_source do
 	# Mobi (kf8)
-	sh "bundle exec asciidoctor-epub3 #{params} -a ebook-format=kf8 #{book_source}"
+	sh "bundle exec asciidoctor-epub3 #{params} --attribute ebook-format=kf8 #{book_source}"
   end
 
   desc 'build PDF output'
