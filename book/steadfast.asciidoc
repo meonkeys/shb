@@ -16,7 +16,7 @@ Adam Monsen
 :!chapter-signifier:
 :!webfonts:
 
-== Intro
+== Introduction
 
 === Thesis
 
