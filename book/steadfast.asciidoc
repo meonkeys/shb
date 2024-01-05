@@ -65,7 +65,9 @@ This book is a work in progress.
 Please help me improve it.
 See <<_contributions>>.
 
-== Version information
+== Metadata
+
+=== Version information
 
 This book was generated
 
@@ -73,22 +75,21 @@ This book was generated
 * from git commit `{build_git_commit}`
 * using `{build_os_release}`
 
-== Copyright and license
+=== Copyright and license
 
 _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2023 Adam Monsen.
 
-=== Copy this book
+==== Copy this book
 
-Please make copies.
-I want it to be enjoyed and shared, and I chose a license that explicitly encourages sharing.
+Please make copies and derivative works.
+I want it to be enjoyed and shared.
+I chose a license that explicitly encourages sharing.
 Check this out:
 
 This book is distributed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license**.
 Contact me if you are interested in obtaining it under another license.
 
-* https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-==== You are free to
+===== You are free to
 
 *Share* -- copy and redistribute the material in any medium or format
 
@@ -96,7 +97,7 @@ Contact me if you are interested in obtaining it under another license.
 
 _The licensor cannot revoke these freedoms as long as you follow the license terms._
 
-==== Under the following terms
+===== Under the following terms
 
 *Attribution* -- You must give appropriate credit, provide a link to the license, and indicate if changes were made.
 You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
@@ -107,7 +108,7 @@ You may do so in any reasonable manner, but not in any way that suggests the lic
 
 *No additional restrictions* -- You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
-==== Notices
+===== Notices
 
 You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
 
@@ -115,7 +116,7 @@ No warranties are given.
 The license may not give you all of the permissions necessary for your intended use.
 For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
-=== Copy this book's code, too
+==== Copy this book's code, too
 
 I've got two things for you to fork (copy, modify, and share).
 
@@ -129,9 +130,10 @@ The license for all original source code related to this book is the GNU AGPL (A
 
 A copy of the AGPL is included in `mario/COPYING`.
 
-== Disclaimer
+=== Disclaimer
 
 I offer no warranty and no guarantee.
+Buying or reading this text is not an agreement for support.
 
 While every precaution has been taken in the preparation of this book, I assume no responsibility for errors or omissions or for damages resulting from the use of its code or contents.
 
@@ -2727,6 +2729,8 @@ Requires Docker and a few common cli tools.
 To build _without_ Docker: install prerequisites, set environment variables, and run `rake`.
 See `Dockerfile` for prerequisites.
 See `Rakefile` for environment variables expected at runtime.
+
+Make your own derivative works following <<_copy_this_book>>.
 
 == Discussion topics
 
