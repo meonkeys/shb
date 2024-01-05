@@ -948,7 +948,7 @@ Let's run "WAN access" through our ((threat model)).
 ** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
 ** Close WAN boundary: disallow all inbound WAN traffic.
 
-(((Nextcloud, securing)))
+(((Nextcloud, security)))
 This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
 
 Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on "security through obscurity".
@@ -1990,7 +1990,7 @@ They have a public bounty program and threat model.
 
 ==== Setup
 
-(((Nextcloud, setup)))
+(((Nextcloud, install)))
 Setting up a new Nextcloud server is well-documented.
 In brief:
 
