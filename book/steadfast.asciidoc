@@ -3128,7 +3128,7 @@ WAN::
 ZFS::
   A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
-== Thank you
+== End
 
 Dear Reader,
 
