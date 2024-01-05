@@ -496,7 +496,7 @@ So many reasons!
 * Unlock new possibilities
 ** view travel lines with phonetrack
 ** apply arbitrary workflows to uploaded files
-** deploy trustworthy, offline generative AI (artificial intelligence) models
+** deploy trustworthy, offline generative ((AI)) (artificial intelligence) models
 
 (((Nextcloud)))
 See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas.
@@ -1328,7 +1328,7 @@ I've worked with quite a few different servers and I did my homework for this se
 
 I chose something powerful, cheap, and fast with plenty of storage and room to grow.
 I sought professional commodity hardware for its replace-ability.
-It can handle a reasonable amount of bursty compute needs, including building Docker images, flurries of user activity, and some generative AI (even without a GPU).
+It can handle a reasonable amount of bursty compute needs, including building Docker images, flurries of user activity, and some generative ((AI)) (even without a GPU).
 
 I found a used refurbished 1U rackmount server on eBay for about $1,000.
 Two 24-core CPUs and 128 GB RAM.
@@ -2905,7 +2905,7 @@ Some areas where FOSS is especially behind:
 
 * mobile phones (Murena is promising)
 * speech recognition (but check out https://github.com/openai/whisper)
-* AI (this area is changing rapidly)
+* ((AI)) (this area is changing rapidly)
 
 Let's see how long before these are easily solvable with FOSS too.
 It'll be right around the time the _next_ attractive over-hyped widget is available.
