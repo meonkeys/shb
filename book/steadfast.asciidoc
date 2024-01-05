@@ -59,7 +59,7 @@ I wrote this book with my own resources after years of research with lots of hel
 See <<_acknowledgments>>.
 
 Please buy a copy for yourself or someone else, especially if you'd like me to write more awesome books in the future.
-See <<_support_future_awesome_books>>.
+See <<_buy_or_donate>>.
 
 This book is a work in progress.
 Please help me improve it.
@@ -573,7 +573,7 @@ In short order I converted the book to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code -- you're welcome to hack away at it.
-See <<_resources>> and <<_how_to_build_this_book>>.
+See <<_more_resources>> and <<_how_to_build_this_book>>.
 
 I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
 This helped me focus on the content while keeping the book simple enough to self-publish.
@@ -1907,16 +1907,16 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 
 Note that _mario_ blocks WAN access by default.
 Read <<_digital_security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` middleware from the corresponding service's Traefik labels.
+You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change:
 
-[source,diff]
+[source,diff,linenums]
 ----
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
 ----
 
-To allow WAN access to Jellyfin, simply delete the line referencing the `lan-only` middleware.
+To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only` middleware.
 
 === Nextcloud
 
@@ -1992,31 +1992,26 @@ Some tips:
 
 ==== Maintenance notes
 
-FIXME
-
-* tail logs
-** maybe include lnav tips, including log formatting code
-* upgrades (partly covered in "Release cadence", below)
+* upgrades
 ** change the version number in `roles/services/templates/ops/nextcloud/docker-compose.yml`
-** re-provision
+** re-provision from admin computer
+** replace containers on the host with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`
 * check the `/settings/admin/overview` page
 ** `occ db:add-missing-indices`
 ** `occ dav:sync-system-addressbook`
+* tail logs
+** lnav is helpful for this: https://lnav.org
 
 ===== Release cadence
 
-FIXME - verify this statement
-
 A new stable release is shipped every four months.
-The frequency does force app developers to change their code at least that often, but the changes required are usually minimal: Nextcloud stable releases rarely include breaking changes.
+These releases are scheduled, so a major version change might _not_ break backwards compatibility.
 
 * https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html
 
 Be sure to check your `/settings/admin/overview` page before upgrading to make sure all the apps you use will work with the version you're upgrading to.
 You can override an out-of-date app with the "enable untested app" option under `/settings/apps`.
 Sometimes this works.
-
-FIXME: detail if we pin to a major release in _mario_ or not (we should, so apps don't break)
 
 I started a thread about Nextcloud's release cadence at https://help.nextcloud.com/t/major-release-cadence/161685.
 
@@ -2554,10 +2549,13 @@ Modern generative AI workloads like large language model chat and image generati
 
 === AI
 
-You can and should run your own image generator and LLM (large-language model) at home.
+AI is once again the latest hotness.
+
+You can run your own image generators and LLMs (large-language models) at home.
+No GPU is required.
 Here's a `docker-compose.yaml` that'll work with _mario_ to stand up a LocalAI server (https://localai.io).
 
-[source,yaml]
+[source,yaml,linenums]
 ----
 version: '3.6'
 
@@ -2634,19 +2632,17 @@ Manage users and groups in one place.
 Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism.
 Authentik (https://goauthentik.io) can do this.
 
-== Resources
-
-This book will grow and evolve, and you can be a part of it!
+== More Resources
 
 Visit https://selfhostbook.com for all supporting material including source code for this book and _mario_.
 
 === Source code
 
-https://selfhostbook.com/src
+* https://selfhostbook.com/src
 
 === Contact info
 
-https://selfhostbook.com/contact
+* https://selfhostbook.com/contact
 
 === Support
 
@@ -2662,48 +2658,34 @@ Here are a few ideas for when you get stuck.
 
 == Contributions
 
-=== Make this book even more awesome
+This book is the start of something big.
+Just _how_ big is up to *you*!
 
-* feedback welcome! See <<_resources>>. When feedbacking me, please:
-** be kind
-** be patient; allow me time to respond
-** and (sorry in advance!) I might not respond at all
-* patches welcome! TODO: point users to public source code, finish this section
-** how to contribute (including a contributor agreement / copyright assignment)
-** explicitly solicit certain kinds of patches
-*** e.g. typos, grammar, broken links, style conformance
-** define acceptance tests, e.g.: check all outputs (attach them to the pull request?), must build without errors on Ubuntu, etc.
+Feedback and patches are welcome.
+
+When contacting me, please:
+
+* be kind
+* be patient; allow me time to respond
+* and (sorry in advance!) I might not respond at all
+
+When sending patches, please follow contributor guidelines at https://selfhostbook.com/src/.
 
 === Translations
 
-I published this book with Free and Open licenses because I want to make it easy to copy and improve, and, especially, to translate!
+Please help translate this book and _mario_.
 
-FIXME: document translation process, or put out an invitation for someone to contribute a translation process (including an overhaul of the build system!)
+* https://selfhostbook.com/translate
 
-* FIRST: improve build system: replace `strip-non-ascii.py` with something better
-** ideally: add support for color emoji at the same time
-* start with checkpoint x
-** FIXME: git tag, date, something fixed in time that won't change while it is being translated
-* create `LANG/book.md` based on `book.md` (or `book_LANG.md`?)
+=== Buy or donate
 
-=== Support future awesome books
+Please buy this book!
 
-* donate to the author
-** any amount helps! FIXME - comment how count of donations indicates interest?
-** please specify if you wish your donation to be or remain anonymous, otherwise I may publicly thank you
-** peercoin
-** bitcoin
-** liberapay
-** patreon
-** paypal
-** venmo
-* sponsor (sponsor what? FIXME)
-* buy a paper copy
-** leanpub
-** lulu.com
-** Amazon - NOTE: this is a convenient option for you, but an inconvenient option for humanity (https://us.macmillan.com/books/9780374159276/fulfillment)
-* donate a copy to a library
-** TODO
+If you already have a copy, buy one for a friend.
+
+If they already have one, buy one for a local school or library.
+
+* https://selfhostbook.com/buy
 
 === How to build this book
 
@@ -2965,23 +2947,21 @@ Let's be amused to _live_: inspired, motivated, powerfully kind.
 == Acknowledgments
 
 Sometimes I feel more like a project manager than an author, accepting help from so many generous people.
-I truly couldn't have done this alone.
+I truly couldn't have done this alone and I am so, so thankful.
 
-Thank you to my daughter for her fantastic illustrations.
+Thanks to my daughter for her fantastic illustrations.
 
-Thank you to all my reviewers:
-
-* TODO - list reviewers? (or just below, or both)
-
-Thanks to my wife and kids for supporting and believing in me.
-For all the cooking, talking, listening, art, coding, math, music, and love.
-Aren't we lucky?!
+Thanks to all my reviewers.
 
 Thanks to my family and friends for putting up with my FOSS self-hosting experiments.
 
-Thanks to Rob and all of underlug for help with hardware, Ansible, and Traefik. _And_ feedback.
+Thanks to Rob and all #underlug for help with hardware, networking, Ansible, and Traefik.
 
-Thanks to the Deadbeat Dads Bryan and Rob for your invaluable feedback.
+Thanks to Bryan, Rob and all the Deadbeat Dads for your invaluable feedback. 
+
+Thanks most of all to my wife and kids for supporting and believing in me.
+For all the cooking, talking, listening, art, coding, math, music, and love.
+Aren't we lucky?!
 
 == Glossary
 

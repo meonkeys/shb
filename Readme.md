@@ -63,15 +63,15 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am07 | no color emoji in PDF outputs | WONTFIX | I'm just going to remove emoji, they don't add to the book. |
 | am08 | incomplete _Resources_ section | RESOLVED | |
 | am09 | incomplete _Contact info_ section | RESOLVED | |
-| am10 | incomplete _Contributions section_ | OPEN | |
-| am11 | incomplete _Translations section_ | OPEN | |
-| am12 | incomplete _Support future awesome books_ section | OPEN | |
+| am10 | incomplete _Contributions section_ | RESOLVED | |
+| am11 | incomplete _Translations section_ | RESOLVED | |
+| am12 | incomplete _Support future awesome books_ section | RESOLVED | renamed to _Buy or donate_ |
 | am13 | remove _Cover art_ section | RESOLVED | |
 | am14 | missing _Periodic maintenance_ section (example schedules) | RESOLVED | added to _Server maintenance_ |
 | am15 | missing style guide | RESOLVED | see [below](#style-guide) |
 | am16 | confirm adherence to style guide | RESOLVED | ongoing |
 | am17 | add more photos and illustrations | RESOLVED | added one of server guts, will add more if/as necessary |
-| am18 | change _mario_ to use [Duck DNS](https://hub.docker.com/r/linuxserver/duckdns) | OPEN | |
+| am18 | change _mario_ to use [Duck DNS](https://hub.docker.com/r/linuxserver/duckdns) | RESOLVED | |
 | am19 | PDF output lacks cover art | RESOLVED | fixed with move to Asciidoctor |
 | am20 | define "attack surface" | RESOLVED | |
 | am21 | differentiate style for image captions | RESOLVED | fixed with move to Asciidoctor |
@@ -83,13 +83,20 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am27 | correct "knows as" typo to "known as" | RESOLVED | |
 | am28 | add photo: bird on server | RESOLVED | |
 | am29 | exclude optional slashes at ends of hyperlinks | RESOLVED | |
-| am30 | list reviewers in _Acknowledgments_ | OPEN | |
+| am30 | list reviewers in _Acknowledgments_ | RESOLVED | |
 | am31 | build book with Asciidoctor instead | RESOLVED | |
 | am32 | release v2 to reviewers (maybe call it version 1.0.2?) | RESOLVED | |
 | am33 | HTML output lacks cover art | WONTFIX | |
 | am34 | port build to macos | RESOLVED | had to override `GID` in `build.sh` |
 | am35 | add an index (mainly/only for print) | OPEN | |
 | am36 | EPUB source code line numbers too close to first character (e.g. ZFS setup code) | OPEN | |
+| am37 | port website to hugo | OPEN | |
+| am38 | resolve all FIXMEs | RESOLVED | |
+| am39 | test all links and references in all output formats | OPEN | |
+| am40 | run htmlproofer | OPEN | |
+| am41 | run epubcheck | OPEN | |
+| am42 | cull resolved issues | OPEN | |
+| am43 | port to future home (re-do this Readme) | OPEN | |
 
 ## How to build the book
 
