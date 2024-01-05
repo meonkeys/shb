@@ -1433,6 +1433,7 @@ At each prompt, accept the default or write down your choice.
 Encrypting prevents data recovery by an attacker.
 You'll have to enter a password on boot, though.
 This is inconvenient if you have intermittent power and/or no remote management capability.
+There's also the reasonable argument that full-disk or "at-rest" encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
 
 If you decide you want full-disk encryption, choose it during the OS install. <<_digital_security>> is helpful for deciding whether or not to encrypt.
 
@@ -3023,6 +3024,8 @@ FSF::
   Free Software Foundation. They strongly defend the "F" in FOSS.
 frontend::
   The UI for a system or service.
+full-disk encryption::
+  When an entire storage area is cryptographically secure. Also called at-rest encryption.
 GB::
   Gigabyte. 10^9^ (1,000,000,000) bytes if we're talking about HDDs, or 2^30^ (1,073,741,824) bytes if we're talking about RAM.
 good, fast, and cheap::
