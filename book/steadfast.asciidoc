@@ -2517,8 +2517,10 @@ If you like this book, and you want to learn and do more, do it.
 Ride that wave of inspiration.
 Seek both breadth and depth.
 
-For breadth, check out _Mastering Ubuntu Server - Fourth Edition_ by Jay LaCroix (https://ubuntuserverbook.com).
-That looks like a good reference and overview.
+For breadth, look for a comprehensive book about Linux.
+One of my first purchases when I wanted to just finally "get" Linux was _UNIX: The Complete Reference_, a thousand-page monster covering many, many concepts.
+I studied it in chunks, referred to it often, and never read it cover to cover.
+If I started learning again from scratch today, I'd still have a book like that handy while studying online resources and trying stuff at home.
 
 For depth, immerse yourself in fundamentals.
 Push past abstractions and make progress towards first principles.
