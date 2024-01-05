@@ -175,3 +175,9 @@ This is the final step in the editing process. A proofreader examines the final 
             * <https://mifosforge.jira.com/wiki/spaces/MIFOS/pages/4456742/Commit+Log+Guide>
             * <https://lore.kernel.org/git/7vr4waoics.fsf@alter.siamese.dyndns.org/>
             * <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
+
+## am36 details
+
+One workaround I've found is to add a space at the beginning of each line of source code. This messes up copying source code directly from HTML output (initial spaces are included).
+
+See <https://asciidoctor.zulipchat.com/#narrow/stream/279642-users/topic/epub.20output.3A.20no.20gap.20between.20line.20numbers.20and.20source.20code/near/411430232>
