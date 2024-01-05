@@ -2809,7 +2809,7 @@ Apply these steps to other exercises as desired.
 In the words of Scott McNealy, former CEO of Sun Microsystems:
 
 ____
-Open source is free like a puppy is free
+Open source is free like a puppy is free.
 ____
 
 Everybody loves a puppy, right.
