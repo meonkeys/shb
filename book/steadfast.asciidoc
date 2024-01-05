@@ -1449,7 +1449,7 @@ On the server, run these commands as root, adjusting as necessary.
 For example, these assume you've added two drives and they were assigned device names `/dev/sda` and `/dev/sdb`.
 Use `lsblk` to figure out your device names.
 
-[source,bash,linenums]
+[%linenums,bash]
 ----
 # Create partition tables.
 parted /dev/sdb print
@@ -1790,7 +1790,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 
 You should see something like this for a working Traefik service:
 
-[source,text,linenums]
+[%linenums,text]
 ----
 Attaching to traefik_reverse-proxy_1
 reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Configuration loaded from flags."
@@ -1910,7 +1910,7 @@ Read <<_digital_security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change:
 
-[source,diff,linenums]
+[%linenums,diff]
 ----
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
@@ -2555,7 +2555,7 @@ You can run your own image generators and LLMs (large-language models) at home.
 No GPU is required.
 Here's a `docker-compose.yaml` that'll work with _mario_ to stand up a LocalAI server (https://localai.io).
 
-[source,yaml,linenums]
+[%linenums,yaml]
 ----
 version: '3.6'
 
