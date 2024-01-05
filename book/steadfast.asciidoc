@@ -2640,7 +2640,7 @@ Here are some ideas.
 * Ask for help in forums and chats related to a product/project.
 * If you're confident you've found a bug, file an issue for the product/project.
 * Ask a question in the \#selfhosted chat on Matrix (https://matrix.to/#/#selfhosted:matrix.org). Warning: it's mostly dudes and some of them are jerks.
-* Try your luck in the self-hosted subreddit (https://reddit.com/r/selfhosted/).
+* Try your luck in https://reddit.com/r/selfhosted/ and https://www.reddit.com/r/homelab/.
 * Hire me to help you out.
 
 == Resources
