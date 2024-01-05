@@ -132,6 +132,7 @@ A copy of the AGPL is included in `mario/COPYING`.
 
 === Disclaimer
 
+(((warranty, none offered)))
 I offer no warranty and no guarantee.
 Buying or reading this text is not an agreement for support.
 
@@ -160,6 +161,7 @@ When you do, include references or other supporting material.
 
 === Who am I?
 
+(((FOSS)))
 I'm a dad, tech entrepreneur, and FOSS (free and open source software) enthusiast.
 I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write.
 I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
@@ -184,6 +186,7 @@ Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated 
 
 === Why did I write this book?
 
+(((data sovereignty)))
 I wrote this book to promote *data sovereignty*.
 I use that phrase to mean you have full control of your data.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
@@ -224,6 +227,7 @@ And when that home data appliance _does_ land, maybe you can buy one from me!
 I like the word _steadfast_.
 It reminds me of reliable things and people.
 
+(((data sovereignty)))
 The key to reliable self-hosting is data sovereignty.
 Software will change, services will change, you will change and the world will change.
 You've got to have control of your data if you want it to reliably serve you well through all that change.
@@ -265,6 +269,7 @@ This book is for people who are kind to others, brave in trying new things, curi
 This book is for people who want to know where their data live, and to be able to work all kinds of magic with it.
 It's a "from scratch" or "the hard way" approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
 
+(((FOSS)))
 This book is for people curious about or already biased towards FOSS.
 And--as much as I'll blather on about FOSS--I'm not here to judge.
 I'm here to _grow_, primarily by sharing and learning.
@@ -478,7 +483,7 @@ So many reasons!
 * Avoid vendor lock-in
 ** You'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
 ** When you buy something, _it's yours_. DRM should be illegal.
-** Is there an integration you count on? Sometimes a service stops working with another service. This happens less often with FOSS because anyone can simply fork a project.
+** Is there an integration you count on? Sometimes a service stops working with another service. This happens less often with ((FOSS)) because anyone can simply fork a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
 ** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo metadata
@@ -493,6 +498,7 @@ So many reasons!
 ** apply arbitrary workflows to uploaded files
 ** deploy trustworthy, offline generative AI (artificial intelligence) models
 
+(((Nextcloud)))
 See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas.
 
 ==== Criminal chickens
@@ -519,6 +525,7 @@ I can safely ignore their audit and its erroneous compliance infringement warnin
 image::YT-audit.png[align="center",scaledwidth=80%]
 
 I also no longer need to work with YouTube's API (Application programming interface), including registering an API client and completing periodic audits.
+(((Nextcloud)))
 After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance.
 Turns out the Nextcloud Talk API is easier for posting my chicken coop photos & videos anyway.
 
@@ -567,7 +574,7 @@ Why are you talking like a caveman?
 
 I wrote the book originally in Markdown plain text in my steadfast text editor, Vim.
 I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
-Pandoc is a fantastic FOSS tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
+Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
 In short order I converted the book to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
@@ -598,6 +605,7 @@ Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.
 
 === A note on FOSS
 
+(((FOSS, bias)))
 I prefer FOSS over non-FOSS.
 This can be a polarizing topic.
 Heck, even using the term FOSS instead of the other variants can be polarizing.
@@ -637,6 +645,7 @@ I'd love to know how this goes for you.
 You may also be surprised by how time-consuming and difficult some things are.
 Maybe you'll get held up with hardware (and its power, wires, cooling, failures).
 Maybe networking.
+(((Nextcloud)))
 Maybe "change management" (trying to convince your users to use Nextcloud instead of Dropbox).
 
 Here are some things that surprised me, both positively and negatively.
@@ -689,11 +698,12 @@ Running as root makes containers simpler but less secure.
 Another smile-worthy advancement is free OCR (optical character recognition).
 I keep trying to "go paperless" by scanning in all my paper files.
 After scanning papers I am shouldered with, unsurprisingly, a bunch of PDFs of images.
+(((Nextcloud, search)))
 These can be easily OCR'd and managed with tools like Paperless-ngx (https://docs.paperless-ngx.com/) and Nextcloud Full text search (https://apps.nextcloud.com/apps/fulltextsearch).
 
 ===== Jellyfin
 
-Jellyfin is a personal streaming media server.
+((Jellyfin)) is a personal streaming media server.
 I was stoked to see how Jellyfin showed up as an excellent and complete FOSS alternative to Plex.
 
 ==== Bad surprises
@@ -705,6 +715,7 @@ I've got it working reliably and I still need to keep improving my fundamental k
 
 ===== Nextcloud
 
+(((Nextcloud, surprises)))
 I was frustrated with some bugs in Nextcloud.
 These felt like the most urgent since I rely heavily on it.
 
@@ -716,7 +727,7 @@ See <<_customization>>.
 
 ===== Jitsi
 
-Jitsi is a self-hostable FOSS video call platform.
+((Jitsi)) is a self-hostable FOSS video call platform.
 I gave up trying to get Jitsi running in Docker.
 I recall lots of open ports or port ranges being a problem.
 This one might be easier in a virtual machine.
@@ -861,6 +872,12 @@ For now we'll cover its output from a high level.
 
 === Service stack
 
+(((Docker)))
+(((Jellyfin)))
+(((Nextcloud)))
+(((Ubuntu)))
+(((Wallabag)))
+(((ZFS)))
 A _mario_-built system presents nicely as a simplified stack of colored boxes.
 These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "Stack" is also commonly used to describe interdependent layers of a system.
 
@@ -871,7 +888,7 @@ I am most often working around the top layers e.g. adding or updating a containe
 
 Less often I am updating OS (operating system) packages.
 
-Less often still I might examine versions of a configuration file stored on disk from its ZFS automatic snapshots.
+Less often still I might examine versions of a configuration file stored on disk from its ((ZFS)) automatic snapshots.
 
 Finally, when my server dies, I'll be on that bottom layer fixing or replacing hardware.
 
@@ -890,9 +907,11 @@ Here's a quick recipe for the average self-hoster with limited time, considering
 
 One common sticking point is WAN access.
 That's remote access to the data, through your router/firewall.
+(((Nextcloud)))
 Say: port-forwarding HTTPS traffic through your router/firewall to your Nextcloud server.
 It is risky and convenient.
 
+(((threat model)))
 Let's back up a step and talk about threat modeling.
 Your _threat model_ is how you'll consider threats to your data and how you'll mitigate these threats.
 With your threat model in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
@@ -918,10 +937,10 @@ Really just rolls off the tongue!
 
 ==== Example: WAN attack
 
-Let's run "WAN access" through our threat model.
+Let's run "WAN access" through our ((threat model)).
 
 * *Assets*
-** Personal information stored on out-of-date Nextcloud server.
+** Personal information stored on out-of-date ((Nextcloud)) server.
 * *Actors/Threats/Vectors*
 ** Bot finds URL to Nextcloud server on a publicly archived mailing list. Bot automatically attempts exploit against known vulnerability in Nextcloud server. Exploit succeeds, bot owner gains access to personal information and attempts identity theft.
 * *Mitigations*
@@ -929,6 +948,7 @@ Let's run "WAN access" through our threat model.
 ** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
 ** Close WAN boundary: disallow all inbound WAN traffic.
 
+(((Nextcloud, securing)))
 This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
 
 Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on "security through obscurity".
@@ -967,6 +987,7 @@ If all your users are able to use Wireguard, you can keep ports closed for HTTP/
 
 === Filesystem
 
+(((ZFS)))
 ZFS (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
 Encryption, automatic lightweight snapshots and RAID (redundant array of inexpensive disks) are all included and used by _mario_.
 
@@ -983,6 +1004,7 @@ The container's filesystem--everything besides mounted volumes with persistent d
 
 ==== ZFS trim
 
+(((ZFS, SSD TRIM)))
 Note that if you use ZFS with SSDs, you may notice your system performing poorly.
 On my Ubuntu desktop this happens once a month when the scheduled "trim" cron job starts.
 Trimming is a process of reclaiming formerly used space on SSDs.
@@ -1009,7 +1031,7 @@ Shout out to askubuntu post: _Should I turn on zfs-trim on my pools or should I 
 . _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter (https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/)
 . _ZFS_ Debian wiki page by various authors (https://wiki.debian.org/ZFS)
 
-If you choose to dig deeper with ZFS, start by reading up on fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
+If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
 
 === Operating system
 
@@ -1126,6 +1148,8 @@ We'll use Traefik as our reverse proxy.
 
 ==== Traefik architecture
 
+(((Nextcloud)))
+(((Traefik)))
 Here's a bit about how Traefik works and how we'll use it with Nextcloud and other web-based self-hosted services.
 
 We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
@@ -1146,6 +1170,7 @@ In the _mario_ source code (or the snippets below), look at the `docker-compose.
 
 The routing labels wire together the entrypoint and router with the service under which they are defined.
 That is: `websecure` to `nextcloud-https` to `app`.
+(((Let's Encrypt)))
 We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with Let's Encrypt -- https://letsencrypt.org.
 
 These two snippets of the _mario_ source show how we set up Traefik for Nextcloud.
@@ -1216,6 +1241,7 @@ They will likely share at least some of these attributes:
 * Well-documented, useful, and complete API.
 * Flexible and extensible (easy to customize and extend with plugins and such).
 
+(((Nextcloud)))
 Nextcloud (https://nextcloud.com) has many of these, with some exceptions.
 One exception is their secret build script (https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341).
 This is convenient for them to maintain control of a complex system, but worse for eventual succession.
@@ -1349,6 +1375,7 @@ Dogfooding keeps you honest and helps you empathize with others.
 
 ==== Hard drives
 
+(((ZFS, HDDs and)))
 I use HDDs (hard disk drives) for data storage, mainly as a cost-saving measure.
 The cost of public cloud block storage far exceeds the gigabyte-hour cost of my HDDs.
 I priced out one month of 5TB HDD block storage on AWS at $228.10.
@@ -1424,12 +1451,13 @@ At each prompt, accept the default or write down your choice.
 .. Optional: use full-disk encryption. See <<_full_disk_encryption>>.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`. Let _mario_ install these later.
-. Optional: add two HDDs and format them with ZFS. See <<_zfs>>.
+. Optional: add two HDDs and format them with ((ZFS)). See <<_zfs>>.
 . Set up _mario_ on your admin computer (a separate computer from your server).
 . Run _mario_ on your admin computer to provision your server.
 
 ==== Full-disk encryption
 
+(((encryption, full-disk)))
 Encrypting prevents data recovery by an attacker.
 You'll have to enter a password on boot, though.
 This is inconvenient if you have intermittent power and/or no remote management capability.
@@ -1439,6 +1467,7 @@ If you decide you want full-disk encryption, choose it during the OS install. <<
 
 ==== ZFS
 
+(((ZFS, setup)))
 The OS takes care of itself pretty well.
 For more robust data storage, we can a couple of HDDs and manage them with ZFS.
 
@@ -1502,7 +1531,7 @@ I use short monthly and yearly maintenance checklists. For example, monthly I mi
 And yearly:
 
 * [x] test restore from backup
-* [x] review and improve threat model
+* [x] review and improve ((threat model))
 * [x] open server chassis and vacuum dead spiders
 
 I update my checklists about as often as I use them.
@@ -1581,6 +1610,7 @@ Have *1* remote backup.
 
 _Test_ the backups regularly.
 
+(((ZFS, snapshots)))
 Make consistent point-in-time backups of everything on your server, such that the services running are unaware they are even being backed up.
 For example: create a ZFS snapshot and back _that_ up.
 
@@ -1673,6 +1703,7 @@ A registered domain name is required for HTTPS web traffic encryption.
 
 ==== Public DNS
 
+(((Duck DNS)))
 _mario_ expects to be able to use Duck DNS or Amazon Route 53 for DNS.
 Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
@@ -1780,6 +1811,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
 If that worked, wait a minute or two and visit `\https://traefik.MARIO_DOMAIN_NAME` in a web browser.
+(((Let's Encrypt)))
 It may take a few minutes for Traefik to set up Let's Encrypt HTTP encryption certificates, so don't worry if you get invalid cert warnings at first.
 
 You can tail the logs with:
@@ -1921,6 +1953,7 @@ To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only
 
 === Nextcloud
 
+(((Nextcloud, overview)))
 Nextcloud is primarily a cloud "drive" for file storage and sharing.
 It can do a _lot_ of things.
 Some better than others.
@@ -1933,6 +1966,7 @@ Nextcloud can be self-hosted for free when installed via _mario_.
 
 ==== Base install
 
+(((Nextcloud, install)))
 A basic Nextcloud install is focused on remote file management (storage, organization, and sharing).
 It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional metadata about those files and folders in a database.
 You access it via a web browser and there is a desktop client to sync files locally, very much like Dropbox, Google Drive, and OneDrive.
@@ -1946,6 +1980,7 @@ I'll come back to mobile later in the following sections.
 
 ==== Security
 
+(((Nextcloud, security)))
 A basic Nextcloud install appears to have excellent security.
 The source is in heavy use and is backed by a solid company with a reputation that depends on their commitment to security.
 They make it easy to lock down and vet (it is FOSS after all).
@@ -1955,6 +1990,7 @@ They have a public bounty program and threat model.
 
 ==== Setup
 
+(((Nextcloud, setup)))
 Setting up a new Nextcloud server is well-documented.
 In brief:
 
@@ -2005,6 +2041,7 @@ Some tips:
 
 ===== Release cadence
 
+(((Nextcloud, release cadence)))
 A new stable release is shipped every four months.
 These releases are scheduled, so a major version change might _not_ break backwards compatibility.
 
@@ -2027,6 +2064,7 @@ They've since fixed the root cause (https://github.com/nextcloud/server/pull/335
 
 ==== Customization
 
+(((Nextcloud, apps)))
 Nextcloud can be used as-is or heavily customized.
 
 The simplest and safest way to customize is via their app store, especially if an app is marked "featured".
@@ -2078,6 +2116,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 
 ==== Talk High Performance Backend
 
+(((Nextcloud, Talk)))
 I haven't yet tried Talk with the High Performance Backend because I don't have dozens of users.
 
 * https://nextcloud-talk.readthedocs.io/en/latest/scalability/
@@ -2089,6 +2128,7 @@ The AIO installer includes the strukturag/nextcloud-spreed-signaling implementat
 
 ==== Full text search
 
+(((Nextcloud, search)))
 This app allows you to search through all content of all documents on your server.
 The search syntax is hard to get right.
 It uses a lot of CPU and is memory-hungry too.
@@ -2103,6 +2143,7 @@ The GitHub project repositories are pretty quiet.
 
 ==== Mobile
 
+(((Nextcloud, mobile)))
 Nextcloud works OK as the backend for a mobile device.
 It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
@@ -2113,6 +2154,7 @@ I loved it.
 Easy to set up with Nextcloud and worked quite well.
 Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE.
 
+(((FOSS)))
 Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA. /e/ OS is up to date with the latest upstream Android code and once again provides a good deal more FOSS-friendliness, privacy, and native Nextcloud integration than other Android-based mobile operating systems.
 Works with T-Mobile USA 5G, VoLTE, and Wi-Fi calling. 5 years of support.
 
@@ -2161,6 +2203,7 @@ Nice!
 
 ==== Nextcloud vs. ownCloud
 
+(((ownCloud)))
 Nextcloud started as a fork of ownCloud.
 At first glance it's a bit difficult to tell the difference.
 
@@ -2183,6 +2226,7 @@ Workarounds:
 
 ===== Mobile text editing is hard
 
+(((Nextcloud, mobile)))
 Nextcloud makes it easy to get to your stuff via mobile devices, but editing is a pain.
 
 This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
@@ -2249,6 +2293,7 @@ See https://github.com/nextcloud/viewer/issues/1469.
 
 Workarounds:
 
+(((ZFS, snapshots)))
 * Leverage ZFS snapshots. I use a handy Python script (https://github.com/eborisch/zfs_versions) to visualize differences in file snapshots. If there's a file I _really_ need great version tracking for, I store it in my favorite dVCS (distributed version control system).
 * Manually name versions. Requires at least Nextcloud Hub 4 / Nextcloud version 26.
 * Make multiple copies of files.
@@ -2274,7 +2319,7 @@ Here are two alternative FOSS self-hostable apps supporting drawn signatures:
 
 ===== Release script missing from source
 
-Nextcloud is FOSS, although some release scripts are held back (https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341).
+Nextcloud is ((FOSS)), although some release scripts are held back (https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341).
 They may or may not be required to release those, I don't know.
 I hope they do decide to release them, for the same reasons the rest of Nextcloud is FOSS.
 
@@ -2319,6 +2364,7 @@ Make sure it works with all clients you plan to use it with (e.g. desktop, mobil
 
 ==== AIO installer
 
+(((Nextcloud, install)))
 Among the myriad install methods, there's a relatively new and interesting AIO ("all-in-one") installer (https://nextcloud.com/all-in-one).
 It's free for an instance with less than 100 users.
 
@@ -2328,6 +2374,7 @@ See the AIO readme at https://github.com/nextcloud/all-in-one/ for more informat
 
 === Jellyfin
 
+(((Jellyfin, overview)))
 Jellyfin (https://jellyfin.org) is a personal streaming media server.
 
 _mario_ will set up a basic Jellyfin server.
@@ -2346,6 +2393,7 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 
 ==== Advanced setup
 
+(((Jellyfin, advanced)))
 For hardware transcoding see https://jellyfin.org/docs/general/administration/hardware-acceleration/.
 
 ==== Maintenance notes
@@ -2390,6 +2438,7 @@ Workaround: there are two separate mobile apps that can download and cache media
 
 === Wallabag
 
+(((Wallabag)))
 Wallabag (https://wallabag.org) saves articles for distraction-free offline reading.
 
 ==== Setup
@@ -2488,6 +2537,7 @@ sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -
 
 === Scratch
 
+(((Scratch)))
 Scratch is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
 I really enjoy using it without the "community" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
 These often serve to redirect a user from creating to consuming.
@@ -2529,7 +2579,7 @@ If you want to understand how source code makes a computer do things, take a cla
 Work through this book in a class or small group.
 See <<_discussion_topics>> and <<_exercises>>.
 
-Participate in FOSS communities to learn from and share with others.
+Participate in ((FOSS)) communities to learn from and share with others.
 Pass on what you've learned.
 File a bug.
 Post in a forum.
@@ -2540,6 +2590,7 @@ If you've done something cool, share it!
 
 === Use GPUs
 
+(((GPU)))
 A GPU offers more efficient video transcoding with Jellyfin, reducing server CPU usage and speeding up remote video streaming.
 
 A FOSS voice assistant would benefit from a GPU.
@@ -2550,6 +2601,7 @@ Modern generative AI workloads like large language model chat and image generati
 
 === AI
 
+(((AI)))
 AI is once again the latest hotness.
 
 You can run your own image generators and LLMs (large-language models) at home.
@@ -2599,6 +2651,7 @@ Once you get that running, you can use the Nextcloud AI integration app as a con
 
 === Pi-hole
 
+(((Pi-hole)))
 Running a Pi-hole (https://pi-hole.net) service in your LAN helps block advertisements, trackers, and bad actors using DNS (Domain Name System) block lists.
 
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
@@ -2629,6 +2682,7 @@ For example, DNS over HTTPS in Firefox.
 
 === Single sign-on
 
+(((Single sign-on)))
 Manage users and groups in one place.
 Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism.
 Authentik (https://goauthentik.io) can do this.
@@ -2721,7 +2775,7 @@ Discussion topics for a class or small group.
 .. intermittent network
 .. local-only network
 .. clustered hardware
-. Consider FOSS with respect to human attention and focus. Contrast with non-FOSS.
+. Consider ((FOSS)) with respect to human attention and focus. Contrast with non-FOSS.
 . What approaches in this book may be conceptually dangerous or misleading? Why? How could they be improved?
 
 == Exercises
@@ -2780,6 +2834,7 @@ Apply these steps to other exercises as desired.
 
 ==== Puppies
 
+(((FOSS, drawbacks)))
 In the words of Scott McNealy, former CEO of Sun Microsystems:
 
 ____
@@ -2822,6 +2877,7 @@ If it doesn't and you don't want another hobby, move on.
 
 ==== Quality
 
+(((FOSS, quality)))
 A common issue with FOSS is poor quality, specifically: UI/UX (user interface / user experience).
 We (and our users!) are spoiled by the billions spent on intuitive, beautiful non-FOSS UI/UX.
 
@@ -2839,6 +2895,7 @@ Too much choice is good and challenging problem to have.
 
 === When FOSS is better
 
+(((FOSS, advantages)))
 *In theory*: always, because you can choose FOSS that lines up with your values.
 
 *In practice*: eventually.
@@ -2863,6 +2920,7 @@ Farahny on brain-computer interfaces (https://npr.org/2023/03/14/1163494707/neur
 
 ==== What FOSS gets right
 
+(((FOSS, profit)))
 FOSS is for utility, non-FOSS is for profit.
 
 FOSS exists because it addresses human needs.
@@ -2898,7 +2956,7 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 * Does your phone do stuff you don't want it to?
 ** what annoying issues are you willing to put up with because the phone is so essential to daily life?
 ** bloatware? planned obsolescence?
-** weigh these annoyances against the advantages of FOSS
+** weigh these annoyances against the advantages of ((FOSS))
 * Consider: your phone _must do what makes someone else profit_.
 ** phones are the most valuable sources of your data and behavior for companies
 ** someone once said: "when the product is free, you _are_ the product"
@@ -2954,7 +3012,7 @@ Thanks to my daughter for her fantastic illustrations.
 
 Thanks to all my reviewers.
 
-Thanks to my family and friends for putting up with my FOSS self-hosting experiments.
+Thanks to my family and friends for putting up with my ((FOSS)) self-hosting experiments.
 
 Thanks to Rob and all #underlug for help with hardware, networking, Ansible, and Traefik.
 
@@ -3142,3 +3200,8 @@ I am humbled and grateful for your support.
 Thank you, thank you, thank you.
 
 -Adam
+
+ifdef::backend-pdf[]
+[index]
+== Index
+endif::[]
