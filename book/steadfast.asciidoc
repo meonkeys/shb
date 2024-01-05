@@ -2634,46 +2634,37 @@ Manage users and groups in one place.
 Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism.
 Authentik (https://goauthentik.io) can do this.
 
-=== Self-hosting support
-
-How about when you get stuck.
-Here are some ideas.
-
-* Ask for help in forums and chats related to a product/project.
-* If you're confident you've found a bug, file an issue for the product/project.
-* Ask a question in the \#selfhosted chat on Matrix (https://matrix.to/#/#selfhosted:matrix.org). Warning: it's mostly dudes and some of them are jerks.
-* Try your luck in https://reddit.com/r/selfhosted/ and https://www.reddit.com/r/homelab/.
-* Hire me to help you out.
-
 == Resources
 
 This book will grow and evolve, and you can be a part of it!
 
-* book source code TODO: add link
-* _mario_ source code TODO: add link
-* chat: There's a chat room for readers and fans of this book! Please ping me for an invite (via email? TODO)
-* videos TODO: add link
-* podcasts TODO: add link
-* talks TODO: add link
+Visit https://selfhostbook.com for all supporting material including source code for this book and _mario_.
 
-== Contact info
+=== Source code
 
-FIXME
+https://selfhostbook.com/src
 
-* I prefer these contact methods
-** anonymous feedback
-** web form
-** email
-** mastodon
-** phone?!
+=== Contact info
+
+https://selfhostbook.com/contact
+
+=== Support
+
+Here are a few ideas for when you get stuck.
+
+* Ask for help in forums and chats related to a product/project.
+* If you're confident you've found a bug, file an issue with the product/project.
+* Try your luck in semi-moderated public places. Warning: these are mostly dudes and some of them are jerks.
+** self-hosted subreddit: https://reddit.com/r/selfhosted/
+** homelab subreddit: https://reddit.com/r/homelab/
+** \#selfhosted Matrix chat: https://matrix.to/#/#selfhosted:matrix.org
+* Hire me to help you out.
 
 == Contributions
 
-FIXME - this book is evergreen except versions with ISBNs blah blah blah
-
 === Make this book even more awesome
 
-* feedback welcome! See <<_contact_info>>. When feedbacking me, please:
+* feedback welcome! See <<_resources>>. When feedbacking me, please:
 ** be kind
 ** be patient; allow me time to respond
 ** and (sorry in advance!) I might not respond at all

@@ -58,11 +58,11 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am01 | table formatting broken for PDF outputs in "Prerequisites to build the book" section | RESOLVED | fixed with move to Asciidoctor |
 | am02 | [code snippets in PDF outputs are not wrapped](https://stackoverflow.com/questions/20788464/pandoc-doesnt-text-wrap-code-blocks-when-converting-to-pdf) - e.g. docker logs output for traefik in "start reverse proxy" section | RESOLVED | fixed with move to Asciidoctor |
 | am03 | improve footnote formatting in HTML output (use hover text or group by chapter) | RESOLVED | I don't love the footnotes, I think I'll switch to using parentheticals instead. |
-| am04 | missing contributor info | OPEN | |
-| am05 | missing translator info | OPEN | |
+| am04 | missing contributor info | RESOLVED | dup am10 |
+| am05 | missing translator info | RESOLVED | dup am11 |
 | am07 | no color emoji in PDF outputs | WONTFIX | I'm just going to remove emoji, they don't add to the book. |
-| am08 | incomplete _Resources_ section | OPEN | |
-| am09 | incomplete _Contact info_ section | OPEN | |
+| am08 | incomplete _Resources_ section | RESOLVED | |
+| am09 | incomplete _Contact info_ section | RESOLVED | |
 | am10 | incomplete _Contributions section_ | OPEN | |
 | am11 | incomplete _Translations section_ | OPEN | |
 | am12 | incomplete _Support future awesome books_ section | OPEN | |
