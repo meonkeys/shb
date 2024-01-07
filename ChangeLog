@@ -1,0 +1,35 @@
+2024-01-07  Adam Monsen <haircut@gmail.com>
+
+	v4 - reviewers only
+
+	* Last version for review, maybe! All the inline FIXMEs and TODOs are
+	done. There are still some open issues.
+
+	* I'm working on the index.
+
+2023-11-06  Adam Monsen <haircut@gmail.com>
+
+	v3 - reviewers only
+
+	* This includes quite a few updates. I expanded the style guide and
+	conformed links and other aspects of look & feel. I just need to digest
+	any last review feedback and prepare for printing.
+
+	* I've expanded the review window a bit. If you haven't had a chance to
+	review and still want to, go for it! Anything helps.
+
+2023-11-18  Adam Monsen <haircut@gmail.com>
+
+	v2 - reviewers only
+
+	* Many copy edits and revisions
+
+	* Reordered some sections
+
+	* Ported build from Pandoc to Asciidoctor - more and better-looking outputs
+
+2023-11-10  Adam Monsen <haircut@gmail.com>
+
+	v1 - first release, reviewers only
+
+	* embed all images, etc. in HTML output

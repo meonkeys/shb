@@ -63,7 +63,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am41 | run epubcheck | OPEN | |
 | am43 | port to future home (re-do this Readme) | OPEN | |
 | am44 | re-test _mario_ start to finish | OPEN | |
-| am45 | add CHANGELOG | OPEN | |
+| am45 | add CHANGELOG | RESOLVED | |
 
 ## How to build the book
 
