@@ -316,7 +316,7 @@ You can and should be aware of them.
 If you feel I've completely omitted proper detail about something critically relevant to my method of self-hosting, please let me know.
 
 This book is not for the heavily-resourced already-done-thats.
-If you have $50k and unlimited time to spend on your concrete bunker homelab... well then, may I have a tour.
+If you have $50k and unlimited time to spend on your concrete bunker homelab... well then, may I have a tour?
 I would LOVE to see that.
 If you are more curious than certain you may still enjoy learning from my choices and I'd appreciate your feedback.
 
