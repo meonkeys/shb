@@ -1144,6 +1144,9 @@ See: https://martinfowler.com/bliki/PhoenixServer.html.
 === Reverse Proxy
 
 A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules.
+
+Say you've purchased the domain `example.com` and want to host Nextcloud at `cloud.example.com` and Jellyfin at `media.example.com`. In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
+
 We'll use Traefik as our reverse proxy.
 
 ==== Traefik architecture
@@ -1152,7 +1155,7 @@ We'll use Traefik as our reverse proxy.
 (((Traefik)))
 Here's a bit about how Traefik works and how we'll use it with Nextcloud and other web-based self-hosted services.
 
-We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
+We want HTTPS requests to port 443 bound for `cloud.example.com` to reach our Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the _mario_ sources.
 
 (The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik/.
