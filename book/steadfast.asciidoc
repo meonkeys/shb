@@ -1174,7 +1174,9 @@ In the _mario_ source code (or the snippets below), look at the `docker-compose.
 The routing labels wire together the entrypoint and router with the service under which they are defined.
 That is: `websecure` to `nextcloud-https` to `app`.
 (((Let's Encrypt)))
-We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with Let's Encrypt -- https://letsencrypt.org.
+We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with Let's Encrypt (https://letsencrypt.org).
+
+NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
 
 These two snippets of the _mario_ source show how we set up Traefik for Nextcloud.
 
