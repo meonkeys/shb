@@ -2503,15 +2503,6 @@ Feature request.
 
 I want to be able to share content with other Wallabag users, within Wallabag (https://github.com/wallabag/wallabag/issues/679).
 
-=== Photoprism
-
-Photoprism is a fast and feature-rich photo and video server.
-It includes many useful tools to help you find the photo you are looking for including object and face recognition, mapping, albums, "moments" (auto-albums), and date-based searching.
-
-There are a few features currently only available in the paid/proprietary edition and the Docker image uses a proprietary license.
-
-I no longer use Photoprism since I started using the fantastic _Memories_ Nextcloud app for photo management.
-
 === Watchtower
 
 Watchtower is handy for keeping your Docker containers up to date.
