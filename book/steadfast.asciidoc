@@ -839,7 +839,7 @@ Your users already have their data somewhere else.
 Consider how you'll help them migrate their data onto the server.
 
 The key to this is excellent communication.
-Include this in your plan and seek buy-in.
+Include this in your plan and seek buy-in since migration cost is a reality for every transition.
 
 To learn more about how to do this well, study _change management_.
 
@@ -1254,10 +1254,9 @@ This is convenient for them to maintain control of a complex system, but worse f
 Nextcloud is a fork of ownCloud, after all.
 We should expect another fork and be prepared for it.
 
-The sprawling complexity is also risky. "Nextcloud" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
-Forking would be costly and time-consuming.
-Even switching forks may be difficult for a sysadmin.
-This is a form of vendor lock-in.
+The sprawling complexity is also risky.
+"Nextcloud" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
+Forking would be costly and time-consuming, and even switching forks might be complex.
 
 ===== Bad for self-hosting
 
@@ -1273,6 +1272,7 @@ Here are some reasons you may want to reject a service:
 * Difficult to fork.
 * Only geared towards enterprise: self-hosting instructions are complex or missing entirely.
 * Constant annoying upsells/nags.
+* Intentional vendor lock-in: monopolistic tendencies or use of closed/proprietary standards/services.
 * Open core (https://en.wikipedia.org/wiki/Open-core_model).
 
 Habitica (https://habitica.com) demonstrates several of these.
