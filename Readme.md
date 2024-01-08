@@ -66,6 +66,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am46 | make _Services_ map 1:1 with _mario_: add dyndns, mail, Traefik | OPEN | |
 | am47 | exclude/explain `MARIO_DOMAIN_NAME` in book text | OPEN | |
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
+| am49 | improve FOSS "profit" argument | OPEN | |
 
 ## How to build the book
 
