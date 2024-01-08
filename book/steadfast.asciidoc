@@ -1240,6 +1240,7 @@ They will likely share at least some of these attributes:
 * Uses a FOSS software license.
 * Transparent about owners and sponsors.
 * Public roadmap, issue tracking, continuous integration, working demo, build scripts, bug/security bounties.
+* Issue tracker already includes an issue you're aware of.
 * Well-organized, elegant code.
 * Useful and up-to-date documentation.
 * Mentions and compares the service with other similar services.
