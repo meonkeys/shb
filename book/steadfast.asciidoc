@@ -1365,6 +1365,7 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 
 ==== Admin computer
 
+(((provision)))
 It's helpful to have a separate computer from your server to make changes.
 I usually run _mario_ on a laptop.
 This provisions my remote server, making changes as necessary to align it with the Ansible configuration files.
@@ -1447,6 +1448,7 @@ At the very least, restrict physical access.
 
 === Deploy
 
+(((provision)))
 Here's an abbreviated server setup guide.
 It's a good idea to think ahead to disaster recovery: take notes and visualize yourself repeating the process precisely.
 At each prompt, accept the default or write down your choice.
@@ -1663,8 +1665,9 @@ _mario_ configuration files are declarative.
 You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state. _mario_ runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
+(((provision)))
 After getting _mario_ up and running successfully once, run it again.
-Provisioning with _mario_ is idempotent.
+Provisioning with _mario_ is ((idempotent)).
 The system should not change in any meaningful way after the desired state is reached.
 Once `provision.sh` completes successfully, it may be run again without making further changes.
 
@@ -1778,6 +1781,7 @@ Host mario_server
   User your-username
 ....
 
+(((provision)))
 Test it by running `provision.sh` again.
 
 IMPORTANT: _mario_ not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
@@ -2493,10 +2497,10 @@ The `exec` command says we want to run something in the `app` service container.
 That something is `/var/www/wallabag/bin/console`, a utility shipped with Wallabag.
 We tell `console` to run necessary database migrations.
 
-This is idempotent.
-After the first run, subsequent runs should output: "Application Migrations" - "No migrations to execute."
+This is ((idempotent)), as database migrations should be.
+After the first run, subsequent runs output: "Application Migrations" - "No migrations to execute."
 
-It's unclear why this isn't automated.
+It's unclear why actually running the migration is not automated.
 Perhaps it is only necessary in special cases--I've only had to do it twice in a couple years.
 
 ===== Share with other users
