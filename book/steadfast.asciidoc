@@ -1683,7 +1683,7 @@ _mario_ prepares the server filesystem as follows:
 * Docker configuration files are stored in directories under `/root/ops`.
 * Data for services are stored in directories under `/data`.
 
-=== Detailed instructions
+=== Usage
 
 Go ahead and run `provision.sh`.
 On your admin computer:
