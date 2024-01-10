@@ -2783,12 +2783,14 @@ Discussion topics for a class or small group.
 
 Exercises for individual practice and study groups.
 
-. Stand up a service besides those included with _mario_.
-. Create and stand up a custom service, say, one that reveals if it is time to reboot the server.
+. Stand up a service besides those included with _mario_ using an existing image.
+.. For example, a dashboard: https://awesome-selfhosted.net/tags/personal-dashboards.html.
+. Build a custom image.
+. Run a container using your custom image.
+. Create a service (using your container) to know if it is time to reboot your server.
 .. Hint: check if `/host/var/run/reboot-required` exists.
 . Stand up a second Nextcloud service for experiments.
 .. Use it to test out the latest release or a custom app.
-. Stand up a dashboard for your personal cloud (https://awesome-selfhosted.net/tags/personal-dashboards.html).
 . Adapt this guide to a Linux distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
 . Contribute to _mario_.
@@ -2806,13 +2808,15 @@ Exercises for individual practice and study groups.
 . Set up Fail2Ban (https://fail2ban.org). Feed it logs from various services.
 . Set up Suricata (https://suricata.io) network analysis and threat detection.
 . Separate out code for ASCII to SVG diagram conversion from Markdeep. Incorporate it into this book's build system, perhaps as a pandoc filter.
-. Adapt _mario_ to use podman (https://podman.io).
+. Try a different container runtime, such as podman (https://podman.io).
+. Adapt _mario_ to use podman.
 . Adapt _mario_ to use Kubernetes (https://kubernetes.io).
 . Modify _mario_ to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
 . Improve your backup security: allow restic/borg/etc. read-only access during a backup.
 . Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
 . Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw). Work around this and share your solution with others.
+. Roll your own Linux distro.
 . Build, configure and deploy an OPNsense firewall (https://opnsense.org).
 . Set up your own headscale VPN for remote LAN access (https://headscale.net).
 . Leverage existing ownership and permission OS security measures.
@@ -3104,7 +3108,7 @@ HVAC::
 idempotent::
   An operation which enacts changes only until an end state is reached. Repeating the operation has no effect once the end state is reached. For example, updating an OS. After the OS is up to date, updating again will cause no changes to the list of installed packages (assuming no new updates become available while updating).
 image::
-  From the Docker documentation (https://docs.docker.com/get-started/overview/#images): "An _image_ is a read-only template with instructions for creating a Docker container." Practically, it's a file with code and dependencies necessary to run a service. A running instance of an image is called a container.
+  A filesystem with code and dependencies necessary to run a container.
 immutable::
   Doesn't change. For example, a particular Docker image. A container instantiated from that image can be modified, but the image cannot; a new image must be built.
 IPMI::
@@ -3157,6 +3161,8 @@ runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 server::
   A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse.
+service::
+  A long-running process used by other local and remote processes to do something useful.
 SOHO::
   Small office / home office.
 source control::
