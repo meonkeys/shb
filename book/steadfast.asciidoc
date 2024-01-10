@@ -3198,6 +3198,14 @@ ZFS::
 
 == End
 
+Ursula K. Le Guin declared:
+
+____
+A book is just a box of words until a reader opens it.
+____
+
+And it was so.
+
 Dear Reader,
 
 *This book exists because you exist.*
