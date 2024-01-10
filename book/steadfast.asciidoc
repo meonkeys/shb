@@ -2786,6 +2786,7 @@ Exercises for individual practice and study groups.
 . Stand up a service besides those included with _mario_ using an existing image.
 .. For example, a dashboard: https://awesome-selfhosted.net/tags/personal-dashboards.html.
 . Build a custom image.
+.. Hint: use `docker build` or Buildah (https://buildah.io).
 . Run a container using your custom image.
 . Create a service (using your container) to know if it is time to reboot your server.
 .. Hint: check if `/host/var/run/reboot-required` exists.
