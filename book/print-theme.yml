@@ -1,8 +1,13 @@
+# smart quotes (and many other special characters) require
+# "-with-font-fallbacks" here
 extends: default-for-print-with-font-fallbacks
-page:
-  size: A5
-    #base:
-    #  font-size: $base-font-size - 2
+
+# if I change page size, font appear huge
+#page:
+#  size: A5
+#base:
+#  font-size: 0.5em
+
 codespan:
   font-color: #c70d0d
 link:

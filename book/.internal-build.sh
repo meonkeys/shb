@@ -4,6 +4,9 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+#bundle exec asciidoctor-pdf --version
+#exit 1
+
 if [[ "$BUILD_TYPE" == "full" ]]; then
     bundle exec rake
     cp --target-directory=/outputs -- *.epub *.fb2.zip *.html *.mobi *.pdf

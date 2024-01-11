@@ -7,7 +7,7 @@ Adam Monsen
 :pagenums:
 :sectnums:
 :imagesdir: img
-//:front-cover-image: image:cover.png[]
+:front-cover-image: image:cover.png[]
 :icons: font
 :xrefstyle: full
 :hide-uri-scheme:
@@ -16,7 +16,25 @@ Adam Monsen
 :!chapter-signifier:
 :!webfonts:
 :pdf-theme: print-theme.yml
+:media: prepress
 
+//[colophon]
+//== Colophon
+//
+//The Asciidoctor Press, Ceres and Denver.
+//
+//(C) 2020 by The Asciidoctor Press
+//
+//Published in the Milky Way Galaxy.
+//
+//This book is designed by Dagger Flush, Denver, Colorado.
+//The types are handset Volcano Dust and Papaya, designed by Leeloo.
+//Leeloo created the typefaces to soften the bluntness of documentation.
+//
+//Built with Asciidoctor on Fedora 33.
+//
+//Printing and binding by Ceres Lithographing, Inc., Ceres, Milky Way.
+//
 == Introduction
 
 === Thesis
