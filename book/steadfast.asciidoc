@@ -7,7 +7,7 @@ Adam Monsen
 :pagenums:
 :sectnums:
 :imagesdir: img
-:front-cover-image: image:cover.png[]
+//:front-cover-image: image:cover.png[]
 :icons: font
 :xrefstyle: full
 :hide-uri-scheme:
@@ -15,6 +15,7 @@ Adam Monsen
 :pygments-linenums-mode: inline
 :!chapter-signifier:
 :!webfonts:
+:pdf-theme: print-theme.yml
 
 == Introduction
 

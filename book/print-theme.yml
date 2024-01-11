@@ -1,0 +1,10 @@
+extends: default-for-print-with-font-fallbacks
+page:
+  size: A5
+    #base:
+    #  font-size: $base-font-size - 2
+codespan:
+  font-color: #c70d0d
+link:
+  font-family: M+ 1mn
+  font-color: #0b04d5
