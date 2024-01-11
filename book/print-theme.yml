@@ -11,6 +11,7 @@ page:
 
 codespan:
   font-color: #c70d0d
+
+# This styles both hyperlinks and internal links (e.g. cross-references)
 link:
-  font-family: M+ 1mn
   font-color: #0b04d5
