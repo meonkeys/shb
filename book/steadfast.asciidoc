@@ -340,7 +340,7 @@ Look elsewhere for:
 
 * high availability
 * enterprise security
-* `N + 1` redundancy
+* N + 1 redundancy
 * managing many machines
 * clustering
 * single sign-on
@@ -615,7 +615,7 @@ I wrote the book originally in Markdown plain text in my steadfast text editor, 
 I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
 Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
-In short order I converted the book to Asciidoctor (https://asciidoctor.org).
+In short order I converted the book to Asciidoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code -- you're welcome to hack away at it.
@@ -935,11 +935,13 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 
 Here's a quick recipe for the average self-hoster with limited time, considering two classes of data:
 
-. sensitive data: passwords, credit card numbers, government ID number
-* store _offline only_ if possible
+. sensitive data
+* includes passwords, credit card numbers, government ID number
+* store offline only if possible
 * if ever saved on a computer, store encrypted
-* easy fix: *store in a password manager*
-. everything else: notes, photos, documents, personal information
+* easy fix: store in a password manager
+. everything else
+* includes notes, photos, documents, personal information
 * store on encrypted media, including backups
 * access only with up-to-date software you trust
 * disallow WAN access to these data
@@ -1003,7 +1005,7 @@ If all your users are able to use Wireguard, you can keep ports closed for HTTP/
 ==== More tips
 
 * Maintain useful encrypted backups. Perform test restores to know they are useful. See <<_backups>>.
-* Use `root` at little as possible.
+* Avoid running commands as the `root` user.
 * Use multi-factor authentication.
 * Use firewalls.
 * Use strong passwords.
@@ -1183,6 +1185,8 @@ See: https://martinfowler.com/bliki/PhoenixServer.html.
 === Reverse Proxy
 
 A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules.
+
+// FIXME: do I want to monospace these domain names?
 
 Say you've purchased the domain `example.com` and want to host Nextcloud at `cloud.example.com` and Jellyfin at `media.example.com`. In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
 
@@ -1992,7 +1996,7 @@ Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change:
 
-[%linenums,diff]
+[%linenums%unbreakable,diff]
 ----
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
@@ -2007,7 +2011,7 @@ Nextcloud is primarily a cloud “drive” for file storage and sharing.
 
 Nextcloud is daunting to self-host.
 With _mario_, it is of course easy and fun.
-It serves as a solid foothold for de-Googling.
+Done well, it serves as a solid foothold for de-Googling.
 
 Nextcloud can be self-hosted for free when installed via _mario_.
 
@@ -2084,7 +2088,7 @@ Some tips:
 ** `occ db:add-missing-indices`
 ** `occ dav:sync-system-addressbook`
 * tail logs
-** lnav is helpful for this: https://lnav.org
+** `lnav` is helpful for this: https://lnav.org
 
 ===== Release cadence
 
@@ -2455,13 +2459,17 @@ I'd like the ability to share them.
 Feature request.
 
 I often want to share, hear, or re-watch a specific part of some media.
-I think it would be just so cool to be able to https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments[create clips] without actually creating new media files.
+I think it would be just so cool to be able to create clips without actually creating new media files.
+
+* https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments
 
 ===== Offline mobile media
 
 Feature request.
 
-I want the mobile app to auto-cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
+I want the mobile app to auto-cache media and allow playing while offline.
+
+* https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile
 
 Workaround: there are two separate mobile apps that can download and cache media for offline playing.
 
@@ -2504,7 +2512,7 @@ See https://github.com/wallabag/wallabag/issues/6649.
 There may be other duplicate or related bug reports for this same thing, that's just one example.
 Luckily, the workaround is easy: https://github.com/wallabag/docker#upgrading.
 
-Here's that fix applied to a _mario_ system:
+Apply that fix to a _mario_ system with:
 
 [source,bash]
 ----
@@ -2731,7 +2739,7 @@ Here are a few ideas for when you get stuck.
 * Try your luck in semi-moderated public places. Warning: these are mostly dudes and some of them are jerks.
 ** self-hosted subreddit: https://reddit.com/r/selfhosted/
 ** homelab subreddit: https://reddit.com/r/homelab/
-** \#selfhosted Matrix chat: https://matrix.to/#/#selfhosted:matrix.org
+** \#selfhosted chat: https://matrix.to/#/#selfhosted:matrix.org
 * Hire me to help you out.
 
 == Contributions
