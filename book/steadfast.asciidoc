@@ -2718,7 +2718,7 @@ Manage users and groups in one place.
 Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism.
 Authentik (https://goauthentik.io) can do this.
 
-== More Resources
+== More resources
 
 Visit https://selfhostbook.com for all supporting material including source code for this book and _mario_.
 
