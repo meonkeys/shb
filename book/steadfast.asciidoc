@@ -2328,23 +2328,7 @@ nextcloud forum: Text: document current vs. saved version::
 Related desktop client bug: Nextcloud-Client creating conflicts when it should not (https://github.com/nextcloud/desktop/issues/2467).
 Conflicts seem to appear in cases where there shouldn't be any.
 Workarounds: wait 10 seconds or so between saves until the desktop client syncs and returns to idle (roll your eyes while you wait).
-Also, check out the Temporary files lock (https://apps.nextcloud.com/apps/files_lock) app for semi-automated advisory locking (e.g. quickly communicate "gimme a minute, I'm editing that Markdown text file").
-
-===== Can't see file versions
-
-Feature request.
-
-The Files app has a "Versions" tab in the sidebar where you can see a list of old versions of a file and download one or revert to one.
-It would be fantastic to be able to easily visualize differences between current and previous versions right in the web UI.
-
-See https://github.com/nextcloud/viewer/issues/1469.
-
-Workarounds:
-
-(((ZFS, snapshots)))
-* Leverage ZFS snapshots. I use a handy Python script (https://github.com/eborisch/zfs_versions) to visualize differences in file snapshots. If there's a file I _really_ need great version tracking for, I store it in my favorite dVCS (distributed version control system).
-* Manually name versions. Requires at least Nextcloud Hub 4 / Nextcloud version 26.
-* Make multiple copies of files.
+Also, check out the Temporary files lock (https://apps.nextcloud.com/apps/files_lock) app for semi-automated advisory locking (e.g. quickly communicate “gimme a minute, I'm editing that Markdown text file”).
 
 ===== Draw signature in forms
 
