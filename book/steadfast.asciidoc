@@ -2561,7 +2561,9 @@ For example:
 
 [source,bash]
 ----
-sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -R
+sudo docker-compose \
+  --file /root/ops/watchtower/docker-compose.yml \
+  logs | less -R
 ----
 
 === Scratch
