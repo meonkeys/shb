@@ -2,7 +2,7 @@ FROM ruby:3.2
 
 RUN apt-get update \
   && apt-get --assume-yes --no-install-recommends install \
-  bsdextrautils \
+  epubcheck \
   && rm -rf /var/lib/apt/lists/*
 
 ARG USER
