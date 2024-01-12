@@ -235,8 +235,8 @@ It works fine if you run your server in the cloud too, it just costs a lot more 
 
 Also: learning is fun.
 I learn when I write.
-While learning how my phone works, it struck me how important it is to understand _how "the cloud" works_, since the modern phone experience relies on services and data in public clouds.
-In trying to make my phone "my own" (do what I want to help me live my best life), I was inspired to host my own data in my own cloud.
+While learning how my phone works, it struck me how important it is to understand _how “the cloud” works_, since the modern phone experience relies on services and data in public clouds.
+In trying to make my phone “my own” (do what I want to help me live my best life), I was inspired to host my own data in my own cloud.
 
 Also: everyone I know with at least a pinky toe in the tech industry self-hosts _something_.
 There's always another self-hosted service to try out, learn about, improve, and share.
@@ -272,7 +272,7 @@ Software will change, services will change, you will change and the world will c
 You've got to have control of your data if you want it to reliably serve you well through all that change.
 
 It does make a difference to have your own copy.
-You might lose access to something you "bought" or it might even change right under your nose.
+You might lose access to something you “bought” or it might even change right under your nose.
 
 * https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164
 * https://defectivebydesign.org/what_is_drm_digital_restrictions_management
@@ -284,7 +284,7 @@ You'll get reliability and flexibility within a reasonable budget.
 
 Self-hosting means providing computing services by and for individuals, families, and hobbyists in SOHO (small office / home office) environments.
 
-"Small-community-hosting" is perhaps a more accurate and appropriate term here.
+“Small-community-hosting” is perhaps a more accurate and appropriate term here.
 You're reading the right book to host services for a small community.
 
 ==== Rapid-Rise Personal Cloud
@@ -306,7 +306,7 @@ I'll also admit my inner child enjoys multiple meanings of the phrase _Personal 
 This book is for people who are kind to others, brave in trying new things, curious about the possibilities of self-hosting, and either uncertain how to do so or eager to improve their existing homelab (self-hosting space).
 
 This book is for people who want to know where their data live, and to be able to work all kinds of magic with it.
-It's a "from scratch" or "the hard way" approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
+It's a “from scratch” or “the hard way” approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
 
 (((FOSS)))
 This book is for people curious about or already biased towards FOSS.
@@ -322,8 +322,8 @@ I hope I can save you some precious time.
 
 This book is for people supporting a small group, like a family or a handful of friends.
 
-Similar to "small-community-hosting", _Small Group Cloud_ would be more accurate title words than _Personal Cloud_.
-Think of "small group" as the optimal user population size that will benefit from our services.
+Similar to “small-community-hosting”, _Small Group Cloud_ would be more accurate title words than _Personal Cloud_.
+Think of “small group” as the optimal user population size that will benefit from our services.
 I wouldn't bother doing all this just for yourself.
 
 This book is for people into (or hoping to get into) self-hosting.
@@ -399,7 +399,7 @@ One should ask:
 * Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
 * Will it help me figure out why I made a change to one of my services two years ago?
 * Does it phone home, using telemetry or my data in a way I don't approve?
-* Does it hold back "enterprise" features I need, even for my scaled-down use case? Is it annoying about this, reminding me often?
+* Does it hold back “enterprise” features I need, even for my scaled-down use case? Is it annoying about this, reminding me often?
 * If I want paid support, is it available?
 * Is it popular? Has it been around a while, and do I expect it to endure?
 
@@ -433,7 +433,7 @@ Here are more related and interesting self-hosting solutions I learned about too
 
 ==== Command line
 
-The "command line" mention above is worth a beat, to understand my personal bias.
+The “command line” mention above is worth a beat, to understand my personal bias.
 It's more than a relic from the old days, it's also a source of power and joy.
 
 // see https://docs.asciidoctor.org/asciidoc/latest/macros/complex-urls/
@@ -517,7 +517,7 @@ So many reasons!
 ** when you own your hardware outright, you have zero per-usage fees (compute, data transfer)
 * Speed / Save time
 ** a nearby server can have much better response times, assuming reasonable hardware and well-behaved services
-** nearby data ("data locality") means you don't need round-trips to someone else's data center to run experiments
+** nearby data (“data locality”) means you don't need round-trips to someone else's data center to run experiments
 ** shared storage allows you to front your data with multiple services, choosing read-write/read-only access sensibly
 * Avoid vendor lock-in
 ** You'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
@@ -528,7 +528,7 @@ So many reasons!
 ** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo metadata
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
-** when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you "own", every time you rewind, fast-forward, pause... but do they need to? why?
+** when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you “own”, every time you rewind, fast-forward, pause... but do they need to? why?
 * It's not as hard as you think to self-host
 ** sometimes it is harder
 ** sometimes it is easier
@@ -545,7 +545,7 @@ See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas
 Here's a real example of a positive outcome I realized from self-hosting.
 
 My family has a homemade chicken safety system (https://github.com/meonkeys/rpi-chx-code) and the videos are important to me.
-I used to just plop them on YouTube because hey, it's free and it "just works", right?
+I used to just plop them on YouTube because hey, it's free and it “just works”, right?
 
 Except when it doesn't.
 YouTube sometimes felt my chickens were being spammy, deceptive, and/or scammy.
@@ -585,7 +585,7 @@ I used Python, and any language would work.
 The key was being able to access the data directly and quickly.
 
 This is just one (likely outdated) example.
-By the time you read this you may be able to query your photos with a sentence like: "show me all photos taken within 10 miles of Mexico City", and it'll just work.
+By the time you read this you may be able to query your photos with a sentence like: “show me all photos taken within 10 miles of Mexico City”, and it'll just work.
 
 Then you can move on to saving the world.
 Just make sure you've got your data!
@@ -685,7 +685,7 @@ You may also be surprised by how time-consuming and difficult some things are.
 Maybe you'll get held up with hardware (and its power, wires, cooling, failures).
 Maybe networking.
 (((Nextcloud)))
-Maybe "change management" (trying to convince your users to use Nextcloud instead of Dropbox).
+Maybe “change management” (trying to convince your users to use Nextcloud instead of Dropbox).
 
 Here are some things that surprised me, both positively and negatively.
 
@@ -735,7 +735,7 @@ Running as root makes containers simpler but less secure.
 ===== OCR
 
 Another smile-worthy advancement is free OCR (optical character recognition).
-I keep trying to "go paperless" by scanning in all my paper files.
+I keep trying to “go paperless” by scanning in all my paper files.
 After scanning papers I am shouldered with, unsurprisingly, a bunch of PDFs of images.
 (((Nextcloud, search)))
 These can be easily OCR'd and managed with tools like Paperless-ngx (https://docs.paperless-ngx.com/) and Nextcloud Full text search (https://apps.nextcloud.com/apps/fulltextsearch).
@@ -869,7 +869,7 @@ For example:
 ** Start services.
 * Jun 9: Review result against original goals.
 
-Invite others to participate, starting at the "brainstorm" step.
+Invite others to participate, starting at the beginning when you brainstorm and plan.
 This is a great time to include other people who may help care for the server.
 
 === Transition
@@ -890,8 +890,8 @@ Make sure the cloud works well for them.
 Solicit their input often and take it seriously.
 Carefully tease out _wants_ vs. _needs_.
 
-Translate the word "users" as necessary.
-Perhaps: "those most dear to you, those you care about most above all others, those who give you meaning and purpose."
+Translate the word “users” as necessary.
+Perhaps: “those most dear to you, those you care about most above all others, those who give you meaning and purpose.”
 
 Yeah, that's way over the top.
 You get the point: we must care about their experience or their experience will be poor.
@@ -918,7 +918,7 @@ For now we'll cover its output from a high level.
 (((Wallabag)))
 (((ZFS)))
 A _mario_-built system presents nicely as a simplified stack of colored boxes.
-These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "Stack" is also commonly used to describe interdependent layers of a system.
+These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. “Stack” is also commonly used to describe interdependent layers of a system.
 
 .Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.png[align="center",scaledwidth=80%]
@@ -958,7 +958,7 @@ With your threat model in mind, you'll be able to gain confidence in, for exampl
 WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey.
 This guide is not sufficient for your threat model.
 
-Everyone else: Let's build a simple example threat model for the "everything else" category above.
+Everyone else: Let's build a simple example threat model for the “everything else” category above.
 
 ==== Threat model
 
@@ -976,7 +976,7 @@ Really just rolls off the tongue!
 
 ==== Example: WAN attack
 
-Let's run "WAN access" through our ((threat model)).
+Let's run “WAN access” through our ((threat model)).
 
 * *Assets*
 ** Personal information stored on out-of-date ((Nextcloud)) server.
@@ -990,13 +990,13 @@ Let's run "WAN access" through our ((threat model)).
 (((Nextcloud, security)))
 This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
 
-Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on "security through obscurity".
+Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on “security through obscurity”.
 
-Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "defense in depth". It's a great idea.
+Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called “defense in depth”. It's a great idea.
 
 ==== open WAN access alternative: Wireguard
 
-A few years ago, VPN technology got a major upgrade with Wireguard. From a user perspective there's no "logging in" as with older VPNs. Wireguard is fast and easy and secure. When you're away from home, you can simply flip it on to teleport back into your LAN.
+A few years ago, VPN technology got a major upgrade with Wireguard. From a user perspective there's no “logging in” as with older VPNs. Wireguard is fast and easy and secure. When you're away from home, you can simply flip it on to teleport back into your LAN.
 
 If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys. Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your attack surface.
 
@@ -1044,8 +1044,8 @@ The container's filesystem--everything besides mounted volumes with persistent d
 ==== ZFS trim
 
 (((ZFS, SSD TRIM)))
-Note that if you use ZFS with SSDs, you may notice your system performing poorly.
-On my Ubuntu desktop this happens once a month when the scheduled "trim" cron job starts.
+Note that if you use ZFS with SSDs, you may sometimes notice your system performing poorly.
+On my Ubuntu desktop this happens once a month when the scheduled “trim” cron job starts.
 Trimming is a process of reclaiming formerly used space on SSDs.
 This is not an issue with HDDs.
 
@@ -1066,7 +1066,7 @@ Shout out to askubuntu post: _Should I turn on zfs-trim on my pools or should I 
 
 ==== Further reading
 
-. _Bitrot and atomic COWs: Inside "next-gen" filesystems_ by Jim Salter (https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/)
+. _Bitrot and atomic COWs: Inside “next-gen” filesystems_ by Jim Salter (https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/)
 . _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter (https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/)
 . _ZFS_ Debian wiki page by various authors (https://wiki.debian.org/ZFS)
 
@@ -1101,7 +1101,7 @@ Read-write operations:
 * upgrade OS packages: `apt full-upgrade`
 * upgrade services: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<_watchtower>>)
 
-Start a "monthly maintenance" list and include these read-write operations.
+Start a “monthly maintenance” list and include these read-write operations.
 Always use `sudo` instead of logging in as the `root` user.
 This ensures every command is captured in `/var/log/auth.log` along with when it was executed, and by whom.
 
@@ -1114,7 +1114,7 @@ I choose to do some OS upgrades manually because:
 
 These reasons are similar to the reasons I install the OS itself by hand.
 
-My OS is more a pet than cattle (see "cattle vs. pets" in <<_glossary>>), although it is relatively easy to rebuild since I've limited and documented my customizations.
+My OS is more a pet than cattle (see “cattle vs. pets” in <<_glossary>>), although it is relatively easy to rebuild since I've limited and documented my customizations.
 
 === Container runtime
 
@@ -1294,7 +1294,7 @@ Nextcloud is a fork of ownCloud, after all.
 We should expect another fork and be prepared for it.
 
 The sprawling complexity is also risky.
-"Nextcloud" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
+“Nextcloud” is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
 Forking would be costly and time-consuming, and even switching forks might be complex.
 
 ===== Bad for self-hosting
@@ -1305,7 +1305,7 @@ Here are some reasons you may want to reject a service:
 * Unpopular, inactive, or poorly maintained.
 ** Few maintainers / contributors.
 ** Maintainers are inattentive to contributors.
-* Includes telemetry ("phones home", collects "statistics" or "usage data"), especially without your consent and/or enabled by default.
+* Includes telemetry (“phones home”, collects “statistics” or “usage data”), especially without your consent and/or enabled by default.
 * Confusing or opaque governance, roadmap, licensing, source control, contribution intake, issue tracking.
 * Sprawling complexity.
 * Difficult to fork.
@@ -1338,7 +1338,7 @@ I go into detail about some of these services later in the book.
 |wallabag |article saver |Docker |1 |1
 |===
 
-"Cores" represents relative peak compute requirements.
+“Cores” represents relative peak compute requirements.
 RAM: peak memory.
 These were fairly wild guesses, based as much as possible on published documentation.
 The guesses turned out to be accurate enough.
@@ -1466,7 +1466,7 @@ Keep it up to date and maintain a strict firewall with only the necessary ports 
 CAUTION: Port-forwarding allows inbound connections through your WAN boundary to your server.
 Read <<Digital security>> before forwarding any ports.
 
-Here's a simple diagram I created using https://asciiflow.com to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram".
+Here's a simple diagram I created using https://asciiflow.com to visualize my server's location and network connection, a “WAN into LAN traffic flow diagram”.
 The router provides electricity to the mini switch using PoE (power over ethernet).
 There server has two NICs (network interface cards): one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
 All arrows are ethernet cable.
@@ -1508,7 +1508,7 @@ At each prompt, accept the default or write down your choice.
 Encrypting prevents data recovery by an attacker.
 You'll have to enter a password on boot, though.
 This is inconvenient if you have intermittent power and/or no remote management capability.
-There's also the reasonable argument that full-disk or "at-rest" encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
+There's also the reasonable argument that full-disk or “at-rest” encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
 
 If you decide you want full-disk encryption, choose it during the OS install. <<Digital security>> is helpful for deciding whether or not to encrypt.
 
@@ -1590,7 +1590,7 @@ The following sections cover specific maintenance tips and tricks.
 Plan on hardware failure.
 
 If you can afford it, the easiest way to reliably run one server is two _buy two identical servers_.
-Use the second for parts or a ready as-is replacement machine (also called a "cold spare").
+Use the second for parts or a ready as-is replacement machine (also called a “cold spare”).
 
 ==== OS updates
 
@@ -1699,7 +1699,7 @@ Something else does or will do its job better.
 Here are some suggestions to get the most out of _mario_.
 
 The first time you run _mario_, follow the instructions as closely as possible.
-Many assumptions are made so it works "out of the box", and it is meant to be easily customizable.
+Many assumptions are made so it works “out of the box”, and it is meant to be easily customizable.
 
 _mario_ configuration files are declarative.
 You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state. _mario_ runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
@@ -1889,7 +1889,7 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certifica
 ===== Start other services
 
 Starting a _mario_ service is always done with `docker-compose up`.
-See the "Setup" section of a particular service for more detail.
+See the “Setup” section of a particular service for more detail.
 
 To stand up everything at once, you could use this shell script:
 
@@ -2003,9 +2003,7 @@ To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only
 === Nextcloud
 
 (((Nextcloud, overview)))
-Nextcloud is primarily a cloud "drive" for file storage and sharing.
-It can do a _lot_ of things.
-Some better than others.
+Nextcloud is primarily a cloud “drive” for file storage and sharing.
 
 Nextcloud is daunting to self-host.
 With _mario_, it is of course easy and fun.
@@ -2067,7 +2065,7 @@ Some tips:
 ** Traefik.
 ** Containers.
 ** Nextcloud server log at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
-* Some maintenance requires the `occ` tool (short for "ownCloud command").
+* Some maintenance requires the `occ` tool (short for “ownCloud command”).
 ** Run it with `sudo docker exec --interactive --user www-data nextcloud_app_1 php occ`.
 * Add `/data/tmp-video` as an External storage. Media files uploaded there will automatically appear in Jellyfin.
 ** Folder name: Temp Video
@@ -2097,7 +2095,7 @@ These releases are scheduled, so a major version change might _not_ break backwa
 * https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html
 
 Be sure to check your `/settings/admin/overview` page before upgrading to make sure all the apps you use will work with the version you're upgrading to.
-You can override an out-of-date app with the "enable untested app" option under `/settings/apps`.
+You can override an out-of-date app with the “enable untested app” option under `/settings/apps`.
 Sometimes this works.
 
 I started a thread about Nextcloud's release cadence at https://help.nextcloud.com/t/major-release-cadence/161685.
@@ -2116,12 +2114,13 @@ They've since fixed the root cause (https://github.com/nextcloud/server/pull/335
 (((Nextcloud, apps)))
 Nextcloud can be used as-is or heavily customized.
 
-The simplest and safest way to customize is via their app store, especially if an app is marked "featured".
+The simplest and safest way to customize is via their app store, especially if an app is marked “featured”.
 
 These _Nextcloud apps_ are installed on the server, expanding the functionality a base Nextcloud instance.
 
 Here are some Nextcloud apps I've tried, what they do, and a ruling on whether they're worth looking into.
-Read "Worth your time?" as "Adam maybe tried this app and has shared his opinion whether others will find this particular app worth the effort to learn and maintain, based on his own experiences projected onto our possibly different use cases?" Grain of salt, in other words.
+Read “Worth your time?” as “Adam maybe tried this app and has shared his opinion whether others will find this particular app worth the effort to learn and maintain, based on his own experiences projected onto our possibly different use cases.”
+Grain of salt, in other words.
 When in doubt: start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
 
 [%header,cols="1,1,2"]
@@ -2139,15 +2138,15 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Duplicate Finder |find and cull duplicate files |*No*. Slow and opaque. I recommend rdfind instead (https://github.com/pauldreik/rdfind).
 |Electronic Signatures |e-sign documents |*No*. Requires a 3rd party service. It should work locally and just help folks fill in documents with signatures, dates, text, etc.
 |End-to-End Encryption |encrypt files server-side, decrypt with client |*No*. Unnervingly buggy. Confusing UI/UX.
-|Files |file management, sharing |*Yes*, although "versions" are not very useful. See "bugs", below.
+|Files |file management, sharing |*Yes*, although the “Versions” tab is not very useful.
 |Forms |Google Forms alternative |*Yes*.
 |Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project.
-|Holiday Calendars |easily add public holiday calendars |*Yes*. The config for this app shows up under "Personal" -> "Availability" for me, not "Groupware" (although the URL path is `/settings/user/groupware`).
+|Holiday Calendars |easily add public holiday calendars |*Yes*. The config for this app shows up under “Personal” -> “Availability” for me, not “Groupware” (although the URL path is `/settings/user/groupware`).
 |Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate metadata.
 |Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yeah, I want to de-Gmail someday.
 |Memories |photos |*Yes*.
 |News |track blogs and news via rss/atom feeds |*Yes*.
-|Nextcloud Office |edit spreadsheets, slides, etc. |*Yes*. I don't love this but I need it. Maybe that's a "No"? Mobile apps for this are painful.
+|Nextcloud Office |edit spreadsheets, slides, etc. |*Yes*. I don't love this but I need it. Maybe that's a “No”? Mobile apps for this are painful.
 |Notes |simple markdown-based note taking |*Yes*. There's an excellent companion mobile app. Replaced Google Notes for me.
 |Passwords |password manager |*Yes*.
 |PhoneTrack |location sharing and tracking |*Yes*. UI is feature-rich and complicated. Traveled movement lines are cool.
@@ -2170,7 +2169,7 @@ I haven't yet tried Talk with the High Performance Backend because I don't have 
 
 * https://nextcloud-talk.readthedocs.io/en/latest/scalability/
 
-The AIO installer includes the strukturag/nextcloud-spreed-signaling implementation, which is likely to be the "official" one (I don't know for sure).
+The AIO installer includes the strukturag/nextcloud-spreed-signaling implementation, which is likely to be the “official” one (I don't know for sure).
 
 * <<AIO installer>>
 * https://github.com/strukturag/nextcloud-spreed-signaling
@@ -2209,7 +2208,7 @@ Works with T-Mobile USA 5G, VoLTE, and Wi-Fi calling. 5 years of support.
 
 ==== Other mobile apps
 
-Besides the primary mobile app (called simply "Nextcloud"), there are other mobile apps made to work with Nextcloud apps.
+Besides the primary mobile app (called simply “Nextcloud”), there are other mobile apps made to work with Nextcloud apps.
 Here are the ones I recommend.
 I don't have an iPhone so these are only Android apps.
 
@@ -2233,7 +2232,7 @@ DAVx5 is not needed on Murena phones (/e/ OS).
 There are actually two Cookbook apps.
 Either works fine for me.
 I'm not picky, I just need to see the ingredients and directions.
-Looks like the one by "Teifun2" is more popular.
+Looks like the one by “Teifun2” is more popular.
 
 Maps Geofavorites lets you easily save arbitrary GPS coordinates to the Maps Nextcloud app.
 Handy for remembering where you parked your bike, for example.
@@ -2271,7 +2270,7 @@ If you ignore it and tap to navigate your way into a folder or open a file, you 
 Workarounds:
 
 * wait until the spinner completes (usually takes me about one second)
-* reduce chance of reordering with "A - Z" or "Z - A" sorting instead of "Newest first" or "Oldest first"
+* reduce chance of reordering with “A - Z” or “Z - A” sorting instead of “Newest first” or “Oldest first”
 
 ===== Mobile text editing is hard
 
@@ -2288,9 +2287,9 @@ With Notes you have a better chance of up-to-date data and fewer conflicts.
 Another workaround is to use Markor (https://github.com/gsantner/markor).
 Install that app, then:
 
-. In the Nextcloud mobile app, "Download" or "Sync" the file you wish to view or edit locally. This caches a copy on your phone.
-. In the Nextcloud mobile app, choose "open with" for the file. Should open instantly.
-. If you make changes to the file, save it, then manually "Sync" the file in the Nextcloud app. It appears local changes like these never make it to the server otherwise.
+. In the Nextcloud mobile app, “Download” or “Sync” the file you wish to view or edit locally. This caches a copy on your phone.
+. In the Nextcloud mobile app, choose “open with” for the file. Should open instantly.
+. If you make changes to the file, save it, then manually “Sync” the file in the Nextcloud app. It appears local changes like these never make it to the server otherwise.
 
 See https://jenson.org/text/ for background on why mobile text editing is a complex and multifaceted problem.
 
@@ -2308,10 +2307,10 @@ Workarounds:
 
 Collaborating on plain text and Markdown text files sometimes results in spurious conflicts.
 Editing is interrupted before it starts, and the web-based text file editor shows you two versions of the file side by side.
-The left side is labeled "Use current version", and the right says "Use the saved version" (or equivalents for your locale or specific client).
+The left side is labeled “Use current version”, and the right says “Use the saved version” (or equivalents for your locale or specific client).
 
-Apparently the browser has a saved copy in local storage or something that gets loaded first and considers it the "current" version.
-Then it loads the one on the right and calls it the "saved" version, and if they differ you get to choose.
+Apparently the browser has a saved copy in local storage or something that gets loaded first and considers it the “current” version.
+Then it loads the one on the right and calls it the “saved” version, and if they differ you get to choose.
 
 Workaround: pick the one on the right.
 That's the latest and greatest copy as it exists server-side.
@@ -2414,7 +2413,7 @@ Make sure it works with all clients you plan to use it with (e.g. desktop, mobil
 ==== AIO installer
 
 (((Nextcloud, install)))
-Among the myriad install methods, there's a relatively new and interesting AIO ("all-in-one") installer (https://nextcloud.com/all-in-one).
+Among the myriad install methods, there's a relatively new and interesting AIO (“all-in-one”) installer (https://nextcloud.com/all-in-one).
 It's free for an instance with less than 100 users.
 
 I recommend the _mario_ method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by _mario_.
@@ -2428,7 +2427,7 @@ Jellyfin (https://jellyfin.org) is a personal streaming media server.
 
 _mario_ will set up a basic Jellyfin server.
 
-I like mounting local media folders using Nextcloud "external storages", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
+I like mounting local media folders using Nextcloud “external storages”, then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
 Jellyfin only needs read access to these persistent data, it stores metadata elsewhere.
 There's one example of a shared persistent data location in the Nextcloud `docker-compose.yml` file.
 Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
@@ -2538,7 +2537,7 @@ That something is `/var/www/wallabag/bin/console`, a utility shipped with Wallab
 We tell `console` to run necessary database migrations.
 
 This is ((idempotent)), as database migrations should be.
-After the first run, subsequent runs output: "Application Migrations" - "No migrations to execute."
+After the first run, subsequent runs output: `[OK] Already at the latest version`.
 
 It's unclear why actually running the migration is not automated.
 Perhaps it is only necessary in special cases--I've only had to do it twice in a couple years.
@@ -2579,7 +2578,7 @@ sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -
 
 (((Scratch)))
 Scratch is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
-I really enjoy using it without the "community" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
+I really enjoy using it without the “community” part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
 These often serve to redirect a user from creating to consuming.
 
 Scratch doesn't require any persistent data, setup, nor auth.
@@ -2606,7 +2605,7 @@ Ride that wave of inspiration.
 Seek both breadth and depth.
 
 For breadth, look for a comprehensive book about Linux.
-One of my first purchases when I wanted to just finally "get" Linux was _UNIX: The Complete Reference_, a thousand-page monster covering many, many concepts.
+One of my first purchases when I wanted to just finally “get” Linux was _UNIX: The Complete Reference_, a thousand-page monster covering many, many concepts.
 I studied it in chunks, referred to it often, and never read it cover to cover.
 If I started learning again from scratch today, I'd still have a book like that handy while studying online resources and trying stuff at home.
 
@@ -2710,7 +2709,7 @@ Queries for host names not on any block list will be answered directly or sent u
 I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my LAN as necessary.
 
 It's easy to block individual host names or entire lists as you see fit.
-I've used this as an "impulse blocker", helping the kids avoid distractions during remote school.
+I've used this as an “impulse blocker”, helping the kids avoid distractions during remote school.
 
 The Pi-Hole also has a list of local DNS entries.
 I add a few host names to this list for servers inside my LAN.
@@ -2890,7 +2889,7 @@ Everybody loves a puppy, right.
 Right?!
 
 I sure hope so.
-Because--fair warning--if you spend too much time with your "puppy" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
+Because--fair warning--if you spend too much time with your “puppy” (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
 
 .Open Source is free like a puppy. Pictured: actual puppy.
 image::puppy.jpg[align="center",scaledwidth=80%]
@@ -2972,7 +2971,7 @@ FOSS exists because it addresses human needs.
 Proprietary software exists because it makes money.
 
 Consider that privacy-respecting home data appliance I mentioned earlier.
-People really do want something like this, and it'll eventually happen because the "incentive" of FOSS most matches natural human incentives of healthy, happy, productive living in community (regardless of whether such qualities make some company or other more money).
+People really do want something like this, and it'll eventually happen because the “incentive” of FOSS most matches natural human incentives of healthy, happy, productive living in community (regardless of whether such qualities make some company or other more money).
 FOSS exists because it is useful.
 So use it!
 
@@ -2996,16 +2995,16 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 * useful, usable software services are _side effects_ of big tech
 * Google has done acts of priceless altruism, yet, all as a side effect of their commitment to profit and growth
 * heck, the military industrial complex brought us the Internet, so yeah, sometimes we get lucky with good outcomes regardless of the original incentive
-** history lesson: https://en.wikipedia.org/wiki/History_of_the_Internet
-* You probably have a "smart" phone. Consider how amazing that piece of tech is--how essential it is to everyday life.
+** see: https://en.wikipedia.org/wiki/History_of_the_Internet
+* You probably have a “smart” phone. Consider how amazing that piece of tech is--how essential it is to everyday life.
 * Does your phone do stuff you don't want it to?
 ** what annoying issues are you willing to put up with because the phone is so essential to daily life?
 ** bloatware? planned obsolescence?
 ** weigh these annoyances against the advantages of ((FOSS))
 * Consider: your phone _must do what makes someone else profit_.
 ** phones are the most valuable sources of your data and behavior for companies
-** someone once said: "when the product is free, you _are_ the product"
-** someone else once said: "your phone is everyone else" agenda for you''
+** someone once said: “when the product is free, you _are_ the product”
+** someone else once said: “your phone is everyone else's agenda for you”
 * your behavior is complex and _very_ valuable
 * advertising companies crave your attention and data
 * your data are essential for ad sales
@@ -3088,7 +3087,7 @@ cattle vs. pets::
 change management::
   The means and methods of transitioning a group of people from one set of tools and processes to another.
 cloud::
-  Someone else's hardware. Scalable and programmable. Also known as "the cloud" or "public cloud". Generally included are many non-FOSS features that add capability and lock you in.
+  Someone else's hardware. Scalable and programmable. Also known as “the cloud” or “public cloud”. Generally included are many non-FOSS features that add capability and lock you in.
 cluster::
   Collated collection of machines treated as a single machine to achieve higher scale computing power.
 compute::
@@ -3096,7 +3095,7 @@ compute::
 containerization::
   Technique of isolating and bundling software, primarily to simplify deployment. Faster and lighter-weight than VMs. Close to bare metal performance.
 container::
-  Running instance of an image. Containers may also be referred to as "guests", although this is more commonly used to describe VMs.
+  Running instance of an image. Containers may also be referred to as “guests”, although this is more commonly used to describe VMs.
 cron job::
   Scheduled task executed automatically by the cron daemon.
 daemon::
@@ -3108,7 +3107,7 @@ deploy::
 devops::
   Systems administration with more software development-like automation. Building/testing/deploying servers/services like software products, for example.
 dogfooding::
-  Being a user of something you also created and/or maintain. "Eat your own dogfood."
+  Being a user of something you also created and/or maintain. “Eat your own dogfood.”
 DHCP::
   Dynamic Host Configuration Protocol.
 DIY::
@@ -3124,7 +3123,7 @@ fork::
 FOSS::
   Free and open-source software. An acronym designed to unite the goals of the FSF and the OSI.
 FSF::
-  Free Software Foundation. They strongly defend the "F" in FOSS.
+  Free Software Foundation. They strongly defend the “F” in FOSS.
 frontend::
   The UI for a system or service.
 full-disk encryption::
@@ -3140,9 +3139,9 @@ GUI::
 HDD::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
 homelab::
-  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. Our _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Far from this level of hair-splitting detail, I'll sometimes use "homelab" as a shortcut for "self-hosting space".
+  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. Our _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Far from this level of hair-splitting detail, I'll sometimes use “homelab” as a shortcut for “self-hosting space”.
 host::
-  The computer where Docker containers run. Also called a "server" in this text.
+  The computer where Docker containers run. Also called a “server” in this text.
 HVAC::
   Heating, ventilation, and air conditioning.
 idempotent::
@@ -3162,7 +3161,7 @@ kernel::
 LAN::
   Local area network. For example, the network used by computers and devices to talk with each other inside your home.
 Linux::
-  The most popular server OS. Also works fine on a desktop or laptop. This is the OS that is not Microsoft Windows or MacOS. The old me would have insisted on calling it "GNU/Linux" or "a Linux distribution". A lot has happened since then, and I've come to believe the term "Linux" is good enough to describe the OS used for self-hosting in the context of this book.
+  The most popular server OS. Also works fine on a desktop or laptop. This is the OS that is not Microsoft Windows or MacOS. The old me would have insisted on calling it “GNU/Linux” or “a Linux distribution”. A lot has happened since then, and I've come to believe the term “Linux” is good enough to describe the OS used for self-hosting in the context of this book.
 LTS::
   Long-term support. A stable software release, supported for many years.
 _mario_::
@@ -3178,7 +3177,7 @@ OOB::
 OS::
   Operating system.
 OSI::
-  Open Source Initiative. More concerned with the "OSS" of FOSS.
+  Open Source Initiative. More concerned with the “OSS” of FOSS.
 PHP::
   PHP: Hypertext Processor. Programming language built for the web.
 PoE::
@@ -3188,9 +3187,9 @@ port::
 port forward::
   Router configuration to send traffic for a particular port to a computer inside a LAN.
 process::
-  Instance of running software. Note that "running" processes are described in more detail by a lower-level state such as running, sleeping, idle, waiting for I/O completion and--my personal favorite--zombie.
+  Instance of running software. Note that “running” processes are described in more detail by a lower-level state such as running, sleeping, idle, waiting for I/O completion and--my personal favorite--zombie.
 provision::
-  As in, "provision a server". Set up a machine or otherwise bring it into alignment with a known/good configuration.
+  As in, “provision a server”. Set up a machine or otherwise bring it into alignment with a known/good configuration.
 RAID::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
 reproducible::
@@ -3212,25 +3211,25 @@ SSD::
 SSH::
   Secure Shell. Provides encrypted remote command line access to a server.
 sysadmin::
-  Portmanteau of "systems administrator". A party responsible for the upkeep of a computer system.
+  Portmanteau of “systems administrator”. A party responsible for the upkeep of a computer system.
 threat model::
   Analysis of risks and defenses of digital assets.
 TB::
   Terabyte. Like GB, can either be base-10 or base-2, so: 10^12^ (1,000,000,000,000) bytes (if we're talking about HDDs).
 TLD::
-  Top-level domain. For `example.com`, `com` is the TLD.
+  Top-level domain. For “example.com”, “.com” is the TLD.
 UI::
-  User interface. The means of interaction between a user and a system, e.g.: a web site or mobile app. Often considered along with user experience and notated "UI/UX".
+  User interface. The means of interaction between a user and a system, e.g.: a web site or mobile app. Often considered along with user experience and notated “UI/UX”.
 UPS::
   Uninterruptible power supply. A battery that sits between your server and an outlet, often with extra features such as a power outage alarm or surge suppressor.
 UX::
-  User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and notated "UI/UX".
+  User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and notated “UI/UX”.
 volume::
   Docker container data storage location on the host.
 VM::
   Virtual machine. OS isolation technique simulating nearly all aspects of hardware including power, input, and output.
 VPN::
-  Virtual private network. Useful to "teleport home" and behave (from a networking perspective) as if you are inside your home LAN.
+  Virtual private network. Useful to “teleport home” and behave (from a networking perspective) as if you are inside your home LAN.
 WAN::
   Wide-area network. Everything outside your LAN / home network / router.
 ZFS::
