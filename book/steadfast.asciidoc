@@ -21,6 +21,8 @@ Adam Monsen
 :pdf-theme: print-theme.yml
 // FIXME: add a conditional for screen vs. print PDF here
 :media: prepress
+// necessary for keyboard macro (kbd)
+:experimental:
 
 //[colophon]
 //== Colophon
@@ -1937,7 +1939,7 @@ services:
 ----
 
 In the folder `~/ping/`, run the command `sudo docker-compose up`.
-Hit Ctrl-c after a few seconds.
+Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
 ....
