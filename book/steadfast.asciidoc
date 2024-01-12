@@ -1030,6 +1030,7 @@ If all your users are able to use Wireguard, you can keep ports closed for HTTP/
 
 (((ZFS)))
 ZFS (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
+(((RAID)))
 Encryption, automatic lightweight snapshots and RAID (redundant array of inexpensive disks) are all included and used by _mario_.
 
 The root partition is ext4 (not ZFS) for a few reasons:
@@ -1045,6 +1046,7 @@ The container's filesystem--everything besides mounted volumes with persistent d
 
 ==== ZFS trim
 
+(((SSD)))
 (((ZFS, SSD TRIM)))
 Note that if you use ZFS with SSDs, you may sometimes notice your system performing poorly.
 On my Ubuntu desktop this happens once a month when the scheduled “trim” cron job starts.
@@ -1432,6 +1434,7 @@ One month's worth of hourly snapshots (the closest comparable I could find) is a
 That's $535.67 total, which is about what I spent on my drives.
 So I broke even in a month and the drives should last _years_.
 
+(((RAID)))
 For redundancy I recommend purchasing two of the same drive.
 We'll configure them mirrored (RAID 1).
 This increases redundancy and read performance (for most reads) and halves usable storage space.
@@ -1440,6 +1443,7 @@ HDDs are plenty fast when measured from the standpoint of self-hosted service re
 The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM.
 Remote backups can take a while, and that's fine.
 
+(((SSD)))
 I use one SSD (solid-state drive) for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 Read more about SSDs and TRIM in <<Filesystem>>.
