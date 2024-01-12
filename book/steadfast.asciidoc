@@ -82,7 +82,7 @@ I wrote this book with my own resources after years of research with lots of hel
 See <<_acknowledgments>>.
 
 Please buy a copy for yourself or someone else, especially if you'd like me to write more awesome books in the future.
-See <<_buy_or_donate>>.
+See <<Buy or donate>>.
 
 This book is a work in progress.
 Please help me improve it.
@@ -143,8 +143,8 @@ For example, other rights such as publicity, privacy, or moral rights may limit 
 
 I've got two things for you to fork (copy, modify, and share).
 
-First: the book itself, along with code to create your own derivative works (see <<_how_to_build_this_book>>).
-This "book source code" will assist with typesetting (making the text look nice for reading).
+First: the book itself, along with code to generate beautifully typeset versions.
+See <<How to build this book>>.
 
 Second: a learning tool called _mario_. _mario_ is a small set of scripts and configuration files to help you set up and maintain your own server.
 It is mainly a wrapper around Ansible (https://ansible.com).
@@ -603,7 +603,7 @@ In short order I converted the book to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code -- you're welcome to hack away at it.
-See <<_more_resources>> and <<_how_to_build_this_book>>.
+See <<More resources>> and <<How to build this book>>.
 
 I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
 This helped me focus on the content while keeping the book simple enough to self-publish.
@@ -655,7 +655,7 @@ I believe self-hosting FOSS is doable and affords many practical benefits over n
 Hang in there and give me some feedback.
 You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
 
-Continued ad nauseam in <<_more_about_foss>>.
+Continued ad nauseam in <<More about FOSS>>.
 
 === Surprises
 
@@ -1448,7 +1448,7 @@ Learn how to configure your router.
 Keep it up to date and maintain a strict firewall with only the necessary ports open / forwarded.
 
 CAUTION: Port-forwarding allows inbound connections through your WAN boundary to your server.
-Read <<_digital_security>> before forwarding any ports.
+Read <<Digital security>> before forwarding any ports.
 
 Here's a simple diagram I created using https://asciiflow.com to visualize my server's location and network connection, a "WAN into LAN traffic flow diagram".
 The router provides electricity to the mini switch using PoE (power over ethernet).
@@ -1494,7 +1494,7 @@ You'll have to enter a password on boot, though.
 This is inconvenient if you have intermittent power and/or no remote management capability.
 There's also the reasonable argument that full-disk or "at-rest" encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
 
-If you decide you want full-disk encryption, choose it during the OS install. <<_digital_security>> is helpful for deciding whether or not to encrypt.
+If you decide you want full-disk encryption, choose it during the OS install. <<Digital security>> is helpful for deciding whether or not to encrypt.
 
 ==== ZFS
 
@@ -1910,7 +1910,7 @@ The DNS challenge is especially handy for servers with zero public-facing inboun
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
 
 If you see certificate errors, confirm DNS works (externally and internally).
-Also: examine Traefik logs as indicated in <<_start_reverse_proxy>>.
+Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
 You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml` and re-provisioning.
 
 Finally, try restarting Traefik with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`.
@@ -1972,7 +1972,7 @@ Plan to add and remove services as desired and as time passes.
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
 Note that _mario_ blocks WAN access by default.
-Read <<_digital_security>> to decide if you want this or not.
+Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change:
 
@@ -2156,7 +2156,7 @@ I haven't yet tried Talk with the High Performance Backend because I don't have 
 
 The AIO installer includes the strukturag/nextcloud-spreed-signaling implementation, which is likely to be the "official" one (I don't know for sure).
 
-* <<_aio_installer>>
+* <<AIO installer>>
 * https://github.com/strukturag/nextcloud-spreed-signaling
 
 ==== Full text search
@@ -2494,7 +2494,7 @@ Assuming everything above was successful, also:
 ** change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
 ** re-provision from admin computer
 ** replace containers on the host with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`
-** if you run into any issues, try manually applying database upgrades (see <<_upgrades_break_everything>>)
+** if you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
 
 ==== Bugs
 
@@ -2601,7 +2601,7 @@ For example, if you want to code your own web services, take a class in programm
 If you want to understand how source code makes a computer do things, take a class in compilers.
 
 Work through this book in a class or small group.
-See <<_discussion_topics>> and <<_exercises>>.
+See <<Discussion topics>> and <<_exercises>>.
 
 Participate in ((FOSS)) communities to learn from and share with others.
 Pass on what you've learned.
@@ -2782,7 +2782,7 @@ To build _without_ Docker: install prerequisites, set environment variables, and
 See `Dockerfile` for prerequisites.
 See `Rakefile` for environment variables expected at runtime.
 
-Make your own derivative works following <<_copy_this_book>>.
+Make your own derivative works following <<Copy this book>>.
 
 == Discussion topics
 

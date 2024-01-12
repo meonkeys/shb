@@ -123,6 +123,9 @@ This is the final step in the editing process. A proofreader examines the final 
     * if a link works without a SEO slug, omit it
         * example w/slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/why_should_i_switch_from_restic_to_borg/`
         * example w/o slug: `https://reddit.com/r/BorgBackup/comments/v3bwfg/`
+    * use more readable version for cross references whenever possible
+        * no: `<<_more_about_foss>>`
+        * yes: `<<More about FOSS>>`
 * use "command line" to refer to a Linux text-based interactive user interface
 * use [Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
 * use [one sentence](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) [per line](https://sive.rs/1s)
