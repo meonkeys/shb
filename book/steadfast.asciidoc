@@ -323,7 +323,7 @@ I hope I can save you some precious time.
 This book is for people supporting a small group, like a family or a handful of friends.
 
 Similar to “small-community-hosting”, _Small Group Cloud_ would be more accurate title words than _Personal Cloud_.
-Think of “small group” as the optimal user population size that will benefit from our services.
+“Small group” is a great target size for what you'll create.
 I wouldn't bother doing all this just for yourself.
 
 This book is for people into (or hoping to get into) self-hosting.
