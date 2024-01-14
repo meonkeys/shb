@@ -18,9 +18,9 @@ Adam Monsen
 :!chapter-signifier:
 // prevent unnecessary blocking fetch of fonts
 :!webfonts:
-:pdf-theme: print-theme.yml
+//:pdf-theme: print-theme.yml
 // FIXME: add a conditional for screen vs. print PDF here
-:media: prepress
+//:media: prepress
 // necessary for keyboard macro (kbd)
 :experimental:
 

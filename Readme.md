@@ -67,6 +67,8 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am47 | exclude/explain `MARIO_DOMAIN_NAME` in book text | OPEN | |
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
+| am50 | print and proof it | OPEN | |
+| am51 | split print and screen PDF generation | OPEN | |
 
 ## How to build the book
 
