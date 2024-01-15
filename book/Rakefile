@@ -25,7 +25,7 @@ namespace :book do
   params = "--attribute build_date_time='#{ENV["BUILD_DATE_TIME"]}' --attribute build_git_commit='#{ENV["BUILD_GIT_COMMIT"]}' --attribute build_os_release='#{ENV["BUILD_OS_RELEASE"]}' --warnings --trace"
 
   desc 'build and check all book outputs'
-  task :build => [:build_html, :build_epub, :build_fb2, :build_mobi, :build_pdf] do
+  task :build => [:build_html, :build_epub, :build_fb2, :build_mobi, :build_screen_pdf, :build_print_pdf] do
 	# TODO: re-enable. - disabled at Thu Nov 16 01:36:29 PM PST 2023
 	#Rake::Task['book:check'].invoke
 	
@@ -56,9 +56,14 @@ namespace :book do
 	sh "bundle exec asciidoctor-epub3 #{params} --attribute ebook-format=kf8 #{book_source}"
   end
 
-  desc 'build PDF output'
-  task :build_pdf => book_source do
-	sh "bundle exec asciidoctor-pdf #{params} #{book_source}"
+  desc 'build PDF output for screen reading'
+  task :build_screen_pdf => book_source do
+	sh "bundle exec asciidoctor-pdf #{params} --attribute shb-screenPDF --out-file steadfast.screen.pdf #{book_source}"
+  end
+
+  desc 'build PDF output for print book'
+  task :build_print_pdf => book_source do
+	sh "bundle exec asciidoctor-pdf #{params} --attribute shb-printPDF --out-file steadfast.print.pdf #{book_source}"
   end
 
   desc 'Check generated books'

@@ -56,7 +56,6 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | ID   | Description | Status | Resolution Details |
 |------|-------------|--------|--------------------|
 | am23 | add illustration: squeaky clean chickens | OPEN | |
-| am35 | add an index (mainly/only for print) | IN PROGRESS | |
 | am37 | port website to hugo | OPEN | |
 | am39 | test all links and references in all output formats | OPEN | |
 | am40 | run htmlproofer | OPEN | |
@@ -68,7 +67,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
 | am50 | print and proof it | OPEN | |
-| am51 | split print and screen PDF generation | OPEN | |
+| am51 | split print and screen PDF generation | RESOLVED | |
 
 ## How to build the book
 
@@ -150,3 +149,6 @@ This is the final step in the editing process. A proofreader examines the final 
             * <https://mifosforge.jira.com/wiki/spaces/MIFOS/pages/4456742/Commit+Log+Guide>
             * <https://lore.kernel.org/git/7vr4waoics.fsf@alter.siamese.dyndns.org/>
             * <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
+* use `shb` namespace for document attributes
+	* short for "self-hosting book"
+	* example: `shb-printPDF`, used when generating a PDF for printing

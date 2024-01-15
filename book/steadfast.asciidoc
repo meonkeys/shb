@@ -7,7 +7,6 @@ Adam Monsen
 :pagenums:
 :sectnums:
 :imagesdir: img
-// FIXME: add a conditional for screen vs. print PDF here
 :front-cover-image: image:cover.png[]
 :icons: font
 :xrefstyle: full
@@ -18,9 +17,11 @@ Adam Monsen
 :!chapter-signifier:
 // prevent unnecessary blocking fetch of fonts
 :!webfonts:
-//:pdf-theme: print-theme.yml
-// FIXME: add a conditional for screen vs. print PDF here
-//:media: prepress
+ifdef::shb-printPDF[]
+:!front-cover-image:
+:pdf-theme: print-theme.yml
+:media: prepress
+endif::[]
 // necessary for keyboard macro (kbd)
 :experimental:
 
