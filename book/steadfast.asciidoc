@@ -2141,7 +2141,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |News |track blogs and news via rss/atom feeds |*Yes*.
 |Nextcloud Office |edit spreadsheets, slides, etc. |*Yes*. I don't love this but I need it. Maybe that's a “No”? Mobile apps for this are painful.
 |Notes |simple markdown-based note taking |*Yes*. There's an excellent companion mobile app. Replaced Google Notes for me.
-|Passwords |password manager |*Yes*.
+|Passwords |password manager |*Yes*. Warning: online only (requires connection to Nextcloud server).
 |PhoneTrack |location sharing and tracking |*Yes*. UI is feature-rich and complicated. Traveled movement lines are cool.
 |Photos |photos, sorta |*No*. Slow, clumsy, lacking features compared with other FOSS photo management software. Note that it is required by Memories. I do install it just so I can use Memories.
 |Polls |simple polls |*Yes*.
