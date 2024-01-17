@@ -9,6 +9,14 @@ extends: default-for-print-with-font-fallbacks
 page:
   size: A5
 
+footer:
+  verso:
+    center:
+      content: '{document-title}'
+  recto:
+    center:
+      content: '{chapter-title}'
+
 code:
   font-size: $base-font-size * 0.8
 

@@ -17,6 +17,9 @@ Adam Monsen
 :!chapter-signifier:
 // prevent unnecessary blocking fetch of fonts
 :!webfonts:
+ifdef::shb-screenPDF[]
+:pdf-theme: screen-theme.yml
+endif::[]
 ifdef::shb-printPDF[]
 :!front-cover-image:
 :pdf-theme: print-theme.yml

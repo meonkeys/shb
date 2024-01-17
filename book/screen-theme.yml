@@ -1,0 +1,11 @@
+# smart quotes (and many other special characters) require
+# "-with-font-fallbacks" here
+extends: default-with-font-fallbacks
+
+footer:
+  verso:
+    center:
+      content: '{document-title}'
+  recto:
+    center:
+      content: '{chapter-title}'
