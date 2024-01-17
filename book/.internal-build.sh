@@ -28,7 +28,7 @@ if [[ "$BUILD_TYPE" == "full" ]]; then
     bundle exec rake
     cp --target-directory=/outputs -- *.epub *.fb2.zip *.html *.mobi *.pdf
 elif [[ "$BUILD_TYPE" == "small" ]]; then
-    bundle exec rake book:build_pdf
+    bundle exec rake book:build_print_pdf
     cp --target-directory=/outputs -- *.pdf
 else
     echo "⛔ ERROR, unknown build type"
