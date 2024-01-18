@@ -346,7 +346,7 @@ If you have $50k and unlimited time to spend on your concrete bunker homelab... 
 I would LOVE to see that.
 If you are more curious than certain you may still enjoy learning from my choices and I'd appreciate your feedback.
 
-I'm not writing for hard-line software licensing experts/extremists.
+I'm not writing for hard-line software patent/license experts/activists.
 These wonderful folks will spot my intentional use of the word _open_ and omission of the word _libre_.
 I love all these words, and I stand on the side of inclusion at the cost of idealism (while maintaining the hope these concepts are not mutually exclusive).
 I thank the activists for helping swing the needle towards freedom, to all our benefit.
