@@ -13,13 +13,12 @@ class ExtendedPDFConverter < (Asciidoctor::Converter.for 'pdf')
   # * https://github.com/asciidoctor/asciidoctor-pdf/issues/2476
   # * https://github.com/asciidoctor/asciidoctor-pdf/issues/2477
   def ink_running_content periphery, doc, skip = [1, 1], body_start_page_number = 1
-    super
-
     (1..page_count).each do |pgnum|
       go_to_page pgnum
       if page.empty?
         ink_prose ' '
       end
     end
+    super
   end
 end
