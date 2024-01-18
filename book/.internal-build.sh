@@ -38,7 +38,7 @@ common_args=(
 function typeset_print_pdf() {
     echo '🖨️	typeset print-ready PDF'
     output=$title.print.pdf
-    asciidoctor-pdf "${common_args[@]}" --attribute shb-printPDF --out-file $output $book_src
+    asciidoctor-pdf "${common_args[@]}" --attribute shb-printPDF --require ./extensions.rb --out-file $output $book_src
     echo "💾	wrote $output"
 }
 
