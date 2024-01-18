@@ -12,12 +12,10 @@ class ExtendedPDFConverter < (Asciidoctor::Converter.for 'pdf')
   # * discussion https://asciidoctor.zulipchat.com/#narrow/stream/288690-users.2Fasciidoctor-pdf/topic/syntax.20error.20with.20prepress.20PDF.20on.20Lulu
   # * https://github.com/asciidoctor/asciidoctor-pdf/issues/2476
   # * https://github.com/asciidoctor/asciidoctor-pdf/issues/2477
-  def ink_running_content periphery, doc, skip = [1, 1], body_start_page_number = 1
+  def ink_running_content(*)
     (1..page_count).each do |pgnum|
       go_to_page pgnum
-      if page.empty?
-        ink_prose ' '
-      end
+      update_colors if graphic_state.color_space.empty?
     end
     super
   end
