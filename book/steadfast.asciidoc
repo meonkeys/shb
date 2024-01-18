@@ -2773,15 +2773,6 @@ I use Asciidoctor to produce multiple typeset versions of the book from a single
 The file is AsciiDoc (https://asciidoc.org) plain text markup.
 
 Run `./build.sh` to generate your own typeset outputs.
-View the outputs in `$HOME/Downloads/shb-asciidoctor-outputs`.
-
-The build script is meant to be run as a user other than root with `sudo` privileges to run `docker` commands.
-It runs in Bash on Linux and macOS, maybe Windows too.
-Requires Docker and a few common cli tools.
-
-To build _without_ Docker: install prerequisites, set environment variables, and run `rake`.
-See `Dockerfile` for prerequisites.
-See `Rakefile` for environment variables expected at runtime.
 
 Make your own derivative works following <<Copy this book>>.
 

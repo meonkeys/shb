@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Invoke rake to build _Steadfast Self-Hosting_
+# Build _Steadfast Self-Hosting_ formatted book outputs
 # Copyright (C) 2024  Adam Monsen
 #
 # This program is free software: you can redistribute it and/or modify
@@ -24,13 +24,54 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-if [[ "$BUILD_TYPE" == "full" ]]; then
-    bundle exec rake
-    cp --target-directory=/outputs -- *.epub *.fb2.zip *.html *.mobi *.pdf
-elif [[ "$BUILD_TYPE" == "small" ]]; then
-    bundle exec rake book:build_print_pdf
-    cp --target-directory=/outputs -- *.pdf
+title=steadfast
+book_src=$title.asciidoc
+
+common_args=(
+    --attribute build_date_time="$BUILD_DATE_TIME"
+    --attribute build_git_commit="$BUILD_GIT_COMMIT"
+    --attribute build_os_release="$BUILD_OS_RELEASE"
+    --warnings
+    --trace
+)
+
+function typeset_print_pdf() {
+    echo '🖨️	typeset print-ready PDF'
+    output=$title.print.pdf
+    asciidoctor-pdf "${common_args[@]}" --attribute shb-printPDF --out-file $output $book_src
+    echo "💾	wrote $output"
+}
+
+if [[ "$BUILD_TYPE" == "small" ]]; then
+    typeset_print_pdf
 else
-    echo "⛔ ERROR, unknown build type"
-    exit 1
+    echo '🖨️	typeset HTML'
+    asciidoctor "${common_args[@]}" --attribute data-uri $book_src
+    echo "💾	wrote $title.html"
+
+    typeset_print_pdf
+
+    echo '🖨️	typeset EPUB'
+    asciidoctor-epub3 "${common_args[@]}" $book_src
+    echo "💾	wrote $title.epub"
+
+    echo '🖨️	typeset FB2'
+    asciidoctor-fb2 "${common_args[@]}" $book_src
+    echo "💾	wrote $title.fb2.zip"
+
+    echo '🖨️	typeset Mobi'
+    asciidoctor-epub3 "${common_args[@]}" --attribute ebook-format=kf8 $book_src
+    echo "💾	wrote $title-kf8.epub and $title.mobi"
+
+    echo '🖨️	typeset screen-optimized PDF'
+    output=$title.screen.pdf
+    asciidoctor-pdf "${common_args[@]}" --attribute shb-screenPDF --out-file $output $book_src
+    echo "💾	wrote $output"
+
+    echo '📋	check links in HTML output'
+    htmlproofer $title.html
+
+    echo '📋	validate EPUB output'
+    # does something very similar to passing `--attribute ebook-validate` to `asciidoctor-epub3`
+    epubcheck $title.epub
 fi

@@ -25,38 +25,50 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+SECONDS=0
+echo "🏗️	start at $(date)"
+
+BUILD_TYPE=full
+
+if [[ "${1:-}" == "--small" ]] || [[ "${1:-}" == "-s" ]]; then
+    BUILD_TYPE=small
+    echo '🎁	small build'
+else
+    echo '🍽️	full build'
+fi
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+WORK_DIR=/usr/src/app/book
 GID="$(id -g)"
 GROUP="$(id -gn)"
 BUILD_DATE_TIME="$(date)"
 BUILD_GIT_COMMIT="$(git rev-parse --short HEAD || echo FIXME)"
 BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
 
-set -o xtrace
-
+echo '🚢	build image'
+# discard container checksum
 sudo docker build \
     --tag shb-asciidoctor \
+    --build-arg WORK_DIR="$WORK_DIR" \
     --build-arg USER="$USER" \
     --build-arg UID="$UID" \
     --build-arg GROUP="$GROUP" \
     --build-arg GID="$GID" \
-    .
+    --quiet \
+    . \
+    > /dev/null
 
-mkdir -p ~/Downloads/shb-asciidoctor-outputs
-
-BUILD_TYPE=full
-
-if [[ "${1:-}" == "--small" ]] || [[ "${1:-}" == "-s" ]]; then
-    BUILD_TYPE=small
-fi
-
+echo '🚢	start container'
 sudo docker run \
     --rm \
     --interactive \
     --tty \
     --user "$USER:$GROUP" \
-    --volume "$HOME/Downloads/shb-asciidoctor-outputs:/outputs" \
+    --volume "$SCRIPT_DIR:$WORK_DIR" \
     --env BUILD_DATE_TIME="$BUILD_DATE_TIME" \
     --env BUILD_GIT_COMMIT="$BUILD_GIT_COMMIT" \
     --env BUILD_OS_RELEASE="$BUILD_OS_RELEASE" \
     --env BUILD_TYPE="$BUILD_TYPE" \
     shb-asciidoctor
+
+echo "🏗️	done (${SECONDS}s elapsed)"
