@@ -542,7 +542,7 @@ image::YT-censor.png[align="center",scaledwidth=80%]
 
 For the record, our chickens are _squeaky clean_.
 
-.One absolutely upststanding, hard-working, law-abiding chicken.
+.One absolutely upstanding, hard-working, law-abiding chicken.
 image::squeaky-clean-chicken.png[align="center",scaledwidth=80%]
 
 Once I stood up my personal cloud I felt freedom and ease when posting and hosting these videos.

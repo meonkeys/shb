@@ -69,6 +69,8 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am50 | print and proof it | OPEN | |
 | am51 | split print and screen PDF generation | RESOLVED | |
 | am52 | shorten non-splittable monospace segments | OPEN | |
+| am53 | spell check | OPEN | |
+| am54 | grammar check | OPEN | |
 
 ## How to build the book
 
