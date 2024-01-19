@@ -33,7 +33,7 @@ endif::[]
 
 _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_
 
-First published in 2024 by Sunrise Data Press.
+First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
 
 Seattle, Washington, USA.
 
