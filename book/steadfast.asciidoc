@@ -28,6 +28,25 @@ endif::[]
 // necessary for keyboard macro (kbd)
 :experimental:
 
+[colophon]
+== Colophon
+
+_Steadfast Self-Hosting: Rapid-Rise Personal Cloud_
+
+First published in 2024 by Sunrise Data Press.
+
+Seattle, Washington, USA.
+
+Copyright (C)2024 by Adam Monsen
+
+Some rights reserved.
+See <<Copyright and license>>. 
+
+Paperback ISBN FIXME.
+
+[.text-center.big]
+image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Sunrise Data Press
+
 == Introduction
 
 === Thesis
@@ -90,7 +109,7 @@ This book was generated
 
 === Copyright and license
 
-_Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2023 Adam Monsen.
+_Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2024 Adam Monsen.
 
 ==== Copy this book
 
@@ -620,7 +639,7 @@ This helped me focus on the content while keeping the book simple enough to self
 Still with the caveman.
 Enough already.
 
-I wrote this in 2023.
+I wrote this in 2023-2024.
 
 And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
 We got this!
