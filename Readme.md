@@ -55,11 +55,8 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 
 | ID   | Description | Status | Resolution Details |
 |------|-------------|--------|--------------------|
-| am23 | add illustration: squeaky clean chickens | RESOLVED | |
 | am37 | port website to hugo | OPEN | |
 | am39 | test all links and references in all output formats | OPEN | |
-| am40 | run htmlproofer | RESOLVED | |
-| am41 | run epubcheck | RESOLVED | |
 | am43 | port to future home (re-do this Readme) | OPEN | |
 | am44 | re-test _mario_ start to finish | OPEN | |
 | am46 | make _Services_ map 1:1 with _mario_: add dyndns, mail, Traefik | OPEN | |
@@ -67,7 +64,6 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
 | am50 | print and proof it | OPEN | |
-| am51 | split print and screen PDF generation | RESOLVED | |
 | am52 | shorten non-splittable monospace segments | OPEN | |
 | am53 | spell check | OPEN | |
 | am54 | grammar check | OPEN | |
