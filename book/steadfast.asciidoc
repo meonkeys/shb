@@ -95,8 +95,8 @@ _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2023 Adam Mo
 ==== Copy this book
 
 Please make copies and derivative works.
-I want it to be enjoyed and shared.
-I chose a license that explicitly encourages sharing.
+This book is meant to be enjoyed and shared.
+The license explicitly encourages sharing.
 Check this out:
 
 This book is distributed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license**.
