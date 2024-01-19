@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# provision.sh - _mario_ system provisioner
+# provision.sh - mario system provisioner
 # Copyright (C) 2023  Adam Monsen
 # 
 # This program is free software: you can redistribute it and/or modify

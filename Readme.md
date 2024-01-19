@@ -21,7 +21,7 @@ I'm looking for testimonials! Ping me if you're up for this.
 | path       | description                           |
 |------------|---------------------------------------|
 | `book/`    | sources for the book                  |
-| `mario/`   | sources for _mario_ provisioning tool |
+| `mario/`   | sources for mario provisioning tool   |
 | `website/` | sources for https://selfhostbook.com/ |
 
 ## Book formats
@@ -42,7 +42,7 @@ Here are some ideas:
 * Anywhere a diagram or photo would significantly help to illustrate a point.
 * Any sections that should be rewritten, rethought, or removed.
 * Is there a relevant and useful technology that isn't mentioned and should be?
-* Test out _mario_ on your own hardware/VM. Does it work for you as advertised?
+* Test out mario on your own hardware/VM. Does it work for you as advertised?
 * Is this something you'd actually read?
 * Is this something you'd recommend to others?
 * What would you expect to pay for a print copy?
@@ -58,8 +58,8 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am37 | port website to hugo | OPEN | |
 | am39 | test all links and references in all output formats | OPEN | |
 | am43 | port to future home (re-do this Readme) | OPEN | |
-| am44 | re-test _mario_ start to finish | OPEN | |
-| am46 | make _Services_ map 1:1 with _mario_: add dyndns, mail, Traefik | OPEN | |
+| am44 | re-test mario start to finish | OPEN | |
+| am46 | make _Services_ map 1:1 with mario: add dyndns, mail, Traefik | OPEN | |
 | am47 | exclude/explain `MARIO_DOMAIN_NAME` in book text | OPEN | |
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |

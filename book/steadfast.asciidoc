@@ -155,7 +155,7 @@ I've got two things for you to fork (copy, modify, and share).
 First: the book itself, along with code to generate beautifully typeset versions.
 See <<How to build this book>>.
 
-Second: a learning tool called _mario_. _mario_ is a small set of scripts and configuration files to help you set up and maintain your own server.
+Second: a learning tool called mario. mario is a small set of scripts and configuration files to help you set up and maintain your own server.
 It is mainly a wrapper around Ansible (https://ansible.com).
 
 The license for all original source code related to this book is the GNU AGPL (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -927,10 +927,10 @@ For now we'll cover its output from a high level.
 (((Ubuntu)))
 (((Wallabag)))
 (((ZFS)))
-A _mario_-built system presents nicely as a simplified stack of colored boxes.
+A mario-built system presents nicely as a simplified stack of colored boxes.
 These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. “Stack” is also commonly used to describe interdependent layers of a system.
 
-.Layers of a _mario_-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
+.Layers of a mario-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.png[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a container.
@@ -1041,7 +1041,7 @@ If all your users are able to use Wireguard, you can keep ports closed for HTTP/
 (((ZFS)))
 ZFS (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
 (((RAID)))
-Encryption, automatic lightweight snapshots and RAID (redundant array of inexpensive disks) are all included and used by _mario_.
+Encryption, automatic lightweight snapshots and RAID (redundant array of inexpensive disks) are all included and used by mario.
 
 The root partition is ext4 (not ZFS) for a few reasons:
 
@@ -1088,21 +1088,21 @@ If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, 
 
 === Operating system
 
-_mario_ requires a 64-bit Ubuntu server.
+mario requires a 64-bit Ubuntu server.
 Other Debian Linux flavors may work as well.
 
 Ubuntu LTS (long-term support) releases are the most stable so we'll stick with that.
 
 I sought to minimize customizations to the operating system from a default install to ease its eventual re-creation.
-I tried to capture any and all necessary customizations in _mario_, or at least to document them.
+I tried to capture any and all necessary customizations in mario, or at least to document them.
 
 Not mucking about on the server takes discipline, especially for old-school hands-on sysadmins like me.
-It is much easier to SSH into the server and run a one-off command rather than change config files and re-run _mario_.
-The real payoff from using _mario_ instead of hand-editing comes when you collaborate with others or try to remember what you did a year ago and why.
+It is much easier to SSH into the server and run a one-off command rather than change config files and re-run mario.
+The real payoff from using mario instead of hand-editing comes when you collaborate with others or try to remember what you did a year ago and why.
 
 You can and should still SSH into the server manually.
 When you do, you should exclusively perform read-only or exceptional read-write operations.
-I often do something manually, undo it, then do the same thing with _mario_ to confirm results are as expected.
+I often do something manually, undo it, then do the same thing with mario to confirm results are as expected.
 
 Example read-only server-side operations:
 
@@ -1209,7 +1209,7 @@ We'll use Traefik as our reverse proxy.
 Here's a bit about how Traefik works and how we'll use it with Nextcloud and other web-based self-hosted services.
 
 We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
-Study the included Traefik architecture diagram to better understand this process along with the _mario_ sources.
+Study the included Traefik architecture diagram to better understand this process along with the mario sources.
 
 (The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik/.
 Credit to Peka for the gopher logo, licensed CC-BY-3.0.
@@ -1218,7 +1218,7 @@ For more information see the Traefik `README.md`)
 .Traefik architecture diagram showing how a request reaches a service.
 image::traefik-architecture.png[]
 
-In the _mario_ source code (or the snippets below), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
+In the mario source code (or the snippets below), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
 
 * the `websecure` entrypoint, where we accept HTTPS traffic on port 443
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
@@ -1231,7 +1231,7 @@ We'll come back to middlewares later, along with other Traefik features like aut
 
 NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
 
-These two snippets of the _mario_ source show how we set up Traefik for Nextcloud.
+These two snippets of the mario source show how we set up Traefik for Nextcloud.
 
 [source,yaml]
 ----
@@ -1260,12 +1260,12 @@ Other web services will also use the `websecure` entrypoint.
 
 === Identity management
 
-I wanted to include FOSS central identity management in _mario_ but I haven't figured it out yet.
-When I do, this should give users a way to log in once and get to all the different _mario_-hosted services.
+I wanted to include FOSS central identity management in mario but I haven't figured it out yet.
+When I do, this should give users a way to log in once and get to all the different mario-hosted services.
 It takes care of authentication and authorization and all that good stuff.
 
 I'm interested in Authentik (https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
-I want to see it running well for a good while before adding it to _mario_.
+I want to see it running well for a good while before adding it to mario.
 
 Some of the other self-hosting solutions mentioned above in <<_what_is_this_book_not>> do include FOSS central identity management.
 
@@ -1286,7 +1286,7 @@ They will likely share at least some of these attributes:
 
 * Self-hosting instructions available.
 * Easy to install. Works with your preferred deployment method.
-** For _mario_, we're looking for a popular, well-maintained Docker image.
+** For mario, we're looking for a popular, well-maintained Docker image.
 ** Bonus: instructions included for integrating with Docker Compose and Traefik.
 * Healthy community: chat, forum.
 * Recent source code activity: releases, contributions, news.
@@ -1421,7 +1421,7 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 
 (((provision)))
 It's helpful to have a separate computer from your server to make changes.
-I usually run _mario_ on a laptop.
+I usually run mario on a laptop.
 This provisions my remote server, making changes as necessary to align it with the Ansible configuration files.
 
 ==== Test devices
@@ -1513,10 +1513,10 @@ At each prompt, accept the default or write down your choice.
 .. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server. Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption. See <<_full_disk_encryption>>.
 .. Install OpenSSH server.
-.. Do not install `nextcloud` or `Docker`. Let _mario_ install these later.
+.. Do not install `nextcloud` or `Docker`. Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)). See <<_zfs>>.
-. Set up _mario_ on your admin computer (a separate computer from your server).
-. Run _mario_ on your admin computer to provision your server.
+. Set up mario on your admin computer (a separate computer from your server).
+. Run mario on your admin computer to provision your server.
 
 ==== Full-disk encryption
 
@@ -1637,7 +1637,7 @@ sudo docker-compose build --pull
 ----
 
 This is the case if a `docker-compose.yml` file includes a `build` directive instead of declaring an `image`.
-The Scratch service included with _mario_ is one example.
+The Scratch service included with mario is one example.
 
 ==== Monitoring
 
@@ -1690,51 +1690,43 @@ Here's a decent comparison of restic and Borg: https://reddit.com/r/BorgBackup/c
 
 I use `zfs-auto-snapshot` locally to be able to quickly get at old versions of files, but I don't count this as a backup.
 
-== _mario_
+== mario
 
-//
-// I think asciidoctor-epub3 complains about italics in these two _mario_ headers. I ignore this. It looks like:
-//   Converting to Mobi (kf8)...
-//   bundle exec asciidoctor-epub3 --attribute revnumber='1.0.1' --attribute revdate='2023-11-16' -a ebook-format=kf8 shb.asciidoc
-//   asciidoctor: WARNING: Warning(inputpreprocessor):W29006: Tag rejected: <em>
-//   asciidoctor: WARNING: Warning(inputpreprocessor):W29006: Tag rejected: </em>
-//
-// I'm not certain this is true... other headers have italics but I only see these two warnings from asciidoctor-epub3. 
-//
+Once our server is online, we can use mario to configure and stand up services.
 
-Once our server is online, we can use _mario_ to configure and stand up services.
+=== mario philosophy
 
-=== _mario_ philosophy
-
-_mario_ is a practical learning tool.
+mario is a practical learning tool.
 It comes with sensible, tested defaults.
-It automates some of the tedious, confusing steps of setting up services on a server. _mario_ is not a supported and production-ready polished software product.
+It automates some of the tedious, confusing steps of setting up services on a server.
+mario is not a supported and production-ready software product.
 It'll get you started, that's it.
 Continue with it if you like or just use it to fast-forward your personal cloud setup.
 Something else does or will do its job better.
-Here are some suggestions to get the most out of _mario_.
+Here are some suggestions to get the most out of mario.
 
-The first time you run _mario_, follow the instructions as closely as possible.
+The first time you run mario, follow the instructions as closely as possible.
 Many assumptions are made so it works “out of the box”, and it is meant to be easily customizable.
 
-_mario_ configuration files are declarative.
-You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state. _mario_ runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
+mario configuration files are declarative.
+You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state.
+mario runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
 (((provision)))
-After getting _mario_ up and running successfully once, run it again.
-Provisioning with _mario_ is ((idempotent)).
+After getting mario up and running successfully once, run it again.
+Provisioning with mario is ((idempotent)).
 The system should not change in any meaningful way after the desired state is reached.
 Once `provision.sh` completes successfully, it may be run again without making further changes.
 
 Then: start tinkering.
 You can find some ideas in <<_exercises>>.
 
-You may want to first provision a virtual machine until you're ready to run _mario_ pointed at your real server.
+You may want to first provision a virtual machine until you're ready to run mario pointed at your real server.
 
 === Conventions
 
-_mario_ prepares the server filesystem as follows:
+mario prepares the server filesystem as follows:
 
 * Docker configuration files are stored in directories under `/root/ops`.
 * Data for services are stored in directories under `/data`.
@@ -1768,7 +1760,7 @@ A registered domain name is required for HTTPS web traffic encryption.
 ==== Public DNS
 
 (((Duck DNS)))
-_mario_ expects to be able to use Duck DNS or Amazon Route 53 for DNS.
+mario expects to be able to use Duck DNS or Amazon Route 53 for DNS.
 Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
 Of the two options I provide, Duck DNS is the easiest and cheapest.
@@ -1823,7 +1815,7 @@ If you don't have a DNS server yet, use hostname to IP address mappings in `/etc
 
 ==== Connect to server
 
-_mario_ expects to be able to connect directly to the server using SSH.
+mario expects to be able to connect directly to the server using SSH.
 Public key authentication eases this.
 If you have a key pair, use it.
 If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one.
@@ -1840,11 +1832,12 @@ Host mario_server
 (((provision)))
 Test it by running `provision.sh` again.
 
-IMPORTANT: _mario_ not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
+IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
 If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
-If you already successfully ran _mario_ once and want to re-enable password-based SSH auth, delete that task *and* delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
+If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task *and* delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
 
-Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`. _mario_ needs this on its first run, prior to setting up passwordless sudo.
+Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
+mario needs this on its first run, prior to setting up passwordless sudo.
 
 If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
 
@@ -1861,7 +1854,7 @@ Another security improvement (left as an exercise for the reader) is to move sec
 
 ==== Stand up services
 
-_mario_ has prepared your server to run a handful of services.
+mario has prepared your server to run a handful of services.
 Here's how to turn them on and start using them.
 
 ===== Start reverse proxy
@@ -1904,7 +1897,7 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certifica
 
 ===== Start other services
 
-Starting a _mario_ service is always done with `docker-compose up`.
+Starting a mario service is always done with `docker-compose up`.
 See the “Setup” section of a particular service for more detail.
 
 To stand up everything at once, you could use this shell script:
@@ -1936,7 +1929,7 @@ sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -
 
 === Encryption certificates
 
-_mario_ (well, Traefik) sets up certificates to encrypt HTTP traffic.
+mario (well, Traefik) sets up certificates to encrypt HTTP traffic.
 The certificates are issued using a DNS challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
 The DNS challenge is especially handy for servers with zero public-facing inbound ports.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
@@ -1995,7 +1988,7 @@ Here are details of self-hosting a handful of useful services.
 The services I'll highlight are a tiny fraction of those available to self-host.
 They reflect my users' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
 Getting them running will provide some useful functionality and a good starting point.
-With the help of _mario_ your cloud gets these out of the box and will be flexible enough to accommodate your preferred service choices.
+With the help of mario your cloud gets these out of the box and will be flexible enough to accommodate your preferred service choices.
 
 These particular services--while all reasonable choices to make your data useful--may not be the best available choices nor the best fits for your use case.
 That is absolutely fine!
@@ -2003,7 +1996,7 @@ Plan to add and remove services as desired and as time passes.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
-Note that _mario_ blocks WAN access by default.
+Note that mario blocks WAN access by default.
 Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change:
@@ -2022,10 +2015,10 @@ To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only
 Nextcloud is primarily a cloud “drive” for file storage and sharing.
 
 Nextcloud is daunting to self-host.
-With _mario_, it is of course easy and fun.
+With mario, it is of course easy and fun.
 Done well, it serves as a solid foothold for de-Googling.
 
-Nextcloud can be self-hosted for free when installed via _mario_.
+Nextcloud can be self-hosted for free when installed via mario.
 
 ==== Base install
 
@@ -2057,7 +2050,7 @@ They have a public bounty program and threat model.
 Setting up a new Nextcloud server is well-documented.
 In brief:
 
-. Provision with _mario_.
+. Provision with mario.
 . Start Nextcloud containers with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`.
 . Navigate to `\https://cloud.MARIO_DOMAIN_NAME`
 . Follow web-based setup page to create an admin account.
@@ -2071,7 +2064,7 @@ Some tips:
 * Stand up, destroy, and stand up again.
 ** After you get it working once, stop it with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml down`.
 ** Destroy all persistent data with `sudo rm -rf /data/nextcloud`. That _really_ deletes everything.
-** Re-provision with _mario_ (run `provision.sh` again).
+** Re-provision with mario (run `provision.sh` again).
 ** Follow the setup steps above.
 * Read the official docs at `\https://cloud.MARIO_DOMAIN_NAME/settings/help` or https://docs.nextcloud.com.
 * Add apps. See <<_customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
@@ -2118,7 +2111,7 @@ I started a thread about Nextcloud's release cadence at https://help.nextcloud.c
 
 ==== Performance
 
-If you use _mario_ to deploy Nextcloud, you'll start with a nominally performant server.
+If you use mario to deploy Nextcloud, you'll start with a nominally performant server.
 I've included the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html).
 
 Troubleshooting performance issues can be challenging.
@@ -2416,7 +2409,7 @@ Make sure it works with all clients you plan to use it with (e.g. desktop, mobil
 Among the myriad install methods, there's a relatively new and interesting AIO (“all-in-one”) installer (https://nextcloud.com/all-in-one).
 It's free for an instance with less than 100 users.
 
-I recommend the _mario_ method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by _mario_.
+I recommend the mario method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by mario.
 
 See the AIO readme at https://github.com/nextcloud/all-in-one/ for more information.
 
@@ -2425,7 +2418,7 @@ See the AIO readme at https://github.com/nextcloud/all-in-one/ for more informat
 (((Jellyfin, overview)))
 Jellyfin (https://jellyfin.org) is a personal streaming media server.
 
-_mario_ will set up a basic Jellyfin server.
+mario will set up a basic Jellyfin server.
 
 I like mounting local media folders using Nextcloud “external storages”, then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
 Jellyfin only needs read access to these persistent data, it stores metadata elsewhere.
@@ -2434,7 +2427,7 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 
 ==== Setup
 
-. Provision with _mario_.
+. Provision with mario.
 . Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
 . Navigate to `\https://jellyfin.MARIO_DOMAIN_NAME`
 . Follow web-based setup steps.
@@ -2495,7 +2488,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 
 ==== Setup
 
-. Provision with _mario_.
+. Provision with mario.
 . Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
 . Navigate to `\https://wallabag.MARIO_DOMAIN_NAME`
 . Log in as `wallabag` user with password `wallabag`.
@@ -2504,7 +2497,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 Assuming everything above was successful, also:
 
 . Edit `wallabag/docker-compose.yml`, removing `MYSQL_ROOT_PASSWORD` from the `app` service `environment` section.
-. Provision with _mario_.
+. Provision with mario.
 . Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`. The config change will be detected and a new `app` container will be created.
 
 ==== Maintenance notes
@@ -2524,7 +2517,7 @@ See https://github.com/wallabag/wallabag/issues/6649.
 There may be other duplicate or related bug reports for this same thing, that's just one example.
 Luckily, the workaround is easy: https://github.com/wallabag/docker#upgrading.
 
-Apply that fix to a _mario_ system with:
+Apply that fix to a mario system with:
 
 [source,bash]
 ----
@@ -2565,7 +2558,7 @@ A service might only have one-way database migrations, for example.
 
 ==== Setup
 
-. Provision with _mario_.
+. Provision with mario.
 . Start Watchtower with `sudo docker-compose --file /root/ops/watchtower/docker-compose.yml up -d`.
 
 ==== Maintenance notes
@@ -2591,7 +2584,7 @@ Scratch doesn't require any persistent data, setup, nor auth.
 
 ==== Setup
 
-. Provision with _mario_.
+. Provision with mario.
 . Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
 . Navigate to `\https://scratch.MARIO_DOMAIN_NAME`
 
@@ -2602,7 +2595,7 @@ None.
 == What's next?
 
 This is a jumble of ideas for future me and you.
-These aren't covered in detail in this book and they aren't included in _mario_.
+These aren't covered in detail in this book and they aren't included in mario.
 
 === Learn more
 
@@ -2651,7 +2644,7 @@ AI is once again the latest hotness.
 
 You can run your own image generators and LLMs (large-language models) at home.
 No GPU is required.
-Here's a `docker-compose.yaml` that'll work with _mario_ to stand up a LocalAI server (https://localai.io).
+Here's a `docker-compose.yaml` that'll work with mario to stand up a LocalAI server (https://localai.io).
 
 [%linenums,yaml]
 ----
@@ -2734,7 +2727,7 @@ Authentik (https://goauthentik.io) can do this.
 
 == More resources
 
-Visit https://selfhostbook.com for all supporting material including source code for this book and _mario_.
+Visit https://selfhostbook.com for all supporting material including source code for this book and mario.
 
 === Source code
 
@@ -2773,7 +2766,7 @@ When sending patches, please follow contributor guidelines at https://selfhostbo
 
 === Translations
 
-Please help translate this book and _mario_.
+Please help translate this book and mario.
 
 * https://selfhostbook.com/translate
 
@@ -2818,7 +2811,7 @@ Discussion topics for a class or small group.
 
 Exercises for individual practice and study groups.
 
-. Stand up a service besides those included with _mario_ using an existing image.
+. Stand up a service besides those included with mario using an existing image.
 .. For example, a dashboard: https://awesome-selfhosted.net/tags/personal-dashboards.html.
 . Build a custom image.
 .. Hint: use `docker build` or Buildah (https://buildah.io).
@@ -2829,8 +2822,8 @@ Exercises for individual practice and study groups.
 .. Use it to test out the latest release or a custom app.
 . Adapt this guide to a Linux distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
-. Contribute to _mario_.
-. Move secrets used by _mario_ into an Ansible vault.
+. Contribute to mario.
+. Move secrets used by mario into an Ansible vault.
 . Enable GPU transcoding in Jellyfin.
 . Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
 . Aggregate logs.
@@ -2840,14 +2833,14 @@ Exercises for individual practice and study groups.
 .. Describe troubleshooting steps, in detail.
 .. Make a plan for system recovery when it fails to boot.
 . Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
-. Reorganize _mario_ roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
+. Reorganize mario roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
 . Set up Fail2Ban (https://fail2ban.org). Feed it logs from various services.
 . Set up Suricata (https://suricata.io) network analysis and threat detection.
 . Separate out code for ASCII to SVG diagram conversion from Markdeep. Incorporate it into this book's build system, perhaps as a pandoc filter.
 . Try a different container runtime, such as podman (https://podman.io).
-. Adapt _mario_ to use podman.
-. Adapt _mario_ to use Kubernetes (https://kubernetes.io).
-. Modify _mario_ to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
+. Adapt mario to use podman.
+. Adapt mario to use Kubernetes (https://kubernetes.io).
+. Modify mario to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
 . Improve your backup security: allow restic/borg/etc. read-only access during a backup.
 . Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
@@ -3161,7 +3154,7 @@ Linux::
   The most popular server OS. Also works fine on a desktop or laptop. This is the OS that is not Microsoft Windows or MacOS. The old me would have insisted on calling it “GNU/Linux” or “a Linux distribution”. A lot has happened since then, and I've come to believe the term “Linux” is good enough to describe the OS used for self-hosting in the context of this book.
 LTS::
   Long-term support. A stable software release, supported for many years.
-_mario_::
+mario::
   Provisioning system included with this book to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
 NIC::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
