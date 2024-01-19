@@ -2854,7 +2854,7 @@ Exercises for individual practice and study groups.
 . Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw). Work around this and share your solution with others.
 . Roll your own Linux distro.
 . Build, configure and deploy an OPNsense firewall (https://opnsense.org).
-. Set up your own headscale VPN for remote LAN access (https://headscale.net).
+. Set up your own headscale tailnet for remote LAN access (https://headscale.net).
 . Leverage existing ownership and permission OS security measures.
 .. Run containers as unprivileged users.
 .. Use appropriate ownership and permissions for persistent container data.
