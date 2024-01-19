@@ -55,7 +55,8 @@ We will:
 * Save money by efficiently running lots of services on our own hardware with negligible incremental cost.
 * Do well by our friends, families, and social groups.
 * Do things we can't do with public services because we have full access to all our own raw data.
-* Adapt and grow as software evolves, taking our data and metadata along with us, sharing when it makes sense to do so and with whom we trust.
+* Adapt and grow as software evolves, taking our data and metadata along with us.
+* Share what and when it makes sense to share with whom we trust.
 
 This will be liberating.
 
