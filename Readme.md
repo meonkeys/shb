@@ -63,7 +63,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
 | am50 | print and proof it | OPEN | |
-| am52 | shorten non-splittable monospace segments | OPEN | |
+| am52 | shorten non-splittable monospace segments | WONTFIX | split at slashes instead |
 | am53 | spell check | OPEN | |
 | am54 | grammar check | OPEN | |
 
