@@ -946,24 +946,42 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 
 === Digital security
 
-Here's a quick recipe for the average self-hoster with limited time, considering two classes of data:
+Here are a few quick recommendations for the average self-hoster with limited time, considering two categories of data.
 
-. sensitive data
-* includes passwords, credit card numbers, government ID number
-* store offline only if possible
-* if ever saved on a computer, store encrypted
-* easy fix: store in a password manager
-. everything else
-* includes notes, photos, documents, personal information
-* store on encrypted media, including backups
-* access only with up-to-date software you trust
-* disallow ((WAN access)) to these data
+==== sensitive data
 
-One common sticking point is WAN access.
-That's remote access to the data, through your router/firewall.
+Examples: passwords, credit card numbers, government ID numbers.
+
+Recommendations:
+
+. store offline only if possible
+. if ever saved on a computer, store encrypted
+. easy fix: store in a password manager
+
+==== everything else
+
+Examples: notes, photos, documents, personal information.
+
+Recommendations:
+
+. store on encrypted media, including backups
+. access only with up-to-date software you trust
+. disallow ((WAN access)) to these data
+
+==== WAN access
+
+Once you've categorized your data, think about how people will get to it.
+At home you can generally just connect directly to your server.
+When you're away or you're trying to share with someone else, you're talking WAN access.
+
+That is: remote access to your services (hence: your LAN and your data), through your router/firewall.
 (((Nextcloud)))
-Say: port-forwarding HTTPS traffic through your router/firewall to your Nextcloud server.
-It is risky and convenient.
+Say: port forwarding HTTPS traffic through your router/firewall to your Nextcloud server.
+Port forwarding is both risky and convenient.
+
+NOTE: Consider alternatives to port forwarding, such as using headscale to set up your own tailnet (https://headscale.net).
+
+==== Threat model
 
 (((threat model)))
 Let's back up a step and talk about threat modeling.
@@ -973,14 +991,12 @@ With your threat model in mind, you'll be able to gain confidence in, for exampl
 WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey.
 This guide is not sufficient for your threat model.
 
-Everyone else: Let's build a simple example threat model for the “everything else” category above.
-
-==== Threat model
+Let's build a simple example threat model for the “everything else” data class.
 
 Consider:
 
 * *Assets*
-** Data you are trying to protect (everything digital besides what you store in a password manager).
+** Data you are trying to protect.
 * *Actors/Threats/Vectors*
 ** People and bots acting badly, and their means of attack. Includes mistakes and bugs.
 * *Mitigations*
@@ -996,24 +1012,32 @@ Let's run ((WAN access)) through our ((threat model)).
 * *Assets*
 ** Personal information stored on out-of-date ((Nextcloud)) server.
 * *Actors/Threats/Vectors*
-** Bot finds URL to Nextcloud server on a publicly archived mailing list. Bot automatically attempts exploit against known vulnerability in Nextcloud server. Exploit succeeds, bot owner gains access to personal information and attempts identity theft.
+** Bot scrapes websites and finds URL to Nextcloud server on a public mailing list archive.
+Bot automatically attempts exploit against known vulnerability in Nextcloud server.
+Exploit succeeds, bot owner gains access to compute resources and personal information.
 * *Mitigations*
 ** Keep Nextcloud server up to date.
 ** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
 ** Close WAN boundary: disallow all inbound WAN access.
 
 (((Nextcloud, security)))
-This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
+This hopefully makes obvious the risks of allowing WAN access and how we might do so safely.
 
-Allowing WAN access and not using public mailing lists only obscures an out-of-date Nextcloud server, and one shouldn't rely on “security through obscurity”.
+“Avoid public mailing lists” is not listed in mitigations as it only obscures the URL to the out-of-date Nextcloud server, and one shouldn't rely on “security through obscurity”.
 
 Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called “defense in depth”. It's a great idea.
 
-==== open WAN access alternative: Wireguard
+==== Wireguard
 
-A few years ago, VPN technology got a major upgrade with Wireguard. From a user perspective there's no “logging in” as with older VPNs. Wireguard is fast and easy and secure. When you're away from home, you can simply flip it on to teleport back into your LAN.
+A few years ago, VPN technology got a major upgrade with Wireguard.
+From a user perspective there's no “logging in” as with older VPNs.
+Wireguard is fast, easy, and secure.
+When you're away from home, you can simply flip it on to teleport back into your LAN.
 
-If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys. Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your attack surface.
+If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys.
+Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your attack surface.
+
+A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale uses Wireguard).
 
 ==== More tips
 
@@ -1022,7 +1046,7 @@ If all your users are able to use Wireguard, you can keep ports closed for HTTP/
 * Use multi-factor authentication.
 * Use firewalls.
 * Use strong passwords.
-* Be very careful when opening up WAN ports or don't do it at all.
+* Be very careful when port forwarding or don't do it at all.
 * Be vigilant about all the usual stuff too: phishing, malware, SMS spoofing, and social attacks.
 ** Take caution with email links and attachments.
 ** Don't install untrusted software. Always use HTTPS.
@@ -1483,7 +1507,7 @@ I just made these up based on what I estimated I'd need, then doubled that to al
 Learn how to configure your router.
 Keep it up to date and maintain a strict firewall with only the necessary ports open / forwarded.
 
-CAUTION: Port-forwarding allows inbound connections through your WAN boundary to your server.
+CAUTION: Port forwarding allows inbound connections through your WAN boundary to your server.
 Read <<Digital security>> before forwarding any ports.
 
 Here's a simple diagram I created using https://asciiflow.com to visualize my server's location and network connection, a “WAN into LAN traffic flow diagram”.
@@ -3084,6 +3108,8 @@ backend::
   I use this term to refer to either a service or server. It's something you more frequently interact with indirectly, say, via a frontend like a web or mobile UI.
 bare metal::
   Physical computing resources, as opposed to VMs. Typically offering better performance than VMs.
+bot::
+  Short for robot. Software performing autonomous tasks such as responding to chat requests or attacking vulnerable servers.
 cattle vs. pets::
   Highlights two distinctly different sysadmin approaches to systems/services. Cattle are automated, ephemeral, and hopefully immutable. Pets are managed manually, stateful, and long-lived.
 change management::
