@@ -60,7 +60,6 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am43 | port to future home (re-do this Readme) | OPEN | |
 | am44 | re-test mario start to finish | OPEN | |
 | am46 | make _Services_ map 1:1 with mario: add dyndns, mail, Traefik | OPEN | |
-| am47 | exclude/explain `MARIO_DOMAIN_NAME` in book text | RESOLVED | |
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
 | am50 | print and proof it | OPEN | |
