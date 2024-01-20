@@ -2221,7 +2221,7 @@ Besides the primary mobile app (called simply “Nextcloud”), there are other 
 Here are the ones I recommend.
 I don't have an iPhone so these are only Android apps.
 
-[%header]
+[%header,cols="1,1,2"]
 |===
 |Mobile app |Works with Nextcloud apps |More info
 |DAVx5 |Calendar, Contacts, Tasks |https://davx5.com
@@ -2349,9 +2349,9 @@ With a signature field Forms could be used to add a drawn signature to a form li
 
 There are extant Nextcloud online signature apps that incorporate digital signatures (https://en.wikipedia.org/wiki/Digital_signature).
 I don't want or need digital signatures, especially since they appear to rely on 3rd party services.
-I really just want a drawn signature at the bottom of a page.
+I really just want a low-tech image that looks like a drawn signature at the bottom of a page.
 It doesn't even need to be wet ink.
-If you want that too, vote for or help with this https://github.com/nextcloud/forms/issues/947.
+If you want that too, vote for or help with https://github.com/nextcloud/forms/issues/947.
 
 Here are two alternative FOSS self-hostable apps supporting drawn signatures:
 
@@ -2360,16 +2360,18 @@ Here are two alternative FOSS self-hostable apps supporting drawn signatures:
 
 ===== Release script missing from source
 
-Nextcloud is ((FOSS)), although some release scripts are held back (https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341).
+Nextcloud is ((FOSS)), although some release scripts are held back.
 They may or may not be required to release those, I don't know.
 I hope they do decide to release them, for the same reasons the rest of Nextcloud is FOSS.
+
+* https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341
 
 ===== Login page loads twice
 
 Sometimes I login and immediately have to log in again.
 Authentik or some other login mechanism might work around this.
 
-See: https://github.com/nextcloud/server/issues/9354
+* https://github.com/nextcloud/server/issues/9354
 
 ==== End-to-End Encryption
 
