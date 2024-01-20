@@ -325,6 +325,10 @@ I'm here to _grow_, primarily by sharing and learning.
 
 This book is for students, especially tech-savvy or tech-adjacent students active in clubs and teams.
 
+This book provides motivation for self-hosting with an excellent process for learning same.
+Its version-specific material is expected to fall out of date.
+Its motivation and process for learning will become more relevant as time passes.
+
 This book is for those trying to live more for others and less for themselves; selfishly enjoying the act of being selfless.
 Leaders, parents/guardians, members of a collective.
 People who want to self host, who _also_ love others and doing other things besides systems administration.
@@ -1118,7 +1122,7 @@ If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, 
 mario requires a 64-bit Ubuntu server.
 Other Debian Linux flavors may work as well.
 
-Ubuntu LTS (long-term support) releases are the most stable so we'll stick with that.
+Ubuntu LTS (long-term support) releases are the most stable so we'll go with that.
 
 I sought to minimize customizations to the operating system from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
