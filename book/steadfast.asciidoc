@@ -1256,7 +1256,7 @@ services:
 
 <2> Connect the `websecure` entrypoint with the `nextcloud-https` router on the `app` service.
 
-<3> Use the hostname rule with the `nextcloud-https` router. I've simulated expansion of the `MARIO_DOMAIN_NAME` variable to `example.com`.
+<3> Use the hostname rule with the `nextcloud-https` router.
 
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
@@ -1873,7 +1873,7 @@ Start Traefik with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
-If that worked, wait a minute or two and visit `\https://traefik.MARIO_DOMAIN_NAME` in a web browser.
+If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 (((Let's Encrypt)))
 It may take a few minutes for Traefik to set up Let's Encrypt HTTP encryption certificates, so don't worry if you get invalid cert warnings at first.
 
@@ -2057,7 +2057,7 @@ In brief:
 
 . Provision with mario.
 . Start Nextcloud containers with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`.
-. Navigate to `\https://cloud.MARIO_DOMAIN_NAME`
+. Navigate to `\https://cloud.example.com`
 . Follow web-based setup page to create an admin account.
 . Skip installing recommended apps.
 
@@ -2071,7 +2071,7 @@ Some tips:
 ** Destroy all persistent data with `sudo rm -rf /data/nextcloud`. That _really_ deletes everything.
 ** Re-provision with mario (run `provision.sh` again).
 ** Follow the setup steps above.
-* Read the official docs at `\https://cloud.MARIO_DOMAIN_NAME/settings/help` or https://docs.nextcloud.com.
+* Read the official docs at `\https://cloud.example.com/settings/help` or https://docs.nextcloud.com.
 * Add apps. See <<_customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
 * Test sending an email at `/settings/admin` (Basic settings).
 * Add users.
@@ -2438,7 +2438,7 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 
 . Provision with mario.
 . Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
-. Navigate to `\https://jellyfin.MARIO_DOMAIN_NAME`
+. Navigate to `\https://jellyfin.example.com`
 . Follow web-based setup steps.
 
 ==== Advanced setup
@@ -2499,7 +2499,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 
 . Provision with mario.
 . Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
-. Navigate to `\https://wallabag.MARIO_DOMAIN_NAME`
+. Navigate to `\https://wallabag.example.com`
 . Log in as `wallabag` user with password `wallabag`.
 . Update password for `wallabag` user.
 
@@ -2595,7 +2595,7 @@ Scratch doesn't require any persistent data, setup, nor auth.
 
 . Provision with mario.
 . Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
-. Navigate to `\https://scratch.MARIO_DOMAIN_NAME`
+. Navigate to `\https://scratch.example.com`
 
 ==== Maintenance notes
 
@@ -2670,7 +2670,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.localai-https.entrypoints=websecure"
-      - "traefik.http.routers.nextcloud-https.rule=Host(`localai.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.nextcloud-https.rule=Host(`localai.example.com`)"
       - "traefik.http.routers.localai-https.tls.certresolver=myresolver"
       - "traefik.http.routers.localai-https.middlewares=lan-only"
     networks:
