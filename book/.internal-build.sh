@@ -35,6 +35,12 @@ common_args=(
     --trace
 )
 
+function typeset_html() {
+    echo '🖨️	typeset HTML'
+    asciidoctor "${common_args[@]}" --attribute data-uri $book_src
+    echo "💾	wrote $title.html"
+}
+
 function typeset_print_pdf() {
     echo '🖨️	typeset print-ready PDF'
     output=$title.print.pdf
@@ -43,12 +49,10 @@ function typeset_print_pdf() {
 }
 
 if [[ "$BUILD_TYPE" == "small" ]]; then
+    typeset_html
     typeset_print_pdf
 else
-    echo '🖨️	typeset HTML'
-    asciidoctor "${common_args[@]}" --attribute data-uri $book_src
-    echo "💾	wrote $title.html"
-
+    typeset_html
     typeset_print_pdf
 
     echo '🖨️	typeset EPUB'
