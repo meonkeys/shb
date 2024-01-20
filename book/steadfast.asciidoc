@@ -986,7 +986,7 @@ Consider:
 * *Mitigations*
 ** Steps taken to reduce chances attacks succeed.
 
-That makes my marketing-friendly threat model acronym *A.A/T/V.M.* (all punctuation is vocalized).
+Put it all together and you get my 100% marketing-friendly threat model acronym *A.A/T/V.M.* (all punctuation is vocalized).
 Really just rolls off the tongue!
 
 ==== Example: WAN access
