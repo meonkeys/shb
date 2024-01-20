@@ -639,7 +639,7 @@ This helped me focus on the content while keeping the book simple enough to self
 Still with the caveman.
 Enough already.
 
-I wrote this in 2023-2024.
+I wrote this in 2023.
 
 And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
 We got this!
