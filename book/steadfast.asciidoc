@@ -413,9 +413,11 @@ One should ask:
 * Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
 * Will it help me figure out why I made a change to one of my services two years ago?
 * Does it phone home, using telemetry or my data in a way I don't approve?
-* Does it hold back “enterprise” features I need, even for my scaled-down use case? Is it annoying about this, reminding me often?
+* Does it hold back “enterprise” features I need, even for my scaled-down use case?
+Is it annoying about this, reminding me often?
 * If I want paid support, is it available?
-* Is it popular? Has it been around a while, and do I expect it to endure?
+* Is it popular?
+Has it been around a while, and do I expect it to endure?
 
 After brief reviews, I find they generally:
 
@@ -535,8 +537,11 @@ So many reasons!
 ** shared storage allows you to front your data with multiple services, choosing read-write/read-only access sensibly
 * Avoid vendor lock-in
 ** You'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
-** When you buy something, _it's yours_. DRM should be illegal.
-** Is there an integration you count on? Sometimes a service stops working with another service. This happens less often with ((FOSS)) because anyone can simply fork a project.
+** When you buy something, _it's yours_.
+DRM should be illegal.
+** Is there an integration you count on?
+Sometimes a service stops working with another service.
+This happens less often with ((FOSS)) because anyone can simply fork a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
 ** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo metadata
@@ -866,10 +871,16 @@ Write down a number and stick to it.
 Sketch out your thoughts on resources you'll need.
 Some ideas:
 
-* Data storage. There's a significant jump in complexity and cost with each jump in unit (for example, GB (gigabyte) to TB (terabyte)). This book is appropriate for data storage up to about 10 TB.
-* Electricity. Check your home power bill for the cost per kWh and run some estimates.
-* Support. Who will help you when you get stuck?
-* Physical location. Where will the server live? Will you have to install new wiring for power or network?
+* Data storage.
+There's a significant jump in complexity and cost with each jump in unit (for example, GB (gigabyte) to TB (terabyte)).
+This book is appropriate for data storage up to about 10 TB.
+* Electricity.
+Check your home power bill for the cost per kWh and run some estimates.
+* Support.
+Who will help you when you get stuck?
+* Physical location.
+Where will the server live?
+Will you have to install new wiring for power or network?
 
 === Schedule
 
@@ -1002,7 +1013,8 @@ Consider:
 * *Assets*
 ** Data you are trying to protect.
 * *Actors/Threats/Vectors*
-** People and bots acting badly, and their means of attack. Includes mistakes and bugs.
+** People and bots acting badly, and their means of attack.
+Includes mistakes and bugs.
 * *Mitigations*
 ** Steps taken to reduce chances attacks succeed.
 
@@ -1029,7 +1041,8 @@ This hopefully makes obvious the risks of allowing WAN access and how we might d
 
 “Avoid public mailing lists” is not listed in mitigations as it only obscures the URL to the out-of-date Nextcloud server, and one shouldn't rely on “security through obscurity”.
 
-Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called “defense in depth”. It's a great idea.
+Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called “defense in depth”.
+It's a great idea.
 
 ==== Wireguard
 
@@ -1045,7 +1058,9 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 
 ==== More tips
 
-* Maintain useful encrypted backups. Perform test restores to know they are useful. See <<_backups>>.
+* Maintain useful encrypted backups.
+Perform test restores to know they are useful.
+See <<_backups>>.
 * Avoid running commands as the `root` user.
 * Use multi-factor authentication.
 * Use firewalls.
@@ -1053,7 +1068,8 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 * Be very careful when port forwarding or don't do it at all.
 * Be vigilant about all the usual stuff too: phishing, malware, SMS spoofing, and social attacks.
 ** Take caution with email links and attachments.
-** Don't install untrusted software. Always use HTTPS.
+** Don't install untrusted software.
+Always use HTTPS.
 ** Use a special passphrase with your mobile carrier.
 ** Question urgency and suspicious requests.
 * Send unrecognized calls to voicemail.
@@ -1229,7 +1245,8 @@ See: https://martinfowler.com/bliki/PhoenixServer.html.
 
 A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules.
 
-Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at media.example.com. In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
+Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at media.example.com.
+In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
 
 We'll use Traefik as our reverse proxy.
 
@@ -1280,7 +1297,8 @@ services:
       - "traefik.http.routers.nextcloud-https.rule=Host(`cloud.example.com`)" <3>
 ----
 
-<1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443. HTTPS encryption is configured using other labels.
+<1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
+HTTPS encryption is configured using other labels.
 
 <2> Connect the `websecure` entrypoint with the `nextcloud-https` router on the `app` service.
 
@@ -1316,7 +1334,8 @@ You'll find some services are better choices to self-host than others.
 They will likely share at least some of these attributes:
 
 * Self-hosting instructions available.
-* Easy to install. Works with your preferred deployment method.
+* Easy to install.
+Works with your preferred deployment method.
 ** For mario, we're looking for a popular, well-maintained Docker image.
 ** Bonus: instructions included for integrating with Docker Compose and Traefik.
 * Healthy community: chat, forum.
@@ -1541,12 +1560,17 @@ Here's an abbreviated server setup guide.
 It's a good idea to think ahead to disaster recovery: take notes and visualize yourself repeating the process precisely.
 At each prompt, accept the default or write down your choice.
 
-. Install Ubuntu Server. Debian might also work; I haven't tested it.
-.. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server. Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
-.. Optional: use full-disk encryption. See <<_full_disk_encryption>>.
+. Install Ubuntu Server.
+Debian might also work; I haven't tested it.
+.. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server.
+Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
+.. Optional: use full-disk encryption.
+See <<_full_disk_encryption>>.
 .. Install OpenSSH server.
-.. Do not install `nextcloud` or `Docker`. Let mario install these later.
-. Optional: add two HDDs and format them with ((ZFS)). See <<_zfs>>.
+.. Do not install `nextcloud` or `Docker`.
+Let mario install these later.
+. Optional: add two HDDs and format them with ((ZFS)).
+See <<_zfs>>.
 . Set up mario on your admin computer (a separate computer from your server).
 . Run mario on your admin computer to provision your server.
 
@@ -2099,11 +2123,13 @@ Some tips:
 
 * Stand up, destroy, and stand up again.
 ** After you get it working once, stop it with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml down`.
-** Destroy all persistent data with `sudo rm -rf /data/nextcloud`. That _really_ deletes everything.
+** Destroy all persistent data with `sudo rm -rf /data/nextcloud`.
+That _really_ deletes everything.
 ** Re-provision with mario (run `provision.sh` again).
 ** Follow the setup steps above.
 * Read the official docs at `\https://cloud.example.com/settings/help` or https://docs.nextcloud.com.
-* Add apps. See <<_customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
+* Add apps.
+See <<_customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
 * Test sending an email at `/settings/admin` (Basic settings).
 * Add users.
 * Check logs.
@@ -2112,7 +2138,8 @@ Some tips:
 ** Nextcloud server log at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
 * Some maintenance requires the `occ` tool (short for “ownCloud command”).
 ** Run it with `sudo docker exec --interactive --user www-data nextcloud_app_1 php occ`.
-* Add `/data/tmp-video` as an External storage. Media files uploaded there will automatically appear in Jellyfin.
+* Add `/data/tmp-video` as an External storage.
+Media files uploaded there will automatically appear in Jellyfin.
 ** Folder name: Temp Video
 ** External storage: Local
 ** Authentication: None
@@ -2334,9 +2361,12 @@ With Notes you have a better chance of up-to-date data and fewer conflicts.
 Another workaround is to use Markor (https://github.com/gsantner/markor).
 Install that app, then:
 
-. In the Nextcloud mobile app, “Download” or “Sync” the file you wish to view or edit locally. This caches a copy on your phone.
-. In the Nextcloud mobile app, choose “open with” for the file. Should open instantly.
-. If you make changes to the file, save it, then manually “Sync” the file in the Nextcloud app. It appears local changes like these never make it to the server otherwise.
+. In the Nextcloud mobile app, “Download” or “Sync” the file you wish to view or edit locally.
+This caches a copy on your phone.
+. In the Nextcloud mobile app, choose “open with” for the file.
+Should open instantly.
+. If you make changes to the file, save it, then manually “Sync” the file in the Nextcloud app.
+It appears local changes like these never make it to the server otherwise.
 
 See https://jenson.org/text/ for background on why mobile text editing is a complex and multifaceted problem.
 
@@ -2538,7 +2568,8 @@ Assuming everything above was successful, also:
 
 . Edit `wallabag/docker-compose.yml`, removing `MYSQL_ROOT_PASSWORD` from the `app` service `environment` section.
 . Provision with mario.
-. Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`. The config change will be detected and a new `app` container will be created.
+. Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
+The config change will be detected and a new `app` container will be created.
 
 ==== Maintenance notes
 
@@ -2783,7 +2814,8 @@ Here are a few ideas for when you get stuck.
 
 * Ask for help in forums and chats related to a product/project.
 * If you're confident you've found a bug, file an issue with the product/project.
-* Try your luck in semi-moderated public places. Warning: these are mostly dudes and some of them are jerks.
+* Try your luck in semi-moderated public places.
+Note: people in these places are mostly dudes and some of them are jerks.
 ** self-hosted subreddit: https://reddit.com/r/selfhosted/
 ** homelab subreddit: https://reddit.com/r/homelab/
 ** \#selfhosted chat: https://matrix.to/#/#selfhosted:matrix.org
@@ -2833,8 +2865,11 @@ Make your own derivative works following <<Copy this book>>.
 
 Discussion topics for a class or small group.
 
-. What services do _you_ run? Why? For whom?
-. Review this book for poor security practices. How might it be improved?
+. What services do _you_ run?
+Why?
+For whom?
+. Review this book for poor security practices.
+How might it be improved?
 . Why is privacy important, especially with digital information?
 . What's the best part about self-hosting?
 . What are some pitfalls of self-hosting?
@@ -2844,8 +2879,11 @@ Discussion topics for a class or small group.
 .. intermittent network
 .. local-only network
 .. clustered hardware
-. Consider ((FOSS)) with respect to human attention and focus. Contrast with non-FOSS.
-. What approaches in this book may be conceptually dangerous or misleading? Why? How could they be improved?
+. Consider ((FOSS)) with respect to human attention and focus.
+Contrast with non-FOSS.
+. What approaches in this book may be conceptually dangerous or misleading?
+Why?
+How could they be improved?
 
 == Exercises
 
@@ -2868,15 +2906,18 @@ Exercises for individual practice and study groups.
 . Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
 . Aggregate logs.
 . Create or install a service to monitor outbound network activity from containers.
-. Pick a Docker container that doesn't require outbound network access. Prevent it from making outbound connections and prove to yourself it works.
+. Pick a Docker container that doesn't require outbound network access.
+Prevent it from making outbound connections and prove to yourself it works.
 . What if the server won't boot?
 .. Describe troubleshooting steps, in detail.
 .. Make a plan for system recovery when it fails to boot.
 . Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
 . Reorganize mario roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
-. Set up Fail2Ban (https://fail2ban.org). Feed it logs from various services.
+. Set up Fail2Ban (https://fail2ban.org).
+Feed it logs from various services.
 . Set up Suricata (https://suricata.io) network analysis and threat detection.
-. Separate out code for ASCII to SVG diagram conversion from Markdeep. Incorporate it into this book's build system, perhaps as a pandoc filter.
+. Separate out code for ASCII to SVG diagram conversion from Markdeep.
+Incorporate it into this book's build system, perhaps as a pandoc filter.
 . Try a different container runtime, such as podman (https://podman.io).
 . Adapt mario to use podman.
 . Adapt mario to use Kubernetes (https://kubernetes.io).
@@ -2884,7 +2925,8 @@ Exercises for individual practice and study groups.
 . Improve your backup security: allow restic/borg/etc. read-only access during a backup.
 . Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
-. Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw). Work around this and share your solution with others.
+. Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw).
+Work around this and share your solution with others.
 . Roll your own Linux distro.
 . Build, configure and deploy an OPNsense firewall (https://opnsense.org).
 . Set up your own headscale tailnet for remote LAN access (https://headscale.net).
@@ -2892,11 +2934,22 @@ Exercises for individual practice and study groups.
 .. Run containers as unprivileged users.
 .. Use appropriate ownership and permissions for persistent container data.
 . Enable preview generation for Nextcloud.
-.. Research first: how does default preview generation work? What file types are supported? How much disk space is used? How fast is it, subjectively and objectively? What maintenance will it require once enabled?
-.. Create a test bed with a clean install and many preview-able files of various file formats. Write timing scripts for objective performance measurements. Consider both client- and server-side. Keep manual testing notes (subjective measurements).
+.. Research first: how does default preview generation work?
+What file types are supported?
+How much disk space is used?
+How fast is it, subjectively and objectively?
+What maintenance will it require once enabled?
+.. Create a test bed with a clean install and many preview-able files of various file formats.
+Write timing scripts for objective performance measurements.
+Consider both client- and server-side.
+Keep manual testing notes (subjective measurements).
 .. Compare Preview Generator (https://apps.nextcloud.com/apps/previewgenerator), Imaginary (https://github.com/h2non/imaginary), and any other extant solutions.
 .. Turn it on.
-.. Evaluate the change. Is it noticeable? Does your timing script show any difference? How much disk space is used for previews? How challenging was this to enable?
+.. Evaluate the change.
+Is it noticeable?
+Does your timing script show any difference?
+How much disk space is used for previews?
+How challenging was this to enable?
 
 I've included detailed steps to perform and evaluate the final exercise.
 I've omitted same from other exercises for brevity.
@@ -3026,7 +3079,8 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 * Google has done acts of priceless altruism, yet, all as a side effect of their commitment to profit and growth
 * heck, the military industrial complex brought us the Internet, so yeah, sometimes we get lucky with good outcomes regardless of the original incentive
 ** see: https://en.wikipedia.org/wiki/History_of_the_Internet
-* You probably have a “smart” phone. Consider how amazing that piece of tech is--how essential it is to everyday life.
+* You probably have a “smart” phone.
+Consider how amazing that piece of tech is--how essential it is to everyday life.
 * Does your phone do stuff you don't want it to?
 ** what annoying issues are you willing to put up with because the phone is so essential to daily life?
 ** bloatware? planned obsolescence?

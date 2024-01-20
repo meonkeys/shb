@@ -127,7 +127,6 @@ This is the final step in the editing process. A proofreader examines the final 
 * use "command line" to refer to a Linux text-based interactive user interface
 * use [Oxford commas](https://en.wikipedia.org/wiki/Serial_comma)
 * use [one sentence](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) [per line](https://sive.rs/1s)
-	* for prose paragraphs only
 * shell scripts
     * prefer long form for command line flags, e.g. `--attribute` instead of `-a`
 * source control
