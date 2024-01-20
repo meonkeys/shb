@@ -957,7 +957,7 @@ Here's a quick recipe for the average self-hoster with limited time, considering
 * includes notes, photos, documents, personal information
 * store on encrypted media, including backups
 * access only with up-to-date software you trust
-* disallow WAN access to these data
+* disallow ((WAN access)) to these data
 
 One common sticking point is WAN access.
 That's remote access to the data, through your router/firewall.
@@ -989,9 +989,9 @@ Consider:
 That makes my marketing-friendly threat model acronym *A.A/T/V.M.* (all punctuation is vocalized).
 Really just rolls off the tongue!
 
-==== Example: WAN attack
+==== Example: WAN access
 
-Let's run “WAN access” through our ((threat model)).
+Let's run ((WAN access)) through our ((threat model)).
 
 * *Assets*
 ** Personal information stored on out-of-date ((Nextcloud)) server.
@@ -1000,7 +1000,7 @@ Let's run “WAN access” through our ((threat model)).
 * *Mitigations*
 ** Keep Nextcloud server up to date.
 ** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
-** Close WAN boundary: disallow all inbound WAN traffic.
+** Close WAN boundary: disallow all inbound WAN access.
 
 (((Nextcloud, security)))
 This suggests we should only allow WAN traffic if we are keeping Nextcloud up to date and monitoring/limiting access via our WAN.
@@ -1767,6 +1767,9 @@ A registered domain name is required for HTTPS web traffic encryption.
 mario expects to be able to use Duck DNS or Amazon Route 53 for DNS.
 Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
+NOTE: Public DNS records do not presume ((WAN access)).
+<<Digital security>> covers WAN access in detail.
+
 Of the two options I provide, Duck DNS is the easiest and cheapest.
 
 ===== Duck DNS
@@ -2001,7 +2004,7 @@ Plan to add and remove services as desired and as time passes.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
-Note that mario blocks WAN access by default.
+Note that mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change:
