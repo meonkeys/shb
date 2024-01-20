@@ -189,11 +189,12 @@ I'll make it easy to contact me about missing or incorrect information.
 Please do.
 When you do, include references or other supporting material.
 
-=== Style examples
+=== Conventions
 
 (((typography)))
 Here's how certain types of content will appear in the text.
 
+[cols="1,2"]
 |===
 |Styled example |Used for
 
@@ -202,6 +203,8 @@ Here's how certain types of content will appear in the text.
 |https://example.com |link to website (https scheme is assumed and omitted)
 |<<Command line>> |cross-reference to another section or chapter
 |===
+
+I'll use “example.com” where you'll use your actual domain name.
 
 == Background
 
@@ -1335,10 +1338,11 @@ Habitica (https://habitica.com) demonstrates several of these.
 Here's an early, rough resource planning table I used.
 I go into detail about some of these services later in the book.
 
-[%header]
+[cols="4,4,3,2,2"]
 |===
-|Service |Purpose |Isolation |Cores |RAM (GB)
-|jellyfin |streaming music |Docker |2 |2
+|Service |Purpose |Isolation |Cores |RAM
+
+|jellyfin |stream music |Docker |2 |2
 |kahoot-clone |quiz game |Docker |0 |0
 |poller |polls |Docker |0 |0
 |backuppc |backups |none |0 |0
@@ -1353,7 +1357,7 @@ I go into detail about some of these services later in the book.
 |===
 
 “Cores” represents relative peak compute requirements.
-RAM: peak memory.
+RAM: peak memory, in GB.
 These were fairly wild guesses, based as much as possible on published documentation.
 The guesses turned out to be accurate enough.
 I could see right quick I'd need something more powerful than the latest available Raspberry Pi.
@@ -1801,9 +1805,10 @@ Inside your private network you can use handy domain names or even make up your 
 I recommend using internal hostnames matching public ones, but pointing to LAN-only private IP addresses.
 For example:
 
-[%header]
+[cols="2,3,2,2"]
 |===
 |Service |Hostname |Public IP |Internal IP
+
 |Nextcloud |cloud.example.com |175.102.205.1 |10.0.0.5
 |Jellyfin |media.example.com |175.102.205.1 |10.0.0.5
 |Wallabag |read.example.com |175.102.205.1 |10.0.0.5
@@ -2132,9 +2137,10 @@ Read “Worth your time?” as “Adam maybe tried this app and has shared his o
 Grain of salt, in other words.
 When in doubt: start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
 
-[%header,cols="1,1,2"]
+[cols="1,1,2"]
 |===
 |Nextcloud App |Purpose |Worth your time?
+
 |Antivirus for files |virus scan uploads |*Yes*. Note: uploads from desktop clients are not scanned for viruses (https://github.com/nextcloud/files_antivirus/issues/219)
 |Analytics |track and graph metrics |*Yes*. Only for small/simple use cases though.
 |Appointments |easy 3rd party scheduling |*Yes*. Requires careful calendar curation. Somewhat fiddly setup.
@@ -2221,9 +2227,10 @@ Besides the primary mobile app (called simply “Nextcloud”), there are other 
 Here are the ones I recommend.
 I don't have an iPhone so these are only Android apps.
 
-[%header,cols="1,1,2"]
+[cols="1,1,2"]
 |===
 |Mobile app |Works with Nextcloud apps |More info
+
 |DAVx5 |Calendar, Contacts, Tasks |https://davx5.com
 |Maps Geofavorites |Maps |https://github.com/penguin86/nextcloud-maps-client
 |NC Passwords |Passwords |https://gitlab.com/joleaf/nc-passwords-app
