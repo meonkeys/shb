@@ -2153,23 +2153,33 @@ Media files uploaded there will automatically appear in Jellyfin.
 ==== Maintenance notes
 
 * upgrades
+** choose a release tag at https://hub.docker.com/_/nextcloud/
 ** change the version number in `roles/services/templates/ops/nextcloud/docker-compose.yml`
 ** re-provision from admin computer
 ** replace containers on the host with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`
-* check the `/settings/admin/overview` page
-** `occ db:add-missing-indices`
-** `occ dav:sync-system-addressbook`
+* visit `/settings/admin/overview`
+** perform any recommended maintenance on that page
+** ignore the Update section, it may disagree with Docker Hub
 * tail logs
 ** `lnav` is helpful for this: https://lnav.org
+
+The `stable` release tag will likely be stable enough for you and your users.
+This generally corresponds to the previous version listed at https://docs.nextcloud.com/.
+
+You may opt to use a more specific tag such as `27.1.5-apache`.
+This gives you the chance to review and test each upgrade.
+
+NOTE: Nextcloud's blog posts and press releases use different names.
+Hub 6 refers to version 27, Hub 7 to 28, and so on.
 
 ===== Release cadence
 
 (((Nextcloud, release cadence)))
-A new stable release is shipped every four months.
-These releases are scheduled, so a major version change might _not_ break backwards compatibility.
+A major release is shipped every four months.
 
 * https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html
 
+Most Nextcloud app developers are able to keep up with this pace.
 Be sure to check your `/settings/admin/overview` page before upgrading to make sure all the apps you use will work with the version you're upgrading to.
 You can override an out-of-date app with the “enable untested app” option under `/settings/apps`.
 Sometimes this works.
