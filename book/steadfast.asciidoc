@@ -1429,9 +1429,9 @@ For that and other various reasons I'll focus on bare metal.
 
 You can start with pretty much any old desktop or laptop.
 Use something more powerful and expandable than a Raspberry Pi, though.
-What if your users love it.
-What about bursty workloads.
-Adding storage later.
+What if your users love it?
+How will you increase storage?
+What about bursty workloads?
 If you start with something too small you won't have enough speed nor expandability.
 
 I've worked with quite a few different servers and I did my homework for this self-hosting adventure, so I had a decent idea of what I wanted.
@@ -1549,7 +1549,7 @@ WAN traffic is allowed to flow to the main NIC and not to the IPMI NIC.
 
 Use a surge protector.
 
-Also consider a UPS (uninterruptible power supply) if your power at home is unreliable.
+Consider a UPS (uninterruptible power supply) if your power at home is unreliable.
 
 ==== Physical security
 
