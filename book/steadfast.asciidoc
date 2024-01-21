@@ -1533,13 +1533,17 @@ Keep it up to date and maintain a strict firewall with only the necessary ports 
 CAUTION: Port forwarding allows inbound connections through your WAN boundary to your server.
 Read <<Digital security>> before forwarding any ports.
 
-Here's a simple diagram I created using https://asciiflow.com to visualize my server's location and network connection, a “WAN into LAN traffic flow diagram”.
-The router provides electricity to the mini switch using PoE (power over ethernet).
-There server has two NICs (network interface cards): one is for the OS and everything within (including all services), the other provides a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
-All arrows are ethernet cable.
+Make a sketch to better understand your network.
+
+Here's a simple diagram I created using https://asciiflow.com to plan cabling and visualize the flow of traffic through my network devices.
 
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
+
+Arrows represent ethernet cable.
+The router provides electricity to the mini switch using PoE (power over ethernet).
+The server has two NICs (network interface cards): one for the OS and everything within (including all services), while the other provides a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
+WAN traffic is allowed to flow to the main NIC and not to the IPMI NIC.
 
 ==== Electricity
 
