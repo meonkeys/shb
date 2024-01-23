@@ -2940,6 +2940,7 @@ Incorporate it into this book's build system, perhaps as a pandoc filter.
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
 . Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw).
 Work around this and share your solution with others.
+. Try Nix and NixOS (https://nixos.org).
 . Roll your own Linux distro.
 . Build, configure and deploy an OPNsense firewall (https://opnsense.org).
 . Set up your own headscale tailnet for remote LAN access (https://headscale.net).
