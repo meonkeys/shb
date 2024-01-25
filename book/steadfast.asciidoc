@@ -40,7 +40,7 @@ Seattle, Washington, USA.
 Copyright (C)2024 by Adam Monsen
 
 Some rights reserved.
-See <<Copyright and license>>. 
+See <<Copyright and license>>.
 
 Paperback ISBN FIXME.
 
@@ -3162,7 +3162,7 @@ Thanks to my family and friends for putting up with my ((FOSS)) self-hosting exp
 
 Thanks to Rob and all #underlug for help with hardware, networking, Ansible, and Traefik.
 
-Thanks to Bryan, Rob and all the Deadbeat Dads for your invaluable feedback. 
+Thanks to Bryan, Rob and all the Deadbeat Dads for your invaluable feedback.
 
 Thanks most of all to my wife and kids for supporting and believing in me.
 For all the cooking, talking, listening, art, coding, math, music, and love.
