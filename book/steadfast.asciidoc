@@ -44,6 +44,9 @@ See <<Copyright and license>>.
 
 Paperback ISBN FIXME.
 
+[.text-center]
+10 9 8 7 6 5 4 3 2 1
+
 [.text-center.big]
 image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Sunrise Data Press
 
