@@ -74,7 +74,7 @@ else
     echo "💾	wrote $output"
 
     echo '📋	check links in HTML output'
-    htmlproofer $title.html
+    htmlproofer $title.html || true
 
     echo '📋	validate EPUB output'
     # does something very similar to passing `--attribute ebook-validate` to `asciidoctor-epub3`

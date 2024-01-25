@@ -65,6 +65,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am50 | print and proof it | OPEN | |
 | am53 | spell check | OPEN | |
 | am54 | grammar check | OPEN | |
+| am55 | improve htmlproofer | OPEN | |
 
 ## How to build the book
 
@@ -148,3 +149,50 @@ This is the final step in the editing process. A proofreader examines the final 
 * use `shb` namespace for document attributes
 	* short for "self-hosting book"
 	* example: `shb-printPDF`, used when generating a PDF for printing
+
+## am55: improve htmlproofer
+
+`book/.internal-build.sh` runs `htmlproofer`.
+Currently I ignore erorrs with an `|| true` statement.
+It would be better to ignore or fix the errors.
+This is possible by instrumenting links in the text or adjusting the way htmlproofer is configured and run.
+
+Some recent output:
+
+```
+Running 3 checks (Images, Links, Scripts) in steadfast.html on *.html files ...
+
+
+Checking 173 external links
+Checking 94 internal links
+Checking internal link hashes in 1 file
+Ran on 1 file!
+
+
+For the Links check, the following failures were found:
+
+* At steadfast.html:6581:
+
+  http://catb.org/jargon/html/G/Good-Thing.html is not an HTTPS link
+
+For the Links > External check, the following failures were found:
+
+* At steadfast.html:650:
+
+  External link https://sunrisedata.io failed (status code 404)
+
+* At steadfast.html:5354:
+
+  External link https://github.com/wallabag/docker#upgrading failed: https://github.com/wallabag/docker exists, but the hash 'upgrading' does not (status code 200)
+
+* At steadfast.html:5713:
+
+  External link https://matrix.to/#/#selfhosted:matrix.org failed: https://matrix.to/ exists, but the hash '/#selfhosted:matrix.org' does not (status code 200)
+
+* At steadfast.html:5988:
+
+  External link https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker failed: https://github.com/strukturag/nextcloud-spreed-signaling exists, but the hash 'running-with-docker' does not (status code 200)
+
+
+HTML-Proofer found 5 failures!
+```
