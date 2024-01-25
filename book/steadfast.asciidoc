@@ -45,8 +45,12 @@ Seattle, Washington, USA.
 
 {copyright}
 
-Some rights reserved.
-See <<Copyright and license>>.
+IMPORTANT: Evaluation copy.
+All rights reserved.
+Creative commons licensing does not apply.
+
+[.line-through]#Some rights reserved.
+See <<Copyright and license>>.#
 
 Paperback ISBN FIXME.
 
