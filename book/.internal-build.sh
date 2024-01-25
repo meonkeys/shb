@@ -70,7 +70,7 @@ else
 
     echo '🖨️	typeset screen-optimized PDF'
     output=$title.screen.pdf
-    asciidoctor-pdf "${common_args[@]}" --attribute shb-screenPDF --out-file $output $book_src
+    asciidoctor-pdf "${common_args[@]}" --attribute shb-screenPDF --require ./extensions.rb --out-file $output $book_src
     echo "💾	wrote $output"
 
     echo '📋	check links in HTML output'
