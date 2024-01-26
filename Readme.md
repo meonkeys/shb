@@ -66,6 +66,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am53 | spell check | OPEN | |
 | am54 | grammar check | OPEN | |
 | am55 | improve htmlproofer | OPEN | |
+| am56 | index blowout with tall chapter image and >3 columns | OPEN | |
 
 ## How to build the book
 
