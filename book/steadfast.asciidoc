@@ -602,7 +602,7 @@ Full speed ahead!
 Here's one more pro-personal-cloud example.
 
 A while back I was trying to find some photos from a pile of thousands, taking up terabytes on disk.
-I knew _where_ the photos were taken within about 10 miles, and my photos have embedded geo metadata.
+I knew where I was when I took the photos (within 10 miles or so) and my photos have embedded geo metadata.
 
 My photos are just a bunch of JPEG files.
 I examined them with a small program I wrote.
