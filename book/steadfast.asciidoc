@@ -1,5 +1,7 @@
 = Steadfast Self-Hosting: Rapid-Rise Personal Cloud
-Adam Monsen
+:author: Adam Monsen
+:copyright: (C)2024 {author}
+:license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 :doctype: book
 :docinfo:
 :toc:
@@ -27,17 +29,22 @@ ifdef::shb-printPDF[]
 endif::[]
 // necessary for keyboard macro (kbd)
 :experimental:
+:keywords: linux, web, servers, sysadmin, computers, tech, self-hosting, FOSS
+:description: Quickly learn the hows and whys of reliable self-hosted web services.
+:revnumber: {build_git_commit}
+:revdate: {build_date_time}
+:revremark: {build_locale_lang}
 
 [colophon%notitle]
 == Colophon
 
-_Steadfast Self-Hosting: Rapid-Rise Personal Cloud_
+_{doctitle}_
 
 First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
 
 Seattle, Washington, USA.
 
-Copyright (C)2024 by Adam Monsen
+{copyright}
 
 Some rights reserved.
 See <<Copyright and license>>.
@@ -108,12 +115,12 @@ This book was generated
 
 * on *{build_date_time}*
 * with `LANG=*{build_locale_lang}*`
-* from git commit *{build_git_commit}*
+* from `{docname}{docfilesuffix}` at commit *{build_git_commit}*
 * using *{build_os_release}*
 
 === Copyright and license
 
-_Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2024 Adam Monsen.
+_{doctitle}_ is {copyright}.
 
 ==== Copy this book
 
@@ -122,8 +129,8 @@ This book is meant to be enjoyed and shared.
 The license explicitly encourages sharing.
 Check this out:
 
-This book is distributed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license**.
-Contact me if you are interested in obtaining it under another license.
+This book is distributed under the **{license}** license.
+Contact me if you are interested in obtaining it under other terms.
 
 ===== You are free to:
 
