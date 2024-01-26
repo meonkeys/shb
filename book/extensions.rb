@@ -1,6 +1,7 @@
 class ExtendedPDFConverter < (Asciidoctor::Converter.for 'pdf')
   register_for 'pdf'
 
+  # Add an image at the start of each chapter.
   # see https://docs.asciidoctor.org/pdf-converter/latest/extend/use-cases/#chapter-image
   def ink_chapter_title sect, title, opts
     image_attrs = { 'target' => 'chapter-break.png', 'pdfwidth' => '100%' }
