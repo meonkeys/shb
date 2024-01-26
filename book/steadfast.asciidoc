@@ -28,7 +28,7 @@ endif::[]
 // necessary for keyboard macro (kbd)
 :experimental:
 
-[colophon]
+[colophon%notitle]
 == Colophon
 
 _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_
