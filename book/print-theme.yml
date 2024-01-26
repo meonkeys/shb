@@ -2,12 +2,8 @@
 # "-with-font-fallbacks" here
 extends: default-for-print-with-font-fallbacks
 
-# A4 is the default page size for (printable) PDF output.
-# If I change page size to A5, fonts look too large.
-# If I change "base" font, _other_ fonts still look too large (e.g. headers).
-# Should I change margins instead of font sizes?
 page:
-  size: A5
+  size: [6in, 9in]
 
 footer:
   verso:

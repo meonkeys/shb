@@ -1807,7 +1807,7 @@ mario prepares the server filesystem as follows:
 Go ahead and run `provision.sh`.
 On your admin computer:
 
-[source,bash]
+[source%unbreakable,bash]
 ----
 cd mario/ansible
 ./provision.sh
@@ -1815,6 +1815,7 @@ cd mario/ansible
 
 On this first invocation, it will check for prerequisites, then prompt you to enter values specific to your server into a configuration file.
 
+[%unbreakable]
 ....
 You don't have a config file. I'll create one for you now.
 
@@ -1898,6 +1899,7 @@ Copy the public key to the server with `ssh-copy-id` or similar.
 
 Use a stanza like this in your SSH client config:
 
+[%unbreakable]
 ....
 Host mario_server
   HostName console.example.com
@@ -1916,7 +1918,7 @@ mario needs this on its first run, prior to setting up passwordless sudo.
 
 If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
 
-[source,bash]
+[source%unbreakable,bash]
 ----
 source config
 ansible-playbook --ask-become-pass playbook.yml
@@ -2614,7 +2616,7 @@ Luckily, the workaround is easy: https://github.com/wallabag/docker#upgrading.
 
 Apply that fix to a mario system with:
 
-[source,bash]
+[source%unbreakable,bash]
 ----
 sudo docker-compose \
   --file /root/ops/wallabag/docker-compose.yml \
@@ -2661,7 +2663,7 @@ A service might only have one-way database migrations, for example.
 Check the logs if a service goes down to investigate if an automatic container upgrade caused a problem.
 For example:
 
-[source,bash]
+[source%unbreakable,bash]
 ----
 sudo docker-compose \
   --file /root/ops/watchtower/docker-compose.yml \
