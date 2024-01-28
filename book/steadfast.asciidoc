@@ -4,7 +4,7 @@
 :license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 :doctype: book
 :docinfo:
-:toc:
+:toc: macro
 :toclevels: 2
 :sectnums:
 :imagesdir: img
@@ -34,7 +34,7 @@ endif::[]
 :revdate: {build_date_time}
 :revremark: {build_locale_lang}
 
-[colophon%notitle]
+[colophon%notitle%nonfacing]
 == Colophon
 
 _{doctitle}_
@@ -55,6 +55,8 @@ Paperback ISBN FIXME.
 
 [.text-center.big]
 image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Sunrise Data Press
+
+toc::[]
 
 == Introduction
 
