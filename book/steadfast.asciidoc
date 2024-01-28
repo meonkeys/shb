@@ -1436,7 +1436,7 @@ Software problems easily and often outpace hardware problems.
 
 You'll need a server.
 
-You could use a VM in someone else's cloud, but it'll end up costing more.
+You can always pay for “compute” in someone else's cloud, but it'll end up costing more.
 For that and other various reasons I'll focus on bare metal.
 
 You can start with pretty much any old desktop or laptop.
