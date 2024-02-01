@@ -4,6 +4,11 @@ extends: default-for-print-with-font-fallbacks
 
 page:
   size: [6in, 9in]
+  numbering:
+    start-at: after-toc
+
+running-content:
+  start-at: body
 
 footer:
   verso:
