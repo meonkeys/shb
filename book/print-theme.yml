@@ -8,7 +8,7 @@ page:
     start-at: after-toc
 
 running-content:
-  start-at: body
+  start-at: 2
 
 footer:
   verso:
