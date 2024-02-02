@@ -4,8 +4,7 @@ gem 'asciidoctor', '2.0.20'
 
 gem 'asciidoctor-fb2', '0.7.0'
 gem 'asciidoctor-epub3', '2.0.1'
-gem 'asciidoctor-pdf', :github => 'asciidoctor/asciidoctor-pdf', :ref => 'b9accb0c8fa8376ccf9fde5168c9a4985fafa86f'
-
+gem 'asciidoctor-pdf', '2.3.11'
 
 gem 'pygments.rb', '2.4.1'
 gem 'epubcheck-ruby', '5.1.0.0'
