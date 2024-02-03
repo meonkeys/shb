@@ -62,11 +62,12 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am46 | make _Services_ map 1:1 with mario: add dyndns, mail, Traefik | OPEN | |
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
-| am50 | print and proof it | OPEN | |
+| am50 | print and proof it | RESOLVED | |
 | am53 | spell check | OPEN | |
 | am54 | grammar check | OPEN | |
 | am55 | improve htmlproofer | OPEN | |
-| am56 | index blowout with tall chapter image and >3 columns | OPEN | |
+| am56 | index blowout with tall chapter image and >3 columns | RESOLVED | |
+| am57 | professional editing: focus on structure & style | OPEN | |
 
 ## How to build the book
 
