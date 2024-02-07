@@ -1804,6 +1804,7 @@ I recommend restic (https://restic.net) or Borg (https://borgbackup.org).
 Here's a decent comparison of restic and Borg: https://reddit.com/r/BorgBackup/comments/v3bwfg/.
 
 I use `zfs-auto-snapshot` locally to be able to quickly get at old versions of files, but I don't count this as a backup.
+mario installs `zfs-auto-snapshot` for you.
 
 == mario
 
