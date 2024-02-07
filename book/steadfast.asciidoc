@@ -3214,6 +3214,8 @@ Thanks to all my reviewers.
 
 Thanks to my family and friends for putting up with my ((FOSS)) self-hosting experiments.
 
+Thanks to the contributors to the myriad FOSS programs I used to create this book, especially Dan Allen and the Asciidoctor team.
+
 Thanks to Rob and all #underlug for help with hardware, networking, Ansible, and Traefik.
 
 Thanks to Bryan, Rob and all the Deadbeat Dads for your invaluable feedback.
