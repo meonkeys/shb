@@ -553,7 +553,7 @@ So many reasons!
 ** unlimited streaming
 ** unlimited choices
 * Fun!
-** learn and grow (see also: suffer)
+** learn and grow
 ** self-hosting is a doable challenge
 ** solve right-sized puzzles as you learn and improve
 ** be part of the thriving self-hosting community
