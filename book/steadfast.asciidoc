@@ -1475,17 +1475,16 @@ Software problems easily and often outpace hardware problems.
 
 You'll need a server.
 
-You can always pay for “compute” in someone else's cloud, but it'll end up costing more.
-For that and other various reasons I'll focus on bare metal.
+You can always pay for “compute” in someone else's cloud, but it'll end up costing more in the long run.
 
-You can start with pretty much any old desktop or laptop.
+If you're in a hurry, you can start with pretty much any old desktop or laptop.
 Use something more powerful and expandable than a Raspberry Pi, though.
 What if your users love it?
 How will you increase storage?
 What about bursty workloads?
 If you start with something too small you won't have enough speed nor expandability.
 
-I've worked with quite a few different servers and I did my homework for this self-hosting adventure, so I had a decent idea of what I wanted.
+I've worked with quite a few different servers and I did my homework for this self-hosting adventure (mostly asking my buddy Rob and pledging not to build from scratch), so I had a decent idea of what I wanted.
 
 I chose something powerful, cheap, and fast with plenty of storage and room to grow.
 I sought professional commodity hardware for its replace-ability.
@@ -1504,7 +1503,8 @@ It has several enterprise features to ease maintenance such as redundant power s
 
 Power consumption averages 130W, or about 1,140kWh per year; roughly $138.15 in Seattle.
 That's about as much as a bright incandescent light bulb, and it's a bit wasteful for one user.
-Five users though? ~228kWh/year each.
+Five users though?
+~228kWh/year each.
 That's less than the cloud server hardware required for a mobile device making use of Google's or Apple's clouds.
 Further reading on this topic:
 
@@ -3319,6 +3319,8 @@ LTS::
   Long-term support. A stable software release, supported for many years.
 mario::
   Provisioning system included with this book to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
+NAS::
+  Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<_server>>.
 NIC::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
 Nix::
