@@ -1145,7 +1145,7 @@ Always use HTTPS.
 ((ZFS)) (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
 Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of inexpensive disks) are all included and used by mario.
 
-The root partition is ext4 (not ZFS) for a few reasons:
+The root partition is ((ext4)) (not ZFS) for a few reasons:
 
 * stick as closely as possible to the default Ubuntu install
 * sidestep a ((Docker)) annoyance
@@ -1544,7 +1544,7 @@ Dogfooding keeps you honest and helps you empathize with others.
 
 (((ZFS, HDDs and)))
 I use HDDs (hard disk drives) for data storage, mainly as a cost-saving measure.
-The cost of public cloud block storage far exceeds the gigabyte-hour cost of my HDDs.
+The cost of public cloud ((block storage)) far exceeds the gigabyte-hour cost of my HDDs.
 I priced out one month of 5TB HDD block storage on AWS at $228.10.
 With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_.
 One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68 on AWS.
@@ -1563,6 +1563,21 @@ Remote ((backups)) can take a while, and that's fine.
 I use one ((SSD)) (solid-state drive) for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 Read more about SSDs and TRIM in <<Filesystem>>.
+
+An interesting alternative to HDDs is ((object storage)).
+((Nextcloud)) can use object storage directly, for example.
+There are many aspects to consider when comparing the two options, such as:
+
+* cost of storage and ((egress))
+* control, autonomy, ((sovereignty))
+* direct access to data
+* speed and means of access
+* network availability
+* ((backups)), versioning, security
+
+I went with HDDs for direct, local access to my data.
+I really wanted to know exactly where they were stored and for ultimate flexibility when I change or try new services.
+Most of my services require direct access anyway.
 
 ==== Networking
 
@@ -2155,6 +2170,12 @@ I am constantly creating and editing content locally and counting on sync to wor
 
 There are also apps for mobile devices.
 I'll come back to mobile later in the following sections.
+
+==== Object storage
+
+Nextcloud is able to use ((object storage)) for primary data storage.
+This is an advanced topic left as an exercise to the reader.
+I'll assume primary storage on a local HDD set up by mario.
 
 ==== Security
 
@@ -2969,6 +2990,7 @@ Exercises for individual practice and study groups.
 .. Hint: check if `/host/var/run/reboot-required` exists.
 . Stand up a second Nextcloud service for experiments.
 .. Use it to test out the latest release or a custom app.
+. Try Nextcloud with ((object storage)) for primary storage.
 . Adapt this guide to a Linux distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
 . Contribute to mario.
@@ -3240,6 +3262,8 @@ backend::
   I use this term to refer to either a service or server. It's something you more frequently interact with indirectly, say, via a frontend like a web or mobile UI.
 bare metal::
   Physical computing resources, as opposed to VMs. Typically offering better performance than VMs.
+block storage::
+  Cloud storage option with direct filesystem access including files and folders. Used directly/natively/locally from an OS. Size is relatively fixed and determined at creation time.
 bot::
   Short for robot. Software performing autonomous tasks such as responding to chat requests or attacking vulnerable servers.
 cattle vs. pets::
@@ -3334,6 +3358,8 @@ NIC::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
 Nix::
   A FOSS package manager advertising reproducible builds.
+object storage::
+  Relatively unlimited, typically remote cloud storage option. Actual data are abstracted: backups and structured access require special services, indexes, and software.
 OCR::
   Optical character recognition. The process of converting images of text to actual text.
 OOB::
@@ -3348,6 +3374,8 @@ PoE::
   Power over ethernet. Utilizes an ethernet cable for electricity as well as data.
 port::
   Along with an IP address, a number used to connect to a service. Reserved port numbers such as 80 for HTTP are listed in `/etc/services`.
+partition::
+  Delineated section of a HDD or block storage, formatted with a filesystem such as ext4 or ZFS.
 port forward::
   Router configuration to send traffic for a particular port to a computer inside a LAN.
 process::
