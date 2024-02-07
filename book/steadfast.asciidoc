@@ -242,6 +242,7 @@ When you do, include references or other supporting material.
 
 === Conventions
 
+(((style conventions)))
 (((typography)))
 Here's how certain types of content will appear in the text.
 
@@ -261,8 +262,7 @@ I'll use “example.com” where you'll use your actual domain name.
 
 === Who am I?
 
-(((FOSS)))
-I'm a dad, tech entrepreneur, and FOSS (free and open source software) enthusiast.
+I'm a dad, tech entrepreneur, and ((FOSS)) (free and open source software) enthusiast.
 I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write.
 I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
 
@@ -369,8 +369,7 @@ This book is for people who are kind to others, brave in trying new things, curi
 This book is for people who want to know where their data live, and to be able to work all kinds of magic with it.
 It's a “from scratch” or “the hard way” approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
 
-(((FOSS)))
-This book is for people curious about or already biased towards FOSS.
+This book is for people curious about or already biased towards ((FOSS)).
 And--as much as I'll blather on about FOSS--I'm not here to judge.
 I'm here to _grow_, primarily by sharing and learning.
 
@@ -439,17 +438,17 @@ You can usually find demo instances running for particular projects.
 There are cloud providers that will run a service for you and host your data.
 
 There are one-click-install appliances with many ready-to-go apps.
-FreedomBox (https://freedombox.org) is one promising contender in this space.
+((FreedomBox)) (https://freedombox.org) is one promising contender in this space.
 
 There are shortcuts and frontends for self-hosting.
-For example, openmediavault (https://openmediavault.org) looks like a cool way to build a DIY (do it yourself) NAS (network attached storage).
+For example, openmediavault (https://openmediavault.org) looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
 
 And there are countless more of these kinds of partial or full-service self-hosting solutions.
 More:
 
-* YunoHost (https://yunohost.org) - not considered, I prefer always using containers
-* CasaOS (https://casaos.io) - new, interesting, very little documentation
-* Runtipi (https://runtipi.io) - new, interesting, uses Docker Compose and Traefik
+* ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
+* ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
+* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and Traefik
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
@@ -479,7 +478,7 @@ After brief reviews, I find they generally:
 * make opinionated tech choices I don't agree with
 * have a limited list of apps in their app stores and often exclude the ones I want
 * have too many apps in their app store, without good ways to compare quality, privacy, features
-* are GUI (graphical user interface)-focused where I prefer working on a command line
+* are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
 
 Still, check 'em out.
 They might work better for you if you don't need the level of power and control provided by this book.
@@ -489,14 +488,14 @@ If I missed something, I'd love to learn about it!
 
 Here are more related and interesting self-hosting solutions I learned about too late in the writing process to research at all:
 
-* Ansible NAS (https://github.com/davestephens/ansible-nas)
-* Cosmos Cloud (https://cosmos-cloud.io)
-* DockSTARTer (https://dockstarter.com)
-* HomelabOS (https://homelabos.com)
-* Start9 (https://start9.com)
-* MicroCloud (https://canonical.com/microcloud)
-* LibreServer (https://libreserver.org)
-* UBOS (https://ubos.net)
+* ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
+* ((Cosmos Cloud)) (https://cosmos-cloud.io)
+* ((DockSTARTer)) (https://dockstarter.com)
+* ((HomelabOS)) (https://homelabos.com)
+* ((Start9)) (https://start9.com)
+* ((MicroCloud)) (https://canonical.com/microcloud)
+* ((LibreServer)) (https://libreserver.org)
+* ((UBOS)) (https://ubos.net)
 
 ==== Command line
 
@@ -507,7 +506,7 @@ It's more than a relic from the old days, it's also a source of power and joy.
 
 * pass:macros[https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line]
 
-I use GUIs often, and I often _prefer_ the command line and only add a GUI layer when I need one.
+I use GUIs often, and I often _prefer_ the command line and only add a ((GUI)) layer when I need one.
 It's often easier and faster to build and maintain a command line interface.
 It gives me more control and forces me to learn.
 It helps me understand what's happening and why.
@@ -563,7 +562,7 @@ So many reasons!
 ** migrate to something else easily if and when you need to (for example, using a newer/better photo server once one becomes available)
 ** it's really the _data_ that must be safeguarded, the frontends to those data (file viewers, editors, etc) will change when _you_ choose
 * Democratize computing
-** self-hosted software (especially FOSS) enables data and computational autonomy for more people
+** self-hosted software (especially ((FOSS))) enables data and computational autonomy for more people
 * Conserve electricity
 ** backend cloud power per device drops dramatically with a few users
 ** save even more power the more users you add
@@ -589,7 +588,7 @@ So many reasons!
 * Avoid vendor lock-in
 ** You'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
 ** When you buy something, _it's yours_.
-DRM should be illegal.
+((DRM)) should be illegal.
 ** Is there an integration you count on?
 Sometimes a service stops working with another service.
 This happens less often with ((FOSS)) because anyone can simply fork a project.
@@ -674,7 +673,7 @@ Sometimes you don't and can't.
 
 If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
 
-If you don't take care with backups and security, you'll risk time, energy, and trust with people you care about.
+If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
 
 On-premise self-hosting entails additional meatspace-specific considerations.
 You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
@@ -739,7 +738,7 @@ It's worth a moment's thought.
 Our data matter and our personal choices matter.
 The impact spreads to the groups you are a part of, as does the opportunity for improvement.
 
-I believe self-hosting FOSS is doable and affords many practical benefits over non-FOSS.
+I believe self-hosting ((FOSS)) is doable and affords many practical benefits over non-FOSS.
 
 Hang in there and give me some feedback.
 You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
@@ -816,7 +815,7 @@ These can be easily OCR'd and managed with tools like Paperless-ngx (https://doc
 ===== Jellyfin
 
 ((Jellyfin)) is a personal streaming media server.
-I was stoked to see how Jellyfin showed up as an excellent and complete FOSS alternative to Plex.
+I was stoked to see how Jellyfin showed up as an excellent and complete ((FOSS)) alternative to ((Plex)).
 
 ==== Bad surprises
 
@@ -839,7 +838,7 @@ See <<_customization>>.
 
 ===== Jitsi
 
-((Jitsi)) is a self-hostable FOSS video call platform.
+((Jitsi)) is a self-hostable ((FOSS)) video call platform.
 I gave up trying to get Jitsi running in Docker.
 I recall lots of open ports or port ranges being a problem.
 This one might be easier in a virtual machine.
@@ -866,7 +865,7 @@ I hope this book inspires you with many positive surprises and helps you and you
 This book assumes some prerequisite skills.
 You must be able to:
 
-* configure your router and LAN (local area network)
+* configure your router and ((LAN)) (local area network)
 * install Linux on a computer (hereafter referred to as your _server_)
 * execute programs using a command line
 * connect to your server with SSH (secure shell)
@@ -1030,7 +1029,7 @@ Examples: notes, photos, documents, personal information.
 
 Recommendations:
 
-. store on encrypted media, including backups
+. store on encrypted media, including ((backups))
 . access only with up-to-date software you trust
 . disallow ((WAN access)) to these data
 
@@ -1040,19 +1039,17 @@ Once you've categorized your data, think about how people will get to it.
 At home you can generally just connect directly to your server.
 When you're away or you're trying to share with someone else, you're talking WAN access.
 
-That is: remote access to your services (hence: your LAN and your data), through your router/firewall.
-(((Nextcloud)))
-Say: port forwarding HTTPS traffic through your router/firewall to your Nextcloud server.
+That is: remote access to your services (hence: your ((LAN)) and your data), through your router/firewall.
+Say: port forwarding HTTPS traffic through your router/firewall to your ((Nextcloud)) server.
 Port forwarding is both risky and convenient.
 
 NOTE: Consider alternatives to port forwarding, such as using headscale to set up your own tailnet (https://headscale.net).
 
 ==== Threat model
 
-(((threat model)))
 Let's back up a step and talk about threat modeling.
 Your _threat model_ is how you'll consider threats to your data and how you'll mitigate these threats.
-With your threat model in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
+With your ((threat model)) in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
 
 WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey.
 This guide is not sufficient for your threat model.
@@ -1084,7 +1081,7 @@ Bot automatically attempts exploit against known vulnerability in Nextcloud serv
 Exploit succeeds, bot owner gains access to compute resources and personal information.
 * *Mitigations*
 ** Keep Nextcloud server up to date.
-** Secure WAN boundary: monitor traffic logs, employ an IPS (intrusion prevention system), only cross into LAN using a VPN (virtual private network).
+** Secure ((WAN)) boundary: monitor traffic logs, employ an ((IPS)) (intrusion prevention system), only cross into ((LAN)) using a ((VPN)) (virtual private network).
 ** Close WAN boundary: disallow all inbound WAN access.
 
 (((Nextcloud, security)))
@@ -1097,10 +1094,10 @@ It's a great idea.
 
 ==== Wireguard
 
-A few years ago, VPN technology got a major upgrade with Wireguard.
+A few years ago, ((VPN)) technology got a major upgrade with Wireguard.
 From a user perspective there's no “logging in” as with older VPNs.
-Wireguard is fast, easy, and secure.
-When you're away from home, you can simply flip it on to teleport back into your LAN.
+((Wireguard)) is fast, easy, and secure.
+When you're away from home, you can simply flip it on to teleport back into your ((LAN)).
 
 If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys.
 Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your attack surface.
@@ -1109,7 +1106,9 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 
 ==== More tips
 
-* Maintain useful encrypted backups.
+((encryption))
+((firewall))
+* Maintain useful encrypted ((backups)).
 Perform test restores to know they are useful.
 See <<_backups>>.
 * Avoid running commands as the `root` user.
@@ -1117,11 +1116,11 @@ See <<_backups>>.
 * Use firewalls.
 * Use strong passwords.
 * Be very careful when port forwarding or don't do it at all.
-* Be vigilant about all the usual stuff too: phishing, malware, SMS spoofing, and social attacks.
+* Be vigilant about all the usual stuff too: ((phishing)), ((malware)), SMS spoofing, and social attacks.
 ** Take caution with email links and attachments.
 ** Don't install untrusted software.
 Always use HTTPS.
-** Use a special passphrase with your mobile carrier.
+** Use a special passphrase with your ((mobile)) carrier.
 ** Question urgency and suspicious requests.
 * Send unrecognized calls to voicemail.
 * Pay attention to data breaches and protect your identity.
@@ -1136,17 +1135,15 @@ Always use HTTPS.
 
 === Filesystem
 
-(((ZFS)))
-ZFS (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
-(((RAID)))
-Encryption, automatic lightweight snapshots and RAID (redundant array of inexpensive disks) are all included and used by mario.
+((ZFS)) (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
+Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of inexpensive disks) are all included and used by mario.
 
 The root partition is ext4 (not ZFS) for a few reasons:
 
 * stick as closely as possible to the default Ubuntu install
-* sidestep a Docker annoyance
+* sidestep a ((Docker)) annoyance
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
-* we have less of a need for backups of the OS
+* we have less of a need for ((backups)) of the OS
 ** it doesn't/shouldn't change, or at least its changes will be managed upstream (e.g. OS package updates)
 
 Docker volumes will be on ZFS.
@@ -1155,6 +1152,7 @@ The container's filesystem--everything besides mounted volumes with persistent d
 ==== ZFS trim
 
 (((SSD)))
+(((TRIM)))
 (((ZFS, SSD TRIM)))
 Note that if you use ZFS with SSDs, you may sometimes notice your system performing poorly.
 On my Ubuntu desktop this happens once a month when the scheduled “trim” cron job starts.
@@ -1186,12 +1184,12 @@ If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, 
 
 === Operating system
 
-mario requires a 64-bit Ubuntu server.
+mario requires a 64-bit ((Ubuntu)) server.
 Other Debian Linux flavors may work as well.
 
 Ubuntu LTS (long-term support) releases are the most stable so we'll go with that.
 
-I sought to minimize customizations to the operating system from a default install to ease its eventual re-creation.
+I sought to minimize customizations to the ((operating system)) from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
 
 Not mucking about on the server takes discipline, especially for old-school hands-on sysadmins like me.
@@ -1546,23 +1544,22 @@ One month's worth of hourly snapshots (the closest comparable I could find) is a
 That's $535.67 total, which is about what I spent on my drives.
 So I broke even in a month and the drives should last _years_.
 
-(((RAID)))
 For redundancy I recommend purchasing two of the same drive.
-We'll configure them mirrored (RAID 1).
+We'll configure them mirrored (((RAID)) 1).
 This increases redundancy and read performance (for most reads) and halves usable storage space.
 
 HDDs are plenty fast when measured from the standpoint of self-hosted service response time.
+((operating system))
 The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM.
-Remote backups can take a while, and that's fine.
+Remote ((backups)) can take a while, and that's fine.
 
-(((SSD)))
-I use one SSD (solid-state drive) for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
+I use one ((SSD)) (solid-state drive) for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 Read more about SSDs and TRIM in <<Filesystem>>.
 
 ==== Networking
 
-If you are hosting at home, you need a reliable WAN (wide-area network) connection if you want to be able to connect from other places besides your LAN.
+If you are hosting at home, you need a reliable WAN (wide-area network) connection if you want to be able to connect from other places besides your ((LAN)).
 
 Use wired ethernet cables to your server, not Wi-Fi.
 
@@ -1777,7 +1774,7 @@ Follow all logged events for the host with `journalctl -f`.
 
 Backups are one critically important thing you'll rarely get credit for, only suffering when they fail.
 
-Make backups and test them.
+Make ((backups)) and test them.
 Follow the 3-2-1 rule of thumb: make *3* backups.
 Store at least *2* local copies on different media.
 Have *1* remote backup.
@@ -1913,7 +1910,7 @@ Here's a policy with way too much access that nevertheless works:
 It is handy to have an _internal_ DNS server in addition to a public one (e.g. Route 53).
 
 Inside your private network you can use handy domain names or even make up your own TLD (top-level domain).
-I recommend using internal hostnames matching public ones, but pointing to LAN-only private IP addresses.
+I recommend using internal hostnames matching public ones, but pointing to ((LAN))-only private IP addresses.
 For example:
 
 [cols="2,3,2,2"]
@@ -2809,7 +2806,7 @@ networks:
     external: true
 ----
 
-Note the middleware to only allow traffic from your LAN.
+Note the middleware to only allow traffic from your ((LAN)).
 This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the Traefik container to set up the middleware, for example:
 
 ....
@@ -2827,7 +2824,7 @@ Once you get that running, you can use the Nextcloud AI integration app as a con
 === Pi-hole
 
 (((Pi-hole)))
-Running a Pi-hole (https://pi-hole.net) service in your LAN helps block advertisements, trackers, and bad actors using DNS (Domain Name System) block lists.
+Running a Pi-hole (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using DNS (Domain Name System) block lists.
 
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
@@ -2842,13 +2839,13 @@ My Pi-hole server sits between my router's DNS server and all clients.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
 Queries for host names not on any block list will be answered directly or sent upstream.
-I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my LAN as necessary.
+I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my ((LAN)) as necessary.
 
 It's easy to block individual host names or entire lists as you see fit.
 I've used this as an “impulse blocker”, helping the kids avoid distractions during remote school.
 
 The Pi-Hole also has a list of local DNS entries.
-I add a few host names to this list for servers inside my LAN.
+I add a few host names to this list for servers inside my ((LAN)).
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
 For example, DNS over HTTPS in Firefox.
@@ -2996,7 +2993,7 @@ Work around this and share your solution with others.
 . Try Nix and NixOS (https://nixos.org).
 . Roll your own Linux distro.
 . Build, configure and deploy an OPNsense firewall (https://opnsense.org).
-. Set up your own headscale tailnet for remote LAN access (https://headscale.net).
+. Set up your own headscale tailnet for remote ((LAN)) access (https://headscale.net).
 . Leverage existing ownership and permission OS security measures.
 .. Run containers as unprivileged users.
 .. Use appropriate ownership and permissions for persistent container data.
@@ -3187,7 +3184,7 @@ More than you could listen to in your lifetime.
 Same with YouTube for video, Audible for audio books, Alibaba for flashlights.
 
 You will not get unlimited content from a self-hosted media server.
-You'll only have the DRM-free content you bought or created and saved.
+You'll only have the ((DRM))-free content you bought or created and saved.
 
 But do you _need_ unlimited content.
 The corporations would like you to believe so.
@@ -3271,6 +3268,8 @@ DRM::
   Digital restrictions management (https://en.wikipedia.org/wiki/Digital_rights_management). Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
 dVCS::
   Distributed version control system. These days that pretty much means git (https://git-scm.com).
+firewall::
+  Means of controlling network traffic between computers.
 fork::
   Verb: to split one software project into two. Noun: a derivative software work. The fork diverges from the original (otherwise it would simply be a copy). One or many software projects may succeed the original.
 FOSS::
