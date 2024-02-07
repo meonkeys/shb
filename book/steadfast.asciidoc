@@ -260,6 +260,13 @@ I'll use “example.com” where you'll use your actual domain name.
 
 == Background
 
+You might be thinking: "this looks like a lot of background!"
+And you'd be right.
+
+I go deep into background here because of something I found while giving talks about self-hosting: people know how to learn and discern, they wish for meaningful motivation to commit to learning.
+
+I hope you find that here.
+
 === Who am I?
 
 I'm a dad, tech entrepreneur, and ((FOSS)) (free and open source software) enthusiast.
