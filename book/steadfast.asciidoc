@@ -2947,7 +2947,7 @@ If they already have one, buy one for a local school or library.
 
 === How to build this book
 
-I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`.
+I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `{docname}{docfilesuffix}`.
 The file is AsciiDoc (https://asciidoc.org) plain text markup.
 
 Run `./build.sh` to generate your own typeset outputs.
