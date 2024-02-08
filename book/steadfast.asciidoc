@@ -30,7 +30,7 @@ endif::[]
 :experimental:
 :keywords: linux, web, servers, sysadmin, computers, tech, self-hosting, FOSS
 :description: Quickly learn the hows and whys of reliable self-hosted web services.
-:revnumber: {build_git_commit}
+:revnumber: {build_git_tag}
 :revdate: {build_date_time}
 :revremark: {build_locale_lang}
 
