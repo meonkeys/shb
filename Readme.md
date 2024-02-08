@@ -26,7 +26,16 @@ I'm looking for testimonials! Ping me if you're up for this.
 
 ## Book formats
 
-[Download PDF, HTML, EPUB, MOBI, and FB2 versions here](https://github.com/meonkeys/shb-review/releases/).
+[Download PDF, HTML, and EPUB versions here](https://github.com/meonkeys/shb-review/releases/).
+
+| version    | device                | quality |
+|------------|-----------------------|---------|
+| EPUB       | calibre e-book viewer | good    |
+| EPUB       | Kobo e-reader         | ok      |
+| EPUB       | FBReader              | bad     |
+| HTML       | Firefox web browser   | good    |
+| screen PDF | Firefox web browser   | good    |
+| screen PDF | evince PDF viewer     | good    |
 
 ## Feedback ideas
 
