@@ -1,3 +1,11 @@
+2024-02-08  Adam Monsen <haircut@gmail.com>
+
+	1.0 - manuscript / evaluation copy for publishers
+
+	* Typeset to 6" x 9" (US Trade) size. Added placeholder foreword.
+
+	* Overhaul and simplify build. Split print and screen PDF generation.
+
 2024-01-14  Adam Monsen <haircut@gmail.com>
 
 	v5 - reviewers only
