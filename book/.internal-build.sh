@@ -62,14 +62,6 @@ else
     asciidoctor-epub3 "${common_args[@]}" $book_src
     echo "💾	wrote $title.epub"
 
-    echo '🖨️	typeset FB2'
-    asciidoctor-fb2 "${common_args[@]}" $book_src
-    echo "💾	wrote $title.fb2.zip"
-
-    echo '🖨️	typeset Mobi'
-    asciidoctor-epub3 "${common_args[@]}" --attribute ebook-format=kf8 $book_src
-    echo "💾	wrote $title-kf8.epub and $title.mobi"
-
     echo '🖨️	typeset screen-optimized PDF'
     output=$title.screen.pdf
     asciidoctor-pdf "${common_args[@]}" --attribute shb-screenPDF --require ./extensions.rb --out-file $output $book_src

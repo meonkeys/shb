@@ -26,7 +26,16 @@ I'm looking for testimonials! Ping me if you're up for this.
 
 ## Book formats
 
-[Download PDF, HTML, EPUB, MOBI, and FB2 versions here](https://github.com/meonkeys/shb-review/releases/).
+[Download PDF, HTML, and EPUB versions here](https://github.com/meonkeys/shb-review/releases/).
+
+| version    | device                | quality |
+|------------|-----------------------|---------|
+| EPUB       | calibre e-book viewer | good    |
+| EPUB       | Kobo e-reader         | ok      |
+| EPUB       | FBReader              | bad     |
+| HTML       | Firefox web browser   | good    |
+| screen PDF | Firefox web browser   | good    |
+| screen PDF | evince PDF viewer     | good    |
 
 ## Feedback ideas
 
@@ -62,11 +71,9 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am46 | make _Services_ map 1:1 with mario: add dyndns, mail, Traefik | OPEN | |
 | am48 | use service nicknames consistently: e.g. `media.example.com` | OPEN | |
 | am49 | improve FOSS "profit" argument | OPEN | |
-| am50 | print and proof it | RESOLVED | |
-| am53 | spell check | OPEN | |
-| am54 | grammar check | OPEN | |
+| am53 | spell check | RESOLVED | |
+| am54 | grammar check | RESOLVED | |
 | am55 | improve htmlproofer | OPEN | |
-| am56 | index blowout with tall chapter image and >3 columns | RESOLVED | |
 | am57 | professional editing: focus on structure & style | OPEN | |
 
 ## How to build the book
@@ -75,7 +82,7 @@ See "How to build this book" in the book itself.
 
 ## Copyright and license
 
-This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen. All rights reserved.
+This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen. All rights reserved. Creative Commons licensing does not (yet!) apply.
 
 ## Editing stages reference
 
