@@ -82,7 +82,7 @@ See "How to build this book" in the book itself.
 
 ## Copyright and license
 
-This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen. All rights reserved.
+This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen. All rights reserved. Creative Commons licensing does not (yet!) apply.
 
 ## Editing stages reference
 
