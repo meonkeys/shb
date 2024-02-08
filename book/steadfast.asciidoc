@@ -577,7 +577,7 @@ So many reasons!
 ** see linked articles in <<_server>>
 * Save money
 ** in the long run
-** especially if/when your group's data requirements enter the terabyte range
+** especially once your users' data storage requirements enter the terabyte range
 ** save more with every service you run
 ** avoid unexpected public cloud costs
 *** when you want to download your data and move it somewhere else
