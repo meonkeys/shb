@@ -154,8 +154,9 @@ See <<_contributions>>.
 This book was generated
 
 * on *{build_date_time}*
-* with `LANG=*{build_locale_lang}*`
-* from `{docname}{docfilesuffix}` at commit *{build_git_commit}*
+* with `LANG` set to `*{build_locale_lang}*`
+* from source `{docname}{docfilesuffix}`
+* at commit `{build_git_commit}`, branch `{build_git_branch}`, tag `{build_git_tag}`
 * using *{build_os_release}*
 
 === Copyright and license

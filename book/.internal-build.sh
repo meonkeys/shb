@@ -31,6 +31,8 @@ common_args=(
     --attribute build_date_time="$BUILD_DATE_TIME"
     --attribute build_locale_lang="$BUILD_LOCALE_LANG"
     --attribute build_git_commit="$BUILD_GIT_COMMIT"
+    --attribute build_git_branch="$BUILD_GIT_BRANCH"
+    --attribute build_git_tag="$BUILD_GIT_TAG"
     --attribute build_os_release="$BUILD_OS_RELEASE"
     --warnings
     --trace
