@@ -2,8 +2,7 @@
 
 	1.0 - manuscript / evaluation copy for publishers
 
-	* Typeset print PDF to 6" x 9" (US Trade) size. Added placeholder
-	foreword.
+	* Typeset print PDF to 6" x 9" (US Trade) size. Add placeholder foreword.
 
 	* Overhaul and simplify build. Split print and screen PDF generation.
 
@@ -11,7 +10,7 @@
 
 	v5 - reviewers only
 
-	* Added final image (squeaky-clean-chicken.png). Still accepting edits.
+	* Add final image (squeaky-clean-chicken.png). Still accepting edits.
 
 	* I'm working on a print ready PDF. I want a smaller-size A5 book rather
 	than the larger default A4 size.
@@ -42,9 +41,9 @@
 
 	* Many copy edits and revisions
 
-	* Reordered some sections
+	* Reorder some sections
 
-	* Ported build from Pandoc to Asciidoctor - more and better-looking outputs
+	* Port build from Pandoc to Asciidoctor - more and better-looking outputs
 
 2023-11-10  Adam Monsen <haircut@gmail.com>
 

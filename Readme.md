@@ -139,6 +139,8 @@ This is the final step in the editing process. A proofreader examines the final 
 * use [one sentence](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) [per line](https://sive.rs/1s)
 * shell scripts
     * prefer long form for command line flags, e.g. `--attribute` instead of `-a`
+* release versioning
+    * use semver-like major, minor, patch version numbers
 * source control
     * commit early and often
     * group logically related changes into single commits
@@ -155,6 +157,10 @@ This is the final step in the editing process. A proofreader examines the final 
             * <https://mifosforge.jira.com/wiki/spaces/MIFOS/pages/4456742/Commit+Log+Guide>
             * <https://lore.kernel.org/git/7vr4waoics.fsf@alter.siamese.dyndns.org/>
             * <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
+    * ChangeLog
+        * one entry per release
+        * summarize major changes since last release
+        * use infinitve forms for "xyz happened" statements
 * use `shb` namespace for document attributes
 	* short for "self-hosting book"
 	* example: `shb-printPDF`, used when generating a PDF for printing
