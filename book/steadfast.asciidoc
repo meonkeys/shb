@@ -581,7 +581,7 @@ So many reasons!
 ** see linked articles in <<_server>>
 * Save money
 ** in the long run
-** especially if/when your group's data requirements enter the terabyte range
+** especially once your users' data storage requirements enter the terabyte range
 ** save more with every service you run
 ** avoid unexpected public cloud costs
 *** when you want to download your data and move it somewhere else
@@ -2945,13 +2945,13 @@ Please buy this book!
 
 If you already have a copy, buy one for a friend.
 
-If they already have one, buy one for a local school or library.
+If they already have a copy, buy one for a school or request it at your library.
 
 * https://selfhostbook.com/buy
 
 === How to build this book
 
-I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `steadfast.asciidoc`.
+I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `{docname}{docfilesuffix}`.
 The file is AsciiDoc (https://asciidoc.org) plain text markup.
 
 Run `./build.sh` to generate your own typeset outputs.
@@ -3238,6 +3238,7 @@ I truly couldn't have done this alone and I am so, so thankful.
 Thanks to my daughter for her fantastic illustrations.
 
 Thanks to all my reviewers.
+Special thanks to Eva for excellent developmental editing, copy editing, proof reading, line editing, and technical review.
 
 Thanks to my family and friends for putting up with my ((FOSS)) self-hosting experiments.
 
