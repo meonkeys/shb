@@ -695,7 +695,7 @@ I wrote the book originally in Markdown plain text in my steadfast text editor, 
 I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
 Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
-In short order I converted the book to Asciidoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
+In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code -- you're welcome to hack away at it.
