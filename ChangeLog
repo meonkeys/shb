@@ -2,7 +2,8 @@
 
 	1.0 - manuscript / evaluation copy for publishers
 
-	* Typeset to 6" x 9" (US Trade) size. Added placeholder foreword.
+	* Typeset print PDF to 6" x 9" (US Trade) size. Added placeholder
+	foreword.
 
 	* Overhaul and simplify build. Split print and screen PDF generation.
 
