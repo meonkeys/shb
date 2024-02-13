@@ -2323,7 +2323,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Recognize |face recognition |*No*.
 |Suspicious login |warn about suspicious IPs |*No*. Too many false positives.
 |Tasks |tasks/todos |*Yes*.
-|Talk |video and text chat |*No*. Works, just slower and not as well as other video and text chat services/apps. This is a very competitive and crowded space. I recommend Signal instead (https://signal.org).
+|Talk |video and text chat |*No*. Works, just not as well as other video and text chat services/apps. I do use it for my chicken safety system and I see it improving a lot with each release. For now I recommend Signal instead (https://signal.org).
 |Temporary files lock |avoid edit conflicts |*Yes*.
 |Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown.
 |Video converter |transcode videos |*No*. Cool idea but the project appears dormant.
