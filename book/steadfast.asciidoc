@@ -49,8 +49,7 @@ IMPORTANT: Evaluation copy.
 All rights reserved.
 Creative commons licensing does not apply.
 
-[.line-through]#Some rights reserved.
-See <<Copyright and license>>.#
+See <<Copyright and license>>.
 
 Paperback ISBN FIXME.
 
@@ -129,6 +128,10 @@ This book was generated
 _{doctitle}_ is {copyright}.
 
 ==== Copy this book
+
+IMPORTANT: This is an evaluation copy of an unpublished manuscript.
+All rights reserved.
+What follows is the anticipated licensing text to be used upon publication.
 
 Please make copies and derivative works.
 This book is meant to be enjoyed and shared.
