@@ -202,7 +202,7 @@ I'll make it easy to contact me about missing or incorrect information.
 Please do.
 When you do, include references or other supporting material.
 
-=== Conventions
+=== Style
 
 (((style conventions)))
 (((typography)))
