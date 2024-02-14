@@ -67,8 +67,9 @@ epubOutput = f'{title}.epub'
 printPdfOutput = f'{title}.print.pdf'
 screenPdfOutput = f'{title}.screen.pdf'
 
+extendConverter = ['--require', './extensions.rb']
+
 for arg in args:
-    extendConverter = ['--require', './extensions.rb']
     match(arg):
         case 'html':
             command = ['asciidoctor'] + commonArgs + ['--attribute', 'data-uri', bookSrc]
