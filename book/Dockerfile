@@ -24,4 +24,4 @@ COPY Gemfile .
 
 RUN bundle install
 
-CMD ["/bin/bash", ".internal-build.sh"]
+ENTRYPOINT ["/bin/python3", ".internal-build.py"]
