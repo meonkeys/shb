@@ -62,45 +62,6 @@ image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Su
 
 toc::[]
 
-== Foreward
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Abraham Lincoln
-
 == Introduction
 
 === Thesis
@@ -699,7 +660,7 @@ I wrote the book originally in Markdown plain text in my steadfast text editor, 
 I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
 Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
-In short order I converted the book to Asciidoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
+In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code -- you're welcome to hack away at it.
@@ -2327,7 +2288,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Recognize |face recognition |*No*.
 |Suspicious login |warn about suspicious IPs |*No*. Too many false positives.
 |Tasks |tasks/todos |*Yes*.
-|Talk |video and text chat |*No*. Works, just slower and not as well as other video and text chat services/apps. This is a very competitive and crowded space. I recommend Signal instead (https://signal.org).
+|Talk |video and text chat |*No*. Works, just not as well as other video and text chat services/apps. I do use it for my chicken safety system and I see it improving a lot with each release. For now I recommend Signal instead (https://signal.org).
 |Temporary files lock |avoid edit conflicts |*Yes*.
 |Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown.
 |Video converter |transcode videos |*No*. Cool idea but the project appears dormant.

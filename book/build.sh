@@ -30,13 +30,6 @@ echo "🏗️	start at $(date)"
 
 BUILD_TYPE=full
 
-if [[ "${1:-}" == "--small" ]] || [[ "${1:-}" == "-s" ]]; then
-    BUILD_TYPE=small
-    echo '🎁	small build'
-else
-    echo '🍽️	full build'
-fi
-
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 WORK_DIR=/usr/src/app/book
 GID="$(id -g)"
@@ -75,6 +68,7 @@ sudo docker run \
     --env BUILD_GIT_TAG="$BUILD_GIT_TAG" \
     --env BUILD_OS_RELEASE="$BUILD_OS_RELEASE" \
     --env BUILD_TYPE="$BUILD_TYPE" \
-    shb-asciidoctor
+    shb-asciidoctor \
+    "$@"
 
 echo "🏗️	done (${SECONDS}s elapsed)"
