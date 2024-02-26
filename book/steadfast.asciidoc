@@ -390,7 +390,7 @@ If you feel I've completely omitted proper detail about something critically rel
 This book is not for the heavily-resourced already-done-thats.
 If you have $50k and unlimited time to spend on your concrete bunker homelab... well then, may I have a tour?
 I would LOVE to see that.
-If you are more curious than certain you may still enjoy learning from my choices and I'd appreciate your feedback.
+If you are more curious than certain you may still enjoy learning from my choices.
 
 I'm not writing for hard-line software patent/license experts/activists.
 These wonderful folks will spot my intentional use of the word _open_ and omission of the word _libre_.
