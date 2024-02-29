@@ -8,7 +8,7 @@ This is an awesome book about self hosting with code to help you get started.
 |------------|---------------------------------------|
 | `book/`    | sources for the book                  |
 | `mario/`   | sources for mario provisioning tool   |
-| `website/` | sources for https://selfhostbook.com/ |
+| `pelican/` | sources for https://selfhostbook.com/ |
 
 ## Book formats
 

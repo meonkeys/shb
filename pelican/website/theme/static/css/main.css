@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    background: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* navigation -- different than article/page headers */
+body > header {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+main {
+    width: 660px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	padding-right: 0.5em;
+}
+
+nav ul li:after {
+	content: "·";
+	margin-left: 0.5em;
+}
+
+nav ul li:last-child:after {
+	content: "";
+}
+
+nav ul li .active {
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px;
+}
+
+nav ul li :not(.active) {
+    text-decoration: none;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 5px;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: "side main main";
+	grid-gap: 2em;
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.sidebar {
+	font-size: 0.9em;
+	grid-area: side;
+}
+
+#book-cover {
+    width: 256px;
+}
+
+.date-published, .date-modified {
+    font-size: smaller;
+    font-style: italic;
+}
+
+#article-separator {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+	.container {
+		display: block;
+	}
+
+    .sidebar {
+        text-align: center;
+    }
+
+	main {
+		width: auto;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #14131c;
+		color: white;
+	}
+
+    a {
+		color: #ffd662;
+	}
+
+	a:visited {
+		color: #d9b653;
+	}
+}
