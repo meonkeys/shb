@@ -25,7 +25,7 @@ Beta readers are expected to:
 
 You may seek an exception to these expectations; just ask.
 
-Please [contact us]({filename}/pages/contact.md) and let us know you want to be a beta reader.
+Please [contact me]({filename}/pages/contact.md) and let me know you want to be a beta reader.
 
 ## How it works
 
