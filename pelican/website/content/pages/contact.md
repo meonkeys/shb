@@ -18,4 +18,4 @@ It is invite-only, encrypted, and currently only available to members of the [be
 
 ### Chat rules
 
-See our [Community rules](/#_community_rules).
+See [rules]({filename}/pages/rules.md).
