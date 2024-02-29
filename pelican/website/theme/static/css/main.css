@@ -70,7 +70,7 @@ nav ul li :not(.active) {
     width: 256px;
 }
 
-.date-published, .date-modified {
+.date-published, .date-modified, .article-authors, .article-category, .article-tags {
     font-size: smaller;
     font-style: italic;
 }

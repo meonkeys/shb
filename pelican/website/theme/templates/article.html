@@ -41,19 +41,19 @@
     </time></p>
     {% endif %}
     {% if article.authors %}
-    <address>
+    <address class="article-authors">
       By {% for author in article.authors %}
           <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
         {% endfor %}
     </address>
     {% endif %}
     {% if article.category %}
-    <p>
+    <p class="article-category">
         Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     </p>
     {% endif %}
     {% if article.tags %}
-    <p>
+    <p class="article-tags">
         Tags:
         {% for tag in article.tags %}
             <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
