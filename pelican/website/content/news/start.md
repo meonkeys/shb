@@ -7,6 +7,7 @@ I'm going to write a book!
 Wish me luck.
 
 I got a server running (thanks Rob!) and it has been working well for a few years now.
-Nextcloud is kinda the main thing I use the most, but I'm experimenting with a bunch of self-hosted services.
+I'm experimenting with a bunch of self-hosted services.
+Mostly Nextcloud, Jellyfin, and Wallabag.
 
 Seems worth writing about.
