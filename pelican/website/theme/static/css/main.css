@@ -75,7 +75,7 @@ nav li :not(.active), .sidebar a:not(.active) {
     font-style: italic;
 }
 
-#article-separator {
+.article-separator {
     text-align: center;
 }
 
