@@ -79,6 +79,10 @@
     </header>
 
     <div class="container">
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
     <div class="sidebar">
         <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/media/book-cover.jpg" alt="book cover art for {{ SITENAME }}" id="book-cover">
         <h2>Latest news</h2>
@@ -93,10 +97,6 @@
         {% endfor %}
         </ul>
     </div> <!-- .sidebar -->
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
     </div> <!-- .container -->
 </body>
 </html>

@@ -79,7 +79,7 @@ nav li :not(.active), .sidebar a:not(.active) {
     text-align: center;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	.container {
 		display: block;
 	}
