@@ -87,9 +87,11 @@
         {% else %}
             {% set consistent_list_of_articles = articles %}
         {% endif %}
+        <ul>
         {% for article in consistent_list_of_articles %}
-        <p><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - <time class="date-modified" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></p>
+        <li><a href="{{ SITEURL }}/{{ article.url }}" {% if article.url[0:] in output_file %} aria-current="page" class="active" {% endif %}>{{ article.title }}</a> - <time class="date-modified" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></li>
         {% endfor %}
+        </ul>
     </div> <!-- .sidebar -->
     <main>
         {% block content %}
