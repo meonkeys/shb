@@ -34,11 +34,13 @@
       rule: allow
       name: OpenSSH
 
+# FIXME - don't need this - Docker opens it
 - name: Allow insecure HTTP traffic
   ufw:
       rule: allow
       port: http
 
+# FIXME - don't need this - Docker opens it
 # HTTP/3 requires TCP and UDP. This appears to allow both.
 - name: Allow secure HTTP traffic
   ufw:
