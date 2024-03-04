@@ -8,12 +8,6 @@ PATH = "content"
 
 TIMEZONE = 'US/Pacific'
 
-# When set, I get this likely spurious warning: "Locale could not be set. Check the LOCALE setting, ensuring it is valid and available on your system."
-#LOCALE = ('en_US')
-
-# en is the default
-#DEFAULT_LANG = 'en'
-
 # I don't intend to post too often.
 DEFAULT_DATE_FORMAT = '%B %Y'
 
@@ -33,7 +27,6 @@ DEFAULT_PAGINATION = 10
 ARTICLE_URL = 'news/{date:%Y}/{date:%m}/{slug}/'
 ARTICLE_SAVE_AS = 'news/{date:%Y}/{date:%m}/{slug}/index.html'
 
-# https://deaddabe.fr/blog/2020/08/30/using-and-extending-the-attach-directive-in-pelican/
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 
@@ -42,19 +35,6 @@ AUTHOR_SAVE_AS = "author/{slug}/index.html"
 
 INDEX_URL = "news/"
 INDEX_SAVE_AS = "news/index.html"
-
-# Blogroll
-#LINKS = (
-#    ("Pelican", "https://getpelican.com/"),
-#    ("Python.org", "https://www.python.org/"),
-#    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-#)
-
-# Social widget
-#SOCIAL = (
-#    ("You can add links in your config file", "#"),
-#    ("Another social link", "#"),
-#)
 
 DISPLAY_PAGES_ON_MENU = True
 PAGE_ORDER_BY = 'menu_order_key'
