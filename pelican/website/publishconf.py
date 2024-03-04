@@ -16,6 +16,9 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
 
+# Docs recommend this, I don't understand why.
+FEED_DOMAIN = SITEURL
+
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = ""
