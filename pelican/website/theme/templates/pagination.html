@@ -2,16 +2,16 @@
 {% set first_page = articles_paginator.page(1) %}
 {% set last_page = articles_paginator.page(articles_paginator.num_pages) %}
 <nav>
-  <ul>
+    <ul>
     {% if articles_page.has_previous() %}
         <li><a href="{{ SITEURL }}/{{ first_page.url }}">&Lang;</a></li>
         <li><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&lang;</a></li>
     {% endif %}
-    <li>Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}</li>
+        <li>Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}</li>
     {% if articles_page.has_next() %}
         <li><a href="{{ SITEURL }}/{{ articles_next_page.url }}">&rang;</a></li>
         <li><a href="{{ SITEURL }}/{{ last_page.url }}">&Rang;</a></li>
     {% endif %}
-  </ul>
+    </ul>
 </nav>
 {% endif %}
