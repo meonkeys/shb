@@ -46,6 +46,7 @@ THEME = "theme"
 IGNORE_FILES = ['.#*', '.*.swp', '.*.swx', '.*.un~', '*~']
 
 STATIC_PATHS = [
+    'extra/.htaccess',
     'extra/android-chrome-192x192.png',
     'extra/android-chrome-512x512.png',
     'extra/apple-touch-icon.png',
@@ -58,6 +59,7 @@ STATIC_PATHS = [
 ]
 
 EXTRA_PATH_METADATA = {
+    'extra/.htaccess': {'path': '.htaccess'},
     'extra/android-chrome-192x192.png': {'path': 'android-chrome-192x192.png'},
     'extra/android-chrome-512x512.png': {'path': 'android-chrome-512x512.png'},
     'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},
