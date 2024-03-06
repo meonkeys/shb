@@ -16,6 +16,7 @@ When we communicate with each other, we promise to:
 * Be kind and inclusive.
 * Not use bots, AI, or other automations without transparency and consent.
 * Act in good faith.
+* Not spam.
 * Follow the [SeaGL code of conduct](https://seagl.org/code_of_conduct).
 
 We have a lot of i18n and L10n work to do.
