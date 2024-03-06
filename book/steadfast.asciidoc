@@ -58,37 +58,28 @@ image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Su
 
 toc::[]
 
+== Foreword
+
+(Placeholder to maintain chapter numbers)
+
 == Introduction
 
 === Thesis
 
-This book will demonstrate data sovereignty through self-hosting.
+(((data sovereignty)))
+Data sovereignty (full control of your data) is achievable for small communities as well as corporations and can support ((prosocial behavior)).
+Self-hosting following this book is an excellent path to data sovereignty.
+
+This book will help you efficiently learn the basics about self-hosting while promoting prosocial behavior.
 
 === Welcome
 
-The self-hosting ecosystem is crowded and confusing.
+I am so glad you're here!
 
-Fear not!
+I'll help you set up a server and your first several web services.
+Bring along whatever ((sysadmin)) experience you've got, willing users, and a desire to do well at self-hosting.
 
-This book is your personal guide to joy; a battle-tested fast path to success.
-Together we'll quickly stand up *services* in *containers* behind a *reverse proxy*.
-
-With these three basic components we will summon a robust data haven.
-We'll take some basic concepts from systems administration and devops to create love, beauty, and deep meaning.
-
-We will:
-
-* Not settle for cheap cloud services.
-* Reduce distractions.
-* Cherish our attention, time, and freedom.
-* Breathe the crisp, clear air of reduced surveillance by providing our own alternative to the chilling popular default of trading privacy for convenience.
-* Save money by efficiently running lots of services on our own hardware with negligible incremental cost.
-* Do well by our friends, families, and social groups.
-* Do things we can't do with public services because we have full access to all our own raw data.
-* Adapt and grow as software evolves, taking our data and metadata along with us.
-* Share what and when it makes sense to share with whom we trust.
-
-This will be liberating.
+This is the book I wish I'd had when I was struggling to provide a safe online experience for my kids.
 
 === Cover art
 
@@ -3249,6 +3240,8 @@ daemon::
   Long-running background process.
 data::
   Noun, plural. Yes, I use the annoying plural form! Sorry, old habit.
+data sovereignty::
+  Full control of your data. For example, having original copies of your files.
 deploy::
   Prepare a service for use. Typically involves building or copying files before a service is started.
 devops::
