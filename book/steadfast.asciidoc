@@ -67,10 +67,11 @@ toc::[]
 === Thesis
 
 (((data sovereignty)))
-Data sovereignty (full control of your data) is achievable for small communities as well as corporations and can support ((prosocial behavior)).
-Self-hosting following this book is an excellent path to data sovereignty.
+Data sovereignty (full control of your data) is achievable for small communities as well as corporations.
+It can be practical and support ((prosocial behavior)).
+Self-hosting is an excellent path to data sovereignty.
 
-This book will help you efficiently learn the basics about self-hosting while promoting prosocial behavior.
+This book will help you efficiently learn the basics about self-hosting.
 
 === Welcome
 
