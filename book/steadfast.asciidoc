@@ -1150,7 +1150,7 @@ Ubuntu LTS (long-term support) releases are the most stable so we'll go with tha
 I sought to minimize customizations to the ((operating system)) from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
 
-Not mucking about on the server takes discipline, especially for old-school hands-on sysadmins like me.
+Not mucking about on the server takes discipline, especially for old-school hands-on ((sysadmin))s like me.
 It is much easier to SSH into the server and run a one-off command rather than change config files and re-run mario.
 The real payoff from using mario instead of hand-editing comes when you collaborate with others or try to remember what you did a year ago and why.
 
@@ -1227,7 +1227,7 @@ The `Dockerfile` should be tracked in source control.
 Since we'll use Docker Compose, another important config file is `docker-compose.yml`.
 Each service will have its own `docker-compose.yml` file.
 These should be kept in source control too.
-For sysadmins these conventions provide reproducible images and containers.
+For ((sysadmin))s these conventions provide reproducible images and containers.
 For users: predictable, reliable services.
 
 Practice treating containers as temporary things.
