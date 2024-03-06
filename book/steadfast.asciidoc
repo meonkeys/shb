@@ -246,9 +246,7 @@ Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated 
 
 === Why did I write this book?
 
-(((data sovereignty)))
-I wrote this book to promote *data sovereignty*.
-I use that phrase to mean you have full control of your data.
+I wrote this book to promote ((data sovereignty)) as a prosocial behavior.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
 Existing books lack a good, fast, and cheap technique for self-hosting on bare metal.
 I figured one out and I think you'll love it.
