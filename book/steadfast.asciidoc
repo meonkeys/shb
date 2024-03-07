@@ -309,10 +309,11 @@ You've got to have control of your data if you want it to reliably serve you wel
 
 It does make a difference to have your own copy.
 You might lose access to something you “bought” or it might even change right under your nose.
+More on this:
 
-* https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164
-* https://defectivebydesign.org/what_is_drm_digital_restrictions_management
-* https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html
+* _PlayStation To Delete A Ton Of TV Shows Users Already Paid For_ by Ethan Gach (https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164)
+* _What is DRM?_ by the Free Software Foundation (https://defectivebydesign.org/what_is_drm_digital_restrictions_management)
+* _It's Their Content, You're Just Licensing it_ by Reggie Ugwu (https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html)
 
 Saving off data is easy.
 Self-hosting goes a step beyond that to give you far-reaching control of how your data are used and shared.
