@@ -275,7 +275,7 @@ I learn when I write.
 While learning how my phone works, it struck me how important it is to understand _how “the cloud” works_, since the modern phone experience relies on services and data in public clouds.
 In trying to make my phone “my own” (do what I want to help me live my best life), I was inspired to host my own data in my own cloud.
 
-Also: everyone I know with at least a pinky toe in the tech industry self-hosts _something_.
+Also: most tech folks I know self-host _something_, likely something I've never heard of.
 There's always another self-hosted service to try out, learn about, improve, and share.
 
 Also: maybe I can make a buck or two doing this, or at the next thing I do.
