@@ -281,7 +281,7 @@ There's always another self-hosted service to try out, learn about, improve, and
 Also: maybe I can make a buck or two doing this, or at the next thing I do.
 Maybe you can hire me to help you out.
 
-Also: to write the book I wish I had when _I_ started self-hosting.
+Also: I wanted to write the book I wish _I_ had when I started self-hosting.
 
 Also: so there's a _book_ about this.
 There are countless videos, articles, and chunks of code online for doing everything in this book and more.
