@@ -424,7 +424,7 @@ More:
 
 * ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
 * ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
-* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and Traefik
+* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and ((Traefik))
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
@@ -450,7 +450,7 @@ Is it annoying about this, reminding me often?
 Has it been around a while, and do I expect it to endure?
 ****
 
-After brief reviews, I find they generally:
+After brief reviews, I find existing self-hosting solutions generally:
 
 * are new and immature
 * lack proper documentation
@@ -467,7 +467,7 @@ By the time I publish, they (or some new contenders) might grow to overcome my a
 Please let me know what you discover.
 If I missed something, I'd love to learn about it!
 
-Here are more related and interesting self-hosting solutions I learned about too late in the writing process to research at all:
+Here are more related and interesting self-hosting solutions worth researching further:
 
 * ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
 * ((Cosmos Cloud)) (https://cosmos-cloud.io)
@@ -476,6 +476,7 @@ Here are more related and interesting self-hosting solutions I learned about too
 * ((Start9)) (https://start9.com)
 * ((MicroCloud)) (https://canonical.com/microcloud)
 * ((LibreServer)) (https://libreserver.org)
+* ((LinuxServer.io)) (https://www.linuxserver.io)
 * ((UBOS)) (https://ubos.net)
 
 ==== You'll find your path
@@ -533,13 +534,14 @@ So many reasons!
 ** save even more power the more users you add
 ** see linked articles in <<_server>>
 * Save money
-** in the long run
-** especially once your users' data storage requirements enter the terabyte range
+** self-hosted hardware will typically beat cloud (renting someone else's)
+** savings increase as your users' data storage requirements enter the terabyte range
 ** save more with every service you run
 ** avoid unexpected public cloud costs
-*** when you want to download your data and move it somewhere else
-*** when you need to do something the cloud doesn't support
-** avoid unexpected _changes in_ public clouds
+*** egress fees make it expensive to download your data and move it somewhere else
+*** forgetting to shut down a VM can get expensive quickly
+*** you could spend excessive time and money navigating the public cloud's confusing menu of service offerings
+** avoid unexpected public clouds changes
 *** changes in license fees
 *** changes in usage fees
 *** changes in support costs
@@ -562,13 +564,10 @@ This happens less often with ((FOSS)) because anyone can simply fork a project.
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
 ** remove yourself from the equation of user analysis data--when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you “own”, every time you rewind, fast-forward, pause... but do they need to? why?
-* It's not as hard as you think to self-host
-** sometimes it is harder
-** sometimes it is easier
 * Unlock new possibilities
-** view travel lines with phonetrack
 ** apply arbitrary workflows to uploaded files
 ** deploy trustworthy, offline generative ((AI)) (artificial intelligence) models
+** enjoy features that don't exist in public services
 
 (((Nextcloud)))
 See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas.
@@ -599,10 +598,10 @@ I can safely ignore their audit and its erroneous compliance infringement warnin
 .Screenshot of a YouTube legal audit for my old API client.
 image::YT-audit.png[align="center",scaledwidth=80%]
 
-I also no longer need to work with YouTube's API (Application programming interface), including registering an API client and completing periodic audits.
+I also no longer need to work with YouTube's ((API)) (application programming interface), including registering an API client and completing periodic audits.
 (((Nextcloud)))
 After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance.
-Turns out the Nextcloud Talk API is easier for posting my chicken coop photos & videos anyway.
+Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photos & videos anyway.
 
 With my own cloud I'm also able to tune quotas and rate limits as desired.
 Full speed ahead!
@@ -617,7 +616,7 @@ I knew where I was when I took the photos (within 10 miles or so) and my photos 
 My photos are just a bunch of JPEG files.
 I examined them with a small program I wrote.
 I pulled out geo metadata and looked for anything within 10 miles of the point I knew.
-I used Python, and any language would work.
+I used Python, although any programming language would do the job.
 The key was being able to access the data directly and quickly.
 
 This is just one (likely outdated) example.
@@ -785,8 +784,10 @@ I was stoked to see how Jellyfin showed up as an excellent and complete ((FOSS))
 
 ===== Traefik
 
-Traefik was surprisingly challenging to set up because my networking fundamentals were rusty.
+The ((Traefik)) ((reverse proxy)) was surprisingly challenging to set up because my networking fundamentals were rusty.
 I've got it working reliably and I still need to keep improving my fundamental knowledge in networking.
+
+See <<Reverse Proxy>> for more about Traefik.
 
 ===== Nextcloud
 
@@ -1064,7 +1065,7 @@ From a user perspective there's no “logging in” as with older VPNs.
 When you're away from home, you can simply flip it on to teleport back into your ((LAN)).
 
 If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys.
-Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your attack surface.
+Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your ((attack surface)).
 
 A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale uses Wireguard).
 
@@ -1256,7 +1257,7 @@ See: https://martinfowler.com/bliki/PhoenixServer.html.
 
 === Reverse Proxy
 
-A reverse proxy sits in front of containers and directs traffic to the right service based on arbitrary rules.
+A ((reverse proxy)) sits in front of containers and directs traffic to the right service based on arbitrary rules.
 
 Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at media.example.com.
 In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
@@ -1265,9 +1266,7 @@ We'll use Traefik as our reverse proxy.
 
 ==== Traefik architecture
 
-(((Nextcloud)))
-(((Traefik)))
-Here's a bit about how Traefik works and how we'll use it with Nextcloud and other web-based self-hosted services.
+Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud)) and other web-based self-hosted services.
 
 We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
@@ -1287,12 +1286,11 @@ In the mario source code (or the snippets below), look at the `docker-compose.ym
 
 The routing labels wire together the entrypoint and router with the service under which they are defined.
 That is: `websecure` to `nextcloud-https` to `app`.
-(((Let's Encrypt)))
-We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with Let's Encrypt (https://letsencrypt.org).
+We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with ((Let's Encrypt)) (https://letsencrypt.org).
 
 NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
 
-These two snippets of the mario source show how we set up Traefik for Nextcloud.
+These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
 [source,yaml]
 ----
@@ -1350,7 +1348,7 @@ They will likely share at least some of these attributes:
 * Easy to install.
 Works with your preferred deployment method.
 ** For mario, we're looking for a popular, well-maintained Docker image.
-** Bonus: instructions included for integrating with Docker Compose and Traefik.
+** Bonus: instructions included for integrating with Docker Compose and ((Traefik)).
 * Healthy community: chat, forum.
 * Recent source code activity: releases, contributions, news.
 * Uses a FOSS software license.
@@ -1360,7 +1358,7 @@ Works with your preferred deployment method.
 * Well-organized, elegant code.
 * Useful and up-to-date documentation.
 * Mentions and compares the service with other similar services.
-* Well-documented, useful, and complete API.
+* Well-documented, useful, and complete ((API)).
 * Flexible and extensible (easy to customize and extend with plugins and such).
 
 (((Nextcloud)))
@@ -1908,7 +1906,7 @@ For example:
 |Wallabag |read.example.com |175.102.205.1 |10.0.0.5
 |===
 
-IP addresses can be repeated because our reverse proxy will direct traffic based on hostname.
+IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
 
 If you don't have a DNS server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
 
@@ -1959,9 +1957,9 @@ Here's how to turn them on and start using them.
 
 ===== Start reverse proxy
 
-We'll stand up the reverse proxy first.
+We'll stand up the ((reverse proxy)) first.
 
-Start Traefik with:
+Start ((Traefik)) with:
 
 [source,bash]
 ----
@@ -1970,7 +1968,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 (((Let's Encrypt)))
-It may take a few minutes for Traefik to set up Let's Encrypt HTTP encryption certificates, so don't worry if you get invalid cert warnings at first.
+It may take a few minutes for ((Traefik)) to set up Let's Encrypt HTTP encryption certificates, so don't worry if you get invalid cert warnings at first.
 
 You can tail the logs with:
 
@@ -1979,7 +1977,7 @@ You can tail the logs with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 ----
 
-You should see something like this for a working Traefik service:
+You should see something like this for a working ((Traefik)) service:
 
 [%linenums,text]
 ----
@@ -2029,7 +2027,7 @@ sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -
 
 === Encryption certificates
 
-mario (well, Traefik) sets up certificates to encrypt HTTP traffic.
+mario (well, ((Traefik))) sets up certificates to encrypt HTTP traffic.
 The certificates are issued using a DNS challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
 The DNS challenge is especially handy for servers with zero public-facing inbound ports.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
@@ -2038,7 +2036,7 @@ If you see certificate errors, confirm DNS works (externally and internally).
 Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
 You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml` and re-provisioning.
 
-Finally, try restarting Traefik with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`.
+Finally, try restarting ((Traefik)) with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`.
 That particularly seems to help the first time I stand up a new service.
 
 === Tiny test service
@@ -2079,7 +2077,7 @@ Stopping ping_test_1   ... done
 ....
 
 This is the basis for adding more interesting services, too.
-It's only a few more lines of code+config to create a small API or web service and a few more to publish it with your reverse proxy.
+It's only a few more lines of code+config to create a small ((API)) or web service and a few more to publish it with your ((reverse proxy)).
 
 == Services
 
@@ -2098,7 +2096,7 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 
 Note that mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` middleware from the corresponding router's Traefik label.
+You may remove this protection by removing the `lan-only` middleware from the corresponding router's ((Traefik)) label.
 For example, to allow WAN access to Nextcloud, make this change:
 
 [%linenums%unbreakable,diff]
@@ -2179,7 +2177,7 @@ See <<_customization>> for tips on how to roll out apps thoughtfully and which o
 * Test sending an email at `/settings/admin` (Basic settings).
 * Add users.
 * Check logs.
-** Traefik.
+** ((Traefik)).
 ** Containers.
 ** Nextcloud server log at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
 * Some maintenance requires the `occ` tool (short for “ownCloud command”).
@@ -2799,7 +2797,7 @@ networks:
 ----
 
 Note the middleware to only allow traffic from your ((LAN)).
-This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the Traefik container to set up the middleware, for example:
+This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the middleware, for example:
 
 ....
 traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24
@@ -3202,7 +3200,7 @@ Thanks to my family and friends for putting up with my ((FOSS)) self-hosting exp
 
 Thanks to the contributors to the myriad FOSS programs I used to create this book, especially Dan Allen and the Asciidoctor team.
 
-Thanks to Rob and all #underlug for help with hardware, networking, Ansible, and Traefik.
+Thanks to Rob and all #underlug for help with hardware, networking, ((Ansible)), and ((Traefik)).
 
 Thanks to Bryan, Rob and all the Deadbeat Dads for your invaluable feedback.
 
@@ -3352,6 +3350,8 @@ RAID::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
 reproducible::
   Can be done multiple times with the same result. Often used in the context of building software. If two developers each build an image from a `Dockerfile`, the _should_ both produce the same image. In practice, this rarely happens. Truly reproducible builds require a great deal of work. See: Nix.
+reverse proxy::
+  Networking software for filtering and directing traffic. It allows, for example, several web services with different domain names to share an IP address.
 router::
   Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
 runtime::
