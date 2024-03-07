@@ -406,7 +406,7 @@ I thank the activists for helping swing the needle towards freedom, to all our b
 
 This book is not a manifesto for always/only self-hosting.
 It's fine to self-host some services and pay for others.
-You'll come up with your own rubric on what to self-host and when.
+You'll come up with your own checklist for what to self-host and when.
 Mine focuses on providing a useful, reliable, future-proof cloud for me and my family.
 
 This book is not the fastest path to trying out web-based services.
@@ -428,22 +428,27 @@ More:
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
-Like a crotchety old man I've since raised my bar to change and instead come up with a rubric I'll share for evaluating the next self-hosting solution.
+Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
 One should ask:
 
-* Will it work for years with minimal tinkering?
-* Is it easily extensible?
-* Does it weaken or strengthen security by changing my attack surface?
-* Does it add features/value I need/want, beyond what I'm already able to do?
-* Will it help my users?
-* Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
-* Will it help me figure out why I made a change to one of my services two years ago?
-* Does it phone home, using telemetry or my data in a way I don't approve?
-* Does it hold back “enterprise” features I need, even for my scaled-down use case?
+.Checklist: Is It Good For Self-Hosting?
+****
+* [ ] Will it work for years with minimal tinkering?
+* [ ] Is it easily extensible?
+* [ ] Do I trust the maintainers?
+* [ ] Does it employ technologies I'm familiar with?
+* [ ] Does it weaken or strengthen security by changing my ((attack surface))?
+* [ ] Does it add features/value I need/want, beyond what I'm already able to do?
+* [ ] Will it help my users?
+* [ ] Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
+* [ ] Will it help me figure out why I made a change to one of my services two years ago?
+* [ ] Does it phone home, using telemetry or my data in a way I don't approve?
+* [ ] Does it hold back “enterprise” features I need, even for my scaled-down use case?
 Is it annoying about this, reminding me often?
-* If I want paid support, is it available?
-* Is it popular?
+* [ ] If I want paid support, is it available?
+* [ ] Is it popular?
 Has it been around a while, and do I expect it to endure?
+****
 
 After brief reviews, I find they generally:
 
@@ -1667,17 +1672,23 @@ zpool iostat
 
 === Server maintenance
 
-I use short monthly and yearly maintenance checklists. For example, monthly I might:
+I use short monthly and yearly maintenance checklists. For example:
 
-* [x] upgrade OS packages
-* [x] check storage space remaining
-* [x] back up router config
+.Checklist: Monthly Maintenance
+****
+* [ ] upgrade OS packages
+* [ ] check storage space remaining
+* [ ] back up router config
+****
 
 And yearly:
 
-* [x] test restore from backup
-* [x] review and improve ((threat model))
-* [x] open server chassis and vacuum dead spiders
+.Checklist: Yearly Maintenance
+****
+* [ ] test restore from backup
+* [ ] review and improve ((threat model))
+* [ ] open server chassis and vacuum dead spiders
+****
 
 I update my checklists about as often as I use them.
 
