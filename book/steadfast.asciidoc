@@ -429,9 +429,9 @@ More:
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
 Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
-One should ask:
 
-.Checklist: Is It Good For Self-Hosting?
+.Checklist: Self-Hosting Solution Viability
+[#solution-viability-checklist]
 ****
 * [ ] Will it work for years with minimal tinkering?
 * [ ] Is it easily extensible?
@@ -449,6 +449,8 @@ Is it annoying about this, reminding me often?
 * [ ] Is it popular?
 Has it been around a while, and do I expect it to endure?
 ****
+
+(See also: <<traits-of-good-services>>)
 
 After brief reviews, I find existing self-hosting solutions generally:
 
@@ -1342,8 +1344,11 @@ Services may be accessed from a web browser or mobile device, or they may simply
 ===== Good for self-hosting
 
 You'll find some services are better choices to self-host than others.
-They will likely share at least some of these attributes:
+They will likely share at least some of these traits.
 
+.Common Traits of Good Self-Hosted Services
+[#traits-of-good-services]
+****
 * Self-hosting instructions available.
 * Easy to install.
 Works with your preferred deployment method.
@@ -1360,9 +1365,12 @@ Works with your preferred deployment method.
 * Mentions and compares the service with other similar services.
 * Well-documented, useful, and complete ((API)).
 * Flexible and extensible (easy to customize and extend with plugins and such).
+****
+
+(See also: <<solution-viability-checklist>>)
 
 (((Nextcloud)))
-Nextcloud (https://nextcloud.com) has many of these, with some exceptions.
+Nextcloud (https://nextcloud.com) has many of these traits, with some exceptions.
 One exception is their secret build script (https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341).
 This is convenient for them to maintain control of a complex system, but worse for eventual succession.
 Nextcloud is a fork of ownCloud, after all.
