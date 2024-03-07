@@ -556,7 +556,7 @@ This happens less often with ((FOSS)) because anyone can simply fork a project.
 ** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo metadata
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
-** when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you “own”, every time you rewind, fast-forward, pause... but do they need to? why?
+** remove yourself from the equation of user analysis data--when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you “own”, every time you rewind, fast-forward, pause... but do they need to? why?
 * It's not as hard as you think to self-host
 ** sometimes it is harder
 ** sometimes it is easier
@@ -649,7 +649,7 @@ While revising, I came across the build system for Pro Git 2 (https://github.com
 In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
 This simplified the book build and gave me more and better output formats.
 
-Check out the source code -- you're welcome to hack away at it.
+Check out the source code--you're welcome to hack away at it.
 See <<More resources>> and <<How to build this book>>.
 
 I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
