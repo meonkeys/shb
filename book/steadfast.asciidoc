@@ -473,22 +473,6 @@ Here are more related and interesting self-hosting solutions I learned about too
 * ((LibreServer)) (https://libreserver.org)
 * ((UBOS)) (https://ubos.net)
 
-==== Command line
-
-The “command line” mention above is worth a beat, to understand my personal bias.
-It's more than a relic from the old days, it's also a source of power and joy.
-
-// see https://docs.asciidoctor.org/asciidoc/latest/macros/complex-urls/
-
-* pass:macros[https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line]
-
-I use GUIs often, and I often _prefer_ the command line and only add a ((GUI)) layer when I need one.
-It's often easier and faster to build and maintain a command line interface.
-It gives me more control and forces me to learn.
-It helps me understand what's happening and why.
-With it I'm able to quickly make changes and automate.
-It's also faster and more ergonomic than using a mouse.
-
 ==== You'll find your path
 
 Continuing advances in hardware and software means self-hosting today is easier and cheaper than ever before.
