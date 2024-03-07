@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if SITESUBTITLE %}
+    <meta name="description" content="{{ SITEDESCRIPTION|striptags }}" />
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
+    {% endif %}
+
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
+    {% endif %}
+
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+    {% endif %}
+
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+    {% endif %}
+
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
+    {% endif %}
+
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
+    {% endif %}
+
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
+    {% endif %}
+
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
+    {% endif %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:title" content="{{ SITENAME|striptags }}: {{ SITESUBTITLE|striptags }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ SITEURL }}">
+    <meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/media/book-cover.jpg">
+    <meta property="og:locale" content="{{ LOCALE[0] }}">
+    <meta property="og:description" content="{{ SITEDESCRIPTION|striptags }}">
+
+    {% endblock head %}
+</head>
+
+<body>
+    <header>
+    <nav><ul>
+    {% if DISPLAY_PAGES_ON_MENU %}
+      {% for p in pages %}
+        <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" class="active" {% endif %}>{{ p.title }}</a></li>
+      {% endfor %}
+    {% endif %}
+    {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}" {% if 'news/index' in output_file %} aria-current="page" class="active" {% endif %}>{{ title }}</a></li>
+    {% endfor %}
+    {% if DISPLAY_CATEGORIES_ON_MENU %}
+      {% for cat, null in categories %}
+        <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
+      {% endfor %}
+    {% endif %}
+    </ul></nav>
+    </header>
+
+    <div class="container">
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <div class="sidebar">
+        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/media/book-cover.jpg" alt="book cover art for {{ SITENAME }}" id="book-cover">
+        <h2>Latest news</h2>
+        {% if all_articles %}
+            {% set consistent_list_of_articles = all_articles %}
+        {% else %}
+            {% set consistent_list_of_articles = articles %}
+        {% endif %}
+        <ul>
+        {% for article in consistent_list_of_articles %}
+        <li><a href="{{ SITEURL }}/{{ article.url }}" {% if article.url[0:] in output_file %} aria-current="page" class="active" {% endif %}>{{ article.title }}</a> - <time class="date-modified" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></li>
+        {% endfor %}
+        </ul>
+    </div> <!-- .sidebar -->
+    </div> <!-- .container -->
+</body>
+</html>

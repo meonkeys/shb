@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME|striptags }} - Authors{% endblock %}
+
+{% block content %}
+    <h2>Authors on {{ SITENAME }}</h2>
+    <ul>
+    {% for author, articles in authors|sort %}
+        <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,20 +1,6 @@
-# Dear Reviewer
+# Steadfast Self-Hosting
 
-**THANK YOU**! ❤️🧡💛💚💙💜
-
-Here's my book so far. I should say *our* book because after quite a bit of writing I'm learning that this doesn't happen in isolation. It really does take a team. And hey, you're on the team! You are an expert and I value your help. I will benefit greatly from your open, honest feedback.
-
-The review deadline was Nov 24, 2023, but I'm running a bit late. If you still have comments, send them over!
-
-Please send me feedback in any form: email, text, PRs... whatever is most convenient. Anything helps. I've got a thick skin so just let me have it as if you're reviewing a book from a complete stranger.
-
-I made a list of issues below to capture stuff I'm already aware of and working on. As for what kinds of feedback I'm seeing, please see [Feedback ideas](#feedback-ideas), below.
-
-I'd like to wait to release everything publicly once it is ready, so please help me keep it secret for now.
-
-If you want/need to be paid to do this, please let me know. We'll work something out.
-
-I'm looking for testimonials! Ping me if you're up for this.
+This is an awesome book about self hosting with code to help you get started.
 
 ## Directory structure
 
@@ -22,7 +8,7 @@ I'm looking for testimonials! Ping me if you're up for this.
 |------------|---------------------------------------|
 | `book/`    | sources for the book                  |
 | `mario/`   | sources for mario provisioning tool   |
-| `website/` | sources for https://selfhostbook.com/ |
+| `pelican/` | sources for https://selfhostbook.com/ |
 
 ## Book formats
 
@@ -36,23 +22,24 @@ I'm looking for testimonials! Ping me if you're up for this.
 | HTML       | Firefox web browser   | good    |
 | screen PDF | Firefox web browser   | good    |
 | screen PDF | evince PDF viewer     | good    |
+| print PDF  | evince PDF viewer     | good    |
+| print PDF  | Firefox web browser   | good    |
+| print PDF  | ink & paper           | TBD     |
 
-## Feedback ideas
+## Feedback
 
-By _feedback_ I mean, well, anything you're willing and able to help with!
-
-Here are some ideas:
+Please send me feedback!
 
 * What are your first impressions? Cover, table of contents, font, style, page size, book length, etc.
 * Any/all factual, spelling, grammatical, and structural errors.
 * Overall manuscript critique, comprehensive or line edits, copy-editing, proofreading.
-* Inscrutable thrust of a section. Does it make sense what I'm trying to convey and how?
-* Inconsistencies in voice, level of detail, narrative flow.
+* Does it make sense what I'm trying to convey and how?
+* Consistency of voice, level of detail, narrative flow.
 * Anywhere a diagram or photo would significantly help to illustrate a point.
 * Any sections that should be rewritten, rethought, or removed.
 * Is there a relevant and useful technology that isn't mentioned and should be?
 * Test out mario on your own hardware/VM. Does it work for you as advertised?
-* Is this something you'd actually read?
+* Is this book, this code, these ideas something you actually, personally want/read/use?
 * Is this something you'd recommend to others?
 * What would you expect to pay for a print copy?
 * What would you expect to pay for a digital copy?
@@ -82,7 +69,7 @@ See "How to build this book" in the book itself.
 
 ## Copyright and license
 
-This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2023 Adam Monsen. All rights reserved. Creative Commons licensing does not (yet!) apply.
+This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright &copy;2024 Adam Monsen. All rights reserved. Creative Commons licensing does not (yet!) apply.
 
 ## Editing stages reference
 
