@@ -294,7 +294,6 @@ It's easy to pay for cloud, but the true price is obscured: surveillance, lock-i
 Also: I can picture a future where owning a truly privacy-respecting home data appliance becomes as commonplace as owning a refrigerator.
 Creating this appliance has been attempted many times and it'll be attempted again.
 Until it succeeds and sticks: self-hosting--setting up a server and services for yourself and others--is a great way to go.
-And when that home data appliance _does_ land, maybe you can buy one from me!
 
 === What's with the title?
 
