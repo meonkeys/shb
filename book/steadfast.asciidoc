@@ -255,7 +255,7 @@ Once I had a family, our data storage needs increased at home.
 It became handy as parents to be able to provide more and safer online services for our kids.
 A simple network drive and file sync were no longer enough; I wanted better services for managing our data along with the autonomy of our own bare metal.
 
-During the pandemic our family data/service needs increased sharply, and I was wary of companies swooping in to grab mindshare.
+At the start of the pandemic our family data/service needs increased sharply, and I was wary of companies swooping in to grab mindshare.
 At the same time, I decided to de-Google (https://en.wikipedia.org/wiki/DeGoogle).
 The family needs and my de-Googling coincided well.
 Self-hosting was a serendipitous fit.
