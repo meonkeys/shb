@@ -546,10 +546,9 @@ So many reasons!
 ** nearby data (“data locality”) means you don't need round-trips to someone else's data center to run experiments
 ** shared storage allows you to front your data with multiple services, choosing read-write/read-only access sensibly
 * Avoid vendor lock-in
-** You'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
-** When you buy something, _it's yours_.
-((DRM)) should be illegal.
-** Is there an integration you count on?
+** you'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
+** when you buy something with ((DRM)), you don't really own it
+** is there an integration you count on?
 Sometimes a service stops working with another service.
 This happens less often with ((FOSS)) because anyone can simply fork a project.
 * Privacy
