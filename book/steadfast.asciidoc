@@ -608,16 +608,18 @@ Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photo
 With my own cloud I'm also able to tune quotas and rate limits as desired.
 Full speed ahead!
 
-==== Geo photo search
+==== Photo search by location
 
 Here's one more pro-personal-cloud example.
+This one worked because I am comfortable storing location metadata in my self-hosted photos.
 
-A while back I was trying to find some photos from a pile of thousands, taking up terabytes on disk.
-I knew where I was when I took the photos (within 10 miles or so) and my photos have embedded geo metadata.
+A while back I was trying to find some particular photos from a pile of thousands, taking up terabytes on disk.
+I knew where I was when I took the photos (within 10 miles or so) and my photos have embedded locations.
+I couldn't remember when they were taken.
 
 My photos are just a bunch of JPEG files.
 I examined them with a small program I wrote.
-I pulled out geo metadata and looked for anything within 10 miles of the point I knew.
+I looked for any photos taken within 10 miles of the point I knew.
 I used Python, although any programming language would do the job.
 The key was being able to access the data directly and quickly.
 
