@@ -2883,6 +2883,7 @@ If I missed something, I'd love to learn about it!
 Here are more related and interesting self-hosting solutions worth researching further:
 
 * ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
+* ((Clace)) (https://clace.io)
 * ((Cosmos Cloud)) (https://cosmos-cloud.io)
 * ((DockSTARTer)) (https://dockstarter.com)
 * ((HomelabOS)) (https://homelabos.com)
