@@ -374,7 +374,7 @@ This book is for people who want to _de-Google_, _de-iTunes_, _de-OneDrive_, _de
 === What is this book _not_?
 
 This is not a comprehensive guide to self-hosting.
-I won't attempt to enumerate the endless ways to mix and match hardware, operating systems, virtual machines, and services.
+I won't attempt to enumerate the endless ways to mix and match hardware, operating systems, ((isolation)) techniques, and services.
 This book is for small scale.
 Look elsewhere for:
 
@@ -760,7 +760,7 @@ One container typically contains only one service.
 
 Isolation of containers is limited compared to VMs.
 The kernel is shared, for example.
-Limited isolation keeps the resource and maintenance costs of container-based isolation low compared with VMs.
+Limited ((isolation)) keeps the resource and maintenance costs of container-based isolation low compared with VMs.
 
 Containers are excellent for a consistent and resilient personal cloud.
 They are easy to declare (in code), build, deploy, test, and repeat.
@@ -1210,7 +1210,7 @@ If I needed high availability via clustering I'd be more likely to use Kubernete
 If one computer in a Kubernetes cluster breaks, services can automatically migrate to working hardware in the cluster.
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
-Docker balances features and usability well, making it easy to run one service in isolation.
+Docker balances features and usability well, making it easy to run one service in ((isolation)).
 We'll layer on Docker Compose to run the groups of processes necessary to support a whole service (e.g. a web server and its database).
 Kubernetes can do this too, along with everything you _don't_ need to learn unless you are building out an entire virtual data center.
 Docker compose is a good fit for our single-server setup.
