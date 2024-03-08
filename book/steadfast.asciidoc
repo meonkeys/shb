@@ -1401,6 +1401,7 @@ It can handle a reasonable amount of bursty compute needs, including building Do
 I found a used refurbished 1U rackmount server on eBay for about $1,000.
 Two 24-core CPUs and 128 GB RAM.
 Tech companies dump these by the truckload so you can usually find a good deal.
+This is sometimes called “off-lease enterprise hardware”.
 
 .DIY rackmount server attached to garage ceiling. It's fun to look at and is out of the way, but I need a ladder for maintenance and it weighs about 50lbs.
 image::racked-server.jpg[]
