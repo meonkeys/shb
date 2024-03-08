@@ -413,75 +413,77 @@ This book is not the fastest path to trying out web-based services.
 You can usually find demo instances running for particular projects.
 There are cloud providers that will run a service for you and host your data.
 
-There are one-click-install appliances with many ready-to-go apps.
-((FreedomBox)) (https://freedombox.org) is one promising contender in this space.
+See also: <<Alternatives to this book>>.
 
-There are shortcuts and frontends for self-hosting.
-For example, openmediavault (https://openmediavault.org) looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
+=== How write book?
 
-And there are countless more of these kinds of partial or full-service self-hosting solutions.
-More:
+Why are you talking like a caveman?
 
-* ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
-* ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
-* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and ((Traefik))
+I wrote the book originally in Markdown plain text in my steadfast text editor, Vim.
+I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
+Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
+While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
+In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
+This simplified the book build and gave me more and better output formats.
 
-These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
-I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
-Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
+Check out the source code--you're welcome to hack away at it.
+See <<More resources>> and <<How to build this book>>.
 
-.Checklist: Self-Hosting Solution Viability
-[#solution-viability-checklist]
-****
-* [ ] Will it work for years with minimal tinkering?
-* [ ] Is it easily extensible?
-* [ ] Do I trust the maintainers?
-* [ ] Does it employ technologies I'm familiar with?
-* [ ] Does it weaken or strengthen security by changing my ((attack surface))?
-* [ ] Does it add features/value I need/want, beyond what I'm already able to do?
-* [ ] Will it help my users?
-* [ ] Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
-* [ ] Will it help me figure out why I made a change to one of my services two years ago?
-* [ ] Does it phone home, using telemetry or my data in a way I don't approve?
-* [ ] Does it hold back “enterprise” features I need, even for my scaled-down use case?
-Is it annoying about this, reminding me often?
-* [ ] If I want paid support, is it available?
-* [ ] Is it popular?
-Has it been around a while, and do I expect it to endure?
-****
+I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
+This helped me focus on the content while keeping the book simple enough to self-publish.
 
-(See also: <<traits-of-good-services>>)
+=== When write book?
 
-After brief reviews, I find existing self-hosting solutions generally:
+Still with the caveman.
+Enough already.
 
-* are new and immature
-* lack proper documentation
-* do too much: try to solve many problems without sufficient inertia/resources to maintain it all
-* don't do enough: just another Linux distro with an added layer to discover and install apps
-* make opinionated tech choices I don't agree with
-* have a limited list of apps in their app stores and often exclude the ones I want
-* have too many apps in their app store, without good ways to compare quality, privacy, features
-* are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
+I wrote this in 2023.
 
-Still, check 'em out.
-They might work better for you if you don't need the level of power and control provided by this book.
-By the time I publish, they (or some new contenders) might grow to overcome my approach.
-Please let me know what you discover.
-If I missed something, I'd love to learn about it!
+And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
+We got this!
 
-Here are more related and interesting self-hosting solutions worth researching further:
+=== Where?
 
-* ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
-* ((Cosmos Cloud)) (https://cosmos-cloud.io)
-* ((DockSTARTer)) (https://dockstarter.com)
-* ((HomelabOS)) (https://homelabos.com)
-* ((Start9)) (https://start9.com)
-* ((MicroCloud)) (https://canonical.com/microcloud)
-* ((LibreServer)) (https://libreserver.org)
-* ((LinuxServer.io)) (https://www.linuxserver.io)
-* ((UBOS)) (https://ubos.net)
+Seattle.
 
-==== You'll find your path
+=== Hey now.
+
+Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
+
+=== A note on FOSS
+
+(((FOSS, bias)))
+I prefer FOSS over non-FOSS.
+This can be a polarizing topic.
+Heck, even using the term FOSS instead of the other variants can be polarizing.
+These are just distractions.
+Today we need compromise, patience, and kindness.
+Curiosity over certainty.
+
+Here's my promise to you, dear Reader:
+
+I will try not to get too preachy.
+
+I will prioritize _practical_ solutions over _idealistic_ ones.
+I will sometimes fail to do this when it comes to FOSS.
+Most notably, I will barely acknowledge the existence of non-FOSS alternatives in this book.
+
+I'm aware of the tension between practical and idealistic solutions, and I believe this tension is a Good Thing because it reminds us to think critically about what cloud services we _should_ pay for and use, not just what we _can_ pay for and use.
+It's worth a moment's thought.
+
+Our data matter and our personal choices matter.
+The impact spreads to the groups you are a part of, as does the opportunity for improvement.
+
+I believe self-hosting ((FOSS)) is doable and affords many practical benefits over non-FOSS.
+
+Hang in there and give me some feedback.
+You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
+
+Continued ad nauseam in <<More about FOSS>>.
+
+== Your journey
+
+=== You'll find your path
 
 Continuing advances in hardware and software means self-hosting today is easier and cheaper than ever before.
 
@@ -574,7 +576,26 @@ This happens less often with ((FOSS)) because anyone can simply fork a project.
 (((Nextcloud)))
 See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas.
 
-==== Criminal chickens
+=== Why you should not self-host
+
+Self-hosting is more complex and time-consuming than paying for the same functionality, especially at first.
+It takes discipline and patience, like learning a new instrument (but _this_ instrument eventually plays itself!).
+
+If something breaks, you're fixing it.
+Sometimes you get a useful error, sometimes you can search the web for a quick fix.
+Sometimes you don't and can't.
+
+If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
+
+If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
+
+On-premise self-hosting entails additional meatspace-specific considerations.
+You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
+Just don't keep your server outside.
+
+== Practical examples
+
+=== Criminal chickens
 
 Here's a real example of a positive outcome I realized from self-hosting.
 
@@ -608,7 +629,7 @@ Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photo
 With my own cloud I'm also able to tune quotas and rate limits as desired.
 Full speed ahead!
 
-==== Photo search by location
+=== Photo search by location
 
 Here's one more pro-personal-cloud example.
 This one worked because I am comfortable storing location metadata in my self-hosted photos.
@@ -628,89 +649,6 @@ By the time you read this you may be able to query your photos with a sentence l
 
 Then you can move on to saving the world.
 Just make sure you've got your data!
-
-=== Why you should not self-host
-
-Self-hosting is more complex and time-consuming than paying for the same functionality, especially at first.
-It takes discipline and patience, like learning a new instrument (but _this_ instrument eventually plays itself!).
-
-If something breaks, you're fixing it.
-Sometimes you get a useful error, sometimes you can search the web for a quick fix.
-Sometimes you don't and can't.
-
-If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
-
-If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
-
-On-premise self-hosting entails additional meatspace-specific considerations.
-You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
-Just don't keep your server outside.
-
-=== How write book?
-
-Why are you talking like a caveman?
-
-I wrote the book originally in Markdown plain text in my steadfast text editor, Vim.
-I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
-Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
-While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
-In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
-This simplified the book build and gave me more and better output formats.
-
-Check out the source code--you're welcome to hack away at it.
-See <<More resources>> and <<How to build this book>>.
-
-I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
-This helped me focus on the content while keeping the book simple enough to self-publish.
-
-=== When write book?
-
-Still with the caveman.
-Enough already.
-
-I wrote this in 2023.
-
-And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
-We got this!
-
-=== Where?
-
-Seattle.
-
-=== Hey now.
-
-Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
-
-=== A note on FOSS
-
-(((FOSS, bias)))
-I prefer FOSS over non-FOSS.
-This can be a polarizing topic.
-Heck, even using the term FOSS instead of the other variants can be polarizing.
-These are just distractions.
-Today we need compromise, patience, and kindness.
-Curiosity over certainty.
-
-Here's my promise to you, dear Reader:
-
-I will try not to get too preachy.
-
-I will prioritize _practical_ solutions over _idealistic_ ones.
-I will sometimes fail to do this when it comes to FOSS.
-Most notably, I will barely acknowledge the existence of non-FOSS alternatives in this book.
-
-I'm aware of the tension between practical and idealistic solutions, and I believe this tension is a Good Thing because it reminds us to think critically about what cloud services we _should_ pay for and use, not just what we _can_ pay for and use.
-It's worth a moment's thought.
-
-Our data matter and our personal choices matter.
-The impact spreads to the groups you are a part of, as does the opportunity for improvement.
-
-I believe self-hosting ((FOSS)) is doable and affords many practical benefits over non-FOSS.
-
-Hang in there and give me some feedback.
-You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
-
-Continued ad nauseam in <<More about FOSS>>.
 
 === Surprises
 
@@ -2883,6 +2821,76 @@ Note: people in these places are mostly dudes and some of them are jerks.
 ** homelab subreddit: https://reddit.com/r/homelab/
 ** \#selfhosted chat: https://matrix.to/#/#selfhosted:matrix.org
 * Hire me to help you out.
+
+=== Alternatives to this book
+
+There are one-click-install appliances with many ready-to-go apps.
+((FreedomBox)) (https://freedombox.org) is one promising contender in this space.
+
+There are shortcuts and frontends for self-hosting.
+For example, openmediavault (https://openmediavault.org) looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
+
+And there are countless more of these kinds of partial or full-service self-hosting solutions.
+More:
+
+* ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
+* ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
+* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and ((Traefik))
+
+These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
+I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
+Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
+
+.Checklist: Self-Hosting Solution Viability
+[#solution-viability-checklist]
+****
+* [ ] Will it work for years with minimal tinkering?
+* [ ] Is it easily extensible?
+* [ ] Do I trust the maintainers?
+* [ ] Does it employ technologies I'm familiar with?
+* [ ] Does it weaken or strengthen security by changing my ((attack surface))?
+* [ ] Does it add features/value I need/want, beyond what I'm already able to do?
+* [ ] Will it help my users?
+* [ ] Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
+* [ ] Will it help me figure out why I made a change to one of my services two years ago?
+* [ ] Does it phone home, using telemetry or my data in a way I don't approve?
+* [ ] Does it hold back “enterprise” features I need, even for my scaled-down use case?
+Is it annoying about this, reminding me often?
+* [ ] If I want paid support, is it available?
+* [ ] Is it popular?
+Has it been around a while, and do I expect it to endure?
+****
+
+(See also: <<traits-of-good-services>>)
+
+After brief reviews, I find existing self-hosting solutions generally:
+
+* are new and immature
+* lack proper documentation
+* do too much: try to solve many problems without sufficient inertia/resources to maintain it all
+* don't do enough: just another Linux distro with an added layer to discover and install apps
+* make opinionated tech choices I don't agree with
+* have a limited list of apps in their app stores and often exclude the ones I want
+* have too many apps in their app store, without good ways to compare quality, privacy, features
+* are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
+
+Still, check 'em out.
+They might work better for you if you don't need the level of power and control provided by this book.
+By the time I publish, they (or some new contenders) might grow to overcome my approach.
+Please let me know what you discover.
+If I missed something, I'd love to learn about it!
+
+Here are more related and interesting self-hosting solutions worth researching further:
+
+* ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
+* ((Cosmos Cloud)) (https://cosmos-cloud.io)
+* ((DockSTARTer)) (https://dockstarter.com)
+* ((HomelabOS)) (https://homelabos.com)
+* ((Start9)) (https://start9.com)
+* ((MicroCloud)) (https://canonical.com/microcloud)
+* ((LibreServer)) (https://libreserver.org)
+* ((LinuxServer.io)) (https://www.linuxserver.io)
+* ((UBOS)) (https://ubos.net)
 
 == Contributions
 
