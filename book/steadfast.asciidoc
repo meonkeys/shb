@@ -2891,6 +2891,7 @@ Here are more related and interesting self-hosting solutions worth researching f
 * ((MicroCloud)) (https://canonical.com/microcloud)
 * ((LibreServer)) (https://libreserver.org)
 * ((LinuxServer.io)) (https://www.linuxserver.io)
+* ((Proxmox)) (https://proxmox.com)
 * ((UBOS)) (https://ubos.net)
 
 == Contributions
