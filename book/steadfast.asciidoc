@@ -2271,7 +2271,7 @@ The GitHub project repositories are pretty quiet.
 Nextcloud works OK as the backend for a mobile device.
 It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
-See <<_mobile_text_editing_is_hard>> for a couple workarounds.
+See <<Mobile text editing is hard>> for a couple workarounds.
 
 I had a Murena Samsung S9+ phone (https://murena.com) running /e/ OS for a while.
 I loved it.
