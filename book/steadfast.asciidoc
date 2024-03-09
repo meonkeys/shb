@@ -1279,7 +1279,7 @@ Some of the other self-hosting solutions mentioned above in <<_what_is_this_book
 
 A service is something useful you'll self-host.
 These are typically one or more containers.
-Services may be accessed from a web browser or mobile device, or they may simply run in the background on a schedule.
+Services may be accessed from a web browser or ((mobile)) device, or they may simply run in the background on a schedule.
 
 ===== Good for self-hosting
 
@@ -1414,7 +1414,7 @@ Power consumption averages 130W, or about 1,140kWh per year; roughly $138.15 in 
 That's about as much as a bright incandescent light bulb, and it's a bit wasteful for one user.
 Five users though?
 ~228kWh/year each.
-That's less than the cloud server hardware required for a mobile device making use of Google's or Apple's clouds.
+That's less than the cloud server hardware required for a ((mobile)) device making use of Google's or Apple's clouds.
 Further reading on this topic:
 
 . _The Surprisingly Large Energy Footprint of the Digital Economy_ by Bryan Walsh (https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/)
@@ -1437,7 +1437,7 @@ This provisions my remote server, making changes as necessary to align it with t
 
 ==== Test devices
 
-Your users will have their own computers and mobile devices (their _clients_).
+Your users will have their own computers and ((mobile)) devices (their _clients_).
 You should have a couple different clients of your own, so you have comparable environments to better help your users.
 
 You should also be a user of the stuff you self-host.
@@ -2078,7 +2078,7 @@ I've come to _really_ trust desktop file sync.
 If I see a check mark on my desktop app, I know everything is properly synchronized with the server.
 I am constantly creating and editing content locally and counting on sync to work (usually on my desktop computer), or creating and editing directly in Nextcloud via the web UI.
 
-There are also apps for mobile devices.
+There are also apps for ((mobile)) devices.
 I'll come back to mobile later in the following sections.
 
 ==== Object storage
@@ -2341,7 +2341,7 @@ Judge for yourself: compare https://github.com/owncloud/core/pulse with https://
 
 ===== Spinner on mobile
 
-When you first open the Nextcloud mobile app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app.
+When you first open the Nextcloud ((mobile)) app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app.
 If you ignore it and tap to navigate your way into a folder or open a file, you may end up tapping a different one than you intended because the folder order can change _as you are tapping the screen_.
 
 Workarounds:
@@ -2352,7 +2352,7 @@ Workarounds:
 ===== Mobile text editing is hard
 
 (((Nextcloud, mobile)))
-Nextcloud makes it easy to get to your stuff via mobile devices, but editing is a pain.
+Nextcloud makes it easy to get to your stuff via ((mobile)) devices, but editing is a pain.
 
 This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
 This applies to email, plain text, Markdown, and office documents.
@@ -2473,6 +2473,7 @@ They are encrypted, at least.
 * https://github.com/nextcloud/end_to_end_encryption/issues/8
 
 I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues, make sure you can live with all that, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
+(((mobile)))
 Make sure it works with all clients you plan to use it with (e.g. desktop, mobile).
 
 ==== AIO installer
@@ -2544,7 +2545,7 @@ I think it would be just so cool to be able to create clips without actually cre
 
 Feature request.
 
-I want the mobile app to auto-cache media and allow playing while offline.
+I want the ((mobile)) app to auto-cache media and allow playing while offline.
 
 * https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile
 
@@ -3106,7 +3107,7 @@ FOSS lags behind non-FOSS because companies make _lots_ of money at the leading 
 
 Some areas where FOSS is especially behind:
 
-* mobile phones (Murena is promising)
+* ((mobile)) phones (Murena is promising)
 * speech recognition (but check out https://github.com/openai/whisper)
 * ((AI)) (this area is changing rapidly)
 
