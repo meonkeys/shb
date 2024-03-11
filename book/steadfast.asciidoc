@@ -1735,6 +1735,9 @@ mario installs `zfs-auto-snapshot` for you.
 
 Once our server is online, we can use mario to configure and stand up services.
 
+mario can be found next to the source code for this book in the `mario/` folder.
+The `provision.sh` script and config files are in `mario/ansible`.
+
 === mario philosophy
 
 mario is a practical learning tool.
@@ -1774,8 +1777,9 @@ mario prepares the server filesystem as follows:
 
 === Usage
 
-Go ahead and run `provision.sh`.
-On your admin computer:
+IMPORTANT: mario is only tested and expected to work on Linux.
+
+Go ahead and run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
 [source%unbreakable,bash]
 ----
