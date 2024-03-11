@@ -1430,6 +1430,7 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 
 ==== Admin computer
 
+(((admin computer)))
 (((provision)))
 It's helpful to have a separate computer from your server to make changes.
 I usually run mario on a laptop.
@@ -1549,8 +1550,8 @@ See <<_full_disk_encryption>>.
 Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)).
 See <<_zfs>>.
-. Set up mario on your admin computer (a separate computer from your server).
-. Run mario on your admin computer to provision your server.
+. Set up mario on your ((admin computer)) (a separate computer from your server).
+. Run mario on your ((admin computer)) to provision your server.
 
 ==== Full-disk encryption
 
@@ -1868,7 +1869,7 @@ If you don't have a DNS server yet, use hostname to IP address mappings in `/etc
 mario expects to be able to connect directly to the server using SSH.
 Public key authentication eases this.
 If you have a key pair, use it.
-If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one.
+If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
 Copy the public key to the server with `ssh-copy-id` or similar.
 
 Use a stanza like this in your SSH client config:
@@ -2148,7 +2149,7 @@ Media files uploaded there will automatically appear in Jellyfin.
 * upgrades
 ** choose a release tag at https://hub.docker.com/_/nextcloud/
 ** change the version number in `roles/services/templates/ops/nextcloud/docker-compose.yml`
-** re-provision from admin computer
+** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`
 * visit `/settings/admin/overview`
 ** perform any recommended maintenance on that page
@@ -2518,7 +2519,7 @@ For hardware transcoding see https://jellyfin.org/docs/general/administration/ha
 
 * upgrades
 ** change the version number in `roles/services/templates/ops/jellyfin/docker-compose.yml`
-** re-provision from admin computer
+** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`
 
 ==== Bugs
@@ -2582,7 +2583,7 @@ The config change will be detected and a new `app` container will be created.
 
 * upgrades
 ** change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
-** re-provision from admin computer
+** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`
 ** if you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
 
