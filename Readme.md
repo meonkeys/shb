@@ -51,7 +51,7 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 
 | ID   | Description | Status | Resolution Details |
 |------|-------------|--------|--------------------|
-| am37 | port website to hugo | OPEN | |
+| am37 | port website to static site generator | RESOLVED | I went with Pelican. |
 | am39 | test all links and references in all output formats | OPEN | |
 | am43 | port to future home (re-do this Readme) | OPEN | |
 | am44 | re-test mario start to finish | OPEN | |
@@ -61,7 +61,11 @@ Here's a quick summary of the stuff I'm aware of and working on. IDs start with 
 | am53 | spell check | RESOLVED | |
 | am54 | grammar check | RESOLVED | |
 | am55 | improve htmlproofer | OPEN | |
-| am57 | professional editing: focus on structure & style | OPEN | |
+| am57 | professional editing: focus on structure & style | IN PROGRESS | tech review! |
+| am58 | port `book/build.sh` to macOS | OPEN | |
+| am59 | port `book/build.sh` to Windows | OPEN | |
+| am60 | port `mario/ansible/provision.sh` to macOS | OPEN | |
+| am61 | port `mario/ansible/provision.sh` to Windows | OPEN | |
 
 ## How to build the book
 
