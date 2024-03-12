@@ -18,12 +18,13 @@
 :!chapter-signifier:
 // prevent unnecessary blocking fetch of fonts
 :!webfonts:
+:pdf-themesdir: pdf-theme
 ifdef::shb-screenPDF[]
-:pdf-theme: screen-theme.yml
+:pdf-theme: screen.yml
 endif::[]
 ifdef::shb-printPDF[]
 :!front-cover-image:
-:pdf-theme: print-theme.yml
+:pdf-theme: print.yml
 :media: prepress
 endif::[]
 // necessary for keyboard macro (kbd)
@@ -230,7 +231,7 @@ Here's how certain types of content will appear in the text.
 |`zpool status -t` |command, filename, username, password, variable
 |kbd:[Ctrl+c] |key(s) pressed on the keyboard
 |https://example.com |link to website (https scheme is assumed and omitted)
-|<<Command line>> |cross-reference to another section or chapter
+|<<System design>> |cross-reference to another section or chapter
 |===
 
 I'll use “example.com” where you'll use your actual domain name.
@@ -381,7 +382,7 @@ This book is for people who want to _de-Google_, _de-iTunes_, _de-OneDrive_, _de
 === What is this book _not_?
 
 This is not a comprehensive guide to self-hosting.
-I won't attempt to enumerate the endless ways to mix and match hardware, operating systems, virtual machines, and services.
+I won't attempt to enumerate the endless ways to mix and match hardware, operating systems, ((isolation)) techniques, and services.
 This book is for small scale.
 Look elsewhere for:
 
@@ -416,79 +417,81 @@ It's fine to self-host some services and pay for others.
 You'll come up with your own checklist for what to self-host and when.
 Mine focuses on providing a useful, reliable, future-proof cloud for me and my family.
 
-This book is not the fastest path to trying out web-based services.
+This book is not the fastest path to trying out web services.
 You can usually find demo instances running for particular projects.
 There are cloud providers that will run a service for you and host your data.
 
-There are one-click-install appliances with many ready-to-go apps.
-((FreedomBox)) (https://freedombox.org) is one promising contender in this space.
+See also: <<Alternatives to this book>>.
 
-There are shortcuts and frontends for self-hosting.
-For example, openmediavault (https://openmediavault.org) looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
+=== How write book?
 
-And there are countless more of these kinds of partial or full-service self-hosting solutions.
-More:
+Why are you talking like a caveman?
 
-* ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
-* ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
-* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and ((Traefik))
+I wrote the book originally in Markdown plain text in my steadfast text editor, Vim.
+I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
+Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
+While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
+In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
+This simplified the book build and gave me more and better output formats.
 
-These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
-I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
-Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
+Check out the source code--you're welcome to hack away at it.
+See <<More resources>> and <<How to build this book>>.
 
-.Checklist: Self-Hosting Solution Viability
-[#solution-viability-checklist]
-****
-* [ ] Will it work for years with minimal tinkering?
-* [ ] Is it easily extensible?
-* [ ] Do I trust the maintainers?
-* [ ] Does it employ technologies I'm familiar with?
-* [ ] Does it weaken or strengthen security by changing my ((attack surface))?
-* [ ] Does it add features/value I need/want, beyond what I'm already able to do?
-* [ ] Will it help my users?
-* [ ] Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
-* [ ] Will it help me figure out why I made a change to one of my services two years ago?
-* [ ] Does it phone home, using telemetry or my data in a way I don't approve?
-* [ ] Does it hold back “enterprise” features I need, even for my scaled-down use case?
-Is it annoying about this, reminding me often?
-* [ ] If I want paid support, is it available?
-* [ ] Is it popular?
-Has it been around a while, and do I expect it to endure?
-****
+I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
+This helped me focus on the content while keeping the book simple enough to self-publish.
 
-(See also: <<traits-of-good-services>>)
+=== When write book?
 
-After brief reviews, I find existing self-hosting solutions generally:
+Still with the caveman.
+Enough already.
 
-* are new and immature
-* lack proper documentation
-* do too much: try to solve many problems without sufficient inertia/resources to maintain it all
-* don't do enough: just another Linux distro with an added layer to discover and install apps
-* make opinionated tech choices I don't agree with
-* have a limited list of apps in their app stores and often exclude the ones I want
-* have too many apps in their app store, without good ways to compare quality, privacy, features
-* are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
+I wrote this in 2023.
 
-Still, check 'em out.
-They might work better for you if you don't need the level of power and control provided by this book.
-By the time I publish, they (or some new contenders) might grow to overcome my approach.
-Please let me know what you discover.
-If I missed something, I'd love to learn about it!
+And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
+We got this!
 
-Here are more related and interesting self-hosting solutions worth researching further:
+=== Where?
 
-* ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
-* ((Cosmos Cloud)) (https://cosmos-cloud.io)
-* ((DockSTARTer)) (https://dockstarter.com)
-* ((HomelabOS)) (https://homelabos.com)
-* ((Start9)) (https://start9.com)
-* ((MicroCloud)) (https://canonical.com/microcloud)
-* ((LibreServer)) (https://libreserver.org)
-* ((LinuxServer.io)) (https://www.linuxserver.io)
-* ((UBOS)) (https://ubos.net)
+Seattle.
 
-==== You'll find your path
+=== Hey now.
+
+Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
+
+=== A note on FOSS
+
+(((FOSS, bias)))
+I prefer FOSS over non-FOSS.
+This can be a polarizing topic.
+Heck, even using the term FOSS instead of the other variants can be polarizing.
+These are just distractions.
+Today we need compromise, patience, and kindness.
+Curiosity over certainty.
+
+Here's my promise to you, dear Reader:
+
+I will try not to get too preachy.
+
+I will prioritize _practical_ solutions over _idealistic_ ones.
+I will sometimes fail to do this when it comes to FOSS.
+Most notably, I will barely acknowledge the existence of non-FOSS alternatives in this book.
+
+I'm aware of the tension between practical and idealistic solutions, and I believe this tension is a Good Thing because it reminds us to think critically about what cloud services we _should_ pay for and use, not just what we _can_ pay for and use.
+It's worth a moment's thought.
+
+Our data matter and our personal choices matter.
+The impact spreads to the groups you are a part of, as does the opportunity for improvement.
+
+I believe self-hosting ((FOSS)) is doable and affords many practical benefits over non-FOSS.
+
+Hang in there and give me some feedback.
+You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
+
+Continued ad nauseam in <<More about FOSS>>.
+
+== Your journey
+
+=== You'll find your path
 
 Continuing advances in hardware and software means self-hosting today is easier and cheaper than ever before.
 
@@ -581,7 +584,26 @@ This happens less often with ((FOSS)) because anyone can simply fork a project.
 (((Nextcloud)))
 See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas.
 
-==== Criminal chickens
+=== Why you should not self-host
+
+Self-hosting is more complex and time-consuming than paying for the same functionality, especially at first.
+It takes discipline and patience, like learning a new instrument (but _this_ instrument eventually plays itself!).
+
+If something breaks, you're fixing it.
+Sometimes you get a useful error, sometimes you can search the web for a quick fix.
+Sometimes you don't and can't.
+
+If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
+
+If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
+
+On-premise self-hosting entails additional meatspace-specific considerations.
+You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
+Just don't keep your server outside.
+
+== Practical examples
+
+=== Criminal chickens
 
 Here's a real example of a positive outcome I realized from self-hosting.
 
@@ -615,7 +637,7 @@ Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photo
 With my own cloud I'm also able to tune quotas and rate limits as desired.
 Full speed ahead!
 
-==== Photo search by location
+=== Photo search by location
 
 Here's one more pro-personal-cloud example.
 This one worked because I am comfortable storing location metadata in my self-hosted photos.
@@ -635,89 +657,6 @@ By the time you read this you may be able to query your photos with a sentence l
 
 Then you can move on to saving the world.
 Just make sure you've got your data!
-
-=== Why you should not self-host
-
-Self-hosting is more complex and time-consuming than paying for the same functionality, especially at first.
-It takes discipline and patience, like learning a new instrument (but _this_ instrument eventually plays itself!).
-
-If something breaks, you're fixing it.
-Sometimes you get a useful error, sometimes you can search the web for a quick fix.
-Sometimes you don't and can't.
-
-If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
-
-If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
-
-On-premise self-hosting entails additional meatspace-specific considerations.
-You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
-Just don't keep your server outside.
-
-=== How write book?
-
-Why are you talking like a caveman?
-
-I wrote the book originally in Markdown plain text in my steadfast text editor, Vim.
-I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
-Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
-While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
-In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
-This simplified the book build and gave me more and better output formats.
-
-Check out the source code--you're welcome to hack away at it.
-See <<More resources>> and <<How to build this book>>.
-
-I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
-This helped me focus on the content while keeping the book simple enough to self-publish.
-
-=== When write book?
-
-Still with the caveman.
-Enough already.
-
-I wrote this in 2023.
-
-And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
-We got this!
-
-=== Where?
-
-Seattle.
-
-=== Hey now.
-
-Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
-
-=== A note on FOSS
-
-(((FOSS, bias)))
-I prefer FOSS over non-FOSS.
-This can be a polarizing topic.
-Heck, even using the term FOSS instead of the other variants can be polarizing.
-These are just distractions.
-Today we need compromise, patience, and kindness.
-Curiosity over certainty.
-
-Here's my promise to you, dear Reader:
-
-I will try not to get too preachy.
-
-I will prioritize _practical_ solutions over _idealistic_ ones.
-I will sometimes fail to do this when it comes to FOSS.
-Most notably, I will barely acknowledge the existence of non-FOSS alternatives in this book.
-
-I'm aware of the tension between practical and idealistic solutions, and I believe this tension is a Good Thing because it reminds us to think critically about what cloud services we _should_ pay for and use, not just what we _can_ pay for and use.
-It's worth a moment's thought.
-
-Our data matter and our personal choices matter.
-The impact spreads to the groups you are a part of, as does the opportunity for improvement.
-
-I believe self-hosting ((FOSS)) is doable and affords many practical benefits over non-FOSS.
-
-Hang in there and give me some feedback.
-You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
-
-Continued ad nauseam in <<More about FOSS>>.
 
 === Surprises
 
@@ -767,7 +706,7 @@ One container typically contains only one service.
 
 Isolation of containers is limited compared to VMs.
 The kernel is shared, for example.
-Limited isolation keeps the resource and maintenance costs of container-based isolation low compared with VMs.
+Limited ((isolation)) keeps the resource and maintenance costs of container-based isolation low compared with VMs.
 
 Containers are excellent for a consistent and resilient personal cloud.
 They are easy to declare (in code), build, deploy, test, and repeat.
@@ -1217,7 +1156,7 @@ If I needed high availability via clustering I'd be more likely to use Kubernete
 If one computer in a Kubernetes cluster breaks, services can automatically migrate to working hardware in the cluster.
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
-Docker balances features and usability well, making it easy to run one service in isolation.
+Docker balances features and usability well, making it easy to run one service in ((isolation)).
 We'll layer on Docker Compose to run the groups of processes necessary to support a whole service (e.g. a web server and its database).
 Kubernetes can do this too, along with everything you _don't_ need to learn unless you are building out an entire virtual data center.
 Docker compose is a good fit for our single-server setup.
@@ -1277,9 +1216,9 @@ We'll use Traefik as our reverse proxy.
 
 ==== Traefik architecture
 
-Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud)) and other web-based self-hosted services.
+Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud)) and other self-hosted web services.
 
-We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
+We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
 
 (The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik/.
@@ -1295,11 +1234,10 @@ In the mario source code (or the snippets below), look at the `docker-compose.ym
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
 * the `Host(...)` rule in the `nextcloud-https` router
 
+NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
+
 The routing labels wire together the entrypoint and router with the service under which they are defined.
 That is: `websecure` to `nextcloud-https` to `app`.
-We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with ((Let's Encrypt)) (https://letsencrypt.org).
-
-NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
@@ -1320,7 +1258,6 @@ services:
 ----
 
 <1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
-HTTPS encryption is configured using other labels.
 
 <2> Connect the `websecure` entrypoint with the `nextcloud-https` router on the `app` service.
 
@@ -1328,6 +1265,9 @@ HTTPS encryption is configured using other labels.
 
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
+
+HTTPS encryption is configured using other labels on the Traefik container.
+See <<Encryption certificates>> for details.
 
 === Identity management
 
@@ -1348,7 +1288,7 @@ Some of the other self-hosting solutions mentioned above in <<_what_is_this_book
 
 A service is something useful you'll self-host.
 These are typically one or more containers.
-Services may be accessed from a web browser or mobile device, or they may simply run in the background on a schedule.
+Services may be accessed from a web browser or ((mobile)) device, or they may simply run in the background on a schedule.
 
 ===== Good for self-hosting
 
@@ -1470,6 +1410,7 @@ It can handle a reasonable amount of bursty compute needs, including building Do
 I found a used refurbished 1U rackmount server on eBay for about $1,000.
 Two 24-core CPUs and 128 GB RAM.
 Tech companies dump these by the truckload so you can usually find a good deal.
+This is sometimes called “off-lease enterprise hardware”.
 
 .DIY rackmount server attached to garage ceiling. It's fun to look at and is out of the way, but I need a ladder for maintenance and it weighs about 50lbs.
 image::racked-server.jpg[]
@@ -1482,7 +1423,7 @@ Power consumption averages 130W, or about 1,140kWh per year; roughly $138.15 in 
 That's about as much as a bright incandescent light bulb, and it's a bit wasteful for one user.
 Five users though?
 ~228kWh/year each.
-That's less than the cloud server hardware required for a mobile device making use of Google's or Apple's clouds.
+That's less than the cloud server hardware required for a ((mobile)) device making use of Google's or Apple's clouds.
 Further reading on this topic:
 
 . _The Surprisingly Large Energy Footprint of the Digital Economy_ by Bryan Walsh (https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/)
@@ -1498,6 +1439,7 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 
 ==== Admin computer
 
+(((admin computer)))
 (((provision)))
 It's helpful to have a separate computer from your server to make changes.
 I usually run mario on a laptop.
@@ -1505,7 +1447,7 @@ This provisions my remote server, making changes as necessary to align it with t
 
 ==== Test devices
 
-Your users will have their own computers and mobile devices (their _clients_).
+Your users will have their own computers and ((mobile)) devices (their _clients_).
 You should have a couple different clients of your own, so you have comparable environments to better help your users.
 
 You should also be a user of the stuff you self-host.
@@ -1617,8 +1559,8 @@ See <<_full_disk_encryption>>.
 Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)).
 See <<_zfs>>.
-. Set up mario on your admin computer (a separate computer from your server).
-. Run mario on your admin computer to provision your server.
+. Set up mario on your ((admin computer)) (a separate computer from your server).
+. Run mario on your ((admin computer)) to provision your server.
 
 ==== Full-disk encryption
 
@@ -1803,6 +1745,9 @@ mario installs `zfs-auto-snapshot` for you.
 
 Once our server is online, we can use mario to configure and stand up services.
 
+mario can be found next to the source code for this book in the `mario/` folder.
+The `provision.sh` script and config files are in `mario/ansible`.
+
 === mario philosophy
 
 mario is a practical learning tool.
@@ -1842,8 +1787,9 @@ mario prepares the server filesystem as follows:
 
 === Usage
 
-Go ahead and run `provision.sh`.
-On your admin computer:
+IMPORTANT: mario is only tested and expected to work on Linux.
+
+Go ahead and run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
 [source%unbreakable,bash]
 ----
@@ -1865,12 +1811,12 @@ Do this.
 ==== Domain name
 
 Buy a domain name from a registrar.
-A registered domain name is required for HTTPS web traffic encryption.
+A registered domain name is required for ((HTTPS)) web traffic encryption.
 
 ==== Public DNS
 
 (((Duck DNS)))
-mario expects to be able to use Duck DNS or Amazon Route 53 for DNS.
+mario expects to be able to use Duck ((DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries.
 Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
@@ -1908,7 +1854,7 @@ Here's a policy with way too much access that nevertheless works:
 
 ==== Internal DNS
 
-It is handy to have an _internal_ DNS server in addition to a public one (e.g. Route 53).
+It is handy to have an _internal_ ((DNS)) server in addition to a public one (e.g. Route 53).
 
 Inside your private network you can use handy domain names or even make up your own TLD (top-level domain).
 I recommend using internal hostnames matching public ones, but pointing to ((LAN))-only private IP addresses.
@@ -1925,14 +1871,14 @@ For example:
 
 IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
 
-If you don't have a DNS server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
+If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
 
 ==== Connect to server
 
 mario expects to be able to connect directly to the server using SSH.
 Public key authentication eases this.
 If you have a key pair, use it.
-If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one.
+If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
 Copy the public key to the server with `ssh-copy-id` or similar.
 
 Use a stanza like this in your SSH client config:
@@ -1984,8 +1930,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
-(((Let's Encrypt)))
-It may take a few minutes for ((Traefik)) to set up Let's Encrypt HTTP encryption certificates, so don't worry if you get invalid cert warnings at first.
+It may take a few minutes for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certificates, so don't worry if you get invalid cert warnings at first.
 
 You can tail the logs with:
 
@@ -2044,12 +1989,22 @@ sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -
 
 === Encryption certificates
 
-mario (well, ((Traefik))) sets up certificates to encrypt HTTP traffic.
-The certificates are issued using a DNS challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
-The DNS challenge is especially handy for servers with zero public-facing inbound ports.
+((Traefik)) will automatically install ((Let's Encrypt)) certificates to encrypt HTTP traffic.
+The certificates are issued using a ((DNS)) challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
+The DNS challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
+The DNS challenge is configured using labels in Traefik's `docker-compose.yml` configuration file.
 
-If you see certificate errors, confirm DNS works (externally and internally).
+Traefik accepts ((HTTPS)) and passes along unencrypted HTTP to our web services.
+This is called ((SSL termination)).
+
+Take a look at a `docker-compose.yml` file for a service included with mario.
+SSL termination is enabled for the service when a `tls` section is defined on a router.
+
+We also have to tell Traefik where to find certs.
+Look for lines with `myresolver` in the `docker-compose.yml` files included with mario.
+
+If you see certificate errors while trying to reach your web services, first confirm DNS queries are succeeding (externally and internally, as applicable).
 Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
 You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml` and re-provisioning.
 
@@ -2058,7 +2013,8 @@ That particularly seems to help the first time I stand up a new service.
 
 === Tiny test service
 
-How about a little tinkering.
+How about a little tinkering?
+
 Standing up a test service is easy.
 This is useful to confirm networking is functional for Docker containers running on your host.
 
@@ -2113,7 +2069,7 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 
 Note that mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` middleware from the corresponding router's ((Traefik)) label.
+You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
 For example, to allow WAN access to Nextcloud, make this change:
 
 [%linenums%unbreakable,diff]
@@ -2122,7 +2078,7 @@ For example, to allow WAN access to Nextcloud, make this change:
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
 ----
 
-To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only` middleware.
+To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only` ((middleware)).
 
 === Nextcloud
 
@@ -2146,7 +2102,7 @@ I've come to _really_ trust desktop file sync.
 If I see a check mark on my desktop app, I know everything is properly synchronized with the server.
 I am constantly creating and editing content locally and counting on sync to work (usually on my desktop computer), or creating and editing directly in Nextcloud via the web UI.
 
-There are also apps for mobile devices.
+There are also apps for ((mobile)) devices.
 I'll come back to mobile later in the following sections.
 
 ==== Object storage
@@ -2212,7 +2168,7 @@ Media files uploaded there will automatically appear in Jellyfin.
 * upgrades
 ** choose a release tag at https://hub.docker.com/_/nextcloud/
 ** change the version number in `roles/services/templates/ops/nextcloud/docker-compose.yml`
-** re-provision from admin computer
+** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`
 * visit `/settings/admin/overview`
 ** perform any recommended maintenance on that page
@@ -2339,7 +2295,7 @@ The GitHub project repositories are pretty quiet.
 Nextcloud works OK as the backend for a mobile device.
 It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
-See <<_mobile_text_editing_is_hard>> for a couple workarounds.
+See <<Mobile text editing is hard>> for a couple workarounds.
 
 I had a Murena Samsung S9+ phone (https://murena.com) running /e/ OS for a while.
 I loved it.
@@ -2409,7 +2365,7 @@ Judge for yourself: compare https://github.com/owncloud/core/pulse with https://
 
 ===== Spinner on mobile
 
-When you first open the Nextcloud mobile app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app.
+When you first open the Nextcloud ((mobile)) app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app.
 If you ignore it and tap to navigate your way into a folder or open a file, you may end up tapping a different one than you intended because the folder order can change _as you are tapping the screen_.
 
 Workarounds:
@@ -2420,7 +2376,7 @@ Workarounds:
 ===== Mobile text editing is hard
 
 (((Nextcloud, mobile)))
-Nextcloud makes it easy to get to your stuff via mobile devices, but editing is a pain.
+Nextcloud makes it easy to get to your stuff via ((mobile)) devices, but editing is a pain.
 
 This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
 This applies to email, plain text, Markdown, and office documents.
@@ -2541,6 +2497,7 @@ They are encrypted, at least.
 * https://github.com/nextcloud/end_to_end_encryption/issues/8
 
 I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues, make sure you can live with all that, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
+(((mobile)))
 Make sure it works with all clients you plan to use it with (e.g. desktop, mobile).
 
 ==== AIO installer
@@ -2581,7 +2538,7 @@ For hardware transcoding see https://jellyfin.org/docs/general/administration/ha
 
 * upgrades
 ** change the version number in `roles/services/templates/ops/jellyfin/docker-compose.yml`
-** re-provision from admin computer
+** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`
 
 ==== Bugs
@@ -2612,7 +2569,7 @@ I think it would be just so cool to be able to create clips without actually cre
 
 Feature request.
 
-I want the mobile app to auto-cache media and allow playing while offline.
+I want the ((mobile)) app to auto-cache media and allow playing while offline.
 
 * https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile
 
@@ -2645,7 +2602,7 @@ The config change will be detected and a new `app` container will be created.
 
 * upgrades
 ** change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
-** re-provision from admin computer
+** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`
 ** if you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
 
@@ -2814,7 +2771,7 @@ networks:
 ----
 
 Note the middleware to only allow traffic from your ((LAN)).
-This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the middleware, for example:
+This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
 ....
 traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24
@@ -2830,8 +2787,7 @@ Once you get that running, you can use the Nextcloud AI integration app as a con
 
 === Pi-hole
 
-(((Pi-hole)))
-Running a Pi-hole (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using DNS (Domain Name System) block lists.
+Running a ((Pi-hole)) (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
 
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
@@ -2855,7 +2811,7 @@ The Pi-Hole also has a list of local DNS entries.
 I add a few host names to this list for servers inside my ((LAN)).
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
-For example, DNS over HTTPS in Firefox.
+For example, ((DNS)) over ((HTTPS)) in Firefox.
 
 * https://support.mozilla.org/kb/firefox-dns-over-https
 
@@ -2890,6 +2846,78 @@ Note: people in these places are mostly dudes and some of them are jerks.
 ** homelab subreddit: https://reddit.com/r/homelab/
 ** \#selfhosted chat: https://matrix.to/#/#selfhosted:matrix.org
 * Hire me to help you out.
+
+=== Alternatives to this book
+
+There are one-click-install appliances with many ready-to-go apps.
+((FreedomBox)) (https://freedombox.org) is one promising contender in this space.
+
+There are shortcuts and frontends for self-hosting.
+For example, openmediavault (https://openmediavault.org) looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
+
+And there are countless more of these kinds of partial or full-service self-hosting solutions.
+More:
+
+* ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
+* ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
+* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and ((Traefik))
+
+These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
+I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
+Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
+
+.Checklist: Self-Hosting Solution Viability
+[#solution-viability-checklist]
+****
+* [ ] Will it work for years with minimal tinkering?
+* [ ] Is it easily extensible?
+* [ ] Do I trust the maintainers?
+* [ ] Does it employ technologies I'm familiar with?
+* [ ] Does it weaken or strengthen security by changing my ((attack surface))?
+* [ ] Does it add features/value I need/want, beyond what I'm already able to do?
+* [ ] Will it help my users?
+* [ ] Will it help me learn what I need/want to learn, and safely take care of the rest for me without my needing to learn more?
+* [ ] Will it help me figure out why I made a change to one of my services two years ago?
+* [ ] Does it phone home, using telemetry or my data in a way I don't approve?
+* [ ] Does it hold back “enterprise” features I need, even for my scaled-down use case?
+Is it annoying about this, reminding me often?
+* [ ] If I want paid support, is it available?
+* [ ] Is it popular?
+Has it been around a while, and do I expect it to endure?
+****
+
+(See also: <<traits-of-good-services>>)
+
+After brief reviews, I find existing self-hosting solutions generally:
+
+* are new and immature
+* lack proper documentation
+* do too much: try to solve many problems without sufficient inertia/resources to maintain it all
+* don't do enough: just another Linux distro with an added layer to discover and install apps
+* make opinionated tech choices I don't agree with
+* have a limited list of apps in their app stores and often exclude the ones I want
+* have too many apps in their app store, without good ways to compare quality, privacy, features
+* are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
+
+Still, check 'em out.
+They might work better for you if you don't need the level of power and control provided by this book.
+By the time I publish, they (or some new contenders) might grow to overcome my approach.
+Please let me know what you discover.
+If I missed something, I'd love to learn about it!
+
+Here are more related and interesting self-hosting solutions worth researching further:
+
+* ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
+* ((Clace)) (https://clace.io)
+* ((Cosmos Cloud)) (https://cosmos-cloud.io)
+* ((DockSTARTer)) (https://dockstarter.com)
+* ((HomelabOS)) (https://homelabos.com)
+* ((Start9)) (https://start9.com)
+* ((MicroCloud)) (https://canonical.com/microcloud)
+* ((LibreServer)) (https://libreserver.org)
+* ((LinuxServer.io)) (https://www.linuxserver.io)
+* ((Proxmox)) (https://proxmox.com)
+* ((UBOS)) (https://ubos.net)
 
 == Contributions
 
@@ -3102,7 +3130,7 @@ FOSS lags behind non-FOSS because companies make _lots_ of money at the leading 
 
 Some areas where FOSS is especially behind:
 
-* mobile phones (Murena is promising)
+* ((mobile)) phones (Murena is promising)
 * speech recognition (but check out https://github.com/openai/whisper)
 * ((AI)) (this area is changing rapidly)
 
@@ -3328,7 +3356,7 @@ kernel::
 LAN::
   Local area network. For example, the network used by computers and devices to talk with each other inside your home.
 Linux::
-  The most popular server OS. Also works fine on a desktop or laptop. This is the OS that is not Microsoft Windows or MacOS. The old me would have insisted on calling it “GNU/Linux” or “a Linux distribution”. A lot has happened since then, and I've come to believe the term “Linux” is good enough to describe the OS used for self-hosting in the context of this book.
+  The most popular server OS. Also works fine on a desktop or laptop. The old me would have insisted on calling it “GNU/Linux” or “a Linux distribution”. A lot has happened since then, and I've come to believe the term “Linux” is good enough to describe the OS used for self-hosting in the context of this book.
 LTS::
   Long-term support. A stable software release, supported for many years.
 mario::
@@ -3368,7 +3396,7 @@ RAID::
 reproducible::
   Can be done multiple times with the same result. Often used in the context of building software. If two developers each build an image from a `Dockerfile`, the _should_ both produce the same image. In practice, this rarely happens. Truly reproducible builds require a great deal of work. See: Nix.
 reverse proxy::
-  Networking software for filtering and directing traffic. It allows, for example, several web services with different domain names to share an IP address.
+  Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL/TLS termination (https://en.wikipedia.org/wiki/TLS_termination_proxy) and for running several self-hosted web services with different domain names with a single IP address.
 router::
   Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
 runtime::
@@ -3385,6 +3413,8 @@ SSD::
   Solid-state drive. A hard drive that doesn't spin.
 SSH::
   Secure Shell. Provides encrypted remote command line access to a server.
+SSL termination::
+  Accepting encrypted traffic and passing along unencrypted traffic. Act performed by Traefik reverse proxy in a mario-provisioned server. More accurately but rarely called TLS termination--SSL is deprecated and rarely used.
 sysadmin::
   Portmanteau of “systems administrator”. A party responsible for the upkeep of a computer system.
 threat model::

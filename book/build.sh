@@ -39,27 +39,40 @@ BUILD_LOCALE_LANG="${LANG:-en_US.UTF-8}"
 BUILD_GIT_COMMIT="$(git rev-parse --short HEAD || echo FIXME)"
 BUILD_GIT_BRANCH="$(git branch --show-current || echo FIXME)"
 BUILD_GIT_TAG="$(git describe --tags --abbrev=0 || echo FIXME)"
-BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
+
+if [[ $OSTYPE =~ linux-gnu ]]; then
+    BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
+    imageDefinition=.Dockerfile
+    runContainerUserArg="--user $USER:$GROUP"
+elif [[ $OSTYPE =~ darwin ]]; then
+    BUILD_OS_RELEASE="$OSTYPE"
+    imageDefinition=.Dockerfile.insecure
+    runContainerUserArg=''
+else
+    echo "⚠️	sorry, $OSTYPE is not yet supported"
+    exit 1
+fi
 
 echo '🚢	build image'
 # discard container checksum
-sudo docker build \
+docker build \
     --tag shb-asciidoctor \
     --build-arg WORK_DIR="$WORK_DIR" \
     --build-arg USER="$USER" \
     --build-arg UID="$UID" \
     --build-arg GROUP="$GROUP" \
     --build-arg GID="$GID" \
+    --file "$imageDefinition" \
     --quiet \
     . \
     > /dev/null
 
 echo '🚢	start container'
-sudo docker run \
+docker run \
     --rm \
     --interactive \
     --tty \
-    --user "$USER:$GROUP" \
+    $runContainerUserArg \
     --volume "$SCRIPT_DIR:$WORK_DIR" \
     --env BUILD_DATE_TIME="$BUILD_DATE_TIME" \
     --env BUILD_LOCALE_LANG="$BUILD_LOCALE_LANG" \
