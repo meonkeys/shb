@@ -1,6 +1,14 @@
+2024-03-12  Adam Monsen <haircut@gmail.com>
+
+	1.0.2 - tech review in progress
+
+	* Major changes based on WIP tech review with ln1draw.
+
+	* book/build.sh: port to macOS
+
 2024-02-08  Adam Monsen <haircut@gmail.com>
 
-	1.0 - manuscript / evaluation copy for publishers
+	1.0.1 - manuscript / evaluation copy for publishers
 
 	* Typeset print PDF to 6" x 9" (US Trade) size. Add placeholder foreword.
 
