@@ -3378,7 +3378,7 @@ RAID::
 reproducible::
   Can be done multiple times with the same result. Often used in the context of building software. If two developers each build an image from a `Dockerfile`, the _should_ both produce the same image. In practice, this rarely happens. Truly reproducible builds require a great deal of work. See: Nix.
 reverse proxy::
-  Networking software for filtering and directing traffic. It allows, for example, several web services with different domain names to share an IP address.
+  Networking software for filtering and directing traffic. It allows, for example, several self-hosted web services with different domain names to share an IP address. Reverse proxies are used for web service scaling and fault-toleranace in enterprise settings.
 router::
   Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
 runtime::
