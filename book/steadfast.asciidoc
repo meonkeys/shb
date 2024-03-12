@@ -18,12 +18,13 @@
 :!chapter-signifier:
 // prevent unnecessary blocking fetch of fonts
 :!webfonts:
+:pdf-themesdir: pdf-theme
 ifdef::shb-screenPDF[]
-:pdf-theme: screen-theme.yml
+:pdf-theme: screen.yml
 endif::[]
 ifdef::shb-printPDF[]
 :!front-cover-image:
-:pdf-theme: print-theme.yml
+:pdf-theme: print.yml
 :media: prepress
 endif::[]
 // necessary for keyboard macro (kbd)
