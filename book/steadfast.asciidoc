@@ -224,7 +224,7 @@ Here's how certain types of content will appear in the text.
 |`zpool status -t` |command, filename, username, password, variable
 |kbd:[Ctrl+c] |key(s) pressed on the keyboard
 |https://example.com |link to website (https scheme is assumed and omitted)
-|<<Command line>> |cross-reference to another section or chapter
+|<<System design>> |cross-reference to another section or chapter
 |===
 
 I'll use “example.com” where you'll use your actual domain name.
