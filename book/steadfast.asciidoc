@@ -409,7 +409,7 @@ It's fine to self-host some services and pay for others.
 You'll come up with your own checklist for what to self-host and when.
 Mine focuses on providing a useful, reliable, future-proof cloud for me and my family.
 
-This book is not the fastest path to trying out web-based services.
+This book is not the fastest path to trying out web services.
 You can usually find demo instances running for particular projects.
 There are cloud providers that will run a service for you and host your data.
 
@@ -1208,9 +1208,9 @@ We'll use Traefik as our reverse proxy.
 
 ==== Traefik architecture
 
-Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud)) and other web-based self-hosted services.
+Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud)) and other self-hosted web services.
 
-We want HTTPS requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
+We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
 
 (The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik/.
@@ -1226,11 +1226,10 @@ In the mario source code (or the snippets below), look at the `docker-compose.ym
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
 * the `Host(...)` rule in the `nextcloud-https` router
 
+NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
+
 The routing labels wire together the entrypoint and router with the service under which they are defined.
 That is: `websecure` to `nextcloud-https` to `app`.
-We'll come back to middlewares later, along with other Traefik features like automatic HTTP encryption certificate handling with ((Let's Encrypt)) (https://letsencrypt.org).
-
-NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
@@ -1251,7 +1250,6 @@ services:
 ----
 
 <1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
-HTTPS encryption is configured using other labels.
 
 <2> Connect the `websecure` entrypoint with the `nextcloud-https` router on the `app` service.
 
@@ -1259,6 +1257,9 @@ HTTPS encryption is configured using other labels.
 
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
+
+HTTPS encryption is configured using other labels on the Traefik container.
+See <<Encryption certificates>> for details.
 
 === Identity management
 
@@ -1802,12 +1803,12 @@ Do this.
 ==== Domain name
 
 Buy a domain name from a registrar.
-A registered domain name is required for HTTPS web traffic encryption.
+A registered domain name is required for ((HTTPS)) web traffic encryption.
 
 ==== Public DNS
 
 (((Duck DNS)))
-mario expects to be able to use Duck DNS or Amazon Route 53 for DNS.
+mario expects to be able to use Duck ((DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries.
 Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
@@ -1845,7 +1846,7 @@ Here's a policy with way too much access that nevertheless works:
 
 ==== Internal DNS
 
-It is handy to have an _internal_ DNS server in addition to a public one (e.g. Route 53).
+It is handy to have an _internal_ ((DNS)) server in addition to a public one (e.g. Route 53).
 
 Inside your private network you can use handy domain names or even make up your own TLD (top-level domain).
 I recommend using internal hostnames matching public ones, but pointing to ((LAN))-only private IP addresses.
@@ -1862,7 +1863,7 @@ For example:
 
 IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
 
-If you don't have a DNS server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
+If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
 
 ==== Connect to server
 
@@ -1921,8 +1922,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
-(((Let's Encrypt)))
-It may take a few minutes for ((Traefik)) to set up Let's Encrypt HTTP encryption certificates, so don't worry if you get invalid cert warnings at first.
+It may take a few minutes for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certificates, so don't worry if you get invalid cert warnings at first.
 
 You can tail the logs with:
 
@@ -1981,12 +1981,22 @@ sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -
 
 === Encryption certificates
 
-mario (well, ((Traefik))) sets up certificates to encrypt HTTP traffic.
-The certificates are issued using a DNS challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
-The DNS challenge is especially handy for servers with zero public-facing inbound ports.
+((Traefik)) will automatically install ((Let's Encrypt)) certificates to encrypt HTTP traffic.
+The certificates are issued using a ((DNS)) challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
+The DNS challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
+The DNS challenge is configured using labels in Traefik's `docker-compose.yml` configuration file.
 
-If you see certificate errors, confirm DNS works (externally and internally).
+Traefik accepts ((HTTPS)) and passes along unencrypted HTTP to our web services.
+This is called ((SSL termination)).
+
+Take a look at a `docker-compose.yml` file for a service included with mario.
+SSL termination is enabled for the service when a `tls` section is defined on a router.
+
+We also have to tell Traefik where to find certs.
+Look for lines with `myresolver` in the `docker-compose.yml` files included with mario.
+
+If you see certificate errors while trying to reach your web services, first confirm DNS queries are succeeding (externally and internally, as applicable).
 Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
 You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml` and re-provisioning.
 
@@ -1995,7 +2005,8 @@ That particularly seems to help the first time I stand up a new service.
 
 === Tiny test service
 
-How about a little tinkering.
+How about a little tinkering?
+
 Standing up a test service is easy.
 This is useful to confirm networking is functional for Docker containers running on your host.
 
@@ -2050,7 +2061,7 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 
 Note that mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` middleware from the corresponding router's ((Traefik)) label.
+You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
 For example, to allow WAN access to Nextcloud, make this change:
 
 [%linenums%unbreakable,diff]
@@ -2059,7 +2070,7 @@ For example, to allow WAN access to Nextcloud, make this change:
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
 ----
 
-To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only` middleware.
+To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only` ((middleware)).
 
 === Nextcloud
 
@@ -2752,7 +2763,7 @@ networks:
 ----
 
 Note the middleware to only allow traffic from your ((LAN)).
-This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the middleware, for example:
+This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
 ....
 traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24
@@ -2768,8 +2779,7 @@ Once you get that running, you can use the Nextcloud AI integration app as a con
 
 === Pi-hole
 
-(((Pi-hole)))
-Running a Pi-hole (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using DNS (Domain Name System) block lists.
+Running a ((Pi-hole)) (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
 
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
@@ -2793,7 +2803,7 @@ The Pi-Hole also has a list of local DNS entries.
 I add a few host names to this list for servers inside my ((LAN)).
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
-For example, DNS over HTTPS in Firefox.
+For example, ((DNS)) over ((HTTPS)) in Firefox.
 
 * https://support.mozilla.org/kb/firefox-dns-over-https
 
@@ -3378,7 +3388,7 @@ RAID::
 reproducible::
   Can be done multiple times with the same result. Often used in the context of building software. If two developers each build an image from a `Dockerfile`, the _should_ both produce the same image. In practice, this rarely happens. Truly reproducible builds require a great deal of work. See: Nix.
 reverse proxy::
-  Networking software for filtering and directing traffic. It allows, for example, several self-hosted web services with different domain names to share an IP address. Reverse proxies are used for web service scaling and fault-toleranace in enterprise settings.
+  Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL/TLS termination (https://en.wikipedia.org/wiki/TLS_termination_proxy) and for running several self-hosted web services with different domain names with a single IP address.
 router::
   Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
 runtime::
@@ -3395,6 +3405,8 @@ SSD::
   Solid-state drive. A hard drive that doesn't spin.
 SSH::
   Secure Shell. Provides encrypted remote command line access to a server.
+SSL termination::
+  Accepting encrypted traffic and passing along unencrypted traffic. Act performed by Traefik reverse proxy in a mario-provisioned server. More accurately but rarely called TLS termination--SSL is deprecated and rarely used.
 sysadmin::
   Portmanteau of “systems administrator”. A party responsible for the upkeep of a computer system.
 threat model::
