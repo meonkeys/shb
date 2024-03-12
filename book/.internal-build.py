@@ -67,7 +67,7 @@ epubOutput = f'{title}.epub'
 printPdfOutput = f'{title}.print.pdf'
 screenPdfOutput = f'{title}.screen.pdf'
 
-extendConverter = ['--require', './extensions.rb']
+extendConverter = ['--require', './.extensions.rb']
 
 for arg in args:
     match(arg):

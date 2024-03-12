@@ -42,7 +42,7 @@ BUILD_GIT_TAG="$(git describe --tags --abbrev=0 || echo FIXME)"
 
 if [[ $OSTYPE =~ linux-gnu ]]; then
     BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
-    imageDefinition=Dockerfile
+    imageDefinition=.Dockerfile
     runContainerUserArg="--user $USER:$GROUP"
 elif [[ $OSTYPE =~ darwin ]]; then
     BUILD_OS_RELEASE="$OSTYPE"

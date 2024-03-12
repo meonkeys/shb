@@ -20,7 +20,7 @@ ENV HOME=$WORK_DIR
 
 WORKDIR $WORK_DIR
 
-COPY Gemfile .
+COPY .Gemfile Gemfile
 
 RUN bundle install
 
