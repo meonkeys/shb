@@ -1014,8 +1014,8 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 
 ==== More tips
 
-((encryption))
-((firewall))
+(((encryption)))
+(((firewall)))
 * Maintain useful encrypted ((backups)).
 Perform test restores to know they are useful.
 See <<_backups>>.
@@ -1463,7 +1463,7 @@ We'll configure them mirrored (((RAID)) 1).
 This increases redundancy and read performance (for most reads) and halves usable storage space.
 
 HDDs are plenty fast when measured from the standpoint of self-hosted service response time.
-((operating system))
+(((operating system)))
 The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM.
 Remote ((backups)) can take a while, and that's fine.
 
