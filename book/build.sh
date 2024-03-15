@@ -40,11 +40,11 @@ BUILD_GIT_COMMIT="$(git rev-parse --short HEAD || echo FIXME)"
 BUILD_GIT_BRANCH="$(git branch --show-current || echo FIXME)"
 BUILD_GIT_TAG="$(git describe --tags --abbrev=0 || echo FIXME)"
 
-if [[ $OSTYPE =~ linux-gnu ]]; then
+if [[ "$OSTYPE" =~ linux-gnu ]]; then
     BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
     imageDefinition=.Dockerfile
     runContainerUserArg="--user $USER:$GROUP"
-elif [[ $OSTYPE =~ darwin ]]; then
+elif [[ "$OSTYPE" =~ darwin ]]; then
     BUILD_OS_RELEASE="$OSTYPE"
     imageDefinition=.Dockerfile.insecure
     runContainerUserArg=''
