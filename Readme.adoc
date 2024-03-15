@@ -89,7 +89,7 @@ Creative Commons licensing does not (yet!) apply.
 
 == Editing stages reference
 
-(from https://www.ingramspark.com/how-to-self-publish-a-book)
+(from https://www.ingramspark.com/how-to-self-publish-a-book, except the Tech Review section)
 
 === Manuscript Critique
 
@@ -102,9 +102,19 @@ With this type of critique, editors give feedback on items that will help improv
 A comprehensive edit addresses structural issues (similar to a manuscript critique), but it also involves a line edit, which looks closely at writing style and language.
 With a line edit, an editor focuses on the use of language to communicate your story to a reader.
 
+=== Tech review
+
+Specific to nonfiction technical writing.
+Includes reviewing and running code in a text.
+
+https://fadamakis.com/becoming-a-book-technical-reviewer-b0f2fd55f307 is a good introduction to technical reviewing.
+
+Changes in this repository related to tech review begin at the tag `start-tech-review`.
+
 === Copyedit
 
-A copyedit is often confused with a line edit, but they're very different steps in the editing process. A copyedit reviews technical flaws--issues with spelling, grammar, and punctuation--and looks for internal inconsistencies throughout the text.
+A copyedit is often confused with a line edit, but they're very different steps in the editing process.
+A copyedit reviews technical flaws--issues with spelling, grammar, and punctuation--and looks for internal inconsistencies throughout the text.
 
 === Proofread
 
