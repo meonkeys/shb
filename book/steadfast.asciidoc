@@ -1159,7 +1159,7 @@ Having everything on one filesystem is easy at first, for one service.
 It gets more complicated the more services you add (see https://en.wikipedia.org/wiki/Dependency_hell).
 Many of the desperate self-hoster support requests I see in FOSS communities are about incompatibilities between this or that version of PHP or relational database between two different services.
 Docker mitigates this by bundling dependencies.
-Each Docker image is basically a complete filesystem (sans kernel), so a service's image would include the right PHP version.
+Each Docker image is basically a complete filesystem (sans kernel), so a service's image would always include the correct PHP version.
 Another image would be used to create the database, if/as necessary.
 
 It's worth lingering on bundled dependencies for a minute.
