@@ -108,14 +108,14 @@ You'll find more of her excellent work later in this book, too.
 === Supporting the author
 
 I wrote this book with my own resources after years of research with lots of help from awesome people.
-See <<_acknowledgments>>.
+See <<Acknowledgments>>.
 
 Please buy a copy for yourself or someone else, especially if you'd like me to write more awesome books in the future.
 See <<Buy or donate>>.
 
 This book is a work in progress.
 Please help me improve it.
-See <<_contributions>>.
+See <<Contributions>>.
 
 == Metadata
 
@@ -269,7 +269,7 @@ I wrote this book to promote ((data sovereignty)) as a prosocial behavior.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
 Existing books lack a good, fast, and cheap technique for self-hosting on bare metal.
 I figured one out and I think you'll love it.
-It works fine if you run your server in the cloud too, it just costs a lot more (see <<_server>>).
+It works fine if you run your server in the cloud too, it just costs a lot more (see <<Server>>).
 
 Also: learning is fun.
 I learn when I write.
@@ -537,7 +537,7 @@ So many reasons!
 * Conserve electricity
 ** backend cloud power per device drops dramatically with a few users
 ** save even more power the more users you add
-** see linked articles in <<_server>>
+** see linked articles in <<Server>>
 * Save money
 ** self-hosted hardware will typically beat cloud (renting someone else's)
 ** savings increase as your users' data storage requirements enter the terabyte range
@@ -742,7 +742,7 @@ Community support is hit or miss.
 Nextcloud seems more popular outside the USA.
 
 Not all Nextcloud apps are ready for prime time.
-See <<_customization>>.
+See <<Customization>>.
 
 ===== Jitsi
 
@@ -892,7 +892,7 @@ I solicit feedback from others to balance my idealism with pragmatism.
 
 == System design
 
-In <<_mario>> we'll get to know the tool you can use to take care of some of the fiddly details of setting up a server.
+In <<mario>> we'll get to know the tool you can use to take care of some of the fiddly details of setting up a server.
 For now we'll cover its output from a high level.
 
 === Service stack
@@ -1018,7 +1018,7 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 
 * Maintain useful encrypted ((backups)).
 Perform test restores to prove they are useful.
-See <<_backups>>.
+See <<Backups>>.
 * Avoid running commands as the `root` user.
 * Use multi-factor authentication.
 * Use firewalls.
@@ -1117,7 +1117,7 @@ Example read-only server-side operations:
 Read-write operations:
 
 * upgrade OS packages: `apt full-upgrade`
-* upgrade services: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<_watchtower>>)
+* upgrade services: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<Watchtower>>)
 
 Start a “monthly maintenance” list and include these read-write operations.
 Always use `sudo` instead of logging in as the `root` user.
@@ -1132,7 +1132,7 @@ I choose to do some OS upgrades manually because:
 
 These reasons are similar to the reasons I install the OS itself by hand.
 
-My OS is more a pet than cattle (see “cattle vs. pets” in <<_glossary>>), although it is relatively easy to rebuild since I've limited and documented my customizations.
+My OS is more a pet than cattle (see “cattle vs. pets” in <<Glossary>>), although it is relatively easy to rebuild since I've limited and documented my customizations.
 
 === Container runtime
 
@@ -1271,7 +1271,7 @@ It takes care of authentication and authorization and all that good stuff.
 I'm interested in Authentik (https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
 I want to see it running well for a good while before adding it to mario.
 
-Some of the other self-hosting solutions mentioned above in <<_what_is_this_book_not>> do include FOSS central identity management.
+Some of the other self-hosting solutions mentioned above in <<What is this book _not_?>> do include FOSS central identity management.
 
 == Implementation
 
@@ -1369,7 +1369,7 @@ RAM: peak memory, in GB.
 These were fairly wild guesses, based as much as possible on published documentation.
 The guesses turned out to be accurate enough.
 I could see right quick I'd need something more powerful than the latest available Raspberry Pi.
-See <<_server>> for more lessons learned about resource requirements.
+See <<Server>> for more lessons learned about resource requirements.
 
 === Prepare hardware
 
@@ -1546,12 +1546,12 @@ Debian might also work; I haven't tested it.
 .. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
-See <<_full_disk_encryption>>.
+See <<Full-disk encryption>>.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)).
-See <<_zfs>>.
+See <<ZFS>>.
 . Set up mario on your ((admin computer)) (a separate computer from your server).
 . Run mario on your ((admin computer)) to provision your server.
 
@@ -1767,7 +1767,7 @@ The system should not change in any meaningful way after the desired state is re
 Once `provision.sh` completes successfully, it may be run again without making further changes.
 
 Then: start tinkering.
-You can find some ideas in <<_exercises>>.
+You can find some ideas in <<Exercises>>.
 
 You may want to first provision a virtual machine until you're ready to run mario pointed at your real server.
 
@@ -2139,7 +2139,7 @@ That _really_ deletes everything.
 ** Follow the setup steps above.
 * Read the official docs at `\https://cloud.example.com/settings/help` or https://docs.nextcloud.com.
 * Add apps.
-See <<_customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
+See <<Customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
 * Test sending an email at `/settings/admin` (Basic settings).
 * Add users.
 * Check logs.
@@ -2706,7 +2706,7 @@ For example, if you want to code your own web services, take a class in programm
 If you want to understand how source code makes a computer do things, take a class in compilers.
 
 Work through this book in a class or small group.
-See <<Discussion topics>> and <<_exercises>>.
+See <<Discussion topics>> and <<Exercises>>.
 
 Participate in ((FOSS)) communities to learn from and share with others.
 Pass on what you've learned.
@@ -3355,7 +3355,7 @@ LTS::
 mario::
   Provisioning system included with this book to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
 NAS::
-  Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<_server>>.
+  Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<Server>>.
 NIC::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
 Nix::
