@@ -420,8 +420,8 @@ See also: <<Alternatives to this book>>.
 
 Why are you talking like a caveman?
 
-I wrote the book originally in Markdown plain text in my steadfast text editor, Vim.
-I applied generous amounts of Pandoc (https://pandoc.org), time, and love.
+I wrote the book originally in Markdown plain text in my steadfast text editor, ((Vim)).
+I applied generous amounts of ((Pandoc)) (https://pandoc.org), time, and love.
 Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
 In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
@@ -1622,7 +1622,7 @@ zpool iostat
 
 === Server maintenance
 
-I use short monthly and yearly maintenance checklists. For example:
+I use short monthly and yearly ((maintenance)) checklists. For example:
 
 .Checklist: Monthly Maintenance
 ****
@@ -1665,7 +1665,7 @@ Reboot when necessary (e.g. when the kernel is upgraded).
 
 ==== Image updates
 
-I keep container images up to date with Watchtower or by hand, with:
+I keep container images up to date with ((Watchtower)) or by hand, with:
 
 [source,bash]
 ----
@@ -2146,7 +2146,7 @@ See <<Customization>> for tips on how to roll out apps thoughtfully and which on
 ** ((Traefik)).
 ** Containers.
 ** Nextcloud server log at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
-* Some maintenance requires the `occ` tool (short for “ownCloud command”).
+* Some ((maintenance)) requires the `occ` tool (short for “ownCloud command”).
 ** Run it with `sudo docker exec --interactive --user www-data nextcloud_app_1 php occ`.
 * Add `/data/tmp-video` as an External storage.
 Media files uploaded there will automatically appear in Jellyfin.
@@ -2164,7 +2164,7 @@ Media files uploaded there will automatically appear in Jellyfin.
 ** re-provision from ((admin computer))
 ** replace containers on the host with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`
 * visit `/settings/admin/overview`
-** perform any recommended maintenance on that page
+** perform any recommended ((maintenance)) on that page
 ** ignore the Update section, it may disagree with Docker Hub
 * tail logs
 ** `lnav` is helpful for this: https://lnav.org
@@ -2990,48 +2990,48 @@ Exercises for individual practice and study groups.
 . Stand up a second Nextcloud service for experiments.
 .. Use it to test out the latest release or a custom app.
 . Try Nextcloud with ((object storage)) for primary storage.
-. Adapt this guide to a Linux distribution besides Ubuntu.
+. Adapt this guide to a ((Linux)) distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
-. Contribute to mario.
+. Contribute to ((mario)).
 . Move secrets used by mario into an Ansible vault.
-. Enable GPU transcoding in Jellyfin.
+. Enable ((GPU)) transcoding in ((Jellyfin)).
 . Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
 . Aggregate logs.
 . Create or install a service to monitor outbound network activity from containers.
-. Pick a Docker container that doesn't require outbound network access.
+. Pick a ((Docker)) container that doesn't require outbound network access.
 Prevent it from making outbound connections and prove to yourself it works.
 . What if the server won't boot?
 .. Describe troubleshooting steps, in detail.
 .. Make a plan for system recovery when it fails to boot.
 . Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
 . Reorganize mario roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
-. Set up Fail2Ban (https://fail2ban.org).
+. Set up ((Fail2Ban)) (https://fail2ban.org).
 Feed it logs from various services.
-. Set up Suricata (https://suricata.io) network analysis and threat detection.
-. Separate out code for ASCII to SVG diagram conversion from Markdeep.
-Incorporate it into this book's build system, perhaps as a pandoc filter.
+. Set up ((Suricata)) (https://suricata.io) network analysis and threat detection.
+. Separate out code for ASCII to SVG diagram conversion from ((Markdeep)).
+Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
 . Try a different container runtime, such as podman (https://podman.io).
-. Adapt mario to use podman.
-. Adapt mario to use Kubernetes (https://kubernetes.io).
+. Adapt mario to use ((podman)).
+. Adapt mario to use ((Kubernetes)) (https://kubernetes.io).
 . Modify mario to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
 . Improve your backup security: allow restic/borg/etc. read-only access during a backup.
 . Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
 . Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw).
 Work around this and share your solution with others.
-. Try Nix and NixOS (https://nixos.org).
-. Roll your own Linux distro.
-. Build, configure and deploy an OPNsense firewall (https://opnsense.org).
-. Set up your own headscale tailnet for remote ((LAN)) access (https://headscale.net).
+. Try ((Nix)) and ((NixOS)) (https://nixos.org).
+. Roll your own ((Linux)) distro.
+. Build, configure and deploy an OPNsense ((firewall)) (https://opnsense.org).
+. Set up your own ((headscale)) tailnet for remote ((LAN)) access (https://headscale.net).
 . Leverage existing ownership and permission OS security measures.
 .. Run containers as unprivileged users.
 .. Use appropriate ownership and permissions for persistent container data.
-. Enable preview generation for Nextcloud.
+. Enable preview generation for ((Nextcloud)).
 .. Research first: how does default preview generation work?
 What file types are supported?
 How much disk space is used?
 How fast is it, subjectively and objectively?
-What maintenance will it require once enabled?
+What ((maintenance)) will it require once enabled?
 .. Create a test bed with a clean install and many preview-able files of various file formats.
 Write timing scripts for objective performance measurements.
 Consider both client- and server-side.
@@ -3123,7 +3123,7 @@ FOSS lags behind non-FOSS because companies make _lots_ of money at the leading 
 
 Some areas where FOSS is especially behind:
 
-* ((mobile)) phones (Murena is promising)
+* ((mobile)) phones (((Murena)) is promising)
 * speech recognition (but check out https://github.com/openai/whisper)
 * ((AI)) (this area is changing rapidly)
 
