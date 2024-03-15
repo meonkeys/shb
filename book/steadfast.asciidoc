@@ -1505,7 +1505,7 @@ I just made these up based on what I estimated I'd need, then doubled that to al
 ===== Home router configuration
 
 Learn how to configure your router.
-Keep it up to date and maintain a strict firewall with only the necessary ports open / forwarded.
+Keep it up to date and maintain a strict ((firewall)) with only the necessary ports open / forwarded.
 
 CAUTION: Port forwarding allows inbound connections through your WAN boundary to your server.
 Read <<Digital security>> before forwarding any ports.
@@ -1569,7 +1569,7 @@ If you decide you want full-disk encryption, choose it during the OS install. <<
 
 (((ZFS, setup)))
 The OS takes care of itself pretty well.
-For more robust data storage, we can a couple of HDDs and manage them with ZFS.
+For more robust data storage, we can a couple of HDDs and manage them with ((ZFS)).
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
