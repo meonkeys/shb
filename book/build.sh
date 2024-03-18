@@ -54,6 +54,7 @@ else
 fi
 
 echo '🚢	build image'
+cd "$SCRIPT_DIR"
 # discard container checksum
 docker build \
     --tag shb-asciidoctor \
