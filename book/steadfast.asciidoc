@@ -1037,7 +1037,7 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 
 ==== More tips
 
-// List formatting is broken if hidden index terms butt up against the unordered list.
+// List formatting is broken if hidden index terms butt up against unordered lists such as this one.
 
 * Maintain useful encrypted ((backups)).
 Perform test restores to prove they are useful.
