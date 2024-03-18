@@ -65,8 +65,6 @@ toc::[]
 
 == Introduction
 
-=== Thesis
-
 (((data sovereignty)))
 Data sovereignty (full control of your data) is achievable for small communities as well as corporations.
 It can be both fun and practical, and it can support ((prosocial behavior)).
@@ -118,8 +116,6 @@ Please help me improve it.
 See <<Contributions>>.
 
 == Metadata
-
-=== Version information
 
 This book was generated
 
@@ -485,8 +481,6 @@ Continued ad nauseam in <<More about FOSS>>.
 
 == Your journey
 
-=== You'll find your path
-
 Continuing advances in hardware and software means self-hosting today is easier and cheaper than ever before.
 
 And in one key way, much more complex: there are an overwhelming number of choices to be made for someone starting out on this journey.
@@ -771,8 +765,6 @@ Never try to force people to use whatever you self-host.
 I hope this book inspires you with many positive surprises and helps you and your users avoid many negative ones.
 
 == Prerequisites
-
-=== Skills
 
 This book assumes some prerequisite skills.
 You must be able to:
