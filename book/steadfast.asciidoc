@@ -1382,9 +1382,11 @@ It's called _hard_ ware because these problems are _hard_.
 
 That's fun to say and, in my experience, false.
 
-It's true there is a learning curve for understanding basic computer hardware components, but it is also tangible and behaves consistently, more or less.
+While it's true there is a learning curve for understanding basic computer hardware components and hardware can certainly fail, there are plenty of wonderfully positive aspects of hardware.
 
-Software problems easily and often outpace hardware problems.
+It's fun.
+It's tangible and behaves consistently.
+Just plug it in, turn it on, and it'll probably work.
 
 ==== Server
 
