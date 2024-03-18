@@ -1312,7 +1312,7 @@ Services may be accessed from a web browser or ((mobile)) device, or they may si
 You'll find some services are better choices to self-host than others.
 They will likely share at least some of these traits.
 
-.Common Traits of Good Self-Hosted Services
+.Traits of Good Self-Hosted Services
 [#traits-of-good-services]
 ****
 * Self-hosting instructions available.
@@ -1348,9 +1348,11 @@ Forking would be costly and time-consuming, and even switching forks might be co
 
 ===== Bad for self-hosting
 
-Here are some reasons you may want to reject a service:
+Here are some indications a self-hosted service might be one to avoid.
 
-* Your users don't want it or won't use it.
+.Traits of Bad Self-Hosted Services
+[#traits-of-bad-services]
+****
 * Unpopular, inactive, or poorly maintained.
 ** Few maintainers / contributors.
 ** Maintainers are inattentive to contributors.
@@ -1362,6 +1364,7 @@ Here are some reasons you may want to reject a service:
 * Constant annoying upsells/nags.
 * Intentional vendor lock-in: monopolistic tendencies or use of closed/proprietary standards/services.
 * Open core (https://en.wikipedia.org/wiki/Open-core_model).
+****
 
 Habitica (https://habitica.com) demonstrates several of these.
 
@@ -2909,7 +2912,7 @@ Is it annoying about this, reminding me often?
 Has it been around a while, and do I expect it to endure?
 ****
 
-(See also: <<traits-of-good-services>>)
+(See also: <<traits-of-good-services>> and <<traits-of-bad-services>>)
 
 After brief reviews, I find existing self-hosting solutions generally:
 
