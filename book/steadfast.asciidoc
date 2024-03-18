@@ -2113,10 +2113,10 @@ Done well, it serves as a solid foothold for de-Googling.
 
 Nextcloud can be self-hosted for free when installed via mario.
 
-==== Base install
+==== Basic install
 
 (((Nextcloud, install)))
-A basic Nextcloud install is focused on remote file management (storage, organization, and sharing).
+A basic (default, un-customized) Nextcloud install provides remote file storage, organization, and sharing.
 It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional metadata about those files and folders in a database.
 You access it via a web browser and there is a desktop client to sync files locally, very much like Dropbox, Google Drive, and OneDrive.
 
