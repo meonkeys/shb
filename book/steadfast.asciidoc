@@ -421,7 +421,7 @@ See also: <<Alternatives to this book>>.
 
 Why are you talking like a caveman?
 
-I wrote the book originally in Markdown plain text in my steadfast text editor, ((Vim)).
+I wrote the book originally in Markdown plain text in my steadfast text editor, ((Vim)) (https://www.vim.org).
 I applied generous amounts of ((Pandoc)) (https://pandoc.org), time, and love.
 Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
@@ -3260,21 +3260,27 @@ Let's be amused to _live_: inspired, motivated, powerfully kind.
 
 == Acknowledgments
 
-Sometimes I feel more like a project manager than an author, accepting help from so many generous people.
-I truly couldn't have done this alone and I am so, so thankful.
+Sometimes I feel more like a birthday boy than an author, accepting gifts from so many generous people.
+I truly couldn't have done this alone and I am so, so grateful for you.
 
 Thanks to my daughter for her fantastic illustrations.
 
-Thanks to all my reviewers.
-Special thanks to Eva for excellent developmental editing, copy editing, proof reading, line editing, and technical review.
+Thanks to Eva Monsen for more than I could ever account for here.
+For starters: several rounds of thoughtful and excellent code review, technical critique, developmental editing, copy editing, proof reading, and line editing.
 
-Thanks to my family and friends for putting up with my ((FOSS)) self-hosting experiments.
+Thanks to my family and friends for tolerating my protracted ((FOSS)) self-hosting boondoggles, including this book.
 
-Thanks to the contributors to the myriad FOSS programs I used to create this book, especially Dan Allen and the Asciidoctor team.
+Thanks to Pro Git 2--my inspiration to switch to Asciidoctor.
 
-Thanks to Rob and all #underlug for help with hardware, networking, ((Ansible)), and ((Traefik)).
+Thanks to the contributors to the myriad FOSS programs I used to create this book, especially John MacFarlane and the Pandoc team, Dan Allen and the Asciidoctor team, and Bram Moolenaar and the Vim team (rest in peace, Bram).
 
-Thanks to Bryan, Rob and all the Deadbeat Dads for your invaluable feedback.
+Thanks to Rob Smith and all #underlug for help with hardware, networking, ((Ansible)), and ((Traefik)).
+
+Thanks to Bryan Daisley, Rob Floberg and all the Deadbeat Dads for your invaluable feedback.
+
+Thanks to Bob Nystrom for your mind-expanding design review.
+
+Thanks to Lenny Wondra for your life-changing tech review and editing.
 
 Thanks most of all to my wife and kids for supporting and believing in me.
 For all the cooking, talking, listening, art, coding, math, music, and love.
