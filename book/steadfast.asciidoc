@@ -3464,6 +3464,7 @@ WAN::
 ZFS::
   A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
+ifndef::shb-printPdf[]
 == List of figures
 
 * <<image-bread-server>>
@@ -3478,6 +3479,7 @@ ZFS::
 * <<image-WAN-to-LAN-traffic>>
 * <<image-DNS-traffic-diagram>>
 * <<image-puppy>>
+endif::[]
 
 == End
 
