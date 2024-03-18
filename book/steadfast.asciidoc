@@ -679,7 +679,6 @@ I confirmed the contents were normal server guts, or close enough.
 The CPUs and memory sticks were all there as advertised.
 
 I plugged it in; it worked.
-Took me longer to build a rack for my server than it took me to power it on.
 
 .View inside the server showing two empty PCI-E card slots.
 image::inside-chassis.jpg[align="center",scaledwidth=80%]
