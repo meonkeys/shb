@@ -330,6 +330,7 @@ You're reading the right book to host services for a small community.
 _Rapid-rise_ is something you might find on a package of baker's yeast, and I love fresh-baked bread.
 If your server is a loaf of bread, this book is your rapid-rise yeast.
 
+[#image-bread-server]
 .Server in the shape of a loaf of bread.
 image::bread-server.png[align="center",scaledwidth=80%]
 
@@ -606,11 +607,13 @@ I used to just plop them on YouTube because hey, it's free and it “just works�
 Except when it doesn't.
 YouTube sometimes felt my chickens were being spammy, deceptive, and/or scammy.
 
+[#image-YT-censor]
 .Screenshot of an email from YouTube content team having removed my chicken coop camera video.
 image::YT-censor.png[align="center",scaledwidth=80%]
 
 For the record, our chickens are _squeaky clean_.
 
+[#image-squeaky-clean-chicken]
 .One absolutely upstanding, hard-working, law-abiding chicken.
 image::squeaky-clean-chicken.png[align="center",scaledwidth=80%]
 
@@ -619,6 +622,7 @@ Once I stood up my personal cloud I felt freedom and ease when posting and hosti
 I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens.
 I can safely ignore their audit and its erroneous compliance infringement warning.
 
+[#image-YT-audit]
 .Screenshot of a YouTube legal audit for my old API client.
 image::YT-audit.png[align="center",scaledwidth=80%]
 
@@ -680,6 +684,7 @@ The CPUs and memory sticks were all there as advertised.
 
 I plugged it in; it worked.
 
+[#image-inside-chassis]
 .View inside the server showing two empty PCI-E card slots.
 image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
@@ -905,6 +910,7 @@ For now we'll cover its output from a high level.
 A mario-built system presents nicely as a simplified stack of colored boxes.
 These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. “Stack” is also commonly used to describe interdependent layers of a system.
 
+[#image-service-stack]
 .Layers of a mario-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.png[align="center",scaledwidth=80%]
 
@@ -1235,6 +1241,7 @@ Study the included Traefik architecture diagram to better understand this proces
 Credit to Peka for the gopher logo, licensed CC-BY-3.0.
 For more information see the Traefik `README.md`)
 
+[#image-traefik-architecture]
 .Traefik architecture diagram showing how a request reaches a service.
 image::traefik-architecture.png[]
 
@@ -1424,6 +1431,7 @@ Two 24-core CPUs and 128 GB RAM.
 Tech companies dump these by the truckload so you can usually find a good deal.
 This is sometimes called “off-lease enterprise hardware”.
 
+[#image-racked-server]
 .DIY rackmount server attached to garage ceiling. It's fun to look at and is out of the way, but I need a ladder for maintenance and it weighs about 50lbs.
 image::racked-server.jpg[]
 
@@ -1446,6 +1454,7 @@ A rackmount server like mine can handle far more than 5 users, assuming they are
 
 It also makes a great heated perch.
 
+[#image-bird-on-server]
 .Bird perched on server.
 image::bird-on-server.jpg[align="center",scaledwidth=50%]
 
@@ -1533,6 +1542,7 @@ Make a sketch to better understand your network.
 
 Here's a simple diagram I created using https://asciiflow.com to plan cabling and visualize the flow of traffic through my network devices.
 
+[#image-WAN-to-LAN-traffic]
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 
@@ -2810,6 +2820,7 @@ The technique is imperfect, yet simple and effective.
 
 My Pi-hole server sits between my router's DNS server and all clients.
 
+[#image-DNS-traffic-diagram]
 .Pi-hole DNS traffic flow diagram.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
@@ -3086,6 +3097,7 @@ Right?!
 I sure hope so.
 Because--fair warning--if you spend too much time with your “puppy” (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
 
+[#image-puppy]
 .Open Source is free like a puppy. Pictured: actual puppy.
 image::puppy.jpg[align="center",scaledwidth=80%]
 
@@ -3451,6 +3463,21 @@ WAN::
   Wide-area network. Everything outside your LAN / home network / router.
 ZFS::
   A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
+
+== List of figures
+
+* <<image-bread-server>>
+* <<image-YT-censor>>
+* <<image-squeaky-clean-chicken>>
+* <<image-YT-audit>>
+* <<image-inside-chassis>>
+* <<image-service-stack>>
+* <<image-traefik-architecture>>
+* <<image-racked-server>>
+* <<image-bird-on-server>>
+* <<image-WAN-to-LAN-traffic>>
+* <<image-DNS-traffic-diagram>>
+* <<image-puppy>>
 
 == End
 
