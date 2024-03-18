@@ -891,7 +891,7 @@ I solicit feedback from others to balance my idealism with pragmatism.
 
 == System design
 
-In <<mario>> we'll get to know the tool you can use to take care of some of the fiddly details of setting up a server.
+In <<_mario>> we'll get to know the tool you can use to take care of some of the fiddly details of setting up a server.
 For now we'll cover its output from a high level.
 
 === Service stack
