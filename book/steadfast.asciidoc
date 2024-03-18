@@ -919,9 +919,14 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 
 === Digital security
 
-Here are a few quick recommendations for the average self-hoster with limited time, considering two categories of data.
+Let's cover the basic tools for understanding and securing your server.
 
-==== sensitive data
+==== Categorize your data
+
+First, consider your data.
+It helps to break it down into two common categories:
+
+===== sensitive data
 
 Examples: passwords, credit card numbers, government ID numbers.
 
@@ -931,7 +936,7 @@ Recommendations:
 . if ever saved on a computer, store encrypted
 . easy fix: store in a password manager
 
-==== everything else
+===== everything else
 
 Examples: notes, photos, documents, personal information.
 
