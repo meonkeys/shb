@@ -241,7 +241,7 @@ I'm a dad, tech entrepreneur, and ((FOSS)) (free and open source software) enthu
 I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write.
 I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
 
-I'm most proud of my family, growing Mifos (https://mifos.org), founding SeaGL (https://seagl.org), selling C-SATS (https://csats.com), and writing this book.
+I'm most proud of my family, growing Mifos (https://mifos.org), founding ((SeaGL)) (https://seagl.org), selling C-SATS (https://csats.com), and writing this book.
 
 I aspire to always be kind and minimize my ego.
 
@@ -2728,7 +2728,7 @@ File a bug.
 Post in a forum.
 It's fun!
 
-Conferences like SeaGL (https://seagl.org) bring together bright minds on many topics, including self-hosting.
+Conferences like ((SeaGL)) (https://seagl.org) bring together bright minds on many topics, including self-hosting.
 If you've done something cool, share it!
 
 === Use GPUs
