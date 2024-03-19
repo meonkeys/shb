@@ -3351,6 +3351,8 @@ kernel::
   The part of the OS that talks directly with hardware.
 LAN::
   Local area network. For example, the network used by computers and devices to talk with each other inside your home.
+LFNW::
+  LinuxFest Northwest. Annual conference in Bellingham, Washington dedicated to serving and connecting open source communities. Established in 2000.
 Linux::
   The most popular server OS. Also works fine on a desktop or laptop. The old me would have insisted on calling it “GNU/Linux” or “a Linux distribution”. A lot has happened since then, and I've come to believe the term “Linux” is good enough to describe the OS used for self-hosting in the context of this book.
 LTS::
