@@ -1809,12 +1809,12 @@ cd mario/ansible
 
 On this first invocation, it will check for prerequisites, then prompt you to enter values specific to your server into a configuration file.
 
-[%unbreakable]
-....
+[%unbreakable,text]
+----
 You don't have a config file. I'll create one for you now.
 
 Please edit 'config' and re-run this script.
-....
+----
 
 Do this.
 
@@ -1893,12 +1893,12 @@ Copy the public key to the server with `ssh-copy-id` or similar.
 
 Use a stanza like this in your SSH client config:
 
-[%unbreakable]
-....
+[%unbreakable,text]
+----
 Host mario_server
   HostName console.example.com
   User your-username
-....
+----
 
 (((provision)))
 Test it by running `provision.sh` again.
@@ -2044,7 +2044,8 @@ In the folder `~/ping/`, run the command `sudo docker-compose up`.
 Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
-....
+[%unbreakable,text]
+-----
 $ sudo docker-compose up
 Creating network "ping_default" with the default driver
 Creating ping_test_1 ... done
@@ -2055,7 +2056,7 @@ test_1  | 64 bytes from 93.184.216.34: seq=1 ttl=55 time=3.236 ms
 test_1  | 64 bytes from 93.184.216.34: seq=2 ttl=55 time=3.363 ms
 ^CGracefully stopping... (press Ctrl+C again to force)
 Stopping ping_test_1   ... done
-....
+-----
 
 This is the basis for adding more interesting services, too.
 It's only a few more lines of code+config to create a small ((API)) or web service and a few more to publish it with your ((reverse proxy)).
@@ -2779,9 +2780,10 @@ networks:
 Note the middleware to only allow traffic from your ((LAN)).
 This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
-....
-traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24
-....
+[source,yaml]
+----
+"traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24"
+----
 
 See the LocalAI documentation for further setup help.
 
