@@ -39,21 +39,28 @@ endif::[]
 == Colophon
 
 _{doctitle}_
-
+ +
+ +
 First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
-
+ +
+ +
 Seattle, Washington, USA.
-
+ +
+ +
 {copyright}
-
+ +
+ +
 Some rights reserved.
 See <<Copyright and license>>.
-
+ +
+ +
 Paperback ISBN FIXME.
-
+ +
+ +
 [.text-center]
 10 9 8 7 6 5 4 3 2 1
-
+ +
+ +
 [.text-center.big]
 image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Sunrise Data Press
 
@@ -82,7 +89,6 @@ Bring along whatever ((sysadmin)) experience you've got, some willing users, and
 The Internet is often a relentless cash-grab and attention vampire.
 Our actions are infinitely measured; _we_ are the product.
 The smog of surveillance stifles our freedom and erodes trust.
-
 We will:
  
 * Not settle for cheap cloud services.
@@ -100,7 +106,6 @@ This is the book I wish I'd had when I was struggling to provide a safe online e
 === Cover art
 
 The beautiful cover art was created by my daughter using Krita (https://krita.org).
-
 You'll find more of her excellent work later in this book, too.
 
 === Supporting the author
@@ -141,22 +146,18 @@ Contact me if you are interested in obtaining it under other terms.
 
 ===== You are free to:
 
-*Share* -- copy and redistribute the material in any medium or format
-
-*Adapt* -- remix, transform, and build upon the material
+* *Share* -- copy and redistribute the material in any medium or format
+* *Adapt* -- remix, transform, and build upon the material
 
 _The licensor cannot revoke these freedoms as long as you follow the license terms._
 
 ===== Under the following terms:
 
-*Attribution* -- You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+* *Attribution* -- You must give appropriate credit, provide a link to the license, and indicate if changes were made.
 You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-*NonCommercial* -- You may not use the material for commercial purposes.
-
-*ShareAlike* -- If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-
-*No additional restrictions* -- You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+* *NonCommercial* -- You may not use the material for commercial purposes.
+* *ShareAlike* -- If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+* *No additional restrictions* -- You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 ===== Notices
 
@@ -434,9 +435,7 @@ This helped me focus on the content while keeping the book simple enough to self
 
 Still with the caveman.
 Enough already.
-
 I wrote this in 2023.
-
 And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
 We got this!
 
@@ -482,7 +481,6 @@ Continued ad nauseam in <<More about FOSS>>.
 == Your journey
 
 Continuing advances in hardware and software means self-hosting today is easier and cheaper than ever before.
-
 And in one key way, much more complex: there are an overwhelming number of choices to be made for someone starting out on this journey.
 
 Hang in there.
@@ -507,7 +505,6 @@ Enjoy your journey.
 === Why you should self-host
 
 Ask again--as you should--why the heck would anyone self-host software services?
-
 So many reasons!
 
 * Flexibility
@@ -782,7 +779,6 @@ You can quickly learn them online.
 === Experience level
 
 New self-hosters can use this book to get started.
-
 Experienced self-hosters can compare my choices to theirs.
 
 === Mindset
@@ -907,11 +903,8 @@ These are conceptual, based on where and how frequently I act and investigate wh
 image::service-stack.png[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a container.
-
 Less often I am updating OS (operating system) packages.
-
 Less often still I might examine versions of a configuration file stored on disk from its ((ZFS)) automatic snapshots.
-
 Finally, when my server dies, I'll be on that bottom layer fixing or replacing hardware.
 
 ==== Stack layer details
@@ -939,7 +932,6 @@ It helps to break it down into two common categories:
 ===== sensitive data
 
 Examples: passwords, credit card numbers, government ID numbers.
-
 Recommendations:
 
 . store offline only if possible
@@ -949,7 +941,6 @@ Recommendations:
 ===== everything else
 
 Examples: notes, photos, documents, personal information.
-
 Recommendations:
 
 . store on encrypted media, including ((backups))
@@ -978,7 +969,6 @@ WARNING: If you already know you are a valuable target (public figure, high net 
 This guide is not sufficient for your threat model.
 
 Let's build a simple example threat model for the “everything else” data class.
-
 Consider:
 
 * *Assets*
@@ -1060,7 +1050,8 @@ Always use HTTPS.
 
 ((ZFS)) (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
 Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of inexpensive disks) are all included and used by mario.
-
+ +
+ +
 The root partition is ((ext4)) (not ZFS) for a few reasons:
 
 * stick as closely as possible to the default Ubuntu install
@@ -1123,18 +1114,22 @@ You can and should still SSH into the server manually.
 When you do, you should exclusively perform read-only or exceptional read-write operations.
 I often do something manually, undo it, then do the same thing with mario to confirm results are as expected.
 
+****
 Example read-only server-side operations:
 
 * show per-container resource usage: `sudo docker stats`
 * follow container log messages: `sudo docker-compose logs -f` (run this in a folder containing a `docker-compose.yml` file)
 * check server health: `date; tail /proc/pressure/*`
 
-Read-write operations:
+Example read-write server-side operations:
 
 * upgrade OS packages: `apt full-upgrade`
 * upgrade services: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<Watchtower>>)
+****
 
-Start a “monthly maintenance” list and include these read-write operations.
+Start a “monthly maintenance” checklist like the one found in <<Server maintenance>>.
+Include these read-write operations in your checklist.
+
 Always use `sudo` instead of logging in as the `root` user.
 This ensures every command is captured in `/var/log/auth.log` along with when it was executed, and by whom.
 
@@ -1197,7 +1192,6 @@ For users: predictable, reliable services.
 
 Practice treating containers as temporary things.
 You'll gain confidence in your system by creating and destroying them frequently, and you'll enjoy the speed and ease of doing so.
-
 Think:
 
 * ephemeral
@@ -1992,7 +1986,6 @@ This will also pull and build images and update containers as necessary.
 ==== Check logs
 
 Examine logs for any service with `docker-compose logs`.
-
 Example shell commands:
 
 [source,bash]
@@ -2030,10 +2023,9 @@ That particularly seems to help the first time I stand up a new service.
 
 === Tiny test service
 
-How about a little tinkering?
-
 Standing up a test service is easy.
-This is useful to confirm networking is functional for Docker containers running on your host.
+Let's give this a shot.
+A test service is useful to confirm networking is functional for Docker containers running on your host.
 
 This service demonstrates pinging a public server.
 On _your_ server, create the folder `~/ping`.
@@ -2101,11 +2093,9 @@ To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only
 
 (((Nextcloud, overview)))
 Nextcloud is primarily a cloud “drive” for file storage and sharing.
-
-Nextcloud is daunting to self-host.
-With mario, it is of course easy and fun.
+It is daunting to self-host.
+With ((mario)), it is of course easy and fun.
 Done well, it serves as a solid foothold for de-Googling.
-
 Nextcloud can be self-hosted for free when installed via mario.
 
 ==== Basic install
@@ -2228,7 +2218,7 @@ They've since fixed the root cause (https://github.com/nextcloud/server/pull/335
 ==== Customization
 
 (((Nextcloud, apps)))
-Nextcloud can be used as-is or heavily customized.
+Nextcloud can be used as-is (see <<Basic install>>) or heavily customized.
 
 The simplest and safest way to customize is via their app store, especially if an app is marked “featured”.
 
@@ -3142,11 +3132,9 @@ Too much choice is good and challenging problem to have.
 === When FOSS is better
 
 (((FOSS, advantages)))
-*In theory*: always, because you can choose FOSS that lines up with your values.
-
-*In practice*: eventually.
+In theory: always, because you can choose FOSS that lines up with your values.
+In practice: eventually.
 FOSS lags behind non-FOSS because companies make _lots_ of money at the leading edge of technology (whether or not it aligns with our values).
-
 Some areas where FOSS is especially behind:
 
 * ((mobile)) phones (((Murena)) is promising)
@@ -3168,7 +3156,6 @@ Farahny on brain-computer interfaces (https://npr.org/2023/03/14/1163494707/neur
 
 (((FOSS, profit)))
 FOSS is for utility, non-FOSS is for profit.
-
 FOSS exists because it addresses human needs.
 Proprietary software exists because it makes money.
 
@@ -3491,15 +3478,15 @@ A book is just a box of words until a reader opens it.
 ____
 
 And it was so.
-
+ +
+ +
 Dear Reader,
 
-*This book exists because you exist.*
-
+_This book exists because you exist._
 I am humbled and grateful for your support.
-
 Thank you, thank you, thank you.
-
+ +
+ +
 -Adam
 
 ifdef::backend-pdf[]
