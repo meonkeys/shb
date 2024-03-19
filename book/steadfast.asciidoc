@@ -395,7 +395,7 @@ If you feel I've completely omitted proper detail about something critically rel
 
 This book is not for the heavily-resourced already-done-thats.
 If you have $50k and unlimited time to spend on your concrete bunker homelab... well then, may I have a tour?
-I would LOVE to see that.
+I would _love_ to see that.
 If you are more curious than certain you may still enjoy learning from my choices.
 
 I'm not writing for hard-line software patent/license experts/activists.
@@ -1386,8 +1386,7 @@ See <<Server>> for more lessons learned about resource requirements.
 
 === Prepare hardware
 
-It's called _hard_ ware because these problems are _hard_.
-
+It's called __hard__ware because these problems are _hard_.
 That's fun to say and, in my experience, false.
 
 While it's true there is a learning curve for understanding basic computer hardware components and hardware can certainly fail, there are plenty of wonderfully positive aspects of hardware.
@@ -1424,7 +1423,7 @@ This is sometimes called “off-lease enterprise hardware”.
 .DIY rackmount server attached to garage ceiling. It's fun to look at and is out of the way, but I need a ladder for maintenance and it weighs about 50lbs.
 image::racked-server.jpg[]
 
-The fans are *way* louder than a desktop, especially when it is under load.
+The fans are _way_ louder than a desktop, especially when it is under load.
 It is supposed to have decent ventilation, temperature and humidity regulation yet has so far been extremely hardy even below freezing and above 100°F for extended periods of time.
 It has several enterprise features to ease maintenance such as redundant power supplies, hot-swap drive bays, lots of sensors, and remote management via a web browser or IPMI.
 
@@ -1906,7 +1905,7 @@ Test it by running `provision.sh` again.
 
 IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
 If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
-If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task *and* delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
+If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
 
 Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
 mario needs this on its first run, prior to setting up passwordless sudo.
@@ -3076,9 +3075,8 @@ ____
 Open source is free like a puppy is free.
 ____
 
-Everybody loves a puppy, right.
-Right?!
-
+Everybody loves a puppy, right?
+_Right??_
 I sure hope so.
 Because--fair warning--if you spend too much time with your “puppy” (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
 
