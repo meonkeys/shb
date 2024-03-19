@@ -22,7 +22,7 @@ code:
   font-size: $base-font-size * 0.8
 
 codespan:
-  font-color: #c70d0d
+  font-color: #007300
 
 # This styles both hyperlinks and internal links (e.g. cross-references)
 link:
