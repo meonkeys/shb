@@ -536,7 +536,7 @@ So many reasons!
 ** save more with every service you run
 ** avoid unexpected public cloud costs
 *** egress fees make it expensive to download your data and move it somewhere else
-*** forgetting to shut down a VM can get expensive quickly
+*** forgetting to shut down a ((VM)) (virtual machine) can get expensive quickly
 *** you could spend excessive time and money navigating the public cloud's confusing menu of service offerings
 ** avoid unexpected public clouds changes
 *** changes in license fees
@@ -681,7 +681,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers == happy
 
-I was pleasantly surprised by containers following my varied earlier experiences with VMs (virtual machines).
+I was pleasantly surprised by containers following my varied earlier experiences with ((VM))s (virtual machines).
 VMs are simple at first because they behave much like physical hardware.
 Installing Linux into a VM is as easy as installing it onto bare metal (sometimes even easier).
 Then you can set up one or more services in the VM.
@@ -1149,7 +1149,7 @@ My OS is more a pet than cattle (see “cattle vs. pets” in <<Glossary>>), alt
 We'll use Docker.
 
 TIP: Docker is but one of many valid choices for where to put your services.
-More interested in VMs?
+More interested in ((VM))s?
 That's fine.
 Check out VMs especially if you want to self-host Jitsi--I had some issues trying to get Docker to handle the ranges of open ports Jitsi requires.
 Kubernetes is fine too.
@@ -1198,7 +1198,7 @@ Think:
 ** containers are temporary
 ** temporary containers provide robust, reproducible services
 * cattle, not pets
-** hand-managed VMs are burdensome pets
+** hand-managed ((VM))s are burdensome pets
 ** apologies to the cattle--in this analogy they are expendable
 * stateless
 ** persistent data can and must be defined explicitly
