@@ -2189,8 +2189,8 @@ This generally corresponds to the previous version listed at https://docs.nextcl
 You may opt to use a more specific tag such as `27.1.5-apache`.
 This gives you the chance to review and test each upgrade.
 
-NOTE: Nextcloud's blog posts and press releases use different names.
-Hub 6 refers to version 27, Hub 7 to 28, and so on.
+NOTE: Nextcloud's blog posts and marketing materials use different version names than the release versions from source control.
+“Hub 6” on the blog refers to versions `27.\_._` in source control, “Hub 7” to `28.\_._`, and so on.
 
 ===== Release cadence
 
