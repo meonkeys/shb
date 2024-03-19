@@ -1389,11 +1389,11 @@ See <<Server>> for more lessons learned about resource requirements.
 It's called __hard__ware because these problems are _hard_.
 That's fun to say and, in my experience, false.
 
-While it's true there is a learning curve for understanding basic computer hardware components and hardware can certainly fail, there are plenty of wonderfully positive aspects of hardware.
+While there is a learning curve for understanding basic computer hardware components and hardware can certainly fail, there are plenty of wonderfully positive aspects of hardware. For example:
 
-It's fun.
-It's tangible and behaves consistently.
-Just plug it in, turn it on, and it'll probably work.
+* It's fun.
+* It's tangible and behaves consistently.
+* Just plug it in, turn it on, and it'll probably work.
 
 ==== Server
 
@@ -2930,40 +2930,25 @@ Here are more related and interesting self-hosting solutions worth researching f
 
 This book is the start of something big.
 Just _how_ big is up to *you*!
-
 Feedback and patches are welcome.
-
-When contacting me, please:
-
-* be kind
-* be patient; allow me time to respond
-* and (sorry in advance!) I might not respond at all
 
 When sending patches, please follow contributor guidelines at https://selfhostbook.com/src/.
 
 === Translations
 
-Please help translate this book and mario.
-
-* https://selfhostbook.com/translate
+Please help translate this book and mario. See: https://selfhostbook.com/translate/
 
 === Buy or donate
 
 Please buy this book!
-
 If you already have a copy, buy one for a friend.
-
-If they already have a copy, buy one for a school or request it at your library.
-
-* https://selfhostbook.com/buy
+If they already have a copy, buy one for a school or request it at your library. See: https://selfhostbook.com/buy/
 
 === How to build this book
 
 I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `{docname}{docfilesuffix}`.
 The file is AsciiDoc (https://asciidoc.org) plain text markup.
-
 Run `./build.sh` to generate your own typeset outputs.
-
 Make your own derivative works following <<Copy this book>>.
 
 == Discussion topics
@@ -3085,7 +3070,6 @@ Because--fair warning--if you spend too much time with your “puppy” (self-ho
 image::puppy.jpg[align="center",scaledwidth=80%]
 
 If your problem is _that_ cute, I suppose it's not too a bad problem to have.
-
 Practically it means that you might become attached to something impractical.
 
 ==== The SMOP trap
