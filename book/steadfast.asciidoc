@@ -218,13 +218,13 @@ Here's how certain types of content will appear in the text.
 |===
 |Styled example |Used for
 
-|`zpool status -t` |command, filename, username, password, variable
-|kbd:[Ctrl+c] |key(s) pressed on the keyboard
-|https://example.com |link to website (https scheme is assumed and omitted)
-|<<System design>> |cross-reference to another section or chapter
-|===
-
+|`zpool status -t` |Inline command, filename, username, password, or variable.
+Longer snippets of console text use language-specific syntax highlighting.
+|kbd:[Ctrl+c] |Key(s) pressed on the keyboard.
+|https://example.com |Link to website (https scheme is assumed and omitted).
 I'll use “example.com” where you'll use your actual domain name.
+|<<System design>> |Cross-reference to another section or chapter.
+|===
 
 == Background
 
