@@ -315,12 +315,18 @@ More on this:
 
 Saving off data is easy.
 Self-hosting goes a step beyond that to give you far-reaching control of how your data are used and shared.
-You'll get reliability and flexibility within a reasonable budget.
+You'll gain agency over your official files, knowing and controlling your ((source of truth)).
+All this with reliability and flexibility within a reasonable budget.
 
-Self-hosting means providing computing services by and for individuals, families, and hobbyists in SOHO (small office / home office) environments.
+Self-hosting means providing computing services by and for individuals, families, and hobbyists in ((SOHO)) (small office / home office) environments.
 
-“Small-community-hosting” is perhaps a more accurate and appropriate term here.
+“Small community hosting” is perhaps a more accurate and appropriate term here.
 You're reading the right book to host services for a small community.
+
+Last, a note on terminology.
+When it comes to compilers in computer science (and perhaps also other areas in tech), “self-hosting” refers to the wonderfully satisfying milestone when a programming language is able to compile itself.
+I apologize to my friends in related disciplines for blatantly overloading the term “self-hosting” to mean small community hosting.
+You had it first, I'm borrowing it and hoping our contextual lane lines will sufficiently prevent collisions.
 
 ==== Rapid-Rise Personal Cloud
 
@@ -361,7 +367,7 @@ I hope I can save you some precious time.
 
 This book is for people supporting a small group, like a family or a handful of friends.
 
-Similar to “small-community-hosting”, _Small Group Cloud_ would be more accurate title words than _Personal Cloud_.
+Similar to “small community hosting”, _Small Group Cloud_ would be more accurate title words than _Personal Cloud_.
 “Small group” is a great target size for what you'll create.
 I wouldn't bother doing all this just for yourself.
 
@@ -2300,7 +2306,7 @@ The GitHub project repositories are pretty quiet.
 
 (((Nextcloud, mobile)))
 Nextcloud works OK as the backend for a mobile device.
-It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
+It can be your single reliable ((source of truth)) for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
 See <<Mobile text editing is hard>> for a couple workarounds.
 
@@ -3407,6 +3413,8 @@ SOHO::
   Small office / home office.
 source control::
   A system for tracking changes in source code along with who made the change, why, and when.
+source of truth::
+  The one true document or data point among some number of copies.
 SSD::
   Solid-state drive. A hard drive that doesn't spin.
 SSH::
