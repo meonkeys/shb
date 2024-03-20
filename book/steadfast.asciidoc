@@ -2544,7 +2544,6 @@ See the AIO readme at https://github.com/nextcloud/all-in-one/ for more informat
 
 (((Jellyfin, overview)))
 Jellyfin (https://jellyfin.org) is a personal streaming media server.
-
 mario will set up a basic Jellyfin server.
 
 I like mounting local media folders using Nextcloud “external storages”, then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
