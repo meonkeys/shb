@@ -2243,6 +2243,8 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Analytics |track and graph metrics |*Yes*. Only for small/simple use cases though.
 |Appointments |easy 3rd party scheduling |*Yes*. Requires careful calendar curation. Somewhat fiddly setup.
 |Calendar |manage meetings and appointments |*Yes*.
+|Circles |arbitrarily group users |*No opinion*. I don't have enough users to justify this.
+|Collectives |wiki or knowledge base |*Maybe*. Looks like a useful way to organize a set of related documents. Requires Circles.
 |Cookbook |recipe manager |*Yes*. Great at importing from web pages (thanks to standardized recipe data already present in HTML source). I wish it were better at printing/exporting though.
 |Contacts |address book |*Yes*.
 |Dashboard |various widgets on a page |*No*. I like to go right to my files.
@@ -2269,6 +2271,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Recognize |face recognition |*No*.
 |Suspicious login |warn about suspicious IPs |*No*. Too many false positives.
 |Tasks |tasks/todos |*Yes*.
+|Tables |tabular data entry and API |*No*. Not yet, although keep an eye on this as a potentially powerful and useful ((low-code)) platform.
 |Talk |video and text chat |*No*. Works, just not as well as other video and text chat services/apps. I do use it for my chicken safety system and I see it improving a lot with each release. For now I recommend Signal instead (https://signal.org).
 |Temporary files lock |avoid edit conflicts |*Yes*.
 |Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown.
@@ -2338,7 +2341,7 @@ I don't have an iPhone so these are only Android apps.
 |Nextcloud Talk |Talk |https://apps.nextcloud.com/apps/spreed
 |===
 
-Android devices usually ship with groupware (calendar and contacts) apps, or you can install your favorite ones.
+Android devices usually ship with ((groupware)) (calendar and contacts) apps, or you can install your favorite ones.
 DAVx5 handles synchronization of groupware data to and from your device.
 DAVx5 is only necessary on Android, perhaps because iOS has better native WebDAV support.
 DAVx5 is not needed on Murena phones (/e/ OS).
@@ -2373,6 +2376,20 @@ One way to compare them is via relative activity on GitHub.
 Doing so it appears that Nextcloud is thriving and ownCloud is flailing.
 
 Judge for yourself: compare https://github.com/owncloud/core/pulse with https://github.com/nextcloud/server/pulse.
+
+==== Nextcloud Office
+
+(((Nextcloud, Office)))
+https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "office" and their plans for it as a suite of related tools.
+They clearly intend a holistic, integrated office experience, and Nextcloud can be configured and used in this manner.
+That page covers editing docs and spreadsheets collaboratively, along with uses for the Notes, Collectives, and Tables apps.
+It provides some clever and useful workflow ideas.
+
+Given that wide a scope, ((groupware)) should be part of “office” too, so instead let's for now focus specifically on collaborative editing of documents, spreadsheets, and the like.
+
+Providing collaborate editing within Nextcloud requires an app called Nextcloud Office (https://apps.nextcloud.com/apps/richdocuments) as well as a separate backend service.
+Should you desire to add this functionality to your mario-provisioned server, Either ((Collabora)) or ((ONLYOFFICE)) may serve as the backend for a ((mario)) server.
+My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it's clear Collabora development is flourishing while ONLYOFFICE is stagnant.
 
 ==== Bugs
 
@@ -3331,6 +3348,8 @@ good, fast, and cheap::
   Used as a joke in this text because typically we must pick two (https://en.wikipedia.org/wiki/Project_management_triangle).
 Good Thing::
   A hand-wavy way of saying something is self-evidently wonderful (http://catb.org/jargon/html/G/Good-Thing.html).
+groupware::
+  Loosely: mail, calendar, and contacts.
 GUI::
   Graphical user interface.
 HDD::
@@ -3361,6 +3380,8 @@ LFNW::
   LinuxFest Northwest. Annual conference in Bellingham, Washington dedicated to serving and connecting open source communities. Established in 2000.
 Linux::
   The most popular server OS. Also works fine on a desktop or laptop. The old me would have insisted on calling it “GNU/Linux” or “a Linux distribution”. A lot has happened since then, and I've come to believe the term “Linux” is good enough to describe the OS used for self-hosting in the context of this book.
+low-code::
+  High-level application development platform with reduced focus on traditional programming. Typically provides a GUI and requires less files with configuration and code. Useful for prototyping or replacing some simpler data entry and analysis applications.
 LTS::
   Long-term support. A stable software release, supported for many years.
 mario::
