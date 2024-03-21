@@ -1560,7 +1560,6 @@ It's a good idea to think ahead to disaster recovery: take notes and visualize y
 At each prompt, accept the default or write down your choice.
 
 . Install Ubuntu Server.
-Debian might also work; I haven't tested it.
 .. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
