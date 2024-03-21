@@ -3485,7 +3485,7 @@ ifndef::shb-printPdf[]
 * <<image-puppy>>
 endif::[]
 
-== End
+== Afterword
 
 Ursula K. Le Guin declared:
 
