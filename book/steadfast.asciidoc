@@ -243,8 +243,6 @@ I'm good at administering and securing systems and processes while ensuring priv
 
 I'm most proud of my family, growing Mifos (https://mifos.org), founding ((SeaGL)) (https://seagl.org), selling C-SATS (https://csats.com), and writing this book.
 
-I aspire to always be kind and minimize my ego.
-
 I've been running my own services for decades.
 I started with a humble blog running on a buddy's machine.
 The feeling of freedom and control was exciting and it complemented my effectiveness at work, so I kept on.
