@@ -98,7 +98,7 @@ We will:
 * Save money by efficiently running lots of services on our own hardware with negligible incremental cost.
 * Do well by our friends, families, and social groups.
 * Do things we can't do with public services because we have full access to all our own raw data.
-* Adapt and grow as software evolves, taking our data and metadata along with us.
+* Adapt and grow as software evolves, taking our data and ((metadata)) along with us.
 * Share what and when it makes sense to share with whom we trust.
 
 This is the book I wish I'd had when I was struggling to provide a safe online experience for my kids.
@@ -279,7 +279,7 @@ The feeling of freedom and control was exciting and it complemented my effective
 I worked with many services and servers but usually avoided running my own hardware.
 Once I had a family, our data storage needs increased at home.
 It became handy as parents to be able to provide more and safer online services for our kids.
-A simple network drive and file sync were no longer enough; I wanted better services for managing our data along with the autonomy of our own bare metal.
+A simple network drive and file sync were no longer enough; I wanted better services for managing our data along with the autonomy of our own ((bare metal)).
 
 At the start of the pandemic our family tech needs increased sharply.
 We were all stuck at home and online, and I was wary of companies swooping in to capitalize on our captivity.
@@ -292,7 +292,7 @@ Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated 
 
 I wrote this book to promote ((data sovereignty)) as a prosocial behavior.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
-Existing books lack a good, fast, and cheap technique for self-hosting on bare metal.
+Existing books lack a good, fast, and cheap technique for self-hosting on ((bare metal)).
 I figured one out and I think you'll love it.
 It works fine if you run your server in the cloud too, it just costs a lot more (see <<Server>>).
 
@@ -366,7 +366,7 @@ If your server is a loaf of bread, this book is your rapid-rise yeast.
 image::bread-server.png[align="center",scaledwidth=80%]
 
 _Cloud_ implies scalable, _Personal_ scopes that scalability to what's reasonable for a small group.
-Modern bare metal hardware can scale (to a degree) within its box.
+Modern ((bare metal)) hardware can scale (to a degree) within its box.
 It can scale automatically by using more or less power according to compute demand, and manually when you upgrade hardware components (say, adding another hard drive).
 
 I'll also admit my inner child enjoys multiple meanings of the phrase _Personal Cloud_.
@@ -400,7 +400,7 @@ Similar to “small community hosting”, _Small Group Cloud_ would be more accu
 I wouldn't bother doing all this just for yourself.
 
 This book is for people into (or hoping to get into) self-hosting.
-It is geared towards useful, secure, and quick setup of a single bare metal server with many services.
+It is geared towards useful, secure, and quick setup of a single ((bare metal)) server with many services.
 
 This book is for people who want to _de-Google_, _de-iTunes_, _de-OneDrive_, _de-Dropbox_, _de-Whatever_.
 
@@ -591,7 +591,7 @@ Sometimes a service stops working with another service.
 This happens less often with ((FOSS)) because anyone can simply fork a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
-** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo metadata
+** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo ((metadata))
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
 ** remove yourself from the equation of user analysis data--when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you “own”, every time you rewind, fast-forward, pause... but do they need to? why?
@@ -662,7 +662,7 @@ Full speed ahead!
 === Photo search by location
 
 Here's one more pro-personal-cloud example.
-This one worked because I am comfortable storing location metadata in my self-hosted photos.
+This one worked because I am comfortable storing location ((metadata)) in my self-hosted photos.
 
 A while back I was trying to find some particular photos from a pile of thousands, taking up terabytes on disk.
 I knew where I was when I took the photos (within 10 miles or so) and my photos have embedded locations.
@@ -717,7 +717,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 I was pleasantly surprised by containers following my varied earlier experiences with ((VM))s (virtual machines).
 VMs are simple at first because they behave much like physical hardware.
-Installing Linux into a VM is as easy as installing it onto bare metal (sometimes even easier).
+Installing Linux into a VM is as easy as installing it onto ((bare metal)) (sometimes even easier).
 Then you can set up one or more services in the VM.
 The real rub here is with maintenance: maintaining a VM can be as complex as maintaining a bare metal server.
 
@@ -2102,7 +2102,7 @@ Nextcloud can be self-hosted for free when installed via mario.
 
 (((Nextcloud, install)))
 A basic (default, un-customized) Nextcloud install provides remote file storage, organization, and sharing.
-It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional metadata about those files and folders in a database.
+It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional ((metadata)) about those files and folders in a database.
 You access it via a web browser and there is a desktop client to sync files locally, very much like Dropbox, Google Drive, and OneDrive.
 
 I've come to _really_ trust desktop file sync.
@@ -2251,7 +2251,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Forms |Google Forms alternative |*Yes*.
 |Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project.
 |Holiday Calendars |easily add public holiday calendars |*Yes*. The config for this app shows up under “Personal” -> “Availability” for me, not “Groupware” (although the URL path is `/settings/user/groupware`).
-|Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate metadata.
+|Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate ((metadata)).
 |Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yeah, I want to de-Gmail someday.
 |Memories |photos |*Yes*.
 |News |track blogs and news via rss/atom feeds |*Yes*.
@@ -2541,7 +2541,7 @@ Jellyfin (https://jellyfin.org) is a personal streaming media server.
 mario will set up a basic Jellyfin server.
 
 I like mounting local media folders using Nextcloud “external storages”, then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
-Jellyfin only needs read access to these persistent data, it stores metadata elsewhere.
+Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
 There's one example of a shared persistent data location in the Nextcloud `docker-compose.yml` file.
 Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
 
@@ -3282,7 +3282,7 @@ attack surface::
 backend::
   I use this term to refer to either a service or server. It's something you more frequently interact with indirectly, say, via a frontend like a web or mobile UI.
 bare metal::
-  Physical computing resources, as opposed to VMs. Typically offering better performance than VMs.
+  Physical nearby computing resources, as opposed to VMs. Typically offering better performance than VMs.
 block storage::
   Cloud storage option with direct filesystem access including files and folders. Used directly/natively/locally from an OS. Size is relatively fixed and determined at creation time.
 bot::
