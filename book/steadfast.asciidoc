@@ -3250,10 +3250,10 @@ Let's be amused to _live_: inspired, motivated, powerfully kind.
 Sometimes I feel more like a birthday boy than an author, accepting gifts from so many generous people.
 I truly couldn't have done this alone and I am so, so grateful for you.
 
-Thanks to my daughter for her fantastic illustrations.
+Thanks to Eva for more than I could ever account for here, from “What if it rains?” to leading by learning and fearlessly doing.
+For supporting my dreams, including this book: your several inspiring rounds of thoughtful code review, technical critique, developmental editing, copy editing, proof reading, and line editing.
 
-Thanks to Eva Monsen for more than I could ever account for here.
-For starters: several rounds of thoughtful and excellent code review, technical critique, developmental editing, copy editing, proof reading, and line editing.
+Thanks to my daughter for your fantastic illustrations.
 
 Thanks to my family and friends for tolerating my protracted ((FOSS)) self-hosting boondoggles, including this book.
 
