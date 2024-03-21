@@ -1569,8 +1569,8 @@ See <<Full-disk encryption>>.
 Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)).
 See <<ZFS>>.
-. Set up mario on your ((admin computer)) (a separate computer from your server).
-. Run mario on your ((admin computer)) to provision your server. See <<Usage>>.
+. Download mario onto your ((admin computer)) (a separate computer from your server). See <<Source code>>.
+. Run mario on your ((admin computer)) to provision your server. See <<Run mario>>.
 
 ==== Full-disk encryption
 
@@ -1795,7 +1795,7 @@ mario prepares the server filesystem as follows:
 * Docker configuration files are stored in directories under `/root/ops`.
 * Data for services are stored in directories under `/data`.
 
-=== Usage
+=== Run mario
 
 IMPORTANT: mario is only tested and expected to work on Linux.
 
