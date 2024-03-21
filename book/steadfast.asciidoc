@@ -2103,7 +2103,7 @@ Nextcloud can be self-hosted for free when installed via mario.
 (((Nextcloud, install)))
 A basic (default, un-customized) Nextcloud install provides remote file storage, organization, and sharing.
 It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional ((metadata)) about those files and folders in a database.
-You access it via a web browser and there is a desktop client to sync files locally, very much like Dropbox, Google Drive, and OneDrive.
+You access it via a web browser and there is a desktop client to sync files locally, similar to Dropbox, Google Drive, and OneDrive.
 
 I've come to _really_ trust desktop file sync.
 If I see a check mark on my desktop app, I know everything is properly synchronized with the server.
@@ -2310,7 +2310,7 @@ See <<Mobile text editing is hard>> for a couple workarounds.
 I had a Murena Samsung S9+ phone (https://murena.com) running /e/ OS for a while.
 I loved it.
 Easy to set up with Nextcloud and worked quite well.
-Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE.
+Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE on that phone.
 
 (((FOSS)))
 Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA. /e/ OS is up to date with the latest upstream Android code and once again provides a good deal more FOSS-friendliness, privacy, and native Nextcloud integration than other Android-based mobile operating systems.
