@@ -2853,11 +2853,11 @@ Visit https://selfhostbook.com for all supporting material including source code
 
 === Source code
 
-* https://selfhostbook.com/src
+* https://selfhostbook.com/code/
 
 === Contact info
 
-* https://selfhostbook.com/contact
+* https://selfhostbook.com/contact/
 
 === Support
 
@@ -2950,7 +2950,7 @@ This book is the start of something big.
 Just _how_ big is up to *you*!
 Feedback and patches are welcome.
 
-When sending patches, please follow contributor guidelines at https://selfhostbook.com/src/.
+When sending patches, please follow contributor guidelines at https://selfhostbook.com/code/.
 
 === Translations
 
