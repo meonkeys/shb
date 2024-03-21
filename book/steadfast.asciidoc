@@ -1570,7 +1570,7 @@ Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)).
 See <<ZFS>>.
 . Set up mario on your ((admin computer)) (a separate computer from your server).
-. Run mario on your ((admin computer)) to provision your server.
+. Run mario on your ((admin computer)) to provision your server. See <<Usage>>.
 
 ==== Full-disk encryption
 
