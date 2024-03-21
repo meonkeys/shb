@@ -1055,7 +1055,7 @@ Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of ine
  +
 The root partition is ((ext4)) (not ZFS) for a few reasons:
 
-* stick as closely as possible to the default Ubuntu install
+* stick as closely as possible to the default ((Ubuntu)) install
 * sidestep a ((Docker)) annoyance
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
 * we have less of a need for ((backups)) of the OS
@@ -1070,7 +1070,7 @@ The container's filesystem--everything besides mounted volumes with persistent d
 (((TRIM)))
 (((ZFS, SSD TRIM)))
 Note that if you use ZFS with SSDs, you may sometimes notice your system performing poorly.
-On my Ubuntu desktop this happens once a month when the scheduled “trim” cron job starts.
+On my ((Ubuntu)) desktop this happens once a month when the scheduled “trim” cron job starts.
 Trimming is a process of reclaiming formerly used space on SSDs.
 This is not an issue with HDDs.
 
@@ -1100,9 +1100,9 @@ If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, 
 === Operating system
 
 mario requires a 64-bit ((Ubuntu)) server.
-Other Debian Linux flavors may work as well.
+Other ((Debian)) Linux flavors may work as well.
 
-Ubuntu LTS (long-term support) releases are the most stable so we'll go with that.
+((Ubuntu)) LTS (long-term support) releases are the most stable so we'll go with that.
 
 I sought to minimize customizations to the ((operating system)) from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
@@ -1559,7 +1559,7 @@ Here's an abbreviated server setup guide.
 It's a good idea to think ahead to disaster recovery: take notes and visualize yourself repeating the process precisely.
 At each prompt, accept the default or write down your choice.
 
-. Install Ubuntu Server.
+. Install ((Ubuntu)) Server.
 .. Use the latest LTS release, e.g. 64-bit Ubuntu 22.04 LTS server.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
@@ -1753,7 +1753,7 @@ mario installs `zfs-auto-snapshot` for you.
 
 == mario
 
-Once our server is online, we can use mario to configure and stand up services.
+Once our server is online following <<Deploy>>, we can use mario to configure and stand up services.
 
 mario can be found next to the source code for this book in the `mario/` folder.
 The `provision.sh` script and config files are in `mario/ansible`.
