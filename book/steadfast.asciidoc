@@ -103,6 +103,36 @@ We will:
 
 This is the book I wish I'd had when I was struggling to provide a safe online experience for my kids.
 
+New self-hosters can use this book to get started.
+Experienced self-hosters can compare my choices to theirs.
+
+==== Prerequisites
+
+To get the most out of this book, the sysadmin experience you bring along should include the ability to:
+
+* configure your router and ((LAN)) (local area network)
+* install Linux on a computer (hereafter referred to as your _server_)
+* execute programs using a command line
+* connect to your server with SSH (secure shell)
+* edit text files and run commands on your server
+* transfer files to and from your server
+
+If you're unfamiliar with any of these concepts, a quick trip to your favorite search engine or local user group should yield enough pointers to get started.
+
+I recommend hosting on ((bare metal)) (tangible nearby computer hardware), and this comes with some prerequisites for the physical space where your server resides.
+Read more about the ins and outs of bare metal in <<Prepare hardware>>.
+
+Finally, some best practices to keep in mind as you read along:
+
+* document everything you do
+** if only for your future self!
+* recruit and train help
+** made much easier since you've followed the previous bullet and documented everything
+* focus, take breaks, be patient, take care of your body
+* ask for help
+* ask for feedback
+* listen to users, gather data, adapt accordingly
+
 === Cover art
 
 The beautiful cover art was created by my daughter using Krita (https://krita.org).
@@ -764,40 +794,6 @@ Be patient.
 Never try to force people to use whatever you self-host.
 
 I hope this book inspires you with many positive surprises and helps you and your users avoid many negative ones.
-
-== Prerequisites
-
-This book assumes some prerequisite skills.
-You must be able to:
-
-* configure your router and ((LAN)) (local area network)
-* install Linux on a computer (hereafter referred to as your _server_)
-* execute programs using a command line
-* connect to your server with SSH (secure shell)
-* edit text files and run commands on your server
-* transfer files to and from your server
-
-These are not difficult.
-You can quickly learn them online.
-
-=== Experience level
-
-New self-hosters can use this book to get started.
-Experienced self-hosters can compare my choices to theirs.
-
-=== Mindset
-
-. ask for help
-. ask for feedback
-. listen to users, gather data, adapt accordingly
-
-=== Discipline
-
-* document everything you do
-** if only for your future self!
-* train help in case you get hit by a bus
-** made much easier since you've documented everything
-* focus, take breaks, be patient, sleep, exercise, eat healthy
 
 == Plan
 
