@@ -732,6 +732,7 @@ Limited ((isolation)) keeps the resource and maintenance costs of container-base
 
 Containers are excellent for a consistent and resilient personal cloud.
 They are easy to declare (in code), build, deploy, test, and repeat.
+They can also be used along with VMs: you might use a VM as your server instead of ((bare metal)).
 
 I chose Docker to manage containers because it is popular and I have experience with it.
 Your server is also considered a _host_ since it it is a _host_ to Docker containers.
@@ -1401,7 +1402,7 @@ You'll need a server.
 
 You can always pay for “compute” in someone else's cloud, but it'll end up costing more in the long run.
 
-If you're in a hurry, you can start with pretty much any old desktop or laptop.
+If you're in a hurry, you can start with pretty much any old desktop or laptop, or your own VM running on either.
 Use something more powerful and expandable than a Raspberry Pi, though.
 What if your users love it?
 How will you increase storage?
