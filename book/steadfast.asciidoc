@@ -150,7 +150,7 @@ This book is a work in progress.
 Please help me improve it.
 See <<Contributions>>.
 
-== Metadata
+=== Book version
 
 This book was generated
 
