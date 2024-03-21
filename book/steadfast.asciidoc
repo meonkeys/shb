@@ -3282,7 +3282,7 @@ attack surface::
 backend::
   I use this term to refer to either a service or server. It's something you more frequently interact with indirectly, say, via a frontend like a web or mobile UI.
 bare metal::
-  Physical nearby computing resources, as opposed to VMs. Typically offering better performance than VMs.
+  Physical nearby computing resources, as opposed to rented compute time on someone else's hardware.
 block storage::
   Cloud storage option with direct filesystem access including files and folders. Used directly/natively/locally from an OS. Size is relatively fixed and determined at creation time.
 bot::
