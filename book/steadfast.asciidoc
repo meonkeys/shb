@@ -617,7 +617,7 @@ image::squeaky-clean-chicken.png[align="center",scaledwidth=80%]
 Once I stood up my personal cloud I felt freedom and ease when posting and hosting these videos.
 
 I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens.
-I can safely ignore their audit and its erroneous compliance infringement warning.
+I can safely ignore their audit and its erroneous policy violation claim.
 
 [#image-YT-audit]
 .Screenshot of a YouTube legal audit for my old API client.
