@@ -3243,6 +3243,8 @@ We live in Aldous Huxley's _Brave New World_... we can be amused to death.
 With self-hosting you can choose to be amused just as much as you need to be.
 Let's be amused to _live_: inspired, motivated, powerfully kind.
 
+:sectnums!:
+
 == Acknowledgments
 
 Sometimes I feel more like a birthday boy than an author, accepting gifts from so many generous people.
