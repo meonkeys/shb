@@ -34,3 +34,6 @@ codespan:
 # This styles both hyperlinks and internal links (e.g. cross-references)
 link:
   font-color: #0b04d5
+
+toc:
+  h2-font-style: bold

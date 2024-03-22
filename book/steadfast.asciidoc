@@ -5,7 +5,6 @@
 :doctype: book
 :docinfo:
 :toc: macro
-:toclevels: 4
 :sectnums:
 :imagesdir: img
 :front-cover-image: image:cover.png[]
