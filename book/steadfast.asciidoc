@@ -1789,7 +1789,7 @@ Then: start tinkering.
 You can find some ideas in <<Exercises>>.
 
 You may want to first create a ((VM)) and run mario against that until you're ready to run mario pointed at your real server.
-Or perhaps your real server _will be a VM_ -- that'll work fine too.
+Or perhaps your real server _is_ a VM -- that'll work fine too.
 
 === Conventions
 
