@@ -177,6 +177,7 @@ This is the final step in the editing process. A proofreader examines the final 
 * use `shb` namespace for document attributes
 ** short for “self-hosting book”
 ** example: `shb-printPDF`, used when generating a PDF for printing
+* include a trailing slash when referencing folders, e.g. `ansible/`
 
 == am55: improve htmlproofer
 

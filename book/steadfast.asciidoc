@@ -715,7 +715,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers == happy
 
-I was pleasantly surprised by containers following my varied earlier experiences with ((VM))s (virtual machines).
+I was pleasantly surprised by containers following my varied earlier experiences with ((VM))s.
 VMs are simple at first because they behave much like physical hardware.
 Installing Linux into a VM is as easy as installing it onto ((bare metal)) (sometimes even easier).
 Then you can set up one or more services in the VM.
@@ -1756,8 +1756,10 @@ mario installs `zfs-auto-snapshot` for you.
 
 Once our server is online following <<Deploy>>, we can use mario to configure and stand up services.
 
-mario can be found next to the source code for this book in the `mario/` folder.
-The `provision.sh` script and config files are in `mario/ansible`.
+Please download the <<Source code>>.
+It'll be helpful to have the source code handy so you can follow along as you read through this chapter.
+mario can be found alongside this book, in the `mario/` folder.
+The `provision.sh` script and config files are in `ansible/`.
 
 === mario philosophy
 
@@ -1774,7 +1776,7 @@ The first time you run mario, follow the instructions as closely as possible.
 Many assumptions are made so it works “out of the box”, and it is meant to be easily customizable.
 
 mario configuration files are declarative.
-You write out the _state_ you want your server to end up at, not all the commands you'd run on a command line to achieve the same state.
+You write out the _state_ you want your server to end up at, not all the individual commands you'd run on a command line to achieve the same state.
 mario runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
@@ -1787,7 +1789,8 @@ Once `provision.sh` completes successfully, it may be run again without making f
 Then: start tinkering.
 You can find some ideas in <<Exercises>>.
 
-You may want to first provision a virtual machine until you're ready to run mario pointed at your real server.
+You may want to first create a ((VM)) and run mario against that until you're ready to run mario pointed at your real server.
+Or perhaps your real server _will be a VM_ -- that'll work fine too.
 
 === Conventions
 
@@ -2954,7 +2957,7 @@ By the time I publish, they (or some new contenders) might grow to overcome my a
 Please let me know what you discover.
 If I missed something, I'd love to learn about it!
 
-Here are more related and interesting self-hosting solutions worth researching further:
+Here are some more related and interesting self-hosting solutions worth researching further:
 
 * ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
 * ((Clace)) (https://clace.io)
@@ -2965,6 +2968,7 @@ Here are more related and interesting self-hosting solutions worth researching f
 * ((MicroCloud)) (https://canonical.com/microcloud)
 * ((LibreServer)) (https://libreserver.org)
 * ((LinuxServer.io)) (https://www.linuxserver.io)
+* ((NextcloudPi)) (https://nextcloudpi.com)
 * ((Proxmox)) (https://proxmox.com)
 * ((UBOS)) (https://ubos.net)
 
@@ -3033,8 +3037,6 @@ Exercises for individual practice and study groups.
 . Try Nextcloud with ((object storage)) for primary storage.
 . Adapt this guide to a ((Linux)) distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
-. Contribute to ((mario)).
-. Move secrets used by mario into an Ansible vault.
 . Enable ((GPU)) transcoding in ((Jellyfin)).
 . Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
 . Aggregate logs.
@@ -3045,15 +3047,18 @@ Prevent it from making outbound connections and prove to yourself it works.
 .. Describe troubleshooting steps, in detail.
 .. Make a plan for system recovery when it fails to boot.
 . Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
-. Reorganize mario roles and upload them to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
 . Set up ((Fail2Ban)) (https://fail2ban.org).
 Feed it logs from various services.
 . Set up ((Suricata)) (https://suricata.io) network analysis and threat detection.
 . Separate out code for ASCII to SVG diagram conversion from ((Markdeep)).
 Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
 . Try a different container runtime, such as podman (https://podman.io).
+. Contribute to ((mario)).
+. Move secrets used by mario into an Ansible vault.
 . Adapt mario to use ((podman)).
 . Adapt mario to use ((Kubernetes)) (https://kubernetes.io).
+. Reorganize mario services into distinct Ansible roles.
+.. Upload the roles to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
 . Modify mario to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
 . Improve your backup security: allow restic/borg/etc. read-only access during a backup.
 . Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
