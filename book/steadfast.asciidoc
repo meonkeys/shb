@@ -1781,10 +1781,10 @@ mario runs Ansible, and Ansible runs the commands for you on the server (like ru
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
 (((provision)))
-After getting mario up and running successfully once, run it again.
+After getting mario up and running successfully once, run it again!
 Provisioning with mario is ((idempotent)).
 The system should not change in any meaningful way after the desired state is reached.
-Once `provision.sh` completes successfully, it may be run again without making further changes.
+Once `provision.sh` completes successfully, it may be run again to confirm this.
 
 Then: start tinkering.
 You can find some ideas in <<Exercises>>.
