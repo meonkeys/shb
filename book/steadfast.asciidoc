@@ -1570,7 +1570,7 @@ Let mario install these later.
 . Optional: add two HDDs and format them with ((ZFS)).
 See <<ZFS>>.
 . Download mario onto your ((admin computer)) (a separate computer from your server). See <<Source code>>.
-. Run mario on your ((admin computer)) to provision your server. See <<Run mario>>.
+. Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
 
 ==== Full-disk encryption
 
@@ -1798,37 +1798,27 @@ mario prepares the server filesystem as follows:
 * Docker configuration files are stored in directories under `/root/ops`.
 * Data for services are stored in directories under `/data`.
 
-=== Run mario
+=== First run
 
 Go ahead and run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
+.mario first run (admin computer)
 [source%unbreakable,bash]
 ----
 cd mario/ansible
 ./provision.sh
 ----
 
+mario is semi-automated, providing hints on manual steps to take between runs.
 On this first invocation, mario will check for prerequisites and prompt you to enter values specific to your server into a configuration file.
 
+.mario first run output (admin computer)
 [%unbreakable,text]
 ----
 You don't have a config file. I'll create one for you now.
 
 Please edit 'config' and re-run this script.
 ----
-
-IMPORTANT: FIXME - instructions need reordering here.
-
-.FIXME - these instructions are out of place and poorly repeated later
-****
-First make sure you can SSH into your server from your ((admin computer)).
-It helps if the server has a handy name rather than just an IP address.
-See <<Internal DNS>> for help giving your server a name on your ((LAN)).
-If you want DNS outside your LAN, see <<Public DNS>> (this is a more advanced topic).
-
-Generate a SSH authentication keypair if you don't already have one.
-Use `ssh-copy-id` or similar to copy your public SSH key onto your server.
-****
 
 Follow these instructions, re-running `provision.sh` as indicated until you see output like this:
 
@@ -1911,7 +1901,7 @@ If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `
 
 ==== Connect to server
 
-mario expects to be able to connect directly to the server using SSH.
+mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
 Public key authentication eases this.
 If you have a key pair, use it.
 If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
