@@ -1564,6 +1564,7 @@ At each prompt, accept the default or write down your choice.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
+.. Set up a “Profile”; note the username and password.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
@@ -1797,8 +1798,6 @@ mario prepares the server filesystem as follows:
 
 === Run mario
 
-IMPORTANT: mario is only tested and expected to work on Linux.
-
 Go ahead and run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
 [source%unbreakable,bash]
@@ -1807,7 +1806,7 @@ cd mario/ansible
 ./provision.sh
 ----
 
-On this first invocation, it will check for prerequisites, then prompt you to enter values specific to your server into a configuration file.
+On this first invocation, mario will check for prerequisites and prompt you to enter values specific to your server into a configuration file.
 
 [%unbreakable,text]
 ----
@@ -1816,23 +1815,50 @@ You don't have a config file. I'll create one for you now.
 Please edit 'config' and re-run this script.
 ----
 
-Do this.
+IMPORTANT: FIXME - instructions need reordering here.
+
+.FIXME - these instructions are out of place and poorly repeated later
+****
+First make sure you can SSH into your server from your ((admin computer)).
+It helps if the server has a handy name rather than just an IP address.
+See <<Internal DNS>> for help giving your server a name on your ((LAN)).
+If you want DNS outside your LAN, see <<Public DNS>> (this is a more advanced topic).
+
+Generate a SSH authentication keypair if you don't already have one.
+Use `ssh-copy-id` or similar to copy your public SSH key onto your server.
+****
+
+Follow these instructions, re-running `provision.sh` as indicated until you see output like this:
+
+[source,text]
+----
++ /usr/bin/ansible-playbook playbook.yml
+
+PLAY [all] *********************************************************************
+
+TASK [base : Configure apt cache] **********************************************
+ok: [mario_server]
+
+TASK [base : Install packages] *************************************************
+changed: [mario_server]
+
+(truncated)
+----
 
 ==== Domain name
 
-Buy a domain name from a registrar.
-A registered domain name is required for ((HTTPS)) web traffic encryption.
+Use a free domain name from ((Duck DNS)) or buy a domain name from a registrar.
+Either can be used for ((HTTPS)) web traffic encryption.
 
 ==== Public DNS
 
-(((Duck DNS)))
-mario expects to be able to use Duck ((DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries.
-Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
+mario expects to be able to use ((Duck DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries.
+Duck DNS provides a free domain name and DNS service, but you have to use a name like `example.duckdns.org`.
+Route 53 can be used with whichever domain name you purchase.
+Support for other ((DNS)) providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
 <<Digital security>> covers WAN access in detail.
-
-Of the two options I provide, Duck DNS is the easiest and cheapest.
 
 ===== Duck DNS
 
@@ -1864,9 +1890,7 @@ Here's a policy with way too much access that nevertheless works:
 
 ==== Internal DNS
 
-It is handy to have an _internal_ ((DNS)) server in addition to a public one (e.g. Route 53).
-
-Inside your private network you can use handy domain names or even make up your own TLD (top-level domain).
+It is handy to have an _internal_ ((DNS)) server to be able to refer to your server by name.g. Route 53).
 I recommend using internal hostnames matching public ones, but pointing to ((LAN))-only private IP addresses.
 For example:
 
