@@ -2081,20 +2081,6 @@ done
 
 This will also pull and build images and update containers as necessary.
 
-==== Check logs
-
-Examine logs for any service with `docker-compose logs`.
-Example shell commands:
-
-[source,bash]
-----
-# follow Traefik logs
-sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
-
-# page watchtower log output through `less` (with color)
-sudo docker-compose --file /root/ops/watchtower/docker-compose.yml logs | less -R
-----
-
 === Encryption certificates
 
 ((Traefik)) will automatically install ((Let's Encrypt)) certificates to encrypt HTTP traffic.
