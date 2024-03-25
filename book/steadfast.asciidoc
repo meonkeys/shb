@@ -1665,11 +1665,11 @@ At each prompt, accept the default or write down your choice.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
-.. Set up a "`Profile`". Note the username and password, you'll need these in <<Connect to server>>.
-.. Install OpenSSH server.
+.. When you set up a Profile, note the username and password. You'll need these in <<Connect to server>>.
+.. Install OpenSSH server when prompted to do so.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
-. Optional: add two ((HDD))s and format them with ((ZFS)).
+. Optional: after installing Ubuntu, add two ((HDD))s and format them with ((ZFS)).
 See <<ZFS>>.
 . Download mario onto your ((admin computer)) (a separate computer from your server). See <<Source code>>.
 . Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
@@ -1866,7 +1866,7 @@ Please download the <<Source code>>.
 It'll be helpful to have this handy so you can follow along as you read.
 
 mario can be found alongside this book, in the `mario/` folder.
-The `provision.sh` script and config files are in `ansible/`.
+The `provision.sh` script is in `ansible/`.
 
 === mario philosophy
 
@@ -1921,60 +1921,57 @@ You don't have a config file. I'll create one for you now.
 Please edit 'config' and re-run this script.
 ----
 
-To finish `config` we'll need some more information.
+Here's a guide for every setting in your `config`.
+That file also contains prodigious comments and is the most up to date, so please see it as well.
 
-FIXME DNS, SSH
+// FIXME - simplify to required values only
 
-=== Connect to server
+`DNS_API_PROVIDER`::
+Leave this as `duckdns` unless you want to use Route 53.
+See <<Server domain name>>.
+`DUCKDNS_TOKEN`::
+This is basically your secret key.
+Grab this value from the Duck DNS website.
+Leave unchanged if you are using Route 53.
+`R53_DNS_API_KEY`::
+Enter your key here if you aren't using Duck DNS.
+`R53_DNS_API_SECRET`::
+Enter your secret here if you aren't using Duck DNS.
+`DNS_RESOLVER_EMAIL`::
+Enter an email matching what you use with your DNS API provider.
+You may receive emails from Let's Encrypt at this address.
+`MARIO_DOMAIN_NAME`::
+This will be a name like `example.duckdns.org` or `example.com`.
+Individual services will be named based on this, e.g. `media.example.duckdns.org`.
+`MARIO_EMAIL_SENDER`::
+Used for Gmail SMTP server login.
+This may be set to the same value as `DNS_RESOLVER_EMAIL`.
+`MAIL_RELAY_PASSWORD`::
+Used for Gmail SMTP server login.
+If you use multi-factor auth, use an app password here.
+`DEFAULT_PHONE_REGION`::
+Set this to your 2-digit ISO 3166-1 country code.
+This is used to squelch a warning in Nextcloud.
+`TZ`::
+Set this to your timezone using a tz database name such as `America/Los_Angeles`. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
+`LAN_ONLY_ALLOWED`::
+This is a range of IP addresses allowed to connect to your server.
+Use CIDR notation.
 
-mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
-Public key authentication eases this.
-If you have a key pair, use it.
-If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
-Copy the public key to the server with `ssh-copy-id` or similar.
+TODO - add `hosts.yml` tips here.
 
-Use a stanza like this in your SSH client config:
+// How does an admin (and mario) connect to your server with SSH?::
+// See <<Connect to server>> for how to do this.
 
-.mario server snippet in SSH client config (admin computer)
-[%unbreakable,text]
-----
-Host mario_server
-  HostName console.example.com
-  User your-username
-----
+Once you're on your server and ready to mario it into submission, skip to <<Provision complete>>.
 
-(((provision)))
-Test it by running `provision.sh` again.
+=== Server domain name
 
-IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
-If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
-If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
-
-Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
-mario needs this on its first run, prior to setting up passwordless sudo.
-
-If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
-
-.one-time manual Ansible run (admin computer)
-[source%unbreakable,bash]
-----
-source config
-ansible-playbook --ask-become-pass playbook.yml
-----
-
-You should only have to do this once.
-If it succeeds, you can go back to using `provision.sh`.
-
-Another security improvement (left as an exercise for the reader) is to move secrets from `config` into an Ansible vault.
-
-==== Domain name
-
-Use a free domain name from ((Duck DNS)) or buy a domain name from a registrar.
-Either can be used for ((HTTPS)) web traffic encryption.
+mario expects to be able to use ((Duck DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries and setting up ((HTTPS)) web traffic encryption.
+You can either use a free domain name from ((Duck DNS)) or buy a domain name from a registrar.
 
 ==== Public DNS
 
-mario expects to be able to use ((Duck DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries.
 Duck DNS provides a free domain name and DNS service, but you have to use a name like `example.duckdns.org`.
 Route 53 can be used with whichever domain name you purchase.
 Support for other ((DNS)) providers (ahem, especially self-hosted ones!) may be added later.
@@ -2029,6 +2026,50 @@ For example:
 IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
 
 If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
+
+=== Connect to server
+
+mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
+Public key authentication eases this.
+If you have a key pair, use it.
+If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
+Copy the public key to the server with `ssh-copy-id` or similar.
+
+Use a stanza like this in your SSH client config:
+
+.mario server snippet in SSH client config (admin computer)
+[%unbreakable,text]
+----
+Host mario_server
+  HostName console.example.com
+  User your-username
+----
+
+(((provision)))
+Test it by running `provision.sh` again.
+
+IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
+If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
+If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
+
+==== Optional interactive password prompt
+
+Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
+mario needs this on its first run, prior to setting up passwordless sudo.
+
+If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
+
+.one-time manual Ansible run (admin computer)
+[source%unbreakable,bash]
+----
+source config
+ansible-playbook --ask-become-pass playbook.yml
+----
+
+You should only have to do this once.
+If it succeeds, you can go back to using `provision.sh`.
+
+Another security improvement (left as an exercise for the reader) is to move secrets from `config` into an Ansible vault.
 
 === Provision complete
 
@@ -3147,6 +3188,7 @@ Exercises for individual practice and study groups.
 . Try Nextcloud with ((object storage)) for primary storage.
 . Adapt this guide to a ((Linux)) distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
+. Add a GPU to your server.
 . Enable ((GPU)) transcoding in ((Jellyfin)).
 . Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
 . Aggregate logs.
