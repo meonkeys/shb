@@ -212,7 +212,7 @@ Finally, some best practices to keep in mind as you read along:
 === Cover art
 
 The beautiful cover art was created by my daughter using Krita (https://krita.org).
-You'll find more of her excellent work later in this book, too.
+You'll find more of her excellent work throughout the book.
 
 === Supporting the author
 
