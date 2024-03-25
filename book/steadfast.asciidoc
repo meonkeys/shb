@@ -334,7 +334,7 @@ I'll use "`example.com`" where you'll use your actual domain name.
 
 == Background
 
-You might be thinking: "this looks like a lot of background!"
+You might be thinking: "`this looks like a lot of background!`"
 And you'd be right.
 
 I go deep into background here because of something I found while giving talks about self-hosting: people know how to learn and discern, they wish for meaningful motivation to commit to learning.
@@ -2473,7 +2473,7 @@ Judge for yourself: compare https://github.com/owncloud/core/pulse with https://
 ==== Nextcloud Office
 
 (((Nextcloud, Office)))
-https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "office" and their plans for it as a suite of related tools.
+https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "`office`" and their plans for it as a suite of related tools.
 They clearly intend a holistic, integrated office experience, and Nextcloud can be configured and used in this manner.
 That page covers editing docs and spreadsheets collaboratively, along with uses for the Notes, Collectives, and Tables apps.
 It provides some clever and useful workflow ideas.
