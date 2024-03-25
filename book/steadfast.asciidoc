@@ -5,7 +5,6 @@
 :doctype: book
 :docinfo:
 :toc: macro
-:sectnums:
 :imagesdir: img
 :front-cover-image: image:cover.png[]
 :icons: font
@@ -68,6 +67,8 @@ toc::[]
 == Foreword
 
 (Placeholder to maintain chapter numbers)
+
+:sectnums:
 
 == Introduction
 
