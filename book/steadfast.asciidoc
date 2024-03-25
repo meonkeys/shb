@@ -2034,7 +2034,10 @@ ok: [mario_server]
 TASK [base : Install packages] *************************************************
 changed: [mario_server]
 
-(truncated)
+... snip ...
+
+PLAY RECAP *********************************************************************
+mario_server               : ok=18   changed=0    unreachable=0    failed=0    skipped=9    rescued=0    ignored=0
 ----
 
 ==== Stand up services
@@ -2136,7 +2139,7 @@ Let's give this a shot.
 A test service is useful to confirm networking is functional for Docker containers running on your host.
 
 This service demonstrates pinging a public server.
-On _your_ server, create the folder `~/ping`.
+On _your_ server, create the folder `~/ping/`.
 Create a file `docker-compose.yml` in that folder, containing:
 
 .tiny test service config
@@ -2157,6 +2160,7 @@ You should see something like this:
 .start tiny test service (server)
 [%unbreakable,text]
 -----
+$ cd ~/ping/
 $ sudo docker-compose up
 Creating network "ping_default" with the default driver
 Creating ping_test_1 ... done
@@ -2168,6 +2172,8 @@ test_1  | 64 bytes from 93.184.216.34: seq=2 ttl=55 time=3.363 ms
 ^CGracefully stopping... (press Ctrl+C again to force)
 Stopping ping_test_1   ... done
 -----
+
+TIP: For extra credit, incorporate your tiny test service into mario.
 
 This is the basis for adding more interesting services, too.
 It's only a few more lines of code+config to create a small ((API)) or web service and a few more to publish it with your ((reverse proxy)).
@@ -2916,6 +2922,8 @@ This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding la
 ----
 "traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24"
 ----
+
+TIP: For extra credit, incorporate your LocalAI service into mario.
 
 See the LocalAI documentation for further setup help.
 
