@@ -3282,7 +3282,7 @@ Thanks to the contributors to the myriad FOSS programs I used to create this boo
 
 Thanks to Rob Smith and all #underlug for help with hardware, networking, ((Ansible)), and ((Traefik)).
 
-Thanks to Bryan Daisley, Rob Floberg and all the Deadbeat Dads for your invaluable feedback.
+Thanks to the “Deadbeat Dads” Bryan Daisley and Rob Floberg for your invaluable feedback.
 
 Thanks to Bob Nystrom for your mind-expanding design review.
 
