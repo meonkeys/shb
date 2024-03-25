@@ -1,0 +1,48 @@
+# Key & secret for automatic DNS record updates.
+# Necessary:
+# 1. For auto HTTPS cert setup with Let's Encrypt DNS challenge, and
+# 2. if your public IP address is dynamic (changes at the whim of your ISP -- the opposite of "static").
+#
+# Must be one of route53 or duckdns
+# See https://doc.traefik.io/traefik/https/acme/#dnschallenge
+# See https://letsencrypt.org/docs/challenge-types/#dns-01-challenge
+export DNS_API_PROVIDER='duckdns'
+
+### Duck DNS ###
+# If you specified duckdns for DNS_API_PROVIDER above, use real values in this section. Otherwise leave values as `fixme_*`.
+export DUCKDNS_TOKEN='fixme_dns_token'
+
+### Route 53 ###
+# If you specified route53 for DNS_API_PROVIDER above, use real values in this section. Otherwise leave values as `fixme_*`.
+export R53_DNS_API_KEY='fixme_dns_key'
+export R53_DNS_API_SECRET='fixme_dns_secret'
+
+# Notification email for certificate errors / expirations.
+export DNS_RESOLVER_EMAIL='fixme.dns.email@example.com'
+
+# A domain name you own, or at least one you control.
+# Services will be named wallabag.example.com, jellyfin.example.com, etc.
+# Note: domain names are not case-sensitive.
+# Warning: Changing this later may be difficult.
+export MARIO_DOMAIN_NAME='example.com'
+
+# Used for SMTP server login.
+# If you use multi-factor auth, use an app password.
+# See https://hub.docker.com/r/namshi/smtp
+# and https://support.google.com/accounts/answer/185833
+export MARIO_EMAIL_SENDER='noreply@example.com'
+export MAIL_RELAY_PASSWORD='fixme_mail_relay_password'
+
+# Required for Nextcloud.
+# Pick your code from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements .
+# See https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/config_sample_php_parameters.html?highlight=phone#user-experience
+export DEFAULT_PHONE_REGION='US'
+
+# Your server's time zone.
+export TZ='Zulu'
+
+# Value to use for the `lan-only` middleware, which is enabled by default.
+# The default value assumes LAN addresses match 192.168.1.*
+export LAN_ONLY_ALLOWED='192.168.1.0/24'
+
+# vim: ft=sh
