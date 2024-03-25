@@ -1,10 +1,7 @@
 __pycache__/
 book/Gemfile.lock
-book/steadfast-kf8.epub
 book/steadfast.epub
-book/steadfast.fb2.zip
 book/steadfast.html
-book/steadfast.mobi
 book/steadfast.print.pdf
 book/steadfast.screen.pdf
 mario/ansible/config
