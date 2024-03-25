@@ -714,7 +714,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers == happy
 
-I was pleasantly surprised by containers following my varied earlier experiences with ((VM))s.
+I was pleasantly surprised by ((container))s following my varied earlier experiences with ((VM))s.
 VMs are simple at first because they behave much like physical hardware.
 Installing Linux into a VM is as easy as installing it onto ((bare metal)) (sometimes even easier).
 Then you can set up one or more services in the VM.
@@ -723,7 +723,7 @@ The real rub here is with maintenance: maintaining a VM can be as complex as mai
 Containers take a different approach and simulate much less of a bare metal server.
 They are fast and small compared with VMs, allowing higher non-conflicting service density.
 That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHP (PHP: Hypertext Processor)).
-One container typically contains only one service.
+One ((container)) typically contains only one service.
 
 Isolation of containers is limited compared to VMs.
 The kernel is shared, for example.
@@ -737,7 +737,7 @@ I chose Docker to manage containers because it is popular and I have experience 
 Your server is also considered a _host_ since it it is a _host_ to Docker containers.
 
 One downside of Docker is how often root access is assumed in example code and popular public images.
-Running as root makes containers simpler but less secure.
+Running as root makes ((container))s simpler but less secure.
 
 ===== Go paperless with OCR
 
@@ -902,7 +902,7 @@ These are conceptual, based on where and how frequently I act and investigate wh
 .Layers of a mario-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.png[align="center",scaledwidth=80%]
 
-I am most often working around the top layers e.g. adding or updating a container.
+I am most often working around the top layers e.g. adding or updating a ((container)).
 Less often I am updating OS (operating system) packages.
 Less often still I might examine versions of a configuration file stored on disk from its ((ZFS)) automatic snapshots.
 Finally, when my server dies, I'll be on that bottom layer fixing or replacing hardware.
@@ -1061,7 +1061,7 @@ The root partition is ((ext4)) (not ZFS) for a few reasons:
 ** it doesn't/shouldn't change, or at least its changes will be managed upstream (e.g. OS package updates)
 
 Docker volumes will be on ZFS.
-The container's filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
+The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
 
 ==== ZFS trim
 
@@ -1117,7 +1117,7 @@ I often do something manually, undo it, then do the same thing with mario to con
 ****
 Example read-only server-side operations:
 
-* show per-container resource usage: `sudo docker stats`
+* show per-((container)) resource usage: `sudo docker stats`
 * follow container log messages: `sudo docker-compose logs -f` (run this in a folder containing a `docker-compose.yml` file)
 * check server health: `date; tail /proc/pressure/*`
 
@@ -1146,13 +1146,13 @@ My OS is more a pet than cattle (see “cattle vs. pets” in <<Glossary>>), alt
 
 === Container runtime
 
-We'll use Docker.
+We'll use ((Docker)).
 
 TIP: Docker is but one of many valid choices for where to put your services.
 More interested in ((VM))s?
 That's fine.
 Check out VMs especially if you want to self-host Jitsi--I had some issues trying to get Docker to handle the ranges of open ports Jitsi requires.
-Kubernetes is fine too.
+((Kubernetes)) is fine too.
 Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
 I found it to be overkill, personally.
 If I needed high availability via clustering I'd be more likely to use Kubernetes.
@@ -1160,9 +1160,9 @@ If one computer in a Kubernetes cluster breaks, services can automatically migra
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
 Docker balances features and usability well, making it easy to run one service in ((isolation)).
-We'll layer on Docker Compose to run the groups of processes necessary to support a whole service (e.g. a web server and its database).
+We'll layer on ((Docker Compose)) to run the groups of processes necessary to support a whole service (e.g. a web server and its database).
 Kubernetes can do this too, along with everything you _don't_ need to learn unless you are building out an entire virtual data center.
-Docker compose is a good fit for our single-server setup.
+Docker Compose is a good fit for our single-server setup.
 
 We'll also avoid intermingling services and their dependencies along with everything else on our server's primary storage.
 Having everything on one filesystem is easy at first, for one service.
@@ -1173,7 +1173,7 @@ Each Docker image is basically a complete filesystem (sans kernel), so a service
 Another image would be used to create the database, if/as necessary.
 
 It's worth lingering on bundled dependencies for a minute.
-If dependencies are clothes, a Docker container is a suitcase with all the clothes you need for a week's travel.
+If dependencies are clothes, a Docker ((container)) is a suitcase with all the clothes you need for a week's travel.
 You check your suitcase and board the train, then rest easy knowing your suitcase is tucked neatly, separately, next to all the others.
 Docker containers are suitcases while the old way is everyones' unfolded clothes in a giant pile in the caboose.
 
@@ -1184,7 +1184,7 @@ Unlike suitcases, these containers are practically free.
 
 Images are defined by a config file named `Dockerfile`.
 The `Dockerfile` should be tracked in source control.
-Since we'll use Docker Compose, another important config file is `docker-compose.yml`.
+Since we'll use ((Docker Compose)), another important config file is `docker-compose.yml`.
 Each service will have its own `docker-compose.yml` file.
 These should be kept in source control too.
 For ((sysadmin))s these conventions provide reproducible images and containers.
@@ -1195,7 +1195,7 @@ You'll gain confidence in your system by creating and destroying them frequently
 Think:
 
 * ephemeral
-** containers are temporary
+** ((container))s are temporary
 ** temporary containers provide robust, reproducible services
 * cattle, not pets
 ** hand-managed ((VM))s are burdensome pets
@@ -1269,7 +1269,7 @@ services:
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
 
-HTTPS encryption is configured using other labels on the Traefik container.
+HTTPS encryption is configured using other labels on the ((Traefik)) ((container)).
 See <<Encryption certificates>> for details.
 
 === Identity management
@@ -1305,7 +1305,7 @@ They will likely share at least some of these traits.
 * Easy to install.
 Works with your preferred deployment method.
 ** For mario, we're looking for a popular, well-maintained Docker image.
-** Bonus: instructions included for integrating with Docker Compose and ((Traefik)).
+** Bonus: instructions included for integrating with ((Docker Compose)) and ((Traefik)).
 * Healthy community: chat, forum.
 * Recent source code activity: releases, contributions, news.
 * Uses a FOSS software license.
@@ -2907,7 +2907,7 @@ More:
 
 * ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
 * ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
-* ((Runtipi)) (https://runtipi.io) - new, interesting, uses Docker Compose and ((Traefik))
+* ((Runtipi)) (https://runtipi.io) - new, interesting, uses ((Docker Compose)) and ((Traefik))
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
