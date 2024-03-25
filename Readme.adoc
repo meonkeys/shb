@@ -178,6 +178,11 @@ This is the final step in the editing process. A proofreader examines the final 
 ** short for “self-hosting book”
 ** example: `shb-printPDF`, used when generating a PDF for printing
 * include a trailing slash when referencing folders, e.g. `ansible/`
+* indexing
+** prefer https://docs.asciidoctor.org/asciidoc/latest/sections/user-index/#index-terms[flow index terms over concealed index terms]
+** use your gut: index a term when it feels helpful to draw the reader's attention somewhere to read more about the term
+** don't worry about indexing every occurence of a particular term
+** note: indexes are only generated for PDF outputs
 
 == am55: improve htmlproofer
 

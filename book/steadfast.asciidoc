@@ -370,7 +370,7 @@ I wrote this book to promote ((data sovereignty)) as a prosocial behavior.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
 Existing books lack a good, fast, and cheap technique for self-hosting on ((bare metal)).
 I figured one out and I think you'll love it.
-It works fine if you run your server in the cloud too, it just costs a lot more (see <<Server>>).
+It works fine if you run your server in the ((cloud)) too, it just costs a lot more (see <<Server>>).
 
 Also: learning is fun.
 I learn when I write.
@@ -390,7 +390,7 @@ There are countless videos, articles, and chunks of code online for doing everyt
 Many are excellent.
 This book is your to keep, hold, and refer back to as you try, test, and learn.
 
-Also: there's a stark gap between useful individual computers and useful cloud services.
+Also: there's a stark gap between useful individual computers and useful ((cloud)) services.
 It's easy to pay for cloud, but the true price is obscured: surveillance, lock-in, inflexibility.
 
 Also: I can picture a future where owning a truly privacy-respecting home data appliance becomes as commonplace as owning a refrigerator.
@@ -516,11 +516,11 @@ I thank the activists for helping swing the needle towards freedom, to all our b
 This book is not a manifesto for always/only self-hosting.
 It's fine to self-host some services and pay for others.
 You'll come up with your own checklist for what to self-host and when.
-Mine focuses on providing a useful, reliable, future-proof cloud for me and my family.
+Mine focuses on providing a useful, reliable, future-proof ((cloud)) for me and my family.
 
 This book is not the fastest path to trying out web services.
 You can usually find demo instances running for particular projects.
-There are cloud providers that will run a service for you and host your data.
+There are ((cloud)) providers that will run a service for you and host your data.
 
 See also: <<Alternatives to this book>>.
 
@@ -575,7 +575,7 @@ I will prioritize _practical_ solutions over _idealistic_ ones.
 I will sometimes fail to do this when it comes to FOSS.
 Most notably, I will barely acknowledge the existence of non-FOSS alternatives in this book.
 
-I'm aware of the tension between practical and idealistic solutions, and I believe this tension is a Good Thing because it reminds us to think critically about what cloud services we _should_ pay for and use, not just what we _can_ pay for and use.
+I'm aware of the tension between practical and idealistic solutions, and I believe this tension is a Good Thing because it reminds us to think critically about what ((cloud)) services we _should_ pay for and use, not just what we _can_ pay for and use.
 It's worth a moment's thought.
 
 Our data matter and our personal choices matter.
@@ -597,7 +597,7 @@ Hang in there.
 I'll help you narrow the choices by providing specific, focused guidance.
 
 Don't worry too much about the specific choices you make.
-Your personal cloud will be malleable.
+Your personal ((cloud)) will be malleable.
 Swap out bits as you like.
 If you choose poorly, just choose again (ideally based on metrics and user needs).
 
@@ -637,14 +637,14 @@ So many reasons!
 * Democratize computing
 ** self-hosted software (especially ((FOSS))) enables data and computational autonomy for more people
 * Conserve electricity
-** backend cloud power per device drops dramatically with a few users
+** backend ((cloud)) power per device drops dramatically with a few users
 ** save even more power the more users you add
 ** see linked articles in <<Server>>
 * Save money
 ** self-hosted hardware will typically beat cloud (renting someone else's)
 ** savings increase as your users' data storage requirements enter the terabyte range
 ** save more with every service you run
-** avoid unexpected public cloud costs
+** avoid unexpected public ((cloud)) costs
 *** egress fees make it expensive to download your data and move it somewhere else
 *** forgetting to shut down a ((VM)) (virtual machine) can get expensive quickly
 *** you could spend excessive time and money navigating the public cloud's confusing menu of service offerings
@@ -667,7 +667,7 @@ Sometimes a service stops working with another service.
 This happens less often with ((FOSS)) because anyone can simply fork a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
-** with a personal cloud you can safely and confidently keep GPS latitude & longitude in your photo ((metadata))
+** with a personal ((cloud)) you can safely and confidently keep GPS latitude & longitude in your photo ((metadata))
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
 ** remove yourself from the equation of user analysis data--when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you “own”, every time you rewind, fast-forward, pause... but do they need to? why?
