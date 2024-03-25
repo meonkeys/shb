@@ -909,16 +909,29 @@ Write down a number and stick to it.
 Sketch out your thoughts on resources you'll need.
 Some ideas:
 
-* Data storage.
+Compute and memory::
+CPU and RAM are the fundamental resources necessary for computation.
+See <<Map services to resources>> for ideas on how to estimate requirements based on the services you'll host.
+GPU workloads are not covered in this book, although <<_whats_next>>, and <<Exercises>> touch on a few things you might try on your own.
+
+Data storage::
+Estimate how much storage space you'll need.
 There's a significant jump in complexity and cost with each jump in unit (for example, GB (gigabyte) to TB (terabyte)).
 This book is appropriate for data storage up to about 10 TB.
-* Electricity.
+See <<Hard drives>> for how to spend less on storage by self-hosting.
+
+Electricity::
 Check your home power bill for the cost per kWh and run some estimates.
-* Support.
+See <<Server>> for an example of the power used by a capable server.
+
+Support::
 Who will help you when you get stuck?
-* Physical location.
+<<Support>> has some ideas.
+
+Physical location::
 Where will the server live?
 Will you have to install new wiring for power or network?
+<<Networking>> covers my home setup.
 
 === Schedule
 
