@@ -332,6 +332,17 @@ I'll use "`example.com`" where you'll use your actual domain name.
 |<<System design>> |Cross-reference to another section or chapter.
 |===
 
+Code snippets will indicate whether they occur on the server or elsewhere.
+For example, here's a command intended to be run on the server (from <<Monitoring>>):
+
+.check PSI (server)
+[source,bash]
+----
+tail /proc/pressure/*
+----
+
+If the location is omitted, the snippet may occur on the server or elsewhere and will be explained in context.
+
 == Background
 
 You might be thinking: "`this looks like a lot of background!`"
@@ -1321,6 +1332,7 @@ That is: `websecure` to `nextcloud-https` to `app`.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
+.Traefik and Nextcloud config snippets (admin computer)
 [source,yaml]
 ----
 # snippet from traefik/docker-compose.yml
@@ -1673,6 +1685,7 @@ On the server, run these commands as root, adjusting as necessary.
 For example, these assume you've added two drives and they were assigned device names `/dev/sda` and `/dev/sdb`.
 Use `lsblk` to figure out your device names.
 
+.ZFS setup (server)
 [%linenums,bash]
 ----
 # Create partition tables.
@@ -1750,6 +1763,7 @@ Use the second for parts or a ready as-is replacement machine (also called a "`c
 Keep OS packages and container images up to date.
 For the OS:
 
+.upgrade packages (server)
 [source,bash]
 ----
 sudo apt update && sudo apt full-upgrade
@@ -1761,6 +1775,7 @@ Reboot when necessary (e.g. when the kernel is upgraded).
 
 I keep container images up to date with ((Watchtower)) or by hand, with:
 
+.upgrade images (server)
 [source,bash]
 ----
 sudo docker-compose pull
@@ -1768,6 +1783,7 @@ sudo docker-compose pull
 
 Or, if a service uses a locally-built image:
 
+.upgrade and build images (server)
 [source,bash]
 ----
 sudo docker-compose build --pull
@@ -1784,6 +1800,7 @@ Check free disk space with `df -h`.
 
 If things feel slow, check PSI (pressure stall information) with
 
+.check PSI (server)
 [source,bash]
 ----
 tail /proc/pressure/*
@@ -1905,6 +1922,7 @@ Copy the public key to the server with `ssh-copy-id` or similar.
 
 Use a stanza like this in your SSH client config:
 
+.mario server snippet in SSH client config (admin computer)
 [%unbreakable,text]
 ----
 Host mario_server
@@ -1924,6 +1942,7 @@ mario needs this on its first run, prior to setting up passwordless sudo.
 
 If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
 
+.one-time manual Ansible run (admin computer)
 [source%unbreakable,bash]
 ----
 source config
@@ -1964,6 +1983,7 @@ Back at your registrar, input these name servers.
 On Amazon IAM, create a user with permission to update this hosted zone.
 Here's a policy with way too much access that nevertheless works:
 
+.naive Route 53 policy
 [source,json]
 ----
 {
@@ -2001,6 +2021,7 @@ If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `
 
 FIXME re-running `provision.sh` as indicated until you see output like this:
 
+.output when mario is working (admin computer)
 [source,text]
 ----
 + /usr/bin/ansible-playbook playbook.yml
@@ -2032,7 +2053,7 @@ We'll stand up the ((reverse proxy)) first.
 
 Connect to your server and start ((Traefik)) with:
 
-.Running docker-compose on the server to start Traefik
+.start Traefik (server)
 [source,bash]
 ----
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
@@ -2043,6 +2064,7 @@ It may take a few minutes for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) 
 
 You can tail the logs with:
 
+.tail Traefik logs (server)
 [source,bash]
 ----
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
@@ -2050,6 +2072,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 
 You should see something like this for a working ((Traefik)) service:
 
+.typical Traefik logs (server)
 [%linenums,text]
 ----
 Attaching to traefik_reverse-proxy_1
@@ -2071,6 +2094,7 @@ See the "`Setup`" section of a particular service for more detail.
 
 To stand up everything at once, you could use this shell script:
 
+.start all services ad-hoc Bash script (server)
 [source,bash]
 ----
 services="watchtower dyndns mail wallabag jellyfin nextcloud scratch"
@@ -2115,6 +2139,7 @@ This service demonstrates pinging a public server.
 On _your_ server, create the folder `~/ping`.
 Create a file `docker-compose.yml` in that folder, containing:
 
+.tiny test service config
 [source,yaml]
 ----
 version: '3'
@@ -2129,6 +2154,7 @@ In the folder `~/ping/`, run the command `sudo docker-compose up`.
 Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
+.start tiny test service (server)
 [%unbreakable,text]
 -----
 $ sudo docker-compose up
@@ -2166,6 +2192,7 @@ Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
 For example, to allow WAN access to Nextcloud, make this change:
 
+.patch for WAN access to Nextcloud (admin computer)
 [%linenums%unbreakable,diff]
 ----
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
@@ -2725,6 +2752,7 @@ Luckily, the workaround is easy: https://github.com/wallabag/docker#upgrading.
 
 Apply that fix to a mario system with:
 
+.force Wallabag database migration (server)
 [source%unbreakable,bash]
 ----
 sudo docker-compose \
@@ -2772,6 +2800,7 @@ A service might only have one-way database migrations, for example.
 Check the logs if a service goes down to investigate if an automatic container upgrade caused a problem.
 For example:
 
+.follow and page Watchtower logs (server)
 [source%unbreakable,bash]
 ----
 sudo docker-compose \
@@ -2852,6 +2881,7 @@ You can run your own image generators and LLMs (large-language models) at home.
 No GPU is required.
 Here's a `docker-compose.yaml` that'll work with mario to stand up a LocalAI server (https://localai.io).
 
+.example LocalAI service config
 [%linenums,yaml]
 ----
 version: '3.6'
@@ -2881,6 +2911,7 @@ networks:
 Note the middleware to only allow traffic from your ((LAN)).
 This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
+.label from Traefik config allowing only LAN access
 [source,yaml]
 ----
 "traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24"
