@@ -36,31 +36,46 @@ endif::[]
 [colophon%notitle%nonfacing]
 == Colophon
 
+--
 _{doctitle}_
- +
- +
+--
+
+--
 First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
- +
- +
+--
+
+--
 Seattle, Washington, USA.
- +
- +
+--
+
+--
 {copyright}
- +
- +
+--
+
+--
 Some rights reserved.
 See <<Copyright and license>>.
- +
- +
+--
+
+ifdef::shb-printPDF[]
+--
 Paperback ISBN FIXME.
- +
- +
+--
+
+--
 [.text-center]
 10 9 8 7 6 5 4 3 2 1
- +
- +
-[.text-center.big]
-image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] Sunrise Data Press
+--
+endif::[]
+
+// "big" is perhaps deprecated, see https://docs.asciidoctor.org/asciidoc/latest/text/text-span-built-in-roles/#built-in
+//
+// ...or maybe it is only deprecated for HTML? See https://docs.asciidoctor.org/pdf-converter/latest/roles/
+
+--
+[.text-center]
+image:sunrisedata-logo.svg[alt=Sunrise Data logo,width=49,height=97,fit=line] [.big]#Sunrise Data Press#
+--
 
 toc::[]
 
