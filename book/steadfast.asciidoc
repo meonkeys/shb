@@ -96,7 +96,7 @@ We'd all meet for lunch in Seattle and then do the two hour car ride up to Belli
 Those car rides are when we all really started talking about the lack of a free software event in Seattle.
 We realized we needed some folks in Seattle who could get their companies to sponsor (like Adam and Rob Smith) and someone who could help get some speakers and promote the event to the free software community, which is how I (as a Massachusetts resident) ended up co-founding an annual Seattle event.
 
-SeaGL kicked off in 2013 at Seattle Central College and it was pretty scrappy.
+((SeaGL)) kicked off in 2013 at Seattle Central College and it was pretty scrappy.
 No keynotes, lots of shared power strips and a few friends that had gotten roped in to help without a lot of idea of what they'd signed up for.
 We had chosen a Friday to possibly attract students while the campus was open and a Saturday to make the second day easy for people whose jobs wouldn't support their attendance during the work week.
 The event was and remains both free to attend and open to everyone.
@@ -105,7 +105,7 @@ Adam showed up to our first event with a small pile of "`print on demand`" hats 
 Talk selection was, "`if you want to do a talk, do a talk.`" Adam gave some great intro talks on Git and Hadoop and I gave a policy talk and community organizing talk.
 We hadn't written it down yet, but SeaGL was destined to become a conference for beginners and experts, for coders and policy nerds and for talks about the ecosystem; the flaws, the potential and the opportunities for partnership with other efforts to empower people.
 
-After that chaotic first edition, we solidified that we wanted SeaGL to be for everyone, but especially for people who were looking for a way into open source in the diverse, expensive, and tech-heavy Seattle area.
+After that chaotic first edition, we solidified that we wanted ((SeaGL)) to be for everyone, but especially for people who were looking for a way into open source in the diverse, expensive, and tech-heavy Seattle area.
 We wanted SeaGL to be a great first tech conference for attendees and a welcoming platform for aspiring speakers.
 We later extended this to working towards finding lesser known speakers and offering them their first keynote opportunity.
 The whole SeaGL crew (including Adam of course!) have always been passionate about welcoming in newcomers and fastidious about hosting a friendly, safe and curiosity positive environment.
@@ -167,7 +167,7 @@ Our actions are infinitely measured; _we_ are the product.
 The smog of surveillance stifles our freedom and erodes trust.
 We will:
  
-* Not settle for cheap cloud services.
+* Not settle for cheap ((cloud)) services.
 * Reduce distractions.
 * Cherish our attention, time, and freedom.
 * Breathe the crisp, clear air of reduced surveillance by providing our own alternative to the chilling popular default of trading privacy for convenience.
@@ -645,7 +645,7 @@ So many reasons!
 ** savings increase as your users' data storage requirements enter the terabyte range
 ** save more with every service you run
 ** avoid unexpected public ((cloud)) costs
-*** egress fees make it expensive to download your data and move it somewhere else
+*** ((egress)) fees make it expensive to download your data and move it somewhere else
 *** forgetting to shut down a ((VM)) (virtual machine) can get expensive quickly
 *** you could spend excessive time and money navigating the public cloud's confusing menu of service offerings
 ** avoid unexpected public clouds changes
@@ -1148,7 +1148,7 @@ The ((container))'s filesystem--everything besides mounted volumes with persiste
 Note that if you use ZFS with SSDs, you may sometimes notice your system performing poorly.
 On my ((Ubuntu)) desktop this happens once a month when the scheduled "`trim`" cron job starts.
 Trimming is a process of reclaiming formerly used space on SSDs.
-This is not an issue with HDDs.
+This is not an issue with ((HDD))s.
 
 On my desktop (again: not my server--I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
 
@@ -1543,7 +1543,7 @@ Dogfooding keeps you honest and helps you empathize with others.
 ==== Hard drives
 
 (((ZFS, HDDs and)))
-I use HDDs (hard disk drives) for data storage, mainly as a cost-saving measure.
+I use ((HDD))s (hard disk drives) for data storage, mainly as a cost-saving measure.
 The cost of public cloud ((block storage)) far exceeds the gigabyte-hour cost of my HDDs.
 I priced out one month of 5TB HDD block storage on AWS at $228.10.
 With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_.
@@ -1575,7 +1575,7 @@ There are many aspects to consider when comparing the two options, such as:
 * network availability
 * ((backups)), versioning, security
 
-I went with HDDs for direct, local access to my data.
+I went with ((HDD))s for direct, local access to my data.
 I really wanted to know exactly where they were stored and for ultimate flexibility when I change or try new services.
 Most of my services require direct access anyway.
 
@@ -1644,7 +1644,7 @@ See <<Full-disk encryption>>.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
-. Optional: add two HDDs and format them with ((ZFS)).
+. Optional: add two ((HDD))s and format them with ((ZFS)).
 See <<ZFS>>.
 . Download mario onto your ((admin computer)) (a separate computer from your server). See <<Source code>>.
 . Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
@@ -1663,7 +1663,7 @@ If you decide you want full-disk encryption, choose it during the OS install. <<
 
 (((ZFS, setup)))
 The OS takes care of itself pretty well.
-For more robust data storage, we can a couple of HDDs and manage them with ((ZFS)).
+For more robust data storage, we can a couple of ((HDD))s and manage them with ((ZFS)).
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
@@ -2215,7 +2215,7 @@ I'll come back to mobile later in the following sections.
 
 Nextcloud is able to use ((object storage)) for primary data storage.
 This is an advanced topic left as an exercise to the reader.
-I'll assume primary storage on a local HDD set up by mario.
+I'll assume primary storage on a local ((HDD)) set up by mario.
 
 ==== Security
 
