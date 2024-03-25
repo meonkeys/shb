@@ -1563,7 +1563,7 @@ At each prompt, accept the default or write down your choice.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
-.. Set up a “Profile”; note the username and password.
+.. Set up a “Profile”. Note the username and password, you'll need these in <<Connect to server>>.
 .. Install OpenSSH server.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
@@ -1753,10 +1753,11 @@ mario installs `zfs-auto-snapshot` for you.
 
 == mario
 
-Once our server is online following <<Deploy>>, we can use mario to configure and stand up services.
+Once your server is online following <<Deploy>>, use mario to configure and stand up services.
 
 Please download the <<Source code>>.
-It'll be helpful to have the source code handy so you can follow along as you read through this chapter.
+It'll be helpful to have this handy so you can follow along as you read.
+
 mario can be found alongside this book, in the `mario/` folder.
 The `provision.sh` script and config files are in `ansible/`.
 
@@ -1791,13 +1792,6 @@ You can find some ideas in <<Exercises>>.
 You may want to first create a ((VM)) and run mario against that until you're ready to run mario pointed at your real server.
 Or perhaps your real server _is_ a VM -- that'll work fine too.
 
-=== Conventions
-
-mario prepares the server filesystem as follows:
-
-* Docker configuration files are stored in directories under `/root/ops`.
-* Data for services are stored in directories under `/data`.
-
 === First run
 
 Go ahead and run `provision.sh` on your ((admin computer)) (_not_ on your server):
@@ -1820,22 +1814,49 @@ You don't have a config file. I'll create one for you now.
 Please edit 'config' and re-run this script.
 ----
 
-Follow these instructions, re-running `provision.sh` as indicated until you see output like this:
+To finish `config` we'll need some more information.
 
-[source,text]
+FIXME DNS, SSH
+
+=== Connect to server
+
+mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
+Public key authentication eases this.
+If you have a key pair, use it.
+If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
+Copy the public key to the server with `ssh-copy-id` or similar.
+
+Use a stanza like this in your SSH client config:
+
+[%unbreakable,text]
 ----
-+ /usr/bin/ansible-playbook playbook.yml
-
-PLAY [all] *********************************************************************
-
-TASK [base : Configure apt cache] **********************************************
-ok: [mario_server]
-
-TASK [base : Install packages] *************************************************
-changed: [mario_server]
-
-(truncated)
+Host mario_server
+  HostName console.example.com
+  User your-username
 ----
+
+(((provision)))
+Test it by running `provision.sh` again.
+
+IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
+If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
+If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
+
+Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
+mario needs this on its first run, prior to setting up passwordless sudo.
+
+If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
+
+[source%unbreakable,bash]
+----
+source config
+ansible-playbook --ask-become-pass playbook.yml
+----
+
+You should only have to do this once.
+If it succeeds, you can go back to using `provision.sh`.
+
+Another security improvement (left as an exercise for the reader) is to move secrets from `config` into an Ansible vault.
 
 ==== Domain name
 
@@ -1899,57 +1920,42 @@ IP addresses can be repeated because our ((reverse proxy)) will direct traffic b
 
 If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
 
-==== Connect to server
+=== Provision complete
 
-mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
-Public key authentication eases this.
-If you have a key pair, use it.
-If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
-Copy the public key to the server with `ssh-copy-id` or similar.
+FIXME re-running `provision.sh` as indicated until you see output like this:
 
-Use a stanza like this in your SSH client config:
-
-[%unbreakable,text]
+[source,text]
 ----
-Host mario_server
-  HostName console.example.com
-  User your-username
++ /usr/bin/ansible-playbook playbook.yml
+
+PLAY [all] *********************************************************************
+
+TASK [base : Configure apt cache] **********************************************
+ok: [mario_server]
+
+TASK [base : Install packages] *************************************************
+changed: [mario_server]
+
+(truncated)
 ----
-
-(((provision)))
-Test it by running `provision.sh` again.
-
-IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
-If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
-If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
-
-Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
-mario needs this on its first run, prior to setting up passwordless sudo.
-
-If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
-
-[source%unbreakable,bash]
-----
-source config
-ansible-playbook --ask-become-pass playbook.yml
-----
-
-You should only have to do this once.
-If it succeeds, you can go back to using `provision.sh`.
-
-Another security improvement (left as an exercise for the reader) is to move secrets from `config` into an Ansible vault.
 
 ==== Stand up services
 
 mario has prepared your server to run a handful of services.
+Docker and ((Docker Compose)) are installed.
+Docker configuration files are stored in directories under `/root/ops`.
+Data for services are stored in directories under `/data`.
+
+None of our services are running yet.
 Here's how to turn them on and start using them.
 
 ===== Start reverse proxy
 
 We'll stand up the ((reverse proxy)) first.
 
-Start ((Traefik)) with:
+Connect to your server and start ((Traefik)) with:
 
+.Running docker-compose on the server to start Traefik
 [source,bash]
 ----
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
