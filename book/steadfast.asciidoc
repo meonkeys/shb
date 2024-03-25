@@ -3522,6 +3522,8 @@ router::
   Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
+SeaGL::
+  Seattle GNU/Linux Conference (https://seagl.org). Held yearly since 2013.
 server::
   A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse.
 service::
