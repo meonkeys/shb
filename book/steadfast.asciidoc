@@ -66,7 +66,68 @@ toc::[]
 
 == Foreword
 
-(Placeholder to maintain chapter numbers)
+Before I started working in open source in 2006, I was working as a community organizer in Massachusetts. I was very well acquainted with how a lack of access to information or not having the “real” instruction manual keeps people from having a say in how they live their lives. As a community organizer, I taught people to lobby.
+Our organization invited people to work with legislators to draft laws that would address their needs and make their lives better.
+We taught people to fundraise and we taught them how to organize themselves and their neighbors.
+And then everything started to move online and important conversations about how we should protect the vulnerable and empower the next generation started happening through our computers.
+
+You can either lament progress or embrace it.
+I chose to embrace it and decided that I wanted to empower people and help them feel a sense of control over the way they use computers and technology.
+I started meeting all kinds of people from the free software movement, some were really interested in the way the code worked and others, like Adam, were the most interested in how freely available code could help people.
+
+We met in 2009 at LFNW (LinuxFest Northwest), a free community conference in Bellingham, Washington.
+A mutual friend had suggested that I should check out Seattle sometime when visiting Washington state for LFNW, which meant carpooling from Seattle to Bellingham.
+We'd all meet for lunch in Seattle and then do the two hour car ride up to Bellingham together.
+Those car rides are when we all really started talking about the lack of a free software event in Seattle.
+We realized we needed some folks in Seattle who could get their companies to sponsor (like Adam and Rob Smith) and someone who could help get some speakers and promote the event to the free software community, which is how I (as a Massachusetts resident) ended up co-founding an annual Seattle event.
+
+SeaGL kicked off in 2013 at Seattle Central College and it was pretty scrappy.
+No keynotes, lots of shared power strips and a few friends that had gotten roped in to help without a lot of idea of what they'd signed up for.
+We had chosen a Friday to possibly attract students while the campus was open and a Saturday to make the second day easy for people whose jobs wouldn't support their attendance during the work week.
+The event was and remains both free to attend and open to everyone.
+
+Adam showed up to our first event with a small pile of “print on demand” hats and shirts with our brand new logo (a seagull of course.)
+Talk selection was, “if you want to do a talk, do a talk.” Adam gave some great intro talks on Git and Hadoop and I gave a policy talk and community organizing talk.
+We hadn't written it down yet, but SeaGL was destined to become a conference for beginners and experts, for coders and policy nerds and for talks about the ecosystem; the flaws, the potential and the opportunities for partnership with other efforts to empower people.
+
+After that chaotic first edition, we solidified that we wanted SeaGL to be for everyone, but especially for people who were looking for a way into open source in the diverse, expensive, and tech-heavy Seattle area.
+We wanted SeaGL to be a great first tech conference for attendees and a welcoming platform for aspiring speakers.
+We later extended this to working towards finding lesser known speakers and offering them their first keynote opportunity.
+The whole SeaGL crew (including Adam of course!) have always been passionate about welcoming in newcomers and fastidious about hosting a friendly, safe and curiosity positive environment.
+
+Adam and I have known each other for a long time.
+I've met his daughter, who is the talented illustrator for this book, and his wife who is also smart and relentlessly curious about how technology affects our lives.
+I've even met some of the chickens, who are indeed squeaky clean, although sadly not all that smart.
+Luckily, they are extremely well cared for so they don't need to be too bright.
+
+In brief, Adam is very dedicated to both free software and empowering people.
+He is also very, very nice!
+Like truly one of the nicest people I have ever met.
+If the idea of doing something hard with a patient and gentle mentor is appealing to you and you are curious about self-hosting, then this is the book for you.
+
+Self-hosting is hard.
+I've personally lurked on mailing lists that were going to make this easy, gone to talks, watched videos and read articles, but they've never quite managed to make it easy.
+Some of those resources were starting at chapter 2, others were full of comments that made me feel like any random person of reasonable intelligence should be able to find the information that wasn't included.
+Fortunately, Adam has included everything that a true beginner needs to get started while giving the reader plenty of options.
+
+Self-hosting is also important.
+Things change quickly in tech and in the wider world.
+What you control and what you don't is constantly shifting.
+Self-hosting gives you a chance to keep a few things to yourself and be in charge of your personal data, your media and the way you interact with your computing environment.
+Self-hosting lets you decide what your needs are and choose how to address them, without asking for permission or getting locked into a contractual relationship with a company that doesn't care about you as an individual.
+
+You should read this book, share it with other people, and maybe, once you're ready, contribute back to the self-hosting community.
+
+--
+Welcome to the world of hosting,
+--
+
+[.big]#Deb Nicholson#
+
+--
+Founder, Seattle GNU/Linux Conference +
+Executive Director, Python Software Foundation
+--
 
 :sectnums:
 
