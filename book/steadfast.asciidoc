@@ -3350,6 +3350,8 @@ For supporting my dreams, including this book: your several inspiring rounds of 
 
 Thanks to my daughter for your fantastic illustrations.
 
+Thanks to Deb Nicholson for writing the meaningful Foreword.
+
 Thanks to my family and friends for tolerating my protracted ((FOSS)) self-hosting boondoggles, including this book.
 
 Thanks to Pro Git 2--my inspiration to switch to Asciidoctor.
