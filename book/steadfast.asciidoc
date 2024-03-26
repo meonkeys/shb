@@ -2118,9 +2118,7 @@ sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
-It may take a few minutes for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certificates, so don't worry if you get invalid cert warnings at first.
-
-You can tail the logs with:
+While you are waiting, tail the logs with:
 
 .tail Traefik logs (server)
 [source,bash]
@@ -2128,6 +2126,7 @@ You can tail the logs with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 ----
 
+It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certificates, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
 
 .typical Traefik logs (server)
