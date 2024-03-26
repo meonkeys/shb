@@ -20,7 +20,8 @@ export R53_DNS_API_KEY='fixme_dns_key'
 export R53_DNS_API_SECRET='fixme_dns_secret'
 
 # Notification email for certificate errors / expirations.
-# Use a value hear matching what you use with your DNS API provider.
+# Use a value here matching what you use with your DNS API provider.
+# You may receive emails from Let's Encrypt at this address.
 export DNS_RESOLVER_EMAIL='fixme.dns.email@example.com'
 
 # A domain name you own, or at least one you control.
@@ -36,8 +37,8 @@ export MARIO_DOMAIN_NAME='example.com'
 # # If you use multi-factor auth, use an app password.
 # # See https://hub.docker.com/r/namshi/smtp
 # # and https://support.google.com/accounts/answer/185833
-# export MARIO_EMAIL_SENDER='noreply@example.com'
-# export MAIL_RELAY_PASSWORD='fixme_mail_relay_password'
+export MARIO_EMAIL_SENDER='noreply@example.com'
+export MAIL_RELAY_PASSWORD='fixme_mail_relay_password'
 
 # Required to squelch a Nextcloud warning.
 # Pick your code from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements .

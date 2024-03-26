@@ -1665,7 +1665,7 @@ At each prompt, accept the default or write down your choice.
 Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
 .. Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
-.. When you set up a Profile, note the username and password. You'll need these in <<Connect to server>>.
+.. When you set up a user account ("`Profile`"), note the username and password. You'll need these in <<Connect to server>>.
 .. Install OpenSSH server when prompted to do so.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
@@ -1889,7 +1889,7 @@ The desired end state, as declared in the configuration files, is reached and co
 
 (((provision)))
 After getting mario up and running successfully once, run it again!
-Provisioning with mario is ((idempotent)).
+Provisioning with mario is reassuringly ((idempotent)).
 The system should not change in any meaningful way after the desired state is reached.
 Once `provision.sh` completes successfully, it may be run again to confirm this.
 
@@ -1921,49 +1921,42 @@ You don't have a config file. I'll create one for you now.
 Please edit 'config' and re-run this script.
 ----
 
-Here's a guide for every setting in your `config`.
-That file also contains prodigious comments and is the most up to date, so please see it as well.
+Here's a guide for settings in your `config` that must be changed from their defaults.
+Be sure to study the comments in that file, too.
+I'll assume you're using Duck DNS -- see <<Server domain name>> for details and alternatives.
 
-// FIXME - simplify to required values only
-
-`DNS_API_PROVIDER`::
-Leave this as `duckdns` unless you want to use Route 53.
-See <<Server domain name>>.
 `DUCKDNS_TOKEN`::
 This is basically your secret key.
 Grab this value from the Duck DNS website.
 Leave unchanged if you are using Route 53.
-`R53_DNS_API_KEY`::
-Enter your key here if you aren't using Duck DNS.
-`R53_DNS_API_SECRET`::
-Enter your secret here if you aren't using Duck DNS.
 `DNS_RESOLVER_EMAIL`::
 Enter an email matching what you use with your DNS API provider.
 You may receive emails from Let's Encrypt at this address.
 `MARIO_DOMAIN_NAME`::
 This will be a name like `example.duckdns.org` or `example.com`.
 Individual services will be named based on this, e.g. `media.example.duckdns.org`.
-`MARIO_EMAIL_SENDER`::
-Used for Gmail SMTP server login.
-This may be set to the same value as `DNS_RESOLVER_EMAIL`.
-`MAIL_RELAY_PASSWORD`::
-Used for Gmail SMTP server login.
-If you use multi-factor auth, use an app password here.
-`DEFAULT_PHONE_REGION`::
-Set this to your 2-digit ISO 3166-1 country code.
-This is used to squelch a warning in Nextcloud.
-`TZ`::
-Set this to your timezone using a tz database name such as `America/Los_Angeles`. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
-`LAN_ONLY_ALLOWED`::
-This is a range of IP addresses allowed to connect to your server.
-Use CIDR notation.
 
-TODO - add `hosts.yml` tips here.
+Edit those values and run `provision.sh` again.
 
-// How does an admin (and mario) connect to your server with SSH?::
-// See <<Connect to server>> for how to do this.
+.mario second run output (admin computer)
+[%unbreakable,text]
+----
+You don't have an Ansible inventory file. I'll create one for you now.
 
-Once you're on your server and ready to mario it into submission, skip to <<Provision complete>>.
+Please edit hosts.yml and re-run this script.
+----
+
+Oh great, _another_ config file?
+Don't worry, there's only one value to change: `ansible_become_password`.
+That should be set to the password you entered when you created the user account on your server, way back in <<Deploy>>.
+
+TIP: If you don't want to store the password in `hosts.yml`, see <<Plaintext password alternative>>.
+
+Make sure you can connect to your server via `ssh mario_server` with public key authentication.
+See <<Connect to server>> for how to configure your SSH client for this.
+
+Finally, you're ready to mario your server into submission.
+Forge ahead to <<Provision complete>>.
 
 === Server domain name
 
@@ -2019,13 +2012,18 @@ For example:
 |Service |Hostname |Public IP |Internal IP
 
 |Nextcloud |cloud.example.com |175.102.205.1 |10.0.0.5
-|Jellyfin |media.example.com |175.102.205.1 |10.0.0.5
-|Wallabag |read.example.com |175.102.205.1 |10.0.0.5
+|Jellyfin |jellyfin.example.com |175.102.205.1 |10.0.0.5
+|Wallabag |wallabag.example.com |175.102.205.1 |10.0.0.5
 |===
 
 IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
 
 If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
+
+TIP: I've shown examples of two styles of service domain names.
+`cloud.example.com` indicates the function of the service, rather than the service's brand name.
+`nextcloud.example.com` would work just as well.
+The choice is yours.
 
 === Connect to server
 
@@ -2035,9 +2033,11 @@ If you have a key pair, use it.
 If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
 Copy the public key to the server with `ssh-copy-id` or similar.
 
-Use a stanza like this in your SSH client config:
+Teach your client what to do when you run `ssh mario_server`.
+Map `mario_server` to the name of your server, and `your-username` to the account username on your server.
+Here's an example client config template for ((OpenSSH)):
 
-.mario server snippet in SSH client config (admin computer)
+.mario server snippet in OpenSSH client config (admin computer)
 [%unbreakable,text]
 ----
 Host mario_server
@@ -2046,16 +2046,17 @@ Host mario_server
 ----
 
 (((provision)))
-Test it by running `provision.sh` again.
+Test it by running `ssh mario_client`.
+If that works, run `provision.sh` again.
 
 IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
 If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
 If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
 
-==== Optional interactive password prompt
+==== Plaintext password alternative
 
-Note that `mario/ansible/hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password value for `ansible_become_password`.
-mario needs this on its first run, prior to setting up passwordless sudo.
+`hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password.
+mario needs this prior to setting up passwordless sudo.
 
 If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
 
@@ -2073,7 +2074,7 @@ Another security improvement (left as an exercise for the reader) is to move sec
 
 === Provision complete
 
-FIXME re-running `provision.sh` as indicated until you see output like this:
+When mario is able to connect to the server and provision it successfully, you'll see output similar to this:
 
 .output when mario is working (admin computer)
 [source,text]
