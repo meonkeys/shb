@@ -1965,8 +1965,8 @@ You can either use a free domain name from ((Duck DNS)) or buy a domain name fro
 
 ==== Public DNS
 
-Duck DNS provides a free domain name and DNS service, but you have to use a name like `example.duckdns.org`.
-Route 53 can be used with whichever domain name you purchase.
+Duck DNS provides a free domain name and DNS service.
+Route 53 will do the same, and currently costs about USD 0.50 per month per domain name.
 Support for other ((DNS)) providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
