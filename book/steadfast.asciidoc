@@ -2657,12 +2657,16 @@ I hope they do decide to release them, for the same reasons the rest of Nextclou
 
 * https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341
 
-===== Login page loads twice
+===== Spurious event updated notifications
 
-Sometimes I login and immediately have to log in again.
-Authentik or some other login mechanism might work around this.
+The Calendar app is quite useful and perhaps the most heavily used by me and my users.
+I have grown to expect one particular erroneous "`event updated`" notifications, possibly caused by calendar client/sync issues.
 
-* https://github.com/nextcloud/server/issues/9354
+On one shared calendar (with many clients) I often get notifications that so-and-so "`updated event XYZ in calendar ABC`", but the only actual thing that occurred is that one of the clients just sync'd (or perhaps made some innocuous change to an event) and Nextcloud thinks it was a meaningful update.
+At least, I think that's what's happening... some changes (like changing the event's date) do show up with the old and new values made explicit.
+As an aside: I do like this "`explicit diff`" behavior showing the exact changes made to an event's Title, Time, Location, or Description.
+
+* https://github.com/nextcloud/calendar/issues/5879
 
 ==== End-to-End Encryption
 
