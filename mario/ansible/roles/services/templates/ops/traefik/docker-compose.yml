@@ -24,8 +24,6 @@ services:
       - --entrypoints.web.http.redirections.entrypoint.to=websecure
       - --certificatesresolvers.myresolver.acme.dnschallenge=true
       - --certificatesresolvers.myresolver.acme.dnschallenge.provider={{ lookup('env', 'DNS_API_PROVIDER') }}
-      - --certificatesresolvers.myresolver.acme.dnschallenge.delaybeforecheck=30
-      - --certificatesresolvers.myresolver.acme.dnschallenge.resolvers=1.1.1.1:53,8.8.8.8:53
       - --certificatesresolvers.myresolver.acme.email={{ lookup('env', 'DNS_RESOLVER_EMAIL') }}
       - --certificatesresolvers.myresolver.acme.storage=/etc/traefik/acme.json
       - --global.checknewversion=false
