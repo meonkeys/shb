@@ -78,6 +78,17 @@
     - /data/jellyfin/media/tmp-video
     - /data/jellyfin/media/tv
 
+# for Jellyfin.
+# See https://jellyfin.org/docs/general/administration/troubleshooting.html#real-time-monitoring
+# The number is large yet, at the time of writing, not as large as recommended
+# in the jellyfin documentation. I'm just trying to be conservative. I also
+# tried to pick a sorta unique number in case I want it to stand out later
+# during a search.
+- name: increase inotify limits
+  sysctl:
+    name: fs.inotify.max_user_watches
+    value: '233118'
+
 - name: Check if Nextcloud config file exists
   stat:
     path: /data/nextcloud/root/config/config.php
