@@ -68,3 +68,19 @@
     mode: 0400
   notify:
     - restart sshd
+
+# for HTTP/3
+# see https://github.com/traefik/traefik/issues/9272
+# and https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes
+- name: increase UDP read buffer limits
+  sysctl:
+    name: net.core.rmem_max
+    value: '26214400'
+
+# for HTTP/3
+# see https://github.com/traefik/traefik/issues/9272
+# and https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes
+- name: increase UDP write buffer limits
+  sysctl:
+    name: net.core.wmem_max
+    value: '26214400'
