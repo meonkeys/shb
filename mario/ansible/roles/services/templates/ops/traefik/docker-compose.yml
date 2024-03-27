@@ -9,6 +9,7 @@ services:
       DUCKDNS_TOKEN: "{{ lookup('env', 'DUCKDNS_TOKEN') }}"
       NAMECHEAP_API_USER: "{{ lookup('env', 'NAMECHEAP_API_USER') }}"
       NAMECHEAP_API_KEY: "{{ lookup('env', 'NAMECHEAP_API_KEY') }}"
+      DO_AUTH_TOKEN: "{{ lookup('env', 'DO_AUTH_TOKEN') }}"
     command:
       - --api.insecure=true
       - --providers.docker=true

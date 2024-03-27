@@ -1,23 +1,26 @@
-# FIXME - move required values to top and label loudly
-
-# Key & secret for automatic DNS record updates.
-# Necessary:
-# 1. For auto HTTPS cert setup with Let's Encrypt DNS challenge, and
-# 2. if your public IP address is dynamic (changes at the whim of your ISP -- the opposite of "static").
-#
-# Must be one of route53 or duckdns
+# Must be one of namecheap, digitalocean, route53, or duckdns.
+# Many others may work as well if services.reverse-proxy.environment in traefik's docker-compose.yml is augmented with the correct additional variables.
 # See https://doc.traefik.io/traefik/https/acme/#dnschallenge
 # See https://letsencrypt.org/docs/challenge-types/#dns-01-challenge
-export DNS_API_PROVIDER='duckdns'
+export DNS_API_PROVIDER=''
 
-### Duck DNS ###
-# If you specified duckdns for DNS_API_PROVIDER above, use real values in this section. Otherwise leave values as `fixme_*`.
-export DUCKDNS_TOKEN='fixme_dns_token'
+### Namecheap API credentials ###
+# If you specified namecheap for DNS_API_PROVIDER above, enter real values in this section. Otherwise leave blank.
+export NAMECHEAP_API_USER=''
+export NAMECHEAP_API_KEY=''
 
-### Route 53 ###
-# If you specified route53 for DNS_API_PROVIDER above, use real values in this section. Otherwise leave values as `fixme_*`.
-export R53_DNS_API_KEY='fixme_dns_key'
-export R53_DNS_API_SECRET='fixme_dns_secret'
+### DigitalOcean API credentials ###
+# If you specified digitalocean for DNS_API_PROVIDER above, enter real values in this section. Otherwise leave blank.
+export DO_AUTH_TOKEN=''
+
+### Duck DNS API credentials ###
+# If you specified duckdns for DNS_API_PROVIDER above, enter real values in this section. Otherwise leave blank.
+export DUCKDNS_TOKEN=''
+
+### Route 53 API credentials ###
+# If you specified route53 for DNS_API_PROVIDER above, enter real values in this section. Otherwise leave blank.
+export R53_DNS_API_KEY=''
+export R53_DNS_API_SECRET=''
 
 # Notification email for certificate errors / expirations.
 # Use a value here matching what you use with your DNS API provider.

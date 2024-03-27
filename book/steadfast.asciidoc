@@ -1924,20 +1924,22 @@ Please edit 'config' and re-run this script.
 
 Here's a guide for settings in your `config` that must be changed from their defaults.
 Be sure to study the comments in that file, too.
-I'll assume you're using Duck DNS -- see <<Server domain name>> for details and alternatives.
+I'll assume you have a domain name and a DNS provider with an API.
+See <<Server domain name>> for details on how to obtain this.
 
-`DUCKDNS_TOKEN`::
-This is basically your secret key.
-Grab this value from the Duck DNS website.
-Leave unchanged if you are using Route 53.
+`DNS_API_PROVIDER`::
+Enter the name of your ((DNS)) provider here.
+mario configures ((Traefik)) to talk directly with your DNS server for issuing ((Let's Encrypt)) certs.
+`NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
+Enter credentials in these fields corresponding to the value you specified in `DNS_API_PROVIDER`.
 `DNS_RESOLVER_EMAIL`::
 Enter an email matching what you use with your DNS API provider.
 You may receive emails from Let's Encrypt at this address.
 `MARIO_DOMAIN_NAME`::
 This will be a name like `example.duckdns.org` or `example.com`.
-Individual services will be named based on this, e.g. `media.example.duckdns.org`.
+Individual services will be named based on this, e.g. `media.example.com`.
 
-Edit those values and run `provision.sh` again.
+Finish editing `config` and run `provision.sh` again.
 
 .mario second run output (admin computer)
 [%unbreakable,text]
@@ -1961,19 +1963,25 @@ Forge ahead to <<Provision complete>>.
 
 === Server domain name
 
-mario expects to be able to use ((Duck DNS)) or Amazon Route 53 for responding to DNS (Domain Name System) queries and setting up ((HTTPS)) web traffic encryption.
-You can either use a free domain name from ((Duck DNS)) or buy a domain name from a registrar.
+Your server needs a domain name.
+You can either use a free domain name or buy a domain name from a registrar.
+mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
+
+You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a ((dynamic IP address)).
 
 ==== Public DNS
 
 Duck DNS provides a free domain name and DNS service.
 Route 53 will do the same, and currently costs about USD 0.50 per month per domain name.
+mario should also work with Namecheap and DigitalOcean.
 Support for other ((DNS)) providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
 <<Digital security>> covers WAN access in detail.
 
 ===== Duck DNS
+
+If you want a free domain name from a provider with an API, you can try your luck with Duck DNS.
 
 . Start at https://duckdns.org.
 . Log in and add a domain.
@@ -2002,24 +2010,37 @@ Here's a policy with way too much access that nevertheless works:
 }
 ----
 
+==== Dynamic DNS
+
+If you want ((WAN access)) and your ((IP address)) changes periodically, it's handy to have this updated in ((DNS)) automatically.
+Similar to Traefik setting up ((HTTPS)) certs, this uses a DNS provider API.
+There are several options here, all left as exercises for the reader.
+One idea is to find and stand up a dynamic DNS client for your Docker image.
+These are generally very simple services to set up.
+(((router, network device)))
+Another idea is to see if your router will do the dynamic DNS updates.
+
 ==== Internal DNS
 
-It is handy to have an _internal_ ((DNS)) server to be able to refer to your server by name.g. Route 53).
-I recommend using internal hostnames matching public ones, but pointing to ((LAN))-only private IP addresses.
+It is handy to have an internal ((DNS)) server to be able to refer to your server by name.
+These should match the public names and point to ((LAN))-only private IP addresses.
+This way you can use the same domain names inside and outside your LAN and your Let's Encrypt certs will work.
+
+If you don't have an internal ((DNS)) server, use hostname to IP address mappings in `/etc/hosts` or similar, based on your OS.
 For example:
 
-[cols="2,3,2,2"]
-|===
-|Service |Hostname |Public IP |Internal IP
-
-|Nextcloud |cloud.example.com |175.102.205.1 |10.0.0.5
-|Jellyfin |jellyfin.example.com |175.102.205.1 |10.0.0.5
-|Wallabag |wallabag.example.com |175.102.205.1 |10.0.0.5
-|===
+[source,text]
+----
+192.168.1.100	traefik.example.com
+192.168.1.100	cloud.example.com
+192.168.1.100	jellyfin.example.com
+192.168.1.100	wallabag.example.com
+----
 
 IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
 
-If you don't have a ((DNS)) server yet, use hostname to IP address mappings in `/etc/hosts` or similar while you are getting started.
+Overriding DNS records like this is a temporary measure.
+Only the computer with these specific mappings will be able to get to your sever by name.
 
 TIP: I've shown examples of two styles of service domain names.
 `cloud.example.com` indicates the function of the service, rather than the service's brand name.
@@ -3478,6 +3499,8 @@ bot::
   Short for robot. Software performing autonomous tasks such as responding to chat requests or attacking vulnerable servers.
 cattle vs. pets::
   Highlights two distinctly different sysadmin approaches to systems/services. Cattle are automated, ephemeral, and hopefully immutable. Pets are managed manually, stateful, and long-lived.
+cert::
+  Shorthand for HTTPS encryption certificate.
 change management::
   The means and methods of transitioning a group of people from one set of tools and processes to another.
 cloud::
