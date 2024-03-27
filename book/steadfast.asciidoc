@@ -2978,7 +2978,7 @@ This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding la
 .label from Traefik config allowing only LAN access
 [source,yaml]
 ----
-"traefik.http.middlewares.lan-only.ipwhitelist.sourcerange=192.168.1.0/24"
+"traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
 ----
 
 TIP: For extra credit, incorporate your LocalAI service into mario.
