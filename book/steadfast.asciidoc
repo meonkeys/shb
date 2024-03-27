@@ -3579,7 +3579,7 @@ GUI::
 HDD::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
 homelab::
-  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. Our _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Far from this level of hair-splitting detail, I'll sometimes use "`homelab`" as a shortcut for "`self-hosting space`".
+  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. Our _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting space`" and/or "`homeprod`".
 host::
   The computer where Docker containers run. Also called a "`server`" in this text.
 HVAC::
