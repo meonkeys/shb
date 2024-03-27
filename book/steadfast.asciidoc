@@ -185,6 +185,7 @@ Experienced self-hosters can compare my choices to theirs.
 
 ==== Prerequisites
 
+(((router, network device)))
 To get the most out of this book, the sysadmin experience you bring along should include the ability to:
 
 * configure your router and ((LAN)) (local area network)
@@ -1038,25 +1039,26 @@ Recommendations:
 
 . store offline only if possible
 . if ever saved on a computer, store encrypted
-. easy fix: store in a password manager
+. easy fix: store in a ((password manager))
 
 ===== everything else
 
+(((WAN access)))
 Examples: notes, photos, documents, personal information.
 Recommendations:
 
 . store on encrypted media, including ((backups))
 . access only with up-to-date software you trust
-. disallow ((WAN access)) to these data
+. disallow ((WAN)) (wide area network) access to these data
 
 ==== WAN access
 
 Once you've categorized your data, think about how people will get to it.
 At home you can generally just connect directly to your server.
-When you're away or you're trying to share with someone else, you're talking WAN access.
+When you're away or you're trying to share with someone else, you're talking ((WAN access)).
 
 That is: remote access to your services (hence: your ((LAN)) and your data), through your router/firewall.
-Say: port forwarding HTTPS traffic through your router/firewall to your ((Nextcloud)) server.
+Say: port forwarding ((HTTPS)) traffic through your router/firewall to your ((Nextcloud)) server.
 Port forwarding is both risky and convenient.
 
 NOTE: Consider alternatives to port forwarding, such as using headscale to set up your own tailnet (https://headscale.net).
@@ -1333,9 +1335,10 @@ For more information see the Traefik `README.md`)
 .Traefik architecture diagram showing how a request reaches a service.
 image::traefik-architecture.png[]
 
+(((router, Traefik)))
 In the mario source code (or the snippets below), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
 
-* the `websecure` entrypoint, where we accept HTTPS traffic on port 443
+* the `websecure` ((entrypoint)), where we accept HTTPS traffic on port 443
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
 * the `Host(...)` rule in the `nextcloud-https` router
 
@@ -1363,14 +1366,15 @@ services:
       - "traefik.http.routers.nextcloud-https.rule=Host(`cloud.example.com`)" <3>
 ----
 
-<1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
+<1> Define ((entrypoint)) `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
 
 <2> Connect the `websecure` entrypoint with the `nextcloud-https` router on the `app` service.
 
 <3> Use the hostname rule with the `nextcloud-https` router.
 
+(((router, Traefik)))
 Each self-hosted service will have its own router.
-Other web services will also use the `websecure` entrypoint.
+Other web services will also use the `websecure` ((entrypoint)).
 
 HTTPS encryption is configured using other labels on the ((Traefik)) ((container)).
 See <<Encryption certificates>> for details.
@@ -1590,12 +1594,13 @@ I use one ((SSD)) (solid-state drive) for the OS and everything besides my photo
 
 Read more about SSDs and TRIM in <<Filesystem>>.
 
+(((data sovereignty)))
 An interesting alternative to HDDs is ((object storage)).
 ((Nextcloud)) can use object storage directly, for example.
 There are many aspects to consider when comparing the two options, such as:
 
 * cost of storage and ((egress))
-* control, autonomy, ((sovereignty))
+* control, autonomy, sovereignty
 * direct access to data
 * speed and means of access
 * network availability
@@ -1623,6 +1628,7 @@ I just made these up based on what I estimated I'd need, then doubled that to al
 
 ===== Home router configuration
 
+(((router, network device)))
 Learn how to configure your router.
 Keep it up to date and maintain a strict ((firewall)) with only the necessary ports open / forwarded.
 
@@ -1637,6 +1643,7 @@ Here's a simple diagram I created using https://asciiflow.com to plan cabling an
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 
+(((router, network device)))
 Arrows represent ethernet cable.
 The router provides electricity to the mini switch using PoE (power over ethernet).
 The server has two NICs (network interface cards): one for the OS and everything within (including all services), while the other provides a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
@@ -1743,6 +1750,7 @@ zpool iostat
 
 === Server maintenance
 
+(((router, network device)))
 I use short monthly and yearly ((maintenance)) checklists. For example:
 
 .Checklist: Monthly Maintenance
@@ -2195,6 +2203,7 @@ The DNS challenge is configured using labels in Traefik's `docker-compose.yml` c
 Traefik accepts ((HTTPS)) and passes along unencrypted HTTP to our web services.
 This is called ((SSL termination)).
 
+(((router, network device)))
 Take a look at a `docker-compose.yml` file for a service included with mario.
 SSL termination is enabled for the service when a `tls` section is defined on a router.
 
@@ -2270,6 +2279,7 @@ Plan to add and remove services as desired and as time passes.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
+(((router, Traefik)))
 Note that mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
@@ -3018,6 +3028,7 @@ Once you get that running, you can use the Nextcloud AI integration app as a con
 
 Running a ((Pi-hole)) (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
 
+(((router, network device)))
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
 The Pi-hole translates host names to IP addresses.
@@ -3031,6 +3042,7 @@ My Pi-hole server sits between my router's DNS server and all clients.
 .Pi-hole DNS traffic flow diagram.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
+(((router, network device)))
 Queries for host names not on any block list will be answered directly or sent upstream.
 I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my ((LAN)) as necessary.
 
@@ -3537,6 +3549,8 @@ DRM::
   Digital restrictions management (https://en.wikipedia.org/wiki/Digital_rights_management). Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
 dVCS::
   Distributed version control system. These days that pretty much means git (https://git-scm.com).
+entrypoint::
+  How traffic enters the Traefik reverse proxy; network ports.
 firewall::
   Means of controlling network traffic between computers.
 fork::
@@ -3630,7 +3644,7 @@ reproducible::
 reverse proxy::
   Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL/TLS termination (https://en.wikipedia.org/wiki/TLS_termination_proxy) and for running several self-hosted web services with different domain names with a single IP address.
 router::
-  Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward.
+  Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 SeaGL::
