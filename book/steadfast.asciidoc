@@ -2236,6 +2236,7 @@ It's only a few more lines of code+config to create a small ((API)) or web servi
 == Services
 
 Here are details of self-hosting a handful of useful services.
+Each service has a "`Setup`" section detailing command(s) to start it.
 
 The services I'll highlight are a tiny fraction of those available to self-host.
 They reflect my users' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
