@@ -3159,7 +3159,6 @@ Here are some more related and interesting self-hosting solutions worth research
 * ((LibreServer)) (https://libreserver.org)
 * ((LinuxServer.io)) (https://www.linuxserver.io)
 * ((NextcloudPi)) (https://nextcloudpi.com)
-* ((Proxmox)) (https://proxmox.com)
 * ((UBOS)) (https://ubos.net)
 
 == Contributions
