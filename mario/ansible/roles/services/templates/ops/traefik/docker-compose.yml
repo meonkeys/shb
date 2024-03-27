@@ -44,5 +44,5 @@ services:
       - "traefik.http.routers.dashboard-https.service=api@internal"
       - "traefik.http.routers.dashboard-https.tls.certresolver=myresolver"
       - "traefik.http.routers.dashboard-https.middlewares=lan-only"
-      - "traefik.http.middlewares.lan-only.ipallowlist.sourcerange={{ lookup('env', 'LAN_ONLY_ALLOWED') }}"
+      - "traefik.http.middlewares.lan-only.ipwhitelist.sourcerange={{ lookup('env', 'LAN_ONLY_ALLOWED') }}"
     restart: unless-stopped
