@@ -2184,7 +2184,7 @@ To stand up everything at once, you could use this shell script:
 .start all services ad-hoc Bash script (server)
 [source,bash]
 ----
-services="watchtower dyndns mail wallabag jellyfin nextcloud scratch"
+services="watchtower wallabag jellyfin nextcloud scratch"
 for svc in $services; do
     sudo docker-compose --file /root/ops/$svc/docker-compose.yml up -d
 done
@@ -3248,6 +3248,9 @@ Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
 . Move secrets used by mario into an Ansible vault.
 . Adapt mario to use ((podman)).
 . Adapt mario to use ((Kubernetes)) (https://kubernetes.io).
+. If you have a dynamic IP address, set up a dynamic ((DNS)) update client container.
+. Stand up a mail relay container.
+. Stand up your own ((DNS)) server.
 . Reorganize mario services into distinct Ansible roles.
 .. Upload the roles to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
 . Modify mario to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
