@@ -7,6 +7,8 @@ services:
       AWS_ACCESS_KEY_ID: "{{ lookup('env', 'DNS_API_KEY') }}"
       AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'DNS_API_SECRET') }}"
       DUCKDNS_TOKEN: "{{ lookup('env', 'DUCKDNS_TOKEN') }}"
+      NAMECHEAP_API_USER: "{{ lookup('env', 'NAMECHEAP_API_USER') }}"
+      NAMECHEAP_API_KEY: "{{ lookup('env', 'NAMECHEAP_API_KEY') }}"
     command:
       - --api.insecure=true
       - --providers.docker=true
