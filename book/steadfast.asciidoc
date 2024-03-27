@@ -1954,7 +1954,7 @@ Finish editing `config` and run `provision.sh` again.
 ----
 You don't have an Ansible inventory file. I'll create one for you now.
 
-Please edit hosts.yml and re-run this script.
+Please edit 'hosts.yml' and re-run this script.
 ----
 
 Oh great, _another_ config file?

@@ -48,7 +48,7 @@ if ! [[ -r $myInventory ]]
 then
     echo "You don't have an Ansible inventory file. I'll create one for you now."
     echo
-    echo "Please edit $myInventory and re-run this script."
+    echo "Please edit '$myInventory' and re-run this script."
     cp "$DIR/template/hosts.yml" "$myInventory"
     chmod 600 "$myInventory"
     exit 1
