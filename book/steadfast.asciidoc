@@ -3660,7 +3660,7 @@ SOHO::
 source control::
   A system for tracking changes in source code along with who made the change, why, and when.
 source of truth::
-  The one true document or data point among some number of copies.
+  The one true document or data point among some number of copies. Used as both plural and singular.
 SSD::
   Solid-state drive. A hard drive that doesn't spin.
 SSH::
