@@ -2158,7 +2158,7 @@ While you are waiting, tail the logs with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
 ----
 
-It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certificates, so don't worry if you get invalid cert warnings at first.
+It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
 
 .typical Traefik logs (server)
@@ -2196,8 +2196,8 @@ This will also pull and build images and update containers as necessary.
 
 === Encryption certificates
 
-((Traefik)) will automatically install ((Let's Encrypt)) certificates to encrypt HTTP traffic.
-The certificates are issued using a ((DNS)) challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
+((Traefik)) will automatically install ((Let's Encrypt)) certs to encrypt HTTP traffic.
+The certs are issued using a ((DNS)) challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
 The DNS challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
 The DNS challenge is configured using labels in Traefik's `docker-compose.yml` configuration file.
@@ -2268,7 +2268,7 @@ It's only a few more lines of code+config to create a small ((API)) or web servi
 == Services
 
 Here are details of self-hosting a handful of useful services.
-Each service has a "`Setup`" section detailing command(s) to start it.
+Each service has a "`Setup`" section explaining how to start it.
 
 The services I'll highlight are a tiny fraction of those available to self-host.
 They reflect my users' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
@@ -3033,8 +3033,8 @@ Running a ((Pi-hole)) (https://pi-hole.net) service in your ((LAN)) helps block 
 (((router, network device)))
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
-The Pi-hole translates host names to IP addresses.
-If a host name is on a block list, it returns a false IP address such as 0.0.0.0.
+The Pi-hole translates domain names to IP addresses.
+If a domain name is on a block list, it returns a false IP address such as 0.0.0.0.
 
 The technique is imperfect, yet simple and effective.
 
@@ -3045,14 +3045,14 @@ My Pi-hole server sits between my router's DNS server and all clients.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
 (((router, network device)))
-Queries for host names not on any block list will be answered directly or sent upstream.
+Queries for domain names not on any block list will be answered directly or sent upstream.
 I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my ((LAN)) as necessary.
 
-It's easy to block individual host names or entire lists as you see fit.
+It's easy to block individual domain names or entire lists as you see fit.
 I've used this as an "`impulse blocker`", helping the kids avoid distractions during remote school.
 
 The Pi-Hole also has a list of local DNS entries.
-I add a few host names to this list for servers inside my ((LAN)).
+I add a few domain names to this list for servers inside my ((LAN)).
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
 For example, ((DNS)) over ((HTTPS)) in Firefox.
@@ -3548,6 +3548,8 @@ DIY::
   Do it yourself. Said of activities involving some amount of learning and tinkering you'd otherwise pay for. Cooking, for example. Also: self-hosting.
 DNS::
   Domain Name System.
+domain name::
+  Full name for a service as it is used in a URL, e.g. `www.example.com`. Synonymous with "`hostname`" as far as we're concerned.
 DRM::
   Digital restrictions management (https://en.wikipedia.org/wiki/Digital_rights_management). Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
 dVCS::
