@@ -225,7 +225,7 @@ Finally, some best practices to keep in mind as you read along:
 I wrote this book with my own resources after years of research with lots of help from awesome people.
 See <<Acknowledgments>>.
 
-Please buy a copy for yourself or someone else, especially if you'd like me to write more awesome books in the future.
+Please buy a copy for yourself or someone else, especially if you'd like me to write more books in the future.
 See <<Buy or donate>>.
 
 This book is a work in progress.
