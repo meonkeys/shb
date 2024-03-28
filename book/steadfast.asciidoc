@@ -2176,6 +2176,8 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider
 reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certificate renew..." ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=myresolver.acme
 ----
 
+If you waited and are still getting invalid cert warnings from your browser when you visit `\https://traefik.example.com`, read the Traefik log messages carefully and also see <<Encryption certificates>> for troubleshooting steps.
+
 ==== Start other services
 
 Starting a mario service is always done with `docker-compose up`.
@@ -2212,12 +2214,35 @@ SSL termination is enabled for the service when a `tls` section is defined on a 
 We also have to tell Traefik where to find certs.
 Look for lines with `myresolver` in the `docker-compose.yml` files included with mario.
 
-If you see certificate errors while trying to reach your web services, first confirm DNS queries are succeeding (externally and internally, as applicable).
-Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
-You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml` and re-provisioning.
+If you see cert warnings while trying to reach your web services, first confirm DNS queries are succeeding.
 
-Finally, try restarting ((Traefik)) with `sudo docker-compose --file /root/ops/traefik/docker-compose.yml restart`.
-That particularly seems to help the first time I stand up a new service.
+.example DNS tests
+[source,bash]
+----
+####
+# Try these commands on both the admin computer and server.
+# Replace dig (and its arguments) with your favorite DNS tool.
+# Replace traefik.example.com with your Traefik service name.
+####
+
+# Look up Traefik on default DNS server.
+# Should quickly return a LAN private IP address.
+dig traefik.example.com
+
+# Look up Traefik server name on Quad9 DNS.
+# - @9.9.9.9 forces Quad9's DNS service.
+# - +short uses terse output
+# Should return nothing--we didn't set an IP address.
+dig @9.9.9.9 +short traefik.example.com
+
+# Fetch TXT record for Traefik.
+# Contains a long unique string while Traefik is executing a
+# DNS challenge and is otherwise not set.
+dig traefik.example.com TXT
+----
+
+Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
+You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml`, re-provision, and re-start Traefik.
 
 === Tiny test service
 
