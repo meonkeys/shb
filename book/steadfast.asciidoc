@@ -2417,7 +2417,7 @@ I started a thread about Nextcloud's release cadence at https://help.nextcloud.c
 ==== Performance
 
 If you use mario to deploy Nextcloud, you'll start with a nominally performant server.
-I've included the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html).
+I've included the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html) into mario.
 
 Troubleshooting performance issues can be challenging.
 An issue about mounts (https://github.com/nextcloud/server/issues/35311) had me under the hood with MariaDB for a while.
