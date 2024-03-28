@@ -2125,7 +2125,7 @@ PLAY RECAP *********************************************************************
 mario_server               : ok=18   changed=0    unreachable=0    failed=0    skipped=9    rescued=0    ignored=0
 ----
 
-==== Stand up services
+=== Stand up services
 
 mario has prepared your server to run a handful of services.
 Docker and ((Docker Compose)) are installed.
@@ -2135,7 +2135,7 @@ Data for services are stored in directories under `/data`.
 None of our services are running yet.
 Here's how to turn them on and start using them.
 
-===== Start reverse proxy
+==== Start reverse proxy
 
 We'll stand up the ((reverse proxy)) first.
 
@@ -2174,7 +2174,7 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider
 reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certificate renew..." ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=myresolver.acme
 ----
 
-===== Start other services
+==== Start other services
 
 Starting a mario service is always done with `docker-compose up`.
 See the "`Setup`" section of a particular service for more detail.
