@@ -2125,6 +2125,8 @@ PLAY RECAP *********************************************************************
 mario_server               : ok=18   changed=0    unreachable=0    failed=0    skipped=9    rescued=0    ignored=0
 ----
 
+It takes around ten seconds for mine to complete.
+
 === Stand up services
 
 mario has prepared your server to run a handful of services.
