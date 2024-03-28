@@ -2459,7 +2459,7 @@ When in doubt: start small (default Nextcloud install), and roll these out thoug
 |Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project.
 |Holiday Calendars |easily add public holiday calendars |*Yes*. The config for this app shows up under "`Personal`" -> "`Availability`" for me, not "`Groupware`" (although the URL path is `/settings/user/groupware`).
 |Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate ((metadata)).
-|Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yeah, I want to de-Gmail someday.
+|Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yes, I do want to de-Gmail someday.
 |Memories |photos |*Yes*.
 |News |track blogs and news via rss/atom feeds |*Yes*.
 |Nextcloud Office |edit spreadsheets, slides, etc. |*Yes*. I don't love this but I need it. Maybe that's a "`No`"? Mobile apps for this are painful.
