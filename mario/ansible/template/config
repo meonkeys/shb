@@ -33,16 +33,6 @@ export DNS_RESOLVER_EMAIL='fixme.dns.email@example.com'
 # Warning: Changing this later may be difficult.
 export MARIO_DOMAIN_NAME='example.com'
 
-# FIXME - see if we can do stuff without this
-# FIXME - add a related line item to Exercises?
-# 
-# # Used for SMTP server login.
-# # If you use multi-factor auth, use an app password.
-# # See https://hub.docker.com/r/namshi/smtp
-# # and https://support.google.com/accounts/answer/185833
-export MARIO_EMAIL_SENDER='noreply@example.com'
-export MAIL_RELAY_PASSWORD='fixme_mail_relay_password'
-
 # Required to squelch a Nextcloud warning.
 # Pick your code from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements .
 # See https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/config_sample_php_parameters.html?highlight=phone#user-experience

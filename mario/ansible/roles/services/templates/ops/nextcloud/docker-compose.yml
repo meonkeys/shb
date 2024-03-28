@@ -1,7 +1,6 @@
 version: '3.5'
 
 services:
-  # FIXME - is there some way to make this service dependent on mail? (see other docker-compose file)
   app:
     image: nextcloud:stable
     environment:
@@ -9,7 +8,6 @@ services:
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: nextcloud
       MYSQL_PASSWORD: nextcloud
-      SMTP_HOST: mail
       REDIS_HOST: redis
       REDIS_HOST_PASSWORD: redispassword
       OVERWRITEPROTOCOL: https
@@ -31,7 +29,6 @@ services:
       - /data/jellyfin/media/tmp-video:/data/tmp-video:rw
     networks:
       - nextcloud
-      - mail_default
       - traefik_default
     restart: unless-stopped
   db:
@@ -56,7 +53,5 @@ services:
 networks:
   nextcloud:
     name: nextcloud
-  mail_default:
-    external: true
   traefik_default:
     external: true
