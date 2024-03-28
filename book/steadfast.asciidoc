@@ -1032,7 +1032,7 @@ Let's cover the basic tools for understanding and securing your server.
 First, consider your data.
 It helps to break it down into two common categories:
 
-===== sensitive data
+===== Sensitive data
 
 Examples: passwords, credit card numbers, government ID numbers.
 Recommendations:
@@ -1041,7 +1041,7 @@ Recommendations:
 . if ever saved on a computer, store encrypted
 . easy fix: store in a ((password manager))
 
-===== everything else
+===== Everything else
 
 (((WAN access)))
 Examples: notes, photos, documents, personal information.
