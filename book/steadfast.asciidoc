@@ -1153,19 +1153,19 @@ Always use HTTPS.
 
 === Filesystem
 
-((ZFS)) (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our OS and data.
+((ZFS)) (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our data.
 Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of inexpensive disks) are all included and used by mario.
- +
- +
-The root partition is ((ext4)) (not ZFS) for a few reasons:
+The root partition is ((ext4)) (not ZFS) so we can:
 
 * stick as closely as possible to the default ((Ubuntu)) install
 * sidestep a ((Docker)) annoyance
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
-* we have less of a need for ((backups)) of the OS
-** it doesn't/shouldn't change, or at least its changes will be managed upstream (e.g. OS package updates)
+* avoid taking ZFS snapshots of the OS, since
+** we don't need to
+** the OS will live outside our ZFS folders
+** we won't modify the OS--changes will be managed upstream (e.g. during package updates or via mario)
 
-Docker volumes will be on ZFS.
+Docker volumes (persistent container data) will be on ZFS.
 The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
 
 ==== ZFS trim
@@ -1203,10 +1203,8 @@ If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, 
 
 === Operating system
 
-mario requires a 64-bit ((Ubuntu)) server.
-Other ((Debian)) Linux flavors may work as well.
-
-((Ubuntu)) LTS (long-term support) releases are the most stable so we'll go with that.
+mario requires a 64-bit ((Ubuntu)) server with at least 2GB memory and 30GB storage.
+((Ubuntu)) LTS (long-term support) releases are the most stable so we'll use one of those.
 
 I sought to minimize customizations to the ((operating system)) from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
