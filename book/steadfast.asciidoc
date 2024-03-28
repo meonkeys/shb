@@ -1655,13 +1655,11 @@ WAN traffic is allowed to flow to the main NIC and not to the IPMI NIC.
 ==== Electricity
 
 Use a surge protector.
-
 Consider a UPS (uninterruptible power supply) if your power at home is unreliable.
 
 ==== Physical security
 
 Keep your server safe similar to other valuables in your home.
-
 At the very least, restrict physical access.
 
 === Deploy
