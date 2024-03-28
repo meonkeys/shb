@@ -93,22 +93,6 @@
 # 'datadirectory' below is an arbitrary choice, it's just something that always
 # should exist in the Nextcloud config file
 
-- name: Fix Nextcloud broken images - use https in cli url per content security policy
-  lineinfile:
-    path: /data/nextcloud/root/config/config.php
-    regexp: "\\'overwrite\\.cli\\.url\\'"
-    line: "  'overwrite.cli.url' => 'https://cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}',"
-    insertafter: 'datadirectory'
-  when: nextcloud_config.stat.exists
-
-- name: Fix Nextcloud broken images - use overwriteprotocol https per content security policy
-  lineinfile:
-    path: /data/nextcloud/root/config/config.php
-    regexp: 'overwriteprotocol'
-    line: "  'overwriteprotocol' => 'https',"
-    insertafter: 'datadirectory'
-  when: nextcloud_config.stat.exists
-
 - name: Add phone region to Nextcloud config
   lineinfile:
     path: /data/nextcloud/root/config/config.php
