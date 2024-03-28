@@ -2861,8 +2861,8 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 Assuming everything above was successful, also:
 
 . Edit `wallabag/docker-compose.yml`, removing `MYSQL_ROOT_PASSWORD` from the `app` service `environment` section.
-. Provision with mario.
-. Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
+. Re-provision with mario to copy this change on the server.
+. Re-start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
 The config change will be detected and a new `app` container will be created.
 
 ==== Maintenance notes
