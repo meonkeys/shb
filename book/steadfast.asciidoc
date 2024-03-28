@@ -2386,10 +2386,15 @@ That _really_ deletes everything.
 * Read the official docs at `/settings/help` or https://docs.nextcloud.com.
 * Add apps at `/settings/apps`.
 See <<Customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
-* Test sending an email at `/settings/admin` (Basic settings).
+* Test configuring a mail server and sending an email at `/settings/admin` (Basic settings).
 * Add users at `/settings/users`.
 * Check logs for all containers related to Netcloud with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml logs -f`.
 * Check Nextcloud internal logs at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
+* Review Security & setup warnings at `/settings/admin/overview`.
+** You can ignore ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.”.
+This warning appears to be caused by DNS issues but shouldn't break anything.
+** If you see a warning about an error in the logs and that error is **NotPermittedException** "`Could not create folder "/appdata_NNN/theming/global"`", just ignore it.
+This appears to be a harmless install-time issue.
 * Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
 ** Run it with `sudo docker exec --interactive --user www-data nextcloud_app_1 php occ`.
 * Add `/data/tmp-video` as an External storage.
