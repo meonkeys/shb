@@ -2141,7 +2141,6 @@ Here's how to turn them on and start using them.
 ==== Start reverse proxy
 
 We'll stand up the ((reverse proxy)) first.
-
 Connect to your server and start ((Traefik)) with:
 
 .start Traefik (server)
