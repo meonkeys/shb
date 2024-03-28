@@ -155,18 +155,22 @@ Executive Director, Python Software Foundation
 == Introduction
 
 (((data sovereignty)))
-Data sovereignty (full control of your data) is achievable for small communities as well as corporations.
-It can be both fun and practical, and it can support ((prosocial behavior)).
+Data sovereignty means having full control of your data.
+It brings the promise of privacy, liberty, and longevity.
+Realizing data sovereignty is both fun and practical, and supports ((prosocial behavior)).
 Self-hosting is an excellent path to data sovereignty.
 
-This book will help you efficiently learn the basics about self-hosting.
+This book will help you efficiently learn the fundamentals of self-hosting.
+You'll learn how to face its challenges while experiencing its benefits first-hand.
+These lessons are applicable at home, at work, and in your community.
 
 === Welcome
 
 I am so glad you're here!
 
+The self-hosting ecosystem is crowded and confusing, so I've taken care of a number of difficult choices with sensible, tested defaults.
 I'll help you set up a server and your first several web services.
-Bring along whatever ((sysadmin)) experience you've got, some willing users, and a desire to do well at self-hosting.
+Bring along whatever ((sysadmin)) experience you've got, some willing users, and a desire to gain self-hosting competency.
 
 The Internet is often a relentless cash-grab and attention vampire.
 Our actions are infinitely measured; _we_ are the product.
