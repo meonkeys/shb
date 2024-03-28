@@ -1328,7 +1328,7 @@ Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud))
 We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
 
-(The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik/.
+(The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik.
 Credit to Peka for the gopher logo, licensed CC-BY-3.0.
 For more information see the Traefik `README.md`)
 
@@ -2123,7 +2123,7 @@ changed: [mario_server]
 ... snip ...
 
 PLAY RECAP *********************************************************************
-mario_server               : ok=18   changed=0    unreachable=0    failed=0    skipped=9    rescued=0    ignored=0
+mario_server               : ok=21   changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
 ----
 
 It takes around ten seconds for mine to complete.
@@ -2536,7 +2536,7 @@ I don't have an iPhone so these are only Android apps.
 |DAVx5 |Calendar, Contacts, Tasks |https://davx5.com
 |Maps Geofavorites |Maps |https://github.com/penguin86/nextcloud-maps-client
 |NC Passwords |Passwords |https://gitlab.com/joleaf/nc-passwords-app
-|Nextcloud Cookbook |Cookbook |https://github.com/nextcloud/cookbook/
+|Nextcloud Cookbook |Cookbook |https://github.com/nextcloud/cookbook
 |Notes |Files, Notes, Text |https://github.com/nextcloud/notes-android
 |OpenTasks |Tasks |https://github.com/dmfs/opentasks
 |Nextcloud Talk |Talk |https://apps.nextcloud.com/apps/spreed
@@ -2743,7 +2743,7 @@ It's free for an instance with less than 100 users.
 
 I recommend the mario method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by mario.
 
-See the AIO readme at https://github.com/nextcloud/all-in-one/ for more information.
+See the AIO readme at https://github.com/nextcloud/all-in-one for more information.
 
 === Jellyfin
 
@@ -3232,7 +3232,7 @@ Exercises for individual practice and study groups.
 . Enable ((GPU)) transcoding in ((Jellyfin)).
 . Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
 . Aggregate logs.
-. Create or install a service to monitor outbound network activity from containers.
+. Monitor and/or block outbound network activity from containers.
 . Pick a ((Docker)) container that doesn't require outbound network access.
 Prevent it from making outbound connections and prove to yourself it works.
 . What if the server won't boot?
@@ -3249,12 +3249,14 @@ Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
 . Move secrets used by mario into an Ansible vault.
 . Adapt mario to use ((podman)).
 . Adapt mario to use ((Kubernetes)) (https://kubernetes.io).
-. If you have a dynamic IP address, set up a dynamic ((DNS)) update client container.
-. Stand up a mail relay container.
+. If you have a dynamic IP address, create or use an existing dynamic ((DNS)) update client container.
+. Stand up a mail relay container such as https://github.com/crazy-max/docker-msmtpd or https://github.com/namshi/docker-smtp.
+Allow all mario-managed services to send email through this relay.
 . Stand up your own ((DNS)) server.
 . Reorganize mario services into distinct Ansible roles.
 .. Upload the roles to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
-. Modify mario to always run containers as unprivileged users (https://docs.docker.com/engine/security/userns-remap/).
+. Modify mario to always run containers as unprivileged (non-root) users (https://docs.docker.com/engine/security/userns-remap/).
+. Use appropriate ownership and permissions for persistent container data.
 . Improve your backup security: allow restic/borg/etc. read-only access during a backup.
 . Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
@@ -3264,9 +3266,6 @@ Work around this and share your solution with others.
 . Roll your own ((Linux)) distro.
 . Build, configure and deploy an OPNsense ((firewall)) (https://opnsense.org).
 . Set up your own ((headscale)) tailnet for remote ((LAN)) access (https://headscale.net).
-. Leverage existing ownership and permission OS security measures.
-.. Run containers as unprivileged users.
-.. Use appropriate ownership and permissions for persistent container data.
 . Enable preview generation for ((Nextcloud)).
 .. Research first: how does default preview generation work?
 What file types are supported?
