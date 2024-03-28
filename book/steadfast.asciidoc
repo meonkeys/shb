@@ -2104,7 +2104,7 @@ Another security improvement (left as an exercise for the reader) is to move sec
 
 === Provision complete
 
-When mario is able to connect to the server and provision it successfully, you'll see output similar to this:
+When mario is able to connect to the server and provision it successfully, `provision.sh` will produce output similar to this:
 
 .output when mario is working (admin computer)
 [source,text]
