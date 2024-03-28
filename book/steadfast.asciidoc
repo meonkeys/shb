@@ -1058,9 +1058,9 @@ At home you can generally just connect directly to your server.
 When you're away or you're trying to share with someone else, you're talking ((WAN access)).
 
 (((router, network device)))
-That is: remote access to your services (hence: your ((LAN)) and your data), through your router/firewall.
-Say: port forwarding ((HTTPS)) traffic through your router/firewall to your ((Nextcloud)) server.
-Port forwarding is both risky and convenient.
+That is: remote access to your services (hence: your ((LAN)) and your data), from basically anywhere (the WAN), coming in through your router/firewall.
+One means of allowing WAN access is by port forwarding ((HTTPS)) traffic through your router/firewall to your ((Nextcloud)) server.
+Port forwarding without taking additional security measures is both risky and convenient.
 
 NOTE: Consider alternatives to port forwarding, such as using headscale to set up your own tailnet (https://headscale.net).
 
