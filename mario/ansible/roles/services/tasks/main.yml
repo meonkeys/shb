@@ -100,3 +100,11 @@
     line: "  'default_phone_region' => '{{ lookup('env', 'DEFAULT_PHONE_REGION') }}',"
     insertafter: 'datadirectory'
   when: nextcloud_config.stat.exists
+
+- name: Define arbitrary maintenance window
+  lineinfile:
+    path: /data/nextcloud/root/config/config.php
+    regexp: 'maintenance_window_start'
+    line: "  'maintenance_window_start' => 100,"
+    insertafter: 'datadirectory'
+  when: nextcloud_config.stat.exists
