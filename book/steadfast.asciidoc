@@ -1870,7 +1870,7 @@ mario installs `zfs-auto-snapshot` for you.
 
 == mario
 
-Once your server is online following <<Deploy>>, use mario to configure and stand up services.
+Once your server is online following <<Deploy>>, use mario to configure and start services.
 
 Please download the <<Source code>>.
 It'll be helpful to have this handy so you can follow along as you read.
@@ -2127,8 +2127,10 @@ mario_server               : ok=21   changed=0    unreachable=0    failed=0    s
 ----
 
 It takes around ten seconds for mine to complete.
+All tasks will be `ok` in the recap for a fully provisioned system.
+Some tasks will be `skipped` until Nextcloud is started for the first time--ignore those.
 
-=== Stand up services
+=== Start services
 
 mario has prepared your server to run a handful of services.
 Docker and ((Docker Compose)) are installed.
@@ -2397,13 +2399,16 @@ This warning appears to be caused by DNS issues but shouldn't break anything.
 This appears to be a harmless install-time issue.
 * Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
 ** Run it with `sudo docker exec --interactive --user www-data nextcloud_app_1 php occ`.
-* Add `/data/tmp-video` as an External storage.
+* Add `/data/video` as an External storage.
 Media files uploaded there will automatically appear in ((Jellyfin)).
-** Folder name: Temp Video
+First, visit `/settings/apps/featured` and install the "`External storage support`" app.
+Next, visit `/settings/admin/externalstorages` and install the "`External storage support`" app.
+** Folder name: Video
 ** External storage: Local
 ** Authentication: None
-** Configuration: `/data/tmp-video`
+** Configuration: `/data/video`
 ** set users, previews, sharing, and remaining options as desired
+* Add `/data/music` as an External storage, similar to `/data/video`.
 
 ==== Maintenance notes
 
@@ -2790,11 +2795,12 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 . Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
 . Navigate to `\https://jellyfin.example.com`
 . Follow web-based setup steps.
-
-==== Advanced setup
+Try adding two media libraries using the folders shared with Nextcloud.
+.. Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
+.. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
 
 (((Jellyfin, advanced)))
-For hardware transcoding see https://jellyfin.org/docs/general/administration/hardware-acceleration/.
+For ((GPU)) hardware transcoding see https://jellyfin.org/docs/general/administration/hardware-acceleration/.
 
 ==== Maintenance notes
 
@@ -2816,7 +2822,6 @@ Playlists are private by design.
 I'd like the ability to share them.
 
 * https://features.jellyfin.org/posts/173/share-playlists
-
 
 ===== Clips
 

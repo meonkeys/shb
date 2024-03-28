@@ -64,15 +64,17 @@
     group: "{{ jellyfin_group }}"
     state: directory
   with_items:
-    - /data/jellyfin
     - /data/jellyfin/config
-    - /data/jellyfin/home
-    - /data/jellyfin/media
-    - /data/jellyfin/media/home-video
-    - /data/jellyfin/media/movies
-    - /data/jellyfin/media/music
-    - /data/jellyfin/media/tmp-video
-    - /data/jellyfin/media/tv
+
+- name: Create Nextcloud-owned shared media directories
+  file:
+    path: "{{ item }}"
+    owner: "{{ nextcloud_user }}"
+    group: "{{ nextcloud_group }}"
+    state: directory
+  with_items:
+    - /data/shared/media/video
+    - /data/shared/media/music
 
 # for Jellyfin.
 # See https://jellyfin.org/docs/general/administration/troubleshooting.html#real-time-monitoring

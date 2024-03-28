@@ -14,11 +14,8 @@ services:
       - "traefik.http.routers.jellyfin-https.middlewares=lan-only"
       - "traefik.http.routers.jellyfin-https.tls.certresolver=myresolver"
     volumes:
-      - /data/jellyfin/media/tv:/data/tv:ro
-      - /data/jellyfin/media/movies:/data/movies:ro
-      - /data/jellyfin/media/home-video:/data/home-video:ro
-      - /data/jellyfin/media/music:/data/music:ro
-      - /data/jellyfin/media/tmp-video:/data/tmp-video:ro
+      - /data/shared/media/video:/data/video:ro
+      - /data/shared/media/music:/data/music:ro
       - /data/jellyfin/config:/config
     networks:
       - jellyfin

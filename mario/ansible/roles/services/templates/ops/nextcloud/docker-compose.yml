@@ -26,7 +26,8 @@ services:
       - "traefik.http.middlewares.nextcloud_redirect.redirectregex.replacement=/remote.php/dav/"
     volumes:
       - /data/nextcloud/root:/var/www/html:rw
-      - /data/jellyfin/media/tmp-video:/data/tmp-video:rw
+      - /data/shared/media/video:/data/video:rw
+      - /data/shared/media/music:/data/music:rw
     networks:
       - nextcloud
       - traefik_default
