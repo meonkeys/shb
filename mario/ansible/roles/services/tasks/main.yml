@@ -1,5 +1,4 @@
 ---
-# Notes on directory creation:
 # Ansible will automatically create parent directories. When we we mention each
 # parent explicitly it is to ensure owner and group are consistent.
 
@@ -27,9 +26,7 @@
     - /root/ops/wallabag
     - /root/ops/watchtower
 
-# FIXME - simplify this loop code to service names only (see repeated paths below)
-# FIXME - overwrites any changes made directly to files on the server
-- name: Process and sync docker-compose files
+- name: Process and sync service configs
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
