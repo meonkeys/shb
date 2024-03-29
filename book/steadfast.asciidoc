@@ -434,7 +434,7 @@ More on this:
 * _What is DRM?_ by the Free Software Foundation (https://defectivebydesign.org/what_is_drm_digital_restrictions_management)
 * _It's Their Content, You're Just Licensing it_ by Reggie Ugwu (https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html)
 
-Saving a copy of data someone else is hosting for you is fine.
+Saving copies of data someone else is hosting for you is fine.
 Self-hosting goes a step beyond, giving you far-reaching control of how your data are used and shared.
 You'll gain agency over authoritative copies of your files, allowing you to know and control your ((source of truth)).
 All this with reliability and flexibility within a reasonable budget.
@@ -3135,9 +3135,12 @@ For example, openmediavault (https://openmediavault.org) looks like a cool way t
 And there are countless more of these kinds of partial or full-service self-hosting solutions.
 More:
 
-* ((YunoHost)) (https://yunohost.org) - not considered, I prefer always using containers
-* ((CasaOS)) (https://casaos.io) - new, interesting, very little documentation
-* ((Runtipi)) (https://runtipi.io) - new, interesting, uses ((Docker Compose)) and ((Traefik))
+((YunoHost)) (https://yunohost.org)::
+  Not considered, I prefer always using containers.
+((CasaOS)) (https://casaos.io)::
+  New, interesting, very little documentation.
+((Runtipi)) (https://runtipi.io)::
+  New, interesting, uses ((Docker Compose)) and ((Traefik)).
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
@@ -3176,7 +3179,7 @@ After brief reviews, I find existing self-hosting solutions generally:
 * have too many apps in their app store, without good ways to compare quality, privacy, features
 * are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
 
-Still, check 'em out.
+Still, check `'em out.
 They might work better for you if you don't need the level of power and control provided by this book.
 By the time I publish, they (or some new contenders) might grow to overcome my approach.
 Please let me know what you discover.

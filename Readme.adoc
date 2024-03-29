@@ -183,6 +183,7 @@ This is the final step in the editing process. A proofreader examines the final 
 ** use your gut: index a term when it feels helpful to draw the reader's attention somewhere to read more about the term
 ** don't worry about indexing every occurence of a particular term
 ** note: indexes are only generated for PDF outputs
+* data is plural, use context for singular (e.g. "piece of data")
 
 == am55: improve htmlproofer
 
