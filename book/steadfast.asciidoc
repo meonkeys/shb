@@ -384,7 +384,7 @@ Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated 
 === Why did I write this book?
 
 I wrote this book to promote ((data sovereignty)) as a prosocial behavior.
-This is easier to achieve than ever before with self-hosting, and I wanted to share that out in book form.
+This is easier to achieve than ever before with self-hosting, and I wanted to share that in book form.
 Existing books lack a good, fast, and cheap technique for self-hosting on ((bare metal)).
 I figured one out and I think you'll love it.
 It works fine if you run your server in the ((cloud)) too, it just costs a lot more (see <<Server>>).
@@ -434,9 +434,9 @@ More on this:
 * _What is DRM?_ by the Free Software Foundation (https://defectivebydesign.org/what_is_drm_digital_restrictions_management)
 * _It's Their Content, You're Just Licensing it_ by Reggie Ugwu (https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html)
 
-Saving off data is easy.
-Self-hosting goes a step beyond that to give you far-reaching control of how your data are used and shared.
-You'll gain agency over your official files, knowing and controlling your ((source of truth)).
+Saving a copy of data someone else is hosting for you is fine.
+Self-hosting goes a step beyond, giving you far-reaching control of how your data are used and shared.
+You'll gain agency over authoritative copies of your files, allowing you to know and control your ((source of truth)).
 All this with reliability and flexibility within a reasonable budget.
 
 Self-hosting means providing computing services by and for individuals, families, and hobbyists in ((SOHO)) (small office / home office) environments.
