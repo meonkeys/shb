@@ -3,30 +3,23 @@ version: '3.5'
 services:
   app:
     image: wallabag/wallabag
+    # wallabag's root/entrypoint.sh drops privileges
+    user: root:root
     depends_on:
-      - db
       - redis
     environment:
       # detailed documentation at https://github.com/wallabag/docker#environment-variables
       # remove MYSQL_ROOT_PASSWORD after first startup, or you'll see this in the logs:
       # "WARN: MySQL database is already configured. Remove the environment variable with root password."
-      MYSQL_ROOT_PASSWORD: wallaroot
-      SYMFONY__ENV__DATABASE_DRIVER: pdo_mysql
-      SYMFONY__ENV__DATABASE_HOST: db
-      SYMFONY__ENV__DATABASE_PORT: 3306
-      SYMFONY__ENV__DATABASE_NAME: wallabag
-      SYMFONY__ENV__DATABASE_USER: wallabag
-      SYMFONY__ENV__DATABASE_PASSWORD: wallapass
-      SYMFONY__ENV__DATABASE_CHARSET: utf8mb4
       SYMFONY__ENV__REDIS_HOST: redis
       SYMFONY__ENV__REDIS_PASSWORD: redispassword
       SYMFONY__ENV__TWOFACTOR_AUTH: 'true'
-      # disable after you register yourself
       SYMFONY__ENV__FOSUSER_REGISTRATION: 'true'
       SYMFONY__ENV__FOSUSER_CONFIRMATION: 'true'
       SYMFONY__ENV__DOMAIN_NAME: "https://wallabag.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}"
+      SYMFONY__ENV__SERVER_NAME: "{{ lookup('env', 'MARIO_DOMAIN_NAME') }}"
     volumes:
-      - /data/wallabag/data:/var/www/wallabag/data
+      - /data/wallabag/main:/var/www/wallabag/data
       - /data/wallabag/images:/var/www/wallabag/web/assets/images
     labels:
       - "traefik.enable=true"
@@ -38,22 +31,9 @@ services:
       - wallabag
       - traefik_default
     restart: unless-stopped
-  db:
-    image: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: wallaroot
-      MYSQL_DATABASE: wallabag
-      MYSQL_USER: wallabag
-      MYSQL_PASSWORD: wallapass
-      # see https://github.com/wallabag/wallabag/issues/6572#issuecomment-1641025934
-      MARIADB_AUTO_UPGRADE: yesplease
-    networks:
-      - wallabag
-    restart: unless-stopped
-    volumes:
-      - /data/wallabag/db:/var/lib/mysql
   redis:
     image: redis:alpine
+    user: {{ wallabag_user }}:{{ wallabag_group }}
     restart: unless-stopped
     command: redis-server --requirepass redispassword
     networks:

@@ -14,9 +14,6 @@
     - /data/traefik
     - /data/traefik/etc
     - /data/wallabag
-    - /data/wallabag/db
-    - /data/wallabag/home
-    - /data/wallabag/images
     - /root/ops
     - /root/ops/jellyfin
     - /root/ops/nextcloud
@@ -61,7 +58,27 @@
     group: "{{ jellyfin_group }}"
     state: directory
   with_items:
+    - /data/jellyfin/home
     - /data/jellyfin/config
+
+- name: Create Wallabag-owned directories
+  file:
+    path: "{{ item }}"
+    owner: "{{ wallabag_user }}"
+    group: "{{ wallabag_group }}"
+    state: directory
+  with_items:
+    - /data/wallabag/images
+    - /data/wallabag/main
+    - /data/wallabag/main/db
+
+- name: Create Wallabag db
+  copy:
+    content: ""
+    dest: /data/wallabag/main/db/wallabag.sqlite
+    force: false
+    owner: "{{ wallabag_user }}"
+    group: "{{ wallabag_group }}"
 
 - name: Create Nextcloud-owned shared media directories
   file:
