@@ -1,41 +1,56 @@
 title: 📑 Content
 category: announcement
 date: 2024-01-12
+modified: 2024-03-30
 
 
 Here is some sample content.
 
-
 ## Table of contents
 
-1.  Introduction
-2.  Metadata - book version info, copyright, typographic conventions
-3.  Background - reasoning, inspiration, motivation
-4.  Prerequisites - expected reader skills and experience, mindset, discipline
-5.  Plan - budget, resources, schedule, transition, user support
-6.  System design - service stack, security, operating system
-7.  Implementation - prepare hardware, deploy, maintenance
-8.  mario - custom open source server provisioning software included with book
-9.  Services - deep dive into Nextcloud and a few other self-hosted services
-10. What\'s next? - ideas for future learning, homelab projects, improvements
-11. More Resources
-12. Contributions - how readers can contribute to the book, code, and translations
-13. Discussion topics
-14. Exercises
-15. More about FOSS - further reasoning, inspiration, motivation for the *Steadfast* method
-16. Acknowledgments
-17. Glossary
-18. End
+Here are the chapters along with brief summaries.
 
-## Preview of Chapter 4: Prerequisites
+1. **Introduction**
+: Welcome, copyright, prerequisites, style.
 
-This book assumes some prerequisite skills. You must be able to:
+1. **Background**
+: Reasoning, inspiration, motivation, author info, deeper meaning.
 
-* configure your router and LAN
-* install Linux on a server
-* execute programs using a command line
-* connect to a server with SSH
-* edit text files and run commands on a server
-* transfer files to and from a server
+1. **Your journey**
+: Why you should or should not self-host.
 
-These are not difficult. You can quickly learn them online.
+1. **Practical examples**
+: Examples validating self-hosting.
+
+1. **Plan**
+: Budget, resources, schedule, transition, user support.
+
+1. **System design**
+: Service stack, security, operating system.
+
+1. **Implementation**
+: How to prepare hardware, deploy, perform maintenance.
+
+1. **mario**
+: How to provision server, prepare it for running services.
+
+1. **Services**
+: How to run Nextcloud and a few other self-hosted services.
+
+1. **What\'s next?**
+: Ideas for future learning, homelab projects, improvements.
+
+1. **More Resources**
+: Source code, contact info, support, alternatives to this book.
+
+1. **Contributions**
+: How readers can contribute to the book, code, and translations.
+
+1. **Discussion topics**
+: Conversation starters for a group of readers.
+
+1. **Exercises**
+: Applied usage ideas for a group of readers.
+
+1. **More about FOSS**
+: Further reasoning, inspiration, motivation for the *Steadfast* method.
