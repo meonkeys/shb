@@ -29,10 +29,10 @@ Here are the chapters along with brief summaries.
 : Service stack, security, operating system.
 
 1. **Implementation**
-: How to prepare hardware, deploy, perform maintenance.
+: How to prepare your server and perform maintenance.
 
 1. **mario**
-: How to provision server, prepare it for running services.
+: How to provision your server (prepare it for running services).
 
 1. **Services**
 : How to run Nextcloud and a few other self-hosted services.
@@ -44,7 +44,7 @@ Here are the chapters along with brief summaries.
 : Source code, contact info, support, alternatives to this book.
 
 1. **Contributions**
-: How readers can contribute to the book, code, and translations.
+: How readers can contribute to the book, its code, and translations.
 
 1. **Discussion topics**
 : Conversation starters for a group of readers.
