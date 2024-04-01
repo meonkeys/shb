@@ -515,7 +515,7 @@ Look elsewhere for:
 * running your own container registry
 * 100% offline / off-the-grid self-hosting
 
-There are some topics like these above I'll skip or cover only briefly.
+There are some topics like these I'll skip or cover only briefly.
 Any one of these topics is an entire industry, another piece of hardware, a setting on your home router, a potential career, none or all of the above, and otherwise well worth further consideration.
 You can and should be aware of them.
 If you feel I've completely omitted proper detail about something critically relevant to my method of self-hosting, please let me know.
@@ -1339,7 +1339,7 @@ For more information see the Traefik `README.md`)
 image::traefik-architecture.png[]
 
 (((router, Traefik)))
-In the mario source code (or the snippets below), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
+In the mario source code (or the snippets appearing later), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
 
 * the `websecure` ((entrypoint)), where we accept HTTPS traffic on port 443
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
@@ -1391,7 +1391,7 @@ It takes care of authentication and authorization and all that good stuff.
 I'm interested in Authentik (https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
 I want to see it running well for a good while before adding it to mario.
 
-Some of the other self-hosting solutions mentioned above in <<What is this book _not_?>> do include FOSS central identity management.
+Some of the other self-hosting solutions mentioned in <<What is this book _not_?>> do include FOSS central identity management.
 
 == Implementation
 
@@ -2384,7 +2384,7 @@ Some tips:
 ** Destroy all persistent data with `sudo rm -rf /data/nextcloud`.
 That _really_ deletes everything.
 ** Re-provision with mario (run `provision.sh` again).
-** Follow the setup steps above.
+** Follow the setup steps again.
 * Read the official docs at `/settings/help` or https://docs.nextcloud.com.
 * Add apps at `/settings/apps`.
 See <<Customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
@@ -2590,7 +2590,7 @@ Handy for remembering where you parked your bike, for example.
 
 Notes looks best configured in Grid View.
 
-Talk... despite my advice above, I find myself using Talk anyway.
+Talk... despite my own advice, I find myself using Talk anyway.
 I like having my own chat server, I guess.
 I am listing it here because I do actually use it, and to complain that I can't read messages offline (https://github.com/nextcloud/talk-android/issues/217).
 It is also under heavy development and improving lots with every release.
