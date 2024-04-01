@@ -337,7 +337,7 @@ If the location is omitted, the snippet may occur on the server or elsewhere and
 
 == Background
 
-You might be thinking: "`this looks like a lot of background!`"
+You might be thinking, "`this looks like a lot of background!`"
 And you'd be right.
 
 I go deep into background here because of something I found while giving talks about self-hosting: people know how to learn and discern, they wish for meaningful motivation to commit to learning.
@@ -375,30 +375,30 @@ Existing books lack a good, fast, and cheap technique for self-hosting on ((bare
 I figured one out and I think you'll love it.
 It works fine if you run your server in the ((cloud)) too, it just costs a lot more (see <<Server>>).
 
-Also: learning is fun.
+Also, learning is fun.
 I learn when I write.
 While learning how my phone works, it struck me how important it is to understand _how "`the cloud`" works_, since the modern phone experience relies heavily on services and data in public clouds.
 In trying to make my phone "`my own`" (do what I want to help me live my best life), I was inspired to host my own data in my own ((cloud)).
 
-Also: most tech folks I know self-host _something_, likely something I've never heard of.
+Also, most tech folks I know self-host _something_, likely something I've never heard of.
 There's always another self-hosted service to try out, learn about, improve, and share.
 
-Also: maybe I can make a buck or two doing this, or at the next thing I do.
+Also, maybe I can make a buck or two doing this, or at the next thing I do.
 Maybe you can hire me to help you out.
 
-Also: I wanted to write the book I wish _I_ had when I started self-hosting.
+Also, I wanted to write the book I wish _I_ had when I started self-hosting.
 
-Also: so there's a _book_ about this.
+Also, so there's a _book_ about this.
 There are countless videos, articles, and chunks of code online for doing everything in this book and more.
 Many are excellent.
 This book is your to keep, hold, and refer back to as you try, test, and learn.
 
-Also: there's a stark gap between useful individual computers and useful ((cloud)) services.
+Also, there's a stark gap between useful individual computers and useful ((cloud)) services.
 It's easy to pay for cloud, but the true price is obscured: surveillance, lock-in, inflexibility.
 
-Also: I can picture a future where owning a truly privacy-respecting home data appliance becomes as commonplace as owning a refrigerator.
+Also, I can picture a future where owning a truly privacy-respecting home data appliance becomes as commonplace as owning a refrigerator.
 Creating this appliance has been attempted many times and it'll be attempted again.
-Until it succeeds and sticks: self-hosting--setting up a server and services for yourself and others--is a great way to go.
+Until it succeeds and sticks, self-hosting--setting up a server and services for yourself and others--is a great way to go.
 
 === What's with the title?
 
@@ -549,7 +549,7 @@ This helped me focus on the content while keeping the book simple enough to self
 Still with the caveman.
 Enough already.
 I wrote this in 2023.
-And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
+And, listen, even blessed cave-dwellers like us should give self-hosting a shot.
 We got this!
 
 ==== Where?
@@ -795,7 +795,7 @@ I was pleasantly surprised by ((container))s following my varied earlier experie
 VMs are simple at first because they behave much like physical hardware.
 Installing Linux into a VM is as easy as installing it onto ((bare metal)) (sometimes even easier).
 Then you can set up one or more services in the VM.
-The real rub here is with maintenance: maintaining a VM can be as complex as maintaining a bare metal server.
+The real rub here is with maintenance; maintaining a VM can be as complex as maintaining a bare metal server.
 
 Containers take a different approach and simulate much less of a bare metal server.
 They are fast and small compared with VMs, allowing higher non-conflicting service density.
@@ -1158,7 +1158,7 @@ On my ((Ubuntu)) desktop this happens once a month when the scheduled "`trim`" c
 Trimming is a process of reclaiming formerly used space on SSDs.
 This is not an issue with ((HDD))s.
 
-On my desktop (again: not my server--I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
+On my desktop (again, not my server--I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
 
 The trim job causes high values in `/proc/pressure/io` and I can see `z_trim_*` kernel threads doing heavy I/O in the process table (hint: use `top` or `htop` to view the process table).
 
@@ -2218,7 +2218,7 @@ dig @9.9.9.9 +short traefik.example.com
 dig traefik.example.com TXT
 ----
 
-Also: examine Traefik logs as indicated in <<Start reverse proxy>>.
+Also, examine Traefik logs as indicated in <<Start reverse proxy>>.
 You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml`, re-provision, and re-start Traefik.
 
 === Tiny test service
@@ -2442,7 +2442,7 @@ These _Nextcloud apps_ are installed on the server, expanding the functionality 
 Here are some Nextcloud apps I've tried, what they do, and a ruling on whether they're worth looking into.
 Read "`Worth your time?`" as "`Adam maybe tried this app and has shared his opinion whether others will find this particular app worth the effort to learn and maintain, based on his own experiences projected onto our possibly different use cases.`"
 Grain of salt, in other words.
-When in doubt: start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
+When in doubt, start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
 
 [cols="1,1,2"]
 |===
@@ -2708,7 +2708,7 @@ I have grown to expect one particular erroneous "`event updated`" notifications,
 
 On one shared calendar (with many clients) I often get notifications that so-and-so "`updated event XYZ in calendar ABC`", but the only actual thing that occurred is that one of the clients just sync'd (or perhaps made some innocuous change to an event) and Nextcloud thinks it was a meaningful update.
 At least, I think that's what's happening... some changes (like changing the event's date) do show up with the old and new values made explicit.
-As an aside: I do like this "`explicit diff`" behavior showing the exact changes made to an event's Title, Time, Location, or Description.
+As an aside, I do like this "`explicit diff`" behavior showing the exact changes made to an event's Title, Time, Location, or Description.
 
 * https://github.com/nextcloud/calendar/issues/5879
 
