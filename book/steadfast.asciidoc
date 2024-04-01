@@ -2126,7 +2126,7 @@ Connect to your server and start ((Traefik)) with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
-If that worked, wait a minute or two and visit https://traefik.example.com in a web browser.
+If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 While you are waiting, tail the logs with:
 
 .tail Traefik logs (server)
@@ -2153,7 +2153,7 @@ reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider
 reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certificate renew..." ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=myresolver.acme
 ----
 
-If you waited and are still getting invalid cert warnings from your browser when you visit https://traefik.example.com, read the Traefik log messages carefully and also see <<Encryption certificates>> for troubleshooting steps.
+If you waited and are still getting invalid cert warnings from your browser when you visit `\https://traefik.example.com`, read the Traefik log messages carefully and also see <<Encryption certificates>> for troubleshooting steps.
 
 ==== Start other services
 
@@ -2345,7 +2345,7 @@ In brief:
 
 . Provision with mario.
 . Start Nextcloud containers with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`.
-. Navigate to https://cloud.example.com
+. Navigate to `\https://cloud.example.com`
 . Follow web-based setup page to create an admin account.
 . Skip installing recommended apps.
 
@@ -2769,7 +2769,7 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 
 . Provision with mario.
 . Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
-. Navigate to https://jellyfin.example.com
+. Navigate to `\https://jellyfin.example.com`
 . Follow web-based setup steps.
 Try adding two media libraries using the folders shared with Nextcloud.
 .. Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
@@ -2830,7 +2830,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 
 . Provision with mario.
 . Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
-. Navigate to https://wallabag.example.com
+. Navigate to `\https://wallabag.example.com`
 . Log in as `wallabag` user with password `wallabag`.
 . Update password for `wallabag` user.
 
@@ -2922,7 +2922,7 @@ Scratch doesn't require any persistent data, setup, nor auth.
 
 . Provision with mario.
 . Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
-. Navigate to https://scratch.example.com
+. Navigate to `\https://scratch.example.com`
 
 ==== Maintenance notes
 
