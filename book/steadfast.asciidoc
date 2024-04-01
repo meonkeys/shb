@@ -2593,6 +2593,7 @@ Notes looks best configured in Grid View.
 Talk... despite my advice above, I find myself using Talk anyway.
 I like having my own chat server, I guess.
 I am listing it here because I do actually use it, and to complain that I can't read messages offline (https://github.com/nextcloud/talk-android/issues/217).
+It is also under heavy development and improving lots with every release.
 
 These are just a few examples.
 Since you've got all your data and Nextcloud always uses open formats, you can ride the wave of improvements and enjoy what works best.
