@@ -7,6 +7,10 @@ page:
   numbering:
     start-at: after-toc
 
+# automatic hypenation
+base:
+  hyphens: true
+
 # when to start rendering header and footer
 running-content:
   start-at: 2
