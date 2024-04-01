@@ -760,9 +760,8 @@ I knew where I was when I took the photos (within 10 miles or so) and my photos 
 I couldn't remember when they were taken.
 
 My photos are just a bunch of JPEG files.
-I examined them with a small program I wrote.
+I examined them with a small Python program I wrote.
 I looked for any photos taken within 10 miles of the point I knew.
-I used Python, although any programming language would do the job.
 The key was being able to access the data directly and quickly.
 
 This is just one (likely outdated) example.
