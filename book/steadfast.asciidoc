@@ -652,7 +652,7 @@ So many reasons!
 ** migrate to something else easily if and when you need to (for example, using a newer/better photo server once one becomes available)
 ** it's really the _data_ that must be safeguarded, the frontends to those data (file viewers, editors, etc) will change when _you_ choose
 * Democratize computing
-** self-hosted software (especially ((FOSS))) enables data and computational autonomy for more people
+** self-hosted software (especially ((FOSS))) enables data and computational autonomy
 * Conserve electricity
 ** backend ((cloud)) power per device drops dramatically with a few users
 ** save even more power the more users you add
@@ -671,7 +671,6 @@ So many reasons!
 *** changes in support costs
 *** changes in service offerings
 ** near-zero incremental cost of adding users and services
-** when you own your hardware outright, you have zero per-usage fees (compute, data transfer)
 * Speed / Save time
 ** a nearby server can have much better response times, assuming reasonable hardware and well-behaved services
 ** nearby data ("`data locality`") means you don't need round-trips to someone else's data center to run experiments
@@ -684,7 +683,7 @@ Sometimes a service stops working with another service.
 This happens less often with ((FOSS)) because anyone can simply fork a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
-** with a personal ((cloud)) you can safely and confidently keep GPS latitude & longitude in your photo ((metadata))
+** with a personal ((cloud)) you can safely and confidently keep GPS latitude and longitude in your photo ((metadata))
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
 ** remove yourself from the equation of user analysis data--when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you "`own`", every time you rewind, fast-forward, pause... but do they need to? why?
@@ -736,7 +735,6 @@ For the record, our chickens are _squeaky clean_.
 image::squeaky-clean-chicken.png[align="center",scaledwidth=80%]
 
 Once I stood up my personal cloud I felt freedom and ease when posting and hosting these videos.
-
 I no longer needed to complete any YouTube paperwork to be able to keep an eye on my chickens.
 I can safely ignore their audit and its erroneous policy violation claim.
 
@@ -747,7 +745,7 @@ image::YT-audit.png[align="center",scaledwidth=80%]
 I also no longer need to work with YouTube's ((API)) (application programming interface), including registering an API client and completing periodic audits.
 (((Nextcloud)))
 After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance.
-Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photos & videos anyway.
+Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photos and videos anyway.
 
 With my own cloud I'm also able to tune quotas and rate limits as desired.
 Full speed ahead!
@@ -778,7 +776,7 @@ Just make sure you've got your data!
 Should you choose to proceed: godspeed, traveler.
 This is seriously fun stuff.
 
-You may be surprised by how fast & easy some things are with self-hosting.
+You may be surprised by how fast and easy some things are with self-hosting.
 I'd love to know how this goes for you.
 
 You may also be surprised by how time-consuming and difficult some things are.
@@ -2392,7 +2390,7 @@ See <<Customization>> for tips on how to roll out apps thoughtfully and which on
 * Add users at `/settings/users`.
 * Check logs for all containers related to Netcloud with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml logs -f`.
 * Check Nextcloud internal logs at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
-* Review Security & setup warnings at `/settings/admin/overview`.
+* Review "`Security & setup warnings`" at `/settings/admin/overview`.
 ** You can ignore ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.”.
 This warning appears to be caused by DNS issues but shouldn't break anything.
 ** If you see a warning about an error in the logs and that error is **NotPermittedException** "`Could not create folder "/appdata_NNN/theming/global"`", just ignore it.
