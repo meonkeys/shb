@@ -889,7 +889,7 @@ Make _your_ plan.
 Maintain and improve your plan along with your server.
 Share the plan with other admins.
 
-Yep: other admins.
+Yes, other admins.
 You need someone to cover for you when you are not available, or a crystal clear expectation that when you die, the server dies too.
 
 === Budget
@@ -954,27 +954,20 @@ Include this in your plan and seek buy-in since migration cost is a reality for 
 
 To learn more about how to do this well, study _change management_.
 
-=== User support
+=== Sysadmin mindset
 
-Let's first get in the right mindset to do the best we can by our users.
+It is important to establish the right mindset users.
+The server exists for the users.
 
-Make sure the cloud works well for them.
+Make sure your self-hosted services work well for them.
 Solicit their input often and take it seriously.
 Carefully tease out _wants_ vs. _needs_.
-
 Translate the word "`users`" as necessary.
 Perhaps: "`those most dear to you, those you care about most above all others, those who give you meaning and purpose.`"
 
 Yeah, that's way over the top.
-You get the point: we must care about their experience or their experience will be poor.
-
-Know your users.
-For example: they might not be activists, or might not be activists for your cause.
-Be thoughtful.
-
-Also: know thyself.
-I'll go first: I recognize that using the word FOSS is a signal to staunch pragmatists that I'm on the activist spectrum.
-I solicit feedback from others to balance my idealism with pragmatism.
+You get the point: we must care about the user experience or it will be frustrating.
+Ideally you already know your users in real life, so just continue to practice being thoughtful.
 
 == System design
 
