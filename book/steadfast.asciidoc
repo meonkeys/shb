@@ -160,9 +160,9 @@ It brings the promise of privacy, liberty, and longevity.
 Realizing data sovereignty is both fun and practical, and supports ((prosocial behavior)).
 Self-hosting is an excellent path to data sovereignty.
 
-This book will help you efficiently learn the fundamentals of self-hosting.
-You'll learn how to face its challenges while experiencing its benefits first-hand.
-These lessons are applicable at home, at work, and in your community.
+This book will help you efficiently learn and practice self-hosting.
+You'll gain confidence facing its challenges while enjoying its benefits first-hand.
+The skills you will build are applicable at home, at work, and in your community.
 
 === Welcome
 
