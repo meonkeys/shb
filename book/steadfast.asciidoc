@@ -195,14 +195,7 @@ Experienced self-hosters can compare my choices to theirs.
 ==== Prerequisites
 
 (((router, network device)))
-To get the most out of this book, the sysadmin experience you bring along should include the ability to:
-
-* configure your router and ((LAN)) (local area network)
-* install Linux on a computer (hereafter referred to as your _server_)
-* execute programs using a command line
-* connect to your server with SSH (secure shell)
-* edit text files and run commands on your server
-* transfer files to and from your server
+To get the most out of this book, the sysadmin experience you bring along should include the ability to configure your router and ((LAN)) (local area network), install Linux on a computer (hereafter referred to as your _server_), connect to your server with SSH (secure shell), edit text files and run commands on your server, and transfer files to and from your server.
 
 If you're unfamiliar with any of these concepts, a quick trip to your favorite search engine or local user group should yield enough pointers to get started.
 
@@ -211,14 +204,11 @@ Read more about the ins and outs of bare metal in <<Prepare hardware>>.
 
 Finally, some best practices to keep in mind as you read along:
 
-* document everything you do
-** if only for your future self!
-* recruit and train help
-** made much easier since you've followed the previous bullet and documented everything
-* focus, take breaks, be patient, take care of your body
-* ask for help
-* ask for feedback
-* listen to users, gather data, adapt accordingly
+Document everything you do, if only for your future self.
+Recruit and train help, leveraging said documentation to share knowledge.
+Focus, take breaks, be patient, and take care of your body.
+Ask for help and ask for feedback.
+Listen to users, gather data, and adapt accordingly.
 
 === Supporting the author
 
