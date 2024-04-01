@@ -6,6 +6,7 @@ page:
   size: [6in, 9in]
   numbering:
     start-at: after-toc
+  margin-outer: 11mm
 
 # when to start rendering header and footer
 running-content:
