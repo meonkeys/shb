@@ -558,7 +558,7 @@ See <<More resources>> and <<How to build this book>>.
 I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
 This helped me focus on the content while keeping the book simple enough to self-publish.
 
-=== When write book?
+==== When write book?
 
 Still with the caveman.
 Enough already.
@@ -566,11 +566,11 @@ I wrote this in 2023.
 And, listen: even blessed cave-dwellers like us should give self-hosting a shot.
 We got this!
 
-=== Where?
+==== Where?
 
 Seattle.
 
-=== Hey now.
+==== Hey now.
 
 Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
 
