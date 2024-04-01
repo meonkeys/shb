@@ -272,15 +272,11 @@ For example, other rights such as publicity, privacy, or moral rights may limit 
 ==== Copy this book's code, too
 
 I've got two things for you to fork (copy, modify, and share).
-
-First: the book itself, along with code to generate beautifully typeset versions.
-See <<How to build this book>>.
-
-Second: a learning tool called mario. mario is a small set of scripts and configuration files to help you set up and maintain your own server.
-It is mainly a wrapper around Ansible (https://ansible.com).
+First, the book itself, along with code to generate beautifully typeset versions (see <<How to build this book>>).
+Second, a learning tool called mario. mario is a small set of scripts and configuration files to help you set up and maintain your own server.
+It is mainly a wrapper around the well-established Ansible system provisioner (https://ansible.com).
 
 The license for all original source code related to this book is the GNU AGPL (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
 A copy of the AGPL is included in `mario/COPYING`.
 
 === Disclaimer
