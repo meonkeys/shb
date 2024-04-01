@@ -3169,7 +3169,7 @@ After brief reviews, I find existing self-hosting solutions generally:
 * do too much: try to solve many problems without sufficient inertia/resources to maintain it all
 * don't do enough: just another Linux distro with an added layer to discover and install apps
 * make opinionated tech choices I don't agree with
-* have a limited list of apps in their app stores and often exclude the ones I want
+* have a limited list of apps in their app stores and exclude the ones I want
 * have too many apps in their app store, without good ways to compare quality, privacy, features
 * are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
 
@@ -3646,8 +3646,6 @@ NAS::
   Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<Server>>.
 NIC::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
-Nix::
-  A FOSS package manager advertising reproducible builds.
 object storage::
   Relatively unlimited, typically remote cloud storage option. Actual data are abstracted: backups and structured access require special services, indexes, and software.
 OCR::
@@ -3675,7 +3673,7 @@ provision::
 RAID::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
 reproducible::
-  Can be done multiple times with the same result. Often used in the context of building software. If two developers each build an image from a `Dockerfile`, the _should_ both produce the same image. In practice, this rarely happens. Truly reproducible builds require a great deal of work. See: Nix.
+  Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from a `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
 reverse proxy::
   Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL/TLS termination (https://en.wikipedia.org/wiki/TLS_termination_proxy) and for running several self-hosted web services with different domain names with a single IP address.
 router::
