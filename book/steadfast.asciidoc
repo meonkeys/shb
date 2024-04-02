@@ -497,7 +497,9 @@ Look elsewhere for:
 * clustering
 * single sign-on
 * advanced monitoring and metrics centralization
+* regulatory compliance
 * intrusion/threat detection/prevention
+* in-depth security hardening
 * running your own container registry
 * 100% offline / off-the-grid self-hosting
 
