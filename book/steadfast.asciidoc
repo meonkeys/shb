@@ -316,7 +316,7 @@ When you do, include references or other supporting material.
 
 (((style conventions)))
 (((typography)))
-Here's how certain types of content will appear in the text:
+Text formatting:
 
 [cols="2,3"]
 |===
@@ -331,10 +331,18 @@ Replace `.example.com` with your actual domain name.
 |<<System design>> |Cross-reference to another section or chapter.
 |===
 
+Admonitions:
+
 NOTE: Admonitions like this draw your attention to auxiliary information.
 
-Code snippets will indicate whether they occur on the server or elsewhere.
-For example, here's a command intended to be run on the server (from <<Monitoring>>):
+Sidebars:
+
+****
+Stand-alone or supplemental content may be visually separated using a sidebar like this one.
+Sidebars may or may not have titles.
+****
+
+Code snippets:
 
 .check PSI (server)
 [source,bash]
@@ -342,6 +350,8 @@ For example, here's a command intended to be run on the server (from <<Monitorin
 tail /proc/pressure/*
 ----
 
+Snippets will indicate whether they occur on the server or elsewhere.
+The previous command (from <<Monitoring>>) is intended to be run on the server.
 If the location is omitted, the snippet may occur on the server or elsewhere and will be explained in context.
 
 == Background
