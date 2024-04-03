@@ -1067,13 +1067,13 @@ This guide is not sufficient for your threat model.
 Let's build a simple example threat model for the "`everything else`" data class.
 Consider:
 
-* *Assets*
-** Data you are trying to protect.
-* *Actors/Threats/Vectors*
-** People and bots acting badly, and their means of attack.
+Assets::
+  Data you are trying to protect.
+Actors/Threats/Vectors::
+  People and bots acting badly, and their means of attack.
 Includes mistakes and bugs.
-* *Mitigations*
-** Steps taken to reduce chances attacks succeed.
+Mitigations::
+  Steps taken to reduce chances attacks succeed.
 
 Put it all together and you get my 100% marketing-friendly threat model acronym *A.A/T/V.M.* (all punctuation is vocalized).
 Really just rolls off the tongue!
@@ -1082,16 +1082,16 @@ Really just rolls off the tongue!
 
 Let's run ((WAN access)) through our ((threat model)).
 
-* *Assets*
-** Personal information stored on out-of-date ((Nextcloud)) server.
-* *Actors/Threats/Vectors*
-** Bot scrapes websites and finds URL to Nextcloud server on a public mailing list archive.
+Assets::
+  Personal information stored on out-of-date ((Nextcloud)) server.
+Actors/Threats/Vectors::
+  Bot scrapes websites and finds URL to Nextcloud server on a public mailing list archive.
 Bot automatically attempts exploit against known vulnerability in Nextcloud server.
 Exploit succeeds, bot owner gains access to compute resources and personal information.
-* *Mitigations*
-** Keep Nextcloud server up to date.
-** Secure ((WAN)) boundary: monitor traffic logs, employ an ((IPS)) (intrusion prevention system), only cross into ((LAN)) using a ((VPN)) (virtual private network).
-** Close WAN boundary: disallow all inbound WAN access.
+Mitigations::
+  Keep Nextcloud server up to date.
+Secure ((WAN)) boundary: monitor traffic logs, employ an ((IPS)) (intrusion prevention system), only cross into ((LAN)) using a ((VPN)) (virtual private network).
+Close WAN boundary: disallow all inbound WAN access.
 
 (((Nextcloud, security)))
 This hopefully makes obvious the risks of allowing WAN access and how we might do so safely.
