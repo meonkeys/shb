@@ -1628,7 +1628,7 @@ Consider a UPS (uninterruptible power supply) if your power at home is unreliabl
 
 ==== Physical security
 
-Keep your server safe similar to other valuables in your home.
+Keep your server safe, similar to other valuables in your home.
 At the very least, restrict physical access.
 
 === Deploy
