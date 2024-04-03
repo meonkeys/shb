@@ -1147,7 +1147,7 @@ Always use HTTPS.
 * Learn about compartmentalization and the principle of least privilege.
 ****
 
-==== Further reading
+Further reading:
 
 _Personal Cybersecurity: How to Avoid and Recover from Cybercrime_ by Marvin Waschke::
   https://oreilly.com/library/view/personal-cybersecurity-how/9781484224304/
@@ -1159,8 +1159,9 @@ _How I learned to stop worrying (mostly) and love my threat model_ by Sean Galla
 === Filesystem
 
 ((ZFS)) (originally: Zettabyte File System) is a one-stop shop for efficiently and safely making hard drives useful for storing data.
-Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of inexpensive disks) are all included and used by mario.
-The root partition is ((ext4)) (not ZFS) so we can:
+It provides encryption, lightweight snapshots and ((RAID)) (redundant array of inexpensive disks).
+You may optionally use ZFS for storage on your server following <<ZFS setup>>.
+I recommend using an ((ext4)) root partition (not ZFS) to:
 
 * stick as closely as possible to the default ((Ubuntu)) install
 * sidestep a ((Docker)) annoyance
@@ -1181,7 +1182,7 @@ _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter::
 _ZFS (Debian wiki page)_ by various authors::
   https://wiki.debian.org/ZFS
 
-If you choose to dig deeper with ((ZFS)), read up on fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
+Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
 
 === Operating system
 
@@ -1658,7 +1659,7 @@ See <<Full-disk encryption>>.
 .. Do not install `nextcloud` or `Docker`.
 Let mario install these later.
 . Optional: after installing Ubuntu, add two ((HDD))s and format them with ((ZFS)).
-See <<ZFS>>.
+See <<ZFS setup>>.
 . Download mario onto your ((admin computer)) (a separate computer from your server). See <<Source code>>.
 . Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
 
@@ -1672,7 +1673,7 @@ There's also the reasonable argument that full-disk or "`at-rest`" encryption of
 
 If you decide you want full-disk encryption, choose it during the OS install. <<Digital security>> is helpful for deciding whether or not to encrypt.
 
-==== ZFS
+==== ZFS setup
 
 (((ZFS, setup)))
 The OS takes care of itself pretty well.
@@ -1680,11 +1681,11 @@ For more robust data storage, we can a couple of ((HDD))s and manage them with (
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
-The guide below walks through setup of a simple pool of two mirrored drives.
+The guide below walks through creating a simple pool of two mirrored drives, visible at `/data`.
 This is a reasonable starting point, providing increased fault tolerance and better read performance than a single drive.
 
-On the server, run these commands as root, adjusting as necessary.
-For example, these assume you've added two drives and they were assigned device names `/dev/sda` and `/dev/sdb`.
+On the server, run these commands as root, adjusting device names as necessary.
+For example, these assume you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`.
 Use `lsblk` to figure out your device names.
 
 .ZFS setup (server)
@@ -1732,7 +1733,9 @@ zpool iostat
 === Server maintenance
 
 (((router, network device)))
-I use short monthly and yearly ((maintenance)) checklists. For example:
+I use short monthly and yearly ((maintenance)) checklists.
+I update my checklists about as often as I use them.
+Here are examples you might use as starting points.
 
 .Checklist: Monthly Maintenance
 ****
@@ -1741,16 +1744,12 @@ I use short monthly and yearly ((maintenance)) checklists. For example:
 * [ ] back up router config
 ****
 
-And yearly:
-
 .Checklist: Yearly Maintenance
 ****
 * [ ] test restore from backup
 * [ ] review and improve ((threat model))
 * [ ] open server chassis and vacuum dead spiders
 ****
-
-I update my checklists about as often as I use them.
 
 The following sections cover specific maintenance tips and tricks.
 
@@ -1842,8 +1841,7 @@ It would need to recover, and the data it was trying to write may be lost.
 This manner of data loss is rare, and the risk is acceptable for the typical homelab.
 
 I recommend restic (https://restic.net) or Borg (https://borgbackup.org).
-
-Here's a decent comparison of restic and Borg: https://reddit.com/r/BorgBackup/comments/v3bwfg/.
+Here's a decent comparison of those two: https://reddit.com/r/BorgBackup/comments/v3bwfg/.
 
 I use `zfs-auto-snapshot` locally to be able to quickly get at old versions of files, but I don't count this as a backup.
 mario installs `zfs-auto-snapshot` for you.
