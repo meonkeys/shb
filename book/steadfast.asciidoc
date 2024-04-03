@@ -1666,7 +1666,7 @@ If you decide you want full-disk encryption, choose it during the OS install. <<
 
 (((ZFS, setup)))
 The OS takes care of itself pretty well.
-For more robust data storage, we can a couple of ((HDD))s and manage them with ((ZFS)).
+For more robust data storage, we can add a couple of ((HDD))s and manage them with ((ZFS)).
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
