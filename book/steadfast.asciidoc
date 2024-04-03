@@ -1728,16 +1728,16 @@ Here are examples you might use as starting points.
 
 .Checklist: Monthly Maintenance
 ****
-* [ ] upgrade OS packages
-* [ ] check storage space remaining
-* [ ] back up router config
+* [ ] Upgrade OS packages.
+* [ ] Check storage space remaining.
+* [ ] Back up router config.
 ****
 
 .Checklist: Yearly Maintenance
 ****
-* [ ] test restore from backup
-* [ ] review and improve ((threat model))
-* [ ] open server chassis and vacuum dead spiders
+* [ ] Test restore from backup.
+* [ ] Review and improve ((threat model)).
+* [ ] Open server chassis and vacuum dead spiders.
 ****
 
 The following sections cover specific maintenance tips and tricks.
