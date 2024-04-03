@@ -1540,9 +1540,9 @@ This provisions my remote server, making changes as necessary to align it with t
 ==== Test devices
 
 Your users will have their own computers and ((mobile)) devices (their _clients_).
-You should have a couple different clients of your own, so you have comparable environments to better help your users.
+Maintain a couple of different clients so you have comparable environments to better help your users.
 
-You should also be a user of the stuff you self-host.
+TIP: Be a user of the services you self-host.
 This is _dogfooding_.
 Dogfooding keeps you honest and helps you empathize with others.
 
@@ -1605,12 +1605,12 @@ I just made these up based on what I estimated I'd need, then doubled that to al
 Learn how to configure your router.
 Keep it up to date and maintain a strict ((firewall)) with only the necessary ports open / forwarded.
 
+[%unbreakable]
 CAUTION: Port forwarding allows inbound connections through your WAN boundary to your server.
 Read <<Digital security>> before forwarding any ports.
 
 Make a sketch to better understand your network.
-
-Here's a simple diagram I created using https://asciiflow.com to plan cabling and visualize the flow of traffic through my network devices.
+Here's a simple diagram I created using https://asciiflow.com to plan cabling and visualize the flow of traffic through my network devices:
 
 [#image-WAN-to-LAN-traffic]
 .WAN into LAN traffic flow diagram.
@@ -1619,7 +1619,7 @@ image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 (((router, network device)))
 Arrows represent ethernet cable.
 The router provides electricity to the mini switch using PoE (power over ethernet).
-The server has two NICs (network interface cards): one for the OS and everything within (including all services), while the other provides a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
+The server has two NICs (network interface cards): one for the OS and everything within (including all services), and one for a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
 WAN traffic is allowed to flow to the main NIC and not to the IPMI NIC.
 
 ==== Electricity
