@@ -1015,11 +1015,10 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 
 * containers:
 ** <<Containers == happy>>
-** <<Container runtime>>
+** <<Contained services>>
 ** <<Nextcloud>>
 ** <<Jellyfin>>
 ** <<Wallabag>>
-* container runtime: <<Container runtime>>
 * OS: <<Operating system>>
 * filesystem: <<Filesystem>>
 * hardware: <<Server>>
@@ -1229,15 +1228,15 @@ These reasons are similar to the reasons I install the OS itself by hand.
 
 My OS is more a pet than cattle (see "`cattle vs. pets`" in <<Glossary>>), although it is relatively easy to rebuild since I've limited and documented my customizations.
 
-=== Container runtime
+=== Contained services
 
-mario uses ((Docker)).
+mario uses ((Docker)) to run services in containers.
+Docker is but one of many valid choices for how to isolate and run services.
+((VM))s are also often used for this purpose.
+See <<Containers == happy>> for a comparison of the two.
+If you're interested in ((VM))s (instead of or in addition to containers), check out Proxmox (https://proxmox.com).
 
-TIP: Docker is but one of many valid choices for where to put your services.
-More interested in ((VM))s?
-That's fine.
-Check out VMs especially if you want to self-host Jitsi--I had some issues trying to get Docker to handle the ranges of open ports Jitsi requires.
-((Kubernetes)) is fine too.
+((Kubernetes)) also works well for running services.
 Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
 I found it to be overkill, personally.
 If I needed high availability via clustering I'd be more likely to use Kubernetes.
@@ -3250,7 +3249,8 @@ Feed it logs from various services.
 . Set up ((Suricata)) (https://suricata.io) network analysis and threat detection.
 . Separate out code for ASCII to SVG diagram conversion from ((Markdeep)).
 Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
-. Try a different container runtime, such as podman (https://podman.io).
+. Try running containers with podman (https://podman.io).
+. Read up on other ways to isolate processes, e.g. FreeBSD jails and chroot.
 . Contribute to ((mario)).
 . Move secrets used by mario into an Ansible vault.
 . Adapt mario to use ((podman)).
