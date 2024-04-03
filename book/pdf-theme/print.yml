@@ -2,6 +2,10 @@
 # "-with-font-fallbacks" here
 extends: default-for-print-with-font-fallbacks
 
+# automatic hypenation
+base:
+  hyphens: true
+
 page:
   size: [6in, 9in]
   numbering:

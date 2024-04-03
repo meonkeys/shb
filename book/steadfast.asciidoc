@@ -2128,7 +2128,7 @@ Connect to your server and start ((Traefik)) with:
 sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
-If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
+If that worked, wait a minute or two and visit https://traefik.example.com in a web browser.
 While you are waiting, tail the logs with:
 
 .tail Traefik logs (server)
@@ -3638,7 +3638,7 @@ PHP::
 PoE::
   Power over ethernet. Utilizes an ethernet cable for electricity as well as data.
 port::
-  Along with an IP address, a number used to connect to a service. Reserved port numbers such as 80 for HTTP are listed in `/etc/services`.
+  Along with an IP address, a number used to connect to a service. Reserved port numbers such as 80 for HTTP are listed in [.bare]`/etc/services`.
 partition::
   Delineated section of a HDD or block storage, formatted with a filesystem such as ext4 or ZFS.
 port forward::
