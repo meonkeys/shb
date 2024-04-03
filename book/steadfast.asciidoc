@@ -1385,10 +1385,7 @@ They will likely share at least some of these traits.
 ****
 * Self-hosting instructions available.
 * Easy to install.
-Works with your preferred deployment method.
-For example:
-** Has a popular and well-maintained Docker image.
-** Has instructions for integrating with ((Docker Compose)) and ((Traefik)).
+* Works with your preferred deployment method: has a popular and well-maintained Docker image, has instructions for integrating with ((Docker Compose)) and ((Traefik)).
 * Healthy community: chat, forum.
 * Recent source code activity: releases, contributions, news.
 * Uses a FOSS software license.
