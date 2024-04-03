@@ -1288,9 +1288,7 @@ Think:
 * stateless
 ** persistent data can and must be defined explicitly
 * phoenix server
-** a term by Martin Fowler describing the benefits of short-lived servers that can be easily re-created
-
-See: https://martinfowler.com/bliki/PhoenixServer.html.
+** a term by Kornelis Sietsma describing repeated server destruction and re-creation
 
 === Reverse Proxy
 
