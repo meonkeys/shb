@@ -1746,7 +1746,7 @@ The following sections cover specific maintenance tips and tricks.
 
 Plan on hardware failure.
 
-If you can afford it, the easiest way to reliably run one server is two _buy two identical servers_.
+If you can afford it, the easiest way to reliably run one server is to _buy two identical servers_.
 Use the second for parts or a ready as-is replacement machine (also called a "`cold spare`").
 
 ==== OS updates
