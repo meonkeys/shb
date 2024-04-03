@@ -1631,7 +1631,7 @@ Consider a UPS (uninterruptible power supply) if your power at home is unreliabl
 Keep your server safe, similar to other valuables in your home.
 At the very least, restrict physical access.
 
-=== Deploy
+=== Server startup
 
 (((provision)))
 Here's an abbreviated server setup guide.
@@ -1837,7 +1837,7 @@ mario installs `zfs-auto-snapshot` for you.
 
 == mario
 
-Once your server is online following <<Deploy>>, use mario to configure and start services.
+Once your server is online following <<Server startup>>, use mario to configure and start services.
 
 Please download the <<Source code>>.
 It'll be helpful to have this handy so you can follow along as you read.
@@ -1926,7 +1926,7 @@ Please edit 'hosts.yml' and re-run this script.
 
 Oh great, _another_ config file?
 Don't worry, there's only one value to change: `ansible_become_password`.
-That should be set to the password you entered when you created the user account on your server, way back in <<Deploy>>.
+That should be set to the password you entered when you created the user account on your server, way back in <<Server startup>>.
 
 TIP: If you don't want to store the password in `hosts.yml`, see <<Plaintext password alternative>>.
 
