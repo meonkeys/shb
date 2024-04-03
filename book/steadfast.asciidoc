@@ -310,17 +310,18 @@ When you do, include references or other supporting material.
 
 (((style conventions)))
 (((typography)))
-Here's how certain types of content will appear in the text.
+Here's how certain types of content will appear in the text:
 
-[cols="1,2"]
+[cols="2,3"]
 |===
 |Styled example |Used for
 
 |`zpool status -t` |Inline command, filename, username, password, or variable.
 Longer snippets of console text use language-specific syntax highlighting.
 |kbd:[Ctrl+c] |Key(s) pressed on the keyboard.
-|https://example.com |Link to website (https scheme is assumed and omitted).
-I'll use "`example.com`" where you'll use your actual domain name.
+|https://example.com |Working/actual website URL (https scheme is assumed and omitted).
+|`\https://cloud.example.com` |Non-working example URL.
+Replace `.example.com` with your actual domain name.
 |<<System design>> |Cross-reference to another section or chapter.
 |===
 
