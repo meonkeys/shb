@@ -1172,33 +1172,7 @@ The root partition is ((ext4)) (not ZFS) so we can:
 
 Docker volumes (persistent container data) will be on ZFS.
 The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
-
-==== ZFS trim
-
-(((SSD)))
-(((TRIM)))
-(((ZFS, SSD TRIM)))
-Note that if you use ZFS with SSDs, you may sometimes notice your system performing poorly.
-On my ((Ubuntu)) desktop this happens once a month when the scheduled "`trim`" cron job starts.
-Trimming is a process of reclaiming formerly used space on SSDs.
-This is not an issue with ((HDD))s.
-
-On my desktop (again, not my server--I use HDDs in that) I see the trim cron job is scheduled for the first Sunday of every month, in `/etc/cron.d/zfsutils-linux`.
-
-The trim job causes high values in `/proc/pressure/io` and I can see `z_trim_*` kernel threads doing heavy I/O in the process table (hint: use `top` or `htop` to view the process table).
-
-It's no big deal and easy to work around.
-If you run into this issue, give ZFS a couple hours to finish trimming or run `zpool trim --cancel <pool>`, replacing `<pool>` with the name of the pool being trimmed.
-You can get the name of the pool and monitor trim progress with `zpool status -t`.
-You can manually resume trimming when convenient with `zpool trim <pool>` or just wait a month for it to run again on its own.
-
-Another approach is to enable `autotrim`.
-This performs trimming continuously in smaller increments instead of periodically on an entire pool.
-I'm not yet qualified to recommend one over the other.
-
-Shout out to askubuntu post: _Should I turn on zfs-trim on my pools or should I trim on a schedule using systemd timers or cron?_ (https://askubuntu.com/questions/1200172/), too.
-
-==== Further reading
+To learn more about ZFS, see:
 
 _Bitrot and atomic COWs: Inside "`next-gen`" filesystems_ by Jim Salter::
   https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/
@@ -1601,8 +1575,6 @@ The OS (operating system) and services do well at caching data served, assuming 
 Remote ((backups)) can take a while, and that's fine.
 
 I use one ((SSD)) (solid-state drive) for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
-
-Read more about SSDs and TRIM in <<Filesystem>>.
 
 (((data sovereignty)))
 An interesting alternative to HDDs is ((object storage)).
