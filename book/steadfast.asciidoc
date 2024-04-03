@@ -1115,8 +1115,8 @@ A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale 
 
 ==== More tips
 
-// List formatting is broken if hidden index terms butt up against unordered lists such as this one.
-
+.Self-hoster security tips
+****
 * Maintain useful encrypted ((backups)).
 Perform test restores to prove they are useful.
 See <<Backups>>.
@@ -1135,6 +1135,7 @@ Always use HTTPS.
 * Pay attention to data breaches and protect your identity.
 ** Freeze your credit after a breach.
 * Learn about compartmentalization and the principle of least privilege.
+****
 
 ==== Further reading
 
