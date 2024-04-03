@@ -1188,7 +1188,6 @@ Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacemen
 
 mario requires a 64-bit ((Ubuntu)) server with at least 2GB memory and 30GB storage.
 ((Ubuntu)) LTS (long-term support) releases are the most stable and I recommend them.
-
 I sought to minimize customizations to the ((operating system)) from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
 
