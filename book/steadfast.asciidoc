@@ -102,6 +102,10 @@ We'd all meet for lunch in Seattle and then do the two hour car ride up to Belli
 Those car rides are when we all really started talking about the lack of a free software event in Seattle.
 We realized we needed some folks in Seattle who could get their companies to sponsor (like Adam and Rob Smith) and someone who could help get some speakers and promote the event to the free software community, which is how I (as a Massachusetts resident) ended up co-founding an annual Seattle event.
 
+[#image-seagl-crew]
+.Early SeaGL crew. From left to right: Salt, Deb, Patch (with french fry), Adam, Rob. Not pictured: Chris, Jesse, Bri, Lisa, and many more.
+image::seagl-crew.jpg[align="center",scaledwidth=80%]
+
 ((SeaGL)) kicked off in 2013 at Seattle Central College and it was pretty scrappy.
 No keynotes, lots of shared power strips and a few friends that had gotten roped in to help without a lot of idea of what they'd signed up for.
 We had chosen a Friday to possibly attract students while the campus was open and a Saturday to make the second day easy for people whose jobs wouldn't support their attendance during the work week.
@@ -3706,6 +3710,7 @@ ZFS::
 ifndef::shb-printPdf[]
 == List of figures
 
+* <<image-seagl-crew>>
 * <<image-bread-server>>
 * <<image-YT-censor>>
 * <<image-squeaky-clean-chicken>>
