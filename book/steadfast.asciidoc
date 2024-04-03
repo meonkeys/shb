@@ -417,7 +417,7 @@ You might lose access to something you "`bought`" or it might even change right 
 More on this:
 
 * _PlayStation To Delete A Ton Of TV Shows Users Already Paid For_ by Ethan Gach (https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164)
-* _What is DRM?_ by the Free Software Foundation (https://defectivebydesign.org/what_is_drm_digital_restrictions_management)
+* _What is DRM?_ by the Free Software Foundation (https://defectivebydesign.org/what_is_drm)
 * _It's Their Content, You're Just Licensing it_ by Reggie Ugwu (https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html)
 
 Saving copies of data someone else is hosting for you is fine.
