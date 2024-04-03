@@ -1149,9 +1149,12 @@ Always use HTTPS.
 
 ==== Further reading
 
-. _Personal Cybersecurity: How to Avoid and Recover from Cybercrime_ by Marvin Waschke (https://oreilly.com/library/view/personal-cybersecurity-how/9781484224304/)
-. _Personal Privacy Threat Modeling (With LOTS Of Examples)_ by Eliza (https://modernprivatelife.com/how-to-choose-privacy-threat-model/)
-. _How I learned to stop worrying (mostly) and love my threat model_ by Sean Gallagher (https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/)
+_Personal Cybersecurity: How to Avoid and Recover from Cybercrime_ by Marvin Waschke::
+  https://oreilly.com/library/view/personal-cybersecurity-how/9781484224304/
+_Personal Privacy Threat Modeling (With LOTS Of Examples)_ by Eliza::
+  https://modernprivatelife.com/how-to-choose-privacy-threat-model/
+_How I learned to stop worrying (mostly) and love my threat model_ by Sean Gallagher::
+  https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/
 
 === Filesystem
 
@@ -1197,11 +1200,14 @@ Shout out to askubuntu post: _Should I turn on zfs-trim on my pools or should I 
 
 ==== Further reading
 
-. _Bitrot and atomic COWs: Inside "`next-gen`" filesystems_ by Jim Salter (https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/)
-. _ZFS 101—Understanding ZFS storage and performance_ by Jim Salter (https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/)
-. _ZFS_ Debian wiki page by various authors (https://wiki.debian.org/ZFS)
+_Bitrot and atomic COWs: Inside "`next-gen`" filesystems_ by Jim Salter::
+  https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/
+_ZFS 101—Understanding ZFS storage and performance_ by Jim Salter::
+  https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/
+_ZFS (Debian wiki page)_ by various authors::
+  https://wiki.debian.org/ZFS
 
-If you choose to dig deeper with ((ZFS)), start by reading up on fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
+If you choose to dig deeper with ((ZFS)), read up on fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
 
 === Operating system
 
@@ -1542,9 +1548,12 @@ Five users though?
 That's less than the cloud server hardware required for a ((mobile)) device making use of Google's or Apple's clouds.
 Further reading on this topic:
 
-. _The Surprisingly Large Energy Footprint of the Digital Economy_ by Bryan Walsh (https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/)
-. _The spiralling energy consumption behind your smart phone_ by Betsy Reed (https://theguardian.com/sustainable-business/2014/sep/10/energy-consumption-behind-smart-phone)
-. _The secret energy impact of your phone_ by Owen Williams (https://increment.com/energy-environment/the-secret-energy-impact-of-your-phone/)
+_The Surprisingly Large Energy Footprint of the Digital Economy_ by Bryan Walsh::
+  https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/
+_The spiralling energy consumption behind your smart phone_ by Betsy Reed::
+  https://theguardian.com/sustainable-business/2014/sep/10/energy-consumption-behind-smart-phone
+_The secret energy impact of your phone_ by Owen Williams::
+  https://increment.com/energy-environment/the-secret-energy-impact-of-your-phone/
 
 A rackmount server like mine can handle far more than 5 users, assuming they aren't all trying to transcode video.
 
@@ -2688,8 +2697,8 @@ Shared text file is not up-to-date with saved file::
   https://github.com/nextcloud/text/issues/2388
 Changing File from Desktop leads to conflict in browser, even if browser was not doing any changes::
   https://github.com/nextcloud/text/issues/4078
-nextcloud forum: Text: document current vs. saved version::
-  https://help.nextcloud.com/t/text-document-current-vs-saved-version/151600 (by yours truly)
+Text: document current vs. saved version (by yours truly)::
+  https://help.nextcloud.com/t/text-document-current-vs-saved-version/151600
 
 Related desktop client bug: Nextcloud-Client creating conflicts when it should not (https://github.com/nextcloud/desktop/issues/2467).
 Conflicts seem to appear in cases where there shouldn't be any.
