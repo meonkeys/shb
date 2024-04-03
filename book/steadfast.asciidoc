@@ -1306,12 +1306,8 @@ Here's a bit about how ((Traefik)) works and how it works with ((Nextcloud)) and
 We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach the Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
 
-(The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik.
-Credit to Peka for the gopher logo, licensed CC-BY-3.0.
-For more information see the Traefik `README.md`)
-
 [#image-traefik-architecture]
-.Traefik architecture diagram showing how a request reaches a service.
+.Traefik architecture diagram showing how a request reaches a service. From the MIT-licensed Traefik source code. Credit to Peka for the gopher logo, licensed CC-BY-3.0.
 image::traefik-architecture.png[]
 
 (((router, Traefik)))
