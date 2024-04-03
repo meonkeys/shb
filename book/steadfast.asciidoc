@@ -1294,7 +1294,7 @@ Think:
 
 A ((reverse proxy)) sits in front of containers and directs traffic to the right service based on arbitrary rules.
 
-Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at media.example.com.
+Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at jellyfin.example.com.
 In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
 
 mario uses Traefik for its reverse proxy.
@@ -1913,7 +1913,7 @@ Enter an email matching what you use with your DNS API provider.
 You may receive emails from Let's Encrypt at this address.
 `MARIO_DOMAIN_NAME`::
 This will be a name like `example.duckdns.org` or `example.com`.
-Individual services will be named based on this, e.g. `media.example.com`.
+Individual services will be named based on this, e.g. `jellyfin.example.com`.
 
 Finish editing `config` and run `provision.sh` again.
 
