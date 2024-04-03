@@ -1238,7 +1238,7 @@ If you're interested in ((VM))s (instead of or in addition to containers), check
 
 ((Kubernetes)) also works well for running services.
 Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
-I found it to be overkill, personally.
+I found it to be overkill.
 If I needed high availability via clustering I'd be more likely to use Kubernetes.
 If one computer in a Kubernetes cluster breaks, services can automatically migrate to working hardware in the cluster.
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
@@ -1251,6 +1251,7 @@ Docker Compose is a good fit for a single-server setup.
 It is also good to avoid intermingling services and their dependencies along with everything else on the server's primary storage.
 Having everything on one filesystem is easy at first, for one service.
 It gets more complicated the more services you add (see https://en.wikipedia.org/wiki/Dependency_hell).
+
 Many of the desperate self-hoster support requests I see in FOSS communities are about incompatibilities between this or that version of PHP or relational database between two different services.
 Docker mitigates this by bundling dependencies.
 Each Docker image is basically a complete filesystem (sans kernel), so a service's image would always include the correct PHP version.
