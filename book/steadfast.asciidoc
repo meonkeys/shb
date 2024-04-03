@@ -1439,7 +1439,7 @@ Habitica (https://habitica.com) demonstrates several of these.
 Here's an early, rough resource planning table I used.
 I go into detail about some of these services later in the book.
 
-[cols="4,4,3,2,2"]
+[%unbreakable,cols="4,4,3,2,2"]
 |===
 |Service |Purpose |Isolation |Cores |RAM
 
