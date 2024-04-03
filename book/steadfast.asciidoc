@@ -1586,18 +1586,17 @@ Most of my services require direct access anyway.
 ==== Networking
 
 If you are hosting at home, you need a reliable WAN (wide-area network) connection if you want to be able to connect from other places besides your ((LAN)).
-
 Use wired ethernet cables to your server, not Wi-Fi.
 
-===== Minimum specs
+===== Minimum requirements
 
-Here are some typical minimum specs for a home:
+Here are some typical minimums for hosting at home:
 
 * 100mbps up / 100mbps down ISP connection
-* Cat 5 ethernet cable
+* Cat 5 ethernet cable (for your server)
 * 802.11ac Wi-Fi (for clients)
 
-I just made these up based on what I estimated I'd need, then doubled that to allow some room to grow.
+I just made these up based on what works for me, then doubled that so you have some room to grow.
 
 ===== Home router configuration
 
