@@ -331,6 +331,8 @@ Replace `.example.com` with your actual domain name.
 |<<System design>> |Cross-reference to another section or chapter.
 |===
 
+NOTE: Admonitions like this draw your attention to auxiliary information.
+
 Code snippets will indicate whether they occur on the server or elsewhere.
 For example, here's a command intended to be run on the server (from <<Monitoring>>):
 
