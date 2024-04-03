@@ -988,8 +988,8 @@ Ideally you already know your users in real life, so just continue to practice b
 
 == System design
 
-In <<_mario>> we'll get to know the tool you can use to take care of some of the fiddly details of setting up a server.
-For now we'll cover its output from a high level.
+<<_mario>> is a tool you can use to take care of some of the fiddly details of setting up a server.
+Here is what mario provides, starting with a high level overview.
 
 === Service stack
 
@@ -1090,7 +1090,7 @@ Really just rolls off the tongue!
 
 ==== Example: WAN access
 
-Let's run ((WAN access)) through our ((threat model)).
+Test ((WAN access)) with this ((threat model)).
 
 Assets::
   Personal information stored on out-of-date ((Nextcloud)) server.
@@ -1158,7 +1158,7 @@ _How I learned to stop worrying (mostly) and love my threat model_ by Sean Galla
 
 === Filesystem
 
-((ZFS)) (originally: Zettabyte File System) is our one-stop shop for efficiently and safely making hard drives available for our data.
+((ZFS)) (originally: Zettabyte File System) is a one-stop shop for efficiently and safely making hard drives useful for storing data.
 Encryption, automatic lightweight snapshots and ((RAID)) (redundant array of inexpensive disks) are all included and used by mario.
 The root partition is ((ext4)) (not ZFS) so we can:
 
@@ -1167,7 +1167,7 @@ The root partition is ((ext4)) (not ZFS) so we can:
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
 * avoid taking ZFS snapshots of the OS, since
 ** we don't need to
-** the OS will live outside our ZFS folders
+** the OS will live outside ZFS folders
 ** we won't modify the OS--changes will be managed upstream (e.g. during package updates or via mario)
 
 Docker volumes (persistent container data) will be on ZFS.
@@ -1212,7 +1212,7 @@ If you choose to dig deeper with ((ZFS)), read up on fragmentation, ARC (adaptiv
 === Operating system
 
 mario requires a 64-bit ((Ubuntu)) server with at least 2GB memory and 30GB storage.
-((Ubuntu)) LTS (long-term support) releases are the most stable so we'll use one of those.
+((Ubuntu)) LTS (long-term support) releases are the most stable and I recommend them.
 
 I sought to minimize customizations to the ((operating system)) from a default install to ease its eventual re-creation.
 I tried to capture any and all necessary customizations in mario, or at least to document them.
@@ -1257,7 +1257,7 @@ My OS is more a pet than cattle (see "`cattle vs. pets`" in <<Glossary>>), altho
 
 === Container runtime
 
-We'll use ((Docker)).
+mario uses ((Docker)).
 
 TIP: Docker is but one of many valid choices for where to put your services.
 More interested in ((VM))s?
@@ -1271,11 +1271,11 @@ If one computer in a Kubernetes cluster breaks, services can automatically migra
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
 Docker balances features and usability well, making it easy to run one service in ((isolation)).
-We'll layer on ((Docker Compose)) to run the groups of processes necessary to support a whole service (e.g. a web server and its database).
+((Docker Compose)) adds the ability to define and run the groups of processes necessary to support a whole service (e.g. a web server and its database).
 Kubernetes can do this too, along with everything you _don't_ need to learn unless you are building out an entire virtual data center.
-Docker Compose is a good fit for our single-server setup.
+Docker Compose is a good fit for a single-server setup.
 
-We'll also avoid intermingling services and their dependencies along with everything else on our server's primary storage.
+It is also good to avoid intermingling services and their dependencies along with everything else on the server's primary storage.
 Having everything on one filesystem is easy at first, for one service.
 It gets more complicated the more services you add (see https://en.wikipedia.org/wiki/Dependency_hell).
 Many of the desperate self-hoster support requests I see in FOSS communities are about incompatibilities between this or that version of PHP or relational database between two different services.
@@ -1295,7 +1295,7 @@ Unlike suitcases, these containers are practically free.
 
 Images are defined by a config file named `Dockerfile`.
 The `Dockerfile` should be tracked in source control.
-Since we'll use ((Docker Compose)), another important config file is `docker-compose.yml`.
+Since mario uses ((Docker Compose)), another important config file is `docker-compose.yml`.
 Each service will have its own `docker-compose.yml` file.
 These should be kept in source control too.
 For ((sysadmin))s these conventions provide reproducible images and containers.
@@ -1325,13 +1325,13 @@ A ((reverse proxy)) sits in front of containers and directs traffic to the right
 Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at media.example.com.
 In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
 
-We'll use Traefik as our reverse proxy.
+mario uses Traefik for its reverse proxy.
 
 ==== Traefik architecture
 
-Here's a bit about how ((Traefik)) works and how we'll use it with ((Nextcloud)) and other self-hosted web services.
+Here's a bit about how ((Traefik)) works and how it works with ((Nextcloud)) and other self-hosted web services.
 
-We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach our Nextcloud service.
+We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach the Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
 
 (The diagram is from the MIT-licensed Traefik source code -- https://github.com/traefik/traefik.
@@ -1418,8 +1418,9 @@ They will likely share at least some of these traits.
 * Self-hosting instructions available.
 * Easy to install.
 Works with your preferred deployment method.
-** For mario, we're looking for a popular, well-maintained Docker image.
-** Bonus: instructions included for integrating with ((Docker Compose)) and ((Traefik)).
+For example:
+** Has a popular and well-maintained Docker image.
+** Has instructions for integrating with ((Docker Compose)) and ((Traefik)).
 * Healthy community: chat, forum.
 * Recent source code activity: releases, contributions, news.
 * Uses a FOSS software license.
@@ -1591,9 +1592,8 @@ One month's worth of hourly snapshots (the closest comparable I could find) is a
 That's $535.67 total, which is about what I spent on my drives.
 So I broke even in a month and the drives should last _years_.
 
-For redundancy I recommend purchasing two of the same drive.
-We'll configure them mirrored (((RAID)) 1).
-This increases redundancy and read performance (for most reads) and halves usable storage space.
+For redundancy I recommend purchasing two of the same drive, mirrored (((RAID)) 1).
+This also increases read performance (for most reads) and halves usable storage space.
 
 HDDs are plenty fast when measured from the standpoint of self-hosted service response time.
 (((operating system)))
@@ -1708,7 +1708,8 @@ For more robust data storage, we can a couple of ((HDD))s and manage them with (
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
-We'll start with a simple mirrored 2-drive pool.
+The guide below walks through setup of a simple pool of two mirrored drives.
+This is a reasonable starting point, providing increased fault tolerance and better read performance than a single drive.
 
 On the server, run these commands as root, adjusting as necessary.
 For example, these assume you've added two drives and they were assigned device names `/dev/sda` and `/dev/sdb`.
@@ -1734,12 +1735,12 @@ zfs set exec=off main
 zfs set setuid=off main
 zfs set canmount=off main
 
-# Create encrypted dataset in "main" pool. This is our "parent" dataset, we can easily add more later and they'll all be encrypted.
+# Create encrypted dataset in "main" pool. This is the "parent" dataset, we can easily add more later and they'll all be encrypted.
 openssl rand -base64 32 > /root/secure-dataset-key
 zfs create -o encryption=aes-128-gcm -o keyformat=passphrase -o keylocation=file:///root/secure-dataset-key main/secure
 zfs set canmount=off main/secure
 
-# Create dataset we'll actually use.
+# Create usable dataset.
 zfs create -o mountpoint=/data main/secure/default
 
 # This might not be necessary if you _never_ want to execute anything in /data. I found I needed it for something within a container (ffmpeg, I think). You can start with exec=off and turn it on later if you want.
@@ -2052,7 +2053,7 @@ For example:
 192.168.1.100	wallabag.example.com
 ----
 
-IP addresses can be repeated because our ((reverse proxy)) will direct traffic based on hostname.
+IP addresses can be repeated because the ((reverse proxy)) will direct traffic based on hostname.
 
 Overriding DNS records like this is a temporary measure.
 Only the computer with these specific mappings will be able to get to your sever by name.
@@ -2143,12 +2144,12 @@ Docker and ((Docker Compose)) are installed.
 Docker configuration files are stored in directories under `/root/ops`.
 Data for services are stored in directories under `/data`.
 
-None of our services are running yet.
+None of the services are running yet.
 Here's how to turn them on and start using them.
 
 ==== Start reverse proxy
 
-We'll stand up the ((reverse proxy)) first.
+Stand up the ((reverse proxy)) first.
 Connect to your server and start ((Traefik)) with:
 
 .start Traefik (server)
@@ -2212,7 +2213,7 @@ The DNS challenge is especially handy for servers with zero public-facing inboun
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
 The DNS challenge is configured using labels in Traefik's `docker-compose.yml` configuration file.
 
-Traefik accepts ((HTTPS)) and passes along unencrypted HTTP to our web services.
+Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
 This is called ((SSL termination)).
 
 (((router, network device)))
@@ -3393,7 +3394,7 @@ Too much choice is good and challenging problem to have.
 (((FOSS, advantages)))
 In theory: always, because you can choose FOSS that lines up with your values.
 In practice: eventually.
-FOSS lags behind non-FOSS because companies make _lots_ of money at the leading edge of technology (whether or not it aligns with our values).
+FOSS lags behind non-FOSS because companies make _lots_ of money at the leading edge of technology (whether or not it aligns with values).
 Some areas where FOSS is especially behind:
 
 * ((mobile)) phones (((Murena)) is promising)
@@ -3605,7 +3606,7 @@ frontend::
 full-disk encryption::
   When an entire storage area is cryptographically secure. Also called at-rest encryption.
 GB::
-  Gigabyte. 10^9^ (1,000,000,000) bytes if we're talking about HDDs, or 2^30^ (1,073,741,824) bytes if we're talking about RAM.
+  Gigabyte. 10^9^ (1,000,000,000) bytes for HDDs, or 2^30^ (1,073,741,824) bytes for RAM.
 good, fast, and cheap::
   Used as a joke in this text because typically we must pick two (https://en.wikipedia.org/wiki/Project_management_triangle).
 Good Thing::
@@ -3617,7 +3618,7 @@ GUI::
 HDD::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
 homelab::
-  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. Our _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting space`" and/or "`homeprod`".
+  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting space`" and/or "`homeprod`".
 host::
   The computer where Docker containers run. Also called a "`server`" in this text.
 HVAC::
@@ -3683,7 +3684,7 @@ reproducible::
 reverse proxy::
   Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL/TLS termination (https://en.wikipedia.org/wiki/TLS_termination_proxy) and for running several self-hosted web services with different domain names with a single IP address.
 router::
-  Network device used to handle traffic at the boundary between networks such as our WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
+  Network device used to handle traffic at the boundary between networks such as a WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 SeaGL::
@@ -3709,7 +3710,7 @@ sysadmin::
 threat model::
   Analysis of risks and defenses of digital assets.
 TB::
-  Terabyte. Like GB, can either be base-10 or base-2, so: 10^12^ (1,000,000,000,000) bytes (if we're talking about HDDs).
+  Terabyte. Like GB, can either be base-10 or base-2, so: 10^12^ (1,000,000,000,000) bytes (for HDDs).
 TLD::
   Top-level domain. For "`example.com`", "`.com`" is the TLD.
 UI::
