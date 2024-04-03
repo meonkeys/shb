@@ -1786,9 +1786,7 @@ The Scratch service included with mario is one example.
 ==== Monitoring
 
 Monitor server health.
-
 Check free disk space with `df -h`.
-
 If things feel slow, check PSI (pressure stall information) with
 
 .check PSI (server)
@@ -1801,7 +1799,6 @@ tail /proc/pressure/*
 Read more about PSI at https://kernel.org/doc/html/latest/accounting/psi.html.
 
 If your PSI check shows high I/O, try `docker stats` to see resource usage per container.
-
 That should help you narrow down resource issues to specific containers.
 
 At the host level, you can use `htop -d 100` to see stats for all processes and threads.
