@@ -277,8 +277,6 @@ No warranties are given.
 The license may not give you all of the permissions necessary for your intended use.
 For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
-Contact me if you are interested in obtaining it under other terms.
-
 ==== Copy this book's code, too
 
 See <<Source code>>.
