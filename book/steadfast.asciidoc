@@ -1197,7 +1197,7 @@ I sought to minimize customizations to the ((operating system)) from a default i
 I tried to capture any and all necessary customizations in mario, or at least to document them.
 
 Not mucking about on the server takes discipline, especially for old-school hands-on ((sysadmin))s like me.
-It is much easier to SSH into the server and run a one-off command rather than change config files and re-run mario.
+It is much easier to SSH into the server and run a one-off command rather than change configuration files and re-run mario.
 The real payoff from using mario instead of hand-editing comes when you collaborate with others or try to remember what you did a year ago and why.
 
 You can and should still SSH into the server manually.
@@ -1273,9 +1273,9 @@ An image is the blueprint to magic a fresh new suitcase (container) into existen
 An image is built once, stamped with an identifier, and shared, where it can act as the basis for countless consistently-behaving containers.
 Unlike suitcases, these containers are practically free.
 
-Images are defined by a config file named `Dockerfile`.
+Images are defined by a file named `Dockerfile`.
 The `Dockerfile` should be tracked in source control.
-Since mario uses ((Docker Compose)), another important config file is `docker-compose.yml`.
+Since mario uses ((Docker Compose)), another important file is `docker-compose.yml`.
 Each service will have its own `docker-compose.yml` file.
 These should be kept in source control too.
 For ((sysadmin))s these conventions provide reproducible images and containers.
@@ -1330,7 +1330,7 @@ That is: `websecure` to `nextcloud-https` to `app`.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
-.Traefik and Nextcloud config snippets (admin computer)
+.Traefik and Nextcloud service configuration snippets (admin computer)
 [source,yaml]
 ----
 # snippet from traefik/docker-compose.yml
@@ -1736,7 +1736,7 @@ Here are examples you might use as starting points.
 ****
 * [ ] Upgrade OS packages.
 * [ ] Check storage space remaining.
-* [ ] Back up router config.
+* [ ] Back up router configuration.
 ****
 
 .Checklist: Yearly Maintenance
@@ -1812,14 +1812,13 @@ Follow all logged events for the host with `journalctl -f`.
 
 ==== Backups
 
-Backups are one critically important thing you'll rarely get credit for, only suffering when they fail.
+Having useful backups is one critically important practice you'll rarely get credit for doing well, only blame if it is done poorly.
 
-Make ((backups)) and test them.
-Follow the 3-2-1 rule of thumb: make *3* backups.
+Create ((backups)) following the 3-2-1 rule of thumb: make *3* backups.
 Store at least *2* local copies on different media.
 Have *1* remote backup.
 
-_Test_ the backups regularly.
+Check the backups regularly to make sure they work.
 
 (((ZFS, snapshots)))
 Make consistent point-in-time backups of everything on your server, such that the services running are unaware they are even being backed up.
@@ -1927,7 +1926,7 @@ You don't have an Ansible inventory file. I'll create one for you now.
 Please edit 'hosts.yml' and re-run this script.
 ----
 
-Oh great, _another_ config file?
+Oh great, _another_ configuration file?
 Don't worry, there's only one value to change: `ansible_become_password`.
 That should be set to the password you entered when you created the user account on your server, way back in <<Server startup>>.
 
@@ -2035,9 +2034,9 @@ Copy the public key to the server with `ssh-copy-id` or similar.
 
 Teach your client what to do when you run `ssh mario_server`.
 Map `mario_server` to the name of your server, and `your-username` to the account username on your server.
-Here's an example client config template for ((OpenSSH)):
+Here's an example client configuration template for ((OpenSSH)):
 
-.mario server snippet in OpenSSH client config (admin computer)
+.mario server snippet in OpenSSH client configuration (admin computer)
 [%unbreakable,text]
 ----
 Host mario_server
@@ -2259,7 +2258,7 @@ Stopping ping_test_1   ... done
 TIP: For extra credit, incorporate your tiny test service into mario.
 
 This is the basis for adding more interesting services, too.
-It's only a few more lines of code+config to create a small ((API)) or web service and a few more to publish it with your ((reverse proxy)).
+It's only a few more lines of code and configuration to create a small ((API)) or web service and a few more to publish it with your ((reverse proxy)).
 
 == Services
 
@@ -2459,7 +2458,7 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 |Files |file management, sharing |*Yes*, although the "`Versions`" tab is not very useful.
 |Forms |Google Forms alternative |*Yes*.
 |Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project.
-|Holiday Calendars |easily add public holiday calendars |*Yes*. The config for this app shows up under "`Personal`" -> "`Availability`" for me, not "`Groupware`" (although the URL path is `/settings/user/groupware`).
+|Holiday Calendars |easily add public holiday calendars |*Yes*. The configuration for this app shows up under "`Personal`" -> "`Availability`" for me, not "`Groupware`" (although the URL path is `/settings/user/groupware`).
 |Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate ((metadata)).
 |Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yes, I do want to de-Gmail someday.
 |Memories |photos |*Yes*.
@@ -2857,7 +2856,7 @@ sudo docker-compose \
   --env=prod --no-interaction
 ----
 
-This feeds the Wallabag config file to `docker-compose`.
+This feeds the Wallabag configuration file to `docker-compose`.
 The `exec` command says we want to run something in the `app` service container.
 That something is `/var/www/wallabag/bin/console`, a utility shipped with Wallabag.
 We tell `console` to run necessary database migrations.
@@ -3006,7 +3005,7 @@ networks:
 Note the middleware to only allow traffic from your ((LAN)).
 This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
-.label from Traefik config allowing only LAN access
+.label from Traefik configuration allowing only LAN access
 [source,yaml]
 ----
 "traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
