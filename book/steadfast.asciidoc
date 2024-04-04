@@ -2333,7 +2333,7 @@ They have a public bounty program and threat model.
 ==== Setup
 
 (((Nextcloud, install)))
-Setting up a new Nextcloud server is well-documented.
+Setting up a new Nextcloud server is well documented.
 In brief:
 
 . Provision with mario.
