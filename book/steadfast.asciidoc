@@ -2262,7 +2262,7 @@ It's only a few more lines of code and configuration to create a small ((API)) o
 
 == Services
 
-Here are details of self-hosting a handful of useful services.
+Let's dive into the details of self-hosting a handful of useful services.
 Each service has a "`Setup`" section explaining how to start it.
 
 The services I'll highlight are a tiny fraction of those available to self-host.
