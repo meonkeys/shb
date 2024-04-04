@@ -124,3 +124,11 @@
     line: "  'maintenance_window_start' => 100,"
     insertafter: 'datadirectory'
   when: nextcloud_config.stat.exists
+
+- name: Install docker-compose shortcut script
+  copy:
+    src: dc.sh
+    dest: /usr/local/sbin/dc
+    owner: root
+    group: root
+    mode: 0755

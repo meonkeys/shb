@@ -1220,8 +1220,11 @@ Example read-only server-side operations:
 Example read-write server-side operations:
 
 * upgrade OS packages: `apt full-upgrade`
-* upgrade services: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<Watchtower>>)
+* edit FIXME: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<Watchtower>>)
 ****
+
+// FIXME - change read-write example with docker-compose, we'll
+// but what? almost every read-write op should be done with mario/Ansible!
 
 Start a "`monthly maintenance`" checklist like the one found in <<Server maintenance>>.
 Include these read-write operations in your checklist.
@@ -1776,6 +1779,8 @@ Reboot when necessary (e.g. when the kernel is upgraded).
 
 ==== Image updates
 
+// FIXME - point to watchtower Maintenance section instead
+
 I keep container images up to date with ((Watchtower)) or by hand, with:
 
 .upgrade images (server)
@@ -2112,27 +2117,52 @@ Docker configuration files are stored in directories under `/root/ops`.
 Data for services are stored in directories under `/data`.
 
 None of the services are running yet.
-Here's how to turn them on and start using them.
+We'll soon get to how to turn them on and start using them.
+
+Let's first take a step to save a lot of typing.
+Services are started and stopped with Docker compose, which is always run with `docker-compose`.
+When you run `docker-compose`, you must first be in a folder containing a `docker-compose.yml` file.
+By convention, the name of that folder is the name of the service.
+A typical usage pattern is:
+
+.start a service in its folder (server)
+[source,bash]
+----
+cd /path/to/myservice
+sudo docker-compose up -d
+----
+
+Alternatively:
+
+.start a service, explicit configuration file (server)
+[source,bash]
+----
+sudo docker-compose --file /path/to/myservice up -d
+----
+
+mario installs a program called `dc` which can be used like so:
+
+.start a service with dc (server)
+[source,bash]
+----
+# equivalent to
+# sudo docker-compose --file /path/to/myservice up -d
+sudo dc myservice up -d
+
+# will fail with a permission denied error
+dc myservice up -d
+----
+
+TIP: For brevity in this text, I may omit `sudo`.
+Remember that sudo is always required to run some commands, including `docker-compose`.
 
 ==== Start reverse proxy
 
 Stand up the ((reverse proxy)) first.
-Connect to your server and start ((Traefik)) with:
-
-.start Traefik (server)
-[source,bash]
-----
-sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
-----
+Connect to your server and start ((Traefik)) with `dc traefik up -d` (actually: `sudo dc traefik up -d`).
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
-While you are waiting, tail the logs with:
-
-.tail Traefik logs (server)
-[source,bash]
-----
-sudo docker-compose --file /root/ops/traefik/docker-compose.yml logs -f
-----
+While you are waiting, tail the logs with `dc traefik logs -f`.
 
 It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
@@ -2156,10 +2186,12 @@ If you waited and are still getting invalid cert warnings from your browser when
 
 ==== Start other services
 
-Starting a mario service is always done with `docker-compose up`.
+Starting a mario service is always done with `dc SERVICE up -d`.
 See the "`Setup`" section of a particular service for more detail.
 
 To stand up everything at once, you could use this shell script:
+
+// FIXME - adapt to `dc`
 
 .start all services ad-hoc Bash script (server)
 [source,bash]
