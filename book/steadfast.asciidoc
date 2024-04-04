@@ -2339,7 +2339,7 @@ In brief:
 . Provision with mario.
 . Start Nextcloud containers with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`.
 . Navigate to `\https://cloud.example.com`
-. Follow web-based setup page to create an admin account.
+. Follow the web-based setup page to create an admin account.
 . Skip installing recommended apps.
 
 Done.
