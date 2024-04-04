@@ -672,7 +672,7 @@ So many reasons!
 ** see linked articles in <<Server>>
 * Save money
 ** self-hosted hardware will typically beat cloud (renting someone else's)
-** savings increase as your users' data storage requirements enter the terabyte range
+** savings increase as your users`' data storage requirements enter the terabyte range
 ** save more with every service you run
 ** avoid unexpected public ((cloud)) costs
 *** ((egress)) fees make it expensive to download your data and move it somewhere else
@@ -1266,7 +1266,7 @@ Another image would be used to create the database, if/as necessary.
 It's worth lingering on bundled dependencies for a minute.
 If dependencies are clothes, a Docker ((container)) is a suitcase with all the clothes you need for a week's travel.
 You check your suitcase and board the train, then rest easy knowing your suitcase is tucked neatly, separately, next to all the others.
-Docker containers are suitcases while the old way is everyones' unfolded clothes in a giant pile in the caboose.
+Docker containers are suitcases while the old way is everyones`' unfolded clothes in a giant pile in the caboose.
 
 Containers are created from images.
 An image is the blueprint to magic a fresh new suitcase (container) into existence, all packed and ready with the right clothes for your trip.
@@ -2266,7 +2266,7 @@ Here are details of self-hosting a handful of useful services.
 Each service has a "`Setup`" section explaining how to start it.
 
 The services I'll highlight are a tiny fraction of those available to self-host.
-They reflect my users' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
+They reflect my users`' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
 Getting them running will provide some useful functionality and a good starting point.
 With the help of mario your cloud gets these out of the box and will be flexible enough to accommodate your preferred service choices.
 
