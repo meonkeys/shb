@@ -1765,14 +1765,13 @@ Here are examples you might use as starting points.
 
 The following sections cover specific maintenance tips and tricks.
 
-==== Hardware
+==== Hardware failure
 
 Plan on hardware failure.
-
 If you can afford it, the easiest way to reliably run one server is to _buy two identical servers_.
 Use the second for parts or a ready as-is replacement machine (also called a "`cold spare`").
 
-==== OS and image updates
+==== Software updates
 
 Keep OS packages and container images up to date.
 For the OS:
