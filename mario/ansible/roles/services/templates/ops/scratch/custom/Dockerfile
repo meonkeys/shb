@@ -1,22 +1,20 @@
-FROM node:19-alpine3.16
+# see https://github.com/meonkeys/docker-scratch
+
+FROM node:21-alpine3.18
+
+ENV SCRATCH_VERSION v3.6.18
 
 RUN apk add git
 
 WORKDIR /app
 
-RUN git clone https://github.com/LLK/scratch-gui.git \
+RUN git clone --depth=1 --branch $SCRATCH_VERSION https://github.com/LLK/scratch-gui.git \
   && cd scratch-gui \
-  && git checkout v1.8.10 \
   && npm install
-
-WORKDIR /app/scratch-gui
 
 EXPOSE 8601
 
-# work around https://github.com/LLK/scratch-gui/issues/7890
-ENV NODE_OPTIONS=--openssl-legacy-provider
-
-RUN npm run build
+WORKDIR /app/scratch-gui
 
 # work around https://github.com/LLK/scratch-gui/issues/5682
 RUN mv webpack.config.js webpack.config.js.bak

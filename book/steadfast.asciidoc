@@ -2968,7 +2968,11 @@ Scratch doesn't require any persistent data, setup, nor auth.
 
 ==== Maintenance notes
 
-None.
+* upgrades
+** change the version number in `roles/services/templates/ops/scratch/custom/Dockerfile`
+** re-provision from ((admin computer))
+** re-build custom image with `dc scratch build --pull`
+** replace containers on the host with `dc scratch up -d`
 
 == What's next?
 
