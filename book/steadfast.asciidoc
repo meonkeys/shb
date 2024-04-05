@@ -337,7 +337,15 @@ Replace `.example.com` with your actual domain name.
 
 Admonitions:
 
-NOTE: Admonitions like this draw your attention to auxiliary information.
+NOTE: Admonitions like this note draw your attention to auxiliary information.
+
+TIP: Here's a tip,
+
+IMPORTANT: something of import,
+
+CAUTION: a cautionary message, and
+
+WARNING: a direct warning.
 
 Sidebars:
 
