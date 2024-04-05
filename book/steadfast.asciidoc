@@ -460,6 +460,13 @@ You had it first, I'm borrowing it and hoping our contextual lane lines will suf
 
 ==== Rapid-Rise Personal Cloud
 
+_Rapid_ is there to get you excited to jump right in and learn.
+_Rapid_ does not mean _reckless_!
+I'm a strong advocate of a thoughtful and robust approach to self-hosting.
+When you encounter a challenge, slow down to learn faster.
+Once you understand a concept, practice it.
+Fail fast and often, with rapid iterations trending towards perfection.
+
 _Rapid-rise_ is something you might find on a package of baker's yeast, and I love fresh-baked bread.
 If your server is a loaf of bread, this book is your rapid-rise yeast.
 
@@ -467,7 +474,8 @@ If your server is a loaf of bread, this book is your rapid-rise yeast.
 .Server in the shape of a loaf of bread.
 image::bread-server.png[align="center",scaledwidth=80%]
 
-_Cloud_ implies scalable, _Personal_ scopes that scalability to what's reasonable for a small group.
+_Cloud_ implies scalable and automatable.
+_Personal_ scopes that scalability to what's reasonable for a small group.
 Modern ((bare metal)) hardware can scale (to a degree) within its box.
 It can scale automatically by using more or less power according to compute demand, and manually when you upgrade hardware components (say, adding another hard drive).
 
