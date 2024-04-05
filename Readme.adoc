@@ -17,11 +17,12 @@ This is an awesome book about self hosting with code to help you get started.
 <<How to build the book,Build your own>>, or https://github.com/meonkeys/shb-review/releases/[Download PDF, HTML, and EPUB versions here].
 
 |===
-|version |device |quality
+|version |device |quality |notes
 
 |EPUB |calibre e-book viewer |good
 |EPUB |Kobo e-reader |ok
 |EPUB |FBReader |bad
+|EPUB |macOS Books |ok |links are truncated
 |HTML |Firefox web browser |good
 |screen PDF |Firefox web browser |good
 |screen PDF |evince PDF viewer |good
