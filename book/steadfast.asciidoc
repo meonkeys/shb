@@ -1784,28 +1784,9 @@ sudo apt update && sudo apt full-upgrade
 
 Reboot when necessary (e.g. when the kernel is upgraded).
 
-Each service in <<Services>> includes a "`Maintenance`" section with update instructions.
-Container images can be updated by hand with Docker compose or automatically by Watchtower.
+Each service in <<Services>> includes a "`Maintenance notes`" section with update instructions.
+Container images can be updated by hand with Docker compose or automatically by ((Watchtower)).
 See <<Watchtower>> for details.
-
-I keep container images up to date with ((Watchtower)) or by hand, with:
-
-.upgrade images (server)
-[source,bash]
-----
-sudo docker-compose pull
-----
-
-Or, if a service uses a locally-built image:
-
-.upgrade and build images (server)
-[source,bash]
-----
-sudo docker-compose build --pull
-----
-
-This is the case if a `docker-compose.yml` file includes a `build` directive instead of declaring an `image`.
-The Scratch service included with mario is one example.
 
 ==== Monitoring
 
