@@ -2128,16 +2128,19 @@ A typical usage pattern is:
 .start a service in its folder (server)
 [source,bash]
 ----
-cd /path/to/myservice
-sudo docker-compose up -d
+sudo su -
+cd /root/ops/traefik
+docker-compose up -d
 ----
 
-Alternatively:
+Try to avoid this method.
+The fewer commands you run directly as `root`, the better.
+I recommend this instead:
 
 .start a service, explicit configuration file (server)
 [source,bash]
 ----
-sudo docker-compose --file /path/to/myservice up -d
+sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
 ----
 
 mario installs a program called `dc` which can be used like so:
@@ -2146,26 +2149,29 @@ mario installs a program called `dc` which can be used like so:
 [source,bash]
 ----
 # equivalent to
-# sudo docker-compose --file /path/to/myservice up -d
-sudo dc myservice up -d
+# sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
+sudo dc traefik up -d
 
 # will fail with a permission denied error
-dc myservice up -d
+dc traefik up -d
 ----
 
 TIP: For brevity in this text, I may omit `sudo`.
-Remember that sudo is always required to run some commands, including `docker-compose`.
+sudo is required to run some commands, including `docker-compose`.
 
 ==== Start reverse proxy
 
 Stand up the ((reverse proxy)) first.
-Connect to your server and start ((Traefik)) with `dc traefik up -d` (actually: `sudo dc traefik up -d`).
+Connect to your server and start ((Traefik)) with `dc traefik up -d`
+Remember `root` access is required for this command, so you actually need to run `sudo dc traefik up -d`.
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 While you are waiting, tail the logs with `dc traefik logs -f`.
 
 It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
+
+// line numbers make it easier to read these very long lines
 
 .typical Traefik logs (server)
 [%linenums,text]
@@ -2191,18 +2197,17 @@ See the "`Setup`" section of a particular service for more detail.
 
 To stand up everything at once, you could use this shell script:
 
-// FIXME - adapt to `dc`
-
 .start all services ad-hoc Bash script (server)
 [source,bash]
 ----
-services="watchtower wallabag jellyfin nextcloud scratch"
-for svc in $services; do
-    sudo docker-compose --file /root/ops/$svc/docker-compose.yml up -d
+for service in $(sudo ls /root/ops); do
+    sudo dc $service up -d
 done
 ----
 
 This will also pull and build images and update containers as necessary.
+Services out of sync with their `docker-compose.yml` file will be restarted.
+This is idempotent: running and up-to-date services are left unchanged.
 
 === Encryption certificates
 
@@ -2375,7 +2380,7 @@ Setting up a new Nextcloud server is well documented.
 In brief:
 
 . Provision with mario.
-. Start Nextcloud containers with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`.
+. Start Nextcloud containers with `dc nextcloud up -d`.
 . Navigate to `\https://cloud.example.com`
 . Follow the web-based setup page to create an admin account.
 . Skip installing recommended apps.
@@ -2386,7 +2391,7 @@ You should be redirected to the dashboard and a short intro video.
 Some tips:
 
 . To confirm reproducibility of your Nextcloud server, destroy and re-create it (before you use it for real).
-.. After you get it working once, stop it with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml down`.
+.. After you get it working once, stop it with `dc nextcloud down`.
 .. Destroy all persistent data with `sudo rm -rf /data/nextcloud`.
 That _really_ deletes everything.
 .. Re-provision with mario (run `provision.sh` again).
@@ -2396,7 +2401,7 @@ That _really_ deletes everything.
 See <<Customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
 . Test configuring a mail server and sending an email at `/settings/admin` (Basic settings).
 . Add users at `/settings/users`.
-. Check logs for all containers related to Netcloud with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml logs -f`.
+. Check logs for all containers related to Netcloud with `dc nextcloud logs -f`.
 . Check Nextcloud internal logs at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
 . Review "`Security & setup warnings`" at `/settings/admin/overview`.
 .. You can ignore ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.”.
@@ -2422,7 +2427,7 @@ Next, visit `/settings/admin/externalstorages` and install the "`External storag
 ** choose a release tag at https://hub.docker.com/_/nextcloud/
 ** change the version number in `roles/services/templates/ops/nextcloud/docker-compose.yml`
 ** re-provision from ((admin computer))
-** replace containers on the host with `sudo docker-compose --file /root/ops/nextcloud/docker-compose.yml up -d`
+** replace containers on the host with `dc nextcloud up -d`
 * visit `/settings/admin/overview`
 ** perform any recommended ((maintenance)) on that page
 ** ignore the Update section, it may disagree with Docker Hub
@@ -2799,7 +2804,7 @@ Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`
 ==== Setup
 
 . Provision with mario.
-. Start Jellyfin with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`.
+. Start Jellyfin with `dc jellyfin up -d`.
 . Navigate to `\https://jellyfin.example.com`
 . Follow web-based setup steps.
 Try adding two media libraries using the folders shared with Nextcloud.
@@ -2814,7 +2819,7 @@ For ((GPU)) hardware transcoding see https://jellyfin.org/docs/general/administr
 * upgrades
 ** change the version number in `roles/services/templates/ops/jellyfin/docker-compose.yml`
 ** re-provision from ((admin computer))
-** replace containers on the host with `sudo docker-compose --file /root/ops/jellyfin/docker-compose.yml up -d`
+** replace containers on the host with `dc jellyfin up -d`
 
 ==== Bugs
 
@@ -2860,7 +2865,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 ==== Setup
 
 . Provision with mario.
-. Start Wallabag with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`.
+. Start Wallabag with `dc wallabag up -d`.
 . Navigate to `\https://wallabag.example.com`
 . Log in as `wallabag` user with password `wallabag`.
 . Update password for `wallabag` user.
@@ -2870,7 +2875,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 * upgrades
 ** change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
 ** re-provision from ((admin computer))
-** replace containers on the host with `sudo docker-compose --file /root/ops/wallabag/docker-compose.yml up -d`
+** replace containers on the host with `dc wallabag up -d`
 ** if you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
 
 ==== Bugs
@@ -2887,8 +2892,7 @@ Apply that fix to a mario system with:
 .force Wallabag database migration (server)
 [source%unbreakable,bash]
 ----
-sudo docker-compose \
-  --file /root/ops/wallabag/docker-compose.yml \
+sudo dc wallabag \
   exec app /var/www/wallabag/bin/console \
   doctrine:migrations:migrate \
   --env=prod --no-interaction
@@ -2925,20 +2929,19 @@ A service might only have one-way database migrations, for example.
 ==== Setup
 
 . Provision with mario.
-. Start Watchtower with `sudo docker-compose --file /root/ops/watchtower/docker-compose.yml up -d`.
+. Start Watchtower with `dc watchtower up -d`.
 
 ==== Maintenance notes
 
-Check the logs if a service goes down to investigate if an automatic container upgrade caused a problem.
-For example:
+* upgrades
+** change the version number in `roles/services/templates/ops/watchtower/docker-compose.yml`
+** re-provision from ((admin computer))
+** replace containers on the host with `dc watchtower up -d`
 
-.follow and page Watchtower logs (server)
-[source%unbreakable,bash]
-----
-sudo docker-compose \
-  --file /root/ops/watchtower/docker-compose.yml \
-  logs | less -R
-----
+You may experience an issue where a service is broken by Watchtower.
+If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
+I avoid this by only using Watchtower for non-critical services.
+I don't let Watchtower auto-upgrade my Nextcloud service, for example.
 
 === Scratch
 
@@ -2952,7 +2955,7 @@ Scratch doesn't require any persistent data, setup, nor auth.
 ==== Setup
 
 . Provision with mario.
-. Start Scratch with `sudo docker-compose --file /root/ops/scratch/docker-compose.yml up -d`.
+. Start Scratch with `dc scratch up -d`.
 . Navigate to `\https://scratch.example.com`
 
 ==== Maintenance notes
