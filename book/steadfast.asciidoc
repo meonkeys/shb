@@ -1779,7 +1779,7 @@ Reboot when necessary (e.g. when the kernel is upgraded).
 
 ==== Image updates
 
-// FIXME - point to watchtower Maintenance section instead
+// FIXME - reword; each service has Maintenance section, can automate as desired w/Watchtower
 
 I keep container images up to date with ((Watchtower)) or by hand, with:
 
