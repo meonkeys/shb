@@ -1772,7 +1772,7 @@ Plan on hardware failure.
 If you can afford it, the easiest way to reliably run one server is to _buy two identical servers_.
 Use the second for parts or a ready as-is replacement machine (also called a "`cold spare`").
 
-==== OS updates
+==== OS and image updates
 
 Keep OS packages and container images up to date.
 For the OS:
@@ -1785,9 +1785,9 @@ sudo apt update && sudo apt full-upgrade
 
 Reboot when necessary (e.g. when the kernel is upgraded).
 
-==== Image updates
-
-// FIXME - reword; each service has Maintenance section, can automate as desired w/Watchtower
+Each service in <<Services>> includes a "`Maintenance`" section with update instructions.
+Container images can be updated by hand with Docker compose or automatically by Watchtower.
+See <<Watchtower>> for details.
 
 I keep container images up to date with ((Watchtower)) or by hand, with:
 
