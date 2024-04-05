@@ -2934,6 +2934,11 @@ A service might only have one-way database migrations, for example.
 
 * https://github.com/containrrr/watchtower/issues/90
 
+You may experience an issue where a service is broken by Watchtower.
+If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
+I avoid this by only using Watchtower for non-critical services.
+I don't let Watchtower auto-upgrade my Nextcloud service, for example.
+
 ==== Setup
 
 . Provision with mario.
@@ -2945,11 +2950,6 @@ A service might only have one-way database migrations, for example.
 ** change the version number in `roles/services/templates/ops/watchtower/docker-compose.yml`
 ** re-provision from ((admin computer))
 ** replace containers on the host with `dc watchtower up -d`
-
-You may experience an issue where a service is broken by Watchtower.
-If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
-I avoid this by only using Watchtower for non-critical services.
-I don't let Watchtower auto-upgrade my Nextcloud service, for example.
 
 === Scratch
 
