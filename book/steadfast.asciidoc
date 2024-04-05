@@ -345,7 +345,7 @@ IMPORTANT: something of import,
 
 CAUTION: a cautionary message, and
 
-WARNING: a direct warning.
+WARNING: a specific warning.
 
 Sidebars:
 
@@ -1227,29 +1227,26 @@ Example read-only server-side operations:
 
 Example read-write server-side operations:
 
-* upgrade OS packages: `apt full-upgrade`
-* edit FIXME: `docker-compose pull && docker-compose up -d` (at least for those not auto-upgraded -- see <<Watchtower>>)
+* upgrade OS packages: `sudo apt full-upgrade`
+* change permissions for a folder: `chmod 0700 ~/bin/`
 ****
-
-// FIXME - change read-write example with docker-compose, we'll
-// but what? almost every read-write op should be done with mario/Ansible!
 
 Start a "`monthly maintenance`" checklist like the one found in <<Server maintenance>>.
 Include these read-write operations in your checklist.
+Whenever possible, use mario to perform read-write operations.
 
-Always use `sudo` instead of logging in as the `root` user.
+Always use `sudo` to run privileged commands instead of logging in as the `root` user.
 This ensures every command is captured in `/var/log/auth.log` along with when it was executed, and by whom.
 
 Upgrades may be automated.
-This is appropriate once you have sufficient scale (along with trust/control of the source of the upgrades).
-I choose to do some OS upgrades manually because:
-
-* I manage few systems so the burden is minimal and infrequent
-* Upgrading a package may require testing or manual intervention (e.g. rebooting)
-
+This is appropriate once you have sufficient scale (along with trust and control of the source of the upgrades).
+I usually do OS upgrades manually because I manage few systems so the burden is minimal and infrequent, and upgrading a package may require testing or manual intervention (e.g. rebooting).
 These reasons are similar to the reasons I install the OS itself by hand.
 
-My OS is more a pet than cattle (see "`cattle vs. pets`" in <<Glossary>>), although it is relatively easy to rebuild since I've limited and documented my customizations.
+My OS is more a pet than cattle (see "`cattle vs. pets`" in <<Glossary>>).
+Perhaps it is a pet phoenix.
+When it dies, it will be relatively easy to revive from the ashes.
+It is backed up, there are few manual steps to perform, and all the manual steps are carefully documented.
 
 === Contained services
 
