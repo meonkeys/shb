@@ -1,0 +1,26 @@
+# vim: ft=sh
+
+# Bash completion for `dc` (Docker Compose) helper script.
+
+# Ugly hacks here. 💩
+# I think it makes sense to re-use completions for `docker compose` (v2), but I don't know how to do it gracefully.
+# This only sorta works, and it requires the v1 (Python) `docker-compose` package.
+# If we improve this past needing `docker-compose`, please also remove the package from `mario/ansible/roles/docker/tasks/main.yml`.
+
+if ! [[ $(type -t _docker_compose) == function ]]; then
+    source /usr/share/bash-completion/completions/docker-compose
+fi
+
+function _dc_comp() {
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    if [[ "$COMP_CWORD" -eq 1 ]]; then
+        apps="$(sudo ls /root/ops/)"
+        COMPREPLY=($(compgen -W "$apps" -- "$cur"))
+    fi
+    if [[ "$COMP_CWORD" -gt 1 ]]; then
+        _command_offset "$COMP_CWORD"
+        _docker_compose
+    fi
+}
+
+complete -F _dc_comp dc

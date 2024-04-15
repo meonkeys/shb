@@ -3,6 +3,8 @@
   apt:
     name:
       - docker.io
+      # kept only for /usr/share/bash-completion/completions/docker-compose
+      - docker-compose
       - docker-compose-v2
     state: present
 

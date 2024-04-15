@@ -132,3 +132,11 @@
     owner: root
     group: root
     mode: 0755
+
+- name: Install dc Bash completion
+  copy:
+    src: dc-bash-completion
+    dest: /usr/share/bash-completion/completions/dc
+    owner: root
+    group: root
+    mode: 0644
