@@ -3,7 +3,7 @@
   apt:
     name:
       - docker.io
-      - docker-compose
+      - docker-compose-v2
     state: present
 
 - name: Enable service

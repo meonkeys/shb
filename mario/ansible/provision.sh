@@ -66,6 +66,8 @@ fi
 # shellcheck disable=SC1090
 source "$myConfig"
 
+builtin cd "$DIR"
+
 set -x
 
 $aprun playbook.yml

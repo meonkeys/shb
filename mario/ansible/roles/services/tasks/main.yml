@@ -28,14 +28,14 @@
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
   loop:
-    - { src: 'ops/jellyfin/docker-compose.yml', dest: '/root/ops/jellyfin/docker-compose.yml' }
-    - { src: 'ops/nextcloud/docker-compose.yml', dest: '/root/ops/nextcloud/docker-compose.yml' }
-    - { src: 'ops/scratch/docker-compose.yml', dest: '/root/ops/scratch/docker-compose.yml' }
+    - { src: 'ops/jellyfin/compose.yml', dest: '/root/ops/jellyfin/compose.yml' }
+    - { src: 'ops/nextcloud/compose.yml', dest: '/root/ops/nextcloud/compose.yml' }
+    - { src: 'ops/scratch/compose.yml', dest: '/root/ops/scratch/compose.yml' }
     - { src: 'ops/scratch/custom/Dockerfile', dest: '/root/ops/scratch/custom/Dockerfile' }
     - { src: 'ops/scratch/custom/webpack.config.js', dest: '/root/ops/scratch/custom/webpack.config.js' }
-    - { src: 'ops/traefik/docker-compose.yml', dest: '/root/ops/traefik/docker-compose.yml' }
-    - { src: 'ops/wallabag/docker-compose.yml', dest: '/root/ops/wallabag/docker-compose.yml' }
-    - { src: 'ops/watchtower/docker-compose.yml', dest: '/root/ops/watchtower/docker-compose.yml' }
+    - { src: 'ops/traefik/compose.yml', dest: '/root/ops/traefik/compose.yml' }
+    - { src: 'ops/wallabag/compose.yml', dest: '/root/ops/wallabag/compose.yml' }
+    - { src: 'ops/watchtower/compose.yml', dest: '/root/ops/watchtower/compose.yml' }
 
 - name: Create jellyfin group
   group:

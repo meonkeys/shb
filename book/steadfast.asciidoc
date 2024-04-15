@@ -1222,7 +1222,7 @@ I often do something manually, undo it, then do the same thing with mario to con
 Example read-only server-side operations:
 
 * show per-((container)) resource usage: `sudo docker stats`
-* follow container log messages: `sudo docker-compose logs -f` (run this in a folder containing a `docker-compose.yml` file)
+* follow container log messages: `sudo docker compose logs -f` (run this in a folder containing a `compose.yml` file)
 * check server health: `date; tail /proc/pressure/*`
 
 Example read-write server-side operations:
@@ -1289,8 +1289,8 @@ Unlike suitcases, these containers are practically free.
 
 Images are defined by a file named `Dockerfile`.
 The `Dockerfile` should be tracked in source control.
-Since mario uses ((Docker Compose)), another important file is `docker-compose.yml`.
-Each service will have its own `docker-compose.yml` file.
+Since mario uses ((Docker Compose)), another important file is `compose.yml`.
+Each service will have its own `compose.yml` file.
 These should be kept in source control too.
 For ((sysadmin))s these conventions provide reproducible images and containers.
 For users: predictable, reliable services.
@@ -1331,7 +1331,7 @@ Study the included Traefik architecture diagram to better understand this proces
 image::traefik-architecture.png[]
 
 (((router, Traefik)))
-In the mario source code (or the snippets appearing later), look at the `docker-compose.yml` files for Traefik and Nextcloud, which include:
+In the mario source code (or the snippets appearing later), look at the `compose.yml` files for Traefik and Nextcloud, which include:
 
 * the `websecure` ((entrypoint)), where we accept HTTPS traffic on port 443
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
@@ -1347,13 +1347,13 @@ These two snippets of the mario source show how we set up Traefik for ((Nextclou
 .Traefik and Nextcloud service configuration snippets (admin computer)
 [source,yaml]
 ----
-# snippet from traefik/docker-compose.yml
+# snippet from traefik/compose.yml
 services:
   reverse-proxy:
     command:
       - --entrypoints.websecure.address=:443 <1>
 
-# snippet from nextcloud/docker-compose.yml
+# snippet from nextcloud/compose.yml
 services:
   app:
     labels:
@@ -1782,7 +1782,7 @@ sudo apt update && sudo apt full-upgrade
 Reboot when necessary (e.g. when the kernel is upgraded).
 
 Each service in <<Services>> includes a "`Maintenance notes`" section with update instructions.
-Container images can be updated by hand with Docker compose or automatically by ((Watchtower)).
+Container images can be updated by hand with ((Docker Compose)) or automatically by ((Watchtower)).
 See <<Watchtower>> for details.
 
 ==== Monitoring
@@ -2105,8 +2105,8 @@ None of the services are running yet.
 We'll soon get to how to turn them on and start using them.
 
 Let's first take a step to save a lot of typing.
-Services are started and stopped with Docker compose, which is always run with `docker-compose`.
-When you run `docker-compose`, you must first be in a folder containing a `docker-compose.yml` file.
+Services are started and stopped with Docker compose, which is always run with `docker compose`.
+When you run `docker compose`, you must first be in a folder containing a `compose.yml` file.
 By convention, the name of that folder is the name of the service.
 A typical usage pattern is:
 
@@ -2115,7 +2115,7 @@ A typical usage pattern is:
 ----
 sudo su -
 cd /root/ops/traefik
-docker-compose up -d
+docker compose up -d
 ----
 
 Try to avoid this method.
@@ -2125,7 +2125,7 @@ I recommend this instead:
 .start a service, explicit configuration file (server)
 [source,bash]
 ----
-sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
+sudo docker compose --file /root/ops/traefik/compose.yml up -d
 ----
 
 mario installs a program called `dc` which can be used like so:
@@ -2134,7 +2134,7 @@ mario installs a program called `dc` which can be used like so:
 [source,bash]
 ----
 # equivalent to
-# sudo docker-compose --file /root/ops/traefik/docker-compose.yml up -d
+# sudo docker compose --file /root/ops/traefik/compose.yml up -d
 sudo dc traefik up -d
 
 # will fail with a permission denied error
@@ -2142,7 +2142,7 @@ dc traefik up -d
 ----
 
 TIP: For brevity in this text, I may omit `sudo`.
-sudo is required to run some commands, including `docker-compose`.
+sudo is required to run some commands, including `docker compose`.
 
 ==== Start reverse proxy
 
@@ -2191,7 +2191,7 @@ done
 ----
 
 This will also pull and build images and update containers as necessary.
-Services out of sync with their `docker-compose.yml` file will be restarted.
+Services out of sync with their `compose.yml` file will be restarted.
 This is idempotent: running and up-to-date services are left unchanged.
 
 === Encryption certificates
@@ -2200,17 +2200,17 @@ This is idempotent: running and up-to-date services are left unchanged.
 The certs are issued using a ((DNS)) challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
 The DNS challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
-The DNS challenge is configured using labels in Traefik's `docker-compose.yml` configuration file.
+The DNS challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
 Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
 This is called ((SSL termination)).
 
 (((router, network device)))
-Take a look at a `docker-compose.yml` file for a service included with mario.
+Take a look at a `compose.yml` file for a service included with mario.
 SSL termination is enabled for the service when a `tls` section is defined on a router.
 
 We also have to tell Traefik where to find certs.
-Look for lines with `myresolver` in the `docker-compose.yml` files included with mario.
+Look for lines with `myresolver` in the `compose.yml` files included with mario.
 
 If you see cert warnings while trying to reach your web services, first confirm DNS queries are succeeding.
 
@@ -2240,7 +2240,7 @@ dig traefik.example.com TXT
 ----
 
 Also, examine Traefik logs as indicated in <<Start reverse proxy>>.
-You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/docker-compose.yml`, re-provision, and re-start Traefik.
+You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/compose.yml`, re-provision, and re-start Traefik.
 
 === Tiny test service
 
@@ -2250,7 +2250,7 @@ A test service is useful to confirm networking is functional for Docker containe
 
 This service demonstrates pinging a public server.
 On _your_ server, create the folder `~/ping/`.
-Create a file `docker-compose.yml` in that folder, containing:
+Create a file `compose.yml` in that folder, containing:
 
 .tiny test service config
 [source,yaml]
@@ -2263,7 +2263,7 @@ services:
     command: ping example.com
 ----
 
-In the folder `~/ping/`, run the command `sudo docker-compose up`.
+In the folder `~/ping/`, run the command `sudo docker compose up`.
 Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
@@ -2271,7 +2271,7 @@ You should see something like this:
 [%unbreakable,text]
 -----
 $ cd ~/ping/
-$ sudo docker-compose up
+$ sudo docker compose up
 Creating network "ping_default" with the default driver
 Creating ping_test_1 ... done
 Attaching to ping_test_1
@@ -2410,7 +2410,7 @@ Next, visit `/settings/admin/externalstorages` and install the "`External storag
 
 * upgrades
 ** choose a release tag at https://hub.docker.com/_/nextcloud/
-** change the version number in `roles/services/templates/ops/nextcloud/docker-compose.yml`
+** change the version number in `roles/services/templates/ops/nextcloud/compose.yml`
 ** re-provision from ((admin computer))
 ** replace containers on the host with `dc nextcloud up -d`
 * visit `/settings/admin/overview`
@@ -2783,7 +2783,7 @@ mario will set up a basic Jellyfin server.
 
 I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
 Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
-There's one example of a shared persistent data location in the Nextcloud `docker-compose.yml` file.
+There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
 Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
 
 ==== Setup
@@ -2802,7 +2802,7 @@ For ((GPU)) hardware transcoding see https://jellyfin.org/docs/general/administr
 ==== Maintenance notes
 
 * upgrades
-** change the version number in `roles/services/templates/ops/jellyfin/docker-compose.yml`
+** change the version number in `roles/services/templates/ops/jellyfin/compose.yml`
 ** re-provision from ((admin computer))
 ** replace containers on the host with `dc jellyfin up -d`
 
@@ -2858,7 +2858,7 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 ==== Maintenance notes
 
 * upgrades
-** change the version number in `roles/services/templates/ops/wallabag/docker-compose.yml`
+** change the version number in `roles/services/templates/ops/wallabag/compose.yml`
 ** re-provision from ((admin computer))
 ** replace containers on the host with `dc wallabag up -d`
 ** if you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
@@ -2883,7 +2883,7 @@ sudo dc wallabag \
   --env=prod --no-interaction
 ----
 
-This feeds the Wallabag configuration file to `docker-compose`.
+This feeds the Wallabag configuration file to `docker compose`.
 The `exec` command says we want to run something in the `app` service container.
 That something is `/var/www/wallabag/bin/console`, a utility shipped with Wallabag.
 We tell `console` to run necessary database migrations.
@@ -2924,7 +2924,7 @@ I don't let Watchtower auto-upgrade my Nextcloud service, for example.
 ==== Maintenance notes
 
 * upgrades
-** change the version number in `roles/services/templates/ops/watchtower/docker-compose.yml`
+** change the version number in `roles/services/templates/ops/watchtower/compose.yml`
 ** re-provision from ((admin computer))
 ** replace containers on the host with `dc watchtower up -d`
 
@@ -3003,7 +3003,7 @@ AI is once again the latest hotness.
 
 You can run your own image generators and LLMs (large-language models) at home.
 No GPU is required.
-Here's a `docker-compose.yaml` that'll work with mario to stand up a LocalAI server (https://localai.io).
+Here's a `compose.yml` that'll work with mario to stand up a LocalAI server (https://localai.io).
 
 .example LocalAI service config
 [%linenums,yaml]
