@@ -855,7 +855,7 @@ I chose Docker to manage containers because it is popular and I have experience 
 Your server is also considered a _host_ since it it is a _host_ to Docker containers.
 
 One downside of Docker is how often root access is assumed in example code and popular public images.
-Running as root makes ((container))s simpler but less secure.
+Running as `root` makes ((container))s simpler but less secure.
 
 ===== Go paperless with OCR
 
@@ -1235,7 +1235,7 @@ Start a "`monthly maintenance`" checklist like the one found in <<Server mainten
 Include these read-write operations in your checklist.
 Whenever possible, use mario to perform read-write operations.
 
-Always use `sudo` to run privileged commands instead of logging in as the `root` user.
+Always use `sudo` to run privileged commands instead of logging in as `root`.
 This ensures every command is captured in `/var/log/auth.log` along with when it was executed, and by whom.
 
 Upgrades may be automated.
@@ -1693,7 +1693,7 @@ The learning curve is worth it.
 The guide below walks through creating a simple pool of two mirrored drives, visible at `/data`.
 This is a reasonable starting point, providing increased fault tolerance and better read performance than a single drive.
 
-On the server, run these commands as root, adjusting device names as necessary.
+On the server, run these commands as `root`, adjusting device names as necessary.
 For example, these assume you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`.
 Use `lsblk` to figure out your device names.
 
@@ -2135,20 +2135,17 @@ mario installs a program called `dc` which can be used like so:
 ----
 # equivalent to
 # sudo docker compose --file /root/ops/traefik/compose.yml up -d
-sudo dc traefik up -d
-
-# will fail with a permission denied error
 dc traefik up -d
 ----
 
-TIP: For brevity in this text, I may omit `sudo`.
-sudo is required to run some commands, including `docker compose`.
+TIP: sudo is required to run some commands, including `docker compose`.
+The `dc` script will run `sudo` for you.
 
 ==== Start reverse proxy
 
 Stand up the ((reverse proxy)) first.
 Connect to your server and start ((Traefik)) with `dc traefik up -d`
-Remember `root` access is required for this command, so you actually need to run `sudo dc traefik up -d`.
+Remember root access is required for this command; `dc` uses `sudo` to become `root`.
 
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 While you are waiting, tail the logs with `dc traefik logs -f`.
@@ -2186,7 +2183,7 @@ To stand up everything at once, you could use this shell script:
 [source,bash]
 ----
 for service in $(sudo ls /root/ops); do
-    sudo dc $service up -d
+    dc $service up -d
 done
 ----
 
@@ -2877,7 +2874,7 @@ Apply that fix to a mario system with:
 .force Wallabag database migration (server)
 [source%unbreakable,bash]
 ----
-sudo dc wallabag \
+dc wallabag \
   exec app /var/www/wallabag/bin/console \
   doctrine:migrations:migrate \
   --env=prod --no-interaction

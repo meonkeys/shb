@@ -8,4 +8,4 @@ service=$1
 shift
 
 set -o xtrace
-docker compose --file "/root/ops/$service/compose.yml" "$@"
+sudo docker compose --file "/root/ops/$service/compose.yml" "$@"
