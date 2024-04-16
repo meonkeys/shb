@@ -6,11 +6,12 @@
 ./build.sh
 ```
 
-The build script is meant to be run as a user other than root able to run `docker` commands.
-It runs in Bash on Linux and macOS, maybe Windows too.
-Requires Docker and a few common cli tools.
+The `build.sh` Bash script requires Docker and a few common cli tools.
+It is meant to be run as a user other than `root` with access to Docker.
+It runs on Linux and macOS, maybe Windows too.
+A `Makefile` is also provided as a convenience to short-circuit rapid repeated builds since the fastest possible `build.sh` invocation may still take several seconds.
 
-## Avoid Docker
+## How to build without Docker
 
 Building without Docker is unsupported, but this might make it work for you:
 
