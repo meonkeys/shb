@@ -1697,8 +1697,10 @@ On the server, run these commands as `root`, adjusting device names as necessary
 For example, these assume you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`.
 Use `lsblk` to figure out your device names.
 
+// This code snippet is wrapped by Vim with textwidth=75 since this just happens to be what fits in the current print book margins. 😬
+
 .ZFS setup (server)
-[source%linenums,bash]
+[source,bash]
 ----
 # Create partition tables.
 parted /dev/sdb print
@@ -1706,7 +1708,8 @@ parted /dev/sdb mklabel gpt
 parted /dev/sdc print
 parted /dev/sdc mklabel gpt
 
-# Create ZFS main mirrored pool and set attributes (for all future datasets in this pool).
+# Create ZFS main mirrored pool and set attributes (for all future datasets
+# in this pool).
 zpool create -o ashift=12 -O mountpoint=none main mirror /dev/sdb /dev/sdc
 # For performance.
 zfs set atime=off main
@@ -1717,15 +1720,19 @@ zfs set exec=off main
 zfs set setuid=off main
 zfs set canmount=off main
 
-# Create encrypted dataset in "main" pool. This is the "parent" dataset, we can easily add more later and they'll all be encrypted.
+# Create encrypted dataset in "main" pool. This is the "parent" dataset, we
+# can easily add more later and they'll all be encrypted.
 openssl rand -base64 32 > /root/secure-dataset-key
-zfs create -o encryption=aes-128-gcm -o keyformat=passphrase -o keylocation=file:///root/secure-dataset-key main/secure
+zfs create -o encryption=aes-128-gcm -o keyformat=passphrase \
+    -o keylocation=file:///root/secure-dataset-key main/secure
 zfs set canmount=off main/secure
 
 # Create usable dataset.
 zfs create -o mountpoint=/data main/secure/default
 
-# This might not be necessary if you _never_ want to execute anything in /data. I found I needed it for something within a container (ffmpeg, I think). You can start with exec=off and turn it on later if you want.
+# This might not be necessary if you _never_ want to execute anything in
+# /data. I found I needed it for something within a container (ffmpeg, I
+# think). You can start with exec=off and turn it on later if you want.
 zfs set exec=on data/secure/default
 
 # Examine pools.
@@ -2303,16 +2310,16 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 Note that mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
-For example, to allow WAN access to Nextcloud, make this change:
+For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
 
 .patch for WAN access to Nextcloud (admin computer)
-[source%linenums%unbreakable,diff]
+[source%unbreakable,diff]
 ----
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
 ----
 
-To allow WAN access to Jellyfin, delete the whole line referencing the `lan-only` ((middleware)).
+Similarly for Jellyfin, you may delete the whole line referencing the `lan-only` ((middleware)) in Jellyfin's `compose.yml` if you decide to expose that service on your WAN.
 
 === Nextcloud
 
@@ -2995,13 +3002,12 @@ Modern generative AI workloads like large language model chat and image generati
 
 (((AI)))
 AI is once again the latest hotness.
-
 You can run your own image generators and LLMs (large-language models) at home.
 No GPU is required.
 Here's a `compose.yml` that'll work with mario to stand up a LocalAI server (https://localai.io).
 
 .example LocalAI service config
-[%linenums,yaml]
+[source,yaml]
 ----
 version: '3.6'
 
