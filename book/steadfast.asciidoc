@@ -1827,8 +1827,8 @@ Check the backups regularly to make sure they work.
 Make consistent point-in-time backups of everything on your server, such that the services running are unaware they are even being backed up.
 For example: create a ZFS snapshot and back _that_ up.
 
-NOTE: Backing up using ZFS snapshots _can_ still cause problems.
-For example, ZFS can't guarantee the state of backed-up data for running programs.
+Backing up using ZFS snapshots _can_ still cause problems.
+For example, ZFS doesn't guarantee the state of backed-up data for running programs.
 Say you restored a MariaDB database from backup.
 Unless you flushed and locked tables before taking that ZFS snapshot, MariaDB might have been in the middle of a write operation.
 It would need to recover, and the data it was trying to write may be lost.
