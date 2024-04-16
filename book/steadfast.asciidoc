@@ -1733,7 +1733,7 @@ zfs create -o mountpoint=/data main/secure/default
 # This might not be necessary if you _never_ want to execute anything in
 # /data. I found I needed it for something within a container (ffmpeg, I
 # think). You can start with exec=off and turn it on later if you want.
-zfs set exec=on data/secure/default
+zfs set exec=on main/secure/default
 
 # Examine pools.
 zpool status
