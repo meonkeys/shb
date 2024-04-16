@@ -1698,7 +1698,7 @@ For example, these assume you've added two drives and they were assigned `/dev/s
 Use `lsblk` to figure out your device names.
 
 .ZFS setup (server)
-[%linenums,bash]
+[source%linenums,bash]
 ----
 # Create partition tables.
 parted /dev/sdb print
@@ -1888,7 +1888,7 @@ mario is semi-automated, providing hints on manual steps to take between runs.
 On this first invocation, mario will check for prerequisites and prompt you to enter values specific to your server into a configuration file.
 
 .mario first run output (admin computer)
-[%unbreakable,text]
+[source%unbreakable,text]
 ----
 You don't have a config file. I'll create one for you now.
 
@@ -1915,7 +1915,7 @@ Individual services will be named based on this, e.g. `jellyfin.example.com`.
 Finish editing `config` and run `provision.sh` again.
 
 .mario second run output (admin computer)
-[%unbreakable,text]
+[source%unbreakable,text]
 ----
 You don't have an Ansible inventory file. I'll create one for you now.
 
@@ -1969,7 +1969,7 @@ On Amazon IAM, create a user with permission to update this hosted zone.
 Here's a policy with way too much access that nevertheless works:
 
 .naive Route 53 policy
-[source,json]
+[source%unbreakable,json]
 ----
 {
   "Version": "2012-10-17",
@@ -2002,7 +2002,7 @@ This way you can use the same names inside and outside your LAN and your Let's E
 If you don't have an internal ((DNS)) server, use hostname to IP address mappings in `/etc/hosts` or similar, based on your OS.
 For example:
 
-[source,text]
+[source%unbreakable,text]
 ----
 192.168.1.100	traefik.example.com
 192.168.1.100	cloud.example.com
@@ -2033,7 +2033,7 @@ Map `mario_server` to the name of your server, and `your-username` to the accoun
 Here's an example client configuration template for ((OpenSSH)):
 
 .mario server snippet in OpenSSH client configuration (admin computer)
-[%unbreakable,text]
+[source%unbreakable,text]
 ----
 Host mario_server
   HostName console.example.com
@@ -2111,7 +2111,7 @@ By convention, the name of that folder is the name of the service.
 A typical usage pattern is:
 
 .start a service in its folder (server)
-[source,bash]
+[source%unbreakable,bash]
 ----
 sudo su -
 cd /root/ops/traefik
@@ -2128,10 +2128,10 @@ I recommend this instead:
 sudo docker compose --file /root/ops/traefik/compose.yml up -d
 ----
 
-mario installs a program called `dc` which can be used like so:
+mario installs a program called `dc` to save you some typing:
 
 .start a service with dc (server)
-[source,bash]
+[source%unbreakable,bash]
 ----
 # equivalent to
 # sudo docker compose --file /root/ops/traefik/compose.yml up -d
@@ -2144,9 +2144,7 @@ The `dc` script will run `sudo` for you.
 ==== Start reverse proxy
 
 Stand up the ((reverse proxy)) first.
-Connect to your server and start ((Traefik)) with `dc traefik up -d`
-Remember root access is required for this command; `dc` uses `sudo` to become `root`.
-
+Connect to your server and start ((Traefik)) with `dc traefik up -d`.
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 While you are waiting, tail the logs with `dc traefik logs -f`.
 
@@ -2156,7 +2154,7 @@ You should see something like this for a working ((Traefik)) service:
 // line numbers make it easier to read these very long lines
 
 .typical Traefik logs (server)
-[%linenums,text]
+[source%linenums,text]
 ----
 Attaching to traefik_reverse-proxy_1
 reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Configuration loaded from flags."
@@ -2180,7 +2178,7 @@ See the "`Setup`" section of a particular service for more detail.
 To stand up everything at once, you could use this shell script:
 
 .start all services ad-hoc Bash script (server)
-[source,bash]
+[source%unbreakable,bash]
 ----
 for service in $(sudo ls /root/ops); do
     dc $service up -d
@@ -2250,7 +2248,7 @@ On _your_ server, create the folder `~/ping/`.
 Create a file `compose.yml` in that folder, containing:
 
 .tiny test service config
-[source,yaml]
+[source%unbreakable,yaml]
 ----
 version: '3'
 
@@ -2265,7 +2263,7 @@ Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
 .start tiny test service (server)
-[%unbreakable,text]
+[source%unbreakable,text]
 -----
 $ cd ~/ping/
 $ sudo docker compose up
@@ -2308,7 +2306,7 @@ You may remove this protection by removing the `lan-only` ((middleware)) from th
 For example, to allow WAN access to Nextcloud, make this change:
 
 .patch for WAN access to Nextcloud (admin computer)
-[%linenums%unbreakable,diff]
+[source%linenums%unbreakable,diff]
 ----
 - traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
 + traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
