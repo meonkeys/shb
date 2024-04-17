@@ -1421,7 +1421,7 @@ They will likely share at least some of these traits.
 * Flexible and extensible (easy to customize and extend with plugins and such).
 ****
 
-(See also: <<solution-viability-checklist>>)
+See also: <<solution-viability-checklist>> in <<Alternatives to this book>>.
 
 ((Nextcloud)) (https://nextcloud.com) has many of these traits, with some exceptions.
 One such exception is their apparently secret build script.
@@ -3190,7 +3190,7 @@ Is it annoying about this, reminding me often?
 Has it been around a while, and do I expect it to endure?
 ****
 
-(See also: <<traits-of-good-services>> and <<traits-of-bad-services>>)
+See also: <<traits-of-good-services>> and <<traits-of-bad-services>> in <<Choose services>>.
 
 After brief reviews, I find existing self-hosting solutions generally:
 
