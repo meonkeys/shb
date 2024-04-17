@@ -284,8 +284,8 @@ This includes two original works for you to fork (copy, modify, and share).
 First, the book itself, along with code to generate beautifully typeset versions (see <<How to build this book>>).
 Second, a learning tool called mario (see <<_mario>>).
 
-The license for all original source code related to this book is the GNU AGPL (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-A copy of the AGPL is included in `mario/COPYING`.
+The license for all original source code related to this book is the ((GNU)) ((AGPL)) (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+A copy of the ((AGPL)) is included in `mario/COPYING`.
 
 === Disclaimer
 
@@ -1423,16 +1423,17 @@ They will likely share at least some of these traits.
 
 (See also: <<solution-viability-checklist>>)
 
-(((Nextcloud)))
-Nextcloud (https://nextcloud.com) has many of these traits, with some exceptions.
-One exception is their secret build script (https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341).
-This is convenient for them to maintain control of a complex system, but worse for eventual succession.
-Nextcloud is a fork of ownCloud, after all.
-We should expect another fork and be prepared for it.
+((Nextcloud)) (https://nextcloud.com) has many of these traits, with some exceptions.
+One such exception is their apparently secret build script.
+Nick's explanation in https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341 makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
+But hardcoded secrets are bad practice, it may be an ((AGPL)) license violation, and it makes forking harder.
+It's good practice to visualize succession, to be prepared for an eventual fork and change of ownership.
+Nextcloud is a fork of ((ownCloud)), after all.
 
 The sprawling complexity is also risky.
 "`Nextcloud`" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
-Forking would be costly and time-consuming, and even switching forks might be complex.
+This complexity also makes forking costly and time-consuming.
+Even switching between extant forks (say, migrating back to ownCloud from Nextcloud) may be complex.
 
 ===== Bad for self-hosting
 
@@ -1490,12 +1491,11 @@ See <<Server>> for more lessons learned about resource requirements.
 
 It's called __hard__ware because these problems are _hard_.
 That's fun to say and, in my experience, false.
-
 While there is a learning curve for understanding basic computer hardware components and hardware can certainly fail, there are plenty of wonderfully positive aspects of hardware. For example:
 
-* It's fun.
-* It's tangible and behaves consistently.
+* Hardware is tangible and behaves consistently.
 * Just plug it in, turn it on, and it'll probably work.
+* When it does work, it is quite satisfying.
 
 ==== Server
 
@@ -2633,8 +2633,7 @@ Nice!
 
 ==== Nextcloud vs. ownCloud
 
-(((ownCloud)))
-Nextcloud started as a fork of ownCloud.
+Nextcloud started as a fork of ((ownCloud)).
 At first glance it's a bit difficult to tell the difference.
 
 One way to compare them is via relative activity on GitHub.
