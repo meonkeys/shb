@@ -4,11 +4,7 @@ date: 2024-01-12
 modified: 2024-03-30
 
 
-Here is some sample content.
-
-## Table of contents
-
-Here are the chapters along with brief summaries.
+### Table of contents
 
 1. **Introduction**
 : Welcome, copyright, prerequisites, style.
@@ -29,7 +25,7 @@ Here are the chapters along with brief summaries.
 : Service stack, security, operating system.
 
 1. **Implementation**
-: How to prepare your server and perform maintenance.
+: How to prepare your server for mario and perform maintenance.
 
 1. **mario**
 : How to provision your server (prepare it for running services).

@@ -9,7 +9,7 @@ These rules embody our values.
 They guide how we interact with each other.
 What you see here was created with care by a powerful, tiny team, not a big corporation.
 
-## Community rules
+### Community rules
 
 When we communicate with each other, we promise to:
 
@@ -22,7 +22,7 @@ When we communicate with each other, we promise to:
 We have a lot of i18n and L10n work to do.
 We currently only use English.
 
-## Terms of Service
+### Terms of Service
 
 Participating in our community implies agreement to our terms.
 
@@ -30,7 +30,7 @@ As with our community rules: be kind and act in good faith.
 
 Participation in this community is a privilege, neither a right nor guarantee.
 
-## Privacy Policy
+### Privacy Policy
 
 We collect only those data you directly provide and only to better serve you.
 We will never sell these data.
@@ -44,7 +44,7 @@ This website does not attempt to profile you.
 This website does not track you with cookies.
 
 The server does log your IP address.
-Your IP address will not be associated with your other data above, it is only used for statistics.
+Your IP address will not be associated with your other data above, it is only used for website traffic statistics.
 
 At any time you may contact [the publisher](https://sunrisedata.io) to request a copy of your data on file and/or request your data be deleted.
 We will grant you the right to be forgotten regardless of where you live.

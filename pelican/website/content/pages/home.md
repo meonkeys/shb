@@ -11,16 +11,18 @@ Read on to realize data sovereignty for you and your beloved users.
 The book is in _early access_:
 see [👀 Beta]({filename}/news/beta.md).
 
-## Welcome!
+### Welcome!
 
 You've found _the_ book with _the most_ authentic, hand-crafted, inspiring self-hosting recipe by seasoned tech entrepreneur and self-proclaimed self-hosting expert [Adam Monsen](https://adammonsen.com).
 Benefit from Adam's decades of applied effort distilled into this quick and exciting initiation to data sovereignty.
 
-**Save money, time, and sanity** — This book covers easy and reliable self-hosting of services for your small group of beloved users.
+Save money, time, and sanity
+: Learn an easy and reliable method to self-host services for your small group of beloved users.
 
-**Batteries included** — Corresponding source code will be provided under a Free and Open Source software license.
+Batteries included
+: Corresponding source code is provided under a Free and Open Source software license.
 
-## From the back cover
+### From the back cover
 
 Perils await, dear hero: the self-hosting ecosystem is crowded and confusing.
 
@@ -30,7 +32,7 @@ This book is your personal guide to joy; a battle-tested fast path to success. L
 
 With these three basic components we will summon a robust data haven. We'll take some basic concepts from systems administration and devops to create love, beauty, and deep meaning.
 
-## Tools in the book
+### Tools in the book
 
 The book details why and how to use these tools to self-host:
 
@@ -42,7 +44,7 @@ The book details why and how to use these tools to self-host:
 
 It cover specific services you should host, mostly Nextcloud.
 
-## Origin story
+### Origin story
 
 I researched and wrote the book over 12 months starting in early 2023.
 I've been working on related technologies professionally and personally for the last couple of decades.
@@ -56,14 +58,14 @@ In response to this feedback I wrote a large Background chapter.
 In it, I approach self-hosting with a good deal of justification for why someone should self-host at all.
 I use anecdotes, figures, and tenants of relatable value-based living to provide sufficient motivation for getting through the learning and implementation stages of self-hosting.
 
-## Audience
+### Audience
 
 *Steadfast* primarily targets beginning self-hosters looking for a quick and reliable method to get started. Some basic IT and networking skills are required. A reader should be familiar with Linux, command-line basics, and transferring files to and from a server.
 
 Experienced self-hosters will also benefit when they read, compare, and improve their existing homelabs.
 
-## Author
+### Author
 
-[Adam](https://adammonsen.com) is a kind and savvy FOSS enthusiast. He's been in tech for over 20 years: building, producing, coding, debugging, architecting, leading, managing, debugging some more, lecturing, writing, administering and securing systems and processes, ensuring privacy and compliance; in markets of all maturities, sizes, and scales; startups to big enterprise. He's most proud of his family, growing [Mifos](https://mifos.org), founding [SeaGL](https://seagl.org), selling [C-SATS](https://csats.com), and writing a FOSS book about self-hosting FOSS.
+[Adam](https://adammonsen.com) is a kind and savvy [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) enthusiast. He's been in tech for over 20 years: building, producing, coding, debugging, architecting, leading, managing, debugging some more, lecturing, writing, administering and securing systems and processes, ensuring privacy and compliance; in markets of all maturities, sizes, and scales; startups to big enterprise. He's most proud of his family, growing [Mifos](https://mifos.org), founding [SeaGL](https://seagl.org), selling [C-SATS](https://csats.com), and writing a FOSS book about self-hosting FOSS.
 
 Adam is privileged and lucky to have given talks and workshops at a handful of conferences ([LFNW](https://lfnw.org/), [SeaGL](https://seagl.org), [LibrePlanet](https://libreplanet.org), [OSCON](https://en.wikipedia.org/wiki/O%27Reilly_Open_Source_Convention), [FOSSY](https://fossy.us/)) and various other engagements. There's a full list [here](https://adammonsen.com/talks/).

@@ -2,8 +2,7 @@ title: 👀 Beta
 category: announcement
 date: 2024-02-14
 
-
-## Early access to *Steadfast Self-Hosting*
+### Early access to *Steadfast Self-Hosting*
 
 You're invited! Be a part of a select group of individuals with the power to make a *great* book *excellent*.
 This is a unique opportunity to influence the direction of the book prior to printing, publication, and general availability.
@@ -27,7 +26,7 @@ You may seek an exception to these expectations; just ask.
 
 Please [contact me]({filename}/pages/contact.md) and let me know you want to be a beta reader.
 
-## How it works
+### How it works
 
 Yep, I really want you to read my book for free!
 I'm doing this to perfect the pre-print book and raise awareness about it.
