@@ -4,16 +4,23 @@ menu_order_key: 1
 
 ## Source code
 
-TODO - refer to source control repository
+The source code is available to members of the [beta]({filename}/news/beta.md).
 
 ## Install mario
 
-TODO - refer to mario `Readme.md`
+See `mario/Readme.md` in the source code.
 
 ## Translate
 
-TODO - add or refer to translator instructions
+[Contact me]({filename}/pages/contact.md) about translating the book.
+The entire book is contained in `steadfast.asciidoc`, a plain text file in [Asciidoc](https://en.wikipedia.org/wiki/AsciiDoc) markup.
+I can help with the code, config, and deploy changes necessary to accommodate the translation.
+I'm thinking we might want translations in forked repositories, and it might also be nice to have them all in one place.
+I haven't decided yet.
 
 ## Contributor guidelines
 
-TODO - add or refer to translator instructions here or in [rules]({filename}/pages/rules.md)
+See:
+
+1. [Rules]({filename}/pages/rules.md).
+1. "Patches welcome" in the top-level Readme in the source code.
