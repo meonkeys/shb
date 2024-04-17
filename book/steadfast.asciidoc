@@ -1510,8 +1510,7 @@ How will you increase storage?
 What about bursty workloads?
 If you start with something too small you won't have enough speed nor expandability.
 
-I've worked with quite a few different servers and I did my homework for this self-hosting adventure (mostly asking my buddy Rob), so I had a decent idea of what I wanted.
-
+I've worked with quite a few different servers and I did my homework for this self-hosting adventure, so I had a decent idea of what I wanted.
 I chose something powerful, cheap, and fast with plenty of storage and room to grow.
 I sought professional commodity hardware for its replace-ability.
 It can handle a reasonable amount of bursty compute needs, including building Docker images, flurries of user activity, and some generative ((AI)) (even without a GPU).
