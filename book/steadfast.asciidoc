@@ -1821,30 +1821,28 @@ Follow all logged events for the host with `journalctl -f`.
 
 Having useful backups is one critically important practice you'll rarely get credit for doing well, only blame if it is done poorly.
 
-Create ((backups)) following the 3-2-1 rule of thumb: make *3* backups.
-Store at least *2* local copies on different media.
-Have *1* remote backup.
-
-Check the backups regularly to make sure they work.
+Check your backups regularly to make sure they work.
 
 (((ZFS, snapshots)))
-Make consistent point-in-time backups of everything on your server, such that the services running are unaware they are even being backed up.
+Make consistent backups of everything on your server, such that the services running are unaware they are even being backed up.
 For example: create a ZFS snapshot and back _that_ up.
 
 Backing up using ZFS snapshots _can_ still cause problems.
-For example, ZFS doesn't guarantee the state of backed-up data for running programs.
-Say you restored a MariaDB database from backup.
-Unless you flushed and locked tables before taking that ZFS snapshot, MariaDB might have been in the middle of a write operation.
-It would need to recover, and the data it was trying to write may be lost.
+For example, ZFS doesn't guarantee consistent state of backed-up data for running programs.
+Say you restored a ((MariaDB)) database from backup.
+Unless you flushed and locked tables before taking that ZFS snapshot, MariaDB might have been in the middle of a write operation with in-memory data not yet flushed to disk.
+It would need to recover, and the data MariaDB was trying to write may be lost.
 This manner of data loss is rare, and the risk is acceptable for the typical homelab.
 
-I recommend ((restic)) (https://restic.net) or ((Borg)) (https://borgbackup.org).
+[%unbreakable]
+TIP: Create ((backups)) following the 3-2-1 rule of thumb: make *3* backups.
+Store at least *2* local copies on different media.
+Have *1* remote backup.
+
+I recommend a backup strategy combining ZFS snapshots with either ((restic)) (https://restic.net) or ((Borg)) (https://borgbackup.org) for sending them offsite.
 Here's a decent comparison of those two: https://reddit.com/r/BorgBackup/comments/v3bwfg/.
 
-I use `zfs-auto-snapshot` locally to be able to quickly get at old versions of files, but I don't count this as a backup.
-mario installs `zfs-auto-snapshot` for you.
-
-Here are some example commands demonstrating how to create a consistent point-in-time backup of a ((ZFS)) filesystem.
+Here are some example commands demonstrating how to back up a ((ZFS)) filesystem.
 You can use these to get started writing your own backup script.
 
 .example backup script (server)
@@ -1863,6 +1861,7 @@ sudo zfs destroy -R main/secure/data@$snapName
 Once it is done, a new read-only folder will appear under `/data/.zfs/snapshot` containing the snapshot.
 
 <2> This line assumes you have installed and configured ((restic)).
+It can send your snapshot offsite, following the 3-2-1 rule of thumb.
 
 == mario
 
@@ -2482,7 +2481,7 @@ If you use mario to deploy Nextcloud, you'll start with a nominally performant s
 I've included the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html) into mario.
 
 Troubleshooting performance issues can be challenging.
-An issue about mounts (https://github.com/nextcloud/server/issues/35311) had me under the hood with MariaDB for a while.
+An issue about mounts (https://github.com/nextcloud/server/issues/35311) had me under the hood with ((MariaDB)) for a while.
 They've since fixed the root cause (https://github.com/nextcloud/server/pull/33540) so it isn't a problem for new installations.
 
 ==== Customization
