@@ -3051,7 +3051,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.localai-https.entrypoints=websecure"
-      - "traefik.http.routers.nextcloud-https.rule=Host(`localai.example.com`)"
+      - "traefik.http.routers.localai-https.rule=Host(`localai.example.com`)"
       - "traefik.http.routers.localai-https.tls.certresolver=myresolver"
       - "traefik.http.routers.localai-https.middlewares=lan-only"
     networks:
