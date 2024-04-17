@@ -14,16 +14,16 @@ services:
       TRUSTED_PROXIES: traefik_reverse-proxy_1
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nextcloud-https.entrypoints=websecure"
-      - "traefik.http.routers.nextcloud-https.rule=Host(`cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
-      - "traefik.http.routers.nextcloud-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only"
-      - "traefik.http.middlewares.nextcloud_headers.headers.stsSeconds=155520011"
-      - "traefik.http.middlewares.nextcloud_headers.headers.stsIncludeSubdomains=true"
-      - "traefik.http.middlewares.nextcloud_headers.headers.stsPreload=true"
+      - "traefik.http.routers.nc-https.entrypoints=websecure"
+      - "traefik.http.routers.nc-https.rule=Host(`cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.nc-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only"
+      - "traefik.http.middlewares.nc-head.headers.stsSeconds=155520011"
+      - "traefik.http.middlewares.nc-head.headers.stsIncludeSubdomains=true"
+      - "traefik.http.middlewares.nc-head.headers.stsPreload=true"
       # These are required for groupware (calendar, contacts, tasks)
-      - "traefik.http.middlewares.nextcloud_redirect.redirectregex.regex=/.well-known/(card|cal)dav"
-      - "traefik.http.middlewares.nextcloud_redirect.redirectregex.replacement=/remote.php/dav/"
+      - "traefik.http.middlewares.nc-redir.redirectregex.regex=/.well-known/(card|cal)dav"
+      - "traefik.http.middlewares.nc-redir.redirectregex.replacement=/remote.php/dav/"
     volumes:
       - /data/nextcloud/root:/var/www/html:rw
       - /data/shared/media/video:/data/video:rw

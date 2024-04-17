@@ -1337,12 +1337,15 @@ In the mario source code (or the snippets appearing later), look at the `compose
 
 * the `websecure` ((entrypoint)), where we accept HTTPS traffic on port 443
 * the `app` service definition for Nextcloud, which includes Traefik routing labels
-* the `Host(...)` rule in the `nextcloud-https` router
+* the `Host(...)` rule in the `nc-https` router
 
-NOTE: The symbols `app`, `websecure`, and `nextcloud-https` are arbitrary.
+[%unbreakable]
+NOTE: The symbols `app`, `websecure`, and `nc-https` are arbitrary.
+I used short names to keep them from wrapping across lines.
+You may wish to use longer, more descriptive names.
 
 The routing labels wire together the entrypoint and router with the service under which they are defined.
-That is: `websecure` to `nextcloud-https` to `app`.
+That is: `websecure` to `nc-https` to `app`.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
@@ -1359,15 +1362,15 @@ services:
 services:
   app:
     labels:
-      - "traefik.http.routers.nextcloud-https.entrypoints=websecure" <2>
-      - "traefik.http.routers.nextcloud-https.rule=Host(`cloud.example.com`)" <3>
+      - "traefik.http.routers.nc-https.entrypoints=websecure" <2>
+      - "traefik.http.routers.nc-https.rule=Host(`cloud.example.com`)" <3>
 ----
 
 <1> Define ((entrypoint)) `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
 
-<2> Connect the `websecure` entrypoint with the `nextcloud-https` router on the `app` service.
+<2> Connect the `websecure` entrypoint with the `nc-https` router on the `app` service.
 
-<3> Use the hostname rule with the `nextcloud-https` router.
+<3> Use the hostname rule with the `nc-https` router.
 
 (((router, Traefik)))
 Each self-hosted service will have its own router.
@@ -1384,7 +1387,6 @@ It takes care of authentication and authorization and all that good stuff.
 
 I'm interested in Authentik (https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
 I want to see it running well for a good while before adding it to mario.
-
 Some of the other self-hosting solutions mentioned in <<What is this book _not_?>> do include FOSS central identity management.
 
 == Implementation
@@ -2346,8 +2348,8 @@ For example, to allow WAN access to Nextcloud, make this change in Traefik's `co
 .patch for WAN access to Nextcloud (admin computer)
 [source%unbreakable,diff]
 ----
-- traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect,lan-only
-+ traefik.http.routers.nextcloud-https.middlewares=nextcloud_headers,nextcloud_redirect
+- traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
++ traefik.http.routers.nc-https.middlewares=nc-head,nc-redir
 ----
 
 Similarly for Jellyfin, you may delete the whole line referencing the `lan-only` ((middleware)) in Jellyfin's `compose.yml` if you decide to expose that service on your WAN.
