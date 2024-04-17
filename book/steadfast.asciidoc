@@ -2645,14 +2645,13 @@ Judge for yourself: compare https://github.com/owncloud/core/pulse with https://
 
 (((Nextcloud, Office)))
 https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "`office`" and their plans for it as a suite of related tools.
-They clearly intend a holistic, integrated office experience, and Nextcloud can be configured and used in this manner.
-That page covers editing docs and spreadsheets collaboratively, along with uses for the Notes, Collectives, and Tables apps.
+They clearly intend a holistic, integrated office experience, and Nextcloud can be configured to be used in this manner.
+That page covers editing office documents (rich text and spreadsheets) collaboratively, along with uses for the Notes, Collectives, and Tables apps.
 It provides some clever and useful workflow ideas.
 
-Given that wide a scope, ((groupware)) should be part of "`office`" too, so instead let's for now focus specifically on collaborative editing of documents, spreadsheets, and the like.
-
-Providing collaborate editing within Nextcloud requires an app called Nextcloud Office (https://apps.nextcloud.com/apps/richdocuments) as well as a separate backend service.
-Should you desire to add this functionality to your mario-provisioned server, Either ((Collabora)) or ((ONLYOFFICE)) may serve as the backend for a ((mario)) server.
+Given that wide a scope, ((groupware)) should be part of "`office`" too, so instead let's for now focus specifically on collaborative editing of office documents.
+Doing this within Nextcloud requires an app called Nextcloud Office (https://apps.nextcloud.com/apps/richdocuments) as well as a separate backend service.
+Should you desire to add this functionality to your mario-provisioned server, either ((Collabora)) or ((ONLYOFFICE)) may serve as the backend for a ((mario)) server.
 My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it's clear Collabora development is flourishing while ONLYOFFICE is stagnant.
 
 ==== Bugs
