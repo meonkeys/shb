@@ -3319,7 +3319,7 @@ Practically it means that you might become attached to something impractical.
 ==== The SMOP trap
 
 With proprietary software, if it can't do something, it's easier to give up.
-Because, what's the point.
+Because, what's the point?
 If the change/customization/feature you want doesn't help _their_ bottom line (or their timeline), _you're_ not going to get it.
 
 That never happens with FOSS.
@@ -3334,7 +3334,9 @@ It's hard sometimes, and it is also a great opportunity to learn about software 
 
 ==== Features
 
-Easy: when you pick a service to stand up, it either has the features you need or it doesn't.
+One adage of FOSS is "`release early, release often`".
+If you stumble onto an early release of something, it might not suit your needs.
+When you pick a service to stand up, it either has the features you need or it doesn't.
 If it doesn't and you don't want another hobby, move on.
 
 ==== Quality
@@ -3358,8 +3360,8 @@ Too much choice is good and challenging problem to have.
 === When FOSS is better
 
 (((FOSS, advantages)))
-In theory: always, because you can choose FOSS that lines up with your values.
-In practice: eventually.
+In theory: Always, because you can choose FOSS that lines up with your values.
+In practice: Eventually.
 FOSS lags behind non-FOSS because companies make _lots_ of money at the leading edge of technology (whether or not it aligns with values).
 Some areas where FOSS is especially behind:
 
