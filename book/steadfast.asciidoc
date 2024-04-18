@@ -42,14 +42,6 @@ _{doctitle}_
 --
 
 --
-First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
---
-
---
-Seattle, Washington, USA.
---
-
---
 {copyright}
 --
 
@@ -61,6 +53,18 @@ See <<Copyright and license>>.
 --
 The beautiful cover art was created by my daughter using Krita (https://krita.org).
 You'll find more of her excellent work throughout the book.
+--
+
+--
+Technical editing by Lenny Wondra (https://www.wondra.codes).
+--
+
+--
+First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
+--
+
+--
+Seattle, Washington, USA.
 --
 
 ifdef::shb-printPDF[]
@@ -3538,7 +3542,7 @@ Thanks to Deb Nicholson for writing the meaningful Foreword.
 
 Thanks to my family and friends for tolerating my protracted ((FOSS)) self-hosting boondoggles, including this book.
 
-Thanks to Pro Git 2--my inspiration to switch to Asciidoctor.
+Thanks to _Pro Git 2_, my inspiration to switch to Asciidoctor.
 
 Thanks to the contributors to the myriad FOSS programs I used to create this book, especially John MacFarlane and the Pandoc team, Dan Allen and the Asciidoctor team, and Bram Moolenaar and the Vim team (rest in peace, Bram).
 
