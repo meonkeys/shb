@@ -51,16 +51,16 @@ See <<Copyright and license>>.
 --
 
 --
-The beautiful cover art was created by my daughter using Krita (https://krita.org).
+The beautiful cover art was created by my daughter using https://krita.org[Krita].
 You'll find more of her excellent work throughout the book.
 --
 
 --
-Technical editing by Lenny Wondra (https://www.wondra.codes).
+Technical editing by https://www.wondra.codes[Lenny Wondra].
 --
 
 --
-First published in 2024 by Sunrise Data Press (https://sunrisedata.io).
+First published in 2024 by https://sunrisedata.io[Sunrise Data Press].
 --
 
 --
@@ -283,7 +283,7 @@ For example, other rights such as publicity, privacy, or moral rights may limit 
 
 ==== Copy this book's code, too
 
-See <<Source code>>.
+See <<More resources>>.
 This includes two original works for you to fork (copy, modify, and share).
 First, the book itself, along with code to generate beautifully typeset versions (see <<How to build this book>>).
 Second, a learning tool called mario (see <<_mario>>).
@@ -331,7 +331,10 @@ Text formatting:
 |`zpool status -t` |Inline command, filename, username, password, or variable.
 Longer snippets of console text use language-specific syntax highlighting.
 |kbd:[Ctrl+c] |Key(s) pressed on the keyboard.
-|https://example.com |Working/actual website URL (https scheme is assumed and omitted).
+|https://example.com |Bare real website URL.
+https scheme is assumed and omitted.
+|https://example.com[Example domain] |Named real website URL.
+Full URL appears in print version.
 |`\https://cloud.example.com` |Non-working example URL.
 Replace `.example.com` with your actual domain name.
 |<<System design>> |Cross-reference to another section or chapter.
@@ -383,7 +386,8 @@ I'm a dad, tech entrepreneur, and ((FOSS)) (free and open source software) enthu
 I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write.
 I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
 
-I'm most proud of my family, growing Mifos (https://mifos.org), founding ((SeaGL)) (https://seagl.org), selling C-SATS (https://csats.com), and writing this book.
+(((SeaGL)))
+I'm most proud of my family, growing https://mifos.org[Mifos], founding https://seagl.org[SeaGL], selling https://csats.com[C-SATS], and writing this book.
 
 I've been running my own services for decades.
 I started with a humble blog running on a buddy's machine.
@@ -395,7 +399,7 @@ A simple network drive and file sync were no longer enough; I wanted better serv
 
 At the start of the pandemic our family tech needs increased sharply.
 We were all stuck at home and online, and I was wary of companies swooping in to capitalize on our captivity.
-At the same time, I decided to de-Google (https://en.wikipedia.org/wiki/DeGoogle).
+At the same time, I decided to https://en.wikipedia.org/wiki/DeGoogle[de-Google].
 The family needs and my de-Googling coincided well.
 Self-hosting was a serendipitous fit.
 Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated with many self-hosting experiments.
@@ -449,9 +453,9 @@ It does make a difference to have your own copy.
 You might lose access to something you "`bought`" or it might even change right under your nose.
 More on this:
 
-* _PlayStation To Delete A Ton Of TV Shows Users Already Paid For_ by Ethan Gach (https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164)
-* _What is DRM?_ by the Free Software Foundation (https://defectivebydesign.org/what_is_drm)
-* _It's Their Content, You're Just Licensing it_ by Reggie Ugwu (https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html)
+* https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164[PlayStation To Delete A Ton Of TV Shows Users Already Paid For] by Ethan Gach
+* https://defectivebydesign.org/what_is_drm[What is DRM?] by the Free Software Foundation
+* https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html[It's Their Content, You're Just Licensing it] by Reggie Ugwu
 
 Saving copies of data someone else is hosting for you is fine.
 Self-hosting goes a step beyond, giving you far-reaching control of how your data are used and shared.
@@ -575,11 +579,13 @@ See also: <<Alternatives to this book>>.
 
 Why are you talking like a caveman?
 
-I wrote the book originally in Markdown plain text in my steadfast text editor, ((Vim)) (https://www.vim.org).
-I applied generous amounts of ((Pandoc)) (https://pandoc.org), time, and love.
+(((Vim)))
+I wrote the book originally in Markdown plain text in my steadfast text editor, https://www.vim.org[Vim].
+(((Pandoc)))
+I applied generous amounts of https://pandoc.org[Pandoc], time, and love.
 Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
-While revising, I came across the build system for Pro Git 2 (https://github.com/progit/progit2 - thank you Scott and Ben!).
-In short order I converted the book to AsciiDoc (https://asciidoc.org) and ported my typsetting code to Asciidoctor (https://asciidoctor.org).
+While revising, I came across the build system for https://github.com/progit/progit2[Pro Git 2] (thank you Scott and Ben!).
+In short order I converted the book to https://asciidoc.org[AsciiDoc] and ported my typsetting code to https://asciidoctor.org[Asciidoctor].
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code--you're welcome to hack away at it.
@@ -602,7 +608,7 @@ Seattle.
 
 ==== Hey now.
 
-Admittedly, those last few sections exist so I could cover all 5 Ws (https://en.wikipedia.org/wiki/Five_Ws) and include the caveman gimmick.
+Admittedly, those last few sections exist so I could cover all https://en.wikipedia.org/wiki/Five_Ws[5 Ws] and include the caveman gimmick.
 
 === A note on FOSS
 
@@ -748,7 +754,7 @@ Just don't keep your server outside.
 
 Here's a real example of a positive outcome I realized from self-hosting.
 
-My family has a homemade chicken safety system (https://github.com/meonkeys/rpi-chx-code) and the videos are important to me.
+My family has a https://github.com/meonkeys/rpi-chx-code[homemade chicken safety system] and the videos are important to me.
 I used to just plop them on YouTube because hey, it's free and it "`just works`", right?
 
 Except when it doesn't.
@@ -866,7 +872,8 @@ Another smile-worthy advancement is free ((OCR)) (optical character recognition)
 I keep trying to "`go paperless`" by scanning in all my paper files.
 After scanning papers I am shouldered with, unsurprisingly, a bunch of PDFs of images.
 (((Nextcloud, search)))
-These can be easily OCR'd and managed with tools like ((Paperless-ngx)) (https://docs.paperless-ngx.com/) and Nextcloud Full text search (https://apps.nextcloud.com/apps/fulltextsearch).
+(((Paperless-ngx)))
+These can be easily OCR'd and managed with tools like https://docs.paperless-ngx.com/[Paperless-ngx] and https://apps.nextcloud.com/apps/fulltextsearch[Nextcloud Full text search].
 
 ===== Jellyfin works well
 
@@ -900,9 +907,9 @@ See <<Customization>>.
 I gave up trying to get Jitsi running in Docker.
 I recall lots of open ports or port ranges being a problem.
 This service might be easier to self-host in a virtual machine.
-There's also a workaround assigning port ranges to specific IP addresses, but this is beyond the scope of this book.
 
-I will eventually give it another shot because logging in is now required when using the free 8x8-hosted Jitsi service (see https://jitsi.org/blog/authentication-on-meet-jit-si/).
+There's also a workaround assigning port ranges to specific IP addresses, but this is beyond the scope of this book.
+I will eventually give it another shot because https://jitsi.org/blog/authentication-on-meet-jit-si/[logging in is now required when using the free 8x8-hosted Jitsi service].
 
 ==== Absorb them all
 
@@ -923,7 +930,7 @@ To yourself _and your users_.
 
 I love this part.
 I get excited about what's to come, and I know a solid plan makes a vision real.
-I start by capturing my plans in a Markdeep (https://casual-effects.com/markdeep/) file, including a calendar, budget, network diagram, to-do list and notes.
+I start by capturing my plans in a https://casual-effects.com/markdeep/[Markdeep] file, including a calendar, budget, network diagram, to-do list and notes.
 
 Make _your_ plan.
 Maintain and improve your plan along with your server.
@@ -1085,7 +1092,7 @@ WAN access is--informally--remote access to services and data running in your ((
 One means of allowing WAN access to a service is by port forwarding ((HTTPS)) traffic through your router/firewall.
 Port forwarding without taking additional security measures is both risky and convenient.
 
-NOTE: Consider alternatives to port forwarding, such as using headscale to set up your own tailnet (https://headscale.net).
+NOTE: Consider alternatives to port forwarding, such as using https://headscale.net[headscale] to set up your own tailnet.
 
 ==== Threat model
 
@@ -1171,12 +1178,9 @@ Always use HTTPS.
 
 Further reading:
 
-_Personal Cybersecurity: How to Avoid and Recover from Cybercrime_ by Marvin Waschke::
-  https://oreilly.com/library/view/personal-cybersecurity-how/9781484224304/
-_Personal Privacy Threat Modeling (With LOTS Of Examples)_ by Eliza::
-  https://modernprivatelife.com/how-to-choose-privacy-threat-model/
-_How I learned to stop worrying (mostly) and love my threat model_ by Sean Gallagher::
-  https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/
+* https://oreilly.com/library/view/personal-cybersecurity-how/9781484224304/[Personal Cybersecurity: How to Avoid and Recover from Cybercrime] by Marvin Waschke
+* https://modernprivatelife.com/how-to-choose-privacy-threat-model/[Personal Privacy Threat Modeling (With LOTS Of Examples)] by Eliza
+* https://arstechnica.com/information-technology/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/[How I learned to stop worrying (mostly) and love my threat model] by Sean Gallagher
 
 === Filesystem
 
@@ -1197,12 +1201,9 @@ Docker volumes (persistent container data) will be on ZFS.
 The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
 To learn more about ZFS, see:
 
-_Bitrot and atomic COWs: Inside "`next-gen`" filesystems_ by Jim Salter::
-  https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/
-_ZFS 101—Understanding ZFS storage and performance_ by Jim Salter::
-  https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/
-_ZFS (Debian wiki page)_ by various authors::
-  https://wiki.debian.org/ZFS
+* https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/[Bitrot and atomic COWs: Inside "`next-gen`" filesystems] by Jim Salter
+* https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/[ZFS 101—Understanding ZFS storage and performance] by Jim Salter
+* https://wiki.debian.org/ZFS[ZFS (Debian wiki page)] by various authors
 
 Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacement cache), resilvering, scrubbing, `ashift`, and `recordsize`.
 
@@ -1261,7 +1262,7 @@ mario uses ((Docker)) to run services in containers.
 Docker is but one of many valid choices for how to isolate and run services.
 ((VM))s are also often used for this purpose.
 See <<Containers == happy>> for a comparison of the two.
-If you're interested in ((VM))s (instead of or in addition to containers), check out Proxmox (https://proxmox.com).
+If you're interested in ((VM))s (instead of or in addition to containers), check out https://proxmox.com[Proxmox].
 
 ((Kubernetes)) also works well for running services.
 Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
@@ -1277,7 +1278,7 @@ Docker Compose is a good fit for a single-server setup.
 
 It is also good to avoid intermingling services and their dependencies along with everything else on the server's primary storage.
 Having everything on one filesystem is easy at first, for one service.
-It gets more complicated the more services you add (see https://en.wikipedia.org/wiki/Dependency_hell).
+https://en.wikipedia.org/wiki/Dependency_hell[It gets more complicated the more services you add].
 
 Many of the desperate self-hoster support requests I see in FOSS communities are about incompatibilities between this or that version of PHP or relational database between two different services.
 Docker mitigates this by bundling dependencies.
@@ -1390,7 +1391,7 @@ I wanted to include FOSS central identity management in mario but I haven't figu
 When I do, this should give users a way to log in once and get to all the different mario-hosted services.
 It takes care of authentication and authorization and all that good stuff.
 
-I'm interested in Authentik (https://goauthentik.io) because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
+I'm interested in https://goauthentik.io[Authentik] because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
 I want to see it running well for a good while before adding it to mario.
 Some of the other self-hosting solutions mentioned in <<What is this book _not_?>> do include FOSS central identity management.
 
@@ -1430,9 +1431,10 @@ They will likely share at least some of these traits.
 
 See also: <<solution-viability-checklist>> in <<Alternatives to this book>>.
 
-((Nextcloud)) (https://nextcloud.com) has many of these traits, with some exceptions.
+(((Nextcloud)))
+https://nextcloud.com[Nextcloud] has many of these traits, with some exceptions.
 One such exception is their apparently secret build script.
-Nick's explanation in https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341 makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
+https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341/2[Nick's explanation] makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
 But hardcoded secrets are bad practice, it may be an ((AGPL)) license violation, and it makes forking harder.
 It's good practice to visualize succession, to be prepared for an eventual fork and change of ownership.
 Nextcloud is a fork of ((ownCloud)), after all.
@@ -1459,10 +1461,10 @@ Here are some indications a self-hosted service might be one to avoid.
 * Only geared towards enterprise: self-hosting instructions are complex or missing entirely.
 * Constant annoying upsells/nags.
 * Intentional vendor lock-in: monopolistic tendencies or use of closed/proprietary standards/services.
-* Open core (https://en.wikipedia.org/wiki/Open-core_model).
+* https://en.wikipedia.org/wiki/Open-core_model[Open core].
 ****
 
-Habitica (https://habitica.com) demonstrates several of these.
+https://habitica.com[Habitica] demonstrates several of these.
 
 ==== Map services to resources
 
@@ -1542,12 +1544,9 @@ Five users though?
 That's less than the cloud server hardware required for a ((mobile)) device making use of Google's or Apple's clouds.
 Further reading on this topic:
 
-_The Surprisingly Large Energy Footprint of the Digital Economy_ by Bryan Walsh::
-  https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/
-_The spiralling energy consumption behind your smart phone_ by Betsy Reed::
-  https://theguardian.com/sustainable-business/2014/sep/10/energy-consumption-behind-smart-phone
-_The secret energy impact of your phone_ by Owen Williams::
-  https://increment.com/energy-environment/the-secret-energy-impact-of-your-phone/
+* https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/[The Surprisingly Large Energy Footprint of the Digital Economy] by Bryan Walsh
+* https://theguardian.com/sustainable-business/2014/sep/10/energy-consumption-behind-smart-phone[The spiralling energy consumption behind your smart phone] by Betsy Reed
+* https://increment.com/energy-environment/the-secret-energy-impact-of-your-phone/[The secret energy impact of your phone] by Owen Williams
 
 A rackmount server like mine can handle far more than 5 users, assuming they aren't all trying to transcode video.
 
@@ -1671,7 +1670,7 @@ At each step in the interactive Ubuntu installer, accept the default or write do
 
 . *Install Ubuntu*.
 Pick the latest ((Ubuntu)) ((LTS)) release, e.g. 64-bit Ubuntu 22.04 LTS server.
-Tutorial: https://ubuntu.com/tutorials/install-ubuntu-server.
+Refer to https://ubuntu.com/tutorials/install-ubuntu-server[this tutorial] for step-by-step instructions.
 . Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
 . When you set up a user account (called a "`Profile`" in the installer), *note the username and password*. You'll need these in <<Connect to server>>.
@@ -1683,7 +1682,7 @@ Next steps:
 
 . Optional: after installing Ubuntu, add two ((HDD))s and format them with ((ZFS)).
 See <<ZFS setup>>.
-. Download mario onto your ((admin computer)) (a separate computer from your server). See <<Source code>>.
+. Download mario onto your ((admin computer)) (a separate computer from your server). See <<More resources>>.
 . Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
 
 ==== Full-disk encryption
@@ -1846,8 +1845,10 @@ TIP: Create ((backups)) following the 3-2-1 rule of thumb: make *3* backups.
 Store at least *2* local copies on different media.
 Have *1* remote backup.
 
-I recommend a backup strategy combining ZFS snapshots with either ((restic)) (https://restic.net) or ((Borg)) (https://borgbackup.org) for sending them offsite.
-Here's a decent comparison of those two: https://reddit.com/r/BorgBackup/comments/v3bwfg/.
+(((restic)))
+(((Borg)))
+I recommend a backup strategy combining ZFS snapshots with either https://restic.net[restic] or https://borgbackup.org[Borg] for sending them offsite.
+https://reddit.com/r/BorgBackup/comments/v3bwfg/[Here's a decent comparison of restic vs. Borg].
 
 Here are some example commands demonstrating how to back up a ((ZFS)) filesystem.
 You can use these to get started writing your own backup script.
@@ -1873,7 +1874,7 @@ It can send your snapshot offsite, following the 3-2-1 rule of thumb.
 == mario
 
 mario is a tool I built to help you set up and maintain a server.
-It is mainly a wrapper around the well-established Ansible system provisioner (https://ansible.com).
+It is mainly a wrapper around the well-established https://ansible.com[Ansible] system provisioner.
 Everything I'll do with mario can also be done manually, directly on the server.
 The advantage of using mario instead is that each change (say, installing a package) will be made consistently and with an audit trail.
 The real payoff of this practice is realized when you collaborate with others, including your future self.
@@ -1881,7 +1882,7 @@ It's not often easy to remember what you did a year ago and why.
 
 Once your server is online following <<OS install>>, use mario to configure and start services.
 
-Please download the <<Source code>>.
+Please download the source code (see <<More resources>>).
 It'll be helpful to have this handy so you can follow along as you read.
 
 mario can be found alongside this book, in the `mario/` folder.
@@ -2237,8 +2238,8 @@ This is idempotent: running and up-to-date services are left unchanged.
 === Encryption certificates
 
 ((Traefik)) will automatically install ((Let's Encrypt)) certs to encrypt HTTP traffic.
-The certs are issued using a ((DNS)) challenge (https://doc.traefik.io/traefik/https/acme/#dnschallenge).
-The DNS challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
+The certs are issued using a https://doc.traefik.io/traefik/https/acme/#dnschallenge[DNS challenge].
+The ((DNS)) challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
 There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
 The DNS challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
@@ -2457,7 +2458,7 @@ Next, visit `/settings/admin/externalstorages` and install the "`External storag
 ** perform any recommended ((maintenance)) on that page
 ** ignore the Update section, it may disagree with Docker Hub
 * tail logs
-** `lnav` is helpful for this: https://lnav.org
+** https://lnav.org[lnav] is helpful for this
 
 The `stable` release tag will likely be stable enough for you and your users.
 This generally corresponds to the previous version listed at https://docs.nextcloud.com/.
@@ -2471,25 +2472,22 @@ NOTE: Nextcloud's blog posts and marketing materials use different version names
 ===== Release cadence
 
 (((Nextcloud, release cadence)))
-A major release is shipped every four months.
-
-* https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html
-
+https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html[A major release is shipped every four months].
 Most Nextcloud app developers are able to keep up with this pace.
 Be sure to check your `/settings/admin/overview` page before upgrading to make sure all the apps you use will work with the version you're upgrading to.
 You can override an out-of-date app with the "`enable untested app`" option under `/settings/apps`.
 Sometimes this works.
 
-I started a thread about Nextcloud's release cadence at https://help.nextcloud.com/t/major-release-cadence/161685.
+Four months seemed to me like a short window for major releases, so I started a https://help.nextcloud.com/t/major-release-cadence/161685[thread about it].
 
 ==== Performance
 
 If you use mario to deploy Nextcloud, you'll start with a nominally performant server.
-I've built the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html) into mario.
+I've built the most important steps from their https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html[server tuning guide] into mario.
 
 Troubleshooting performance issues can be challenging.
-An issue about mounts (https://github.com/nextcloud/server/issues/35311) had me under the hood with ((MariaDB)) for a while.
-They've since fixed the root cause (https://github.com/nextcloud/server/pull/33540) so it isn't a problem for new installations.
+An https://github.com/nextcloud/server/issues/35311[issue about mounts] had me under the hood with ((MariaDB)) for a while.
+They've since https://github.com/nextcloud/server/pull/33540[fixed the root cause] so it isn't a problem for new installations.
 
 ==== Customization
 
@@ -2518,7 +2516,7 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 |Dashboard |various widgets on a page |*No*. I like to go right to my files.
 |Deck |kanban board |*No opinion*. I tried it a little and it worked, I just don't use kanban much.
 |Draw.io |diagram editor |*Yes*.
-|Duplicate Finder |find and cull duplicate files |*No*. Slow and opaque. I recommend rdfind instead (https://github.com/pauldreik/rdfind).
+|Duplicate Finder |find and cull duplicate files |*No*. Slow and opaque. I recommend https://github.com/pauldreik/rdfind[rdfind] instead.
 |Electronic Signatures |e-sign documents |*No*. Requires a 3rd party service. It should work locally and just help folks fill in documents with signatures, dates, text, etc.
 |End-to-End Encryption |encrypt files server-side, decrypt with client |*No*. Unnervingly buggy. Confusing UI/UX.
 |Files |file management, sharing |*Yes*, although the "`Versions`" tab is not very useful.
@@ -2540,7 +2538,7 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 |Suspicious login |warn about suspicious IPs |*No*. Too many false positives.
 |Tasks |tasks/todos |*Yes*.
 |Tables |tabular data entry and API |*No*. Not yet, although keep an eye on this as a potentially powerful and useful ((low-code)) platform.
-|Talk |video and text chat |*No*. Works, just not as well as other video and text chat services/apps. I do use it for my chicken safety system and I see it improving a lot with each release. For now I recommend Signal instead (https://signal.org).
+|Talk |video and text chat |*No*. Works, just not as well as other video and text chat services/apps. I do use it for my chicken safety system and I see it improving a lot with each release. For now I recommend https://signal.org[Signal] instead.
 |Temporary files lock |avoid edit conflicts |*Yes*.
 |Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown.
 |Video converter |transcode videos |*No*. Cool idea but the project appears dormant.
@@ -2549,25 +2547,18 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 ==== Talk High Performance Backend
 
 (((Nextcloud, Talk)))
-I haven't yet tried Talk with the High Performance Backend because I don't have dozens of users.
-
-* https://nextcloud-talk.readthedocs.io/en/latest/scalability/
-
-The AIO installer includes the strukturag/nextcloud-spreed-signaling implementation, which is likely to be the "`official`" one (I don't know for sure).
-
-* <<AIO installer>>
-* https://github.com/strukturag/nextcloud-spreed-signaling
+I haven't yet tried Talk with the https://nextcloud-talk.readthedocs.io/en/latest/scalability/[High Performance Backend] because I don't have dozens of users.
+The AIO installer includes the https://github.com/strukturag/nextcloud-spreed-signaling[strukturag/nextcloud-spreed-signaling implementation], which is likely to be the "`official`" one (I don't know for sure).
+See also: <<AIO installer>>.
 
 ==== Full text search
 
 (((Nextcloud, search)))
 This app allows you to search through all content of all documents on your server.
 The search syntax is hard to get right.
-It uses a lot of CPU and is memory-hungry too.
+It https://github.com/nextcloud/fulltextsearch/issues/601[uses a lot of CPU] and is memory-hungry too.
 
-* https://github.com/nextcloud/fulltextsearch/issues/601
-
-The GitHub project repositories are pretty quiet.
+The GitHub project repositories are pretty quiet. See:
 
 * https://github.com/nextcloud/fulltextsearch/pulse
 * https://github.com/nextcloud/files_fulltextsearch/pulse
@@ -2581,7 +2572,7 @@ It can be your single reliable ((source of truth)) for contacts, calendars, task
 You can open files and edit them, but the UI/UX is bad.
 See <<Mobile text editing is hard>> for a couple workarounds.
 
-I had a Murena Samsung S9+ phone (https://murena.com) running /e/ ((OS)) for a while.
+I had a https://murena.com[Murena Samsung S9+ phone] running /e/ ((OS)) for a while.
 I loved it.
 Easy to set up with Nextcloud and worked quite well.
 Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE on that phone.
@@ -2626,12 +2617,12 @@ Notes looks best configured in Grid View.
 
 Talk... despite my own advice, I find myself using Talk anyway.
 I like having my own chat server, I guess.
-I am listing it here because I do actually use it, and to complain that I can't read messages offline (https://github.com/nextcloud/talk-android/issues/217).
+I am listing it here because I do actually use it, and to complain that https://github.com/nextcloud/talk-android/issues/217[I can't read messages offline].
 It is also under heavy development and improving lots with every release.
 
 These are just a few examples.
 Since you've got all your data and Nextcloud always uses open formats, you can ride the wave of improvements and enjoy what works best.
-For example, I just started using RunnerUp (https://github.com/jonasoreland/runnerup).
+For example, I just started using https://github.com/jonasoreland/runnerup[RunnerUp].
 When I save my tracks in Nextcloud, they automatically show up in Maps.
 Nice!
 
@@ -2654,7 +2645,7 @@ That page covers editing office documents (rich text and spreadsheets) collabora
 It provides some clever and useful workflow ideas.
 
 Given that wide a scope, ((groupware)) should be part of "`office`" too, so instead let's for now focus specifically on collaborative editing of office documents.
-Doing this within Nextcloud requires an app called Nextcloud Office (https://apps.nextcloud.com/apps/richdocuments) as well as a separate backend service.
+Doing this within Nextcloud requires an https://apps.nextcloud.com/apps/richdocuments[app called Nextcloud Office] as well as a separate backend service.
 Should you desire to add this functionality to your mario-provisioned server, either ((Collabora)) or ((ONLYOFFICE)) may serve as the backend for a ((mario)) server.
 My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it's clear Collabora development is flourishing while ONLYOFFICE is stagnant.
 
@@ -2678,11 +2669,11 @@ Nextcloud makes it easy to get to your stuff via ((mobile)) devices, but editing
 This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
 This applies to email, plain text, Markdown, and office documents.
 
-In Nextcloud-land, one workaround to improve plain and Markdown text entry is to use the Notes app on Android (https://github.com/nextcloud/notes-android) or iOS (https://github.com/nextcloud/notes-ios).
+In Nextcloud-land, one workaround to improve plain and Markdown text entry is to use the https://github.com/nextcloud/notes-android[Notes app on Android] or https://github.com/nextcloud/notes-ios[iOS].
 It has separate editing and viewing modes and more aggressive synchronization.
 With Notes you have a better chance of up-to-date data and fewer conflicts.
 
-Another workaround is to use Markor (https://github.com/gsantner/markor).
+Another workaround is to use https://github.com/gsantner/markor[Markor].
 Install that app, then:
 
 . In the Nextcloud mobile app, "`Download`" or "`Sync`" the file you wish to view or edit locally.
@@ -2702,7 +2693,7 @@ I can't figure out why this is necessary (see: https://help.nextcloud.com/t/what
 Workarounds:
 
 * use /e/ ((OS)): it includes native support for Nextcloud accounts
-* buy a Murena (https://murena.com) phone: it uses /e/ OS
+* buy a https://murena.com[Murena] phone: it uses /e/ OS
 
 ===== Spurious web text editor conflicts
 
@@ -2719,17 +2710,14 @@ That's the latest and greatest copy as it exists server-side.
 Why the... never mind, just pick the one on the right.
 If you're curious and want to dig in deeper, follow these links:
 
-Shared text file is not up-to-date with saved file::
-  https://github.com/nextcloud/text/issues/2388
-Changing File from Desktop leads to conflict in browser, even if browser was not doing any changes::
-  https://github.com/nextcloud/text/issues/4078
-Text: document current vs. saved version (by yours truly)::
-  https://help.nextcloud.com/t/text-document-current-vs-saved-version/151600
+* https://github.com/nextcloud/text/issues/2388[Shared text file is not up-to-date with saved file]
+* https://github.com/nextcloud/text/issues/4078[Changing File from Desktop leads to conflict in browser, even if browser was not doing any changes]
+* https://help.nextcloud.com/t/text-document-current-vs-saved-version/151600[Text: document current vs. saved version] (by yours truly)
 
-Related desktop client bug: Nextcloud-Client creating conflicts when it should not (https://github.com/nextcloud/desktop/issues/2467).
+Related desktop client bug: https://github.com/nextcloud/desktop/issues/2467[Nextcloud-Client creating conflicts when it should not].
 Conflicts seem to appear in cases where there shouldn't be any.
 Workarounds: wait 10 seconds or so between saves until the desktop client syncs and returns to idle (roll your eyes while you wait).
-Also, check out the Temporary files lock (https://apps.nextcloud.com/apps/files_lock) app for semi-automated advisory locking (e.g. quickly communicate "`gimme a minute, I'm editing that Markdown text file`").
+Also, check out the https://apps.nextcloud.com/apps/files_lock[Temporary files lock] app for semi-automated advisory locking (e.g. quickly communicate "`gimme a minute, I'm editing that Markdown text file`").
 
 ===== Draw signature in forms
 
@@ -2739,35 +2727,28 @@ Forms are handy for gathering simple minimally-structured data... surveys, RSVPs
 The data are just dumped into a spreadsheet.
 With a signature field Forms could be used to add a drawn signature to a form like a contract or waiver.
 
-There are extant Nextcloud online signature apps that incorporate digital signatures (https://en.wikipedia.org/wiki/Digital_signature).
+There are extant Nextcloud online signature apps that incorporate https://en.wikipedia.org/wiki/Digital_signature[digital signatures].
 I don't want or need digital signatures, especially since they appear to rely on 3rd party services.
 I really just want a low-tech image that looks like a drawn signature at the bottom of a page.
 It doesn't even need to be wet ink.
 If you want that too, vote for or help with https://github.com/nextcloud/forms/issues/947.
 
-Here are two alternative FOSS self-hostable apps supporting drawn signatures:
-
-* https://github.com/OpenSignLabs/OpenSign
-* https://github.com/docusealco/docuseal
+https://github.com/OpenSignLabs/OpenSign[OpenSign] and https://github.com/docusealco/docuseal[DocuSeal] are two alternative FOSS self-hostable apps supporting drawn signatures.
 
 ===== Release script missing from source
 
-Nextcloud is ((FOSS)), although some release scripts are held back.
+Nextcloud is ((FOSS)), although https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341[some release scripts are held back].
 They may or may not be required to release those, I don't know.
 I hope they do decide to release them, for the same reasons the rest of Nextcloud is FOSS.
-
-* https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341
 
 ===== Spurious event updated notifications
 
 The Calendar app is quite useful and perhaps the most heavily used by me and my users.
 I have grown to expect one particular erroneous "`event updated`" notifications, possibly caused by calendar client/sync issues.
 
-On one shared calendar (with many clients) I often get notifications that so-and-so "`updated event XYZ in calendar ABC`", but the only actual thing that occurred is that one of the clients just sync'd (or perhaps made some innocuous change to an event) and Nextcloud thinks it was a meaningful update.
+On one shared calendar (with many clients) I often get notifications that so-and-so "`updated event XYZ in calendar ABC`", but the only actual thing that occurred is that one of the clients just sync'd (or perhaps made some innocuous change to an event) and https://github.com/nextcloud/calendar/issues/5879[Nextcloud thinks it was a meaningful update].
 At least, I think that's what's happening... some changes (like changing the event's date) do show up with the old and new values made explicit.
 As an aside, I do like this "`explicit diff`" behavior showing the exact changes made to an event's Title, Time, Location, or Description.
-
-* https://github.com/nextcloud/calendar/issues/5879
 
 ==== End-to-End Encryption
 
@@ -2778,26 +2759,12 @@ It seems close to working, but it feels like early-release software.
 The UI/UX is confusing, and I ran into a dealbreaker bug that left files decrypted server-side.
 Furthermore...
 
-Sharing doesn't work.
+* https://help.nextcloud.com/t/how-to-setup-e2e-encryption-for-shared-folders/165610[Sharing] https://help.nextcloud.com/t/e2ee-and-file-sharing/145547[doesn't] https://github.com/nextcloud/end_to_end_encryption/issues/520[work].
+* https://github.com/nextcloud/end_to_end_encryption/issues/82[There's no web client].
+* https://github.com/nextcloud/end_to_end_encryption/issues/285[The roadmap is unclear].
+* https://github.com/nextcloud/end_to_end_encryption/issues/8[Keys are always stored on the server] (these are thankfully stored encrypted).
 
-* https://help.nextcloud.com/t/how-to-setup-e2e-encryption-for-shared-folders/165610
-* https://help.nextcloud.com/t/e2ee-and-file-sharing/145547
-* https://github.com/nextcloud/end_to_end_encryption/issues/520
-
-There's no web client.
-
-* https://github.com/nextcloud/end_to_end_encryption/issues/82
-
-The roadmap is unclear.
-
-* https://github.com/nextcloud/end_to_end_encryption/issues/285
-
-Keys are always stored on the server.
-They are encrypted, at least.
-
-* https://github.com/nextcloud/end_to_end_encryption/issues/8
-
-I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues, make sure you can live with all that, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
+I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues[known issues], make sure you can live with all those, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
 (((mobile)))
 Make sure it works with all clients you plan to use it with (e.g. desktop, mobile).
 
@@ -2809,12 +2776,12 @@ It's free for an instance with less than 100 users.
 
 I recommend the mario method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by mario.
 
-See the AIO readme at https://github.com/nextcloud/all-in-one for more information.
+See the https://github.com/nextcloud/all-in-one[AIO readme] for more information.
 
 === Jellyfin
 
 (((Jellyfin, overview)))
-Jellyfin (https://jellyfin.org) is a personal streaming media server.
+https://jellyfin.org[Jellyfin] is a personal streaming media server.
 mario will set up a basic Jellyfin server.
 
 I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
@@ -2833,7 +2800,10 @@ Try adding two media libraries using the folders shared with Nextcloud.
 .. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
 
 (((Jellyfin, advanced)))
-For ((GPU)) hardware transcoding see https://jellyfin.org/docs/general/administration/hardware-acceleration/.
+(((GPU)))
+If you have a GPU, look into https://jellyfin.org/docs/general/administration/hardware-acceleration/[hardware acceleration].
+This is useful if videos can't be played directly by a client and need to be transcoded on the fly.
+Jellyfin can transcode using only CPU, but it is way faster with a GPU.
 
 ==== Maintenance notes
 
@@ -2848,40 +2818,29 @@ For ((GPU)) hardware transcoding see https://jellyfin.org/docs/general/administr
 
 Feature request.
 
-Playlists are private by design.
-
-* https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980
-
-I'd like the ability to share them.
-
-* https://features.jellyfin.org/posts/173/share-playlists
+* https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980[Playlists are private by design].
+* https://features.jellyfin.org/posts/173/share-playlists[I'd like the ability to share them].
 
 ===== Clips
 
 Feature request.
 
 I often want to share, hear, or re-watch a specific part of some media.
-I think it would be just so cool to be able to create clips without actually creating new media files.
-
-* https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments
+I think it would be just so cool to be able to https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments[create clips] without actually creating new media files.
 
 ===== Offline mobile media
 
 Feature request.
 
-I want the ((mobile)) app to auto-cache media and allow playing while offline.
-
-* https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile
+I want the ((mobile)) app to auto-cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
 
 Workaround: there are two separate mobile apps that can download and cache media for offline playing.
-
-. Finamp, for music: https://github.com/jmshrv/finamp.
-. Findroid, for video: https://github.com/jarnedemeulemeester/findroid.
+https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarnedemeulemeester/findroid[Findroid] for video.
 
 === Wallabag
 
 (((Wallabag)))
-Wallabag (https://wallabag.org) saves articles for distraction-free offline reading.
+https://wallabag.org[Wallabag] saves articles for distraction-free offline reading.
 
 ==== Setup
 
@@ -2903,12 +2862,11 @@ Wallabag (https://wallabag.org) saves articles for distraction-free offline read
 
 ===== Upgrades break everything
 
-Database migrations are not (always?) automatically applied.
-See https://github.com/wallabag/wallabag/issues/6649.
+https://github.com/wallabag/wallabag/issues/6649[Database migrations are not (always?) automatically applied].
 There may be other duplicate or related bug reports for this same thing, that's just one example.
-Luckily, the workaround is easy: https://github.com/wallabag/docker#upgrading.
+Luckily, there's an https://github.com/wallabag/docker#upgrading[easy workaround].
 
-Apply that fix to a mario system with:
+Apply the workaround to a mario system with:
 
 .force Wallabag database migration (server)
 [source%unbreakable,bash]
@@ -2934,23 +2892,22 @@ Perhaps it is only necessary in special cases--I've only had to do it twice in a
 
 Feature request.
 
-I want to be able to share content with other Wallabag users, within Wallabag (https://github.com/wallabag/wallabag/issues/679).
+I want to be able to https://github.com/wallabag/wallabag/issues/679[share content with other Wallabag users, within Wallabag].
 
 === Watchtower
 
-Watchtower is handy for keeping your Docker containers up to date.
+((Watchtower)) is handy for keeping your Docker containers up to date.
 It will discover and check outdated containers, pull new images, and restart services to create new containers.
 
-It does not automatically roll back if a container upgrade fails.
+It https://github.com/containrrr/watchtower/issues/90[does not automatically roll back if a container upgrade fails].
 Granted, this would be challenging to implement.
 A service might only have one-way database migrations, for example.
-
-* https://github.com/containrrr/watchtower/issues/90
+I think the Watchtower maintainers made
 
 You may experience an issue where a service is broken by Watchtower.
 If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
 I avoid this by only using Watchtower for non-critical services.
-I don't let Watchtower auto-upgrade my Nextcloud service, for example.
+I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
 
 ==== Setup
 
@@ -2966,8 +2923,7 @@ I don't let Watchtower auto-upgrade my Nextcloud service, for example.
 
 === Scratch
 
-(((Scratch)))
-Scratch is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
+((Scratch)) is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
 I really enjoy using it without the "`community`" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
 These often serve to redirect a user from creating to consuming.
 
@@ -3018,7 +2974,8 @@ File a bug.
 Post in a forum.
 It's fun!
 
-Conferences like ((SeaGL)) (https://seagl.org) bring together bright minds on many topics, including self-hosting.
+(((SeaGL)))
+Conferences like https://seagl.org[SeaGL] bring together bright minds on many topics, including self-hosting.
 If you've done something cool, share it!
 
 === Use GPUs
@@ -3038,7 +2995,7 @@ Modern generative AI workloads like large language model chat and image generati
 AI is once again the latest hotness.
 You can run your own image generators and LLMs (large-language models) at home.
 No GPU is required.
-Here's a `compose.yml` that'll work with mario to stand up a LocalAI server (https://localai.io).
+Here's a `compose.yml` that'll work with mario to stand up https://localai.io[LocalAI].
 
 .example LocalAI service config
 [source,yaml]
@@ -3078,17 +3035,13 @@ This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding la
 
 TIP: For extra credit, incorporate your LocalAI service into mario.
 
-See the LocalAI documentation for further setup help.
-
-* https://localai.io
-
-Once you get that running, you can use the Nextcloud AI integration app as a convenient frontend.
-
-* https://apps.nextcloud.com/apps/integration_openai
+See the https://localai.io[LocalAI documentation] for further setup help.
+Once you get that running, you can use the https://apps.nextcloud.com/apps/integration_openai[Nextcloud AI integration app] as a convenient frontend.
 
 === Pi-hole
 
-Running a ((Pi-hole)) (https://pi-hole.net) service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
+(((Pi-hole)))
+Running a https://pi-hole.net[Pi-hole] service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
 
 (((router, network device)))
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
@@ -3115,28 +3068,23 @@ The Pi-Hole also has a list of local DNS entries.
 I add a few domain names to this list for servers inside my ((LAN)).
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
-For example, ((DNS)) over ((HTTPS)) in Firefox.
-
-* https://support.mozilla.org/kb/firefox-dns-over-https
+(((DNS)))
+(((HTTPS)))
+For example, https://support.mozilla.org/kb/firefox-dns-over-https[DNS over HTTPS in Firefox].
 
 === Single sign-on
 
 (((Single sign-on)))
 Manage users and groups in one place.
 Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism.
-Authentik (https://goauthentik.io) can do this.
+https://goauthentik.io[Authentik] can do this.
 
 == More resources
 
 Visit https://selfhostbook.com for all supporting material including source code for this book and mario.
 
-=== Source code
-
-* https://selfhostbook.com/code/
-
-=== Contact info
-
-* https://selfhostbook.com/contact/
+* https://selfhostbook.com/code/[Source code]
+* https://selfhostbook.com/contact/[Contact info]
 
 === Support
 
@@ -3146,27 +3094,30 @@ Here are a few ideas for when you get stuck.
 * If you're confident you've found a bug, file an issue with the product/project.
 * Try your luck in semi-moderated public places.
 Don't expect much from these, although you may get lucky from time to time.
-** self-hosted subreddit: https://reddit.com/r/selfhosted/
-** homelab subreddit: https://reddit.com/r/homelab/
-** \#selfhosted chat: https://matrix.to/#/#selfhosted:matrix.org
+** https://reddit.com/r/selfhosted/[self-hosted subreddit]
+** https://reddit.com/r/homelab/[homelab subreddit]
+** https://matrix.to/#/#selfhosted:matrix.org[#selfhosted chat]
 * Hire me to help you out.
 
 === Alternatives to this book
 
 There are one-click-install appliances with many ready-to-go apps.
-((FreedomBox)) (https://freedombox.org) is one promising contender in this space.
+(((FreedomBox)))
+https://freedombox.org[FreedomBox] is one promising contender in this space.
 
 There are shortcuts and frontends for self-hosting.
-For example, openmediavault (https://openmediavault.org) looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
+For example, https://openmediavault.org[openmediavault] looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
 
-And there are countless more of these kinds of partial or full-service self-hosting solutions.
-More:
+(((YunoHost)))
+(((CasaOS)))
+(((Runtipi)))
+And there are countless more of these kinds of partial or full-service self-hosting solutions, such as:
 
-((YunoHost)) (https://yunohost.org)::
+https://yunohost.org[YunoHost]::
   Not considered, I prefer always using containers.
-((CasaOS)) (https://casaos.io)::
+https://casaos.io[CasaOS]::
   New, interesting, very little documentation.
-((Runtipi)) (https://runtipi.io)::
+https://runtipi.io[Runtipi]::
   New, interesting, uses ((Docker Compose)) and ((Traefik)).
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
@@ -3212,19 +3163,31 @@ By the time I publish, they (or some new contenders) might grow to overcome my a
 Please let me know what you discover.
 If I missed something, I'd love to learn about it!
 
+(((Ansible)))
+(((NAS)))
+(((Clace)))
+(((Cosmos Cloud)))
+(((DockSTARTer)))
+(((HomelabOS)))
+(((Start9)))
+(((MicroCloud)))
+(((LibreServer)))
+(((LinuxServer.io)))
+(((NextcloudPi)))
+(((UBOS)))
 Here are some more related and interesting self-hosting solutions worth researching further:
 
-* ((Ansible)) ((NAS)) (https://github.com/davestephens/ansible-nas)
-* ((Clace)) (https://clace.io)
-* ((Cosmos Cloud)) (https://cosmos-cloud.io)
-* ((DockSTARTer)) (https://dockstarter.com)
-* ((HomelabOS)) (https://homelabos.com)
-* ((Start9)) (https://start9.com)
-* ((MicroCloud)) (https://canonical.com/microcloud)
-* ((LibreServer)) (https://libreserver.org)
-* ((LinuxServer.io)) (https://www.linuxserver.io)
-* ((NextcloudPi)) (https://nextcloudpi.com)
-* ((UBOS)) (https://ubos.net)
+* https://github.com/davestephens/ansible-nas[Ansible NAS]
+* https://clace.io[Clace]
+* https://cosmos-cloud.io[Cosmos Cloud]
+* https://dockstarter.com[DockSTARTer]
+* https://homelabos.com[HomelabOS]
+* https://start9.com[Start9]
+* https://canonical.com/microcloud[MicroCloud]
+* https://libreserver.org[LibreServer]
+* https://www.linuxserver.io[LinuxServer.io]
+* https://nextcloudpi.com[NextcloudPi]
+* https://ubos.net[UBOS]
 
 == Contributions
 
@@ -3247,7 +3210,7 @@ If they already have a copy, buy one for a school or request it at your library.
 === How to build this book
 
 I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `{docname}{docfilesuffix}`.
-The file is AsciiDoc (https://asciidoc.org) plain text markup.
+The file is https://asciidoc.org[AsciiDoc] plain text markup.
 Run `./build.sh` to generate your own typeset outputs.
 Make your own derivative works following <<Copy this book>>.
 
@@ -3280,9 +3243,9 @@ How could they be improved?
 Exercises for individual practice and study groups.
 
 . Stand up a service besides those included with mario using an existing image.
-.. For example, a dashboard: https://awesome-selfhosted.net/tags/personal-dashboards.html.
+.. For example, a https://awesome-selfhosted.net/tags/personal-dashboards.html[dashboard].
 . Build a custom image.
-.. Hint: use `docker build` or Buildah (https://buildah.io).
+.. Hint: use `docker build` or https://buildah.io[Buildah].
 . Run a container using your custom image.
 . Create a service (using your container) to know if it is time to reboot your server.
 .. Hint: check if `/host/var/run/reboot-required` exists.
@@ -3294,7 +3257,7 @@ Exercises for individual practice and study groups.
 . Set up periodic automatic offsite backups.
 . Add a GPU to your server.
 . Enable ((GPU)) transcoding in ((Jellyfin)).
-. Sign the open letter at Public Money, Public Code (https://publiccode.eu) because software paid for with taxes should be FOSS.
+. Sign the open letter at https://publiccode.eu[Public Money, Public Code] because software paid for with taxes should be FOSS.
 . Aggregate logs.
 . Monitor and/or block outbound network activity from containers.
 . Pick a ((Docker)) container that doesn't require outbound network access.
@@ -3302,34 +3265,34 @@ Prevent it from making outbound connections and prove to yourself it works.
 . What if the server won't boot?
 .. Describe troubleshooting steps, in detail.
 .. Make a plan for system recovery when it fails to boot.
-. Set up single sign-on (https://en.wikipedia.org/wiki/Single_sign-on).
-. Set up ((Fail2Ban)) (https://fail2ban.org).
+. Set up https://en.wikipedia.org/wiki/Single_sign-on[single sign-on].
+. Set up https://fail2ban.org[Fail2Ban].
 Feed it logs from various services.
-. Set up ((Suricata)) (https://suricata.io) network analysis and threat detection.
+. Set up https://suricata.io[Suricata] network analysis and threat detection.
 . Separate out code for ASCII to SVG diagram conversion from ((Markdeep)).
 Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
-. Try running containers with podman (https://podman.io).
+. Try running containers with https://podman.io[podman].
 . Read up on other ways to isolate processes, e.g. FreeBSD jails and chroot.
 . Contribute to ((mario)).
 . Move secrets used by mario into an Ansible vault.
 . Adapt mario to use ((podman)).
-. Adapt mario to use ((Kubernetes)) (https://kubernetes.io).
+. Adapt mario to use https://kubernetes.io[Kubernetes].
 . If you have a dynamic IP address, create or use an existing dynamic ((DNS)) update client container.
 . Stand up a mail relay container such as https://github.com/crazy-max/docker-msmtpd or https://github.com/namshi/docker-smtp.
 Allow all mario-managed services to send email through this relay.
 . Stand up your own ((DNS)) server.
 . Reorganize mario services into distinct Ansible roles.
-.. Upload the roles to Ansible Galaxy as a playbook bundle (https://galaxy.ansible.com).
-. Modify mario to always run containers as unprivileged (non-root) users (https://docs.docker.com/engine/security/userns-remap/).
+.. Upload the roles to https://galaxy.ansible.com[Ansible Galaxy] as a playbook bundle.
+. Modify mario to https://docs.docker.com/engine/security/userns-remap/[always run containers as unprivileged (non-root) users].
 . Use appropriate ownership and permissions for persistent container data.
-. Set up Nextcloud Talk high-performance backend (https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker).
+. Set up https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker[Nextcloud Talk high-performance backend].
 .. Necessary for typing notifications from mobile Nextcloud Talk clients.
-. Uncomplicated Firewall and Docker do not get along well (https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw).
+. https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw[Uncomplicated Firewall and Docker do not get along well].
 Work around this and share your solution with others.
-. Try ((Nix)) and ((NixOS)) (https://nixos.org).
+. Try https://nixos.org[Nix and NixOS].
 . Roll your own ((Linux)) distro.
-. Build, configure and deploy an OPNsense ((firewall)) (https://opnsense.org).
-. Set up your own ((headscale)) tailnet for remote ((LAN)) access (https://headscale.net).
+. Build, configure and deploy an https://opnsense.org[OPNsense firewall].
+. Set up your own https://headscale.net[headscale] tailnet for remote ((LAN)) access.
 . Enable preview generation for ((Nextcloud)).
 .. Research first: how does default preview generation work?
 What file types are supported?
@@ -3340,7 +3303,7 @@ What ((maintenance)) will it require once enabled?
 Write timing scripts for objective performance measurements.
 Consider both client- and server-side.
 Keep manual testing notes (subjective measurements).
-.. Compare Preview Generator (https://apps.nextcloud.com/apps/previewgenerator), Imaginary (https://github.com/h2non/imaginary), and any other extant solutions.
+.. Compare https://apps.nextcloud.com/apps/previewgenerator[Preview Generator], https://github.com/h2non/imaginary[Imaginary], and any other extant solutions.
 .. Turn it on.
 .. Evaluate the change.
 Is it noticeable?
@@ -3388,9 +3351,9 @@ At least, not the same way.
 With FOSS you can participate in a software project all the way up to modification and redistribution without having to start your own from scratch.
 
 There's always the possibility that you or someone you know (or pay!) can do that extra little thing.
-It might be easy or it might be a SMOP (https://en.wikipedia.org/wiki/Small_matter_of_programming), and you might not know for sure which it is until you are already far down the rabbit hole.
+It might be easy or it might be a https://en.wikipedia.org/wiki/Small_matter_of_programming[SMOP], and you might not know for sure which it is until you are already far down the rabbit hole.
 
-Watch out for that, and let go if and when you need to (https://en.wikipedia.org/wiki/Sunk_cost_fallacy).
+Watch out for that, and https://en.wikipedia.org/wiki/Sunk_cost_fallacy[let go if and when you should].
 It's hard sometimes, and it is also a great opportunity to learn about software project management and practice getting feedback from others.
 
 ==== Features
@@ -3436,8 +3399,7 @@ Say, a chip that guarantees perfect sleep or supercharges my willpower.
 I darn well want that chip to be FOSS.
 
 We don't have to wait for the future to explore the implications of proprietary implants.
-You can read about how hero FOSS activist Karen Sandler tried to get the source code for her pacemaker (https://theoutline.com/post/1398/why-can-t-karen-sandler-get-the-source-code-for-her-pacemaker), and follow the work of Dr.
-Farahny on brain-computer interfaces (https://npr.org/2023/03/14/1163494707/neurotechnology-privacy-data-tracking-nita-farahany-battle-for-brain-book).
+You can read about how https://theoutline.com/post/1398/why-can-t-karen-sandler-get-the-source-code-for-her-pacemaker[hero FOSS activist Karen Sandler tried to get the source code for her pacemaker], and follow the https://npr.org/2023/03/14/1163494707/neurotechnology-privacy-data-tracking-nita-farahany-battle-for-brain-book[work of Dr. Farahny on brain-computer interfaces].
 
 ==== What FOSS gets right
 
@@ -3470,8 +3432,7 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 ** Profit is an incentive, and the incentives of for-profit companies don't always align with yours
 * useful, usable software services are _side effects_ of big tech
 * Google has done acts of priceless altruism, yet, all as a side effect of their commitment to profit and growth
-* heck, the military industrial complex brought us the Internet, so yeah, sometimes we get lucky with good outcomes regardless of the original incentive
-** see: https://en.wikipedia.org/wiki/History_of_the_Internet
+* heck, the military industrial complex brought us the Internet, so yeah, sometimes we get lucky with good outcomes regardless of the https://en.wikipedia.org/wiki/History_of_the_Internet[original motivation]
 * You probably have a "`smart`" phone.
 Consider how amazing that piece of tech is--how essential it is to everyday life.
 * Does your phone do stuff you don't want it to?
@@ -3501,10 +3462,10 @@ Consider how amazing that piece of tech is--how essential it is to everyday life
 ** cross-platform
 ** accessible
 * FOSS can always be improved in any dimension it is found to be lacking, by anyone with the resources or skills to do so
-* FOSS dovetails nicely with the principles of Local-first software (https://inkandswitch.com/local-first/)
+* FOSS dovetails nicely with the principles of https://inkandswitch.com/local-first/[Local-first software]
 * FOSS is always self-hostable
 * FOSS democratizes computing capability by shifting power to small groups/communities/families
-* FOSS sidesteps twiddling (https://doctorow.medium.com/twiddler-1b5c9690cce6): online platforms changing their settings/rules in a way traditional businesses cannot
+* FOSS sidesteps https://doctorow.medium.com/twiddler-1b5c9690cce6[twiddling] -- when online platforms change their settings/rules in bad faith, in a way traditional businesses cannot
 
 ==== But Spotify has _every song ever_
 
@@ -3615,9 +3576,9 @@ DNS::
 domain name::
   Full name for a service as it is used in a URL, e.g. `www.example.com`. Synonymous with "`hostname`" as far as we're concerned.
 DRM::
-  Digital restrictions management (https://en.wikipedia.org/wiki/Digital_rights_management). Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
+  Digital restrictions management. Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
 dVCS::
-  Distributed version control system. These days that pretty much means git (https://git-scm.com).
+  Distributed version control system. These days that pretty much means https://git-scm.com[git].
 entrypoint::
   How traffic enters the Traefik reverse proxy; network ports.
 firewall::
@@ -3635,9 +3596,9 @@ full-disk encryption::
 GB::
   Gigabyte. 10^9^ (1,000,000,000) bytes for HDDs, or 2^30^ (1,073,741,824) bytes for RAM.
 good, fast, and cheap::
-  Used as a joke in this text because typically we must pick two (https://en.wikipedia.org/wiki/Project_management_triangle).
+  Used with a wink in this text because https://en.wikipedia.org/wiki/Project_management_triangle[typically we must pick two].
 Good Thing::
-  A hand-wavy way of saying something is self-evidently wonderful (http://catb.org/jargon/html/G/Good-Thing.html).
+  A hand-wavy way of saying something is self-evidently wonderful.
 groupware::
   Loosely: mail, calendar, and contacts.
 GUI::
@@ -3709,13 +3670,13 @@ RAID::
 reproducible::
   Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from a `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
 reverse proxy::
-  Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL/TLS termination (https://en.wikipedia.org/wiki/TLS_termination_proxy) and for running several self-hosted web services with different domain names with a single IP address.
+  Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL termination and for running several self-hosted web services with different domain names with a single IP address.
 router::
   Network device used to handle traffic at the boundary between networks such as a WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 SeaGL::
-  Seattle GNU/Linux Conference (https://seagl.org). Held yearly since 2013.
+  Seattle GNU/Linux Conference. Held yearly since 2013.
 server::
   A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse.
 service::
