@@ -497,7 +497,7 @@ This book is for people who are kind to others, brave in trying new things, curi
 
 This book is for people who want to know where their data live, and to be able to work all kinds of magic with it.
 It's a "`from scratch`" or "`the hard way`" approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
-I'll sometimes recount what worked for me rather than specifically recommending what you should do.
+I'll sometimes recount what worked for me rather than specifically recommend what you should do.
 
 This book is for people curious about or already biased towards ((FOSS)).
 And--as much as I'll blather on about FOSS--I'm not here to judge.
