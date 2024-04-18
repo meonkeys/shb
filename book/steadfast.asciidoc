@@ -2485,7 +2485,7 @@ I started a thread about Nextcloud's release cadence at https://help.nextcloud.c
 ==== Performance
 
 If you use mario to deploy Nextcloud, you'll start with a nominally performant server.
-I've included the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html) into mario.
+I've built the most important steps from their server tuning guide (https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html) into mario.
 
 Troubleshooting performance issues can be challenging.
 An issue about mounts (https://github.com/nextcloud/server/issues/35311) had me under the hood with ((MariaDB)) for a while.
@@ -2495,10 +2495,8 @@ They've since fixed the root cause (https://github.com/nextcloud/server/pull/335
 
 (((Nextcloud, apps)))
 Nextcloud can be used as-is (see <<Basic install>>) or heavily customized.
-
-The simplest and safest way to customize is via their app store, especially if an app is marked "`featured`".
-
-These _Nextcloud apps_ are installed on the server, expanding the functionality a base Nextcloud instance.
+The simplest and safest way to customize is by installing an app from the built-in app store, especially if an app is marked "`featured`".
+These _Nextcloud apps_ are installed on the server, expanding the functionality of a base Nextcloud instance.
 
 Here are some Nextcloud apps I've tried, what they do, and a ruling on whether they're worth looking into.
 Read "`Worth your time?`" as "`Adam maybe tried this app and has shared his opinion whether others will find this particular app worth the effort to learn and maintain, based on his own experiences projected onto our possibly different use cases.`"
