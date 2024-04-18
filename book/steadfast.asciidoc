@@ -2870,22 +2870,19 @@ Apply the workaround to a mario system with:
 .force Wallabag database migration (server)
 [source%unbreakable,bash]
 ----
-dc wallabag \
-  exec app /var/www/wallabag/bin/console \
-  doctrine:migrations:migrate \
-  --env=prod --no-interaction
+dc wallabag exec app /var/www/wallabag/bin/console \
+  doctrine:migrations:migrate --env=prod --no-interaction
 ----
 
-This feeds the Wallabag configuration file to `docker compose`.
-The `exec` command says we want to run something in the `app` service container.
-That something is `/var/www/wallabag/bin/console`, a utility shipped with Wallabag.
-We tell `console` to run necessary database migrations.
+The `exec` command says we want to run something in a container.
+This runs the `console` utility in the `app` service container.
+The second line indicates necessary database migrations (schema and data updates) should be run using `prod` settings, without interactive prompts.
 
 This is ((idempotent)), as database migrations should be.
 After the first run, subsequent runs output: `[OK] Already at the latest version`.
 
-It's unclear why actually running the migration is not automated.
-Perhaps it is only necessary in special cases--I've only had to do it twice in a couple years.
+It's unclear why thes migration is not automatically performed during an upgrade.
+Perhaps it is only necessary in special cases--I've only had to do it twice in a few years.
 
 ===== Share with other users
 
@@ -3193,17 +3190,19 @@ Here are some more related and interesting self-hosting solutions worth research
 
 == Discussion topics
 
-Discussion topics for a class or small group.
+Here are some conversation starters for a class or small group.
 
 . What services do _you_ run?
 Why?
 For whom?
+. What are some considerations when choosing between public cloud and on-premise self-hosting?
 . Review this book for poor security practices.
 How might it be improved?
 . Why is privacy important, especially with digital information?
 . What's the best part about self-hosting?
 . What are some pitfalls of self-hosting?
 . What is the future of self-hosting?
+. What is the ideal number of users to support with a single self-hosted server?
 . How might this book be adapted for:
 .. intermittent power
 .. intermittent network
@@ -3214,6 +3213,7 @@ Contrast with non-FOSS.
 . What approaches in this book may be conceptually dangerous or misleading?
 Why?
 How could they be improved?
+. Summarize the book in one sentence.
 
 == Exercises
 
