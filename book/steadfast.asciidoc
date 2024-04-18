@@ -493,6 +493,7 @@ This book is for people who are kind to others, brave in trying new things, curi
 
 This book is for people who want to know where their data live, and to be able to work all kinds of magic with it.
 It's a "`from scratch`" or "`the hard way`" approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
+I'll sometimes recount what worked for me rather than specifically recommending what you should do.
 
 This book is for people curious about or already biased towards ((FOSS)).
 And--as much as I'll blather on about FOSS--I'm not here to judge.
@@ -507,7 +508,7 @@ Its motivation and process for learning will become more relevant as time passes
 This book is for those trying to live more for others and less for themselves; selfishly enjoying the act of being selfless.
 Leaders, parents/guardians, members of a collective.
 People who want to self host, who _also_ love others and doing other things besides systems administration.
-I hope I can save you some precious time.
+I'll save you some precious time for those other things while making the sysadmin bits fun.
 
 This book is for people supporting a small group, like a family or a handful of friends.
 
@@ -550,9 +551,9 @@ If you have $50k and unlimited time to spend on your concrete bunker homelab... 
 I would _love_ to see that.
 If you are more curious than certain you may still enjoy learning from my choices.
 
-I'm not writing for hard-line software patent/license experts/activists.
+I'm not writing to accommodate hardline software patent and license activists.
 These wonderful folks will spot my intentional use of the word _open_ and omission of the word _libre_.
-I love all these words, and I stand on the side of inclusion at the cost of idealism (while maintaining the hope these concepts are not mutually exclusive).
+I love all these words, I agree words are important, and I stand on the side of inclusion at the cost of idealism (while maintaining hope these concepts are not mutually exclusive).
 I thank the activists for helping swing the needle towards freedom, to all our benefit.
 
 This book is not a manifesto for always/only self-hosting.
