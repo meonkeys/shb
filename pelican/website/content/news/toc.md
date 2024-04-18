@@ -1,7 +1,7 @@
 title: 📑 Content
 category: announcement
 date: 2024-01-12
-modified: 2024-03-30
+modified: 2024-04-18
 
 
 ### Table of contents
@@ -36,11 +36,8 @@ modified: 2024-03-30
 1. **What\'s next?**
 : Ideas for future learning, homelab projects, improvements.
 
-1. **More Resources**
+1. **More resources**
 : Source code, contact info, support, alternatives to this book.
-
-1. **Contributions**
-: How readers can contribute to the book, its code, and translations.
 
 1. **Discussion topics**
 : Conversation starters for a group of readers.

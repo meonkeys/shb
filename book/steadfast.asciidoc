@@ -223,12 +223,11 @@ Listen to users, gather data, and adapt accordingly.
 I wrote this book with my own resources after years of research with lots of help from awesome people.
 See <<Acknowledgments>>.
 
-Please buy a copy for yourself or someone else, especially if you'd like me to write more books in the future.
-See <<Buy or donate>>.
+Please https://selfhostbook.com/buy/[buy a copy] for yourself or someone else, especially if you'd like me to write more books in the future.
 
 This book is a work in progress.
 Please help me improve it.
-See <<Contributions>>.
+See <<More resources>>.
 
 === Book version
 
@@ -284,8 +283,8 @@ For example, other rights such as publicity, privacy, or moral rights may limit 
 ==== Copy this book's code, too
 
 See <<More resources>>.
-This includes two original works for you to fork (copy, modify, and share).
-First, the book itself, along with code to generate beautifully typeset versions (see <<How to build this book>>).
+There are two original works for you to fork (copy, modify, and share).
+First, the book itself, along with code to generate beautifully typeset versions.
 Second, a learning tool called mario (see <<_mario>>).
 
 The license for all original source code related to this book is the ((GNU)) ((AGPL)) (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -589,7 +588,7 @@ In short order I converted the book to https://asciidoc.org[AsciiDoc] and ported
 This simplified the book build and gave me more and better output formats.
 
 Check out the source code--you're welcome to hack away at it.
-See <<More resources>> and <<How to build this book>>.
+See <<More resources>>.
 
 I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
 This helped me focus on the content while keeping the book simple enough to self-publish.
@@ -3086,6 +3085,9 @@ Visit https://selfhostbook.com for all supporting material including source code
 * https://selfhostbook.com/code/[Source code]
 * https://selfhostbook.com/contact/[Contact info]
 
+Patches and feedback are most welcome.
+This book is just a part of something big and I'm glad you're a part of it too!
+
 === Support
 
 Here are a few ideas for when you get stuck.
@@ -3188,31 +3190,6 @@ Here are some more related and interesting self-hosting solutions worth research
 * https://www.linuxserver.io[LinuxServer.io]
 * https://nextcloudpi.com[NextcloudPi]
 * https://ubos.net[UBOS]
-
-== Contributions
-
-This book is the start of something big.
-Just _how_ big is up to *you*!
-Feedback and patches are welcome.
-
-When sending patches, please follow contributor guidelines at https://selfhostbook.com/code/.
-
-=== Translations
-
-Please help translate this book and mario. See: https://selfhostbook.com/translate/
-
-=== Buy or donate
-
-Please buy this book!
-If you already have a copy, buy one for a friend.
-If they already have a copy, buy one for a school or request it at your library. See: https://selfhostbook.com/buy/
-
-=== How to build this book
-
-I use Asciidoctor to produce multiple typeset versions of the book from a single source file: `{docname}{docfilesuffix}`.
-The file is https://asciidoc.org[AsciiDoc] plain text markup.
-Run `./build.sh` to generate your own typeset outputs.
-Make your own derivative works following <<Copy this book>>.
 
 == Discussion topics
 
