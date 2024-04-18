@@ -331,11 +331,11 @@ Text formatting:
 |`zpool status -t` |Inline command, filename, username, password, or variable.
 Longer snippets of console text use language-specific syntax highlighting.
 |kbd:[Ctrl+c] |Key(s) pressed on the keyboard.
-|https://example.com |Bare real website URL.
+|https://example.com |Bare (un-named) link.
 https scheme is assumed and omitted.
-|https://example.com[Example domain] |Named real website URL.
+|https://example.com[Example domain] |Named link.
 Full URL appears in print version.
-|`\https://cloud.example.com` |Non-working example URL.
+|`\https://cloud.example.com` |Non-working example link.
 Replace `.example.com` with your actual domain name.
 |<<System design>> |Cross-reference to another section or chapter.
 |===
