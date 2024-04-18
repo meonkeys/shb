@@ -3220,14 +3220,14 @@ How could they be improved?
 Exercises for individual practice and study groups.
 
 . Stand up a service besides those included with mario using an existing image.
-.. For example, a https://awesome-selfhosted.net/tags/personal-dashboards.html[dashboard].
+For example, a https://awesome-selfhosted.net/tags/personal-dashboards.html[dashboard].
 . Build a custom image.
-.. Hint: use `docker build` or https://buildah.io[Buildah].
+Hint: use `docker build` or https://buildah.io[Buildah].
 . Run a container using your custom image.
 . Create a service (using your container) to know if it is time to reboot your server.
-.. Hint: check if `/host/var/run/reboot-required` exists.
+Hint: check if `/host/var/run/reboot-required` exists.
 . Stand up a second Nextcloud service for experiments.
-.. Use it to test out the latest release or a custom app.
+Use it to test out the latest release or a custom app.
 . Try Nextcloud with ((object storage)) for primary storage.
 . Adapt this guide to a ((Linux)) distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
@@ -3259,11 +3259,10 @@ Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
 Allow all mario-managed services to send email through this relay.
 . Stand up your own ((DNS)) server.
 . Reorganize mario services into distinct Ansible roles.
-.. Upload the roles to https://galaxy.ansible.com[Ansible Galaxy] as a playbook bundle.
+Upload the roles to https://galaxy.ansible.com[Ansible Galaxy] as a playbook bundle.
 . Modify mario to https://docs.docker.com/engine/security/userns-remap/[always run containers as unprivileged (non-root) users].
 . Use appropriate ownership and permissions for persistent container data.
 . Set up https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker[Nextcloud Talk high-performance backend].
-.. Necessary for typing notifications from mobile Nextcloud Talk clients.
 . https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw[Uncomplicated Firewall and Docker do not get along well].
 Work around this and share your solution with others.
 . Try https://nixos.org[Nix and NixOS].
@@ -3288,9 +3287,9 @@ Does your timing script show any difference?
 How much disk space is used for previews?
 How challenging was this to enable?
 
-I've included detailed steps to perform and evaluate the final exercise.
-I've omitted same from other exercises for brevity.
-Apply these steps to other exercises as desired.
+The detailed steps in the last exercise suggest what may be required in general to achieve better outcomes.
+I've omitted them from the other exercises for brevity.
+Please apply similar detailed steps elsewhere as desired.
 
 == More about FOSS
 
