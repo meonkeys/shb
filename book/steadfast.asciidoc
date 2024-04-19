@@ -3399,9 +3399,9 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 
 ==== But Spotify has _every song ever_
 
-You may have to listen to a few random songs or ads first, but you can just tap and hear many, many songs.
+You may have to listen to a few random songs or ads before you can get to the one you really want to listen to, but yes, Spotify does have many, many songs.
 More than you could listen to in your lifetime.
-Same with YouTube for video, Audible for audio books, Alibaba for flashlights.
+Same with YouTube for video and Audible for audio books.
 
 You will not get unlimited content from a self-hosted media server.
 You'll only have the ((DRM))-free content you bought or created and saved.
