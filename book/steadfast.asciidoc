@@ -3353,11 +3353,6 @@ Be ready for this.
 I'll avoid recommending anything obviously unusable.
 Your mileage may vary.
 
-==== Choices
-
-As in, too many of them.
-Too much choice is good and challenging problem to have.
-
 === When FOSS is better
 
 (((FOSS, advantages)))
