@@ -3401,48 +3401,6 @@ Besides privacy, FOSS is better for attention and focus.
 FOSS doesn't require your data to exist, so it doesn't require your attention.
 This makes it easier to focus on the task at hand, for only as long as you need to.
 
-==== More FOSS propaganda
-
-// What am I trying to do in this section? Am I doing it?
-//
-// Stuff I wanted to work in, but didnt:
-// https://en.wikipedia.org/wiki/History_of_the_Internet[original motivation for the Internet was war]
-// https://inkandswitch.com/local-first/[Local-first software]
-// https://doctorow.medium.com/twiddler-1b5c9690cce6[twiddling]
-
-When a company's incentives fail to align with your needs and desires, it prompts consideration of the true motives behind their actions.
-Take Google, for instance.
-While often hailed as a pinnacle of user-centric innovation, it is first and foremost an advertising behemoth.
-For social connections online, many default to using Facebook.
-Facebook does almost as well at connecting people as it does converting their behavioral data into valuable targeting parameters.
-All the tech giants, including Microsoft, Amazon, Apple, and Google, operate with profit as their main driving force, rather than users.
-
-Profit serves as a powerful incentive for these companies, yet it often diverges from the interests of individual users.
-While they may offer useful and accessible software services, these are often incidental to their primary goal of maximizing profits.
-Even seemingly altruistic actions are ultimately tied to their profit motive and quest for expansion.
-We should look carefully into these clever actions and shiny objects.
-
-Consider the device likely in or near your hand right now -- your smartphone.
-It's an indispensable tool in modern life, warts and all.
-Some of the warts are there on purpose.
-From bloatware (pre-installed unnecessary software) to planned obsolescence (deliberately limited lifespans), your phone often operates in ways that prioritize the profit margins of its manufacturers over your own preferences.
-
-Your phone, in essence, acts as a conduit for someone else's profit, serving as a rich source of data and behavior for companies to exploit.
-This reality prompts the sobering realization that, in the realm of digital technology, "`when the product is free, you are the product.`"
-Your data is highly coveted by advertising companies, not just for targeted marketing but for a range of purposes beyond mere ads.
-
-But there's hope for reclaiming autonomy and privacy in the digital age through FOSS.
-FOSS, distinguished by its transparency and accessibility, offers a pathway to greater trust in software security and privacy.
-Its open nature allows anyone to inspect the code, reducing the risk of hidden agendas or malicious intent.
-
-FOSS holds promise as the future of technology, as its benefits extend beyond idealistic notions to practical solutions that meet users' needs.
-Projects led by strong communities thrive, ensuring longevity and continuous improvement.
-FOSS software offers flexibility and customization unmatched by proprietary alternatives, often boasting ad-free experiences and enhanced accessible for disabled users.
-
-Moreover, FOSS empowers users to take control of their digital lives, enabling self-hosting and shifting computing power away from centralized entities to smaller communities or individuals.
-By embracing FOSS principles, users can navigate changes in online platforms with greater ease, sidestepping manipulative practices that traditional businesses cannot.
-FOSS represents a paradigm shift in the digital landscape, where individuals can reclaim control over their technology and shape it according to their needs and values.
-
 ==== But Spotify has _every song ever_
 
 You may have to listen to a few random songs or ads first, but you can just tap and hear many, many songs.
