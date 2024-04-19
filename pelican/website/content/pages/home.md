@@ -46,7 +46,7 @@ It cover specific services you should host, mostly Nextcloud.
 
 ### Origin story
 
-I researched and wrote the book over 12 months starting in early 2023.
+I researched and wrote the book for several years.
 I've been working on related technologies professionally and personally for the last couple of decades.
 
 I wrote this book after having realized the power and potential of self-hosting.
