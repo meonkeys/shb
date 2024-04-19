@@ -3403,47 +3403,45 @@ This makes it easier to focus on the task at hand, for only as long as you need 
 
 ==== More FOSS propaganda
 
-* what happens when a company's incentives don't match up with your needs and wants?
-* Google is not an _excellent technology company_, it is first and foremost an _excellent advertising company_
-* Facebook does not exist to connect you with your friends and family, _it exists to make money selling ads_
-* Facebook (Instagram, WhatsApp), TikTok, Twitter, Google, etc. are not evil, they're just there for *profit*, not necessarily for you
-** Profit is an incentive, and the incentives of for-profit companies don't always align with yours
-* useful, usable software services are _side effects_ of big tech
-* Google has done acts of priceless altruism, yet, all as a side effect of their commitment to profit and growth
-* heck, the military industrial complex brought us the Internet, so yeah, sometimes we get lucky with good outcomes regardless of the https://en.wikipedia.org/wiki/History_of_the_Internet[original motivation]
-* You probably have a "`smart`" phone.
-Consider how amazing that piece of tech is--how essential it is to everyday life.
-* Does your phone do stuff you don't want it to?
-** what annoying issues are you willing to put up with because the phone is so essential to daily life?
-** bloatware? planned obsolescence?
-** weigh these annoyances against the advantages of ((FOSS))
-* Consider: your phone _must do what makes someone else profit_.
-** phones are the most valuable sources of your data and behavior for companies
-** someone once said: "`when the product is free, you _are_ the product`"
-** someone else once said: "`your phone is everyone else's agenda for you`"
-* your behavior is complex and _very_ valuable
-* advertising companies crave your attention and data
-* your data are essential for ad sales
-* and these data are used for so much more than ads!
-* don't even waste time imagining the evil uses of your data--recognize the evil uses are possible and unnecessary because FOSS
-* you deserve privacy and autonomy
-* FOSS is easier to trust when it comes to security and privacy because anyone can read the code
-* and it's within your reach!
-* FOSS _is_ the future, technology always becomes cheaper and disseminates
-* the benefits of FOSS initially appear to be idealistic
-** they become practical when they intersect with your needs
-* popular FOSS projects (with good leaders) attract strong communities
-** this is great for project longevity
-* FOSS is always more customizable than non-FOSS
-* FOSS can be and is often
-** ad-free
-** cross-platform
-** accessible
-* FOSS can always be improved in any dimension it is found to be lacking, by anyone with the resources or skills to do so
-* FOSS dovetails nicely with the principles of https://inkandswitch.com/local-first/[Local-first software]
-* FOSS is always self-hostable
-* FOSS democratizes computing capability by shifting power to small groups/communities/families
-* FOSS sidesteps https://doctorow.medium.com/twiddler-1b5c9690cce6[twiddling] -- when online platforms change their settings/rules in bad faith, in a way traditional businesses cannot
+// What am I trying to do in this section? Am I doing it?
+//
+// Stuff I wanted to work in, but didnt:
+// https://en.wikipedia.org/wiki/History_of_the_Internet[original motivation for the Internet was war]
+// https://inkandswitch.com/local-first/[Local-first software]
+// https://doctorow.medium.com/twiddler-1b5c9690cce6[twiddling]
+
+When a company's incentives fail to align with your needs and desires, it prompts consideration of the true motives behind their actions.
+Take Google, for instance.
+While often hailed as a pinnacle of user-centric innovation, it is first and foremost an advertising behemoth.
+For social connections online, many default to using Facebook.
+Facebook does almost as well at connecting people as it does converting their behavioral data into valuable targeting parameters.
+All the tech giants, including Microsoft, Amazon, Apple, and Google, operate with profit as their main driving force, rather than users.
+
+Profit serves as a powerful incentive for these companies, yet it often diverges from the interests of individual users.
+While they may offer useful and accessible software services, these are often incidental to their primary goal of maximizing profits.
+Even seemingly altruistic actions are ultimately tied to their profit motive and quest for expansion.
+We should look carefully into these clever actions and shiny objects.
+
+Consider the device likely in or near your hand right now -- your smartphone.
+It's an indispensable tool in modern life, warts and all.
+Some of the warts are there on purpose.
+From bloatware (pre-installed unnecessary software) to planned obsolescence (deliberately limited lifespans), your phone often operates in ways that prioritize the profit margins of its manufacturers over your own preferences.
+
+Your phone, in essence, acts as a conduit for someone else's profit, serving as a rich source of data and behavior for companies to exploit.
+This reality prompts the sobering realization that, in the realm of digital technology, "`when the product is free, you are the product.`"
+Your data is highly coveted by advertising companies, not just for targeted marketing but for a range of purposes beyond mere ads.
+
+But there's hope for reclaiming autonomy and privacy in the digital age through FOSS.
+FOSS, distinguished by its transparency and accessibility, offers a pathway to greater trust in software security and privacy.
+Its open nature allows anyone to inspect the code, reducing the risk of hidden agendas or malicious intent.
+
+FOSS holds promise as the future of technology, as its benefits extend beyond idealistic notions to practical solutions that meet users' needs.
+Projects led by strong communities thrive, ensuring longevity and continuous improvement.
+FOSS software offers flexibility and customization unmatched by proprietary alternatives, often boasting ad-free experiences and enhanced accessible for disabled users.
+
+Moreover, FOSS empowers users to take control of their digital lives, enabling self-hosting and shifting computing power away from centralized entities to smaller communities or individuals.
+By embracing FOSS principles, users can navigate changes in online platforms with greater ease, sidestepping manipulative practices that traditional businesses cannot.
+FOSS represents a paradigm shift in the digital landscape, where individuals can reclaim control over their technology and shape it according to their needs and values.
 
 ==== But Spotify has _every song ever_
 
