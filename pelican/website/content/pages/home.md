@@ -1,5 +1,5 @@
 title: 📖 Home
-modified: 2024-02-27
+modified: 2024-04-19
 URL:
 save_as: index.html
 menu_order_key: 0
@@ -46,7 +46,7 @@ It cover specific services you should host, mostly Nextcloud.
 
 ### Origin story
 
-I researched and wrote the book for several years.
+I researched and wrote the book over several years.
 I've been working on related technologies professionally and personally for the last couple of decades.
 
 I wrote this book after having realized the power and potential of self-hosting.
