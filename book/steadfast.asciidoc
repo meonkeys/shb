@@ -3454,7 +3454,7 @@ Same with YouTube for video, Audible for audio books, Alibaba for flashlights.
 You will not get unlimited content from a self-hosted media server.
 You'll only have the ((DRM))-free content you bought or created and saved.
 
-But do you _need_ unlimited content.
+But do you _need_ unlimited content?
 The corporations would like you to believe so.
 And we all get bored, so they don't have to work hard to convince us of this.
 
