@@ -977,15 +977,16 @@ Will you have to install new wiring for power or network?
 Rough out key dates so you and your users can plan ahead.
 For example:
 
-* Apr 28: Brainstorm, plan.
-* Apr 30: Order hardware.
-* May 3: Pull ethernet from router into garage.
-* May 5: Set up server.
-** Install hard drives.
-** Power on!
-** Install operating system.
-** Start services.
-* Jun 9: Review result against original goals.
+Apr 28::
+  Brainstorm, plan.
+Apr 30::
+  Order hardware.
+May 3::
+  Pull ethernet from router into garage.
+May 5::
+  Set up server: Install hard drives, power on, install OS, start services.
+Jun 9::
+  Review result against original goals.
 
 Invite others to participate, starting at the beginning when you brainstorm and plan.
 This is a great time to include other people who may help care for the server.
