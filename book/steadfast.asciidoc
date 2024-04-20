@@ -1706,8 +1706,8 @@ The learning curve is worth it.
 The guide below walks through creating a simple pool of two mirrored drives, visible at `/data`.
 This is a reasonable starting point, providing increased fault tolerance and better read performance than a single drive.
 
-On the server, run these commands as `root`, adjusting device names as necessary.
-For example, these assume you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`.
+On the server, run these commands as `root` (hint: use `sudo su -` first).
+The code below assumes you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`, so adjust device names as necessary.
 Use `lsblk` to figure out your device names.
 
 // This code snippet is wrapped by Vim with textwidth=75 since this just happens to be what fits in the current print book margins. 😬
@@ -1721,7 +1721,7 @@ parted /dev/sdc mklabel gpt
 
 # Create ZFS main mirrored pool and set attributes (for all future datasets
 # in this pool).
-zpool create -o ashift=12 -O mountpoint=none main mirror /dev/sdb /dev/sdc
+zpool create -O mountpoint=none main mirror /dev/sdb /dev/sdc
 # For performance.
 zfs set atime=off main
 # To save space.
@@ -1738,20 +1738,51 @@ zfs create -o encryption=aes-128-gcm -o keyformat=passphrase \
     -o keylocation=file:///root/secure-dataset-key main/secure
 zfs set canmount=off main/secure
 
-# Create usable dataset.
+# Create usable (mount-able) dataset.
 zfs create -o mountpoint=/data main/secure/data
 
 # This might not be necessary if you _never_ want to execute anything in
 # /data. I found I needed it for something within a container (ffmpeg, I
 # think). You can start with exec=off and turn it on later if you want.
 zfs set exec=on main/secure/data
+----
 
+Here are a few commands to see details about what you just created.
+These do not require root access.
+
+.show ZFS details (server)
+[source,bash]
+----
 # Examine pools.
 zpool status
 zpool list
 
 # Examine datasets.
 zfs list
+----
+
+On Ubuntu 22.04 LTS, more steps are required to automatically mount this new filesystem when the server boots.
+What follows is from the `zfs-mount-generator(8)` manual page, with a few corrections.
+These must be run as `root`.
+
+.ZFS mount on boot setup (server)
+[source,bash]
+----
+# enable tracking for the pool
+mkdir /etc/zfs/zfs-list.cache
+touch /etc/zfs/zfs-list.cache/main
+
+# enable the tracking ZEDLET
+systemctl enable zfs-zed.service
+systemctl restart zfs-zed.service
+
+# trigger cache refresh
+zfs set relatime=off main/secure
+zfs inherit relatime main/secure
+
+# re-run systemd generators and reboot
+systemctl daemon-reload
+reboot
 ----
 
 === Server maintenance
