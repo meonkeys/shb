@@ -3228,6 +3228,7 @@ Here are some conversation starters for a class or small group.
 Why?
 For whom?
 . What are some considerations when choosing between public cloud and on-premise self-hosting?
+. Compare and contrast different options for bare metal self-hosting hardware in terms of setup cost, power usage, and expandability.
 . Review this book for poor security practices.
 How might it be improved?
 . Why is privacy important, especially with digital information?
@@ -3245,7 +3246,7 @@ Contrast with non-FOSS.
 . What approaches in this book may be conceptually dangerous or misleading?
 Why?
 How could they be improved?
-. Summarize the book in one sentence.
+. Summarize this book in one sentence.
 
 == Exercises
 
