@@ -753,7 +753,7 @@ Just don't keep your server outside.
 
 Here's a real example of a positive outcome I realized from self-hosting.
 
-My family has a https://github.com/meonkeys/rpi-chx-code[homemade chicken safety system] and the videos are important to me.
+My family has a homemade chicken safety system and the videos are important to me.
 I used to just plop them on YouTube because hey, it's free and it "`just works`", right?
 
 Except when it doesn't.
