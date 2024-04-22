@@ -1003,8 +1003,8 @@ To learn more about how to do this well, study _change management_.
 
 === Sysadmin mindset
 
-It is important to establish the right mindset users.
 The server exists for the users.
+It is important to establish the right mindset to be able to provide an excellent user experience.
 
 Make sure your self-hosted services work well for them.
 Solicit their input often and take it seriously.
