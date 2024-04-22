@@ -1033,7 +1033,7 @@ A mario-built system presents nicely as a simplified stack of colored boxes.
 These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "`Stack`" is also commonly used to describe interdependent layers of a system.
 
 [#image-service-stack]
-.Layers of a mario-built system. From the bottom we have hardware: bare metal, filesystem: ZFS, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
+.Layers of a mario-built system. From the bottom we have hardware: bare metal, filesystem: ext4 for / and ZFS for /data, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.svg[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a ((container)).
@@ -1186,8 +1186,9 @@ Further reading:
 
 ((ZFS)) (originally: Zettabyte File System) is a one-stop shop for efficiently and safely making hard drives useful for storing data.
 It provides encryption, lightweight snapshots and ((RAID)) (redundant array of inexpensive disks).
-You may optionally use ZFS for storage on your server following <<ZFS setup>>.
-I recommend using an ((ext4)) root partition (not ZFS) to:
+You may optionally use ZFS for storage (`/data`) on your server following <<ZFS setup>>.
+
+For the root (`/`) partition, I recommend using ((ext4)) instead of ZFS to:
 
 * stick as closely as possible to the default ((Ubuntu)) install
 * sidestep a ((Docker)) annoyance
