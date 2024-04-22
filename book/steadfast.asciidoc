@@ -840,7 +840,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers == happy
 
-I was pleasantly surprised by ((container))s following my varied earlier experiences with ((VM))s.
+I was pleasantly surprised by ((container))s (explained in <<Contained services>>) following my varied earlier experiences with ((VM))s.
 VMs are simple at first because they behave much like physical hardware.
 Installing Linux into a VM is as easy as installing it onto ((bare metal)) (sometimes even easier).
 Then you can set up one or more services in the VM.
@@ -852,7 +852,7 @@ That is, you can stand up more services per server and they don't interfere with
 One ((container)) typically contains only one service.
 
 Isolation of containers is limited compared to VMs.
-The kernel is shared, for example.
+The kernel (the part of the OS that talks directly with the underlying hardware) is shared, for example.
 Limited ((isolation)) keeps the resource and maintenance costs of container-based isolation low compared with VMs.
 
 Containers are excellent for a consistent and resilient personal cloud.
