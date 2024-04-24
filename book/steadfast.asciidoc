@@ -1285,14 +1285,13 @@ Each Docker image is basically a complete filesystem (sans kernel), so a service
 Another image would be used to create the database, if/as necessary.
 
 It's worth lingering on bundled dependencies for a minute.
-If dependencies are clothes, a Docker ((container)) is a suitcase with all the clothes you need for a week's travel.
+If dependencies are clothes, a Docker ((container)) is a strong and cheap suitcase with all the clothes you need for a week's travel.
 You check your suitcase and board the train, then rest easy knowing your suitcase is tucked neatly, separately, next to all the others.
 Docker containers are suitcases while the old way is everyones`' unfolded clothes in a giant pile in the caboose.
 
 Containers are created from images.
 An image is the blueprint to magic a fresh new suitcase (container) into existence, all packed and ready with the right clothes for your trip.
 An image is built once, stamped with an identifier, and shared, where it can act as the basis for countless consistently-behaving containers.
-Unlike suitcases, these containers are practically free.
 
 Images are defined by a file named `Dockerfile`.
 The `Dockerfile` should be tracked in source control.
