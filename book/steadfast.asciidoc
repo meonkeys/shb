@@ -1383,16 +1383,6 @@ Other web services will also use the `websecure` ((entrypoint)).
 HTTPS encryption is configured using other labels on the ((Traefik)) ((container)).
 See <<Encryption certificates>> for details.
 
-=== Identity management
-
-I wanted to include FOSS central identity management in mario but I haven't figured it out yet.
-When I do, this should give users a way to log in once and get to all the different mario-hosted services.
-It takes care of authentication and authorization and all that good stuff.
-
-I'm interested in https://goauthentik.io[Authentik] because it appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
-I want to see it running well for a good while before adding it to mario.
-Some of the other self-hosting solutions mentioned in <<What is this book _not_?>> do include FOSS central identity management.
-
 == Implementation
 
 === Service plan
@@ -3101,9 +3091,11 @@ For example, https://support.mozilla.org/kb/firefox-dns-over-https[DNS over HTTP
 === Single sign-on
 
 (((Single sign-on)))
-Manage users and groups in one place.
-Log in once to get access to all self-hosted services using a common, consistent, and well-designed login mechanism.
-https://goauthentik.io[Authentik] can do this.
+It would be convenient for users to be able to log in once to get access to all self-hosted services using a common, consistent, and well-designed mechanism (single sign-on), and for sysadmins to be able to manage all users and groups in one place (centralized identity management).
+
+https://goauthentik.io[Authentik] is one service providing this, and appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
+I want to try it out and see it running well for a good while before adding it to mario.
+Some of the other self-hosting solutions mentioned in <<Alternatives to this book>> do include FOSS central identity management.
 
 == More resources
 
