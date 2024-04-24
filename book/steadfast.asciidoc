@@ -1090,7 +1090,7 @@ WAN access is--informally--remote access to services and data running in your ((
 One means of allowing WAN access to a service is by port forwarding ((HTTPS)) traffic through your router/firewall.
 Port forwarding without taking additional security measures is both risky and convenient.
 
-NOTE: Consider alternatives to port forwarding, such as using https://headscale.net[headscale] to set up your own tailnet.
+NOTE: Consider alternatives to port forwarding, such as using a VPN.
 
 ==== Threat model
 
@@ -1136,17 +1136,17 @@ Should you choose to expose a service, these mitigations will help secure it.
 [%unbreakable]
 TIP: Mitigating at multiple layers (OS firewall, service, WAN boundary) demonstrates "`defense in depth`", a common and worthwhile security practice.
 
-==== Wireguard
+==== VPN
 
-A few years ago, ((VPN)) technology got a major upgrade with Wireguard.
-From a user perspective there's no "`logging in`" as with older VPNs.
+A ((VPN)) can secure your ((WAN)) boundary by only allowing authenticated users and adding a layer of encryption.
+You can safely teleport back into your ((LAN)) while you are remote.
+
+If all your users are able to use a VPN, you can keep ports closed for HTTP/S traffic and instead only allow VPN traffic.
+Assuming your VPN server is well-configured and up to date, this is an excellent way to reduce your ((attack surface)).
+
+((VPN)) technology enjoyed a major upgrade with https://www.wireguard.com[Wireguard].
+From a user perspective there's no heavyweight login process, as with older VPNs.
 ((Wireguard)) is fast, easy, and secure.
-When you're away from home, you can simply flip it on to teleport back into your ((LAN)).
-
-If all your users are able to use Wireguard, you can keep ports closed for HTTP/S traffic and instead only allow Wireguard traffic from specific users with specific keys.
-Assuming your Wireguard server is well-configured and up to date, this is an excellent way to reduce your ((attack surface)).
-
-A headscale tailnet is a useful way to set up your own Wireguard VPN (headscale uses Wireguard).
 
 ==== More tips
 
@@ -3297,7 +3297,7 @@ Work around this and share your solution with others.
 . Try https://nixos.org[Nix and NixOS].
 . Roll your own ((Linux)) distro.
 . Build, configure and deploy an https://opnsense.org[OPNsense firewall].
-. Set up your own https://headscale.net[headscale] tailnet for remote ((LAN)) access.
+. Set up your own https://headscale.net[headscale] VPN/tailnet for remote ((LAN)) access.
 . Enable preview generation for ((Nextcloud)).
 .. Research first: how does default preview generation work?
 What file types are supported?
