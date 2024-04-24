@@ -1183,8 +1183,9 @@ Further reading:
 
 === Filesystem
 
-((ZFS)) (originally: Zettabyte File System) is a one-stop shop for efficiently and safely making hard drives useful for storing data.
-It provides encryption, lightweight snapshots and ((RAID)) (redundant array of inexpensive disks).
+I recommend starting with one ext4 filesystem and, optionally, one ZFS filesystem.
+ext4 is the default filesystem for Ubuntu, a stable and simple choice.
+((ZFS)) (originally: Zettabyte File System) provides encryption, lightweight snapshots and ((RAID)) (redundant array of inexpensive disks).
 You may optionally use ZFS for storage (`/data`) on your server following <<ZFS setup>>.
 
 For the root (`/`) partition, I recommend using ((ext4)) instead of ZFS to:
