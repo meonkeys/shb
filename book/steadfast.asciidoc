@@ -1018,8 +1018,7 @@ Ideally you already know your users in real life, so just continue to practice b
 
 == System design
 
-<<_mario>> covers the tool included with this book for taking care of some of the fiddly details of creating and maintaining a server.
-Here's a preview of the final output of mario, starting with a high level overview.
+Let's dive into the various layers of a _Steadfast_ system.
 
 === Service stack
 
@@ -1029,11 +1028,11 @@ Here's a preview of the final output of mario, starting with a high level overvi
 (((Ubuntu)))
 (((Wallabag)))
 (((ZFS)))
-A mario-built system presents nicely as a simplified stack of colored boxes.
-These are conceptual, based on where and how frequently I act and investigate when supporting or troubleshooting. "`Stack`" is also commonly used to describe interdependent layers of a system.
+A _Steadfast_ system presents nicely as a simplified stack of colored boxes.
+These are conceptual, based on where and how frequently a sysadmin will likely act and investigate when supporting or troubleshooting.
 
 [#image-service-stack]
-.Layers of a mario-built system. From the bottom we have hardware: bare metal, filesystem: ext4 for / and ZFS for /data, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
+.Layers of a Steadfast system. From the bottom we have hardware: bare metal, filesystem: ext4 for / and ZFS for /data, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.svg[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a ((container)).
@@ -1211,7 +1210,7 @@ Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacemen
 === Operating system
 
 Linux is a popular and reasonable choice for self-hosting.
-mario requires a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
+I recommend a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
 ((Ubuntu)) ((LTS)) (long-term support) releases are the most stable and I recommend them.
 Installing the ((OS)) is generally quick and painless, see <<OS install>>.
 
@@ -1223,6 +1222,7 @@ Not mucking about on the server takes discipline, especially for old-school hand
 
 Try to avoid SSH'ing into the server and making one-off changes.
 It's better to modify mario's configuration files and re-provision.
+Once you learn mario in <<_mario>>, practice doing this.
 
 You can and should still ((SSH)) into the server, but when you do, try to only run read-only or exceptional read-write commands.
 I often do something manually, undo it, then do the same thing with mario to confirm results are as expected.
@@ -1926,7 +1926,7 @@ mario is a practical learning tool.
 It comes with sensible, tested defaults.
 It automates some of the tedious, confusing steps of setting up services on a server.
 mario is not a supported and production-ready software product.
-It'll get you started, that's it.
+It'll get you started, that's all.
 Continue with it if you like or just use it to fast-forward your personal cloud setup.
 Something else does or will do its job better.
 Here are some suggestions to get the most out of mario.
