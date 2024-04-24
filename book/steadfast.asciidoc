@@ -1133,8 +1133,8 @@ Close WAN boundary: disallow all inbound WAN access.
 Should you choose to expose a service, these mitigations will help secure it.
 "`Avoid public mailing lists`" is not listed in mitigations as it only obscures the URL to the out-of-date service, and one shouldn't rely on "`security through obscurity`".
 
-Mitigating at multiple layers (OS firewall, service, WAN boundary) is called "`defense in depth`".
-It's a great idea.
+[%unbreakable]
+TIP: Mitigating at multiple layers (OS firewall, service, WAN boundary) demonstrates "`defense in depth`", a common and worthwhile security practice.
 
 ==== Wireguard
 
