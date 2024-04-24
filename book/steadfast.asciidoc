@@ -587,7 +587,7 @@ While revising, I came across the build system for https://github.com/progit/pro
 In short order I converted the book to https://asciidoc.org[AsciiDoc] and ported my typsetting code to https://asciidoctor.org[Asciidoctor].
 This simplified the book build and gave me more and better output formats.
 
-Check out the source code--you're welcome to hack away at it.
+TIP: Check out the source code--you're welcome to hack away at it.
 See <<More resources>>.
 
 I tried to stick with off-the-shelf FOSS software as much as possible, with minimal customization.
@@ -739,7 +739,7 @@ If something breaks, you're fixing it.
 Sometimes you get a useful error, sometimes you can search the web for a quick fix.
 Sometimes you don't and can't.
 
-If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
+CAUTION: If you don't enjoy troubleshooting and debugging, self-hosting might not be for you.
 
 If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
 
@@ -924,12 +924,9 @@ I hope this book inspires you with many positive surprises and helps you and you
 
 == Plan
 
-Consider the time and cost of self-hosting.
-To yourself _and your users_.
-
-I love this part.
+We'll now briefly cover the salient points of a self-hosting plan.
+I love this part!
 I get excited about what's to come, and I know a solid plan makes a vision real.
-I start by capturing my plans in a https://casual-effects.com/markdeep/[Markdeep] file, including a calendar, budget, network diagram, to-do list and notes.
 
 Make _your_ plan.
 Maintain and improve your plan along with your server.
@@ -940,7 +937,9 @@ You need someone to cover for you when you are not available, or a crystal clear
 
 === Budget
 
-How much do you have/want to spend.
+Consider the time and cost of self-hosting.
+To yourself _and your users_.
+How much do you have and want to spend?
 Write down a number and stick to it.
 
 === Resources
@@ -999,7 +998,7 @@ Consider how you'll help them migrate their data onto the server.
 The key to this is excellent communication.
 Include this in your plan and seek buy-in since migration cost is a reality for every transition.
 
-To learn more about how to do this well, study _change management_.
+TIP: To learn more about gracefully transitioning users between systems, study _change management_.
 
 === Sysadmin mindset
 
@@ -3279,8 +3278,6 @@ Prevent it from making outbound connections and prove to yourself it works.
 . Set up https://fail2ban.org[Fail2Ban].
 Feed it logs from various services.
 . Set up https://suricata.io[Suricata] network analysis and threat detection.
-. Separate out code for ASCII to SVG diagram conversion from ((Markdeep)).
-Incorporate it into this book's build system, perhaps as a ((Pandoc)) filter.
 . Try running containers with https://podman.io[podman].
 . Read up on other ways to isolate processes, e.g. FreeBSD jails and chroot.
 . Contribute to ((mario)).
