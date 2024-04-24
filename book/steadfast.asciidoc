@@ -2824,6 +2824,10 @@ If you have a GPU, look into https://jellyfin.org/docs/general/administration/ha
 This is useful if videos can't be played directly by a client and need to be transcoded on the fly.
 Jellyfin can transcode using only CPU, but it is way faster with a GPU.
 
+[%unbreakable]
+TIP: Some CPUs include special facilities for accelerated transcoding, and Jellyfin can take advantage of this.
+If you have an Intel chip, look for Quick Sync Video support.
+
 ==== Maintenance notes
 
 * upgrades
