@@ -1164,7 +1164,7 @@ See <<Backups>>.
 ** Take caution with email links and attachments.
 ** Don't install untrusted software.
 Always use HTTPS.
-** Use a special passphrase with your ((mobile)) carrier.
+** Use a special passphrase with your ((mobile)) carrier as an extra layer of authentication.
 ** Question urgency and suspicious requests.
 * Send unrecognized calls to voicemail.
 * Pay attention to data breaches and protect your identity.
