@@ -127,6 +127,9 @@ This is the final step in the editing process. A proofreader examines the final 
 * capitalize product/project names in prose as they appear in upstream's branding/docs
 * capitalize only the first letter of the first word of sections/headers
 ** except: follow styling of proper nouns, acronyms, etc.
+* lists
+** ordered lists
+*** use captals and periods, even if using incomplete sentences
 * define jargon and acronym twice:
 ** at first appearance, immediately following the term, in parentheses or locale-appropriate delimiters
 ** in the glossary

@@ -1066,9 +1066,9 @@ It helps to break it down into two common categories:
 Examples: passwords, credit card numbers, government ID numbers.
 Recommendations:
 
-. store offline only if possible
-. if ever saved on a computer, store encrypted
-. easy fix: store in a ((password manager))
+. Store offline only if possible.
+. If ever saved on a computer, store encrypted.
+. Easy fix: store in a ((password manager)).
 
 ===== Everything else
 
@@ -1076,9 +1076,9 @@ Recommendations:
 Examples: notes, photos, documents, personal information.
 Recommendations:
 
-. store on encrypted media, including ((backups))
-. access only with up-to-date software you trust
-. disallow ((WAN)) (wide area network) access to these data
+. Store on encrypted media, including ((backups)).
+. Access only with up-to-date software you trust.
+. Disallow ((WAN)) (wide area network) access to these data.
 
 ==== WAN access
 
