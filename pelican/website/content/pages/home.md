@@ -1,5 +1,5 @@
 title: 📖 Home
-modified: 2024-04-19
+modified: 2024-04-24
 URL:
 save_as: index.html
 menu_order_key: 0
@@ -13,7 +13,7 @@ see [👀 Beta]({filename}/news/beta.md).
 
 ### Welcome!
 
-You've found _the_ book with _the most_ authentic, hand-crafted, inspiring self-hosting recipe by seasoned tech entrepreneur and self-proclaimed self-hosting expert [Adam Monsen](https://adammonsen.com).
+_Steadfast_ is an authentic and inspiring self-hosting tutorial by seasoned tech entrepreneur and self-proclaimed self-hosting expert [Adam Monsen](https://adammonsen.com).
 Benefit from Adam's decades of applied effort distilled into this quick and exciting initiation to data sovereignty.
 
 Save money, time, and sanity
@@ -21,16 +21,6 @@ Save money, time, and sanity
 
 Batteries included
 : Corresponding source code is provided under a Free and Open Source software license.
-
-### From the back cover
-
-Perils await, dear hero: the self-hosting ecosystem is crowded and confusing.
-
-Fear not! I’ll help you quickly set up useful services on your very own server.
-
-This book is your personal guide to joy; a battle-tested fast path to success. Learn how to quickly stand up reliable **services** in **containers** behind a **reverse proxy**.
-
-With these three basic components we will summon a robust data haven. We'll take some basic concepts from systems administration and devops to create love, beauty, and deep meaning.
 
 ### Tools in the book
 
@@ -41,6 +31,7 @@ The book details why and how to use these tools to self-host:
 * Ansible provisioner
 * Traefik reverse proxy
 * Docker container manager
+* Docker Compose service manager
 
 It cover specific services you should host, mostly Nextcloud.
 

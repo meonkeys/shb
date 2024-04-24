@@ -18,6 +18,10 @@ main {
     width: 660px;
 }
 
+dt {
+    font-style: italic;
+}
+
 nav ul, .sidebar ul {
 	margin: 0;
 	padding: 0;
