@@ -2258,9 +2258,8 @@ This is idempotent: running and up-to-date services are left unchanged.
 
 ((Traefik)) will automatically install ((Let's Encrypt)) certs to encrypt HTTP traffic.
 The certs are issued using a https://doc.traefik.io/traefik/https/acme/#dnschallenge[DNS challenge].
-The ((DNS)) challenge is especially handy for servers with zero public-facing inbound ports--even closed LANs can use HTTPS.
-There are other challenge types documented at https://letsencrypt.org/docs/challenge-types/.
-The DNS challenge is configured using labels in Traefik's `compose.yml` configuration file.
+This way to https://letsencrypt.org/docs/challenge-types/[authenticate a cert request] is especially handy for servers with zero public-facing inbound ports, allowing convenient HTTPS even within closed LANs.
+The ((DNS)) challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
 Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
 This is called ((SSL termination)).
