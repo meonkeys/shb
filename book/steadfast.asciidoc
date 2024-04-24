@@ -1027,6 +1027,7 @@ Let's dive into the various layers of a _Steadfast_ system.
 (((Ubuntu)))
 (((Wallabag)))
 (((ZFS)))
+(((ext4)))
 A _Steadfast_ system presents nicely as a simplified stack of colored boxes.
 These are conceptual, based on where and how frequently a sysadmin will likely act and investigate when supporting or troubleshooting.
 
@@ -1180,15 +1181,15 @@ Further reading:
 
 === Filesystem
 
-I recommend starting with one ext4 filesystem and, optionally, one ZFS filesystem.
-ext4 is the default filesystem for Ubuntu, a stable and simple choice.
+I recommend (and will demonstrate) starting with one ((ext4)) filesystem and, optionally, one ZFS filesystem.
+ext4 is the stable, simple, and default filesystem for Ubuntu.
 ((ZFS)) (originally: Zettabyte File System) provides encryption, lightweight snapshots and ((RAID)) (redundant array of inexpensive disks).
 You may optionally use ZFS for storage (`/data`) on your server following <<ZFS setup>>.
 
-For the root (`/`) partition, I recommend using ((ext4)) instead of ZFS to:
+For the root (`/`) partition, I recommend using ext4 instead of ZFS to:
 
 * stick as closely as possible to the default ((Ubuntu)) install
-* sidestep a ((Docker)) annoyance
+* avoid ((Docker)) filesystem clutter
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
 * avoid taking ZFS snapshots of the OS, since
 ** we don't need to
@@ -1196,7 +1197,7 @@ For the root (`/`) partition, I recommend using ((ext4)) instead of ZFS to:
 ** we won't modify the OS--changes will be managed upstream (e.g. during package updates or via mario)
 
 Docker volumes (persistent container data) will be on ZFS.
-The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
+The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ((ext4)) in `/var/lib/docker`.
 To learn more about ZFS, see:
 
 * https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/[Bitrot and atomic COWs: Inside "`next-gen`" filesystems] by Jim Salter
