@@ -1221,8 +1221,7 @@ This eases maintenance, including eventual re-installs.
 Not mucking about on the server takes discipline, especially for old-school hands-on ((sysadmin))s like me.
 
 Try to avoid SSH'ing into the server and making one-off changes.
-It's better to modify mario's configuration files and re-provision.
-Once you learn mario in <<_mario>>, practice doing this.
+You'll learn how to instead modify mario's configuration files and re-provision the server in <<_mario>>.
 
 You can and should still ((SSH)) into the server, but when you do, try to only run read-only or exceptional read-write commands.
 I often do something manually, undo it, then do the same thing with mario to confirm results are as expected.
