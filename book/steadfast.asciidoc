@@ -2181,7 +2181,7 @@ None of the services are running yet.
 We'll soon get to how to turn them on and start using them.
 
 Let's first take a step to save a lot of typing.
-Services are started and stopped with Docker compose, which is always run with `docker compose`.
+Services are started and stopped with Docker Compose, which is always run with `docker compose`.
 When you run `docker compose`, you must first be in a folder containing a `compose.yml` file.
 By convention, the name of that folder is the name of the service.
 A typical usage pattern is:
