@@ -1121,22 +1121,21 @@ Really just rolls off the tongue!
 Test ((WAN access)) with this ((threat model)).
 
 Assets::
-  Personal information stored on out-of-date ((Nextcloud)) server.
+  Files with personal information stored in out-of-date service (e.g. an old, vulnerable version of Nextcloud).
 Actors/Threats/Vectors::
-  Bot scrapes websites and finds URL to Nextcloud server on a public mailing list archive.
-Bot automatically attempts exploit against known vulnerability in Nextcloud server.
+  Bot scrapes websites and finds URL to service on a public mailing list archive.
+Bot automatically attempts exploit against known vulnerability in service.
 Exploit succeeds, bot owner gains access to compute resources and personal information.
 Mitigations::
-  Keep Nextcloud server up to date.
+  Keep service up to date.
 Secure ((WAN)) boundary: monitor traffic logs, employ an ((IPS)) (intrusion prevention system), only cross into ((LAN)) using a ((VPN)) (virtual private network).
 Close WAN boundary: disallow all inbound WAN access.
 
-(((Nextcloud, security)))
 This hopefully makes obvious the risks of allowing WAN access and how we might do so safely.
 
-"`Avoid public mailing lists`" is not listed in mitigations as it only obscures the URL to the out-of-date Nextcloud server, and one shouldn't rely on "`security through obscurity`".
+"`Avoid public mailing lists`" is not listed in mitigations as it only obscures the URL to the out-of-date service, and one shouldn't rely on "`security through obscurity`".
 
-Mitigating at multiple layers (OS firewall, Nextcloud, WAN boundary) is called "`defense in depth`".
+Mitigating at multiple layers (OS firewall, service, WAN boundary) is called "`defense in depth`".
 It's a great idea.
 
 ==== Wireguard
