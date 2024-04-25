@@ -1614,6 +1614,7 @@ Most of my services require direct access anyway.
 
 If you are hosting at home, you need a reliable WAN (wide-area network) connection if you want to be able to connect from other places besides your ((LAN)).
 Use wired ethernet cables to your server, not Wi-Fi.
+A wired LAN is more reliable and easier to troubleshoot.
 
 ===== Minimum requirements
 
