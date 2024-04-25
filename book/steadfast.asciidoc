@@ -1821,7 +1821,7 @@ Use the second for parts or a ready as-is replacement machine (also called a "`c
 
 ==== Software updates
 
-Keep ((OS)) packages and container images up to date.
+Keep your server up to date.
 For the OS:
 
 .upgrade packages (server)
@@ -1830,7 +1830,9 @@ For the OS:
 sudo apt update && sudo apt full-upgrade
 ----
 
-Reboot when necessary (e.g. when the kernel is upgraded).
+This is a relatively safe operation.
+Reboot after upgrading, as necessary (e.g. when the kernel is upgraded).
+When you ((SSH)) into the server, it will tell you if a reboot is required. 
 
 Each service in <<Services>> includes a "`Maintenance notes`" section with update instructions.
 Container images can be updated by hand with ((Docker Compose)) or automatically by ((Watchtower)).
