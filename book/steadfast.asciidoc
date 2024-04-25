@@ -1455,7 +1455,7 @@ First, their apparently non-FOSS build script.
 https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341/2[Nick's explanation] for this makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
 But hardcoded secrets are bad practice, it may be an ((AGPL)) license violation to hide a build script, and it makes forking harder.
 It's good practice to visualize succession, to be prepared for an eventual fork and change of ownership.
-Nextcloud is a fork of ((ownCloud)), after all.
+Nextcloud is a fork of ((ownCloud)), after all (see <<Nextcloud vs. ownCloud>>).
 
 Second, sprawling complexity.
 "`Nextcloud`" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
@@ -2654,13 +2654,18 @@ Nice!
 
 ==== Nextcloud vs. ownCloud
 
-Nextcloud started as a fork of ((ownCloud)).
-At first glance it's a bit difficult to tell the difference.
+At first glance it's a bit difficult to tell the difference between Nextcloud and ((ownCloud)).
+This follows since ((Nextcloud)) started as a fork of ownCloud.
 
-One way to compare them is via relative activity on GitHub.
-Doing so it appears that Nextcloud is thriving and ownCloud is flailing.
+So why should you choose one over the other?
+A healthy FOSS project is generally also an active project, so one way to guide your decision is by comparing activity metrics on GitHub.
+See https://github.com/owncloud/core/pulse[owncloud/core activity] and https://github.com/nextcloud/server/pulse[nextcloud/server activity].
+Based on those two sets of metrics it appears Nextcloud is thriving and ownCloud is dying.
 
-Judge for yourself: compare https://github.com/owncloud/core/pulse with https://github.com/nextcloud/server/pulse.
+Another interpretation is that ownCloud has a smaller and slower-moving core codebase.
+More work is necessary to make a truly rigorous comparison.
+
+See also: <<traits-of-good-services>> and <<traits-of-bad-services>> in <<Choose services>>.
 
 ==== Nextcloud Office
 
