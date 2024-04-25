@@ -2025,9 +2025,8 @@ You may also want to be able to refer to your server by name when you're away fr
 ==== Public DNS
 
 Duck DNS provides a free domain name and DNS service.
-Route 53 will do the same, and currently costs about USD 0.50 per month per domain name.
-mario should also work with Namecheap and DigitalOcean.
-I recommend one of the paid options instead of Duck DNS.
+mario also works with paid services such as Namecheap, DigitalOcean, and Route 53.
+I recommend any of the paid options over Duck DNS.
 Support for other ((DNS)) providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
