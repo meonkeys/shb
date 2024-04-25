@@ -1147,6 +1147,18 @@ Assuming your VPN server is well-configured and up to date, this is an excellent
 From a user perspective there's no heavyweight login process, as with older VPNs.
 ((Wireguard)) is fast, easy, and secure.
 
+==== Full-disk encryption
+
+(((encryption, full-disk)))
+Encrypting prevents data recovery by an attacker.
+You'll have to enter a password on boot, though.
+This is inconvenient if you have intermittent power and/or no remote management capability.
+There's also the reasonable argument that full-disk or "`at-rest`" encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
+
+(((OS)))
+If you decide you want full-disk encryption, choose it during <<OS install>>.
+<<Digital security>> is helpful for deciding whether or not to encrypt.
+
 ==== More tips
 
 .Self-hoster security tips
@@ -1685,16 +1697,6 @@ Next steps:
 See <<ZFS setup>>.
 . Download mario onto your ((admin computer)) (a separate computer from your server). See <<More resources>>.
 . Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
-
-==== Full-disk encryption
-
-(((encryption, full-disk)))
-Encrypting prevents data recovery by an attacker.
-You'll have to enter a password on boot, though.
-This is inconvenient if you have intermittent power and/or no remote management capability.
-There's also the reasonable argument that full-disk or "`at-rest`" encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
-
-If you decide you want full-disk encryption, choose it during the ((OS)) install. <<Digital security>> is helpful for deciding whether or not to encrypt.
 
 ==== ZFS setup
 
