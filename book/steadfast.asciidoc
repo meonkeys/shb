@@ -1737,7 +1737,7 @@ zfs set canmount=off main
 # Create encrypted dataset in "main" pool. This is the "parent" dataset, we
 # can easily add more later and they'll all be encrypted.
 openssl rand -base64 32 > /root/secure-dataset-key
-zfs create -o encryption=aes-128-gcm -o keyformat=passphrase \
+zfs create -o encryption=on -o keyformat=passphrase \
     -o keylocation=file:///root/secure-dataset-key main/secure
 zfs set canmount=off main/secure
 
