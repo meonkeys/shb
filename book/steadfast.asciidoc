@@ -2021,6 +2021,7 @@ You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
 
 You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a ((dynamic IP address)).
+This text does not include a complete primer on DNS, so you'll need to look elsewhere to learn concepts such as public and private IP address spaces, CIDR notation, and the various kinds of DNS records.
 
 ==== Public DNS
 
@@ -2079,7 +2080,7 @@ It is handy to have an internal ((DNS)) server to be able to refer to your serve
 These internal names should match the public names and point to ((LAN))-only private IP addresses.
 This way you can use the same names inside and outside your LAN and your Let's Encrypt certs will work.
 
-If you don't have an internal ((DNS)) server, use hostname to IP address mappings in `/etc/hosts` or similar, based on your ((OS)).
+If you don't have an internal ((DNS)) server, use hostname to IP address mappings in `/etc/hosts` or similar directly on your admin computer.
 For example:
 
 [source%unbreakable,text]
