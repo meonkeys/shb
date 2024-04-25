@@ -1830,8 +1830,10 @@ For the OS:
 sudo apt update && sudo apt full-upgrade
 ----
 
-This is a relatively safe operation.
-Reboot after upgrading, as necessary (e.g. when the kernel is upgraded).
+This will update local package information and--if that succeeded--upgrade the OS.
+Root access is required, hence `sudo`.
+This is relatively safe and typically requires little to no interaction besides a confirmation to proceed.
+A reboot may be required afterwards (e.g. when the kernel is upgraded).
 When you ((SSH)) into the server, it will tell you if a reboot is required. 
 
 Each service in <<Services>> includes a "`Maintenance notes`" section with update instructions.
