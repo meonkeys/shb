@@ -1836,8 +1836,6 @@ tail /proc/pressure/*
 ----
 
 `atop` will also show PSI values.
-https://kernel.org/doc/html/latest/accounting/psi.html[Read more about PSI].
-
 If your PSI check shows high resource usage, try `docker stats` to see resource usage per container.
 That should help you narrow down the issue to specific services.
 
