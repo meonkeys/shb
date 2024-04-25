@@ -189,6 +189,7 @@ This is the final step in the editing process. A proofreader examines the final 
 ** note: indexes are only generated for PDF outputs
 * data is plural, use context for singular (e.g. "piece of data")
 * colons: captalize word after? sometimes? *TBD*
+* em dash: omit space before and after
 
 == am55: improve htmlproofer
 
