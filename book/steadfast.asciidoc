@@ -1489,8 +1489,8 @@ I go into detail about a few of these services later in the book.
 
 "`Cores`" represents relative peak compute requirements.
 RAM: peak memory, in GB.
-These were fairly wild guesses, based as much as possible on published documentation.
-The guesses turned out to be accurate enough.
+These were rough estimates based on published documentation.
+The estimates turned out to be accurate enough.
 I could see right quick I'd need something more powerful than the latest available Raspberry Pi.
 See <<Server>> for more lessons learned about resource requirements.
 
