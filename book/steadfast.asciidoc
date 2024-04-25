@@ -1578,12 +1578,13 @@ Dogfooding keeps you honest and helps you empathize with others.
 I use ((HDD))s (hard disk drives) for data storage, mainly as a cost-saving measure vs. public cloud storage or ((SSD))s (solid-state drives).
 The cost of public cloud ((block storage)) far exceeds the gigabyte-hour cost of my HDDs.
 I priced out one month of 5TB HDD block storage on AWS at $228.10.
-With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_.
+With ZFS I'm also taking a snapshot (bascially a full local backup) _every fifteen minutes_.
 One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68 on AWS.
 That's $535.67 total, which is about what I spent on my drives.
 So I broke even in a month and the drives should last _years_.
 
-For redundancy I recommend purchasing two of the same drive, mirrored (((RAID)) 1).
+(((RAID)))
+For redundancy I recommend using two of the same drive, mirrored (RAID 1).
 This also increases read performance (for most reads) and halves usable storage space.
 
 HDDs are plenty fast when measured from the standpoint of self-hosted service response time.
@@ -1598,7 +1599,7 @@ An interesting alternative to HDDs is ((object storage)).
 ((Nextcloud)) can use object storage directly, for example.
 There are many aspects to consider when comparing the two options, such as:
 
-* cost of storage and ((egress))
+* cost of storage and ((egress)) (download)
 * control, autonomy, sovereignty
 * direct access to data
 * speed and means of access
@@ -3546,6 +3547,8 @@ DRM::
   Digital restrictions management. Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
 dVCS::
   Distributed version control system. These days that pretty much means https://git-scm.com[git].
+egress::
+  Any outbound data transfer or download, in public cloud terms.
 entrypoint::
   How traffic enters the Traefik reverse proxy; network ports.
 firewall::
