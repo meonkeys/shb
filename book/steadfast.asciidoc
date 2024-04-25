@@ -1535,8 +1535,8 @@ I sought professional commodity hardware for its replace-ability.
 It can handle a reasonable amount of bursty compute needs, including building Docker images, flurries of user activity, and some generative ((AI)) (even without a GPU).
 
 I found a used refurbished 1U rackmount server on eBay for about $1,000.
-1U is one https://en.wikipedia.org/wiki/Rack_unit[rack unit] tall and very deep: Designed to fit in a data center server rack.
 This is sometimes called "`off-lease enterprise hardware`".
+A 1U server is one https://en.wikipedia.org/wiki/Rack_unit[rack unit] tall, like a long pizza box.
 Tech companies dump these by the truckload so you can usually find a good deal.
 Mine has two 24-core CPUs and 128 GB RAM.
 
