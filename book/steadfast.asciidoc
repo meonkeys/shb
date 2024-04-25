@@ -2949,7 +2949,7 @@ It will discover and check outdated containers, pull new images, and restart ser
 It https://github.com/containrrr/watchtower/issues/90[does not automatically roll back if a container upgrade fails].
 Granted, this would be challenging to implement.
 A service might only have one-way database migrations, for example.
-I think the Watchtower maintainers made
+I think the Watchtower maintainers made the right decision to omit automatic rollbacks (likely to keep Watchtower simple).
 
 You may experience an issue where a service is broken by Watchtower.
 If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
