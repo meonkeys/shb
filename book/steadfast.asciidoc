@@ -1572,8 +1572,7 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 (((admin computer)))
 (((provision)))
 It's helpful to have a separate computer from your server to make changes.
-I usually run mario on a laptop.
-This provisions my remote server, making changes as necessary to align it with the Ansible configuration files.
+I usually run mario using a laptop as my admin computer.
 
 ==== Test devices
 
@@ -1940,8 +1939,7 @@ Here are some suggestions to get the most out of mario.
 The first time you run mario, follow the instructions as closely as possible.
 Many assumptions are made so it works "`out of the box`", and it is meant to be easily customizable.
 
-mario configuration files are declarative.
-You write out the _state_ you want your server to end up at, not all the individual commands you'd run on a command line to achieve the same state.
+mario configuration files are declarative: They contain the _state_ you want your server to end up at, not all the individual commands you'd run manually to achieve the same state.
 mario runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
