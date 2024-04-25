@@ -1395,7 +1395,7 @@ Some have an interface, some run in the background on a schedule.
 ==== Choose services
 
 Start by reviewing your earlier needs and plans and use the material below to guide your decisions on which services you'll run.
-You may also skip ahead to <<Prepare hardware>> to continue on the path of using the services mario installs by default, then return to this section when you are considering other services to add.
+You may also skip ahead to <<Prepare hardware>> to continue on the path of using the services mario installs by default, then return to this section when you're considering other services to add.
 
 ===== Good for self-hosting
 
@@ -1422,18 +1422,8 @@ The good ones will likely share at least some of these traits.
 
 See also: <<solution-viability-checklist>> in <<Alternatives to this book>>.
 
-(((Nextcloud)))
-https://nextcloud.com[Nextcloud] has many of these traits, with some exceptions.
-One such exception is their apparently secret build script.
-https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341/2[Nick's explanation] makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
-But hardcoded secrets are bad practice, it may be an ((AGPL)) license violation, and it makes forking harder.
-It's good practice to visualize succession, to be prepared for an eventual fork and change of ownership.
-Nextcloud is a fork of ((ownCloud)), after all.
-
-The sprawling complexity is also risky.
-"`Nextcloud`" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
-This complexity also makes forking costly and time-consuming.
-Even switching between extant forks (say, migrating back to ownCloud from Nextcloud) may be complex.
+These traits are based on standard industry practice as well as my personal values and preferences.
+Your own list may differ if, for example, you don't prefer FOSS licensing or do prefer a particular programming language.
 
 ===== Bad for self-hosting
 
@@ -1456,6 +1446,22 @@ Here are some indications a self-hosted service might be one to avoid.
 * Depends on closed/proprietary standards/services.
 * https://en.wikipedia.org/wiki/Open-core_model[Open core].
 ****
+
+(((Nextcloud)))
+I'm going to pick on Nextcloud here a bit.
+Nextcloud has far more good traits than bad, but these are still worth mentioning.
+
+First, their apparently non-FOSS build script.
+https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341/2[Nick's explanation] for this makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
+But hardcoded secrets are bad practice, it may be an ((AGPL)) license violation to hide a build script, and it makes forking harder.
+It's good practice to visualize succession, to be prepared for an eventual fork and change of ownership.
+Nextcloud is a fork of ((ownCloud)), after all.
+
+Second, sprawling complexity.
+"`Nextcloud`" is not one thing, it is a collection of _many_ software projects and services under various degrees of control by a single company.
+This complexity makes forking costly and time-consuming.
+Even switching between extant forks (say, migrating back to ownCloud from Nextcloud) may be complex.
+They are clearly _not_ trying to lock in customers, but the complexity itself may ultimately have that effect.
 
 ==== Map services to resources
 
