@@ -513,11 +513,9 @@ Its version-specific material is expected to fall out of date.
 Its motivation and process for learning will become more relevant as time passes.
 
 This book is for those trying to live more for others and less for themselves; selfishly enjoying the act of being selfless.
-Leaders, parents/guardians, members of a collective.
+Leaders, parents/guardians, members of a collective or a handful of friends.
 People who want to self host, who _also_ love others and doing other things besides systems administration.
 I'll save you some precious time for those other things while making the sysadmin bits fun.
-
-This book is for people supporting a small group, like a family or a handful of friends.
 
 Similar to "`small community hosting`", _Small Group Cloud_ would be more accurate title words than _Personal Cloud_.
 "`Small group`" is a great target size for what you'll create.
