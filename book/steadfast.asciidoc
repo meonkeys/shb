@@ -1945,8 +1945,7 @@ The desired end state, as declared in the configuration files, is reached and co
 
 (((provision)))
 After getting mario up and running successfully once, run it again!
-Provisioning with mario is reassuringly ((idempotent)).
-Meaning, the system should not change in any meaningful way after the desired state is reached.
+Provisioning with mario is reassuringly ((idempotent)): The system will not change in any meaningful way after the desired state is reached.
 Once `provision.sh` completes successfully, it may be re-run to confirm the server is still in the desired state.
 Then, start tinkering.
 You can find some ideas in <<Exercises>>.
