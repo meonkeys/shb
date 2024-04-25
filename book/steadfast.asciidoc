@@ -1575,7 +1575,7 @@ Dogfooding keeps you honest and helps you empathize with others.
 ==== Hard drives
 
 (((ZFS, HDDs and)))
-I use ((HDD))s (hard disk drives) for data storage, mainly as a cost-saving measure.
+I use ((HDD))s (hard disk drives) for data storage, mainly as a cost-saving measure vs. public cloud storage or ((SSD))s (solid-state drives).
 The cost of public cloud ((block storage)) far exceeds the gigabyte-hour cost of my HDDs.
 I priced out one month of 5TB HDD block storage on AWS at $228.10.
 With ZFS I'm also taking a snapshot (bascially a full local backup) _every 15 minutes_.
@@ -1591,7 +1591,7 @@ HDDs are plenty fast when measured from the standpoint of self-hosted service re
 The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM.
 Remote ((backups)) can take a while, and that's fine.
 
-I use one ((SSD)) (solid-state drive) for the ((OS)) and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
+I use one ((SSD)) for the ((OS)) and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 (((data sovereignty)))
 An interesting alternative to HDDs is ((object storage)).
