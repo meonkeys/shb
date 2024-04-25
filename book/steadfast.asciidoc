@@ -1950,7 +1950,7 @@ Once `provision.sh` completes successfully, it may be re-run to confirm the serv
 Then, start tinkering.
 You can find some ideas in <<Exercises>>.
 
-You may want to first create a ((VM)) and run mario against that until you're ready to run mario pointed at your real server.
+If you are familiar and comfortable with ((VM))s, you may want to first create a VM and run mario against that until you're ready to run mario pointed at your real server.
 Or perhaps your real server _is_ a VM--that'll work fine too.
 
 === First run
