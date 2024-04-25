@@ -1794,6 +1794,7 @@ I update my checklists about as often as I use them.
 Here are examples you might use as starting points.
 
 .Checklist: Monthly Maintenance
+[%unbreakable]
 ****
 * [ ] Upgrade ((OS)) packages.
 * [ ] Check storage space remaining.
@@ -1801,6 +1802,7 @@ Here are examples you might use as starting points.
 ****
 
 .Checklist: Yearly Maintenance
+[%unbreakable]
 ****
 * [ ] Test restore from backup.
 * [ ] Review and improve ((threat model)).
