@@ -1836,10 +1836,10 @@ tail /proc/pressure/*
 ----
 
 `atop` will also show PSI values.
-Read more about PSI at https://kernel.org/doc/html/latest/accounting/psi.html.
+https://kernel.org/doc/html/latest/accounting/psi.html[Read more about PSI].
 
-If your PSI check shows high I/O, try `docker stats` to see resource usage per container.
-That should help you narrow down resource issues to specific containers.
+If your PSI check shows high resource usage, try `docker stats` to see resource usage per container.
+That should help you narrow down the issue to specific services.
 
 If you are using ((ZFS)), you can use `zpool iostat` to see input/output statistics for your storage pool(s).
 
