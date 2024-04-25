@@ -1157,7 +1157,7 @@ There's also the reasonable argument that full-disk or "`at-rest`" encryption of
 
 (((OS)))
 If you decide you want full-disk encryption, choose it during <<OS install>>.
-<<Digital security>> is helpful for deciding whether or not to encrypt.
+Review the material earlier in this chapter if you want help with your decision.
 
 ==== More tips
 
