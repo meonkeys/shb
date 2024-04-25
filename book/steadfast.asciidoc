@@ -2254,15 +2254,6 @@ If you waited and are still getting invalid cert warnings from your browser when
 ==== Start other services
 
 Starting a mario service is always done with `dc SERVICE up -d`, just like we did with Traefik.
-Sometimes additional setup is required.
-You'll find a "`Setup`" section with those details for each mario service:
-
-* <<Nextcloud>>
-* <<Jellyfin>>
-* <<Wallabag>>
-* <<Watchtower>>
-* <<Scratch>>
-
 To stand up everything at once, you could use this shell script:
 
 .start all services ad-hoc Bash script (server)
