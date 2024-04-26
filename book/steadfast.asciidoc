@@ -2276,7 +2276,7 @@ This way to https://letsencrypt.org/docs/challenge-types/[authenticate a cert re
 The ((DNS)) challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
 Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
-This is called ((SSL termination)), and is indicated by lines in Traefik's `compose.yml` mentioning `acme`.
+This is called ((SSL termination)), and is configured by lines in Traefik's `compose.yml` mentioning `acme`.
 
 (((router, network device)))
 Take a look at a `compose.yml` file for any service included with mario.
