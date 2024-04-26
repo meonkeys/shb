@@ -2483,10 +2483,7 @@ Next, visit `/settings/admin/externalstorages` and install the "`External storag
 ==== Maintenance notes
 
 * upgrades
-** choose a release tag at https://hub.docker.com/_/nextcloud/
-** change the version number in `roles/services/templates/ops/nextcloud/compose.yml`
-** re-provision from ((admin computer))
-** replace containers on the host with `dc nextcloud up -d`
+** upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`
 * visit `/settings/admin/overview`
 ** perform any recommended ((maintenance)) on that page
 ** ignore the Update section, it may disagree with Docker Hub
@@ -2849,10 +2846,7 @@ Jellyfin can take advantage of Intel Quick Sync Video.
 
 ==== Maintenance notes
 
-* upgrades
-** change the version number in `roles/services/templates/ops/jellyfin/compose.yml`
-** re-provision from ((admin computer))
-** replace containers on the host with `dc jellyfin up -d`
+Upgrade and replace service containers with `dc jellyfin pull && dc jellyfin up -d`.
 
 ==== Bugs
 
@@ -2894,11 +2888,8 @@ https://wallabag.org[Wallabag] saves articles for distraction-free offline readi
 
 ==== Maintenance notes
 
-* upgrades
-** change the version number in `roles/services/templates/ops/wallabag/compose.yml`
-** re-provision from ((admin computer))
-** replace containers on the host with `dc wallabag up -d`
-** if you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
+Upgrade and replace service containers with `dc wallabag pull && dc wallabag up -d`.
+If you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
 
 ==== Bugs
 
@@ -2955,10 +2946,7 @@ I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
 
 ==== Maintenance notes
 
-* upgrades
-** change the version number in `roles/services/templates/ops/watchtower/compose.yml`
-** re-provision from ((admin computer))
-** replace containers on the host with `dc watchtower up -d`
+Upgrade and replace service containers with `dc watchtower pull && dc watchtower up -d`.
 
 === Scratch
 
