@@ -2519,6 +2519,7 @@ You can override an out-of-date app with the "`enable untested app`" option unde
 Sometimes this works.
 
 Four months seemed to me like a short window for major releases, so I started a https://help.nextcloud.com/t/major-release-cadence/161685[thread about it].
+Review their https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Schedule[Maintenance and Release Schedule] to make sure your current version is still supported.
 
 ==== Performance
 
