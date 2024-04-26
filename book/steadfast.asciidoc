@@ -1221,11 +1221,14 @@ Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacemen
 Linux is a popular and reasonable choice for self-hosting.
 I recommend a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
 ((Ubuntu)) ((LTS)) (long-term support) releases are the most stable and I recommend them.
+_Steadfast_ specifically mentions 22.04, the LTS release from April 2022.
+This is intentionally _not_ the latest available.
+22.04 is stable today, and will receive updates https://ubuntu.com/about/release-cycle[until April 2032], promising many more years of stability until _Steadfast_ must be revised.
 Installing the ((OS)) is generally quick and painless, see <<OS install>>.
 
 ==== Customizations
 
-It's good practice to carefully manage customizations to the ((operating system)) from a default install.
+It's good practice to minimize and carefully track customizations to the ((operating system)) from a default install.
 This eases maintenance, including eventual re-installs.
 Not mucking about on the server takes discipline, especially for old-school hands-on ((sysadmin))s like me.
 
@@ -1680,8 +1683,7 @@ NOTE: As you install the OS, think ahead to disaster recovery.
 Take notes and visualize yourself repeating the process precisely.
 At each step in the interactive Ubuntu installer, accept the default or write down your choice.
 
-. *Install Ubuntu*.
-Pick the latest ((Ubuntu)) ((LTS)) release, e.g. 64-bit Ubuntu 22.04 LTS server.
+. *Install Ubuntu* 22.04 LTS server.
 Refer to https://ubuntu.com/tutorials/install-ubuntu-server[this tutorial] for step-by-step instructions.
 . Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
