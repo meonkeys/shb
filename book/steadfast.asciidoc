@@ -2041,6 +2041,9 @@ If you want a free domain name from a provider with an API, you can try your luc
 . Start at https://duckdns.org.
 . Log in and add a domain.
 
+Your domain will be named something like `blah.duckdns.org`.
+Use this in place of `example.com` as appropriate, e.g. use `cloud.blah.duckdns.org` for `cloud.example.com`.
+
 ===== Amazon Route 53
 
 If you choose Route 53, create a new hosted zone with the domain name you own.
