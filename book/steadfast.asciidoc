@@ -2236,6 +2236,7 @@ Stand up the ((reverse proxy)) first.
 Connect to your server and start ((Traefik)) with `dc traefik up -d`.
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
 While you are waiting, tail the logs with `dc traefik logs -f`.
+When you're done, stop tailing the logs with kbd:[Ctrl+c].
 
 It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
@@ -2245,16 +2246,17 @@ You should see something like this for a working ((Traefik)) service:
 .typical Traefik logs (server)
 [source%linenums,text]
 ----
-Attaching to traefik_reverse-proxy_1
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Configuration loaded from flags."
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Traefik version 2.10.1 built on 2023-04-27T14:52:35Z"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *traefik.Provider"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *docker.Provider"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *acme.ChallengeTLSALPN"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *acme.Provider"
-reverse-proxy_1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certificate renew..." ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=myresolver.acme
++ sudo docker compose --file /root/ops/traefik/compose.yml logs -f
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Configuration loaded from flags."
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Traefik version 2.10.1 built on 2023-04-27T14:52:35Z"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *traefik.Provider"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *docker.Provider"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *acme.ChallengeTLSALPN"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *acme.Provider"
+reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certificate renew..." ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=myresolver.acme
+^Ccanceled
 ----
 
 If you waited and are still getting invalid cert warnings from your browser when you visit `\https://traefik.example.com`, read the Traefik log messages carefully and also see <<Encryption certificates>> for troubleshooting steps.
@@ -2349,15 +2351,20 @@ You should see something like this:
 -----
 $ cd ~/ping/
 $ sudo docker compose up
-Creating network "ping_default" with the default driver
-Creating ping_test_1 ... done
-Attaching to ping_test_1
-test_1  | PING example.com (93.184.216.34): 56 data bytes
-test_1  | 64 bytes from 93.184.216.34: seq=0 ttl=55 time=3.477 ms
-test_1  | 64 bytes from 93.184.216.34: seq=1 ttl=55 time=3.236 ms
-test_1  | 64 bytes from 93.184.216.34: seq=2 ttl=55 time=3.363 ms
+[+] Running 2/2
+ ✔ Network ping_default   Created                                      0.1s
+ ✔ Container ping-test-1  Created                                      0.1s
+
+Attaching to ping-test-1
+ping-test-1  | PING example.com (93.184.216.34): 56 data bytes
+ping-test-1  | 64 bytes from 93.184.216.34: seq=0 ttl=55 time=3.477 ms
+ping-test-1  | 64 bytes from 93.184.216.34: seq=1 ttl=55 time=3.236 ms
+ping-test-1  | 64 bytes from 93.184.216.34: seq=2 ttl=55 time=3.363 ms
 ^CGracefully stopping... (press Ctrl+C again to force)
-Stopping ping_test_1   ... done
+Aborting on container exit...
+[+] Stopping 1/1
+ ✔ Container ping-test-1  Stopped                                     10.4s
+canceled
 -----
 
 [%unbreakable]
@@ -2472,7 +2479,7 @@ This warning appears to be caused by DNS issues but shouldn't break anything.
 .. If you see a warning about an error in the logs and that error is **NotPermittedException** "`Could not create folder "/appdata_NNN/theming/global"`", just ignore it.
 This appears to be a harmless install-time issue.
 . Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
-.. Run it with `sudo docker exec --interactive --user www-data nextcloud_app_1 php occ`.
+.. Run it with `sudo docker exec --interactive --user www-data nextcloud-app-1 php occ`.
 . Add `/data/video` as an External storage.
 Media files uploaded there will automatically appear in ((Jellyfin)).
 First, visit `/settings/apps/featured` and install the "`External storage support`" app.
