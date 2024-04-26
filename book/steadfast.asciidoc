@@ -2486,16 +2486,15 @@ Next, visit `/settings/admin/externalstorages` and install the "`External storag
 
 ==== Maintenance notes
 
-* upgrades
-** upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`
-* visit `/settings/admin/overview`
-** perform any recommended ((maintenance)) on that page
-** ignore the Update section, it may disagree with Docker Hub
-* tail logs
-** https://lnav.org[lnav] is helpful for this
+Visit `/settings/admin/overview` periodically to check for system and security issues that may require manual intervention.
+Perform any recommended ((maintenance)) on that page.
+Ignore the Update section, it may disagree with Docker Hub.
+Visit `/settings/admin/logging` periodically to review all server-side log messages.
 
-The `stable` release tag will likely be stable enough for you and your users.
-This generally corresponds to the previous version listed at https://docs.nextcloud.com/.
+Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
+This will pull the most recent image with the `stable` release tag.
+Using this tag will likely be stable enough for you and your users.
+`stable` generally corresponds to the previous version listed at https://docs.nextcloud.com/.
 
 You may opt to use a more specific tag such as `27.1.5-apache`.
 This gives you the chance to review and test each upgrade.
