@@ -2965,11 +2965,16 @@ Scratch doesn't require any persistent data, setup, nor auth.
 
 ==== Maintenance notes
 
-* upgrades
-** change the version number in `roles/services/templates/ops/scratch/custom/Dockerfile`
-** re-provision from ((admin computer))
-** re-build custom image with `dc scratch build --pull`
-** replace containers on the host with `dc scratch up -d`
+Scratch uses a custom Docker image so the upgrade process is significantly more complex than upgrading other services.
+First, open the Scratch `custom/Dockerfile` on your admin computer.
+That `Dockerfile` can be found in a subfolder of `mario/ansible` in the mario source code.
+
+If you want to base the image on a newer version of Node.js, visit the https://hub.docker.com/_/node[Node.js page on Docker Hub] and select a version to use in the `FROM` line of the `Dockerfile`.
+If you want to upgrade Scratch, visit the https://github.com/scratchfoundation/scratch-gui/releases[releases page] and select a version to use for `SCRATCH_VERSION` in the `Dockerfile`.
+
+Re-run `provision.sh` on the admin computer.
+Re-build the image with `dc scratch build --pull` on the server.
+Replace service containers with `dc scratch up -d` on the server.
 
 == What's next?
 
