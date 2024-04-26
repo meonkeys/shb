@@ -2284,7 +2284,7 @@ Every service has a `tls` section defined on its router to enable HTTPS encrypti
 
 If you see cert warnings while trying to reach your web services, first examine Traefik logs as indicated in <<Start reverse proxy>>.
 To increase the Traefik log verbosity, change `--log.level=INFO` to `--log.level=DEBUG` in Traefik's `compose.yml`, re-provision, and re-start Traefik.
-Next, confirm DNS queries are succeeding since the DNS challenge requires it.
+To troubleshoot further, confirm DNS queries are succeeding since this affects the DNS challenge.
 
 .example DNS tests
 [source,bash]
