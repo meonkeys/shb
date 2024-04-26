@@ -2279,8 +2279,8 @@ Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web
 This is called ((SSL termination)).
 
 (((router, network device)))
-Take a look at a `compose.yml` file for a service included with mario.
-SSL termination is enabled for the service when a `tls` section is defined on a router.
+Take a look at a `compose.yml` file for any service included with mario.
+Every service has a `tls` section defined on its router to enable HTTPS encryption and SSL termination.
 
 We also have to tell Traefik where to find certs.
 Look for lines with `myresolver` in the `compose.yml` files included with mario.
@@ -2313,7 +2313,7 @@ dig traefik.example.com TXT
 ----
 
 Also, examine Traefik logs as indicated in <<Start reverse proxy>>.
-You can increase the Traefik log verbosity by setting `--log.level=DEBUG` in `roles/services/templates/ops/traefik/compose.yml`, re-provision, and re-start Traefik.
+To increase the Traefik log verbosity, change `--log.level=INFO` to `--log.level=DEBUG` in Traefik's `compose.yml`, re-provision, and re-start Traefik.
 
 === Tiny test service
 
@@ -2356,6 +2356,7 @@ test_1  | 64 bytes from 93.184.216.34: seq=2 ttl=55 time=3.363 ms
 Stopping ping_test_1   ... done
 -----
 
+[%unbreakable]
 TIP: For extra credit, incorporate your tiny test service into mario.
 
 This is the basis for adding more interesting services, too.
