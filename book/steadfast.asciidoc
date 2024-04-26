@@ -2313,15 +2313,15 @@ dig traefik.example.com TXT
 
 === Tiny test service
 
-Standing up a test service is easy.
-Let's give this a shot.
-A test service is useful to confirm networking is functional for Docker containers running on your host.
+If you got this far, try standing up a test service.
+This is useful to confirm networking is functional for Docker containers running on your host.
+We likely already have this assurance if Traefik is working (since it requires networking for the DNS challenge), but this may still be a useful tool for another time, or at least a positive step towards creating your own useful services.
 
 This service demonstrates pinging a public server.
 On _your_ server, create the folder `~/ping/`.
 Create a file `compose.yml` in that folder, containing:
 
-.tiny test service config
+.tiny test service config (server)
 [source%unbreakable,yaml]
 ----
 version: '3'
