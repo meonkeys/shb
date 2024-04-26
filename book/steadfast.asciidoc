@@ -1222,7 +1222,6 @@ Linux is a popular and reasonable choice for self-hosting.
 I recommend a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
 ((Ubuntu)) ((LTS)) (long-term support) releases are the most stable and I recommend them.
 _Steadfast_ specifically mentions 22.04, the LTS release from April 2022.
-This is intentionally _not_ the latest available.
 22.04 is stable today, and will receive updates https://ubuntu.com/about/release-cycle[until April 2032], promising many more years of stability until _Steadfast_ must be revised.
 Installing the ((OS)) is generally quick and painless, see <<OS install>>.
 
