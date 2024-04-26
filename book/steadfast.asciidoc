@@ -2276,16 +2276,15 @@ This way to https://letsencrypt.org/docs/challenge-types/[authenticate a cert re
 The ((DNS)) challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
 Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
-This is called ((SSL termination)).
+This is called ((SSL termination)), and is indicated by lines in Traefik's `compose.yml` mentioning `acme`.
 
 (((router, network device)))
 Take a look at a `compose.yml` file for any service included with mario.
 Every service has a `tls` section defined on its router to enable HTTPS encryption and SSL termination.
 
-We also have to tell Traefik where to find certs.
-Look for lines with `myresolver` in the `compose.yml` files included with mario.
-
-If you see cert warnings while trying to reach your web services, first confirm DNS queries are succeeding.
+If you see cert warnings while trying to reach your web services, first examine Traefik logs as indicated in <<Start reverse proxy>>.
+To increase the Traefik log verbosity, change `--log.level=INFO` to `--log.level=DEBUG` in Traefik's `compose.yml`, re-provision, and re-start Traefik.
+Next, confirm DNS queries are succeeding since the DNS challenge requires it.
 
 .example DNS tests
 [source,bash]
@@ -2311,9 +2310,6 @@ dig @9.9.9.9 +short traefik.example.com
 # DNS challenge and is otherwise not set.
 dig traefik.example.com TXT
 ----
-
-Also, examine Traefik logs as indicated in <<Start reverse proxy>>.
-To increase the Traefik log verbosity, change `--log.level=INFO` to `--log.level=DEBUG` in Traefik's `compose.yml`, re-provision, and re-start Traefik.
 
 === Tiny test service
 
