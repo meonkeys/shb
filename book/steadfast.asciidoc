@@ -2372,7 +2372,7 @@ With the help of mario your cloud gets these out of the box and will be flexible
 
 These particular services--while all reasonable choices to make your data useful--may not be the best available choices nor the best fits for your use case.
 That is absolutely fine!
-Plan to add and remove services as desired and as time passes.
+Plan to add and remove services as desired.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
