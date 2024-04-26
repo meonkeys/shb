@@ -2125,6 +2125,7 @@ Host mario_server
   User your-username
 ----
 
+Adjust that as necessary for the SSH client you use.
 (((provision)))
 Test it by running `ssh mario_client`.
 If that works, run `provision.sh` again.
