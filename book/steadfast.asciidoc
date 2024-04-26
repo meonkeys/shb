@@ -2093,6 +2093,9 @@ For example:
 ----
 
 IP addresses can be repeated because the ((reverse proxy)) will direct traffic based on hostname.
+`192.168.1.100` is a placeholder.
+To get the IP address of your server, log in and run `netplan status`.
+You must be able to `ping` that IP address from your admin computer.
 
 Overriding DNS records like this is a temporary measure.
 Only the computer with these specific mappings will be able to get to your sever by name.
