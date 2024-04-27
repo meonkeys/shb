@@ -11,7 +11,7 @@ services:
       REDIS_HOST: redis
       REDIS_HOST_PASSWORD: redispassword
       OVERWRITEPROTOCOL: https
-      TRUSTED_PROXIES: traefik_reverse-proxy_1
+      TRUSTED_PROXIES: traefik-reverse-proxy-1
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.nc-https.entrypoints=websecure"
