@@ -2373,17 +2373,29 @@ It's only a few more lines of code and configuration to create a small ((API)) o
 
 == Services
 
-Let's dive into the details of self-hosting a handful of useful services.
-Each service has a "`Setup`" section explaining how to start it.
-
-The services I'll highlight are a tiny fraction of those available to self-host.
+Let's dive into the services provisioned by mario.
+We'll cover what they provide and how to manage them.
+These services are a tiny fraction of those available to self-host.
 They reflect my users`' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
-Getting them running will provide some useful functionality and a good starting point.
-With the help of mario your cloud gets these out of the box and will be flexible enough to accommodate your preferred service choices.
+Getting them running will provide some useful functionality for your users and a good starting point for self-hosting whatever you want.
+
+[cols="1,3"]
+|===
+|Service |Purpose
+
+|Nextcloud |file sync and share
+|Jellyfin |streaming music and home movies
+|Wallabag |read articles offline, without distractions
+|Watchtower |keep other services up to date
+|Scratch |visual programming learning tool
+|===
+
+With the help of mario your server gets these out of the box.
+Each service has a "`Setup`" section explaining how to start it.
 
 These particular services--while all reasonable choices to make your data useful--may not be the best available choices nor the best fits for your use case.
 That is absolutely fine!
-Plan to add and remove services as desired.
+You'll be able to add and remove services as desired.
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
