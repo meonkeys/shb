@@ -2390,14 +2390,17 @@ Getting them running will provide some useful functionality for your users and a
 |Scratch |visual programming learning tool
 |===
 
-With the help of mario your server gets these out of the box.
-Each service has a "`Setup`" section explaining how to start it.
+// TODO remove: redundant
 
 These particular services--while all reasonable choices to make your data useful--may not be the best available choices nor the best fits for your use case.
 That is absolutely fine!
 You'll be able to add and remove services as desired.
 
+// keep
+
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
+
+// TODO move to _What's next?_
 
 (((router, Traefik)))
 Note that mario blocks ((WAN access)) by default.
