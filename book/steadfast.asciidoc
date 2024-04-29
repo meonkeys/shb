@@ -449,7 +449,8 @@ Software will change, services will change, you will change and the world will c
 You've got to have control of your data if you want it to reliably serve you well through all that change.
 
 It does make a difference to have your own copy.
-You might lose access to something you "`bought`" or it might even change right under your nose.
+You might lose access to something you "`bought`" because you were actually renting it.
+It might even change right under your nose.
 More on this:
 
 * https://kotaku.com/sony-ps4-ps5-discovery-mythbusters-tv-1851066164[PlayStation To Delete A Ton Of TV Shows Users Already Paid For] by Ethan Gach
