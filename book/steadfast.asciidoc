@@ -2421,7 +2421,7 @@ Similarly for Jellyfin, you may delete the whole line referencing the `lan-only`
 
 (((Nextcloud, overview)))
 Nextcloud is primarily a cloud "`drive`" for file storage and sharing.
-It can be complex to self-host.
+It can be daunting to self-host.
 With ((mario)), it is of course easy and fun.
 Done well, it serves as a solid foothold for de-Googling.
 Nextcloud can be self-hosted for free when installed via mario.
