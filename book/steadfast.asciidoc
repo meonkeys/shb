@@ -1001,19 +1001,21 @@ TIP: To learn more about gracefully transitioning users between systems, study _
 The server exists for the users.
 It is important to establish the right mindset to be able to provide an excellent user experience.
 
-Make sure your self-hosted services work well for them.
+Make sure your self-hosted services work well for your users.
 Solicit their input often and take it seriously.
-Carefully tease out _wants_ vs. _needs_.
+Carefully tease out their _wants_ vs. their _needs_.
+
 Translate the word "`users`" as necessary.
 Perhaps: "`those most dear to you, those you care about most above all others, those who give you meaning and purpose.`"
-
 Yeah, that's way over the top.
-You get the point: we must care about the user experience or it will be frustrating.
-Ideally you already know your users in real life, so just continue to practice being thoughtful.
+You get the point: we must be thoughtful about what users experience or it will be frustrating for everyone.
+
+Ideally you already know your users in real life.
+Stay connected with them in real life to better support them online.
 
 == System design
 
-Let's dive into the various layers of a _Steadfast_ system.
+Let's dive into the design of a _Steadfast_ system.
 
 === Service stack
 
@@ -2373,8 +2375,8 @@ It's only a few more lines of code and configuration to create a small ((API)) o
 
 == Services
 
-Let's dive into the services provisioned by mario.
-We'll cover what they provide and how to manage them.
+Now you can try out the services provisioned by mario.
+This chapter covers what they provide and how to manage them.
 These services are a tiny fraction of those available to self-host.
 They reflect my users`' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
 Getting them running will provide some useful functionality for your users and a good starting point for self-hosting whatever you want.
