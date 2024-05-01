@@ -2006,7 +2006,7 @@ Please edit 'hosts.yml' and re-run this script.
 
 Oh great, _another_ configuration file?
 Don't worry, there's only one value to change: `ansible_become_password`.
-That should be set to the password you entered when you created the user account on your server, way back in <<Server startup>>.
+That should be set to the password you entered when you created the user account on your server, way back in <<OS install>>.
 
 TIP: If you don't want to store the password in `hosts.yml`, see <<Plaintext password alternative>>.
 
