@@ -34,7 +34,8 @@ endif::[]
 :revnumber: {build_git_tag}
 :revdate: {build_date_time}
 :revremark: {build_locale_lang}
-:!listing-caption:
+:listing-caption: Listing
+:figure-caption: Figure
 
 [colophon%notitle%nonfacing]
 == Colophon
