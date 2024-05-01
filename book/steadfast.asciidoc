@@ -11,6 +11,7 @@
 :icons: font
 :xrefstyle: full
 :hide-uri-scheme:
+// see https://pygments.org/languages/ for available languages and their short names
 :source-highlighter: pygments
 // fixes alignment of line numbers with source in EPUB and HTML
 :pygments-linenums-mode: inline
@@ -2087,8 +2088,14 @@ This way you can use the same names inside and outside your LAN and your Let's E
 If you don't have an internal ((DNS)) server, use hostname to IP address mappings in `/etc/hosts` or similar directly on your admin computer.
 For example:
 
+// this could also be one line with one IP and many hostnames
+
 [source%unbreakable,text]
 ----
+# for provisioning from admin computer
+192.168.1.100	mario_server
+
+# for accessing services from browsers and devices
 192.168.1.100	traefik.example.com
 192.168.1.100	cloud.example.com
 192.168.1.100	jellyfin.example.com
@@ -2100,13 +2107,30 @@ IP addresses can be repeated because the ((reverse proxy)) will direct traffic b
 To get the IP address of your server, log in and run `netplan status`.
 You must be able to `ping` that IP address from your admin computer.
 
-Overriding DNS records like this is a temporary measure.
+Manually mapping IP addresses to hostnames with `/etc/hosts` is a temporary measure.
 Only the computer with these specific mappings will be able to get to your sever by name.
 
 TIP: I've shown examples of two styles of service domain names.
 `cloud.example.com` indicates the function of the service, rather than the service's brand name.
 `nextcloud.example.com` would work just as well.
 The choice is yours.
+
+Confirm you're able to ping the server using the name `mario_server`.
+Here's what it looks like when it works:
+
+.test ping server (admin computer)
+[source%unbreakable,text]
+----
+$ ping mario_server
+PING mario_server (192.168.1.100) 56(84) bytes of data.
+64 bytes from mario_server (192.168.1.100): icmp_seq=1 ttl=64 time=0.316 ms
+64 bytes from mario_server (192.168.1.100): icmp_seq=2 ttl=64 time=0.535 ms
+64 bytes from mario_server (192.168.1.100): icmp_seq=3 ttl=64 time=0.178 ms
+^C
+--- mario_server ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2041ms
+rtt min/avg/max/mdev = 0.178/0.343/0.535/0.146 ms
+----
 
 === Connect to server
 
@@ -2117,23 +2141,41 @@ If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) t
 Copy the public key to the server with `ssh-copy-id` or similar.
 
 Teach your client what to do when you run `ssh mario_server`.
-Map `mario_server` to the name of your server, and `your-username` to the account username on your server.
+Replace `mario_server` with the name of your server, and `your-username` with the account username on your server.
 Here's an example client configuration template for ((OpenSSH)):
 
 .mario server snippet in OpenSSH client configuration (admin computer)
 [source%unbreakable,text]
 ----
 Host mario_server
-  HostName console.example.com
   User your-username
 ----
 
 Adjust that as necessary for the SSH client you use.
 (((provision)))
 Test it by running `ssh mario_client`.
-If that works, run `provision.sh` again.
+You'll see something like this:
 
-IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first run.
+.first SSH to server (admin computer)
+[source%unbreakable,text]
+----
+The authenticity of host 'mario_server (192.168.1.100)' can't be established.
+ECDSA key fingerprint is SHA256:o2kUkvSP3JG9PTt/Ju11FWKkCpTJCB4rY3jQvImtRNw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+----
+
+You can go ahead and type kbd:[yes+Enter]; this is very likely safe to ignore for a LAN-only server you just created.
+If you want to be super careful, run this on the server and confirm the fingerprints match:
+
+.show SSH host public ECDSA key (server)
+[source%unbreakable,bash]
+----
+ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
+----
+
+Either way, once you get `ssh mario_server` working, run `provision.sh` again.
+
+IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first `provision.sh` run.
 If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
 If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
 
