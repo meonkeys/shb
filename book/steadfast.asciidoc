@@ -185,7 +185,7 @@ The Internet is often a relentless cash-grab and attention vampire.
 Our actions are infinitely measured; _we_ are the product.
 The smog of surveillance stifles our freedom and erodes trust.
 We will:
- 
+
 * Not settle for cheap ((cloud)) services.
 * Reduce distractions.
 * Cherish our attention, time, and freedom.
@@ -1685,13 +1685,15 @@ At each step in the interactive Ubuntu installer, accept the default or write do
 
 . *Install Ubuntu* 22.04 LTS server.
 Refer to https://ubuntu.com/tutorials/install-ubuntu-server[this tutorial] for step-by-step instructions.
+. *Use a static IP address* when configuring networking.
+You may also be able to leave this as the default (DHCP/dynamic), and use your LAN router to assign an IP address that doesn't change.
 . Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
-. When you set up a user account (called a "`Profile`" in the installer), *note the username and password*. You'll need these in <<Connect to server>>.
+. *Note the username and password* when you set up a user account (called a "`Profile`" in the installer). You'll need these soon.
 . *Install OpenSSH server* when prompted to do so.
 . *Do not install Nextcloud or Docker*, let mario install these later.
 
-That's it for the OS install.
+Congratulations, you just installed Linux!
 Next steps:
 
 . Optional: after installing Ubuntu, add two ((HDD))s and format them with ((ZFS)).
@@ -1835,7 +1837,7 @@ This will update local package information and--if that succeeded--upgrade the O
 Root access is required, hence `sudo`.
 This is relatively safe and typically requires little to no interaction besides a confirmation to proceed.
 A reboot may be required afterwards (e.g. when the kernel is upgraded).
-When you ((SSH)) into the server, it will tell you if a reboot is required. 
+The server will say if a reboot is required upon login.
 
 Each service in <<Services>> includes a "`Maintenance notes`" section with update instructions.
 Container images can be updated by hand with ((Docker Compose)) or automatically by ((Watchtower)).
@@ -1952,12 +1954,89 @@ Once `provision.sh` completes successfully, it may be re-run to confirm the serv
 Then, start tinkering.
 You can find some ideas in <<Exercises>>.
 
-If you are familiar and comfortable with ((VM))s, you may want to first create a VM and run mario against that until you're ready to run mario pointed at your real server.
+If you are familiar with and prefer using ((VM))s, you may want to first create a VM and run mario against that until you're ready to run mario pointed at your real server.
 Or perhaps your real server _is_ a VM--that'll work fine too.
 
-=== First run
+=== SSH setup
 
-Go ahead and run `provision.sh` on your ((admin computer)) (_not_ on your server):
+mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
+Here's how to get this working.
+
+First, map your server IP address to a convenient name.
+Using the IP address from <<OS install>>, add a line like this to your hosts file (e.g. `/etc/hosts`):
+
+.line to add to hosts file (admin computer)
+[source%unbreakable,text]
+----
+192.168.1.100	mario_server
+----
+
+Confirm you're able to ping the server using the name `mario_server`.
+Here's what it looks like when it works:
+
+.test ping server (admin computer)
+[source%unbreakable,text]
+----
+$ ping mario_server
+PING mario_server (192.168.1.100) 56(84) bytes of data.
+64 bytes from mario_server (192.168.1.100): icmp_seq=1 ttl=64 time=0.316 ms
+64 bytes from mario_server (192.168.1.100): icmp_seq=2 ttl=64 time=0.535 ms
+64 bytes from mario_server (192.168.1.100): icmp_seq=3 ttl=64 time=0.178 ms
+^C
+--- mario_server ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2041ms
+rtt min/avg/max/mdev = 0.178/0.343/0.535/0.146 ms
+----
+
+Next, set up public key authentication.
+If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
+If you already have a key pair, use it.
+Copy the public key to the server with `ssh-copy-id` or similar.
+
+Teach your client what to do when you run `ssh mario_server`.
+Replace `your-username` with the account username on your server.
+Here's an example client configuration template for ((OpenSSH)):
+
+.mario server snippet in OpenSSH client configuration (admin computer)
+[source%unbreakable,text]
+----
+Host mario_server
+  User your-username
+----
+
+You can add that to `~/.ssh/config`, adapting as necessary for the SSH client you use.
+(((provision)))
+Test it by running `ssh mario_server`.
+You may see something like this:
+
+.SSH host fingerprint prompt (admin computer)
+[source%unbreakable,text]
+----
+The authenticity of host 'mario_server (192.168.1.100)' can't be established.
+ECDSA key fingerprint is SHA256:o2kUkvSP3JG9PTt/Ju11FWKkCpTJCB4rY3jQvImtRNw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+----
+
+If the IP address is correct, it is safe to assume the LAN-only server you just created is the same one you're trying to connect to now.
+Go ahead and continue with kbd:[yes+Enter].
+If you want to be super careful, run one of these commands on the server and confirm the fingerprints match:
+
+.show SSH host public key (server)
+[source,bash]
+----
+# use this if you saw "ECDSA key fingerprint..." earlier
+ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
+
+# use this if you saw "ED25519 key fingerprint..." earlier
+ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub
+
+# use this if you saw "RSA key fingerprint..." earlier
+ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
+----
+
+=== Provision server
+
+Run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
 .mario first run (admin computer)
 [source%unbreakable,bash]
@@ -1966,7 +2045,6 @@ cd mario/ansible
 ./provision.sh
 ----
 
-mario is semi-automated, providing hints on manual steps to take between runs.
 On this first invocation, mario will check for prerequisites and prompt you to enter values specific to your server into a configuration file.
 
 .mario first run output (admin computer)
@@ -1995,34 +2073,47 @@ This will be a name like `example.duckdns.org` or `example.com`.
 Individual services will be named based on this, e.g. `jellyfin.example.com`.
 
 Finish editing `config` and run `provision.sh` again.
+You should see output similar to this:
 
-.mario second run output (admin computer)
-[source%unbreakable,text]
+.output when mario is working (admin computer)
+[source,text]
 ----
-You don't have an Ansible inventory file. I'll create one for you now.
+Created Ansible inventory file.
++ /usr/bin/ansible-playbook playbook.yml
 
-Please edit 'hosts.yml' and re-run this script.
+PLAY [all] *********************************************************************
+
+TASK [base : Configure apt cache] **********************************************
+ok: [mario_server]
+
+TASK [base : Install packages] *************************************************
+changed: [mario_server]
+
+... snip ...
+
+PLAY RECAP *********************************************************************
+mario_server               : ok=21   changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
 ----
 
-Oh great, _another_ configuration file?
-Don't worry, there's only one value to change: `ansible_become_password`.
-That should be set to the password you entered when you created the user account on your server, way back in <<OS install>>.
+It takes around ten seconds for mine to complete.
+All tasks will be `ok` in the recap for a fully provisioned system.
+Some tasks will be `skipped` until Nextcloud is started for the first time--ignore those for now.
 
-TIP: If you don't want to store the password in `hosts.yml`, see <<Plaintext password alternative>>.
+IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first `provision.sh` run.
+If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
+If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
 
-Make sure you can connect to your server via `ssh mario_server` with public key authentication.
-See <<Connect to server>> for how to configure your SSH client for this.
-
-Finally, you're ready to mario your server into submission.
-Forge ahead to <<Provision complete>>.
+If `provision.sh` completed without errors, mario was able to get your server and services ready to use.
+Proceed directly to <<Start services>>.
 
 === Server domain name
 
 Your server needs a domain name.
+All your services will be subdomains of this domain name.
 You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
 
-You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a ((dynamic IP address)).
+You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a dynamic WAN IP address.
 This text does not include a complete primer on DNS, so you'll need to look elsewhere to learn concepts such as public and private IP address spaces, CIDR notation, and the various kinds of DNS records.
 
 ==== Public DNS
@@ -2084,146 +2175,34 @@ Another idea is to see if your router will do the dynamic DNS updates.
 It is handy to have an internal ((DNS)) server to be able to refer to your server by name.
 These internal names should match the public names and point to ((LAN))-only private IP addresses.
 This way you can use the same names inside and outside your LAN and your Let's Encrypt certs will work.
+Your LAN router likely has a DNS server and may allow you to assign names to IP addresses.
 
-If you don't have an internal ((DNS)) server, use hostname to IP address mappings in `/etc/hosts` or similar directly on your admin computer.
+If you don't have an internal ((DNS)) server, you can add more hostname to IP address mappings like we did in <<SSH setup>>.
 For example:
 
 // this could also be one line with one IP and many hostnames
 
+.hosts file with service names (admin computer)
 [source%unbreakable,text]
 ----
 # for provisioning from admin computer
 192.168.1.100	mario_server
 
-# for accessing services from browsers and devices
+# for accessing services from admin computer
 192.168.1.100	traefik.example.com
 192.168.1.100	cloud.example.com
 192.168.1.100	jellyfin.example.com
 192.168.1.100	wallabag.example.com
 ----
 
-IP addresses can be repeated because the ((reverse proxy)) will direct traffic based on hostname.
-`192.168.1.100` is a placeholder.
-To get the IP address of your server, log in and run `netplan status`.
-You must be able to `ping` that IP address from your admin computer.
-
-Manually mapping IP addresses to hostnames with `/etc/hosts` is a temporary measure.
-Only the computer with these specific mappings will be able to get to your sever by name.
+Manually mapping IP addresses to hostnames with a hosts file is handy for initial setup and maintenance when the (internal) DNS server fails.
+Remember that only the computer with these specific mappings will be able to use the names.
+Test the mappings using `ping` on your admin computer.
 
 TIP: I've shown examples of two styles of service domain names.
 `cloud.example.com` indicates the function of the service, rather than the service's brand name.
 `nextcloud.example.com` would work just as well.
 The choice is yours.
-
-Confirm you're able to ping the server using the name `mario_server`.
-Here's what it looks like when it works:
-
-.test ping server (admin computer)
-[source%unbreakable,text]
-----
-$ ping mario_server
-PING mario_server (192.168.1.100) 56(84) bytes of data.
-64 bytes from mario_server (192.168.1.100): icmp_seq=1 ttl=64 time=0.316 ms
-64 bytes from mario_server (192.168.1.100): icmp_seq=2 ttl=64 time=0.535 ms
-64 bytes from mario_server (192.168.1.100): icmp_seq=3 ttl=64 time=0.178 ms
-^C
---- mario_server ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2041ms
-rtt min/avg/max/mdev = 0.178/0.343/0.535/0.146 ms
-----
-
-=== Connect to server
-
-mario runs on your ((admin computer)) and expects to be able to connect directly to your server using SSH.
-Public key authentication eases this.
-If you have a key pair, use it.
-If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
-Copy the public key to the server with `ssh-copy-id` or similar.
-
-Teach your client what to do when you run `ssh mario_server`.
-Replace `mario_server` with the name of your server, and `your-username` with the account username on your server.
-Here's an example client configuration template for ((OpenSSH)):
-
-.mario server snippet in OpenSSH client configuration (admin computer)
-[source%unbreakable,text]
-----
-Host mario_server
-  User your-username
-----
-
-Adjust that as necessary for the SSH client you use.
-(((provision)))
-Test it by running `ssh mario_client`.
-You'll see something like this:
-
-.first SSH to server (admin computer)
-[source%unbreakable,text]
-----
-The authenticity of host 'mario_server (192.168.1.100)' can't be established.
-ECDSA key fingerprint is SHA256:o2kUkvSP3JG9PTt/Ju11FWKkCpTJCB4rY3jQvImtRNw.
-Are you sure you want to continue connecting (yes/no/[fingerprint])?
-----
-
-You can go ahead and type kbd:[yes+Enter]; this is very likely safe to ignore for a LAN-only server you just created.
-If you want to be super careful, run this on the server and confirm the fingerprints match:
-
-.show SSH host public ECDSA key (server)
-[source%unbreakable,bash]
-----
-ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
-----
-
-Either way, once you get `ssh mario_server` working, run `provision.sh` again.
-
-IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first `provision.sh` run.
-If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
-If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
-
-==== Plaintext password alternative
-
-`hosts.yml` (created by `provision.sh`) includes a place for you to enter a plaintext password.
-mario needs this prior to setting up passwordless sudo.
-
-If you don't want to type the password into `hosts.yml`, comment out `ansible_become_password` and run this (after following all other instructions in `provision.sh`):
-
-.one-time manual Ansible run (admin computer)
-[source%unbreakable,bash]
-----
-source config
-ansible-playbook --ask-become-pass playbook.yml
-----
-
-You should only have to do this once.
-If it succeeds, you can go back to using `provision.sh`.
-
-Another security improvement (left as an exercise for the reader) is to move secrets from `config` into an Ansible vault.
-
-=== Provision complete
-
-When mario is able to connect to the server and provision it successfully, `provision.sh` will produce output similar to this:
-
-.output when mario is working (admin computer)
-[source,text]
-----
-+ /usr/bin/ansible-playbook playbook.yml
-
-PLAY [all] *********************************************************************
-
-TASK [base : Configure apt cache] **********************************************
-ok: [mario_server]
-
-TASK [base : Install packages] *************************************************
-changed: [mario_server]
-
-... snip ...
-
-PLAY RECAP *********************************************************************
-mario_server               : ok=21   changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-----
-
-It takes around ten seconds for mine to complete.
-All tasks will be `ok` in the recap for a fully provisioned system.
-Some tasks will be `skipped` until Nextcloud is started for the first time--ignore those.
 
 === Start services
 
@@ -2276,9 +2255,8 @@ The `dc` script will run `sudo` for you.
 
 Stand up the ((reverse proxy)) first.
 Connect to your server and start ((Traefik)) with `dc traefik up -d`.
-If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser.
-While you are waiting, tail the logs with `dc traefik logs -f`.
-When you're done, stop tailing the logs with kbd:[Ctrl+c].
+If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser to see the Traefik dashboard.
+While you are waiting for the dashboard, tail the logs with `dc traefik logs -f`.
 
 It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
@@ -2301,7 +2279,8 @@ reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certifica
 ^Ccanceled
 ----
 
-If you waited and are still getting invalid cert warnings from your browser when you visit `\https://traefik.example.com`, read the Traefik log messages carefully and also see <<Encryption certificates>> for troubleshooting steps.
+If you waited and are still getting invalid cert warnings from your browser when you try to visit `\https://traefik.example.com`, read the Traefik log messages carefully and also see <<Encryption certificates>> for troubleshooting steps.
+Once you're able to view the dashboard, stop tailing the Traefik logs with kbd:[Ctrl+c].
 
 ==== Start other services
 
@@ -3360,7 +3339,7 @@ Feed it logs from various services.
 . Move secrets used by mario into an Ansible vault.
 . Adapt mario to use ((podman)).
 . Adapt mario to use https://kubernetes.io[Kubernetes].
-. If you have a dynamic IP address, create or use an existing dynamic ((DNS)) update client container.
+. If you have a dynamic WAN IP address, create or use an existing dynamic ((DNS)) update client container.
 . Stand up a mail relay container such as https://github.com/crazy-max/docker-msmtpd or https://github.com/namshi/docker-smtp.
 Allow all mario-managed services to send email through this relay.
 . Stand up your own ((DNS)) server.
@@ -3603,11 +3582,11 @@ devops::
 dogfooding::
   Being a user of something you also created and/or maintain. "`Eat your own dogfood.`"
 DHCP::
-  Dynamic Host Configuration Protocol.
+  Dynamic Host Configuration Protocol. This is one way computers get IP addresses and related networking settings.
 DIY::
   Do it yourself. Said of activities involving some amount of learning and tinkering you'd otherwise pay for. Cooking, for example. Also: self-hosting.
 DNS::
-  Domain Name System.
+  Domain Name System. Maps computer hostnames to IP addresses.
 domain name::
   Full name for a service as it is used in a URL, e.g. `www.example.com`. Synonymous with "`hostname`" as far as we're concerned.
 DRM::
@@ -3709,7 +3688,7 @@ reproducible::
 reverse proxy::
   Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL termination and for running several self-hosted web services with different domain names with a single IP address.
 router::
-  Network device used to handle traffic at the boundary between networks such as a WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
+  Network device used to handle traffic at the boundary between networks such as a WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including DNS, DHCP, switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 SeaGL::

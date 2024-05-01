@@ -46,12 +46,9 @@ myInventory="$DIR/hosts.yml"
 
 if ! [[ -r $myInventory ]]
 then
-    echo "You don't have an Ansible inventory file. I'll create one for you now."
-    echo
-    echo "Please edit '$myInventory' and re-run this script."
     cp "$DIR/template/hosts.yml" "$myInventory"
     chmod 600 "$myInventory"
-    exit 1
+    echo "Created Ansible inventory file."
 fi
 
 if ! ssh -o BatchMode=yes mario_server true
@@ -59,7 +56,6 @@ then
     echo "Error: unable to SSH to the server in batch mode."
     echo
     echo "Please fix your SSH client config and try again."
-    echo "See the documentation for more details."
     exit 1
 fi
 
