@@ -2073,13 +2073,14 @@ This will be a name like `example.duckdns.org` or `example.com`.
 Individual services will be named based on this, e.g. `jellyfin.example.com`.
 
 Finish editing `config` and run `provision.sh` again.
+This run will ask you for the password you set during <<OS install>> and subsequent runs will not.
 You should see output similar to this:
 
-.output when mario is working (admin computer)
+.mario second run output (admin computer)
 [source,text]
 ----
 Created Ansible inventory file.
-+ /usr/bin/ansible-playbook playbook.yml
+BECOME password:
 
 PLAY [all] *********************************************************************
 
@@ -2099,8 +2100,8 @@ It takes around ten seconds for mine to complete.
 All tasks will be `ok` in the recap for a fully provisioned system.
 Some tasks will be `skipped` until Nextcloud is started for the first time--ignore those for now.
 
-IMPORTANT: mario not only encourages you to use public key authentication for remote SSH connections, it forcibly disables password-based SSH authentication on its first `provision.sh` run.
-If you want to be able to log in remotely with a password, delete the related task from `roles/base/tasks/main.yml`.
+During its first run, mario configures the server to require public key authentication for SSH logins.
+If you want to be able to use a password, delete the related task from `roles/base/tasks/main.yml`.
 If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
 
 If `provision.sh` completed without errors, mario was able to get your server and services ready to use.
@@ -2177,8 +2178,8 @@ These internal names should match the public names and point to ((LAN))-only pri
 This way you can use the same names inside and outside your LAN and your Let's Encrypt certs will work.
 Your LAN router likely has a DNS server and may allow you to assign names to IP addresses.
 
-If you don't have an internal ((DNS)) server, you can add more hostname to IP address mappings like we did in <<SSH setup>>.
-For example:
+If you don't have an internal ((DNS)) server, you can create more hostname to IP address mappings like the one we added in <<SSH setup>>.
+Here's that hosts file again:
 
 // this could also be one line with one IP and many hostnames
 
@@ -2193,9 +2194,10 @@ For example:
 192.168.1.100	cloud.example.com
 192.168.1.100	jellyfin.example.com
 192.168.1.100	wallabag.example.com
+192.168.1.100	scratch.example.com
 ----
 
-Manually mapping IP addresses to hostnames with a hosts file is handy for initial setup and maintenance when the (internal) DNS server fails.
+Manually mapping IP addresses to hostnames with a hosts file is handy for initial setup and maintenance when your internal DNS server fails.
 Remember that only the computer with these specific mappings will be able to use the names.
 Test the mappings using `ping` on your admin computer.
 

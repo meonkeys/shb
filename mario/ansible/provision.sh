@@ -64,6 +64,10 @@ source "$myConfig"
 
 builtin cd "$DIR"
 
-set -x
-
-$aprun playbook.yml
+if [[ -r "$DIR/.first-run-complete" ]]
+then
+    $aprun playbook.yml
+else
+    $aprun playbook.yml --ask-become-pass
+    touch "$DIR/.first-run-complete"
+fi
