@@ -2488,10 +2488,13 @@ See <<Customization>> for tips on how to roll out apps thoughtfully and which on
 . Check logs for all containers related to Netcloud with `dc nextcloud logs -f`.
 . Check Nextcloud internal logs at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
 . Review "`Security & setup warnings`" at `/settings/admin/overview`.
-.. You can ignore ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.”.
-This warning appears to be caused by DNS issues but shouldn't break anything.
-.. If you see a warning about an error in the logs and that error is **NotPermittedException** "`Could not create folder "/appdata_NNN/theming/global"`", just ignore it.
-This appears to be a harmless install-time issue.
+.. You can ignore the warning ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.” if `curl -I \https://cloud.example.com/apps/settings/js/esm-test.mjs` succeeds on your admin computer and shows `content-type: text/javascript`.
+This warning is because the Nextcloud `app` container https://github.com/nextcloud/server/issues/42989[fails at a test] to request `/apps/settings/js/esm-test.mjs`, likely because of a DNS issue.
+To fix it, the request must be able to work from within the Nextcloud `app` container.
+In other words, this must work: `dc nextcloud exec -u www-data app curl -I \https://cloud.ob4cuashcib3.site/apps/settings/js/esm-test.mjs`.
+.. If you see a warning about "`1 error in the logs since DATE`" (or perhaps a couple), you can probably ignore them.
+These initial logged errors appear to be harmless, possibly a result of some install-time race conditions.
+It is still a good idea to review all logged errors.
 . Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
 .. Run it with `sudo docker exec --interactive --user www-data nextcloud-app-1 php occ`.
 . Add `/data/video` as an External storage.
