@@ -116,6 +116,9 @@
 
 # 'CONFIG = array' below is an arbitrary choice, it's just something that always
 # should exist in the Nextcloud config file
+#
+# `occ config:system:set` is probably a better way to do these config edits.
+# See docker-entrypoint.sh in https://github.com/nextcloud/docker/
 
 - name: Add phone region to Nextcloud config
   lineinfile:

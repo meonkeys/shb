@@ -11,7 +11,8 @@ services:
       REDIS_HOST: redis
       REDIS_HOST_PASSWORD: redispassword
       OVERWRITEPROTOCOL: https
-      TRUSTED_PROXIES: traefik-reverse-proxy-1
+      OVERWRITECLIURL: https://cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}
+      TRUSTED_PROXIES: 172.18.0.0/16
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.nc-https.entrypoints=websecure"
