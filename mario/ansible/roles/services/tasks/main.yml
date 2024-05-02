@@ -106,7 +106,15 @@
     path: /data/nextcloud/root/config/config.php
   register: nextcloud_config
 
-# 'datadirectory' below is an arbitrary choice, it's just something that always
+- name: Install PHP lint script
+  copy:
+    src: php-lint.sh
+    dest: /usr/local/bin/php-lint.sh
+    owner: root
+    group: root
+    mode: 0755
+
+# 'CONFIG = array' below is an arbitrary choice, it's just something that always
 # should exist in the Nextcloud config file
 
 - name: Add phone region to Nextcloud config
@@ -114,7 +122,8 @@
     path: /data/nextcloud/root/config/config.php
     regexp: 'default_phone_region'
     line: "  'default_phone_region' => '{{ lookup('env', 'DEFAULT_PHONE_REGION') }}',"
-    insertafter: 'datadirectory'
+    insertafter: 'CONFIG = array'
+    validate: /usr/local/bin/php-lint.sh %s
   when: nextcloud_config.stat.exists
 
 - name: Define arbitrary maintenance window
@@ -122,7 +131,8 @@
     path: /data/nextcloud/root/config/config.php
     regexp: 'maintenance_window_start'
     line: "  'maintenance_window_start' => 100,"
-    insertafter: 'datadirectory'
+    insertafter: 'CONFIG = array'
+    validate: /usr/local/bin/php-lint.sh %s
   when: nextcloud_config.stat.exists
 
 - name: Install docker-compose shortcut script
