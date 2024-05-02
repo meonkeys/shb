@@ -2407,11 +2407,11 @@ Getting them running will provide some useful functionality for your users and a
 |===
 |Service |Purpose
 
-|Nextcloud |file sync and share
-|Jellyfin |streaming music and home movies
+|Nextcloud |sync and share files, groupware
+|Jellyfin |stream music and home movies
 |Wallabag |read articles offline, without distractions
 |Watchtower |keep other services up to date
-|Scratch |visual programming learning tool
+|Scratch |learn to code with visual tools
 |===
 
 // TODO remove: redundant
@@ -3664,7 +3664,7 @@ good, fast, and cheap::
 Good Thing::
   A hand-wavy way of saying something is self-evidently wonderful.
 groupware::
-  Loosely: mail, calendar, and contacts.
+  Software for group collaboration. Loosely: mail, calendar, and contacts. Sometimes includes collborative editing of office documents and spreadsheets.
 GUI::
   Graphical user interface.
 HDD::
