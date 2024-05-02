@@ -2102,10 +2102,6 @@ It takes around ten seconds for mine to complete.
 All tasks will be `ok` in the recap for a fully provisioned system.
 Some tasks will be `skipped` until Nextcloud is started for the first time--ignore those for now.
 
-During its first run, mario configures the server to require public key authentication for SSH logins.
-If you want to be able to use a password, delete the related task from `roles/base/tasks/main.yml`.
-If you already successfully ran mario once and want to re-enable password-based SSH auth, delete that task _and_ delete the file `/etc/ssh/sshd_config.d/disable-ssh-password-auth` on your server.
-
 If `provision.sh` completed without errors, mario was able to get your server and services ready to use.
 Proceed directly to <<Start services>>.
 
@@ -3164,6 +3160,53 @@ It would be convenient for users to be able to log in once to get access to all 
 https://goauthentik.io[Authentik] is one service providing this, and appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
 I want to try it out and see it running well for a good while before adding it to mario.
 Some of the other self-hosting solutions mentioned in <<Alternatives to this book>> do include FOSS central identity management.
+
+=== Enforce SSH public key auth
+
+Some sysadmins choose to require public key authentication for ((SSH)) logins.
+I think https://security.stackexchange.com/q/3887[it's a good idea] but I didn't want to force it on you so I didn't include it in mario.
+I'm using this as an opportunity to demonstrate how to extend mario.
+
+Add this to `roles/base/tasks/main.yml`:
+
+.Ansible task to enforce SSH public key auth (admin computer)
+[source,yaml]
+----
+# This does not affect logging in from a console (e.g. directly connected
+# keyboard and monitor, or a virtual console).
+- name: Disable tunneled clear text passwords
+  copy:
+    src: pka-only.conf
+    dest: /etc/ssh/sshd_config.d/
+    owner: root
+    group: root
+    mode: 0400
+  notify:
+    - restart sshd
+----
+
+Add this to `roles/base/handlers/main.yml`:
+
+.Ansible handler to restart SSH (admin computer)
+[source%unbreakable,yaml]
+----
+- name: restart sshd
+  service:
+    name: sshd.service
+    state: restarted
+----
+
+Create `roles/base/files/pka-only.conf` with:
+
+.SSH server config lines (admin computer)
+[source%unbreakable,text]
+----
+PasswordAuthentication no
+AuthenticationMethods publickey
+----
+
+Finally, re-run `provision.sh`.
+From now on, your server will require public key authentication for SSH logins.
 
 == More resources
 

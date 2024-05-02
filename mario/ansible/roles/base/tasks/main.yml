@@ -55,20 +55,6 @@
     group: root
     mode: 0400
 
-# This does not affect logging in from a console (e.g. directly connected
-# keyboard and monitor, or a virtual console).
-# 
-# Comment this out to retain the ability to SSH in with username and password.
-- name: Disable tunneled clear text passwords
-  copy:
-    src: disable-ssh-password-auth.conf
-    dest: /etc/ssh/sshd_config.d/
-    owner: root
-    group: root
-    mode: 0400
-  notify:
-    - restart sshd
-
 # for HTTP/3
 # see https://github.com/traefik/traefik/issues/9272
 # and https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes
