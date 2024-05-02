@@ -2414,32 +2414,9 @@ Getting them running will provide some useful functionality for your users and a
 |Scratch |learn to code with visual tools
 |===
 
-// TODO remove: redundant
-
-These particular services--while all reasonable choices to make your data useful--may not be the best available choices nor the best fits for your use case.
-That is absolutely fine!
-You'll be able to add and remove services as desired.
-
-// keep
+// keep, assuming I keep the "Bugs" sections
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
-
-// TODO move to _What's next?_
-
-(((router, Traefik)))
-Note that mario blocks ((WAN access)) by default.
-Read <<Digital security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
-For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
-
-.patch for WAN access to Nextcloud (admin computer)
-[source%unbreakable,diff]
-----
-- traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
-+ traefik.http.routers.nc-https.middlewares=nc-head,nc-redir
-----
-
-Similarly for Jellyfin, you may delete the whole line referencing the `lan-only` ((middleware)) in Jellyfin's `compose.yml` if you decide to expose that service on your WAN.
 
 === Nextcloud
 
@@ -3207,6 +3184,23 @@ AuthenticationMethods publickey
 
 Finally, re-run `provision.sh`.
 From now on, your server will require public key authentication for SSH logins.
+
+=== Allow WAN access
+
+(((router, Traefik)))
+mario blocks ((WAN access)) by default.
+Read <<Digital security>> to decide if you want this or not.
+You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
+For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
+
+.patch for WAN access to Nextcloud (admin computer)
+[source%unbreakable,diff]
+----
+- traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
++ traefik.http.routers.nc-https.middlewares=nc-head,nc-redir
+----
+
+Similarly for Jellyfin, you may delete the whole line referencing the `lan-only` ((middleware)) in Jellyfin's `compose.yml` if you decide to expose that service on your WAN.
 
 == More resources
 
