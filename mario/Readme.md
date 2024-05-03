@@ -4,8 +4,8 @@ Your software companion for the book _Steadfast Self-Hosting: Rapid-Rise Persona
 
 ## Prerequisites
 
-* [Bash](https://www.gnu.org/software/bash/)
-* [Ansible](https://www.ansible.com/)
+* [Bash](https://www.gnu.org/software/bash/) version 5 or later
+* [Ansible](https://www.ansible.com/) version 2.16 or later
 
 ## Quick start
 
