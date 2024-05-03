@@ -361,7 +361,7 @@ Sidebars may or may not have titles.
 
 Code snippets:
 
-.check PSI (server)
+.check PSI (🚀 server)
 [source,bash]
 ----
 tail /proc/pressure/*
@@ -1366,7 +1366,7 @@ That is: `websecure` to `nc-https` to `app`.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
-.Traefik and Nextcloud service configuration snippets (admin computer)
+.Traefik and Nextcloud service configuration snippets (🏠 admin computer)
 [source,yaml]
 ----
 # snippet from traefik/compose.yml
@@ -1718,7 +1718,7 @@ Use `lsblk` to figure out your device names.
 
 // This code snippet is wrapped by Vim with textwidth=75 since this just happens to be what fits in the current print book margins. 😬
 
-.ZFS setup (server)
+.ZFS setup (🚀 server)
 [source,bash]
 ----
 # Create partition tables.
@@ -1756,7 +1756,7 @@ zfs set exec=on main/secure/data
 Here are a few commands to see details about what you just created.
 These do not require root access.
 
-.show ZFS details (server)
+.show ZFS details (🚀 server)
 [source,bash]
 ----
 # Examine pools.
@@ -1771,7 +1771,7 @@ On Ubuntu 24.04 LTS, more steps are required to automatically mount this new fil
 What follows is from the `zfs-mount-generator(8)` manual page, with a few corrections.
 These must be run as `root`.
 
-.ZFS mount on boot setup (server)
+.ZFS mount on boot setup (🚀 server)
 [source,bash]
 ----
 # enable tracking for the pool
@@ -1827,7 +1827,7 @@ Use the second for parts or a ready as-is replacement machine (also called a "`c
 Keep your server up to date.
 For the OS:
 
-.upgrade packages (server)
+.upgrade packages (🚀 server)
 [source,bash]
 ----
 sudo apt update && sudo apt full-upgrade
@@ -1849,7 +1849,7 @@ Monitor server health.
 Check free disk space with `df -h`.
 If things feel slow, check PSI (pressure stall information) with
 
-.check PSI (server)
+.check PSI (🚀 server)
 [source,bash]
 ----
 tail /proc/pressure/*
@@ -1894,7 +1894,7 @@ https://reddit.com/r/BorgBackup/comments/v3bwfg/[Here's a decent comparison of r
 Here are some example commands demonstrating how to back up a ((ZFS)) filesystem.
 You can use these to get started writing your own backup script.
 
-.example backup script (server)
+.example backup script (🚀 server)
 [source%unbreakable,bash]
 ----
 snapName=$(date -I)-backup
@@ -1965,7 +1965,7 @@ Here's how to get this working.
 First, map your server IP address to a convenient name.
 Using the IP address from <<OS install>>, add a line like this to your hosts file (e.g. `/etc/hosts`):
 
-.line to add to hosts file (admin computer)
+.line to add to hosts file (🏠 admin computer)
 [source%unbreakable,text]
 ----
 192.168.1.100	mario_server
@@ -1974,7 +1974,7 @@ Using the IP address from <<OS install>>, add a line like this to your hosts fil
 Confirm you're able to ping the server using the name `mario_server`.
 Here's what it looks like when it works:
 
-.test ping server (admin computer)
+.test ping server (🏠 admin computer)
 [source%unbreakable,text]
 ----
 $ ping mario_server
@@ -1992,7 +1992,7 @@ Next, make your SSH client pass along the correct username when you run `ssh mar
 Here's an example client configuration template for ((OpenSSH)).
 Replace `your-username` with the account username on your server.
 
-.mario server snippet in OpenSSH client configuration (admin computer)
+.mario server snippet in OpenSSH client configuration (🏠 admin computer)
 [source%unbreakable,text]
 ----
 Host mario_server
@@ -2004,7 +2004,7 @@ You can add that to `~/.ssh/config`, adapting as necessary for the SSH client yo
 Test it by running `ssh mario_server`.
 You may see something like this:
 
-.SSH host fingerprint prompt (admin computer)
+.SSH host fingerprint prompt (🏠 admin computer)
 [source%unbreakable,text]
 ----
 The authenticity of host 'mario_server (192.168.1.100)' can't be established.
@@ -2016,7 +2016,7 @@ If the IP address is correct, it is safe to assume the LAN-only server you just 
 Go ahead and continue with kbd:[yes+Enter].
 If you want to be super careful, run one of these commands on the server and confirm the fingerprints match:
 
-.show SSH host public key (server)
+.show SSH host public key (🚀 server)
 [source,bash]
 ----
 # use this if you saw "ECDSA key fingerprint..." earlier
@@ -2035,7 +2035,7 @@ If you already have a key pair, use it.
 Copy the public key to the server with `ssh-copy-id` or similar.
 For example:
 
-.install SSH key on server (admin computer)
+.install SSH key on server (🏠 admin computer)
 [source%unbreakable,text]
 ----
 $ ssh-copy-id mario_server
@@ -2052,7 +2052,7 @@ and check to make sure that only the key(s) you wanted were added.
 Test that everything so far is working by running `ssh mario_server`.
 You should see something like this:
 
-.mario second run output (admin computer)
+.mario second run output (🏠 admin computer)
 [source,text]
 ----
 $ ssh mario_server
@@ -2068,7 +2068,7 @@ user@server:~$
 
 Run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
-.mario first run (admin computer)
+.mario first run (🏠 admin computer)
 [source%unbreakable,bash]
 ----
 cd mario/ansible
@@ -2077,7 +2077,7 @@ cd mario/ansible
 
 On this first invocation, mario will check for prerequisites and prompt you to enter values specific to your server into a configuration file.
 
-.mario first run output (admin computer)
+.mario first run output (🏠 admin computer)
 [source%unbreakable,text]
 ----
 You don't have a config file. I'll create one for you now.
@@ -2106,7 +2106,7 @@ Finish editing `config` and run `provision.sh` again.
 This run will ask you for the password you set during <<OS install>> and subsequent runs will not.
 You should see output similar to this:
 
-.mario second run output (admin computer)
+.mario second run output (🏠 admin computer)
 [source,text]
 ----
 Created Ansible inventory file.
@@ -2209,7 +2209,7 @@ Here's that hosts file again:
 
 // this could also be one line with one IP and many hostnames
 
-.hosts file with service names (admin computer)
+.hosts file with service names (🏠 admin computer)
 [source%unbreakable,text]
 ----
 # for provisioning from admin computer
@@ -2248,7 +2248,7 @@ When you run `docker compose`, you must first be in a folder containing a `compo
 By convention, the name of that folder is the name of the service.
 A typical usage pattern is:
 
-.start a service in its folder (server)
+.start a service in its folder (🚀 server)
 [source%unbreakable,bash]
 ----
 sudo su -
@@ -2260,7 +2260,7 @@ Try to avoid this method.
 The fewer commands you run directly as `root`, the better.
 I recommend this instead:
 
-.start a service, explicit configuration file (server)
+.start a service, explicit configuration file (🚀 server)
 [source,bash]
 ----
 sudo docker compose --file /root/ops/traefik/compose.yml up -d
@@ -2268,7 +2268,7 @@ sudo docker compose --file /root/ops/traefik/compose.yml up -d
 
 mario installs a program called `dc` to save you some typing:
 
-.start a service with dc (server)
+.start a service with dc (🚀 server)
 [source%unbreakable,bash]
 ----
 # equivalent to
@@ -2291,7 +2291,7 @@ You should see something like this for a working ((Traefik)) service:
 
 // line numbers make it easier to read these very long lines
 
-.typical Traefik logs (server)
+.typical Traefik logs (🚀 server)
 [source,text]
 ----
 + sudo docker compose --file /root/ops/traefik/compose.yml logs -f
@@ -2316,7 +2316,7 @@ Once you're able to view the dashboard, stop tailing the Traefik logs with kbd:[
 Starting a mario service is always done with `dc SERVICE up -d`, just like we did with Traefik.
 To stand up everything at once, you could use this shell script:
 
-.start all services ad-hoc Bash script (server)
+.start all services ad-hoc Bash script (🚀 server)
 [source%unbreakable,bash]
 ----
 for service in $(sudo ls /root/ops); do
@@ -2381,7 +2381,7 @@ This service demonstrates pinging a public server.
 On _your_ server, create the folder `~/ping/`.
 Create a file `compose.yml` in that folder, containing:
 
-.tiny test service config (server)
+.tiny test service config (🚀 server)
 [source%unbreakable,yaml]
 ----
 version: '3'
@@ -2396,7 +2396,7 @@ In the folder `~/ping/`, run the command `sudo docker compose up`.
 Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
-.start tiny test service (server)
+.start tiny test service (🚀 server)
 [source%unbreakable,text]
 -----
 $ cd ~/ping/
@@ -2957,7 +2957,7 @@ Luckily, there's an https://github.com/wallabag/docker#upgrading[easy workaround
 
 Apply the workaround to a mario system with:
 
-.force Wallabag database migration (server)
+.force Wallabag database migration (🚀 server)
 [source%unbreakable,bash]
 ----
 dc wallabag exec app /var/www/wallabag/bin/console \
@@ -3177,7 +3177,7 @@ I'm using this as an opportunity to demonstrate how to extend mario.
 
 Add this to `roles/base/tasks/main.yml`:
 
-.Ansible task to enforce SSH public key auth (admin computer)
+.Ansible task to enforce SSH public key auth (🏠 admin computer)
 [source,yaml]
 ----
 # This does not affect logging in from a console (e.g. directly connected
@@ -3195,7 +3195,7 @@ Add this to `roles/base/tasks/main.yml`:
 
 Add this to `roles/base/handlers/main.yml`:
 
-.Ansible handler to restart SSH (admin computer)
+.Ansible handler to restart SSH (🏠 admin computer)
 [source%unbreakable,yaml]
 ----
 - name: restart sshd
@@ -3206,7 +3206,7 @@ Add this to `roles/base/handlers/main.yml`:
 
 Create `roles/base/files/pka-only.conf` with:
 
-.SSH server config lines (admin computer)
+.SSH server config lines (🏠 admin computer)
 [source%unbreakable,text]
 ----
 PasswordAuthentication no
@@ -3224,7 +3224,7 @@ Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
 For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
 
-.patch for WAN access to Nextcloud (admin computer)
+.patch for WAN access to Nextcloud (🏠 admin computer)
 [source%unbreakable,diff]
 ----
 - traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
