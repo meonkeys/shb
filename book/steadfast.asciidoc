@@ -1366,7 +1366,7 @@ That is: `websecure` to `nc-https` to `app`.
 
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
-.Traefik and Nextcloud service configuration snippets (🏠 admin computer)
+.Traefik and Nextcloud configuration snippets (🏠 admin computer)
 [source,yaml]
 ----
 # snippet from traefik/compose.yml
@@ -1992,7 +1992,7 @@ Next, make your SSH client pass along the correct username when you run `ssh mar
 Here's an example client configuration template for ((OpenSSH)).
 Replace `your-username` with the account username on your server.
 
-.mario server snippet in OpenSSH client configuration (🏠 admin computer)
+.customize OpenSSH client configuration (🏠 admin computer)
 [source%unbreakable,text]
 ----
 Host mario_server
@@ -3174,10 +3174,9 @@ Some of the other self-hosting solutions mentioned in <<Alternatives to this boo
 Some sysadmins choose to require public key authentication for ((SSH)) logins.
 I think https://security.stackexchange.com/q/3887[it's a good idea] but I didn't want to force it on you so I didn't include it in mario.
 I'm using this as an opportunity to demonstrate how to extend mario.
+Add this Ansible task to `roles/base/tasks/main.yml`:
 
-Add this to `roles/base/tasks/main.yml`:
-
-.Ansible task to enforce SSH public key auth (🏠 admin computer)
+.enforce SSH public key auth (🏠 admin computer)
 [source,yaml]
 ----
 # This does not affect logging in from a console (e.g. directly connected
