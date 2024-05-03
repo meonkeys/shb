@@ -1222,8 +1222,8 @@ Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacemen
 Linux is a popular and reasonable choice for self-hosting.
 I recommend a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
 ((Ubuntu)) ((LTS)) (long-term support) releases are the most stable and I recommend them.
-_Steadfast_ specifically mentions 22.04, the LTS release from April 2022.
-22.04 is stable today, and will receive updates https://ubuntu.com/about/release-cycle[until April 2032], promising many more years of stability until _Steadfast_ must be revised.
+_Steadfast_ specifically mentions 24.04, the LTS release from April 2024.
+24.04 is stable today, and will receive updates https://ubuntu.com/about/release-cycle[until April 2034], promising many more years of stability until _Steadfast_ must be revised.
 Installing the ((OS)) is generally quick and painless, see <<OS install>>.
 
 ==== Customizations
@@ -1683,7 +1683,7 @@ NOTE: As you install the OS, think ahead to disaster recovery.
 Take notes and visualize yourself repeating the process precisely.
 At each step in the interactive Ubuntu installer, accept the default or write down your choice.
 
-. *Install Ubuntu* 22.04 LTS server.
+. *Install Ubuntu* 24.04 LTS server.
 Refer to https://ubuntu.com/tutorials/install-ubuntu-server[this tutorial] for step-by-step instructions.
 . *Use a static IP address* when configuring networking.
 You may also be able to leave this as the default (DHCP/dynamic), and use your LAN router to assign an IP address that doesn't change.
@@ -1767,7 +1767,7 @@ zpool list
 zfs list
 ----
 
-On Ubuntu 22.04 LTS, more steps are required to automatically mount this new filesystem when the server boots.
+On Ubuntu 24.04 LTS, more steps are required to automatically mount this new filesystem when the server boots.
 What follows is from the `zfs-mount-generator(8)` manual page, with a few corrections.
 These must be run as `root`.
 
