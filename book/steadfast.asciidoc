@@ -2266,7 +2266,7 @@ I recommend this instead:
 sudo docker compose --file /root/ops/traefik/compose.yml up -d
 ----
 
-mario installs a program called `dc` to save you some typing:
+mario installs a program called `dc` on the server to save you some typing:
 
 .start a service with dc (🚀 server)
 [source%unbreakable,bash]
@@ -2282,7 +2282,7 @@ The `dc` script will run `sudo` for you.
 ==== Start reverse proxy
 
 Stand up the ((reverse proxy)) first.
-Connect to your server and start ((Traefik)) with `dc traefik up -d`.
+On your server, start ((Traefik)) with `dc traefik up -d`.
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser to see the Traefik dashboard.
 While you are waiting for the dashboard, tail the logs with `dc traefik logs -f`.
 
