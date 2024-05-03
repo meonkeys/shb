@@ -13,8 +13,6 @@
 :hide-uri-scheme:
 // see https://pygments.org/languages/ for available languages and their short names
 :source-highlighter: pygments
-// fixes alignment of line numbers with source in EPUB and HTML
-:pygments-linenums-mode: inline
 :!chapter-signifier:
 // prevent unnecessary blocking fetch of fonts
 :!webfonts:
@@ -2294,7 +2292,7 @@ You should see something like this for a working ((Traefik)) service:
 // line numbers make it easier to read these very long lines
 
 .typical Traefik logs (server)
-[source%linenums,text]
+[source,text]
 ----
 + sudo docker compose --file /root/ops/traefik/compose.yml logs -f
 reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Configuration loaded from flags."
