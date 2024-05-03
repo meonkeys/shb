@@ -1990,14 +1990,9 @@ PING mario_server (192.168.1.100) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.178/0.343/0.535/0.146 ms
 ----
 
-Next, set up public key authentication.
-If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
-If you already have a key pair, use it.
-Copy the public key to the server with `ssh-copy-id` or similar.
-
-Teach your client what to do when you run `ssh mario_server`.
+Next, make your SSH client pass along the correct username when you run `ssh mario_server`.
+Here's an example client configuration template for ((OpenSSH)).
 Replace `your-username` with the account username on your server.
-Here's an example client configuration template for ((OpenSSH)):
 
 .mario server snippet in OpenSSH client configuration (admin computer)
 [source%unbreakable,text]
@@ -2034,6 +2029,41 @@ ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub
 
 # use this if you saw "RSA key fingerprint..." earlier
 ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
+----
+
+Next, set up public key authentication.
+If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
+If you already have a key pair, use it.
+Copy the public key to the server with `ssh-copy-id` or similar.
+For example:
+
+.install SSH key on server (admin computer)
+[source%unbreakable,text]
+----
+$ ssh-copy-id mario_server
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 2 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+mario2024@mario_server's password:
+
+Number of key(s) added: 2
+
+Now try logging into the machine, with:   "ssh 'mario_server'"
+and check to make sure that only the key(s) you wanted were added.
+----
+
+Test that everything so far is working by running `ssh mario_server`.
+You should see something like this:
+
+.mario second run output (admin computer)
+[source,text]
+----
+$ ssh mario_server
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-31-generic x86_64)
+
+... snip ...
+
+Last login: Fri May  3 16:44:52 2024 from 192.168.13.225
+user@server:~$
 ----
 
 === Provision server
