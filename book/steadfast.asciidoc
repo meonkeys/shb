@@ -3248,6 +3248,7 @@ Here are a few ideas for when you get stuck.
 
 * Ask for help in forums and chats related to a product/project.
 * If you're confident you've found a bug, file an issue with the product/project.
+* Ask https://selfhostbook.com/chat/[other readers] for help.
 * Try your luck in semi-moderated public places.
 Don't expect much from these, although you may get lucky from time to time.
 ** https://reddit.com/r/selfhosted/[self-hosted subreddit]
