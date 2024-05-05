@@ -38,7 +38,9 @@ services:
       - "443:443/tcp"
       - "443:443/udp"
     volumes:
-      # So that Traefik can listen to Docker events and auto-configure
+      # So that Traefik can listen to Docker events and auto-configure.
+      # This has security implications.
+      # See https://doc.traefik.io/traefik/providers/docker/#docker-api-access
       - /var/run/docker.sock:/var/run/docker.sock:ro
       # For storing Let's Encrypt cert
       - /data/traefik/etc:/etc/traefik:rw
