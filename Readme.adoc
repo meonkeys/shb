@@ -1,10 +1,11 @@
 = 📖 Steadfast Self-Hosting
 
-This is the home for a most excellent book about self-hosting.
+This is the home for a most excellent soon-to-be-published book about self-hosting.
 
 _Steadfast_ primarily targets aspiring self-hosters looking for a quick and reliable method to get started.
 
-You may https://selfhostbook.com/buy/[buy], <<How to build the book,build>>, or https://github.com/meonkeys/shb-review/releases/[download] a copy of the book.
+You may <<How to build the book,build>>, or https://github.com/meonkeys/shb-review/releases/[download] a copy of the book.
+Coming soon: https://selfhostbook.com/buy/[buy a copy].
 
 == Directory structure
 
