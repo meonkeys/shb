@@ -1042,9 +1042,9 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 * containers:
 ** <<Containers == happy>>
 ** <<Contained services>>
-** <<Nextcloud>>
-** <<Jellyfin>>
-** <<Wallabag>>
+** <<Nextcloud: file sync and share>>
+** <<Jellyfin: stream audio and video>>
+** <<Wallabag: save and read articles>>
 * OS: <<Operating system>>
 * filesystem: <<Filesystem>>
 * hardware: <<Server>>
