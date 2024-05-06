@@ -59,7 +59,7 @@ Please https://selfhostbook.com/contact/[send me feedback]!
 * Is this something you'd recommend to others?
 * What would you expect to pay for a print copy?
 * What would you expect to pay for a digital copy?
-* Any feedback on the https://selfhostbook.com[book website]?
+* Any feedback on the https://selfhostbook.com[book website] and this readme?
 
 [#issues]
 == ℹ️ Issues
