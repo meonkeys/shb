@@ -2450,6 +2450,10 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 Nextcloud is primarily a cloud "`drive`" for file storage and sharing.
 It can be daunting to self-host, but ((mario)) makes it easy and fun.
 
+[#image-screenshot-nextcloud]
+.Nextcloud Files app screenshot showing files, folders, and share buttons.
+image::nextcloud.png[]
+
 A well-maintained Nextcloud server provides a solid foundation for de-Googling.
 Nextcloud can be self-hosted for free when installed via mario.
 
@@ -2472,6 +2476,10 @@ Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud u
 (((Jellyfin, overview)))
 https://jellyfin.org[Jellyfin] is a personal streaming media server.
 mario will set up a basic Jellyfin server.
+
+[#image-screenshot-jellyfin]
+.Jellyfin screenshot showing metadata for a movie. Big Buck Bunny is licensed CC BY-3.0 by the Blender Foundation. 
+image::jellyfin.png[]
 
 I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
 Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
@@ -2531,6 +2539,10 @@ https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarne
 
 (((Wallabag)))
 https://wallabag.org[Wallabag] saves articles for distraction-free offline reading.
+
+[#image-screenshot-wallabag]
+.Wallabag screenshot showing unread articles view.
+image::wallabag.png[]
 
 ==== Setup
 
@@ -2607,6 +2619,10 @@ Upgrade and replace service containers with `dc watchtower pull && dc watchtower
 ((Scratch)) is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
 I really enjoy using it without the "`community`" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
 These often serve to redirect a user from creating to consuming.
+
+[#image-screenshot-scratch]
+.Scratch screenshot showing a new empty project.
+image::scratch.png[]
 
 Scratch doesn't require any persistent data, setup, nor auth.
 
@@ -3829,6 +3845,10 @@ ifndef::shb-printPdf[]
 * <<image-racked-server>>
 * <<image-bird-on-server>>
 * <<image-WAN-to-LAN-traffic>>
+* <<image-screenshot-nextcloud>>
+* <<image-screenshot-jellyfin>>
+* <<image-screenshot-wallabag>>
+* <<image-screenshot-scratch>>
 * <<image-DNS-traffic-diagram>>
 * <<image-puppy>>
 endif::[]
