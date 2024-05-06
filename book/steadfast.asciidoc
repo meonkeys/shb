@@ -2444,14 +2444,393 @@ Getting them running will provide some useful functionality for your users and a
 
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
-=== Nextcloud
+=== Nextcloud: file sync and share
 
 (((Nextcloud, overview)))
 Nextcloud is primarily a cloud "`drive`" for file storage and sharing.
-It can be daunting to self-host.
-With ((mario)), it is of course easy and fun.
-Done well, it serves as a solid foothold for de-Googling.
+It can be daunting to self-host, but ((mario)) makes it easy and fun.
+
+A well-maintained Nextcloud server provides a solid foundation for de-Googling.
 Nextcloud can be self-hosted for free when installed via mario.
+
+See also: <<More about Nextcloud>>.
+
+==== Setup
+
+. Provision with mario from your admin computer.
+. Start Nextcloud with `dc nextcloud up -d` on your server.
+. Navigate to `\https://cloud.example.com` on your admin computer.
+. Follow the web-based setup page to create an admin account.
+. Skip installing recommended apps.
+
+==== Maintenance notes
+
+Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
+
+=== Jellyfin: stream audio and video
+
+(((Jellyfin, overview)))
+https://jellyfin.org[Jellyfin] is a personal streaming media server.
+mario will set up a basic Jellyfin server.
+
+I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
+Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
+There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
+Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
+
+==== Setup
+
+. Provision with mario from your admin computer.
+. Start Jellyfin with `dc jellyfin up -d` on your server.
+. Navigate to `\https://jellyfin.example.com` on your admin computer.
+. Follow web-based setup steps.
+Try adding two media libraries using the folders shared with Nextcloud.
+.. Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
+.. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
+
+(((Jellyfin, advanced)))
+(((GPU)))
+If you have a GPU, look into https://jellyfin.org/docs/general/administration/hardware-acceleration/[hardware acceleration].
+This is useful if videos can't be played directly by a client and need to be transcoded on the fly.
+Jellyfin can transcode using only CPU, but it is way faster with a GPU.
+
+[%unbreakable]
+TIP: Some CPUs include special facilities for accelerated transcoding.
+Jellyfin can take advantage of Intel Quick Sync Video.
+
+==== Maintenance notes
+
+Upgrade and replace service containers with `dc jellyfin pull && dc jellyfin up -d`.
+
+==== Bugs
+
+===== Share playlists
+
+Feature request.
+
+* https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980[Playlists are private by design].
+* https://features.jellyfin.org/posts/173/share-playlists[I'd like the ability to share them].
+
+===== Clips
+
+Feature request.
+
+I often want to share, hear, or re-watch a specific part of some media.
+I think it would be just so cool to be able to https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments[create clips] without actually creating new media files.
+
+===== Offline mobile media
+
+Feature request.
+
+I want the ((mobile)) app to auto-cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
+
+Workaround: there are two separate mobile apps that can download and cache media for offline playing.
+https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarnedemeulemeester/findroid[Findroid] for video.
+
+=== Wallabag: save and read articles
+
+(((Wallabag)))
+https://wallabag.org[Wallabag] saves articles for distraction-free offline reading.
+
+==== Setup
+
+. Provision with mario from your admin computer.
+. Start Wallabag with `dc wallabag up -d` on your server.
+. Navigate to `\https://wallabag.example.com` on your admin computer.
+. Log in as `wallabag` user with password `wallabag`.
+. Update password for `wallabag` user.
+
+==== Maintenance notes
+
+Upgrade and replace service containers with `dc wallabag pull && dc wallabag up -d`.
+If you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
+
+==== Bugs
+
+===== Upgrades break everything
+
+https://github.com/wallabag/wallabag/issues/6649[Database migrations are not (always?) automatically applied].
+There may be other duplicate or related bug reports for this same thing, that's just one example.
+Luckily, there's an https://github.com/wallabag/docker#upgrading[easy workaround].
+
+Apply the workaround to a mario system with:
+
+.force Wallabag database migration (🚀 server)
+[source%unbreakable,bash]
+----
+dc wallabag exec app /var/www/wallabag/bin/console \
+  doctrine:migrations:migrate --env=prod --no-interaction
+----
+
+The `exec` command says we want to run something in a container.
+This runs the `console` utility in the `app` service container.
+The second line indicates necessary database migrations (schema and data updates) should be run using `prod` settings, without interactive prompts.
+
+This is ((idempotent)), as database migrations should be.
+After the first run, subsequent runs output: `[OK] Already at the latest version`.
+
+It's unclear why thes migration is not automatically performed during an upgrade.
+Perhaps it is only necessary in special cases--I've only had to do it twice in a few years.
+
+===== Share with other users
+
+Feature request.
+
+I want to be able to https://github.com/wallabag/wallabag/issues/679[share content with other Wallabag users, within Wallabag].
+
+=== Watchtower: service updater
+
+((Watchtower)) is handy for keeping your Docker containers up to date.
+It will discover and check outdated containers, pull new images, and restart services to create new containers.
+
+It https://github.com/containrrr/watchtower/issues/90[does not automatically roll back if a container upgrade fails].
+Granted, this would be challenging to implement.
+A service might only have one-way database migrations, for example.
+I think the Watchtower maintainers made the right decision to omit automatic rollbacks (likely to keep Watchtower simple).
+
+You may experience an issue where a service is broken by Watchtower.
+If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
+I avoid this by only using Watchtower for non-critical services.
+I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
+
+==== Setup
+
+. Provision with mario from your admin computer.
+. Start Watchtower with `dc watchtower up -d` on your server.
+
+==== Maintenance notes
+
+Upgrade and replace service containers with `dc watchtower pull && dc watchtower up -d`.
+
+=== Scratch: visual programming
+
+((Scratch)) is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
+I really enjoy using it without the "`community`" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
+These often serve to redirect a user from creating to consuming.
+
+Scratch doesn't require any persistent data, setup, nor auth.
+
+==== Setup
+
+. Provision with mario from your admin computer.
+. Start Scratch with `dc scratch up -d` on your server.
+. Navigate to `\https://scratch.example.com` on your admin computer.
+
+==== Maintenance notes
+
+Scratch uses a custom Docker image so the upgrade process is significantly more complex than upgrading other services.
+First, open the Scratch `custom/Dockerfile` on your admin computer.
+That `Dockerfile` can be found in a subfolder of `mario/ansible` in the mario source code.
+
+If you want to base the image on a newer version of Node.js, visit the https://hub.docker.com/_/node[Node.js page on Docker Hub] and select a version to use in the `FROM` line of the `Dockerfile`.
+If you want to upgrade Scratch, visit the https://github.com/scratchfoundation/scratch-gui/releases[releases page] and select a version to use for `SCRATCH_VERSION` in the `Dockerfile`.
+
+Re-run `provision.sh` on the admin computer.
+Re-build the image with `dc scratch build --pull` on the server.
+Replace service containers with `dc scratch up -d` on the server.
+
+== What's next?
+
+By this point, I'm assuming you've got your server running and some services too.
+Here's where you can find a handful of ideas for what to try next.
+
+=== Learn more
+
+If you like this book, and you want to learn and do more, do it.
+Ride that wave of inspiration.
+Seek both breadth and depth.
+
+For breadth, look for a comprehensive book about Linux.
+One of my first purchases when I wanted to just finally "`get`" Linux was _UNIX: The Complete Reference_, a thousand-page monster covering many, many concepts.
+I studied it in chunks, referred to it often, and never read it cover to cover.
+If I started learning again from scratch today, I'd still have a book like that handy while studying online resources and trying stuff at home.
+
+For depth, immerse yourself in fundamentals.
+Push past abstractions and make progress towards first principles.
+Take a computer science class in an area supporting something else you want to do.
+For example, if you want to code your own web services, take a class in programming for the web.
+If you want to understand how source code makes a computer do things, take a class in compilers.
+
+Work through this book in a class or small group.
+See <<Discussion topics>> and <<Exercises>>.
+
+Participate in ((FOSS)) communities to learn from and share with others.
+Pass on what you've learned.
+File a bug.
+Post in a forum.
+It's fun!
+
+(((SeaGL)))
+Conferences like https://seagl.org[SeaGL] bring together bright minds on many topics, including self-hosting.
+If you've done something cool, share it!
+
+=== Use GPUs
+
+(((GPU)))
+A GPU offers more efficient video transcoding with Jellyfin, reducing server CPU usage and speeding up remote video streaming.
+
+A FOSS voice assistant would benefit from a GPU.
+
+A GPU could also speed up video transcoding and facial recognition.
+
+Modern generative AI workloads like large language model chat and image generation are much faster with a GPU.
+
+=== AI
+
+(((AI)))
+AI is once again the latest hotness.
+You can run your own image generators and LLMs (large-language models) at home.
+No GPU is required.
+Here's a `compose.yml` that'll work with mario to stand up https://localai.io[LocalAI].
+
+.example LocalAI service config
+[source,yaml]
+----
+version: '3.6'
+
+services:
+  api:
+    image: quay.io/go-skynet/local-ai:latest
+    environment:
+      MODELS_PATH: /models
+    volumes:
+      - /data/localai/models:/models:cached
+    command: ["/usr/bin/local-ai" ]
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.localai-https.entrypoints=websecure"
+      - "traefik.http.routers.localai-https.rule=Host(`localai.example.com`)"
+      - "traefik.http.routers.localai-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.localai-https.middlewares=lan-only"
+    networks:
+      - traefik_default
+    restart: unless-stopped
+networks:
+  traefik_default:
+    external: true
+----
+
+Note the middleware to only allow traffic from your ((LAN)).
+This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
+
+.label from Traefik configuration allowing only LAN access
+[source,yaml]
+----
+"traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
+----
+
+TIP: For extra credit, incorporate your LocalAI service into mario.
+
+See the https://localai.io[LocalAI documentation] for further setup help.
+Once you get that running, you can use the https://apps.nextcloud.com/apps/integration_openai[Nextcloud AI integration app] as a convenient frontend.
+
+=== Pi-hole
+
+(((Pi-hole)))
+Running a https://pi-hole.net[Pi-hole] service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
+
+(((router, network device)))
+Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
+
+The Pi-hole translates domain names to IP addresses.
+If a domain name is on a block list, it returns a false IP address such as 0.0.0.0.
+
+The technique is imperfect, yet simple and effective.
+
+My Pi-hole server sits between my router's DNS server and all clients.
+
+[#image-DNS-traffic-diagram]
+.Pi-hole DNS traffic flow diagram.
+image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
+
+(((router, network device)))
+Queries for domain names not on any block list will be answered directly or sent upstream.
+I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my ((LAN)) as necessary.
+
+It's easy to block individual domain names or entire lists as you see fit.
+I've used this as an "`impulse blocker`", helping the kids avoid distractions during remote school.
+
+The Pi-Hole also has a list of local DNS entries.
+I add a few domain names to this list for servers inside my ((LAN)).
+
+Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
+(((DNS)))
+(((HTTPS)))
+For example, https://support.mozilla.org/kb/firefox-dns-over-https[DNS over HTTPS in Firefox].
+
+=== Single sign-on
+
+(((Single sign-on)))
+It would be convenient for users to be able to log in once to get access to all self-hosted services using a common, consistent, and well-designed mechanism (single sign-on), and for sysadmins to be able to manage all users and groups in one place (centralized identity management).
+
+https://goauthentik.io[Authentik] is one service providing this, and appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
+I want to try it out and see it running well for a good while before adding it to mario.
+Some of the other self-hosting solutions mentioned in <<Alternatives to this book>> do include FOSS central identity management.
+
+=== Enforce SSH public key auth
+
+Some sysadmins choose to require public key authentication for ((SSH)) logins.
+I think https://security.stackexchange.com/q/3887[it's a good idea] but I didn't want to force it on you so I didn't include it in mario.
+I'm using this as an opportunity to demonstrate how to extend mario.
+Add this Ansible task to `roles/base/tasks/main.yml`:
+
+.enforce SSH public key auth (🏠 admin computer)
+[source,yaml]
+----
+# This does not affect logging in from a console (e.g. directly connected
+# keyboard and monitor, or a virtual console).
+- name: Disable tunneled clear text passwords
+  copy:
+    src: pka-only.conf
+    dest: /etc/ssh/sshd_config.d/
+    owner: root
+    group: root
+    mode: 0400
+  notify:
+    - restart sshd
+----
+
+Add this to `roles/base/handlers/main.yml`:
+
+.Ansible handler to restart SSH (🏠 admin computer)
+[source%unbreakable,yaml]
+----
+- name: restart sshd
+  service:
+    name: sshd.service
+    state: restarted
+----
+
+Create `roles/base/files/pka-only.conf` with:
+
+.SSH server config lines (🏠 admin computer)
+[source%unbreakable,text]
+----
+PasswordAuthentication no
+AuthenticationMethods publickey
+----
+
+Finally, re-run `provision.sh`.
+From now on, your server will require public key authentication for SSH logins.
+
+=== Allow WAN access
+
+(((router, Traefik)))
+mario blocks ((WAN access)) by default.
+Read <<Digital security>> to decide if you want this or not.
+You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
+For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
+
+.patch for WAN access to Nextcloud (🏠 admin computer)
+[source%unbreakable,diff]
+----
+- traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
++ traefik.http.routers.nc-https.middlewares=nc-head,nc-redir
+----
+
+Similarly for Jellyfin, you may delete the whole line referencing the `lan-only` ((middleware)) in Jellyfin's `compose.yml` if you decide to expose that service on your WAN.
+
+=== More about Nextcloud
 
 ==== Basic install
 
@@ -2483,22 +2862,7 @@ The defaults appear secure.
 They follow best practices.
 They have a public bounty program and threat model.
 
-==== Setup
-
-(((Nextcloud, install)))
-Setting up a new Nextcloud server is well documented.
-In brief:
-
-. Provision with mario.
-. Start Nextcloud containers with `dc nextcloud up -d`.
-. Navigate to `\https://cloud.example.com`
-. Follow the web-based setup page to create an admin account.
-. Skip installing recommended apps.
-
-Done.
-You should be redirected to the dashboard and a short intro video.
-
-Some tips:
+==== Detailed setup
 
 . To confirm reproducibility of your Nextcloud server, destroy and re-create it (before you use it for real).
 .. After you get it working once, stop it with `dc nextcloud down`.
@@ -2534,17 +2898,21 @@ Next, visit `/settings/admin/externalstorages` and install the "`External storag
 .. Set users, previews, sharing, and remaining options as desired.
 . Add `/data/music` as an External storage, similar to `/data/video`.
 
-==== Maintenance notes
+==== More maintenance tips
 
 Visit `/settings/admin/overview` periodically to check for system and security issues that may require manual intervention.
 Perform any recommended ((maintenance)) on that page.
 Ignore the Update section, it may disagree with Docker Hub.
 Visit `/settings/admin/logging` periodically to review all server-side log messages.
 
+// FIXME -- talk about Nextcloud stable release, in general
+
 Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
 This will pull the most recent image with the `stable` release tag.
 Using this tag will likely be stable enough for you and your users.
 `stable` generally corresponds to the previous version listed at https://docs.nextcloud.com/.
+
+// FIXME -- combine with "Release cadence", below?
 
 You may opt to use a more specific tag such as `27.1.5-apache`.
 This gives you the chance to review and test each upgrade.
@@ -2866,369 +3234,6 @@ It's free for an instance with less than 100 users.
 I recommend the mario method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by mario.
 
 See the https://github.com/nextcloud/all-in-one[AIO readme] for more information.
-
-=== Jellyfin
-
-(((Jellyfin, overview)))
-https://jellyfin.org[Jellyfin] is a personal streaming media server.
-mario will set up a basic Jellyfin server.
-
-I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
-Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
-There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
-Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
-
-==== Setup
-
-. Provision with mario.
-. Start Jellyfin with `dc jellyfin up -d`.
-. Navigate to `\https://jellyfin.example.com`
-. Follow web-based setup steps.
-Try adding two media libraries using the folders shared with Nextcloud.
-.. Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
-.. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
-
-(((Jellyfin, advanced)))
-(((GPU)))
-If you have a GPU, look into https://jellyfin.org/docs/general/administration/hardware-acceleration/[hardware acceleration].
-This is useful if videos can't be played directly by a client and need to be transcoded on the fly.
-Jellyfin can transcode using only CPU, but it is way faster with a GPU.
-
-[%unbreakable]
-TIP: Some CPUs include special facilities for accelerated transcoding.
-Jellyfin can take advantage of Intel Quick Sync Video.
-
-==== Maintenance notes
-
-Upgrade and replace service containers with `dc jellyfin pull && dc jellyfin up -d`.
-
-==== Bugs
-
-===== Share playlists
-
-Feature request.
-
-* https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980[Playlists are private by design].
-* https://features.jellyfin.org/posts/173/share-playlists[I'd like the ability to share them].
-
-===== Clips
-
-Feature request.
-
-I often want to share, hear, or re-watch a specific part of some media.
-I think it would be just so cool to be able to https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments[create clips] without actually creating new media files.
-
-===== Offline mobile media
-
-Feature request.
-
-I want the ((mobile)) app to auto-cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
-
-Workaround: there are two separate mobile apps that can download and cache media for offline playing.
-https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarnedemeulemeester/findroid[Findroid] for video.
-
-=== Wallabag
-
-(((Wallabag)))
-https://wallabag.org[Wallabag] saves articles for distraction-free offline reading.
-
-==== Setup
-
-. Provision with mario.
-. Start Wallabag with `dc wallabag up -d`.
-. Navigate to `\https://wallabag.example.com`
-. Log in as `wallabag` user with password `wallabag`.
-. Update password for `wallabag` user.
-
-==== Maintenance notes
-
-Upgrade and replace service containers with `dc wallabag pull && dc wallabag up -d`.
-If you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
-
-==== Bugs
-
-===== Upgrades break everything
-
-https://github.com/wallabag/wallabag/issues/6649[Database migrations are not (always?) automatically applied].
-There may be other duplicate or related bug reports for this same thing, that's just one example.
-Luckily, there's an https://github.com/wallabag/docker#upgrading[easy workaround].
-
-Apply the workaround to a mario system with:
-
-.force Wallabag database migration (🚀 server)
-[source%unbreakable,bash]
-----
-dc wallabag exec app /var/www/wallabag/bin/console \
-  doctrine:migrations:migrate --env=prod --no-interaction
-----
-
-The `exec` command says we want to run something in a container.
-This runs the `console` utility in the `app` service container.
-The second line indicates necessary database migrations (schema and data updates) should be run using `prod` settings, without interactive prompts.
-
-This is ((idempotent)), as database migrations should be.
-After the first run, subsequent runs output: `[OK] Already at the latest version`.
-
-It's unclear why thes migration is not automatically performed during an upgrade.
-Perhaps it is only necessary in special cases--I've only had to do it twice in a few years.
-
-===== Share with other users
-
-Feature request.
-
-I want to be able to https://github.com/wallabag/wallabag/issues/679[share content with other Wallabag users, within Wallabag].
-
-=== Watchtower
-
-((Watchtower)) is handy for keeping your Docker containers up to date.
-It will discover and check outdated containers, pull new images, and restart services to create new containers.
-
-It https://github.com/containrrr/watchtower/issues/90[does not automatically roll back if a container upgrade fails].
-Granted, this would be challenging to implement.
-A service might only have one-way database migrations, for example.
-I think the Watchtower maintainers made the right decision to omit automatic rollbacks (likely to keep Watchtower simple).
-
-You may experience an issue where a service is broken by Watchtower.
-If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
-I avoid this by only using Watchtower for non-critical services.
-I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
-
-==== Setup
-
-. Provision with mario.
-. Start Watchtower with `dc watchtower up -d`.
-
-==== Maintenance notes
-
-Upgrade and replace service containers with `dc watchtower pull && dc watchtower up -d`.
-
-=== Scratch
-
-((Scratch)) is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
-I really enjoy using it without the "`community`" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
-These often serve to redirect a user from creating to consuming.
-
-Scratch doesn't require any persistent data, setup, nor auth.
-
-==== Setup
-
-. Provision with mario.
-. Start Scratch with `dc scratch up -d`.
-. Navigate to `\https://scratch.example.com`
-
-==== Maintenance notes
-
-Scratch uses a custom Docker image so the upgrade process is significantly more complex than upgrading other services.
-First, open the Scratch `custom/Dockerfile` on your admin computer.
-That `Dockerfile` can be found in a subfolder of `mario/ansible` in the mario source code.
-
-If you want to base the image on a newer version of Node.js, visit the https://hub.docker.com/_/node[Node.js page on Docker Hub] and select a version to use in the `FROM` line of the `Dockerfile`.
-If you want to upgrade Scratch, visit the https://github.com/scratchfoundation/scratch-gui/releases[releases page] and select a version to use for `SCRATCH_VERSION` in the `Dockerfile`.
-
-Re-run `provision.sh` on the admin computer.
-Re-build the image with `dc scratch build --pull` on the server.
-Replace service containers with `dc scratch up -d` on the server.
-
-== What's next?
-
-This is a jumble of ideas for future me and you.
-These aren't covered in detail in this book and they aren't included in mario.
-
-=== Learn more
-
-If you like this book, and you want to learn and do more, do it.
-Ride that wave of inspiration.
-Seek both breadth and depth.
-
-For breadth, look for a comprehensive book about Linux.
-One of my first purchases when I wanted to just finally "`get`" Linux was _UNIX: The Complete Reference_, a thousand-page monster covering many, many concepts.
-I studied it in chunks, referred to it often, and never read it cover to cover.
-If I started learning again from scratch today, I'd still have a book like that handy while studying online resources and trying stuff at home.
-
-For depth, immerse yourself in fundamentals.
-Push past abstractions and make progress towards first principles.
-Take a computer science class in an area supporting something else you want to do.
-For example, if you want to code your own web services, take a class in programming for the web.
-If you want to understand how source code makes a computer do things, take a class in compilers.
-
-Work through this book in a class or small group.
-See <<Discussion topics>> and <<Exercises>>.
-
-Participate in ((FOSS)) communities to learn from and share with others.
-Pass on what you've learned.
-File a bug.
-Post in a forum.
-It's fun!
-
-(((SeaGL)))
-Conferences like https://seagl.org[SeaGL] bring together bright minds on many topics, including self-hosting.
-If you've done something cool, share it!
-
-=== Use GPUs
-
-(((GPU)))
-A GPU offers more efficient video transcoding with Jellyfin, reducing server CPU usage and speeding up remote video streaming.
-
-A FOSS voice assistant would benefit from a GPU.
-
-A GPU could also speed up video transcoding and facial recognition.
-
-Modern generative AI workloads like large language model chat and image generation are much faster with a GPU.
-
-=== AI
-
-(((AI)))
-AI is once again the latest hotness.
-You can run your own image generators and LLMs (large-language models) at home.
-No GPU is required.
-Here's a `compose.yml` that'll work with mario to stand up https://localai.io[LocalAI].
-
-.example LocalAI service config
-[source,yaml]
-----
-version: '3.6'
-
-services:
-  api:
-    image: quay.io/go-skynet/local-ai:latest
-    environment:
-      MODELS_PATH: /models
-    volumes:
-      - /data/localai/models:/models:cached
-    command: ["/usr/bin/local-ai" ]
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.localai-https.entrypoints=websecure"
-      - "traefik.http.routers.localai-https.rule=Host(`localai.example.com`)"
-      - "traefik.http.routers.localai-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.localai-https.middlewares=lan-only"
-    networks:
-      - traefik_default
-    restart: unless-stopped
-networks:
-  traefik_default:
-    external: true
-----
-
-Note the middleware to only allow traffic from your ((LAN)).
-This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
-
-.label from Traefik configuration allowing only LAN access
-[source,yaml]
-----
-"traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
-----
-
-TIP: For extra credit, incorporate your LocalAI service into mario.
-
-See the https://localai.io[LocalAI documentation] for further setup help.
-Once you get that running, you can use the https://apps.nextcloud.com/apps/integration_openai[Nextcloud AI integration app] as a convenient frontend.
-
-=== Pi-hole
-
-(((Pi-hole)))
-Running a https://pi-hole.net[Pi-hole] service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
-
-(((router, network device)))
-Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
-
-The Pi-hole translates domain names to IP addresses.
-If a domain name is on a block list, it returns a false IP address such as 0.0.0.0.
-
-The technique is imperfect, yet simple and effective.
-
-My Pi-hole server sits between my router's DNS server and all clients.
-
-[#image-DNS-traffic-diagram]
-.Pi-hole DNS traffic flow diagram.
-image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
-
-(((router, network device)))
-Queries for domain names not on any block list will be answered directly or sent upstream.
-I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my ((LAN)) as necessary.
-
-It's easy to block individual domain names or entire lists as you see fit.
-I've used this as an "`impulse blocker`", helping the kids avoid distractions during remote school.
-
-The Pi-Hole also has a list of local DNS entries.
-I add a few domain names to this list for servers inside my ((LAN)).
-
-Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
-(((DNS)))
-(((HTTPS)))
-For example, https://support.mozilla.org/kb/firefox-dns-over-https[DNS over HTTPS in Firefox].
-
-=== Single sign-on
-
-(((Single sign-on)))
-It would be convenient for users to be able to log in once to get access to all self-hosted services using a common, consistent, and well-designed mechanism (single sign-on), and for sysadmins to be able to manage all users and groups in one place (centralized identity management).
-
-https://goauthentik.io[Authentik] is one service providing this, and appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
-I want to try it out and see it running well for a good while before adding it to mario.
-Some of the other self-hosting solutions mentioned in <<Alternatives to this book>> do include FOSS central identity management.
-
-=== Enforce SSH public key auth
-
-Some sysadmins choose to require public key authentication for ((SSH)) logins.
-I think https://security.stackexchange.com/q/3887[it's a good idea] but I didn't want to force it on you so I didn't include it in mario.
-I'm using this as an opportunity to demonstrate how to extend mario.
-Add this Ansible task to `roles/base/tasks/main.yml`:
-
-.enforce SSH public key auth (🏠 admin computer)
-[source,yaml]
-----
-# This does not affect logging in from a console (e.g. directly connected
-# keyboard and monitor, or a virtual console).
-- name: Disable tunneled clear text passwords
-  copy:
-    src: pka-only.conf
-    dest: /etc/ssh/sshd_config.d/
-    owner: root
-    group: root
-    mode: 0400
-  notify:
-    - restart sshd
-----
-
-Add this to `roles/base/handlers/main.yml`:
-
-.Ansible handler to restart SSH (🏠 admin computer)
-[source%unbreakable,yaml]
-----
-- name: restart sshd
-  service:
-    name: sshd.service
-    state: restarted
-----
-
-Create `roles/base/files/pka-only.conf` with:
-
-.SSH server config lines (🏠 admin computer)
-[source%unbreakable,text]
-----
-PasswordAuthentication no
-AuthenticationMethods publickey
-----
-
-Finally, re-run `provision.sh`.
-From now on, your server will require public key authentication for SSH logins.
-
-=== Allow WAN access
-
-(((router, Traefik)))
-mario blocks ((WAN access)) by default.
-Read <<Digital security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
-For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
-
-.patch for WAN access to Nextcloud (🏠 admin computer)
-[source%unbreakable,diff]
-----
-- traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
-+ traefik.http.routers.nc-https.middlewares=nc-head,nc-redir
-----
-
-Similarly for Jellyfin, you may delete the whole line referencing the `lan-only` ((middleware)) in Jellyfin's `compose.yml` if you decide to expose that service on your WAN.
 
 == More resources
 
