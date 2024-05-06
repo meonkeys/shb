@@ -33,10 +33,6 @@ I'm doing this to perfect the pre-print book and raise awareness about it.
 
 Joining the beta is free (gratis) and anyone may ask to join.
 
-The beta book is offered under familiar, terribly restrictive, and proprietary terms suitably only for evaluation copies: *All rights reserved*.
-This is so we can perfect the book in a walled garden before it is distributed widely and openly.
-The final published book and corresponding source code will use licensing that promotes sharing and freedom (e.g. copyleft, creative commons).
-
 All members of the beta must follow our [rules]({filename}/pages/rules.md).
 
 The beta book is available in US English only.

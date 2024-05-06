@@ -7,6 +7,9 @@ _Steadfast_ primarily targets aspiring self-hosters looking for a quick and reli
 You may <<How to build the book,build>>, or https://github.com/meonkeys/shb-review/releases/[download] a copy of the book.
 Coming soon: https://selfhostbook.com/buy/[buy a copy].
 
+Please don't directly share any of this content or code yet, I'd like to do my own "big reveal".
+Please do share https://selfhostbook.com.
+
 == Directory structure
 
 [cols="1,2"]
@@ -87,9 +90,8 @@ See am58 and am59, above.
 
 == Copyright and license
 
-This pre-publication secret manuscript of _Steadfast Self-Hosting: Rapid-Rise Personal Cloud_ is copyright (C)2024 Adam Monsen.
-All rights reserved.
-Creative Commons licensing does not (yet!) apply.
+* the book: see copyright and license info in `book/steadfast.asciidoc`
+* mario: see `mario/Readme.md`
 
 == Editing stages reference
 
