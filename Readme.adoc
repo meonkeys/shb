@@ -46,7 +46,7 @@ Please do share https://selfhostbook.com.
 
 Please https://selfhostbook.com/contact/[send me feedback]!
 
-* What are your first impressions? Cover, table of contents, font, style, page size, book length, etc.
+* What are your first impressions? Cover, title, table of contents, font, style, page size, book length, etc.
 * Any/all factual, spelling, grammatical, and structural errors.
 * Overall manuscript critique, comprehensive or line edits, copy-editing, proofreading.
 * Does it make sense what I'm trying to convey and how?
