@@ -2298,22 +2298,25 @@ While you are waiting for the dashboard, tail the logs with `dc traefik logs -f`
 It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
 
-// line numbers make it easier to read these very long lines
+// omitted for brevity:
+//
+// reverse-proxy-1  | 2024-05-07T20:03:05Z INF
+// reverse-proxy-1  | Stats collection is disabled.
+// reverse-proxy-1  | Help us improve Traefik by turning this feature on :)
+// reverse-proxy-1  | More details on: https://doc.traefik.io/traefik/contributing/data-collection/
+// reverse-proxy-1  |
 
 .typical Traefik logs (🚀 server)
 [source,text]
 ----
 + sudo docker compose --file /root/ops/traefik/compose.yml logs -f
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Configuration loaded from flags."
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Traefik version 2.10.1 built on 2023-04-27T14:52:35Z"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *traefik.Provider"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *docker.Provider"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *acme.ChallengeTLSALPN"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Starting provider *acme.Provider"
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg="Testing certificate renew..." ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=myresolver.acme
-reverse-proxy-1  | time="2023-05-09T18:53:41Z" level=info msg=Register... providerName=myresolver.acme
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Traefik version 3.0.0 built on 2024-04-29T14:25:59Z version=3.0.0
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Starting provider aggregator aggregator.ProviderAggregator
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Starting provider *traefik.Provider
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Starting provider *docker.Provider
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Starting provider *acme.ChallengeTLSALPN
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Starting provider *acme.Provider
+reverse-proxy-1  | 2024-05-07T20:03:05Z INF Testing certificate renew... acmeCA=https://acme-v02.api.letsencrypt.org/directory providerName=myresolver.acme
 ^Ccanceled
 ----
 
