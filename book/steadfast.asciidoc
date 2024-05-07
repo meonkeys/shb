@@ -1029,7 +1029,7 @@ A _Steadfast_ system presents nicely as a simplified stack of colored boxes.
 The vertical ordering of the stack is based on where and how frequently a sysadmin will likely act and investigate at that layer when supporting or troubleshooting (most frequently at top), and amount abstracted from bare metal (least at bottom).
 
 [#image-service-stack]
-.Layers of a Steadfast system. From the bottom we have hardware: bare metal, filesystem: ext4 for / (root folder) and ZFS for /data, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
+.Layers of a Steadfast system. From the bottom, hardware: bare metal, filesystem: ext4 for / and optionally ZFS for /data, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.svg[align="center",scaledwidth=80%]
 
 I am most often working around the top layers e.g. adding or updating a ((container)).
@@ -1039,15 +1039,22 @@ Finally, when my server dies, I'll be on that bottom layer fixing or replacing h
 
 ==== Stack layer details
 
-* containers:
-** <<Containers == happy>>
-** <<Contained services>>
+Pictured:
+
+* services in containers:
 ** <<Nextcloud: file sync and share>>
 ** <<Jellyfin: stream audio and video>>
 ** <<Wallabag: save and read articles>>
 * OS: <<Operating system>>
 * filesystem: <<Filesystem>>
 * hardware: <<Server>>
+
+More about containers:
+
+* <<Containers == happy>>
+* <<Contained services>>
+* <<Watchtower: service updater>>
+* <<Scratch: visual programming>>
 
 === Digital security
 
