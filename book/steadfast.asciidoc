@@ -1036,23 +1036,21 @@ I am most often working around the top layers e.g. adding or updating a ((contai
 Less often I am updating OS (operating system) packages.
 Less often still I might examine versions of a configuration file stored on disk from its ((ZFS)) automatic snapshots.
 Finally, when my server dies, I'll be on that bottom layer fixing or replacing hardware.
-
-==== Stack layer details
-
-Pictured:
+Here's where to look for details on each layer:
 
 * services in containers:
 ** <<Nextcloud: file sync and share>>
 ** <<Jellyfin: stream audio and video>>
 ** <<Wallabag: save and read articles>>
+* container runtime:
+** <<Containers == happy>>
+** <<Contained services>>
 * OS: <<Operating system>>
 * filesystem: <<Filesystem>>
 * hardware: <<Server>>
 
-More about containers:
+There are also two services in containers covered later and _not_ pictured in the diagram:
 
-* <<Containers == happy>>
-* <<Contained services>>
 * <<Watchtower: service updater>>
 * <<Scratch: visual programming>>
 
