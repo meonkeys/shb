@@ -1850,7 +1850,7 @@ The server will say if a reboot is required upon login.
 
 Each service in <<Services>> includes a "`Maintenance notes`" section with update instructions.
 Container images can be updated by hand with ((Docker Compose)) or automatically by ((Watchtower)).
-See <<Watchtower>> for details.
+See <<Watchtower: service updater>> for details.
 
 ==== Monitoring
 
@@ -2451,8 +2451,8 @@ Getting them running will provide some useful functionality for your users and a
 |Scratch |learn to code with visual tools
 |===
 
-// keep, assuming I keep the "Bugs" sections
-
+If I mention a feature I'd like to see added, I've also thought of adding it myself (or trying to convince someone else to add it, or raising money to pay someone to add it).
+This phenomenon is explained in <<The SMOP trap>>.
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
 === Nextcloud: file sync and share
@@ -2470,7 +2470,7 @@ Nextcloud can be self-hosted for free when installed via mario.
 
 See also: <<More about Nextcloud>>.
 
-==== Setup
+==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Nextcloud with `dc nextcloud up -d` on your server.
@@ -2481,6 +2481,10 @@ See also: <<More about Nextcloud>>.
 ==== Maintenance notes
 
 Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
+
+==== Issues
+
+See <<Various issues>>.
 
 === Jellyfin: stream audio and video
 
@@ -2497,7 +2501,7 @@ Jellyfin only needs read access to these persistent data, it stores ((metadata))
 There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
 Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
 
-==== Setup
+==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Jellyfin with `dc jellyfin up -d` on your server.
@@ -2521,25 +2525,21 @@ Jellyfin can take advantage of Intel Quick Sync Video.
 
 Upgrade and replace service containers with `dc jellyfin pull && dc jellyfin up -d`.
 
-==== Bugs
+==== Issues
 
-===== Share playlists
+Here are some features I'd love to see implemented in Jellyfin.
 
-Feature request.
+===== Feature: Share playlists
 
-* https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980[Playlists are private by design].
-* https://features.jellyfin.org/posts/173/share-playlists[I'd like the ability to share them].
+https://github.com/jellyfin/jellyfin/issues/6264#issuecomment-1338518980[Playlists are private by design].
+https://features.jellyfin.org/posts/173/share-playlists[I'd like the ability to share them].
 
-===== Clips
-
-Feature request.
+===== Feature: Clips
 
 I often want to share, hear, or re-watch a specific part of some media.
 I think it would be just so cool to be able to https://features.jellyfin.org/posts/1036/bookmark-audio-video-segments[create clips] without actually creating new media files.
 
-===== Offline mobile media
-
-Feature request.
+===== Feature: Offline mobile media
 
 I want the ((mobile)) app to auto-cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
 
@@ -2555,7 +2555,7 @@ https://wallabag.org[Wallabag] saves articles for distraction-free offline readi
 .Wallabag screenshot showing unread articles view.
 image::wallabag.png[]
 
-==== Setup
+==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Wallabag with `dc wallabag up -d` on your server.
@@ -2566,11 +2566,13 @@ image::wallabag.png[]
 ==== Maintenance notes
 
 Upgrade and replace service containers with `dc wallabag pull && dc wallabag up -d`.
-If you run into any issues, try manually applying database upgrades (see <<Upgrades break everything>>)
+If you run into any issues, try manually applying database upgrades (see <<Bug: Upgrades break everything>>).
 
-==== Bugs
+==== Issues
 
-===== Upgrades break everything
+Here's one serious issue I have with Wallabag, along with a feature I'm hoping is added someday.
+
+===== Bug: Upgrades break everything
 
 https://github.com/wallabag/wallabag/issues/6649[Database migrations are not (always?) automatically applied].
 There may be other duplicate or related bug reports for this same thing, that's just one example.
@@ -2595,9 +2597,7 @@ After the first run, subsequent runs output: `[OK] Already at the latest version
 It's unclear why thes migration is not automatically performed during an upgrade.
 Perhaps it is only necessary in special cases--I've only had to do it twice in a few years.
 
-===== Share with other users
-
-Feature request.
+===== Feature: Share with other users
 
 I want to be able to https://github.com/wallabag/wallabag/issues/679[share content with other Wallabag users, within Wallabag].
 
@@ -2616,7 +2616,7 @@ If you suspect this is the case and you know when the service started breaking, 
 I avoid this by only using Watchtower for non-critical services.
 I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
 
-==== Setup
+==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Watchtower with `dc watchtower up -d` on your server.
@@ -2637,7 +2637,7 @@ image::scratch.png[]
 
 Scratch doesn't require any persistent data, setup, nor auth.
 
-==== Setup
+==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Scratch with `dc scratch up -d` on your server.
@@ -2691,7 +2691,7 @@ It's fun!
 Conferences like https://seagl.org[SeaGL] bring together bright minds on many topics, including self-hosting.
 If you've done something cool, share it!
 
-=== Use GPUs
+=== Use a GPU
 
 (((GPU)))
 A GPU offers more efficient video transcoding with Jellyfin, reducing server CPU usage and speeding up remote video streaming.
@@ -3133,7 +3133,7 @@ Doing this within Nextcloud requires an https://apps.nextcloud.com/apps/richdocu
 Should you desire to add this functionality to your mario-provisioned server, either ((Collabora)) or ((ONLYOFFICE)) may serve as the backend for a ((mario)) server.
 My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it's clear Collabora development is flourishing while ONLYOFFICE is stagnant.
 
-==== Bugs
+==== Various issues
 
 ===== Spinner on mobile
 
@@ -3204,8 +3204,6 @@ Workarounds: wait 10 seconds or so between saves until the desktop client syncs 
 Also, check out the https://apps.nextcloud.com/apps/files_lock[Temporary files lock] app for semi-automated advisory locking (e.g. quickly communicate "`gimme a minute, I'm editing that Markdown text file`").
 
 ===== Draw signature in forms
-
-Feature request.
 
 Forms are handy for gathering simple minimally-structured data... surveys, RSVPs, stuff like that.
 The data are just dumped into a spreadsheet.
