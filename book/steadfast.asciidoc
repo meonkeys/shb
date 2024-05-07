@@ -2463,7 +2463,8 @@ If I link to a bug that is closed in an issue tracker, it's because I have teste
 === Nextcloud: file sync and share
 
 (((Nextcloud, overview)))
-Nextcloud is primarily a cloud "`drive`" for file storage and sharing.
+A _Steadfast_ homelab needs convenient file sharing and synchronization.
+Nextcloud is an excellent choice given its stability and popularity.
 It can be daunting to self-host, but ((mario)) makes it easy and fun.
 
 [#image-screenshot-nextcloud]
