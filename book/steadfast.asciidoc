@@ -3312,9 +3312,8 @@ https://runtipi.io[Runtipi]::
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated these only just enough to get the sense they didn't fit my wants and needs.
-Like a crotchety old man I'm reluctant to change, but I still do, sometimes.
-If I'm going to change, that next cool thing needs to pass a high bar.
-Ideally most or all these tests:
+I'm a crotchety old man and I'm reluctant to change, but I still do, sometimes.
+If and when I adopt something new, it must pass a high bar, ideally most or all these tests:
 
 .Checklist: Self-Hosting Solution Viability
 [#solution-viability-checklist]
