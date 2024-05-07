@@ -744,9 +744,15 @@ Just don't keep your server outside.
 
 == Practical examples
 
-=== Criminal chickens
+I use lots of software during my daily routine.
+I'll need to look something up, get a ride, buy food, and so on.
+Much of this software is, sadly, quite annoying!
+It always seems to want more of my time, attention, and money, when I only want the practical outcome it purports to help me achieve.
+As a result I trust it less and constantly think of how I might replace it with something I like and trust more.
 
-Here's a real example of a positive outcome I realized from self-hosting.
+Here are a couple examples where I've improved on a public service with something self-hosted, followed by some surprises I encountered along the way.
+
+=== Criminal chickens
 
 My family has a homemade chicken safety system and the videos are important to me.
 I used to just plop them on YouTube because hey, it's free and it "`just works`", right?
