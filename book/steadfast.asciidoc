@@ -3393,6 +3393,8 @@ How might it be improved?
 . What are some pitfalls of self-hosting?
 . What is the future of self-hosting?
 . What is the ideal number of users to support with a single self-hosted server?
+. Is the _Steadfast_ method useful for larger groups, big families, church congregations, schools, businesses, and governements?
+Why or why not?
 . How might this book be adapted for:
 .. intermittent power
 .. intermittent network
