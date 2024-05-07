@@ -1343,7 +1343,7 @@ Think:
 A ((reverse proxy)) sits in front of containers and directs traffic to the right service based on arbitrary rules.
 
 Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at jellyfin.example.com.
-In order to direct incoming traffic to each of these services, your server will need a reverse proxy.
+Your sever uses a reverse proxy and a single IP address to direct incoming traffic to each of these services based on the hostname.
 
 mario uses Traefik for its reverse proxy.
 
