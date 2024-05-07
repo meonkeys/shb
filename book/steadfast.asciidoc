@@ -493,7 +493,7 @@ I'll also admit my inner child enjoys multiple meanings of the phrase _Personal 
 
 === Who is this for?
 
-This book is for people who are kind to others, brave in trying new things, curious about the possibilities of self-hosting, and either uncertain how to do so or eager to improve their existing homelab (self-hosting space).
+This book is for people who are kind to others, brave in trying new things, curious about the possibilities of self-hosting, and either uncertain how to do so or eager to improve their existing homelab (self-hosting setup).
 
 This book is for people who want to know where their data live, and to be able to work all kinds of magic with it.
 It's a "`from scratch`" or "`the hard way`" approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
@@ -3724,7 +3724,7 @@ GUI::
 HDD::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
 homelab::
-  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting space`" and/or "`homeprod`".
+  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
 host::
   The computer where Docker containers run. Also called a "`server`" in this text.
 HVAC::
