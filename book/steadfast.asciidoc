@@ -3311,8 +3311,10 @@ https://runtipi.io[Runtipi]::
   New, interesting, uses ((Docker Compose)) and ((Traefik)).
 
 These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
-I evaluated them (and others) only enough to get the sense they didn't fit my wants and needs.
-Like a crotchety old man I've since raised my bar to change and instead come up with a checklist I'll share for evaluating the next self-hosting solution.
+I evaluated these only just enough to get the sense they didn't fit my wants and needs.
+Like a crotchety old man I'm reluctant to change, but I still do, sometimes.
+If I'm going to change, that next cool thing needs to pass a high bar.
+Ideally most or all these tests:
 
 .Checklist: Self-Hosting Solution Viability
 [#solution-viability-checklist]
