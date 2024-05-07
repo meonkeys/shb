@@ -2476,6 +2476,7 @@ Nextcloud can be self-hosted for free when installed via mario.
 
 See also: <<More about Nextcloud>>.
 
+[#nextcloud_quick_start]
 ==== Quick start
 
 . Provision with mario from your admin computer.
@@ -2872,7 +2873,7 @@ A basic (default, un-customized) Nextcloud install provides remote file storage,
 It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional ((metadata)) about those files and folders in a database.
 You access it via a web browser and there is a desktop client to sync files locally, similar to Dropbox, Google Drive, and OneDrive.
 
-I've come to _really_ trust desktop file sync.
+I've come to _really_ trust file sync with the Nextcloud desktop app.
 If I see a check mark on my desktop app, I know everything is properly synchronized with the server.
 I am constantly creating and editing content locally and counting on sync to work (usually on my desktop computer), or creating and editing directly in Nextcloud via the web UI.
 
@@ -2902,7 +2903,7 @@ They have a public bounty program and threat model.
 .. Destroy all persistent data with `sudo rm -rf /data/nextcloud`.
 That _really_ deletes everything.
 .. Re-provision with mario (run `provision.sh` again).
-.. Follow the setup steps again.
+.. Follow the setup steps again, see <<nextcloud_quick_start>>.
 . Read the official docs at `/settings/help` or https://docs.nextcloud.com.
 . Add apps at `/settings/apps`.
 See <<Customization>> for tips on how to roll out apps thoughtfully and which ones are worth your time.
@@ -2919,7 +2920,7 @@ In other words, this must work: `dc nextcloud exec -u www-data app curl -I \http
 These initial logged errors appear to be harmless, possibly a result of some install-time race conditions.
 It is still a good idea to review all logged errors.
 . Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
-.. Run it with `sudo docker exec --interactive --user www-data nextcloud-app-1 php occ`.
+.. Run it with `dc nextcloud exec --user www-data app php occ`.
 . Add `/data/video` as an External storage.
 Media files uploaded there will automatically appear in ((Jellyfin)).
 First, visit `/settings/apps/featured` and install the "`External storage support`" app.
