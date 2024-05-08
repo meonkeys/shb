@@ -2917,6 +2917,7 @@ Add users at `/settings/users`.
 Check logs for all containers related to Netcloud with `dc nextcloud logs -f`.
 
 Check Nextcloud internal logs at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
+These include specific Nextcloud internal server messages and are often more useful to me than the container logs.
 If you see a warning about "`1 error in the logs since DATE`" (or perhaps a couple) at `/settings/admin/logging`, you can probably ignore it.
 These initial logged errors appear to be harmless, possibly a result of some install-time race conditions.
 It is still a good idea to review all logged errors.
