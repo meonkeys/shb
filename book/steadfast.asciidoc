@@ -2866,6 +2866,9 @@ Similarly for Jellyfin, you may delete the whole line referencing the `lan-only`
 
 === More about Nextcloud
 
+Nextcloud is a key part of my self-hosting setup.
+I wanted to include a lot of additional details without cluttering up <<Services>>, so you'll find these extra sections here.
+
 ==== Basic install
 
 (((Nextcloud, install)))
@@ -2981,18 +2984,19 @@ Review their https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Sc
 
 ==== Performance
 
-If you use mario to deploy Nextcloud, you'll start with a nominally performant server.
-I've built the most important steps from their https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html[server tuning guide] into mario.
+If you use mario to deploy Nextcloud, you'll start with a nominally performant server suitable for a small handful of users, assuming you have sufficient hardware resources.
+mario includes an author-approved selection of the https://docs.nextcloud.com/server/stable/admin_manual/installation/server_tuning.html[recommended server tuning steps].
 
-Troubleshooting performance issues can be challenging.
-An https://github.com/nextcloud/server/issues/35311[issue about mounts] had me under the hood with ((MariaDB)) for a while.
+I've only had one performance issue in the years I've hosted Nextcloud (knock wood!), so I'll mention it here.
+I was seeing slow web requests along with https://github.com/nextcloud/server/issues/35311[lots of database activity].
+This had me under the hood with ((MariaDB)) for a while.
 They've since https://github.com/nextcloud/server/pull/33540[fixed the root cause] so it isn't a problem for new installations.
 
 ==== Customization
 
 (((Nextcloud, apps)))
 Nextcloud can be used as-is (see <<Basic install>>) or heavily customized.
-The simplest and safest way to customize is by installing an app from the built-in app store, especially if an app is marked "`featured`".
+The simplest and safest way to customize is by installing an app from the built-in app store (`/settings/apps`), especially if an app is marked "`featured`".
 These _Nextcloud apps_ are installed on the server, expanding the functionality of a base Nextcloud instance.
 
 Here are some Nextcloud apps I've tried, what they do, and a ruling on whether they're worth looking into.
@@ -3004,33 +3008,33 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 |===
 |Nextcloud App |Purpose |Worth your time?
 
-|Antivirus for files |virus scan uploads |*Yes*. Note: uploads from desktop clients are not scanned for viruses (https://github.com/nextcloud/files_antivirus/issues/219)
+|Antivirus for files |virus scan uploads |*Yes*. Note: https://github.com/nextcloud/files_antivirus/issues/219[uploads from desktop clients are not scanned for viruses].
 |Analytics |track and graph metrics |*Yes*. Only for small/simple use cases though.
 |Appointments |easy 3rd party scheduling |*Yes*. Requires careful calendar curation. Somewhat fiddly setup.
-|Calendar |manage meetings and appointments |*Yes*.
+|Calendar |manage meetings and appointments |*Yes*. See also: <<Spurious event updated notifications>>.
 |Circles |arbitrarily group users |*No opinion*. I don't have enough users to justify this.
 |Collectives |wiki or knowledge base |*Maybe*. Looks like a useful way to organize a set of related documents. Requires Circles.
 |Cookbook |recipe manager |*Yes*. Great at importing from web pages (thanks to standardized recipe data already present in HTML source). I wish it were better at printing/exporting though.
 |Contacts |address book |*Yes*.
-|Dashboard |various widgets on a page |*No*. I like to go right to my files.
+|Dashboard |landing page |*No*. I like to go right to my files.
 |Deck |kanban board |*No opinion*. I tried it a little and it worked, I just don't use kanban much.
 |Draw.io |diagram editor |*Yes*.
 |Duplicate Finder |find and cull duplicate files |*No*. Slow and opaque. I recommend https://github.com/pauldreik/rdfind[rdfind] instead.
-|Electronic Signatures |e-sign documents |*No*. Requires a 3rd party service. It should work locally and just help folks fill in documents with signatures, dates, text, etc.
-|End-to-End Encryption |encrypt files server-side, decrypt with client |*No*. Unnervingly buggy. Confusing UI/UX.
+|Electronic Signatures |e-sign documents |*No*. Requires a 3rd party service. I'd rather have drawn signatures. See <<Draw signature in forms>>.
+|End-to-End Encryption |encrypt files server-side, decrypt with client |*No*. Unnervingly buggy. Confusing UI/UX. See <<End-to-End Encryption>>.
 |Files |file management, sharing |*Yes*, although the "`Versions`" tab is not very useful.
 |Forms |Google Forms alternative |*Yes*.
-|Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project.
+|Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project. See <<Full text search>>.
 |Holiday Calendars |easily add public holiday calendars |*Yes*. The configuration for this app shows up under "`Personal`" -> "`Availability`" for me, not "`Groupware`" (although the URL path is `/settings/user/groupware`).
 |Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate ((metadata)).
 |Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yes, I do want to de-Gmail someday.
-|Memories |photos |*Yes*.
+|Memories |photos |*Yes*. Requires Photos.
 |News |track blogs and news via rss/atom feeds |*Yes*.
-|Nextcloud Office |edit spreadsheets, slides, etc. |*Yes*. I don't love this but I need it. Maybe that's a "`No`"? Mobile apps for this are painful.
+|Nextcloud Office |edit spreadsheets, slides, etc. |*Yes*. I don't love this but I need it. Maybe that's a "`No`"? Mobile apps for this are painful. See <<Nextcloud Office>>.
 |Notes |simple markdown-based note taking |*Yes*. There's an excellent companion mobile app. Replaced Google Notes for me.
 |Passwords |password manager |*Yes*. Warning: online only (requires connection to Nextcloud server).
 |PhoneTrack |location sharing and tracking |*Yes*. UI is feature-rich and complicated. Traveled movement lines are cool.
-|Photos |photos, sorta |*No*. Slow, clumsy, lacking features compared with other FOSS photo management software. Note that it is required by Memories. I do install it just so I can use Memories.
+|Photos |photos, sorta |*No*. Slow, clumsy, lacking features compared with other FOSS photo management software. Use Memories instead. Note that Memories depends on the Photos app.
 |Polls |simple polls |*Yes*.
 |Ransomware protection |warns for bad file names on upload |*No*. Too many false positives. Unmaintained.
 |Recognize |face recognition |*No*.
@@ -3039,16 +3043,9 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 |Tables |tabular data entry and API |*No*. Not yet, although keep an eye on this as a potentially powerful and useful ((low-code)) platform.
 |Talk |video and text chat |*No*. Works, just not as well as other video and text chat services/apps. I do use it for my chicken safety system and I see it improving a lot with each release. For now I recommend https://signal.org[Signal] instead.
 |Temporary files lock |avoid edit conflicts |*Yes*.
-|Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown.
+|Text |edit text documents |*Yes*. I'm a huge fan of Markdown plain text documents, and Nextcloud handles these well. It has a nice web-based collaborative editor. I like pasting in rich text and letting the editor auto-convert it to Markdown. See also: <<Mobile text editing is hard>> and <<Spurious web text editor conflicts>>.
 |Video converter |transcode videos |*No*. Cool idea but the project appears dormant.
 |===
-
-==== Talk High Performance Backend
-
-(((Nextcloud, Talk)))
-I haven't yet tried Talk with the https://nextcloud-talk.readthedocs.io/en/latest/scalability/[High Performance Backend] because I don't have dozens of users.
-The AIO installer includes the https://github.com/strukturag/nextcloud-spreed-signaling[strukturag/nextcloud-spreed-signaling implementation], which is likely to be the "`official`" one (I don't know for sure).
-See also: <<AIO installer>>.
 
 ==== Full text search
 
@@ -3070,17 +3067,6 @@ Nextcloud works OK as the backend for a mobile device.
 It can be your single reliable ((source of truth)) for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
 See <<Mobile text editing is hard>> for a couple workarounds.
-
-I had a https://murena.com[Murena Samsung S9+ phone] running /e/ ((OS)) for a while.
-I loved it.
-Easy to set up with Nextcloud and worked quite well.
-Unfortunately, T-Mobile started requiring VoLTE so I had to switch back to Samsung's Android because /e/ OS does not support VoLTE on that phone.
-
-(((FOSS)))
-Murena rescued me in 2023 when they started shipping the Fairphone 4 to the USA. /e/ OS is up to date with the latest upstream Android code and once again provides a good deal more FOSS-friendliness, privacy, and native Nextcloud integration than other Android-based mobile operating systems.
-Works with T-Mobile USA 5G, VoLTE, and Wi-Fi calling. 5 years of support.
-
-==== Other mobile apps
 
 Besides the primary mobile app (called simply "`Nextcloud`"), there are other mobile apps made to work with Nextcloud apps.
 Here are the ones I recommend.
@@ -3145,15 +3131,16 @@ See also: <<traits-of-good-services>> and <<traits-of-bad-services>> in <<Choose
 (((Nextcloud, Office)))
 https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "`office`" and their plans for it as a suite of related tools.
 They clearly intend a holistic, integrated office experience, and Nextcloud can be configured to be used in this manner.
-That page covers editing office documents (rich text and spreadsheets) collaboratively, along with uses for the Notes, Collectives, and Tables apps.
+https://nextcloud.com/office/ covers editing office documents (rich text and spreadsheets) collaboratively, along with uses for the Notes, Collectives, and Tables apps.
 It provides some clever and useful workflow ideas.
 
 Given that wide a scope, ((groupware)) should be part of "`office`" too, so instead let's for now focus specifically on collaborative editing of office documents.
-Doing this within Nextcloud requires an https://apps.nextcloud.com/apps/richdocuments[app called Nextcloud Office] as well as a separate backend service.
-Should you desire to add this functionality to your mario-provisioned server, either ((Collabora)) or ((ONLYOFFICE)) may serve as the backend for a ((mario)) server.
-My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it's clear Collabora development is flourishing while ONLYOFFICE is stagnant.
+Doing this within Nextcloud requires an https://apps.nextcloud.com/apps/richdocuments[app called Nextcloud Office] as well as a separate backend service, either ((Collabora)) or ((ONLYOFFICE)).
+My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it appears Collabora development is flourishing while ONLYOFFICE is stagnant.
 
 ==== Various issues
+
+Here's a selection of my favorite bugs and feature requests for Nextcloud.
 
 ===== Spinner on mobile
 
@@ -3191,13 +3178,10 @@ See https://jenson.org/text/ for background on why mobile text editing is a comp
 
 ===== Cumbersome mobile setup
 
-To sync calendars, tasks, and contacts with your phone's storage of same, you need to install the 3rd party DAVx5 app.
-I can't figure out why this is necessary (see: https://help.nextcloud.com/t/what-does-android-file-sync-do-for-a-nextcloud-account/154330).
-
-Workarounds:
-
-* use /e/ ((OS)): it includes native support for Nextcloud accounts
-* buy a https://murena.com[Murena] phone: it uses /e/ OS
+To sync calendars, tasks, and contacts with your phone's storage of same on Android, you must install and configure the 3rd party DAVx5 app.
+https://help.nextcloud.com/t/what-does-android-file-sync-do-for-a-nextcloud-account/154330[I don't know why DAVx5 is required], but https://murena.com[Murena] figured it out for me.
+Their Android-derived /e/ ((OS)) includes native support for Nextcloud accounts, removing the requirement for DAVx5.
+Users with iOS and other OSes besides Android can sync groupware-related data https://docs.nextcloud.com/server/stable/user_manual/en/groupware/[without DAVx5].
 
 ===== Spurious web text editor conflicts
 
@@ -3254,17 +3238,19 @@ As an aside, I do like this "`explicit diff`" behavior showing the exact changes
 
 ==== End-to-End Encryption
 
-It's a good idea to have End-to-End encrypted folders.
+End-to-End encrypted folders seems like a great idea.
 There's a Nextcloud app for this and I recommend you avoid it.
 
 It seems close to working, but it feels like early-release software.
 The UI/UX is confusing, and I ran into a dealbreaker bug that left files decrypted server-side.
-Furthermore...
+Furthermore, https://help.nextcloud.com/t/how-to-setup-e2e-encryption-for-shared-folders/165610[sharing] https://help.nextcloud.com/t/e2ee-and-file-sharing/145547[doesn't] https://github.com/nextcloud/end_to_end_encryption/issues/520[work], https://github.com/nextcloud/end_to_end_encryption/issues/82[there's no web client], https://github.com/nextcloud/end_to_end_encryption/issues/285[the roadmap is unclear], and https://github.com/nextcloud/end_to_end_encryption/issues/8[keys are always stored on the server] (these are thankfully stored encrypted).
 
-* https://help.nextcloud.com/t/how-to-setup-e2e-encryption-for-shared-folders/165610[Sharing] https://help.nextcloud.com/t/e2ee-and-file-sharing/145547[doesn't] https://github.com/nextcloud/end_to_end_encryption/issues/520[work].
-* https://github.com/nextcloud/end_to_end_encryption/issues/82[There's no web client].
-* https://github.com/nextcloud/end_to_end_encryption/issues/285[The roadmap is unclear].
-* https://github.com/nextcloud/end_to_end_encryption/issues/8[Keys are always stored on the server] (these are thankfully stored encrypted).
+ifdef::backend-pdf[]
+Sorry for all those really long links.
+Whew!
+Deep breaths, self, deep breaths.
+Count to ten.
+endif::[]
 
 I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues[known issues], make sure you can live with all those, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
 (((mobile)))
