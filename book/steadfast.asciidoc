@@ -2942,10 +2942,12 @@ Visit `/settings/admin/logging` periodically to review all server-side log messa
 Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
 This will pull the most recent image of https://github.com/nextcloud/docker with the `stable` release tag.
 Using this tag will likely be stable enough for you and your users.
-`stable` generally corresponds to the version labeled _previous_ at https://docs.nextcloud.com/.
+`stable` generally corresponds to the version they call _previous_ at https://docs.nextcloud.com/.
 
-You may opt to use a more specific tag such as `27.1.5-apache`.
+You may opt to "`pin`" your Nextcloud to a more specific tag such as `27.1.5-apache`.
 This gives you the chance to review and test each upgrade.
+You can pin a release tag in Nextcloud's `compose.yml` where the image name appears, just trade `stable` for the tag you choose.
+All available tags are https://hub.docker.com/_/nextcloud[listed at Docker Hub].
 
 NOTE: Nextcloud's blog posts and marketing materials use different version names than the release versions from source control.
 "`Hub 6`" on the blog refers to versions `27.\_._` in source control, "`Hub 7`" to `28.\_._`, and so on.
@@ -2955,8 +2957,8 @@ NOTE: Nextcloud's blog posts and marketing materials use different version names
 (((Nextcloud, release cadence)))
 https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html[A major release is shipped every four months].
 The Nextcloud apps I care about seem to keep up with this pace, but it does feel a bit aggressive to me.
-Developers need to modify their apps slightly for a new version, or heavily if breaking API changes occur.
-Thankfully the Nextcloud team https://help.nextcloud.com/t/new-process-for-documenting-core-code-changes-that-affect-app-developers/149828/1[carefully documents changes] to make it easier for app developers to adapt.
+Developers need to modify their apps each time at least slightly, or heavily if breaking API changes occur.
+Thankfully the Nextcloud team https://help.nextcloud.com/t/new-process-for-documenting-core-code-changes-that-affect-app-developers/149828/1[carefully documents changes] to ease app maintenance for developers.
 
 As a _Steadfast_ sysadmin, be sure to check your `/settings/admin/overview` page before upgrading Nextcloud to make sure all the apps you use will work with the version you're upgrading to.
 You can override an out-of-date app with the "`enable untested app`" option under `/settings/apps`.
