@@ -2474,7 +2474,7 @@ image::nextcloud.png[]
 A well-maintained Nextcloud server provides a solid foundation for de-Googling.
 Nextcloud can be self-hosted for free when installed via mario.
 
-See also: <<More about Nextcloud>>.
+Once you've got Nextcloud running, see <<More about Nextcloud>> for lots of my opinions on how best to customize it.
 
 [#nextcloud_quick_start]
 ==== Quick start
@@ -3260,10 +3260,10 @@ Make sure it works with all clients you plan to use it with (e.g. desktop, mobil
 ==== AIO installer
 
 (((Nextcloud, install)))
-Among the myriad install methods, there's a relatively new and interesting AIO ("`all-in-one`") installer (https://nextcloud.com/all-in-one).
+Among the myriad Nextcloud install methods, there's a relatively new and interesting AIO ("`all-in-one`") installer (https://nextcloud.com/all-in-one).
 It's free for an instance with less than 100 users.
-
-I recommend the mario method instead not to save money (although you might), rather, to be able to have the same flexible and empowering experience you get with all services managed by mario.
+The AIO takes a different approach than mario, it configures and manages multiple Nextcloud-related service containers for you.
+I recommend the mario method instead for its flexible and empowering experience of learning how to add and manage individual containers yourself.
 
 See the https://github.com/nextcloud/all-in-one[AIO readme] for more information.
 
