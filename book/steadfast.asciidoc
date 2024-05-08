@@ -2954,12 +2954,15 @@ NOTE: Nextcloud's blog posts and marketing materials use different version names
 
 (((Nextcloud, release cadence)))
 https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html[A major release is shipped every four months].
-Most Nextcloud app developers are able to keep up with this pace.
-Be sure to check your `/settings/admin/overview` page before upgrading to make sure all the apps you use will work with the version you're upgrading to.
+The Nextcloud apps I care about seem to keep up with this pace, but it does feel a bit aggressive to me.
+Developers need to modify their apps slightly for a new version, or heavily if breaking API changes occur.
+Thankfully the Nextcloud team https://help.nextcloud.com/t/new-process-for-documenting-core-code-changes-that-affect-app-developers/149828/1[carefully documents changes] to make it easier for app developers to adapt.
+
+As a _Steadfast_ sysadmin, be sure to check your `/settings/admin/overview` page before upgrading Nextcloud to make sure all the apps you use will work with the version you're upgrading to.
 You can override an out-of-date app with the "`enable untested app`" option under `/settings/apps`.
 Sometimes this works.
 
-Four months seemed to me like a short window for major releases, so I started a https://help.nextcloud.com/t/major-release-cadence/161685[thread about it].
+Since four months seemed to me like a short window for major releases I started a https://help.nextcloud.com/t/major-release-cadence/161685[thread about it].
 Review their https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Schedule[Maintenance and Release Schedule] to make sure your current version is still supported.
 
 ==== Performance
