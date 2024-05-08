@@ -2939,14 +2939,10 @@ Perform any recommended ((maintenance)) on that page.
 Ignore the Update section, it may disagree with Docker Hub.
 Visit `/settings/admin/logging` periodically to review all server-side log messages.
 
-// FIXME -- talk about Nextcloud stable release, in general
-
 Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
-This will pull the most recent image with the `stable` release tag.
+This will pull the most recent image of https://github.com/nextcloud/docker with the `stable` release tag.
 Using this tag will likely be stable enough for you and your users.
-`stable` generally corresponds to the previous version listed at https://docs.nextcloud.com/.
-
-// FIXME -- combine with "Release cadence", below?
+`stable` generally corresponds to the version labeled _previous_ at https://docs.nextcloud.com/.
 
 You may opt to use a more specific tag such as `27.1.5-apache`.
 This gives you the chance to review and test each upgrade.
