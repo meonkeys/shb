@@ -1,7 +1,6 @@
 = Steadfast Self-Hosting: Rapid-Rise Personal Cloud
 :author: Adam Monsen
 :copyright: (C)2024 {author}
-:license: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 :doctype: book
 :docinfo:
 :toc: macro
@@ -43,12 +42,11 @@ _{doctitle}_
 --
 
 --
-{copyright}
---
-
---
+{copyright}.
 Some rights reserved.
-See <<Copyright and license>>.
+This book is licensed under a https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License].
+
+image::cc-by-sa.svg[align="center"]
 --
 
 --
@@ -74,6 +72,8 @@ Paperback ISBN FIXME.
 --
 
 --
+// This just for fun.
+// See https://en.wikipedia.org/wiki/Printer's_key
 [.text-center]
 10 9 8 7 6 5 4 3 2 1
 --
@@ -234,14 +234,13 @@ This book was generated on *{build_date_time}* with `LANG` set to `*{build_local
 === Copyright and license
 
 _{doctitle}_ is {copyright}.
+Some rights reserved.
 
 ==== Copy this book
 
-This book is distributed under the **{license}** license.
+This book is licensed under a https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License].
 
-Please make copies and derivative works.
-This book is meant to be enjoyed and shared.
-The license explicitly encourages sharing.
+image::cc-by-sa.svg[align="center"]
 
 ===== You are free to...
 
