@@ -2535,18 +2535,23 @@ https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarne
 
 ==== Manage Jellyfin media with Nextcloud
 
-// FIXME - check all values in this section
+Jellyfin and Nextcloud both run on the same server.
+You can use this fact to leverage their individual strengths as services while they operate on the same data, one as the media streamer and one as the media file manager.
+mario creates special music and video folders on the server and makes them available to both services.
+Nextcloud "`external storages`" lets you upload files to these folders and Jellyfin will automatically notice and allow streaming the files you upload.
 
-I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
-Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
-There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
-Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
-A few steps in <<Detailed setup>> are necessary to be able to see the folders in Nextcloud.
+Nextcloud's `compose.yml` file has the entry `/data/shared/media/video:/data/video:rw` in `volumes`.
+`/data/shared/media/video` is the path on the server that will hold the actual video files, `/data/video` is where they'll show up inside the container, and `rw` says Nextcloud has read and write access to this volume.
+There's another similar folder for music files.
+See <<Detailed setup>> for how to add them as external storages in Nextcloud.
 
-To see these folders in Jellyfin, add two media libraries:
+In Jellyfin's `compose.yml` file you'll find similar lines to add music and videos volumes, but with `ro` (for read-only) instead of `rw`.
+Jellyfin only needs read access to the folders to be able to stream the files they contain.
+
+To see the Nextcloud-managed media files in Jellyfin, add two media libraries:
 
 . Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
-. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
+. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/music`.
 
 === Wallabag: save and read articles
 
@@ -3822,7 +3827,7 @@ SeaGL::
 self-host::
   Run your own server. See also: homelab.
 server::
-  A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse.
+  A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse. Also called a "`host`".
 service::
   A long-running process used by other local and remote processes to do something useful.
 SOHO::
@@ -3852,7 +3857,7 @@ UPS::
 UX::
   User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and notated "`UI/UX`".
 volume::
-  Docker container data storage location on the host.
+  Docker facility to mount a folder on the server to a folder inside a container. This is a common means of persisting container data that would otherwise be ephemeral.
 VM::
   Virtual machine. OS isolation technique simulating nearly all aspects of hardware including power, input, and output.
 VPN::
