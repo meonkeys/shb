@@ -1943,7 +1943,7 @@ The first time you run mario, follow the instructions as closely as possible.
 Many assumptions are made so it works "`out of the box`", and it is meant to be easily customizable.
 
 mario configuration files are declarative: They contain the _state_ you want your server to end up at, not all the individual commands you'd run manually to achieve the same state.
-mario runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
+mario's `provision.sh` runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
 (((provision)))
@@ -2108,7 +2108,6 @@ You should see output similar to this:
 .mario second run output (🏠 admin computer)
 [source,text]
 ----
-Created Ansible inventory file.
 BECOME password:
 
 PLAY [all] *********************************************************************

@@ -20,18 +20,19 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+# So we can refer back to the folder where this script lives.
 DIR="$( builtin cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Ensure the Ansible program we need is available.
 aprun="$(which ansible-playbook)" || true
-
-if [[ -z "$aprun" ]]
+if ! [[ -x "$aprun" ]]
 then
     echo "ERROR: Ansible not installed or not found in path."
     exit 1
 fi
 
+# Create customizable config file if it doesn't exist.
 myConfig="$DIR/config"
-
 if ! [[ -r $myConfig ]]
 then
     echo "You don't have a config file. I'll create one for you now."
@@ -42,15 +43,7 @@ then
     exit 1
 fi
 
-myInventory="$DIR/hosts.yml"
-
-if ! [[ -r $myInventory ]]
-then
-    cp "$DIR/template/hosts.yml" "$myInventory"
-    chmod 600 "$myInventory"
-    echo "Created Ansible inventory file."
-fi
-
+# Test connection to server Ansible will use.
 if ! ssh -o BatchMode=yes mario_server true
 then
     echo "Error: unable to SSH to the server in batch mode."
@@ -62,8 +55,10 @@ fi
 # shellcheck disable=SC1090
 source "$myConfig"
 
+# Reorient ourselves, just in case we're being run from another folder.
 builtin cd "$DIR"
 
+# sudo may be used to gain root privileges without a password after the first run.
 if [[ -r "$DIR/.first-run-complete" ]]
 then
     $aprun playbook.yml
