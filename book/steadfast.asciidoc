@@ -2435,15 +2435,14 @@ These services are a tiny fraction of those available to self-host.
 They reflect my users`' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
 Getting them running will provide some useful functionality for your users and a good starting point for self-hosting whatever you want.
 
-[cols="1,3"]
 |===
-|Service |Purpose
+|Purpose |See
 
-|Nextcloud |sync and share files, groupware
-|Jellyfin |stream music and home movies
-|Wallabag |read articles offline, without distractions
-|Watchtower |keep other services up to date
-|Scratch |learn to code with visual tools
+|sync and share files, groupware |<<Nextcloud: file sync and share>>
+|stream music and home movies |<<Jellyfin: stream audio and video>>
+|read articles offline, without distractions |<<Wallabag: save and read articles>>
+|keep other services up to date |<<Watchtower: service updater>>
+|learn to code with visual tools |<<Scratch: visual programming>>
 |===
 
 If I mention a feature I'd like to see added, I've also thought of adding it myself (or trying to convince someone else to add it, or raising money to pay someone to add it).
@@ -2463,7 +2462,6 @@ image::nextcloud.png[align="center",scaledwidth=80%]
 
 A well-maintained Nextcloud server provides a solid foundation for de-Googling.
 Nextcloud can be self-hosted for free when installed via mario.
-
 Once you've got Nextcloud running, see <<More about Nextcloud>> for lots of my opinions on how best to customize it.
 
 [#nextcloud_quick_start]
@@ -2493,20 +2491,12 @@ mario will set up a basic Jellyfin server.
 .Jellyfin screenshot showing metadata for a movie. Big Buck Bunny is licensed CC BY-3.0 by the Blender Foundation. 
 image::jellyfin.png[]
 
-I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
-Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
-There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
-Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
-
 ==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Jellyfin with `dc jellyfin up -d` on your server.
 . Navigate to `\https://jellyfin.example.com` on your admin computer.
 . Follow web-based setup steps.
-Try adding two media libraries using the folders shared with Nextcloud.
-.. Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
-.. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
 
 (((Jellyfin, advanced)))
 (((GPU)))
@@ -2542,6 +2532,21 @@ I want the ((mobile)) app to auto-cache media and https://features.jellyfin.org/
 
 Workaround: there are two separate mobile apps that can download and cache media for offline playing.
 https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarnedemeulemeester/findroid[Findroid] for video.
+
+==== Manage Jellyfin media with Nextcloud
+
+// FIXME - check all values in this section
+
+I like mounting local media folders using Nextcloud "`external storages`", then I can use Nextcloud to manage the actual movie and music files and Jellyfin to stream them.
+Jellyfin only needs read access to these persistent data, it stores ((metadata)) elsewhere.
+There's one example of a shared persistent data location in the Nextcloud `compose.yml` file.
+Under `volumes`, you'll find `/data/jellyfin/media/tmp-video:/data/tmp-video:rw`.
+A few steps in <<Detailed setup>> are necessary to be able to see the folders in Nextcloud.
+
+To see these folders in Jellyfin, add two media libraries:
+
+. Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
+. Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
 
 === Wallabag: save and read articles
 
@@ -2603,15 +2608,15 @@ I want to be able to https://github.com/wallabag/wallabag/issues/679[share conte
 ((Watchtower)) is handy for keeping your Docker containers up to date.
 It will discover and check outdated containers, pull new images, and restart services to create new containers.
 
-It https://github.com/containrrr/watchtower/issues/90[does not automatically roll back if a container upgrade fails].
-Granted, this would be challenging to implement.
-A service might only have one-way database migrations, for example.
-I think the Watchtower maintainers made the right decision to omit automatic rollbacks (likely to keep Watchtower simple).
+// source: https://containrrr.dev/watchtower/images/logo-450px.png
+// appears at: https://containrrr.dev/watchtower/
+// license of the rest of watchtower is Apache 2.0
+// This logo does not have license text.
+// This logo image consists only of simple geometric shapes or text. It does not meet the threshold of originality needed for copyright protection, and is therefore in the public domain.
+// See https://commons.wikimedia.org/wiki/Commons:Threshold_of_originality
+// and https://en.wikipedia.org/wiki/Public_domain
 
-You may experience an issue where a service is broken by Watchtower.
-If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
-I avoid this by only using Watchtower for non-critical services.
-I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
+image::watchtower.png[align="center",scaledwidth=25%]
 
 ==== Quick start
 
@@ -2622,11 +2627,26 @@ I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
 
 Upgrade and replace service containers with `dc watchtower pull && dc watchtower up -d`.
 
+==== Issues
+
+It https://github.com/containrrr/watchtower/issues/90[does not automatically roll back if a container upgrade fails].
+Granted, this would be challenging to implement.
+A service might only have one-way database migrations, for example.
+I think the Watchtower maintainers made the right decision to omit automatic rollbacks (likely to keep Watchtower simple).
+
+You may experience an issue where a service is broken by Watchtower.
+If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
+I avoid this by only using Watchtower for non-critical services.
+I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
+
 === Scratch: visual programming
 
 ((Scratch)) is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
-I really enjoy using it without the "`community`" part: pure coding without sharing, studios, comments, stars, hearts, endless memes and games.
-These often serve to redirect a user from creating to consuming.
+The most well-known https://scratch.mit.edu[public online version] adds sharing, studios, comments, stars, hearts, endless memes and games.
+These social features may reorient a user from productive creation to unintended consuming.
+Scratch can be self-hosted without the social features.
+In fact, that's the simplest way to self-host it.
+This is a great option if your users want to focus on creating while online and being social in person.
 
 [#image-screenshot-scratch]
 .Scratch screenshot showing a new empty project.
