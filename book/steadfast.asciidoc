@@ -167,7 +167,7 @@ Executive Director, Python Software Foundation
 Data sovereignty means having full control of your data.
 It brings the promise of privacy, liberty, and longevity.
 Realizing data sovereignty is both fun and practical, and supports ((prosocial behavior)).
-Self-hosting is an excellent path to data sovereignty.
+Self-hosting (running your own server) is an excellent path to data sovereignty.
 
 This book will help you efficiently learn and practice self-hosting.
 You'll gain confidence facing its challenges while enjoying its benefits first-hand.
@@ -177,8 +177,9 @@ The skills you will build are applicable at home, at work, and in your community
 
 I am so glad you're here!
 
+I'd like to help you get a server up and running.
 The self-hosting ecosystem is crowded and confusing, so I've taken care of a number of difficult choices with sensible, tested defaults.
-I'll help you set up a server and your first several web services.
+I'll help you provision (set up) your own server and a few useful web services.
 Bring along whatever ((sysadmin)) experience you've got, some willing users, and a desire to gain self-hosting competency.
 
 The Internet is often a relentless cash-grab and attention vampire.
@@ -222,23 +223,13 @@ Listen to users, gather data, and adapt accordingly.
 === Supporting the author
 
 I wrote this book with my own resources after years of research with lots of help from awesome people.
-See <<Acknowledgments>>.
+See <<Acknowledgments>> (near the end of the book).
 
 Please https://selfhostbook.com/buy/[buy a copy] for yourself or someone else, especially if you'd like me to write more books in the future.
 
-This book is a work in progress.
-Please help me improve it.
-See <<More resources>>.
-
 === Book version
 
-This book was generated
-
-* on *{build_date_time}*
-* with `LANG` set to `*{build_locale_lang}*`
-* from source `{docname}{docfilesuffix}`
-* at commit `{build_git_commit}`, branch `{build_git_branch}`, tag `{build_git_tag}`
-* using *{build_os_release}*
+This book was generated on *{build_date_time}* with `LANG` set to `*{build_locale_lang}*` from source `{docname}{docfilesuffix}` at commit `{build_git_commit}`, branch `{build_git_branch}`, tag `{build_git_tag}`, on *{build_os_release}*.
 
 === Copyright and license
 
@@ -281,8 +272,8 @@ For example, other rights such as publicity, privacy, or moral rights may limit 
 
 ==== Copy this book's code, too
 
-See <<More resources>>.
-There are two original works for you to fork (copy, modify, and share).
+See <<More resources>> for how to get the source code.
+It includes two original works for you to copy, modify, and share.
 First, the book itself, along with code to generate beautifully typeset versions.
 Second, a learning tool called mario (see <<_mario>>).
 
@@ -312,9 +303,9 @@ I want you to get to the good stuff quickly, then decide if, when, and where you
 If you find contradictions to these statements, please let me know.
 
 I'm human and error-prone.
-I'll make it easy to contact me about missing or incorrect information.
-Please do.
-When you do, include references or other supporting material.
+I'll make it easy to contact me about missing or incorrect information and to improve it yourself if you choose.
+Please do!
+See <<More resources>> for contact information and how to share improvements.
 
 === Style
 
@@ -710,7 +701,7 @@ So many reasons!
 ** when you buy something with ((DRM)), you don't really own it
 ** is there an integration you count on?
 Sometimes a service stops working with another service.
-This happens less often with ((FOSS)) because anyone can simply fork a project.
+This happens less often with ((FOSS)) because anyone can simply fork (copy, modify, and share) a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
 ** with a personal ((cloud)) you can safely and confidently keep GPS latitude and longitude in your photo ((metadata))
@@ -3271,7 +3262,7 @@ See the https://github.com/nextcloud/all-in-one[AIO readme] for more information
 Visit https://selfhostbook.com for all supporting material including source code for this book and mario.
 
 * https://selfhostbook.com/code/[Source code]
-* https://selfhostbook.com/contact/[Contact info]
+* https://selfhostbook.com/contact/[Contact information]
 
 Patches and feedback are most welcome.
 This book is just a part of something big and I'm glad you're a part of it too!
@@ -3738,7 +3729,7 @@ GUI::
 HDD::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
 homelab::
-  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ cloud should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
+  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ server (or "`personal cloud`") should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
 host::
   The computer where Docker containers run. Also called a "`server`" in this text.
 HVAC::
@@ -3809,6 +3800,8 @@ runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 SeaGL::
   Seattle GNU/Linux Conference. Held yearly since 2013.
+self-host::
+  Run your own server. See also: homelab.
 server::
   A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse.
 service::
