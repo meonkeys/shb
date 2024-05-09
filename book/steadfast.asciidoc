@@ -2459,7 +2459,7 @@ It can be daunting to self-host, but ((mario)) makes it easy and fun.
 
 [#image-screenshot-nextcloud]
 .Nextcloud Files app screenshot showing files, folders, and share buttons.
-image::nextcloud.png[]
+image::nextcloud.png[align="center",scaledwidth=80%]
 
 A well-maintained Nextcloud server provides a solid foundation for de-Googling.
 Nextcloud can be self-hosted for free when installed via mario.
@@ -2550,7 +2550,7 @@ https://wallabag.org[Wallabag] saves articles for distraction-free offline readi
 
 [#image-screenshot-wallabag]
 .Wallabag screenshot showing unread articles view.
-image::wallabag.png[]
+image::wallabag.png[align="center",scaledwidth=80%]
 
 ==== Quick start
 
@@ -2630,7 +2630,7 @@ These often serve to redirect a user from creating to consuming.
 
 [#image-screenshot-scratch]
 .Scratch screenshot showing a new empty project.
-image::scratch.png[]
+image::scratch.png[align="center",scaledwidth=80%]
 
 Scratch doesn't require any persistent data, setup, nor auth.
 
