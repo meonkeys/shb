@@ -2497,15 +2497,15 @@ image::jellyfin.png[]
 . Navigate to `\https://jellyfin.example.com` on your admin computer.
 . Follow web-based setup steps.
 
-(((Jellyfin, advanced)))
+(((Jellyfin, using a GPU with)))
 (((GPU)))
 If you have a GPU, look into https://jellyfin.org/docs/general/administration/hardware-acceleration/[hardware acceleration].
 This is useful if videos can't be played directly by a client and need to be transcoded on the fly.
 Jellyfin can transcode using only CPU, but it is way faster with a GPU.
 
 [%unbreakable]
-TIP: Some CPUs include special facilities for accelerated transcoding.
-Jellyfin can take advantage of Intel Quick Sync Video.
+TIP: Jellyfin can take advantage of some CPUs with built-in hardware transcoding.
+Intel Quick Sync Video, for instance.
 
 ==== Maintenance notes
 
