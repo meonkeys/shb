@@ -2430,9 +2430,6 @@ It's only a few more lines of code and configuration to create a small ((API)) o
 
 Now you can try out the services provisioned by mario.
 This chapter covers what they provide and how to manage them.
-These services are a tiny fraction of those available to self-host.
-They reflect my users`' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
-Getting them running will provide some useful functionality for your users and a good starting point for self-hosting whatever you want.
 
 |===
 |Purpose |See
@@ -2444,14 +2441,24 @@ Getting them running will provide some useful functionality for your users and a
 |learn to code with visual tools |<<Scratch: visual programming>>
 |===
 
+These particular services are a small fraction of those available to self-host.
+They reflect my users`' preferences (including and over-indexed to my own) in reading, sharing, media, and so on.
+Getting them running will provide some useful functionality for your users and a good starting point for self-hosting whatever you want.
+
+For each service you'll find my personal commentary and issues I encountered.
 If I mention a feature I'd like to see added, I've also thought of adding it myself (or trying to convince someone else to add it, or raising money to pay someone to add it).
 This phenomenon is explained in <<The SMOP trap>>.
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
+Mobile usage is high for the users I support, so that was also a factor when I chose these services.
+I use mobile apps and integrations for Nextcloud, Jellyfin, and Wallabag often.
+
+The server-side commands for managing services are standardized: You'll see the pattern `dc SERVICE ACTION ARGS` repeated many times.
+
 === Nextcloud: file sync and share
 
 (((Nextcloud, overview)))
-A _Steadfast_ homelab needs convenient file sharing and synchronization.
+A _Steadfast_ personal cloud needs convenient file sharing and synchronization.
 Nextcloud is an excellent choice given its stability and popularity.
 It can be daunting to self-host, but ((mario)) makes it easy and fun.
 
@@ -2479,6 +2486,8 @@ Run `dc nextcloud pull && dc nextcloud up -d` on your server to upgrade and repl
 ==== Issues
 
 See <<Various issues>>.
+
+<<<
 
 === Jellyfin: stream audio and video
 
@@ -2527,7 +2536,7 @@ I think it would be just so cool to be able to https://features.jellyfin.org/pos
 
 ===== Feature: Offline mobile media
 
-I want the ((mobile)) app to auto-cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
+I want a Jellyfin ((mobile)) app that will automatically cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
 
 Workaround: there are two separate mobile apps that can download and cache media for offline playing.
 https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarnedemeulemeester/findroid[Findroid] for video.
@@ -2551,6 +2560,8 @@ To see the Nextcloud-managed media files in Jellyfin, add two media libraries:
 
 . Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
 . Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/music`.
+
+<<<
 
 === Wallabag: save and read articles
 
@@ -2607,6 +2618,8 @@ Perhaps it is only necessary in special cases--I've only had to do it twice in a
 
 I want to be able to https://github.com/wallabag/wallabag/issues/679[share content with other Wallabag users, within Wallabag].
 
+<<<
+
 === Watchtower: service updater
 
 ((Watchtower)) is handy for keeping your Docker containers up to date.
@@ -2622,10 +2635,17 @@ It will discover and check outdated containers, pull new images, and restart ser
 
 image::watchtower.png[align="center",scaledwidth=40%]
 
+If you never want containers upgrading automatically, don't run Watchtower.
+Or, use https://containrrr.dev/watchtower/arguments/[configuration settings] to allow or deny auto-upgrades for particular containers.
+mario uses a container label to prevent watchtower from updating Scratch, for example.
+
 ==== Quick start
 
 . Provision with mario from your admin computer.
 . Start Watchtower with `dc watchtower up -d` on your server.
+
+From now on it'll run in the background, automatically upgrading containers whenever possible, on a reasonable schedule (every 24 hours by default).
+You can forget about it until it breaks (or breaks something else).
 
 ==== Maintenance notes
 
@@ -2642,6 +2662,8 @@ You may experience an issue where a service is broken by Watchtower.
 If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
 I avoid this by only using Watchtower for non-critical services.
 I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
+
+<<<
 
 === Scratch: visual programming
 
