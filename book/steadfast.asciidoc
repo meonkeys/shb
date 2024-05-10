@@ -2451,7 +2451,7 @@ This phenomenon is explained in <<The SMOP trap>>.
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
 Mobile usage is high for the users I support, so that was also a factor when I chose these services.
-I use mobile apps and integrations for Nextcloud, Jellyfin, and Wallabag often.
+Nextcloud, Jellyfin, and Wallabag have mobile apps and integrations, and I use these often.
 
 The server-side commands for managing services are standardized: You'll see the pattern `dc SERVICE ACTION ARGS` repeated many times.
 
@@ -2636,7 +2636,7 @@ It will discover and check outdated containers, pull new images, and restart ser
 image::watchtower.png[align="center",scaledwidth=40%]
 
 If you never want containers upgrading automatically, don't run Watchtower.
-Or, use https://containrrr.dev/watchtower/arguments/[configuration settings] to allow or deny auto-upgrades for particular containers.
+Or, use https://containrrr.dev/watchtower/arguments/[configuration settings] to allow or block auto-upgrades for particular containers.
 mario uses a container label to prevent watchtower from updating Scratch, for example.
 
 ==== Quick start
@@ -2711,12 +2711,14 @@ If you like this book, and you want to learn and do more, do it.
 Ride that wave of inspiration.
 Seek both breadth and depth.
 
-For breadth, look for a comprehensive book about Linux.
+For breadth, look for a comprehensive book about Linux since mario expects Linux, and a better understanding of Linux can help you customize your server with confidence.
+There aren't any Ubuntu-specific dependencies, but Ubuntu is the only Linux flavor mario has been extensively tested on at the time of writing.
 One of my first purchases when I wanted to just finally "`get`" Linux was _UNIX: The Complete Reference_, a thousand-page monster covering many, many concepts.
 I studied it in chunks, referred to it often, and never read it cover to cover.
 If I started learning again from scratch today, I'd still have a book like that handy while studying online resources and trying stuff at home.
 
 For depth, immerse yourself in fundamentals.
+Learn how a computer works.
 Push past abstractions and make progress towards first principles.
 Take a computer science class in an area supporting something else you want to do.
 For example, if you want to code your own web services, take a class in programming for the web.
@@ -2790,7 +2792,7 @@ This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding la
 "traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
 ----
 
-TIP: For extra credit, incorporate your LocalAI service into mario.
+TIP: Use mario to provision your LocalAI service.
 
 See the https://localai.io[LocalAI documentation] for further setup help.
 Once you get that running, you can use the https://apps.nextcloud.com/apps/integration_openai[Nextcloud AI integration app] as a convenient frontend.
@@ -3329,11 +3331,11 @@ Don't expect much from these, although you may get lucky from time to time.
 
 === Alternatives to this book
 
-There are one-click-install appliances with many ready-to-go apps.
+If you're in a hurry, you can find one-click-install appliances with many ready-to-go apps.
 (((FreedomBox)))
 https://freedombox.org[FreedomBox] is one promising contender in this space.
 
-There are shortcuts and frontends for self-hosting.
+There are also many shortcuts and frontends for self-hosting.
 For example, https://openmediavault.org[openmediavault] looks like a cool way to build a ((DIY)) (do it yourself) ((NAS)) (network attached storage).
 
 (((YunoHost)))
@@ -3348,7 +3350,7 @@ https://casaos.io[CasaOS]::
 https://runtipi.io[Runtipi]::
   New, interesting, uses ((Docker Compose)) and ((Traefik)).
 
-These look like great ideas, and it's hopeful (and overwhelming) to see many options in this space.
+These look intriguing, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated these only just enough to get the sense they didn't fit my wants and needs.
 I'm a crotchety old man and I'm reluctant to change, but I still do, sometimes.
 If and when I adopt something new, it must pass a high bar, ideally most or all these tests:
