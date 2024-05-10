@@ -2455,6 +2455,8 @@ Nextcloud, Jellyfin, and Wallabag have mobile apps and integrations, and I use t
 
 The server-side commands for managing services are standardized: You'll see the pattern `dc SERVICE ACTION ARGS` repeated many times.
 
+<<<
+
 === Nextcloud: file sync and share
 
 (((Nextcloud, overview)))
@@ -2587,7 +2589,7 @@ If you run into any issues, try manually applying database upgrades (see <<Bug: 
 
 ==== Issues
 
-Here's one serious issue I have with Wallabag, along with a feature I want.
+Here's one issue I have with Wallabag and a feature I want.
 
 ===== Bug: Upgrades break everything
 
