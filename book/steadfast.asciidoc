@@ -2620,7 +2620,7 @@ It will discover and check outdated containers, pull new images, and restart ser
 // See https://commons.wikimedia.org/wiki/Commons:Threshold_of_originality
 // and https://en.wikipedia.org/wiki/Public_domain
 
-image::watchtower.png[align="center",scaledwidth=25%]
+image::watchtower.png[align="center",scaledwidth=40%]
 
 ==== Quick start
 
@@ -2647,10 +2647,11 @@ I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
 
 ((Scratch)) is a popular and very approachable visual programming language geared towards interactive multimedia and learning.
 The most well-known https://scratch.mit.edu[public online version] adds sharing, studios, comments, stars, hearts, endless memes and games.
-These social features may reorient a user from productive creation to unintended consuming.
-Scratch can be self-hosted without the social features.
+These "`social`" features may be exactly what a user wants/needs (e.g. one may remix an existing project and learn from it), or it may unintentionally reorient a user from productive creation to mindless consumption (e.g. doomscrolling).
+
+This is where your new _Steadfast_ power comes in: Scratch can be self-hosted without the social features.
 In fact, that's the simplest way to self-host it.
-This is a great option if your users want to focus on creating while online and being social in person.
+This is a great option if your users want to focus on creating while online and being social in person. 😉
 
 [#image-screenshot-scratch]
 .Scratch screenshot showing a new empty project.
