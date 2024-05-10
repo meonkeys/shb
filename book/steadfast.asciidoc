@@ -2488,7 +2488,7 @@ mario will set up a basic Jellyfin server.
 
 [#image-screenshot-jellyfin]
 .Jellyfin screenshot showing metadata for a movie. Big Buck Bunny is licensed CC BY-3.0 by the Blender Foundation. 
-image::jellyfin.png[]
+image::jellyfin.png[align="center",scaledwidth=80%]
 
 ==== Quick start
 
