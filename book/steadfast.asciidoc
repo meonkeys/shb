@@ -2474,7 +2474,7 @@ Once you've got Nextcloud running, see <<More about Nextcloud>> for lots of my o
 
 ==== Maintenance notes
 
-Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
+Run `dc nextcloud pull && dc nextcloud up -d` on your server to upgrade and replace Nextcloud service containers.
 
 ==== Issues
 
@@ -2509,7 +2509,7 @@ Intel Quick Sync Video, for instance.
 
 ==== Maintenance notes
 
-Upgrade and replace service containers with `dc jellyfin pull && dc jellyfin up -d`.
+Run `dc jellyfin pull && dc jellyfin up -d` on your server to upgrade and replace the Jellyfin service container.
 
 ==== Issues
 
@@ -2571,12 +2571,12 @@ image::wallabag.png[align="center",scaledwidth=80%]
 
 ==== Maintenance notes
 
-Upgrade and replace service containers with `dc wallabag pull && dc wallabag up -d`.
+Run `dc wallabag pull && dc wallabag up -d` on your server to upgrade and replace Wallabag service containers.
 If you run into any issues, try manually applying database upgrades (see <<Bug: Upgrades break everything>>).
 
 ==== Issues
 
-Here's one serious issue I have with Wallabag, along with a feature I'm hoping is added someday.
+Here's one serious issue I have with Wallabag, along with a feature I want.
 
 ===== Bug: Upgrades break everything
 
@@ -2629,7 +2629,7 @@ image::watchtower.png[align="center",scaledwidth=25%]
 
 ==== Maintenance notes
 
-Upgrade and replace service containers with `dc watchtower pull && dc watchtower up -d`.
+Run `dc watchtower pull && dc watchtower up -d` on your server to upgrade and replace the Watchtower service container.
 
 ==== Issues
 
@@ -2675,7 +2675,7 @@ If you want to upgrade Scratch, visit the https://github.com/scratchfoundation/s
 
 Re-run `provision.sh` on the admin computer.
 Re-build the image with `dc scratch build --pull` on the server.
-Replace service containers with `dc scratch up -d` on the server.
+Finally, replace the Scratch service container by running `dc scratch up -d` on the server.
 
 == What's next?
 
@@ -2968,8 +2968,7 @@ Perform any recommended ((maintenance)) on that page.
 Ignore the Update section, it may disagree with Docker Hub.
 Visit `/settings/admin/logging` periodically to review all server-side log messages.
 
-Upgrade and replace service containers with `dc nextcloud pull && dc nextcloud up -d`.
-This will pull the most recent image of https://github.com/nextcloud/docker with the `stable` release tag.
+Running `dc nextcloud pull && dc nextcloud up -d` (on the server) will pull the most recent image of https://github.com/nextcloud/docker with the `stable` release tag.
 Using this tag will likely be stable enough for you and your users.
 `stable` generally corresponds to the version they call _previous_ at https://docs.nextcloud.com/.
 
