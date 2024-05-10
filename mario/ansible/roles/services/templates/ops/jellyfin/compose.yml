@@ -18,11 +18,8 @@ services:
       - /data/shared/media/music:/data/music:ro
       - /data/jellyfin/config:/config
     networks:
-      - jellyfin
       - traefik_default
     restart: unless-stopped
 networks:
-  jellyfin:
-    name: jellyfin
   traefik_default:
     external: true
