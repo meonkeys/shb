@@ -388,7 +388,7 @@ We were all stuck at home and online at the start of the pandemic, and I was war
 I started dabbling more with self-hosting at home and found it was possible to provide safer, better family tech services then many popular ones available online.
 I wanted more services for managing our data and I enjoyed the autonomy of our own ((bare metal)).
 
-Around the same time, I decided to https://en.wikipedia.org/wiki/DeGoogle[de-Google].
+Around the same time, I decided to de-Google (stop using Google).
 The family needs and my de-Googling coincided well.
 Self-hosting was a serendipitous fit.
 Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated with many self-hosting experiments.
