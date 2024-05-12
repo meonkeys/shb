@@ -558,7 +558,7 @@ This book is not the fastest path to trying out web services.
 You can usually find demo instances running for particular projects.
 There are ((cloud)) providers that will run a service for you and host your data.
 
-See also: <<Alternatives to this book>>.
+See also: <<Alternatives to mario>>.
 
 === How write book?
 
@@ -1435,7 +1435,7 @@ The good ones will likely share at least some of these traits.
 * Flexible and extensible (easy to customize and extend with plugins and such).
 ****
 
-See also: <<solution-viability-checklist>> in <<Alternatives to this book>>.
+See also: <<solution-viability-checklist>> in <<Alternatives to mario>>.
 
 These traits are based on standard industry practice as well as my personal values and preferences.
 Your own list may differ if, for example, you don't prefer FOSS licensing or do prefer a particular programming language.
@@ -2841,7 +2841,7 @@ It would be convenient for users to be able to log in once to get access to all 
 
 https://goauthentik.io[Authentik] is one service providing this, and appears to have all the features I want (single sign-on, backend user database, integrates with everything I self-host).
 I want to try it out and see it running well for a good while before adding it to mario.
-Some of the other self-hosting solutions mentioned in <<Alternatives to this book>> do include FOSS central identity management.
+Some of the other self-hosting solutions mentioned in <<Alternatives to mario>> do include FOSS central identity management.
 
 === Enforce SSH public key auth
 
@@ -3332,7 +3332,7 @@ Don't expect much from these, although you may get lucky from time to time.
 ** https://matrix.to/#/#selfhosted:matrix.org[self-hosted chat]
 * Hire me to help you out.
 
-=== Alternatives to this book
+=== Alternatives to mario
 
 If you're in a hurry, you can find one-click-install appliances with many ready-to-go apps.
 (((FreedomBox)))
