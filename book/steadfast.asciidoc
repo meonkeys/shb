@@ -378,16 +378,17 @@ I'm good at administering and securing systems and processes while ensuring priv
 I'm most proud of my family, growing https://mifos.org[Mifos], founding https://seagl.org[SeaGL], selling https://csats.com[C-SATS], and writing this book.
 
 I've been running my own services for decades.
-I started with a humble blog running on a buddy's machine.
-The feeling of freedom and control was exciting and it complemented my effectiveness at work, so I kept on.
-I worked with many services and servers but usually avoided running my own hardware.
-Once I had a family, our data storage needs increased at home.
-It became handy as parents to be able to provide more and safer online services for our kids.
-A simple network drive and file sync were no longer enough; I wanted better services for managing our data along with the autonomy of our own ((bare metal)).
+I started with a blog and photo album running on a buddy's machine.
+The feeling of freedom and control was exciting and it complemented my effec­tiveness at work, so I kept on, running 
+many of my own services, although rarely on my own hardware.
 
-At the start of the pandemic our family tech needs increased sharply.
-We were all stuck at home and online, and I was wary of companies swooping in to capitalize on our captivity.
-At the same time, I decided to https://en.wikipedia.org/wiki/DeGoogle[de-Google].
+Once I had a family, our data storage and capability needs increased.
+A simple network drive and file sync were no longer enough.
+We were all stuck at home and online at the start of the pandemic, and I was wary of companies swooping in to capitalize on our captivity.
+I started dabbling more with self-hosting at home and found it was possible to provide safer, better family tech services then many popular ones available online.
+I wanted more services for managing our data and I enjoyed the autonomy of our own ((bare metal)).
+
+Around the same time, I decided to https://en.wikipedia.org/wiki/DeGoogle[de-Google].
 The family needs and my de-Googling coincided well.
 Self-hosting was a serendipitous fit.
 Just _trying_ to de-Google was a fascinating and fulfilling journey, punctuated with many self-hosting experiments.
