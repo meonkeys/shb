@@ -238,7 +238,7 @@ Some rights reserved.
 
 ==== Copy this book
 
-This book is licensed under a https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License].
+This book is licensed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License.
 
 image::cc-by-sa.svg[align="center"]
 
