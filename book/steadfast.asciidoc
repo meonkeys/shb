@@ -2676,7 +2676,7 @@ These "`social`" features may be exactly what a user wants/needs (e.g. one may r
 
 This is where your new _Steadfast_ power comes in: Scratch can be self-hosted without the social features.
 In fact, that's the simplest way to self-host it.
-This is a great option if your users want to focus on creating while online and being social in person. 😉
+This is a great option if your users want to focus on creating in Scratch and being social in person. 😉
 
 [#image-screenshot-scratch]
 .Scratch screenshot showing a new empty project.
