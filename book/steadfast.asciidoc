@@ -3574,8 +3574,7 @@ With proprietary software, if it can't do something, it's easier to give up.
 Because, what's the point?
 If the change/customization/feature you want doesn't help _their_ bottom line (or their timeline), _you're_ not going to get it.
 
-That never happens with FOSS.
-At least, not the same way.
+That never happens with FOSS, rather, you end up with the opposite challenge.
 With FOSS you can participate in a software project all the way up to modification and redistribution without having to start your own from scratch.
 
 There's always the possibility that you or someone you know (or pay!) can do that extra little thing.
@@ -3626,7 +3625,7 @@ I darn well want that chip to be FOSS.
 We don't have to wait for the future to explore the implications of proprietary implants.
 You can read about how https://theoutline.com/post/1398/why-can-t-karen-sandler-get-the-source-code-for-her-pacemaker[hero FOSS activist Karen Sandler tried to get the source code for her pacemaker], and follow the https://npr.org/2023/03/14/1163494707/neurotechnology-privacy-data-tracking-nita-farahany-battle-for-brain-book[work of Dr. Farahny on brain-computer interfaces].
 
-==== What FOSS gets right
+==== User centric
 
 (((FOSS, profit)))
 FOSS is for utility, non-FOSS is for profit.
@@ -3649,6 +3648,8 @@ FOSS doesn't require your data to exist, so it doesn't require your attention.
 This makes it easier to focus on the task at hand, for only as long as you need to.
 
 ==== But Spotify has _every song ever_
+
+// FIXME - restructure as a con, add strong rebuttal
 
 You may have to listen to a few random songs or ads before you can get to the one you really want to listen to, but yes, Spotify does have many, many songs.
 More than you could listen to in your lifetime.
