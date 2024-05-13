@@ -3682,7 +3682,7 @@ Thanks to the "`Deadbeat Dads`" Bryan Daisley and Rob Floberg for your invaluabl
 
 Thanks to Bob Nystrom for your mind-expanding design review.
 
-Thanks to Lenny Wondra for your life-changing tech review and editing.
+Thanks to Lenny Wondra for your deeply effective tech review and editing.
 
 Thanks most of all to my wife and kids for supporting and believing in me.
 For all the cooking, talking, listening, art, coding, math, music, and love.
