@@ -18,6 +18,10 @@ I can help with the code, config, and deploy changes necessary to accommodate th
 I'm thinking we might want translations in forked repositories, and it might also be nice to have them all in one place.
 I haven't decided yet.
 
+### Improve this website
+
+See `pelican/Readme.md` in the source code.
+
 ### Contributor guidelines
 
 See:

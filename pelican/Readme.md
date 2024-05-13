@@ -2,7 +2,7 @@
 
 ## Usage
 
-`build.sh` builds and runs Pelican in a container via Bash and `website/Makefile`.
+`build.sh` builds and runs [Pelican](https://getpelican.com) in a container via Bash and `website/Makefile`.
 
 Example commands:
 
@@ -19,7 +19,7 @@ Example commands:
 
 ## See also
 
-* https://docs.getpelican.com/en/latest/
+* https://docs.getpelican.com
 * https://pypi.org/project/Jinja2/
 * https://realpython.com/primer-on-jinja-templating/
 * https://jinja.palletsprojects.com/en/3.1.x/api/#basics

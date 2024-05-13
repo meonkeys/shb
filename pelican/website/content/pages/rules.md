@@ -7,6 +7,7 @@ Please review our rules.
 
 These rules embody our values.
 They guide how we interact with each other, with a focus on psychological safety and support.
+
 What you see here was created with care by a powerful, tiny team, not a big corporation.
 
 ### Community rules
@@ -19,7 +20,7 @@ When we communicate with each other, we promise to:
 * Not spam, stay on-topic, and gracefully/calmly accept feedback on same.
 * Follow the [SeaGL code of conduct](https://seagl.org/code_of_conduct).
 
-We have a lot of i18n and L10n work to do.
+We have a lot of [i18n and L10n](https://en.wikipedia.org/wiki/Internationalization_and_localization) work to do.
 We currently only use English.
 
 ### Terms of Service
