@@ -3535,6 +3535,16 @@ Please apply similar detailed steps elsewhere as desired.
 
 == More about FOSS
 
+// FIXME - maybe change chapter title
+//
+// * Strategic FOSS
+// * FOSS pros and cons
+// * FOSS strategies
+// * Leveraging FOSS
+
+FOSS (free and open source software) is a core _Steadfast_ value.
+This chapter exists to bring the focus back around to FOSS, taking a deeper look at its benefits and challenges.
+
 === When FOSS is worse
 
 ==== Puppies
