@@ -2094,7 +2094,7 @@ See <<Server domain name>> for details on how to obtain this.
 Enter the name of your ((DNS)) provider here.
 mario configures ((Traefik)) to talk directly with your DNS server for issuing ((Let's Encrypt)) certs.
 `NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
-Enter credentials in these fields corresponding to the value you specified in `DNS_API_PROVIDER`.
+Enter credentials for only one provider, the same provider you specified in `DNS_API_PROVIDER`.
 `DNS_RESOLVER_EMAIL`::
 Enter an email matching what you use with your DNS API provider.
 You may receive emails from Let's Encrypt at this address.

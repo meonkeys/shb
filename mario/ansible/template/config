@@ -1,7 +1,6 @@
-# Must be one of namecheap, digitalocean, route53, or duckdns.
-# Many others may work as well if services.reverse-proxy.environment in traefik's docker-compose.yml is augmented with the correct additional variables.
-# See https://doc.traefik.io/traefik/https/acme/#dnschallenge
-# See https://letsencrypt.org/docs/challenge-types/#dns-01-challenge
+# Specify your DNS provider here.
+# Must be ONE of namecheap, digitalocean, route53, or duckdns.
+# This and the corresponding provider-specific variables below are only used for directly manipulating DNS records to pass the DNS challenge for obtaining HTTPS encryption certs.
 export DNS_API_PROVIDER=''
 
 ### Namecheap API credentials ###
