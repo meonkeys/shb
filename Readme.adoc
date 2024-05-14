@@ -191,9 +191,9 @@ None.
 [#am55_detail]
 == ℹ️ am55: improve htmlproofer
 
-`book/.internal-build.sh` runs `htmlproofer`.
-Currently I ignore erorrs with an `|| true` statement.
-It would be better to ignore or fix the errors.
+`book/.internal-build.sh` runs `htmlproofer`, which returns some spurious failures.
+Currently I ignore these failures with an `|| true` statement.
+It would be better to sqelch or fix them.
 This is possible by instrumenting links in the text or adjusting the way htmlproofer is configured and run.
 
 Some recent output:
