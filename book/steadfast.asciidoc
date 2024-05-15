@@ -624,8 +624,6 @@ I believe self-hosting ((FOSS)) is doable and affords many practical benefits ov
 Hang in there and give me some feedback.
 You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
 
-Continued ad nauseam in <<More about FOSS>>.
-
 == Your journey
 
 Continuing advances in hardware and software means self-hosting today is easier and cheaper than ever before.
@@ -3533,140 +3531,6 @@ The detailed steps in the last exercise suggest what may be required in general 
 I've omitted them from the other exercises for brevity.
 Please apply similar detailed steps elsewhere as desired.
 
-== More about FOSS
-
-// FIXME - maybe change chapter title
-//
-// * Strategic FOSS
-// * FOSS pros and cons
-// * FOSS strategies
-// * Leveraging FOSS
-
-FOSS (free and open source software) is a core _Steadfast_ value.
-This chapter exists to bring the focus back around to FOSS, taking a deeper look at its benefits and challenges.
-
-=== When FOSS is worse
-
-==== Puppies
-
-(((FOSS, drawbacks)))
-In the words of Scott McNealy, former CEO of Sun Microsystems:
-
-____
-Open source is free like a puppy is free.
-____
-
-Everybody loves a puppy, right?
-_Right??_
-I sure hope so.
-Because--fair warning--if you spend too much time with your "`puppy`" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
-
-[#image-puppy]
-.Open Source is free like a puppy. Pictured: actual puppy.
-image::puppy.jpg[align="center",scaledwidth=80%]
-
-If your problem is _that_ cute, I suppose it's not too a bad problem to have.
-Practically it means that you might become attached to something impractical.
-
-==== The SMOP trap
-
-With proprietary software, if it can't do something, it's easier to give up.
-Because, what's the point?
-If the change/customization/feature you want doesn't help _their_ bottom line (or their timeline), _you're_ not going to get it.
-
-That never happens with FOSS, rather, you end up with the opposite challenge.
-With FOSS you can participate in a software project all the way up to modification and redistribution without having to start your own from scratch.
-
-There's always the possibility that you or someone you know (or pay!) can do that extra little thing.
-It might be easy or it might be a https://en.wikipedia.org/wiki/Small_matter_of_programming[SMOP], and you might not know for sure which it is until you are already far down the rabbit hole.
-
-Watch out for that, and https://en.wikipedia.org/wiki/Sunk_cost_fallacy[let go if and when you should].
-It's hard sometimes, and it is also a great opportunity to learn about software project management and practice getting feedback from others.
-
-==== Features
-
-One adage of FOSS is "`release early, release often`".
-If you stumble onto an early release of something, it might not suit your needs.
-When you pick a service to stand up, it either has the features you need or it doesn't.
-If it doesn't and you don't want another hobby, move on.
-
-==== Quality
-
-(((FOSS, quality)))
-A common issue with FOSS is poor quality, specifically: UI/UX (user interface / user experience).
-We (and our users!) are spoiled by the billions spent on intuitive, beautiful non-FOSS UI/UX.
-
-FOSS UI/UX does improve, just not at a predictable rate.
-It's hard to get right.
-Be ready for this.
-
-I'll avoid recommending anything obviously unusable.
-Your mileage may vary.
-
-=== When FOSS is better
-
-(((FOSS, advantages)))
-In theory: Always, because you can choose FOSS that lines up with your values.
-In practice: Eventually.
-FOSS lags behind non-FOSS because companies make _lots_ of money at the leading edge of technology (whether or not it aligns with values).
-Some areas where FOSS is especially behind:
-
-* ((mobile)) phones (((Murena)) is promising)
-* speech recognition (but check out https://github.com/openai/whisper)
-* ((AI)) (this area is changing rapidly)
-
-Let's see how long before these are easily solvable with FOSS too.
-It'll be right around the time the _next_ attractive over-hyped widget is available.
-
-I've often pondered when that next attractive tech widget will be something implanted in my body.
-Say, a chip that guarantees perfect sleep or supercharges my willpower.
-I darn well want that chip to be FOSS.
-
-We don't have to wait for the future to explore the implications of proprietary implants.
-You can read about how https://theoutline.com/post/1398/why-can-t-karen-sandler-get-the-source-code-for-her-pacemaker[hero FOSS activist Karen Sandler tried to get the source code for her pacemaker], and follow the https://npr.org/2023/03/14/1163494707/neurotechnology-privacy-data-tracking-nita-farahany-battle-for-brain-book[work of Dr. Farahny on brain-computer interfaces].
-
-==== User centric
-
-(((FOSS, profit)))
-FOSS is for utility, non-FOSS is for profit.
-FOSS exists because it addresses human needs.
-Proprietary software exists because it makes money.
-
-Consider that privacy-respecting home data appliance I mentioned earlier.
-People really do want something like this, and it'll eventually happen because the "`incentive`" of FOSS most matches natural human incentives of healthy, happy, productive living in community (regardless of whether such qualities make some company or other more money).
-FOSS exists because it is useful.
-So use it!
-
-If you aren't forced to trust a company with your data, you probably won't.
-Once it is cheaper, easier and safer to have your own privacy-respecting home data appliance, you'll have one.
-FOSS naturally aligns with this future.
-
-That _truly_ privacy-respecting home data appliance should be FOSS, all the way down to the metal.
-
-Besides privacy, FOSS is better for attention and focus.
-FOSS doesn't require your data to exist, so it doesn't require your attention.
-This makes it easier to focus on the task at hand, for only as long as you need to.
-
-==== But Spotify has _every song ever_
-
-// FIXME - restructure as a con, add strong rebuttal
-
-You may have to listen to a few random songs or ads before you can get to the one you really want to listen to, but yes, Spotify does have many, many songs.
-More than you could listen to in your lifetime.
-Same with YouTube for video and Audible for audio books.
-
-You will not get unlimited content from a self-hosted media server.
-You'll only have the ((DRM))-free content you bought or created and saved.
-
-But do you _need_ unlimited content?
-The corporations would like you to believe so.
-And we all get bored, so they don't have to work hard to convince us of this.
-
-We live in Aldous Huxley's _Brave New World_... we can be amused to death.
-
-With self-hosting you can choose to be amused just as much as you need to be.
-Let's be amused to _live_: inspired, motivated, powerfully kind.
-
 :sectnums!:
 
 == Acknowledgments
@@ -3928,13 +3792,32 @@ endif::[]
 
 == Afterword
 
-Ursula K. Le Guin declared:
+In the words of Scott McNealy, former CEO of Sun Microsystems:
+
+____
+Open source is free like a puppy is free.
+____
+
+Everybody loves a puppy, right?
+_Right??_
+I sure hope so.
+Because--fair warning--if you spend too much time with your "`puppy`" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
+
+[#image-puppy]
+.Open Source is free like a puppy. Pictured: actual puppy.
+image::puppy.jpg[align="center",scaledwidth=80%]
+
+If your problem is _that_ cute, I suppose it's not too a bad problem to have.
+I hope you find what you need to keep _your_ puppies happy!
+
+Finally, I'd like to share an Ursula K. Le Guin quote.
+According to her:
 
 ____
 A book is just a box of words until a reader opens it.
 ____
 
-And it was so.
+And now I get what she means.
  +
  +
 Dear Reader,
