@@ -3554,6 +3554,45 @@ Please apply similar detailed steps elsewhere as desired.
 
 :sectnums!:
 
+== Afterword
+
+In the words of Scott McNealy, former CEO of Sun Microsystems:
+
+____
+Open source is free like a puppy is free.
+____
+
+Everybody loves a puppy, right?
+_Right??_
+I sure hope so.
+Because--fair warning--if you spend too much time with your "`puppy`" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
+
+[#image-puppy]
+.Open Source is free like a puppy. Pictured: actual puppy.
+image::puppy.jpg[align="center",scaledwidth=80%]
+
+If your problem is _that_ cute, I suppose it's not too a bad problem to have.
+I hope you find what you need to keep _your_ puppies happy!
+
+Finally, I'd like to share an Ursula K. Le Guin quote.
+According to her:
+
+____
+A book is just a box of words until a reader opens it.
+____
+
+And now I get what she means.
+ +
+ +
+Dear Reader,
+
+_This book exists because you exist._
+I am humbled and grateful for your support.
+Thank you, thank you, thank you.
+ +
+ +
+— Adam
+
 == Acknowledgments
 
 Sometimes I feel more like a birthday boy than an author, accepting gifts from so many generous people.
@@ -3825,47 +3864,6 @@ list-of::sidebar[]
 list-of::listing[]
 
 endif::[]
-
-// FIXME - move above Acknowledgments, then all the backmatter is grouped together
-
-== Afterword
-
-In the words of Scott McNealy, former CEO of Sun Microsystems:
-
-____
-Open source is free like a puppy is free.
-____
-
-Everybody loves a puppy, right?
-_Right??_
-I sure hope so.
-Because--fair warning--if you spend too much time with your "`puppy`" (self-hosting, FOSS, etc.), your partner will show up with an actual puppy.
-
-[#image-puppy]
-.Open Source is free like a puppy. Pictured: actual puppy.
-image::puppy.jpg[align="center",scaledwidth=80%]
-
-If your problem is _that_ cute, I suppose it's not too a bad problem to have.
-I hope you find what you need to keep _your_ puppies happy!
-
-Finally, I'd like to share an Ursula K. Le Guin quote.
-According to her:
-
-____
-A book is just a box of words until a reader opens it.
-____
-
-And now I get what she means.
- +
- +
-Dear Reader,
-
-_This book exists because you exist._
-I am humbled and grateful for your support.
-Thank you, thank you, thank you.
- +
- +
-— Adam
 
 ifdef::backend-pdf[]
 [index]
