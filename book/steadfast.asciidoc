@@ -2132,13 +2132,14 @@ Proceed directly to <<Start services>>.
 
 === Server domain name
 
-Your server needs a domain name.
-All your services will be subdomains of this domain name.
+Your server needs a name.
+It gets a __host__name during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
+I recommend getting a domain name and naming all your services using subdomains (e.g. `cloud.example.com`).
 You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
 
 You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a dynamic WAN IP address.
-This text does not include a complete primer on DNS, so you'll need to look elsewhere to learn concepts such as public and private IP address spaces, CIDR notation, and the various kinds of DNS records.
+Check with your DNS provider about adding the DNS or "`host`" records for this purpose (e.g. `A` and `CNAME` records).
 
 ==== Public DNS
 
@@ -3620,9 +3621,9 @@ DHCP::
 DIY::
   Do it yourself. Said of activities involving some amount of learning and tinkering you'd otherwise pay for. Cooking, for example. Also: self-hosting.
 DNS::
-  Domain Name System. Maps computer hostnames to IP addresses.
+  Domain Name System. Maps domain names to IP addresses.
 domain name::
-  Full name for a service as it is used in a URL, e.g. `www.example.com`. Synonymous with "`hostname`" as far as we're concerned.
+  How a server, service, or group of services are identified, e.g. `example.com`.
 DRM::
   Digital restrictions management. Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
 dVCS::
@@ -3659,6 +3660,8 @@ homelab::
   A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ server (or "`personal cloud`") should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
 host::
   The computer where Docker containers run. Also called a "`server`" in this text.
+hostname::
+  Name for a single server/computer/device.
 HVAC::
   Heating, ventilation, and air conditioning.
 idempotent::
