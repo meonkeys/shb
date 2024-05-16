@@ -1,8 +1,7 @@
 title: 📑 Content
 category: announcement
 date: 2024-01-12
-modified: 2024-04-18
-
+modified: 2024-05-16
 
 ### Table of contents
 
@@ -44,6 +43,3 @@ modified: 2024-04-18
 
 1. **Exercises**
 : Applied usage ideas for a group of readers.
-
-1. **More about FOSS**
-: Further reasoning, inspiration, motivation for the *Steadfast* method.
