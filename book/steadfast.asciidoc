@@ -2447,7 +2447,6 @@ Getting them running will provide some useful functionality for your users and a
 
 For each service you'll find my personal commentary and issues I encountered.
 If I mention a feature I'd like to see added, I've also thought of adding it myself (or trying to convince someone else to add it, or raising money to pay someone to add it).
-This phenomenon is explained in <<The SMOP trap>>.
 If I link to a bug that is closed in an issue tracker, it's because I have tested and, at the time of writing, I'm still experiencing the bug in an official/supported release that is supposed to have the fix.
 
 Mobile usage is high for the users I support, so that was also a factor when I chose these services.
