@@ -1,4 +1,5 @@
 = 📖 Steadfast Self-Hosting
+:hide-uri-scheme:
 
 This is the home for a most excellent soon-to-be-published book about self-hosting.
 
@@ -20,7 +21,7 @@ Please do share https://selfhostbook.com.
 
 |`book/` |sources for the book
 |`mario/` |sources for mario provisioning tool
-|`pelican/` |sources for https://selfhostbook.com/
+|`pelican/` |sources for https://selfhostbook.com
 |===
 
 [#book_formats]
