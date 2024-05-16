@@ -1703,7 +1703,7 @@ See <<ZFS setup>>.
 
 (((ZFS, setup)))
 The ((OS)) takes care of itself pretty well.
-For more robust data storage, we can add a couple of ((HDD))s and manage them with ((ZFS)).
+For more robust data storage, you can add a couple of ((HDD))s and manage them with ((ZFS)).
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
