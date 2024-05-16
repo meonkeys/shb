@@ -3175,7 +3175,7 @@ It provides some clever and useful workflow ideas.
 
 Given that wide a scope, ((groupware)) should be part of "`office`" too, so instead let's for now focus specifically on collaborative editing of office documents.
 Doing this within Nextcloud requires an https://apps.nextcloud.com/apps/richdocuments[app called Nextcloud Office] as well as a separate backend service, either ((Collabora)) or ((ONLYOFFICE)).
-My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it appears Collabora development is flourishing while ONLYOFFICE is stagnant.
+My strong preference is for Collabora, in line with <<Good for self-hosting>>; despite fewer stars on GitHub, it appears Collabora development is flourishing while ONLYOFFICE is stagnant (although it's hard to tell which of the many ONLYOFFICE repositories on GitHub are relevant here).
 
 ==== Various issues
 
