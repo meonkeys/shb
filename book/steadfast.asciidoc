@@ -2967,10 +2967,24 @@ These initial logged errors appear to be harmless, possibly a result of some ins
 It is still a good idea to review all logged errors.
 
 Review "`Security & setup warnings`" at `/settings/admin/overview`.
-You can ignore the warning ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.” if `curl -I \https://cloud.example.com/apps/settings/js/esm-test.mjs` succeeds on your admin computer and shows `content-type: text/javascript`.
-This warning is because the Nextcloud `app` container https://github.com/nextcloud/server/issues/42989[fails at a test] to request `/apps/settings/js/esm-test.mjs`, likely because of a DNS issue.
+You can ignore the warning ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.” if this succeeds on your admin computer:
+
+.JavaScript fetch test (🏠 admin computer)
+[source%unbreakable,bash]
+----
+curl -I https://cloud.example.com/apps/settings/js/esm-test.mjs
+----
+
+The warning is because the Nextcloud `app` container https://github.com/nextcloud/server/issues/42989[fails at a test] to request a JavaScript test file, likely because of a DNS issue.
 To fix it, the request must be able to work from within the Nextcloud `app` container.
-In other words, this must work: `dc nextcloud exec -u www-data app curl -I \https://cloud.ob4cuashcib3.site/apps/settings/js/esm-test.mjs`.
+In other words, this must succeed (return a successful HTTP response code and include the header `content-type: text/javascript`):
+
+.JavaScript fetch test (🚀 server)
+[source%unbreakable,bash]
+----
+dc nextcloud exec app \
+  curl -I https://cloud.example.com/apps/settings/js/esm-test.mjs
+----
 
 Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
 Run it with `dc nextcloud exec --user www-data app php occ`.
