@@ -3865,6 +3865,8 @@ list-of::listing[]
 
 endif::[]
 
+// only matters for PDF output
+// see https://docs.asciidoctor.org/asciidoc/latest/sections/user-index/
 ifdef::backend-pdf[]
 [index]
 == Index
