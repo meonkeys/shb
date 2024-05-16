@@ -107,6 +107,7 @@ We'd all meet for lunch in Seattle and then do the two hour car ride up to Belli
 Those car rides are when we all really started talking about the lack of a free software event in Seattle.
 We realized we needed some folks in Seattle who could get their companies to sponsor (like Adam and Rob Smith) and someone who could help get some speakers and promote the event to the free software community, which is how I (as a Massachusetts resident) ended up co-founding an annual Seattle event.
 
+(((Figure, SeaGL crew photo)))
 [#image-seagl-crew]
 .Early SeaGL crew. From left to right: Salt, Deb, Patch (with french fry), Adam, Rob. Not pictured: Chris, Jesse, Bri, Lisa, and many more.
 image::seagl-crew.jpg[align="center",scaledwidth=80%]
@@ -1415,8 +1416,9 @@ You may also skip ahead to <<Prepare hardware>> to continue on the path of using
 You'll find some services are better choices to self-host than others.
 The good ones will likely share at least some of these traits.
 
-.Traits of Good Self-Hosted Services
+(((List, Traits of Good Self-Hosted Services)))
 [#traits-of-good-services]
+.Traits of Good Self-Hosted Services
 ****
 * Easy to install and self-hosting instructions exist.
 * Works with your preferred deployment method, e.g. has a popular and well-maintained Docker image, has instructions for integrating with ((Docker Compose)) and ((Traefik)).
@@ -3044,6 +3046,7 @@ Read "`Worth your time?`" as "`Adam maybe tried this app and has shared his opin
 Grain of salt, in other words.
 When in doubt, start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
 
+(((Table, Nextcloud apps commentary)))
 [cols="1,1,2"]
 |===
 |Nextcloud App |Purpose |Worth your time?
