@@ -2133,7 +2133,7 @@ Proceed directly to <<Start services>>.
 === Server domain name
 
 Your server needs a name.
-It gets a __host__name during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
+It gets a hostname during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
 I recommend getting a domain name and naming all your services using subdomains (e.g. `cloud.example.com`).
 You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
