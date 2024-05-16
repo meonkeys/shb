@@ -2139,7 +2139,7 @@ You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
 
 You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a dynamic WAN IP address.
-Check with your DNS provider about adding the DNS or "`host`" records for this purpose (e.g. `A` and `CNAME` records).
+Check with your DNS provider about adding appropriate records for this purpose (e.g. `A` and `CNAME` records).
 
 ==== Public DNS
 
