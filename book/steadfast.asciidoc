@@ -312,7 +312,8 @@ See <<More resources>> for contact information and how to share improvements.
 (((typography)))
 Text formatting:
 
-[cols="2,3"]
+[cols="2,3",id=style]
+.Typographical conventions
 |===
 |Styled example |Used for
 
@@ -349,10 +350,10 @@ Sidebars may or may not have titles.
 
 Code snippets:
 
-.check PSI (🚀 server)
-[source,bash]
+.Example code snippet
+[source#example-code-snippet,bash]
 ----
-tail /proc/pressure/*
+echo foo | sed s/foo/bar/
 ----
 
 Snippets will indicate whether they occur on the server or elsewhere.
@@ -1160,6 +1161,7 @@ Review the material earlier in this chapter if you want help with your decision.
 
 ==== More tips
 
+[#self-hoster-security-tips]
 .Self-hoster security tips
 ****
 * Maintain useful encrypted ((backups)).
@@ -1365,7 +1367,7 @@ That is: `websecure` to `nc-https` to `app`.
 These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
 
 .Traefik and Nextcloud configuration snippets (🏠 admin computer)
-[source,yaml]
+[source#traefik-and-nextcloud-config,yaml]
 ----
 # snippet from traefik/compose.yml
 services:
@@ -1482,7 +1484,8 @@ Here's an early, rough resource planning table I used.
 You can use this pattern to estimate your own resource needs.
 I go into detail about a few of these services later in the book.
 
-[%unbreakable,cols="4,4,3,2,2"]
+[%unbreakable,cols="4,4,3,2,2",id=example-tally]
+.Example tally of services to hardware resources
 |===
 |Service |Purpose |Isolation |Cores |RAM
 
@@ -1717,7 +1720,7 @@ Use `lsblk` to figure out your device names.
 // This code snippet is wrapped by Vim with textwidth=75 since this just happens to be what fits in the current print book margins. 😬
 
 .ZFS setup (🚀 server)
-[source,bash]
+[source#zfs-setup,bash]
 ----
 # Create partition tables.
 parted /dev/sdb mklabel gpt
@@ -1755,7 +1758,7 @@ Here are a few commands to see details about what you just created.
 These do not require root access.
 
 .show ZFS details (🚀 server)
-[source,bash]
+[source#zfs-details,bash]
 ----
 # Examine pools.
 zpool status
@@ -1770,7 +1773,7 @@ What follows is from the `zfs-mount-generator(8)` manual page, with a few correc
 These must be run as `root`.
 
 .ZFS mount on boot setup (🚀 server)
-[source,bash]
+[source#zfs-mount-on-boot,bash]
 ----
 # enable tracking for the pool
 mkdir /etc/zfs/zfs-list.cache
@@ -1797,7 +1800,7 @@ I update my checklists about as often as I use them.
 Here are examples you might use as starting points.
 
 .Checklist: Monthly Maintenance
-[%unbreakable]
+[%unbreakable#monthly-maintenance]
 ****
 * [ ] Upgrade ((OS)) packages.
 * [ ] Check storage space remaining.
@@ -1805,7 +1808,7 @@ Here are examples you might use as starting points.
 ****
 
 .Checklist: Yearly Maintenance
-[%unbreakable]
+[%unbreakable#yearly-maintenance]
 ****
 * [ ] Test restore from backup.
 * [ ] Review and improve ((threat model)).
@@ -1826,7 +1829,7 @@ Keep your server up to date.
 For the OS:
 
 .upgrade packages (🚀 server)
-[source,bash]
+[source#upgrade-packages,bash]
 ----
 sudo apt update && sudo apt full-upgrade
 ----
@@ -1848,7 +1851,7 @@ Check free disk space with `df -h`.
 If things feel slow, check PSI (pressure stall information) with
 
 .check PSI (🚀 server)
-[source,bash]
+[source#check-psi,bash]
 ----
 tail /proc/pressure/*
 ----
@@ -1893,7 +1896,7 @@ Here are some example commands demonstrating how to back up a ((ZFS)) filesystem
 You can use these to get started writing your own backup script.
 
 .example backup script (🚀 server)
-[source%unbreakable,bash]
+[source%unbreakable#example-backup-script,bash]
 ----
 snapName=$(date -I)-backup
 
@@ -1964,7 +1967,7 @@ First, map your server IP address to a convenient name.
 Using the IP address from <<OS install>>, add a line like this to your hosts file (e.g. `/etc/hosts`):
 
 .line to add to hosts file (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#line-for-hosts,text]
 ----
 192.168.1.100	mario_server
 ----
@@ -1973,7 +1976,7 @@ Confirm you're able to ping the server using the name `mario_server`.
 Here's what it looks like when it works:
 
 .test ping server (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#test-ping-server,text]
 ----
 $ ping mario_server
 PING mario_server (192.168.1.100) 56(84) bytes of data.
@@ -1991,7 +1994,7 @@ Here's an example client configuration template for ((OpenSSH)).
 Replace `your-username` with the account username on your server.
 
 .customize OpenSSH client configuration (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#customize-openssh-client,text]
 ----
 Host mario_server
   User your-username
@@ -2003,7 +2006,7 @@ Test it by running `ssh mario_server`.
 You may see something like this:
 
 .SSH host fingerprint prompt (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#ssh-host-fing,text]
 ----
 The authenticity of host 'mario_server (192.168.1.100)' can't be established.
 ECDSA key fingerprint is SHA256:o2kUkvSP3JG9PTt/Ju11FWKkCpTJCB4rY3jQvImtRNw.
@@ -2015,7 +2018,7 @@ Go ahead and continue with kbd:[yes+Enter].
 If you want to be super careful, run one of these commands on the server and confirm the fingerprints match:
 
 .show SSH host public key (🚀 server)
-[source,bash]
+[source#show-ssh-host-pubkey,bash]
 ----
 # use this if you saw "ECDSA key fingerprint..." earlier
 ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
@@ -2034,7 +2037,7 @@ Copy the public key to the server with `ssh-copy-id` or similar.
 For example:
 
 .install SSH key on server (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#install-ssh-pubkey,text]
 ----
 $ ssh-copy-id mario_server
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
@@ -2050,8 +2053,8 @@ and check to make sure that only the key(s) you wanted were added.
 Test that everything so far is working by running `ssh mario_server`.
 You should see something like this:
 
-.mario second run output (🏠 admin computer)
-[source,text]
+.successful SSH to server (🏠 admin computer)
+[source#successful-ssh-to-server,text]
 ----
 $ ssh mario_server
 Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-31-generic x86_64)
@@ -2067,7 +2070,7 @@ user@server:~$
 Run `provision.sh` on your ((admin computer)) (_not_ on your server):
 
 .mario first run (🏠 admin computer)
-[source%unbreakable,bash]
+[source%unbreakable#mario-first-run,bash]
 ----
 cd mario/ansible
 ./provision.sh
@@ -2076,7 +2079,7 @@ cd mario/ansible
 On this first invocation, mario will check for prerequisites and prompt you to enter values specific to your server into a configuration file.
 
 .mario first run output (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#mario-first-output,text]
 ----
 You don't have a config file. I'll create one for you now.
 
@@ -2105,7 +2108,7 @@ This run will ask you for the password you set during <<OS install>> and subsequ
 You should see output similar to this:
 
 .mario second run output (🏠 admin computer)
-[source,text]
+[source#mario-second-run,text]
 ----
 BECOME password:
 
@@ -2171,7 +2174,7 @@ On Amazon IAM, create a user with permission to update this hosted zone.
 Here's a policy with way too much access that nevertheless works:
 
 .naive Route 53 policy
-[source%unbreakable,json]
+[source%unbreakable#naive-r53-policy,json]
 ----
 {
   "Version": "2012-10-17",
@@ -2208,7 +2211,7 @@ Here's that hosts file again:
 // this could also be one line with one IP and many hostnames
 
 .hosts file with service names (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#hosts-file-with-service-names,text]
 ----
 # for provisioning from admin computer
 192.168.1.100	mario_server
@@ -2247,7 +2250,7 @@ By convention, the name of that folder is the name of the service.
 A typical usage pattern is:
 
 .start a service in its folder (🚀 server)
-[source%unbreakable,bash]
+[source%unbreakable#start-service-in-folder,bash]
 ----
 sudo su -
 cd /root/ops/traefik
@@ -2259,7 +2262,7 @@ The fewer commands you run directly as `root`, the better.
 I recommend this instead:
 
 .start a service, explicit configuration file (🚀 server)
-[source,bash]
+[source#start-service-explicit-config,bash]
 ----
 sudo docker compose --file /root/ops/traefik/compose.yml up -d
 ----
@@ -2267,7 +2270,7 @@ sudo docker compose --file /root/ops/traefik/compose.yml up -d
 mario installs a program called `dc` on the server to save you some typing:
 
 .start a service with dc (🚀 server)
-[source%unbreakable,bash]
+[source%unbreakable#start-service-with-dc,bash]
 ----
 # equivalent to
 # sudo docker compose --file /root/ops/traefik/compose.yml up -d
@@ -2298,7 +2301,7 @@ You should see something like this for a working ((Traefik)) service:
 // reverse-proxy-1  |
 
 .typical Traefik logs, edited for brevity (🚀 server)
-[source,text]
+[source#typical-traefik-logs,text]
 ----
 + sudo docker compose --file /root/ops/traefik/compose.yml logs -f
 rp-1 | Traefik version 3.0.0 built on 2024-04-29T14:25:59Z version=3.0.0
@@ -2320,7 +2323,7 @@ Starting a mario service is always done with `dc SERVICE up -d`, just like we di
 To stand up everything at once, you could use this shell script:
 
 .start all services ad-hoc Bash script (🚀 server)
-[source%unbreakable,bash]
+[source%unbreakable#start-other-services,bash]
 ----
 for service in $(sudo ls /root/ops); do
     dc $service up -d
@@ -2350,7 +2353,7 @@ To increase the Traefik log verbosity, change `--log.level=INFO` to `--log.level
 To troubleshoot further, confirm DNS queries are succeeding since this affects the DNS challenge.
 
 .example DNS tests
-[source,bash]
+[source#example-dns-tests,bash]
 ----
 ####
 # Try these commands on both the admin computer and server.
@@ -2385,7 +2388,7 @@ On _your_ server, create the folder `~/ping/`.
 Create a file `compose.yml` in that folder, containing:
 
 .tiny test service config (🚀 server)
-[source%unbreakable,yaml]
+[source%unbreakable#tiny-test-service-config,yaml]
 ----
 version: '3'
 
@@ -2400,7 +2403,7 @@ Hit kbd:[Ctrl+c] after a few seconds.
 You should see something like this:
 
 .start tiny test service (🚀 server)
-[source%unbreakable,text]
+[source%unbreakable#start-tiny-test-service,text]
 -----
 $ cd ~/ping/
 $ sudo docker compose up
@@ -2431,6 +2434,8 @@ It's only a few more lines of code and configuration to create a small ((API)) o
 Now you can try out the services provisioned by mario.
 This chapter covers what they provide and how to manage them.
 
+[#purposes-of-default-mario-services]
+.Purposes of default mario services
 |===
 |Purpose |See
 
@@ -2599,7 +2604,7 @@ Luckily, there's an https://github.com/wallabag/docker#upgrading[easy workaround
 Apply the workaround to a mario system with:
 
 .force Wallabag database migration (🚀 server)
-[source%unbreakable,bash]
+[source%unbreakable#force-wallabage-db-migration,bash]
 ----
 dc wallabag exec app /var/www/wallabag/bin/console \
   doctrine:migrations:migrate --env=prod --no-interaction
@@ -2758,7 +2763,7 @@ No GPU is required.
 Here's a `compose.yml` that'll work with mario to stand up https://localai.io[LocalAI].
 
 .example LocalAI service config
-[source,yaml]
+[source#example-localai-svc,yaml]
 ----
 version: '3.6'
 
@@ -2788,7 +2793,7 @@ Note the middleware to only allow traffic from your ((LAN)).
 This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
 .label from Traefik configuration allowing only LAN access
-[source,yaml]
+[source#lan-only-traefik-conf-line,yaml]
 ----
 "traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
 ----
@@ -2849,7 +2854,7 @@ I'm using this as an opportunity to demonstrate how to extend mario.
 Add this Ansible task to `roles/base/tasks/main.yml`:
 
 .enforce SSH public key auth (🏠 admin computer)
-[source,yaml]
+[source#enforce-ssh-pubkey-auth,yaml]
 ----
 # This does not affect logging in from a console (e.g. directly connected
 # keyboard and monitor, or a virtual console).
@@ -2867,7 +2872,7 @@ Add this Ansible task to `roles/base/tasks/main.yml`:
 Add this to `roles/base/handlers/main.yml`:
 
 .Ansible handler to restart SSH (🏠 admin computer)
-[source%unbreakable,yaml]
+[source%unbreakable#ansible-ssh-restarter,yaml]
 ----
 - name: restart sshd
   service:
@@ -2878,7 +2883,7 @@ Add this to `roles/base/handlers/main.yml`:
 Create `roles/base/files/pka-only.conf` with:
 
 .SSH server config lines (🏠 admin computer)
-[source%unbreakable,text]
+[source%unbreakable#ssh-server-config,text]
 ----
 PasswordAuthentication no
 AuthenticationMethods publickey
@@ -2896,7 +2901,7 @@ You may remove this protection by removing the `lan-only` ((middleware)) from th
 For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
 
 .patch for WAN access to Nextcloud (🏠 admin computer)
-[source%unbreakable,diff]
+[source%unbreakable#open-wan-access,diff]
 ----
 - traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only
 + traefik.http.routers.nc-https.middlewares=nc-head,nc-redir
@@ -2969,7 +2974,7 @@ Review "`Security & setup warnings`" at `/settings/admin/overview`.
 You can ignore the warning ‟Could not check for JavaScript support. Please check manually if your webserver serves `.mjs` files using the JavaScript MIME type.” if this succeeds on your admin computer:
 
 .JavaScript fetch test (🏠 admin computer)
-[source%unbreakable,bash]
+[source%unbreakable#js-fetch-admin,bash]
 ----
 curl -I https://cloud.example.com/apps/settings/js/esm-test.mjs
 ----
@@ -2979,7 +2984,7 @@ To fix it, the request must be able to work from within the Nextcloud `app` cont
 In other words, this must succeed (return a successful HTTP response code and include the header `content-type: text/javascript`):
 
 .JavaScript fetch test (🚀 server)
-[source%unbreakable,bash]
+[source%unbreakable#js-fetch-server,bash]
 ----
 dc nextcloud exec app \
   curl -I https://cloud.example.com/apps/settings/js/esm-test.mjs
@@ -3057,7 +3062,8 @@ Read "`Worth your time?`" as "`Adam maybe tried this app and has shared his opin
 Grain of salt, in other words.
 When in doubt, start small (default Nextcloud install), and roll these out thoughtfully if you do at all.
 
-[cols="1,1,2"]
+[cols="1,1,2",id=nextcloud-apps-commentary]
+.Nextcloud apps commentary
 |===
 |Nextcloud App |Purpose |Worth your time?
 
@@ -3125,7 +3131,8 @@ Besides the primary mobile app (called simply "`Nextcloud`"), there are other mo
 Here are the ones I recommend.
 I don't have an iPhone so these are only Android apps.
 
-[cols="1,1,2"]
+[cols="1,1,2",id=recommended-nextcloud-mobile-apps]
+.Recommended Nextcloud mobile apps
 |===
 |Mobile app |Works with Nextcloud apps |More info
 
@@ -3786,27 +3793,40 @@ WAN::
 ZFS::
   A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
-ifndef::shb-printPdf[]
-== List of figures
+// Ideally I'd like a full set of these lists for every output.
+// See am64 in ../Readme.adoc
+//
+// The ifndef block disables all cross references for print PDF output. See:
+// * https://github.com/Alwinator/asciidoctor-lists/issues/14
+// * https://discuss.asciidoctor.org/asciidoctor-pdf-cross-ref-to-a-page-number-td8418.html
+//
+// An EPUB backend quirk necessitates explicit IDs for everything. See:
+// * https://github.com/Alwinator/asciidoctor-lists/issues/25
 
-* <<image-seagl-crew>>
-* <<image-bread-server>>
-* <<image-YT-censor>>
-* <<image-squeaky-clean-chicken>>
-* <<image-YT-audit>>
-* <<image-inside-chassis>>
-* <<image-service-stack>>
-* <<image-traefik-architecture>>
-* <<image-racked-server>>
-* <<image-bird-on-server>>
-* <<image-WAN-to-LAN-traffic>>
-* <<image-screenshot-nextcloud>>
-* <<image-screenshot-jellyfin>>
-* <<image-screenshot-wallabag>>
-* <<image-screenshot-scratch>>
-* <<image-DNS-traffic-diagram>>
-* <<image-puppy>>
+ifndef::shb-printPdf[]
+== Cross references
+
+Here are lists of links to significant blocks of titled content.
+
+=== Figures
+
+list-of::image[]
+
+=== Tables
+
+list-of::table[]
+
+=== Sidebars
+
+list-of::sidebar[]
+
+=== Code snippets
+
+list-of::listing[]
+
 endif::[]
+
+// FIXME - move above Acknowledgments, then all the backmatter is grouped together
 
 == Afterword
 
