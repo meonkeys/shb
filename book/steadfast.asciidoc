@@ -3615,7 +3615,7 @@ Thanks to Rob Smith and all #underlug for help with hardware, networking, ((Ansi
 
 Thanks to the "`Deadbeat Dads`" Bryan Daisley and Rob Floberg for your invaluable feedback.
 
-Thanks to all my beloved beta testers, including Brendan Kidwell and Don O'Neill.
+Thanks to all my beloved beta testers, including Eva Monsen, Lenny Wondra, Brendan Kidwell and Don O'Neill.
 
 Thanks to Bob Nystrom for your mind-expanding design review.
 
