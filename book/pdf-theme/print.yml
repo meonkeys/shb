@@ -6,13 +6,16 @@ page:
   size: [6in, 9in]
   numbering:
     start-at: after-toc
-  margin-outer: 11mm
+  margin-inner: 13mm
+  margin-outer: 13mm
 
 # when to start rendering header and footer
 running-content:
   start-at: 2
 
 footer:
+  height: 13mm
+  padding: [2mm, 0, 3mm, 0]
   verso:
     center:
       content: '{document-title}'
