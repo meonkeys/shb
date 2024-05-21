@@ -1,5 +1,5 @@
 title: 📫 Contact
-modified: 2024-02-28
+modified: 2024-05-21
 menu_order_key: 1
 
 ### Email
@@ -8,14 +8,13 @@ menu_order_key: 1
 
 ### Chat
 
-There's a group chat room for readers and fans of the book.
+There's an invite-only group chat room for readers and fans of the book.
 
-It is invite-only, encrypted, and currently only available to members of the [beta]({filename}/news/beta.md).
+First, please read [our rules](https://selfhostbook.com/rules/).
+If you agree to those, email me and I'll send you an invite.
 
-#### How to join the chat
+### Forum
 
-[Join the beta]({filename}/news/beta.md) and I'll invite you.
+There's a [discussion forum](https://help.selfhostbook.com) for readers and fans of the book.
 
-#### Chat rules
-
-See [rules]({filename}/pages/rules.md).
+See [the welcome post](https://help.selfhostbook.com/d/1-welcome) for more information.
