@@ -3495,9 +3495,8 @@ Use it to test out the latest release or a custom app.
 . Enable ((GPU)) transcoding in ((Jellyfin)).
 . Sign the open letter at https://publiccode.eu[Public Money, Public Code] because software paid for with taxes should be FOSS.
 . Aggregate logs.
-. Monitor and/or block outbound network activity from containers.
-. Pick a ((Docker)) container that doesn't require outbound network access.
-Prevent it from making outbound connections and prove to yourself it works.
+. Pick a ((Docker)) container that doesn't need to be able to initiate outbound network connections.
+Prevent it from doing so and prove to yourself it works.
 . What if the server won't boot?
 .. Describe troubleshooting steps, in detail.
 .. Make a plan for system recovery when it fails to boot.
@@ -3508,7 +3507,7 @@ Feed it logs from various services.
 . Try running containers with https://podman.io[podman].
 . Read up on other ways to isolate processes, e.g. FreeBSD jails and chroot.
 . Contribute to ((mario)).
-. Move secrets used by mario into an Ansible vault.
+. Move secrets used by mario into an Ansible vault or a self-hosted service intended for managing secrets.
 . Adapt mario to use ((podman)).
 . Adapt mario to use https://kubernetes.io[Kubernetes].
 . If you have a dynamic WAN IP address, create or use an existing dynamic ((DNS)) update client container.
