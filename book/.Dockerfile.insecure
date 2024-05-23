@@ -1,3 +1,6 @@
+# macOS Dockerfile for making an image to build the book.
+# "insecure" because it uses root, but this security concern might be a bit overblown.
+
 FROM ruby:3.3
 
 RUN apt-get update \

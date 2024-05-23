@@ -1,3 +1,5 @@
+# Linux, maybe Windows Dockerfile for making an image to build the book.
+
 FROM ruby:3.3
 
 RUN apt-get update \
