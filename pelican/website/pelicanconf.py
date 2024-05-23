@@ -36,6 +36,12 @@ AUTHOR_SAVE_AS = "author/{slug}/index.html"
 INDEX_URL = "news/"
 INDEX_SAVE_AS = "news/index.html"
 
+YEAR_ARCHIVE_SAVE_AS = 'news/{date:%Y}/index.html'
+YEAR_ARCHIVE_URL = 'news/{date:%Y}/'
+
+MONTH_ARCHIVE_SAVE_AS = 'news/{date:%Y}/{date:%m}/index.html'
+MONTH_ARCHIVE_URL = 'news/{date:%Y}/{date:%m}/'
+
 DISPLAY_PAGES_ON_MENU = True
 PAGE_ORDER_BY = 'menu_order_key'
 
