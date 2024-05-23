@@ -478,7 +478,7 @@ image::bread-server.png[align="center",scaledwidth=80%]
 
 _Cloud_ implies scalable and automatable.
 _Personal_ scopes that scalability to what's reasonable for a small group.
-Modern ((bare metal)) hardware can scale (to a degree) within its box.
+A ((bare metal)) server can scale (to a degree) within its box.
 It can scale automatically by using more or less power according to compute demand, and manually when you upgrade hardware components (say, adding another hard drive).
 
 I'll also admit my inner child enjoys multiple meanings of the phrase _Personal Cloud_.
@@ -1153,7 +1153,7 @@ From a user perspective there's no heavyweight login process, as with older VPNs
 Encrypting prevents data recovery by an attacker.
 You'll have to enter a password on boot, though.
 This is inconvenient if you have intermittent power and/or no remote management capability.
-There's also the reasonable argument that full-disk or "`at-rest`" encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
+There's also the reasonable argument that full-disk encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
 
 (((OS)))
 If you decide you want full-disk encryption, choose it during <<OS install>>.
@@ -3636,6 +3636,8 @@ Here's a list of definitions for some of the more non-obvious terms I use in thi
 These stick to common use as much as possible.
 Specialists in computer science, security, administration, networking and so on will have more nuanced definitions.
 
+// source for "These days that pretty much means git" statement: https://en.wikipedia.org/wiki/Git#Adoption
+
 AI::
   Artificial intelligence.
 API::
@@ -3643,15 +3645,15 @@ API::
 attack surface::
   Total of possible attack vectors. Fewer is more secure. Example: closing all but the ports you need open reduces yours.
 backend::
-  I use this term to refer to either a service or server. It's something you more frequently interact with indirectly, say, via a frontend like a web or mobile UI.
+  I use this term to refer to either a service (e.g. a database) or server. It's something you more frequently interact with indirectly, say, via a frontend like a web app or mobile UI.
 bare metal::
-  Physical nearby computing resources, as opposed to rented compute time on someone else's hardware.
+  Physical nearby computing resources, as opposed to rented compute time on someone else's hardware. Used in this book primarily to indicate hardware autonomy.
 block storage::
   Cloud storage option with direct filesystem access including files and folders. Used directly/natively/locally from an OS. Size is relatively fixed and determined at creation time.
 bot::
   Short for robot. Software performing autonomous tasks such as responding to chat requests or attacking vulnerable servers.
 cattle vs. pets::
-  Highlights two distinctly different sysadmin approaches to systems/services. Cattle are automated, ephemeral, and hopefully immutable. Pets are managed manually, stateful, and long-lived.
+  Highlights two distinct sysadmin approaches to systems/services. Cattle are automated, ephemeral, and hopefully immutable. Pets are managed manually, stateful, and long-lived.
 cert::
   Shorthand for HTTPS encryption certificate.
 change management::
@@ -3690,8 +3692,6 @@ domain name::
   How a server, service, or group of services are identified, e.g. `example.com`.
 DRM::
   Digital restrictions management. Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
-dVCS::
-  Distributed version control system. These days that pretty much means https://git-scm.com[git].
 egress::
   Any outbound data transfer or download, in public cloud terms.
 entrypoint::
@@ -3707,9 +3707,9 @@ FSF::
 frontend::
   The UI for a system or service.
 full-disk encryption::
-  When an entire storage area is cryptographically secure. Also called at-rest encryption.
+  When an entire storage area is cryptographically protected.
 GB::
-  Gigabyte. 10^9^ (1,000,000,000) bytes for HDDs, or 2^30^ (1,073,741,824) bytes for RAM.
+  Gigabyte. 1,000^3^ (1,000,000,000) bytes for HDDs, or 1,024^3^ (1,073,741,824) bytes for RAM.
 good, fast, and cheap::
   Used with a wink in this text because https://en.wikipedia.org/wiki/Project_management_triangle[typically we must pick two].
 Good Thing::
@@ -3747,19 +3747,19 @@ LAN::
 LFNW::
   LinuxFest Northwest. Annual conference in Bellingham, Washington dedicated to serving and connecting open source communities. Established in 2000.
 Linux::
-  The most popular server OS. Also works fine on a desktop or laptop. The old me would have insisted on calling it "`GNU/Linux`" or "`a Linux distribution`". A lot has happened since then, and I've come to believe the term "`Linux`" is good enough to describe the OS used for self-hosting in the context of this book.
+  The most popular server OS. Also works fine on a desktop or laptop. The old me would have insisted on calling it "`GNU/Linux`" or "`a Linux distribution`". A lot has happened since then, and I've come to believe "`Linux`" is enough to describe the OS used for self-hosting in the context of this book.
 low-code::
   High-level application development platform with reduced focus on traditional programming. Typically provides a GUI and requires less files with configuration and code. Useful for prototyping or replacing some simpler data entry and analysis applications.
 LTS::
   Long-term support. A stable software release, supported for many years.
 mario::
-  Provisioning system included with this book to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
+  Provisioning system included with this book to assist with learning how to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
 NAS::
   Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<Server>>.
 NIC::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
 object storage::
-  Relatively unlimited, typically remote cloud storage option. Actual data are abstracted: backups and structured access require special services, indexes, and software.
+  Relatively unlimited and typically remote cloud storage option. Actual data are abstracted: backups and structured access require special services, indexes, and software.
 OCR::
   Optical character recognition. The process of converting images of text to actual text.
 OOB::
@@ -3785,11 +3785,11 @@ provision::
 RAID::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
 reproducible::
-  Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from a `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
+  Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from the same `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
 reverse proxy::
   Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL termination and for running several self-hosted web services with different domain names with a single IP address.
 router::
-  Network device used to handle traffic at the boundary between networks such as a WAN and LAN. This is more formally a border router, so forgive my using the term loosely. A SOHO router typically also provides various other functions including DNS, DHCP, switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
+  Network device used to handle traffic at the boundary between networks such as a WAN and LAN. A SOHO router typically also provides various other functions including DNS, DHCP, switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
 runtime::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
 SeaGL::
@@ -3817,7 +3817,7 @@ sysadmin::
 threat model::
   Analysis of risks and defenses of digital assets.
 TB::
-  Terabyte. Like GB, can either be base-10 or base-2, so: 10^12^ (1,000,000,000,000) bytes (for HDDs).
+  Terabyte. Like GB, can be either base-10 or base-2, so: 1,000^4^ (1,000,000,000,000) bytes for HDDs and 1,024^4^ (1,099,511,627,776) bytes for RAM.
 TLD::
   Top-level domain. For "`example.com`", "`.com`" is the TLD.
 UI::
@@ -3825,7 +3825,7 @@ UI::
 UPS::
   Uninterruptible power supply. A battery that sits between your server and an outlet, often with extra features such as a power outage alarm or surge suppressor.
 UX::
-  User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and notated "`UI/UX`".
+  User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and written as "`UI/UX`".
 volume::
   Docker facility to mount a folder on the server to a folder inside a container. This is a common means of persisting container data that would otherwise be ephemeral.
 VM::
