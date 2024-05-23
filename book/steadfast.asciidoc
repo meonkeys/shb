@@ -3529,18 +3529,21 @@ Work around this and share your solution with others.
 . Roll your own ((Linux)) distro.
 . Build, configure and deploy an https://opnsense.org[OPNsense firewall].
 . Set up your own https://headscale.net[headscale] VPN/tailnet for remote ((LAN)) access.
-. Enable preview generation for ((Nextcloud)).
-.. Research first: how does default preview generation work?
-What file types are supported?
+. Improve preview/thumbnail generation in ((Nextcloud)).
+.. Research first: Will you and your users benefit from the change?
+Are there security implications?
+How does default preview generation work?
+What file types are supported by the default previewer and other previewers?
 How much disk space is used?
 How fast is it, subjectively and objectively?
 What ((maintenance)) will it require once enabled?
 .. Create a test bed with a clean install and many preview-able files of various file formats.
-Write timing scripts for objective performance measurements.
-Consider both client- and server-side.
+Find or write code for recording objective performance metrics (e.g. time it takes to generate previews for a folder containing many files of various types).
+Consider both client- and server-side performance.
 Keep manual testing notes (subjective measurements).
-.. Compare https://apps.nextcloud.com/apps/previewgenerator[Preview Generator], https://github.com/h2non/imaginary[Imaginary], and any other extant solutions.
-.. Turn it on.
+.. Compare https://apps.nextcloud.com/apps/previewgenerator[Preview Generator], https://github.com/h2non/imaginary[Imaginary], and any other extant previewers.
+.. Establish baseline performance metrics before making any changes.
+.. Enable one or the other, get timings, repeat for each previewer.
 .. Evaluate the change.
 Is it noticeable?
 Does your timing script show any difference?
