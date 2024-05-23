@@ -3639,7 +3639,7 @@ Specialists in computer science, security, administration, networking and so on 
 AI::
   Artificial intelligence.
 API::
-  Application programming interface. This is for software engineers writing apps/integrations. They need consistent, documented interfaces to write code against.
+  Application programming interface. Provides a way to interact with a service from software. Useful for writing apps and integrations.
 attack surface::
   Total of possible attack vectors. Fewer is more secure. Example: closing all but the ports you need open reduces yours.
 backend::
