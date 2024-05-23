@@ -37,8 +37,8 @@ Please do share https://selfhostbook.com.
 |HTML |Firefox web browser |good 🙂 |No |Yes
 |screen PDF |Firefox web browser |good 🙂 |Yes |Yes
 |screen PDF |evince PDF viewer |good 🙂 |Yes |Yes
-|print PDF |evince PDF viewer |good 🙂 |Yes |Yes
-|print PDF |Firefox web browser |good 🙂 |Yes |Yes
+|print PDF |evince PDF viewer |good 🙂 |Yes |No
+|print PDF |Firefox web browser |good 🙂 |Yes |No
 |standard quality paperback |ink & paper |good 🙂 |Yes |No
 |premium quality paperback |ink & paper |great 😍🥹🤩 |Yes |No
 |===
