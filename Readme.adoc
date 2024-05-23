@@ -43,6 +43,7 @@ Please do share https://selfhostbook.com.
 |premium quality paperback |ink & paper |great 😍🥹🤩 |Yes |No
 |===
 
+The index is a section in the back of the book with references to notable occurrences of terms and their page numbers.
 Asciidoctor https://docs.asciidoctor.org/asciidoc/latest/sections/user-index/[only generates an index for PDF output].
 I think that's acceptable since the other versions are searchable.
 
