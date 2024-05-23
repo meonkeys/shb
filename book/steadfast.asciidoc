@@ -3312,7 +3312,8 @@ Deep breaths, self, deep breaths.
 Count to ten.
 endif::[]
 
-I'd say (more than with other apps) review https://github.com/nextcloud/end_to_end_encryption/issues[known issues], make sure you can live with all those, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
+Proceed carefully with the End-to-End Encryption Nextcloud app.
+Review https://github.com/nextcloud/end_to_end_encryption/issues[known issues], make sure you can live with all those, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
 (((mobile)))
 Make sure it works with all clients you plan to use it with (e.g. desktop, mobile).
 
