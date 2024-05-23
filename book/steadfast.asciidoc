@@ -3584,17 +3584,10 @@ ____
 A book is just a box of words until a reader opens it.
 ____
 
-And now I get what she means.
- +
- +
-Dear Reader,
-
-_This book exists because you exist._
+Dear Reader, _this book exists because you exist_.
+I hope it serves you well.
 I am humbled and grateful for your support.
 Thank you, thank you, thank you.
- +
- +
-— Adam
 
 == Acknowledgments
 
