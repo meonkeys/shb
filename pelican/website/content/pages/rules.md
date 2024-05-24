@@ -1,14 +1,16 @@
 title: ⚖️ Rules
-modified: 2024-02-28
+modified: 2024-05-24
 menu_order_key: 1
 
-
-Please review our rules.
-
 These rules embody our values.
-They guide how we interact with each other, with a focus on psychological safety and support.
+They guide how we interact with each other, with a focus on psychological safety and support, so we may best:
+
+1. Have nuanced discussions & stay on topic.
+1. Hear from a diverse set of people.
+1. Learn new things together.
 
 What you see here was created with care by a powerful, tiny team, not a big corporation.
+The list of goals above was [inspired by Julia Evans](https://fosstodon.org/@b0rk@jvns.ca/112128315421487330).
 
 ### Community rules
 
