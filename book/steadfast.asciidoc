@@ -350,15 +350,15 @@ Sidebars may or may not have titles.
 
 Code snippets:
 
-.Example code snippet
+.Example code snippet (🚀 server)
 [source#example-code-snippet,bash]
 ----
 echo foo | sed s/foo/bar/
 ----
 
-Snippets will indicate whether they occur on the server or elsewhere.
-The previous command (from <<Monitoring>>) is intended to be run on the server.
-If the location is omitted, the snippet may occur on the server or elsewhere and will be explained in context.
+Snippet titles may indicate where the code should be be run.
+If the location is omitted, one or more intended runtime environments will be explained in context.
+"`🚀 server`" indicates this particular example Bash script snippet is intended to be run on the server described in this book.
 
 == Background
 
@@ -3784,7 +3784,7 @@ reverse proxy::
 router::
   Network device used to handle traffic at the boundary between networks such as a WAN and LAN. A SOHO router typically also provides various other functions including DNS, DHCP, switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
 runtime::
-  The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same.
+  The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same. May appear as "`runtime environment`" in the latter form.
 SeaGL::
   Seattle GNU/Linux Conference. Held yearly since 2013.
 self-host::
