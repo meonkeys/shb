@@ -33,7 +33,7 @@ The book details why and how to use these tools to self-host:
 * Docker container manager
 * Docker Compose service manager
 
-It cover specific services you should host, mostly Nextcloud.
+It comes with mario, a program to help you set up your server and install a few services recommended by the author.
 
 ### Origin story
 
