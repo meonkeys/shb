@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Use exact versions since there are no automated tests. Currently I just build EPUB/PDF/HTML/etc. outputs and visually inspect them.
+
 gem 'asciidoctor', '2.0.23'
 
 gem 'asciidoctor-epub3', '2.1.3'
