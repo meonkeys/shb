@@ -358,7 +358,7 @@ echo foo | sed s/foo/bar/
 
 Snippet titles may indicate where the code should be be run.
 If the location is omitted, one or more intended runtime environments will be explained in context.
-"`🚀 server`" indicates this particular example Bash script snippet is intended to be run on the server described in this book.
+"`🚀 server`" indicates this particular example Bash script snippet is intended to be run on your server.
 
 == Background
 
