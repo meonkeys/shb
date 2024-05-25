@@ -111,3 +111,12 @@ nav li :not(.active), .sidebar a:not(.active) {
 		color: #d9b653;
 	}
 }
+
+h3 a.headerlink {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+h3:hover a.headerlink {
+    opacity: 1;
+}
