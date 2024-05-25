@@ -78,3 +78,13 @@ EXTRA_PATH_METADATA = {
 }
 
 TYPOGRIFY = True
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+        'markdown.extensions.toc': {'permalink': True},
+    },
+    'output_format': 'html5',
+}
