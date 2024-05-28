@@ -5,9 +5,9 @@ modified: 2024-05-16
 
 ### Early access to *Steadfast Self-Hosting*
 
-<mark>The beta is now full and closed.
-Thank you for your interest!
-Original invite text preserved for posterity, below.</mark>
+> The beta is now full and closed to new participants.
+> Thank you for your interest.
+> Original invite text preserved for posterity, below.
 
 You're invited!
 Be a part of a select group of individuals with the power to make a *great* book *excellent*.
