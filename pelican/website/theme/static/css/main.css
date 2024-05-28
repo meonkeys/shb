@@ -4,6 +4,15 @@ body {
     color: black;
 }
 
+td, th {
+    border: 1px solid;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
 a {
     text-decoration: none;
 }
@@ -112,11 +121,11 @@ nav li :not(.active), .sidebar a:not(.active) {
 	}
 }
 
-h3 a.headerlink {
+h3 a.headerlink, h4 a.headerlink {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-h3:hover a.headerlink {
+h3:hover a.headerlink, h4:hover a.headerlink {
     opacity: 1;
 }
