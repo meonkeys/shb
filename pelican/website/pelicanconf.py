@@ -33,6 +33,12 @@ PAGE_SAVE_AS = "{slug}/index.html"
 AUTHOR_URL = "author/{slug}/"
 AUTHOR_SAVE_AS = "author/{slug}/index.html"
 
+CATEGORY_URL = "category/{slug}/"
+CATEGORY_SAVE_AS = "category/{slug}/index.html"
+
+TAG_URL = "tag/{slug}/"
+TAG_SAVE_AS = "tag/{slug}/index.html"
+
 INDEX_URL = "news/"
 INDEX_SAVE_AS = "news/index.html"
 

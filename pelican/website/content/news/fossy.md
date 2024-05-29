@@ -1,7 +1,7 @@
 title: 📻 Sustain
 category: announcement
+tags: audio
 date: 2023-10-20
-
 
 [Richard Littauer interviewed me](https://podcast.sustainoss.org/204) at [FOSSY 2023](https://2023.fossy.us).
 

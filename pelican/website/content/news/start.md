@@ -2,7 +2,6 @@ title: 🚀 Start
 category: announcement
 date: 2023-02-15
 
-
 I'm going to write a book!
 Wish me luck.
 
