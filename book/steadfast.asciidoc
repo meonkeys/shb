@@ -66,9 +66,21 @@ First published in 2024 by https://sunrisedata.io[Sunrise Data Press].
 Seattle, Washington, USA.
 --
 
+ifdef::backend-epub3[]
+--
+EPUB ISBN 979-8-9908615-0-3.
+--
+endif::[]
+
+ifdef::shb-screenPDF[]
+--
+PDF ISBN 979-8-9908615-2-7.
+--
+endif::[]
+
 ifdef::shb-printPDF[]
 --
-Paperback ISBN FIXME.
+Paperback ISBN 979-8-9908615-1-0.
 --
 
 --
