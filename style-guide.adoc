@@ -64,7 +64,7 @@
 * indexing
 ** prefer https://docs.asciidoctor.org/asciidoc/latest/sections/user-index/#index-terms[flow index terms over concealed index terms]
 ** use your gut: index a term when it feels helpful to draw the reader's attention somewhere to read more about the term
-** don't worry about indexing every occurence of a particular term
+** don't worry about indexing every occurence of a particular term -- focus on where it is specifically discussed/defined, rather than just used
 ** note: indexes are only generated for PDF outputs
 * data is plural, use context for singular (e.g. "`piece of data`")
 * colons: captalize word after? sometimes? *TBD*

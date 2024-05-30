@@ -276,8 +276,8 @@ It includes two original works for you to copy, modify, and share.
 First, the book itself, along with code to generate beautifully typeset versions.
 Second, a learning tool called mario (see <<_mario>>).
 
-The license for all original source code related to this book is the ((GNU)) ((AGPL)) (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-A copy of the ((AGPL)) is included in `mario/COPYING`.
+The license for all original source code related to this book is the GNU AGPL (Affero General Public License) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+A copy of the AGPL is included in `mario/COPYING`.
 
 === Disclaimer
 
@@ -387,7 +387,7 @@ Once I had a family, our data storage and capability needs increased.
 A simple network drive and file sync were no longer enough.
 We were all stuck at home and online at the start of the pandemic, and I was wary of companies swooping in to capitalize on our captivity.
 I started dabbling more with self-hosting at home and found it suprisingly easy, useful, and fun.
-I wanted more services for managing our data and I enjoyed the autonomy of our own ((bare metal)).
+I wanted more services for managing our data and I enjoyed the autonomy of our own bare metal.
 
 Around the same time, I decided to de-Google (stop using Google).
 The family needs and my de-Googling coincided well.
@@ -400,12 +400,12 @@ I wrote this book to promote ((data sovereignty)) as a prosocial behavior.
 This is easier to achieve than ever before with self-hosting, and I wanted to share that in book form.
 Existing books lack a good, fast, and cheap technique for self-hosting on ((bare metal)).
 I figured one out and I think you'll love it.
-It works fine if you run your server in the ((cloud)) too, it just costs a lot more (see <<Server>>).
+It works fine if you run your server in the cloud too, it just costs a lot more (see <<Server>>).
 
 Also, learning is fun.
 I learn when I write.
 While learning how my phone works, it struck me how important it is to understand _how "`the cloud`" works_, since the modern phone experience relies heavily on services and data in public clouds.
-In trying to make my phone "`my own`" (do what I want to help me live my best life), I was inspired to host my own data in my own ((cloud)).
+In trying to make my phone "`my own`" (do what I want to help me live my best life), I was inspired to host my own data in my own cloud.
 
 Also, most tech folks I know self-host _something_, likely something I've never heard of.
 There's always another self-hosted service to try out, learn about, improve, and share.
@@ -479,7 +479,7 @@ image::bread-server.png[align="center",scaledwidth=80%]
 _Cloud_ implies scalable and automatable.
 _Personal_ scopes that scalability to what's reasonable for a small group.
 A ((bare metal)) server can scale (to a degree) within its box.
-It can scale automatically by using more or less power according to compute demand, and manually when you upgrade hardware components (say, adding another hard drive).
+It can scale automatically by using more or less power according to ((compute)) demand, and manually when you upgrade hardware components (say, adding another hard drive).
 
 I'll also admit my inner child enjoys multiple meanings of the phrase _Personal Cloud_.
 
@@ -511,7 +511,7 @@ Similar to "`small community hosting`", _Small Group Cloud_ would be more accura
 I wouldn't bother doing all this just for yourself.
 
 This book is for people into (or hoping to get into) self-hosting.
-It is geared towards useful, secure, and quick setup of a single ((bare metal)) server with many services.
+It is geared towards useful, secure, and quick setup of a single bare metal server with many services.
 
 This book is for people who want to _de-Google_, _de-iTunes_, _de-OneDrive_, _de-Dropbox_, _de-Whatever_.
 
@@ -553,11 +553,11 @@ I thank the activists for helping swing the needle towards freedom, to all our b
 This book is not a manifesto for always/only self-hosting.
 It's fine to self-host some services and pay for others.
 You'll come up with your own checklist for what to self-host and when.
-Mine focuses on providing a useful, reliable, future-proof ((cloud)) for me and my family.
+Mine focuses on providing a useful, reliable, future-proof cloud for me and my family.
 
 This book is not the fastest path to trying out web services.
 You can usually find demo instances running for particular projects.
-There are ((cloud)) providers that will run a service for you and host your data.
+There are cloud providers that will run a service for you and host your data.
 
 See also: <<Alternatives to mario>>.
 
@@ -634,7 +634,7 @@ Hang in there.
 I'll help you narrow the choices by providing specific, focused guidance.
 
 Don't worry too much about the specific choices you make.
-Your personal ((cloud)) will be malleable.
+Your personal cloud will be malleable.
 Swap out bits as you like.
 If you choose poorly, just choose again (ideally based on metrics and user needs).
 
@@ -672,18 +672,18 @@ So many reasons!
 ** migrate to something else easily if and when you need to (for example, using a newer/better photo server once one becomes available)
 ** it's really the _data_ that must be safeguarded, the frontends to those data (file viewers, editors, etc) will change when _you_ choose
 * Democratize computing
-** self-hosted software (especially ((FOSS))) enables data and computational autonomy
+** self-hosted software (especially FOSS) enables data and computational autonomy
 * Conserve electricity
-** backend ((cloud)) power per device drops dramatically with a few users
+** backend cloud power per device drops dramatically with a few users
 ** save even more power the more users you add
 ** see linked articles in <<Server>>
 * Save money
 ** self-hosted hardware will typically beat cloud (renting someone else's)
 ** savings increase as your users`' data storage requirements enter the terabyte range
 ** save more with every service you run
-** avoid unexpected public ((cloud)) costs
-*** ((egress)) fees make it expensive to download your data and move it somewhere else
-*** forgetting to shut down a ((VM)) (virtual machine) can get expensive quickly
+** avoid unexpected public cloud costs
+*** egress fees make it expensive to download your data and move it somewhere else
+*** forgetting to shut down a VM (virtual machine) can get expensive quickly
 *** you could spend excessive time and money navigating the public cloud's confusing menu of service offerings
 ** avoid unexpected public clouds changes
 *** changes in license fees
@@ -697,19 +697,19 @@ So many reasons!
 ** shared storage allows you to front your data with multiple services, choosing read-write/read-only access sensibly
 * Avoid vendor lock-in
 ** you'll be able to use software features public cloud providers don't offer or don't yet exist because you fully own and control your raw data
-** when you buy something with ((DRM)), you don't really own it
+** when you buy something with DRM, you don't really own it
 ** is there an integration you count on?
 Sometimes a service stops working with another service.
-This happens less often with ((FOSS)) because anyone can simply fork (copy, modify, and share) a project.
+This happens less often with FOSS because anyone can simply fork (copy, modify, and share) a project.
 * Privacy
 ** avoid the chilling effect of mass surveillance
-** with a personal ((cloud)) you can safely and confidently keep GPS latitude and longitude in your photo ((metadata))
+** with a personal cloud you can safely and confidently keep GPS latitude and longitude in your photo metadata
 ** once you keep your location metadata, you can do creative things with it
 ** if you don't _need_ to share your location and behavior with Google every second, why do you?
 ** remove yourself from the equation of user analysis data--when you stream video from someone else's service, they know and analyze every time you (or your kids) (re-)watch a video you "`own`", every time you rewind, fast-forward, pause... but do they need to? why?
 * Unlock new possibilities
 ** apply arbitrary workflows to uploaded files
-** deploy trustworthy, offline generative ((AI)) (artificial intelligence) models
+** deploy trustworthy, offline generative AI (artificial intelligence) models
 ** enjoy features that don't exist in public services
 
 (((Nextcloud)))
@@ -768,10 +768,10 @@ I can safely ignore their audit and its erroneous policy violation claim.
 .Screenshot of a YouTube legal audit for my old API client.
 image::YT-audit.png[align="center",scaledwidth=80%]
 
-I also no longer need to work with YouTube's ((API)) (application programming interface), including registering an API client and completing periodic audits.
+I also no longer need to work with YouTube's API (application programming interface), including registering an API client and completing periodic audits.
 (((Nextcloud)))
 After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance.
-Turns out the Nextcloud Talk ((API)) is easier for posting my chicken coop photos and videos anyway.
+Turns out the Nextcloud Talk API is easier for posting my chicken coop photos and videos anyway.
 
 With my own cloud I'm also able to tune quotas and rate limits as desired.
 Full speed ahead!
@@ -831,6 +831,7 @@ image::inside-chassis.jpg[align="center",scaledwidth=80%]
 
 ===== Containers == happy
 
+(((Docker)))
 I was pleasantly surprised by ((container))s (explained in <<Contained services>>) following my varied earlier experiences with ((VM))s.
 VMs are simple at first because they behave much like physical hardware.
 Installing Linux into a VM is as easy as installing it onto ((bare metal)) (sometimes even easier).
@@ -840,7 +841,7 @@ The real rub here is with maintenance; maintaining a VM can be as complex as mai
 Containers take a different approach and simulate much less of a bare metal server.
 They are fast and small compared with VMs, allowing higher non-conflicting service density.
 That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHP (PHP: Hypertext Processor)).
-One ((container)) typically contains only one service.
+One container typically contains only one service.
 
 Isolation of containers is limited compared to VMs.
 The kernel (the part of the OS that talks directly with the underlying hardware) is shared, for example.
@@ -848,13 +849,13 @@ Limited ((isolation)) keeps the resource and maintenance costs of container-base
 
 Containers are excellent for a consistent and resilient personal cloud.
 They are easy to declare (in code), build, deploy, test, and repeat.
-They can also be used along with VMs: you might use a VM as your server instead of ((bare metal)).
+They can also be used along with VMs: you might use a VM as your server instead of bare metal.
 
 I chose Docker to manage containers because it is popular and I have experience with it.
 Your server is also considered a _host_ since it it is a _host_ to Docker containers.
 
 One downside of Docker is how often root access is assumed in example code and popular public images.
-Running as `root` makes ((container))s simpler but less secure.
+Running as `root` makes containers simpler but less secure.
 
 ===== Go paperless with OCR
 
@@ -906,6 +907,7 @@ I will eventually give it another shot because https://jitsi.org/blog/authentica
 When it comes to surprises, try to absorb the bad ones when they affect your users.
 Ideally _before_ they affect your users, via research, planning, and testing you're likely already doing.
 
+(((dogfooding)))
 Dogfood what you self-host.
 Try your best to ensure everything is attractive and useful, then wait.
 Be patient.
@@ -983,6 +985,7 @@ This is a great time to include other people who may help care for the server.
 
 === Transition
 
+(((change management)))
 Your users already have their data somewhere else.
 Consider how you'll help them migrate their data onto the server.
 
@@ -1014,13 +1017,6 @@ Let's dive into the design of a _Steadfast_ system.
 
 === Service stack
 
-(((Docker)))
-(((Jellyfin)))
-(((Nextcloud)))
-(((Ubuntu)))
-(((Wallabag)))
-(((ZFS)))
-(((ext4)))
 A _Steadfast_ system presents nicely as a simplified stack of colored boxes.
 The vertical ordering of the stack is based on where and how frequently a sysadmin will likely act and investigate at that layer when supporting or troubleshooting (most frequently at top), and amount abstracted from bare metal (least at bottom).
 
@@ -1028,7 +1024,7 @@ The vertical ordering of the stack is based on where and how frequently a sysadm
 .Layers of a Steadfast system. From the bottom, hardware: bare metal, filesystem: ext4 for / and optionally ZFS for /data, OS: Ubuntu LTS 64-bit server, container runtime: Docker, containers: Nextcloud file sharing app, Jellyfin media server, Wallabag article reader.
 image::service-stack.svg[align="center",scaledwidth=80%]
 
-I am most often working around the top layers e.g. adding or updating a ((container)).
+I am most often working around the top layers e.g. adding or updating a container.
 Less often I am updating OS (operating system) packages.
 Less often still I might examine versions of a configuration file stored on disk from its ((ZFS)) automatic snapshots.
 Finally, when my server dies, I'll be on that bottom layer fixing or replacing hardware.
@@ -1074,7 +1070,7 @@ Recommendations:
 Examples: notes, photos, documents, personal information.
 Recommendations:
 
-. Store on encrypted media, including ((backups)).
+. Store on encrypted media, including backups.
 . Access only with up-to-date software you trust.
 . Disallow ((WAN)) (wide area network) access to these data.
 
@@ -1121,7 +1117,7 @@ Test ((WAN access)) with this ((threat model)).
 Assets::
   Files with personal information stored in out-of-date service (e.g. an old, vulnerable version of Nextcloud).
 Actors/Threats/Vectors::
-  Bot scrapes websites and finds URL to service on a public mailing list archive.
+  Bot scrapes websites and finds URL to service on a public mailing list archive.(((bot)))
 Bot automatically attempts exploit against known vulnerability in service.
 Exploit succeeds, bot owner gains access to compute resources and personal information.
 Mitigations::
@@ -1164,7 +1160,7 @@ Review the material earlier in this chapter if you want help with your decision.
 [#self-hoster-security-tips]
 .Self-hoster security tips
 ****
-* Maintain useful encrypted ((backups)).
+* Maintain useful encrypted backups.
 Perform test restores to prove they are useful.
 See <<Backups>>.
 * Avoid running commands as the `root` user.
@@ -1200,7 +1196,7 @@ You may optionally use ZFS for storage (`/data`) on your server following <<ZFS 
 For the root (`/`) partition, I recommend using ext4 instead of ZFS to:
 
 * stick as closely as possible to the default ((Ubuntu)) install
-* avoid ((Docker)) filesystem clutter
+* avoid Docker filesystem clutter
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
 * avoid taking ZFS snapshots of the OS, since
 ** we don't need to
@@ -1208,7 +1204,7 @@ For the root (`/`) partition, I recommend using ext4 instead of ZFS to:
 ** we won't modify the OS--changes will be managed upstream (e.g. during package updates or via mario)
 
 Docker volumes (persistent container data) will be on ZFS.
-The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ((ext4)) in `/var/lib/docker`.
+The ((container))'s filesystem--everything besides mounted volumes with persistent data--is ephemeral and stored on ext4 in `/var/lib/docker`.
 To learn more about ZFS, see:
 
 * https://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/[Bitrot and atomic COWs: Inside "`next-gen`" filesystems] by Jim Salter
@@ -1241,7 +1237,7 @@ I often do something manually, undo it, then do the same thing with mario to con
 ****
 Example read-only server-side operations:
 
-* show per-((container)) resource usage: `sudo docker stats`
+* show per-container resource usage: `sudo docker stats`
 * follow container log messages: `sudo docker compose logs -f` (run this in a folder containing a `compose.yml` file)
 * check server health: `date; tail /proc/pressure/*`
 
@@ -1280,7 +1276,7 @@ If you're interested in ((VM))s (instead of or in addition to containers), check
 Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
 I found it to be overkill.
 If I needed high availability via clustering I'd be more likely to use Kubernetes.
-If one computer in a Kubernetes cluster breaks, services can automatically migrate to working hardware in the cluster.
+If one computer in a Kubernetes ((cluster)) breaks, services can automatically migrate to working hardware in the cluster.
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
 Docker balances features and usability well, making it easy to run one service in ((isolation)).
@@ -1308,18 +1304,19 @@ An image is built once, stamped with an identifier, and shared, where it can act
 
 Images are defined by a file named `Dockerfile`.
 The `Dockerfile` should be tracked in source control.
-Since mario uses ((Docker Compose)), another important file is `compose.yml`.
+Since mario uses Docker Compose, another important file is `compose.yml`.
 Each service will have its own `compose.yml` file.
 These should be kept in source control too.
 For ((sysadmin))s these conventions provide reproducible images and containers.
 For users: predictable, reliable services.
 
+(((cattle vs. pets)))
 Practice treating containers as temporary things.
 You'll gain confidence in your system by creating and destroying them frequently, and you'll enjoy the speed and ease of doing so.
 Think:
 
 * ephemeral
-** ((container))s are temporary
+** containers are temporary
 ** temporary containers provide robust, reproducible services
 * cattle, not pets
 ** hand-managed ((VM))s are burdensome pets
@@ -1383,7 +1380,7 @@ services:
       - "traefik.http.routers.nc-https.rule=Host(`cloud.example.com`)" <3>
 ----
 
-<1> Define ((entrypoint)) `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
+<1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
 
 <2> Connect the `websecure` entrypoint with the `nc-https` router on the `app` service.
 
@@ -1391,9 +1388,9 @@ services:
 
 (((router, Traefik)))
 Each self-hosted service will have its own router.
-Other web services will also use the `websecure` ((entrypoint)).
+Other web services will also use the `websecure` entrypoint.
 
-HTTPS encryption is configured using other labels on the ((Traefik)) ((container)).
+HTTPS encryption is configured using other labels on the ((Traefik)) container.
 See <<Encryption certificates>> for details.
 
 == Implementation
@@ -1431,7 +1428,7 @@ The good ones will likely share at least some of these traits.
 * Well-organized, elegant code.
 * Useful and up-to-date documentation.
 * Mentions and compares itself with other similar services.
-* Well-documented, useful, and complete ((API)).
+* Well-documented, useful, and complete API.
 * Flexible and extensible (easy to customize and extend with plugins and such).
 ****
 
@@ -1466,9 +1463,10 @@ Here are some indications a self-hosted service might be one to avoid.
 I'm going to pick on Nextcloud here a bit.
 Nextcloud has far more good traits than bad, but these are still worth mentioning.
 
+(((fork)))
 First, their apparently non-FOSS build script.
 https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341/2[Nick's explanation] for this makes sense: it is more convenient for them to hardcode secrets directly in the build script and keep the whole thing secret.
-But hardcoded secrets are bad practice, it may be an ((AGPL)) license violation to hide a build script, and it makes forking harder.
+But hardcoded secrets are bad practice, it may be an AGPL license violation to hide a build script, and it makes forking harder.
 It's good practice to visualize succession, to be prepared for an eventual fork and change of ownership.
 Nextcloud is a fork of ((ownCloud)), after all (see <<Nextcloud vs. ownCloud>>).
 
@@ -1524,6 +1522,7 @@ While there is a learning curve for understanding basic computer hardware compon
 
 You'll need a server.
 
+(((compute)))
 You can always pay for "`compute`" in someone else's cloud, but it'll end up costing more in the long run.
 
 If you're in a hurry, you can start with pretty much any old desktop or laptop, or your own VM running on either.
@@ -1583,6 +1582,7 @@ I usually run mario using a laptop as my admin computer.
 Your users will have their own computers and ((mobile)) devices (their _clients_).
 Maintain a couple of different clients so you have comparable environments to better help your users.
 
+(((dogfooding)))
 TIP: Be a user of the services you self-host.
 This is _dogfooding_.
 Dogfooding keeps you honest and helps you empathize with others.
@@ -1603,9 +1603,8 @@ For redundancy I recommend using two of the same drive, mirrored (RAID 1).
 This also increases read performance (for most reads) and halves usable storage space.
 
 HDDs are plenty fast when measured from the standpoint of self-hosted service response time.
-(((operating system)))
 The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM.
-Remote ((backups)) can take a while, and that's fine.
+Remote backups can take a while, and that's fine.
 
 I use one ((SSD)) for the ((OS)) and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
@@ -1619,7 +1618,7 @@ There are many aspects to consider when comparing the two options, such as:
 * direct access to data
 * speed and means of access
 * network availability
-* ((backups)), versioning, security
+* backups, versioning, security
 
 I went with ((HDD))s for direct, local access to my data.
 I really wanted to know exactly where they were stored and for ultimate flexibility when I change or try new services.
@@ -1699,8 +1698,8 @@ Next steps:
 
 . Optional: after installing Ubuntu, add two ((HDD))s and format them with ((ZFS)).
 See <<ZFS setup>>.
-. Download mario onto your ((admin computer)) (a separate computer from your server). See <<More resources>>.
-. Run mario on your ((admin computer)) to provision your server. See <<_mario>>.
+. Download mario onto your admin computer (a separate computer from your server). See <<More resources>>.
+. Run mario on your admin computer to provision your server. See <<_mario>>.
 
 ==== ZFS setup
 
@@ -1887,8 +1886,8 @@ TIP: Create ((backups)) following the 3-2-1 rule of thumb: make *3* backups.
 Store at least *2* local copies on different media.
 Have *1* remote backup.
 
-(((restic)))
-(((Borg)))
+(((backups, using restic for)))
+(((backups, using Borg for)))
 I recommend a backup strategy combining ZFS snapshots with either https://restic.net[restic] or https://borgbackup.org[Borg] for sending them offsite.
 https://reddit.com/r/BorgBackup/comments/v3bwfg/[Here's a decent comparison of restic vs. Borg].
 
@@ -1915,6 +1914,7 @@ It can send your snapshot offsite, following the 3-2-1 rule of thumb.
 
 == mario
 
+(((Ansible)))
 mario is a tool I built to help you set up and maintain a server.
 It is mainly a wrapper around the well-established https://ansible.com[Ansible] system provisioner.
 Everything I'll do with mario can also be done manually, directly on the server.
@@ -2031,7 +2031,7 @@ ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
 ----
 
 Next, set up public key authentication.
-If you need a key pair, run `ssh-keygen` or similar on your ((admin computer)) to create one.
+If you need a key pair, run `ssh-keygen` or similar on your admin computer to create one.
 If you already have a key pair, use it.
 Copy the public key to the server with `ssh-copy-id` or similar.
 For example:
@@ -2092,7 +2092,7 @@ I'll assume you have a domain name and a DNS provider with an API.
 See <<Server domain name>> for details on how to obtain this.
 
 `DNS_API_PROVIDER`::
-Enter the name of your ((DNS)) provider here.
+Enter the name of your DNS provider here.
 mario configures ((Traefik)) to talk directly with your DNS server for issuing ((Let's Encrypt)) certs.
 `NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
 Enter credentials for only one provider, the same provider you specified in `DNS_API_PROVIDER`.
@@ -2135,6 +2135,7 @@ Proceed directly to <<Start services>>.
 
 === Server domain name
 
+(((DNS)))
 Your server needs a name.
 It gets a hostname during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
 I recommend getting a domain name and naming all your services using subdomains (e.g. `cloud.example.com`).
@@ -2149,7 +2150,7 @@ Check with your DNS provider about adding appropriate records for this purpose (
 Duck DNS provides a free domain name and DNS service.
 mario also works with paid services such as Namecheap, DigitalOcean, and Route 53.
 I recommend any of the paid options over Duck DNS.
-Support for other ((DNS)) providers (ahem, especially self-hosted ones!) may be added later.
+Support for other DNS providers (ahem, especially self-hosted ones!) may be added later.
 
 NOTE: Public DNS records do not presume ((WAN access)).
 <<Digital security>> covers WAN access in detail.
@@ -2190,7 +2191,7 @@ Here's a policy with way too much access that nevertheless works:
 
 ==== Dynamic DNS
 
-If you want ((WAN access)) and your ((IP address)) changes periodically, it's handy to have this updated in ((DNS)) automatically.
+If you want ((WAN access)) and your ((IP address)) changes periodically, it's handy to have this updated in DNS automatically.
 Similar to Traefik setting up ((HTTPS)) certs, this uses a DNS provider API.
 There are several options here, all left as exercises for the reader.
 One idea is to find and stand up a dynamic DNS client for your Docker image.
@@ -2200,12 +2201,12 @@ Another idea is to see if your router will do the dynamic DNS updates.
 
 ==== Internal DNS
 
-It is handy to have an internal ((DNS)) server to be able to refer to your server by name.
+It is handy to have an internal DNS server to be able to refer to your server by name.
 These internal names should match the public names and point to ((LAN))-only private IP addresses.
 This way you can use the same names inside and outside your LAN and your Let's Encrypt certs will work.
 Your LAN router likely has a DNS server and may allow you to assign names to IP addresses.
 
-If you don't have an internal ((DNS)) server, you can create more hostname to IP address mappings like the one we added in <<SSH setup>>.
+If you don't have an internal DNS server, you can create more hostname to IP address mappings like the one we added in <<SSH setup>>.
 Here's that hosts file again:
 
 // this could also be one line with one IP and many hostnames
@@ -2236,7 +2237,7 @@ The choice is yours.
 === Start services
 
 mario has prepared your server to run a handful of services.
-Docker and ((Docker Compose)) are installed.
+Docker and Docker Compose are installed.
 Docker configuration files are stored in directories under `/root/ops`.
 Data for services are stored in directories under `/data`.
 
@@ -2336,10 +2337,11 @@ This is idempotent: running and up-to-date services are left unchanged.
 
 === Encryption certificates
 
-((Traefik)) will automatically install ((Let's Encrypt)) certs to encrypt HTTP traffic.
+(((encryption, HTTPS)))
+((Traefik)) will automatically install ((Let's Encrypt)) ((cert))s to encrypt HTTP traffic.
 The certs are issued using a https://doc.traefik.io/traefik/https/acme/#dnschallenge[DNS challenge].
 This way to https://letsencrypt.org/docs/challenge-types/[authenticate a cert request] is especially handy for servers with zero public-facing inbound ports, allowing convenient HTTPS even within closed LANs.
-The ((DNS)) challenge is configured using labels in Traefik's `compose.yml` configuration file.
+The DNS challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
 Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
 This is called ((SSL termination)), and is configured by lines in Traefik's `compose.yml` mentioning `acme`.
@@ -2806,7 +2808,8 @@ Once you get that running, you can use the https://apps.nextcloud.com/apps/integ
 === Pi-hole
 
 (((Pi-hole)))
-Running a https://pi-hole.net[Pi-hole] service in your ((LAN)) helps block advertisements, trackers, and bad actors using ((DNS)) block lists.
+(((DNS)))
+Running a https://pi-hole.net[Pi-hole] service in your ((LAN)) helps block advertisements, trackers, and bad actors using DNS block lists.
 
 (((router, network device)))
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
@@ -2833,7 +2836,6 @@ The Pi-Hole also has a list of local DNS entries.
 I add a few domain names to this list for servers inside my ((LAN)).
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
-(((DNS)))
 (((HTTPS)))
 For example, https://support.mozilla.org/kb/firefox-dns-over-https[DNS over HTTPS in Firefox].
 
@@ -3496,7 +3498,7 @@ Use it to test out the latest release or a custom app.
 . Enable ((GPU)) transcoding in ((Jellyfin)).
 . Sign the open letter at https://publiccode.eu[Public Money, Public Code] because software paid for with taxes should be FOSS.
 . Aggregate logs.
-. Pick a ((Docker)) container that doesn't need to be able to initiate outbound network connections.
+. Pick a Docker container that doesn't need to be able to initiate outbound network connections.
 Prevent it from doing so and prove to yourself it works.
 . What if the server won't boot?
 .. Describe troubleshooting steps, in detail.
@@ -3511,10 +3513,10 @@ Feed it logs from various services.
 . Move secrets used by mario into an Ansible vault or a self-hosted service intended for managing secrets.
 . Adapt mario to use ((podman)).
 . Adapt mario to use https://kubernetes.io[Kubernetes].
-. If you have a dynamic WAN IP address, create or use an existing dynamic ((DNS)) update client container.
+. If you have a dynamic WAN IP address, create or use an existing dynamic DNS update client container.
 . Stand up a mail relay container such as https://github.com/crazy-max/docker-msmtpd or https://github.com/namshi/docker-smtp.
 Allow all mario-managed services to send email through this relay.
-. Stand up your own ((DNS)) server.
+. Stand up your own DNS server.
 . Reorganize mario services into distinct Ansible roles.
 Upload the roles to https://galaxy.ansible.com[Ansible Galaxy] as a playbook bundle.
 . Traefik's Docker integration has https://doc.traefik.io/traefik/providers/docker/#docker-api-access[security implications].
@@ -3631,203 +3633,195 @@ Specialists in computer science, security, administration, networking and so on 
 
 // source for "These days that pretty much means git" statement: https://en.wikipedia.org/wiki/Git#Adoption
 
-AI::
+((AI))::
   Artificial intelligence.
-API::
+((API))::
   Application programming interface. Provides a way to interact with a service from software. Useful for writing apps and integrations.
-attack surface::
+((attack surface))::
   Total of possible attack vectors. Fewer is more secure. Example: closing all but the ports you need open reduces yours.
-backend::
+((backend))::
   I use this term to refer to either a service (e.g. a database) or server. It's something you more frequently interact with indirectly, say, via a frontend like a web app or mobile UI.
-bare metal::
+((bare metal))::
   Physical nearby computing resources, as opposed to rented compute time on someone else's hardware. Used in this book primarily to indicate hardware autonomy.
-block storage::
+((block storage))::
   Cloud storage option with direct filesystem access including files and folders. Used directly/natively/locally from an OS. Size is relatively fixed and determined at creation time.
-bot::
+((bot))::
   Short for robot. Software performing autonomous tasks such as responding to chat requests or attacking vulnerable servers.
-cattle vs. pets::
+((cattle vs. pets))::
   Highlights two distinct sysadmin approaches to systems/services. Cattle are automated, ephemeral, and hopefully immutable. Pets are managed manually, stateful, and long-lived.
-cert::
+((cert))::
   Shorthand for HTTPS encryption certificate.
-change management::
+((change management))::
   The means and methods of transitioning a group of people from one set of tools and processes to another.
-cloud::
+((cloud))::
   An ambiguous amount of remote hardware. Scalable, programmable, and networked. "`The cloud`" or "`public cloud`" is someone else's hardware while "`personal cloud`" is your own.
-cluster::
+((cluster))::
   Collated collection of machines treated as a single machine to achieve higher scale computing power.
-compute::
+((compute))::
   Noun: CPU or GPU resources expended when running software services.
-containerization::
-  Technique of isolating and bundling software, primarily to simplify deployment. Faster and lighter-weight than VMs. Close to bare metal performance.
-container::
+((container))::
   Running instance of an image. Containers may also be referred to as "`guests`", although this is more commonly used to describe VMs.
-cron job::
-  Scheduled task executed automatically by the cron daemon.
-daemon::
-  Long-running background process.
-data::
+((data))::
   Noun, plural. Yes, I use the annoying plural form! Sorry, old habit.
-data sovereignty::
+((data sovereignty))::
   Full control of your data. For example, having original copies of your files.
-deploy::
+((deploy))::
   Prepare a service for use. Typically involves building or copying files before a service is started.
-devops::
-  Systems administration with more software development-like automation. Building/testing/deploying servers/services like software products, for example.
-dogfooding::
+((dogfooding))::
   Being a user of something you also created and/or maintain. "`Eat your own dogfood.`"
-DHCP::
+((DHCP))::
   Dynamic Host Configuration Protocol. This is one way computers get IP addresses and related networking settings.
-DIY::
+((DIY))::
   Do it yourself. Said of activities involving some amount of learning and tinkering you'd otherwise pay for. Cooking, for example. Also: self-hosting.
-DNS::
+((DNS))::
   Domain Name System. Maps domain names to IP addresses.
-domain name::
+((domain name))::
   How a server, service, or group of services are identified, e.g. `example.com`.
-DRM::
+((DRM))::
   Digital restrictions management. Ancient, evil technology designed to prevent unapproved consumption of content. Probably used for surveillance too.
-egress::
+((egress))::
   Any outbound data transfer or download, in public cloud terms.
-entrypoint::
+((entrypoint))::
   How traffic enters the Traefik reverse proxy; network ports.
-firewall::
+((firewall))::
   Means of controlling network traffic between computers.
-fork::
-  Verb: to split one software project into two. Noun: a derivative software work. The fork diverges from the original (otherwise it would simply be a copy). One or many software projects may succeed the original.
-FOSS::
+((fork))::
+  Verb: to split one software project into two. Noun: a derivative software work. The fork diverges from the original (otherwise it would simply be a copy). One or many software projects may succeed the original. Forking software is a useful and common activity.
+((FOSS))::
   Free and open-source software. An acronym designed to unite the goals of the FSF and the OSI.
-FSF::
+((FSF))::
   Free Software Foundation. They strongly defend the "`F`" in FOSS.
-frontend::
+((frontend))::
   The UI for a system or service.
-full-disk encryption::
+((full-disk encryption))::
   When an entire storage area is cryptographically protected.
-GB::
+((GB))::
   Gigabyte. 1,000^3^ (1,000,000,000) bytes for HDDs, or 1,024^3^ (1,073,741,824) bytes for RAM.
-good, fast, and cheap::
+((good, fast, and cheap))::
   Used with a wink in this text because https://en.wikipedia.org/wiki/Project_management_triangle[typically we must pick two].
-Good Thing::
+((Good Thing))::
   A hand-wavy way of saying something is self-evidently wonderful.
-groupware::
+((groupware))::
   Software for group collaboration. Loosely: mail, calendar, and contacts. Sometimes includes collborative editing of office documents and spreadsheets.
-GUI::
+((GUI))::
   Graphical user interface.
-HDD::
+((HDD))::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
-homelab::
+((homelab))::
   A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ server (or "`personal cloud`") should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
-host::
+((host))::
   The computer where Docker containers run. Also called a "`server`" in this text.
-hostname::
+((hostname))::
   Name for a single server/computer/device.
-HVAC::
+((HVAC))::
   Heating, ventilation, and air conditioning.
-idempotent::
+((idempotent))::
   An operation which enacts changes only until an end state is reached. Repeating the operation has no effect once the end state is reached. For example, updating an OS. After the OS is up to date, updating again will cause no changes to the list of installed packages (assuming no new updates become available while updating).
-image::
+((image))::
   A filesystem with code and dependencies necessary to run a container.
-immutable::
+((immutable))::
   Doesn't change. For example, a particular Docker image. A container instantiated from that image can be modified, but the image cannot; a new image must be built.
-IPMI::
+((IPMI))::
   Intelligent Platform Management Interface. Used for remote server management including reboots and OS installs.
-IPS::
+((IPS))::
   Intrusion prevention system. Mitigates the risk of penetration.
-ISP::
+((ISP))::
   Internet service provider.
-kernel::
+((kernel))::
   The part of the OS that talks directly with hardware.
-LAN::
+((LAN))::
   Local area network. For example, the network used by computers and devices to talk with each other inside your home.
-LFNW::
+((LFNW))::
   LinuxFest Northwest. Annual conference in Bellingham, Washington dedicated to serving and connecting open source communities. Established in 2000.
-Linux::
+((Linux))::
   The most popular server OS. Also works fine on a desktop or laptop. The old me would have insisted on calling it "`GNU/Linux`" or "`a Linux distribution`". A lot has happened since then, and I've come to believe "`Linux`" is enough to describe the OS used for self-hosting in the context of this book.
-low-code::
+((low-code))::
   High-level application development platform with reduced focus on traditional programming. Typically provides a GUI and requires less files with configuration and code. Useful for prototyping or replacing some simpler data entry and analysis applications.
-LTS::
+((LTS))::
   Long-term support. A stable software release, supported for many years.
-mario::
+((mario))::
   Provisioning system included with this book to assist with learning how to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
-NAS::
+((NAS))::
   Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<Server>>.
-NIC::
+((NIC))::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
-object storage::
+((object storage))::
   Relatively unlimited and typically remote cloud storage option. Actual data are abstracted: backups and structured access require special services, indexes, and software.
-OCR::
+((OCR))::
   Optical character recognition. The process of converting images of text to actual text.
-OOB::
+((OOB))::
   Out-of-band (management). A means of remote low-level server control including power cycling and console interaction, typically provided by an independently powered and networked embedded computer.
-OS::
+((OS))::
   Operating system.
-OSI::
+((OSI))::
   Open Source Initiative. More concerned with the "`OSS`" of FOSS.
-PHP::
+((PHP))::
   PHP: Hypertext Processor. Programming language built for the web.
-PoE::
+((PoE))::
   Power over ethernet. Utilizes an ethernet cable for electricity as well as data.
-port::
+((port))::
   Along with an IP address, a number used to connect to a service. Reserved port numbers such as 80 for HTTP are listed in `/etc/services`.
-partition::
+((partition))::
   Delineated section of a HDD or block storage, formatted with a filesystem such as ext4 or ZFS.
-port forward::
+((port forward))::
   Router configuration to send traffic for a particular port to a computer inside a LAN.
-process::
+((process))::
   Instance of running software. Note that "`running`" processes are described in more detail by a lower-level state such as running, sleeping, idle, waiting for I/O completion and--my personal favorite--zombie.
-provision::
+((provision))::
   As in, "`provision a server`". Set up a machine or otherwise bring it into alignment with a known/good configuration.
-RAID::
+((RAID))::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
-reproducible::
+((reproducible))::
   Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from the same `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
-reverse proxy::
+((reverse proxy))::
   Networking software for filtering and directing traffic. In a self-hosted context, useful for SSL termination and for running several self-hosted web services with different domain names with a single IP address.
-router::
+((router))::
   Network device used to handle traffic at the boundary between networks such as a WAN and LAN. A SOHO router typically also provides various other functions including DNS, DHCP, switching, firewalling, and Wi-Fi. See: port forward. A Traefik router is something different: this is a software logic connecting entrypoints to services. See <<Traefik architecture>>.
-runtime::
+((runtime))::
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same. May appear as "`runtime environment`" in the latter form.
-SeaGL::
+((SeaGL))::
   Seattle GNU/Linux Conference. Held yearly since 2013.
-self-host::
+((self-host))::
   Run your own server. See also: homelab.
-server::
+((server))::
   A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse. Also called a "`host`".
-service::
+((service))::
   A long-running process used by other local and remote processes to do something useful.
-SOHO::
+((SOHO))::
   Small office / home office.
-source control::
+((source control))::
   A system for tracking changes in source code along with who made the change, why, and when.
-source of truth::
+((source of truth))::
   The one true document or data point among some number of copies. Used as both plural and singular.
-SSD::
+((SSD))::
   Solid-state drive. A hard drive that doesn't spin.
-SSH::
+((SSH))::
   Secure Shell. Provides encrypted remote command line access to a server.
-SSL termination::
+((SSL termination))::
   Accepting encrypted traffic and passing along unencrypted traffic. Act performed by Traefik reverse proxy in a mario-provisioned server. More accurately but rarely called TLS termination--SSL is deprecated and rarely used.
-sysadmin::
+((sysadmin))::
   Portmanteau of "`systems administrator`". A party responsible for the upkeep of a computer system.
-threat model::
+((threat model))::
   Analysis of risks and defenses of digital assets.
-TB::
+((TB))::
   Terabyte. Like GB, can be either base-10 or base-2, so: 1,000^4^ (1,000,000,000,000) bytes for HDDs and 1,024^4^ (1,099,511,627,776) bytes for RAM.
-TLD::
+((TLD))::
   Top-level domain. For "`example.com`", "`.com`" is the TLD.
-UI::
+((UI))::
   User interface. The means of interaction between a user and a system, e.g.: a web site or mobile app. Often considered along with user experience and notated "`UI/UX`".
-UPS::
+((UPS))::
   Uninterruptible power supply. A battery that sits between your server and an outlet, often with extra features such as a power outage alarm or surge suppressor.
-UX::
+((UX))::
   User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and written as "`UI/UX`".
-volume::
+((volume))::
   Docker facility to mount a folder on the server to a folder inside a container. This is a common means of persisting container data that would otherwise be ephemeral.
-VM::
+((VM))::
   Virtual machine. OS isolation technique simulating nearly all aspects of hardware including power, input, and output.
-VPN::
+((VPN))::
   Virtual private network. Useful to "`teleport home`" and behave (from a networking perspective) as if you are inside your home LAN.
-WAN::
+((WAN))::
   Wide-area network. Everything outside your LAN / home network / router.
-ZFS::
+((ZFS))::
   A filesystem with many advanced features such as encryption, bit rot mitigation, journaling, volume management, and snapshotting. Used to stand for Zettabyte File System.
 
 // Ideally I'd like a full set of these lists for every output.
