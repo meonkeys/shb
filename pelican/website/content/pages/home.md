@@ -10,7 +10,7 @@ Read on to realize data sovereignty for you and your beloved users.
 
 ### Welcome!
 
-_Steadfast_ is an authentic and inspiring self-hosting tutorial by seasoned tech entrepreneur and self-proclaimed self-hosting expert [Adam Monsen](https://adammonsen.com).
+_Steadfast Self-Hosting_ is an authentic and inspiring self-hosting tutorial by seasoned tech entrepreneur and self-proclaimed self-hosting expert [Adam Monsen](https://adammonsen.com).
 Benefit from Adam's decades of applied effort distilled into this quick and exciting initiation to data sovereignty.
 
 Save money, time, and sanity
