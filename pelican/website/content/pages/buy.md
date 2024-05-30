@@ -3,22 +3,29 @@ modified: 2024-05-29
 menu_order_key: 1
 
 Please buy a copy of my book if you can afford to.
-Anyone willing and able to pay me will help me continue this work.
-No worries if you can't do this--free and discounted copies are available as well.
-I chose this pricing structure to prioritize distribution over profit.
+I worked hard on it and it's worth it.
+Anyone willing and able to buy it will help me continue this work.
 
-Ebooks are available now, paperback is coming soon.
+No worries if you can't afford to pay: Free and discounted copies are available as well.
+I chose this flexible pricing structure to prioritize distribution over profit.
 
-The ebook bundle price is USD 25.00.
-This bundle includes all downloadable versions.
+### Ebook
 
-### Download ebook
+[Available now for purchase and download on Gumroad](https://meonkeys.gumroad.com/l/shb).
 
-Several versions are available.
+### Paperback
 
-### Pay
+Coming soon.
 
-Please also [send me an email]({filename}/pages/contact.md) so I have some context.
+### Hardcover
+
+I don't have plans to print a hardcover edition.
+
+### Donations
+
+If you'd like to send money directly to support me, thank you, that's awesome.
+It's helpful if you also [send me an email]({filename}/pages/contact.md) so I have some context.
+Include "Gift" in the email subject.
 Tell me how much you're sending and why.
 If you're sending cryptocurrency, please tell me the equivalent USD amount.
 
@@ -34,13 +41,8 @@ I wish I could put it at the top, but it's too volatile and difficult to exchang
 | Bitcoin  | 18XjpBwNccX9cvC2qiUgXLeeyY1jj3g5QW |
 | Peercoin | PRHQk8tcyvBmgkm9nfbLg7LJoZ48v8nciB |
 
-### Paperback
-
-Coming soon.
-
-### Hardcover
-
-I don't have plans to print a hardcover edition.
+I sincerely appreciate these gifts.
+I'm not a charity so these donations are not tax-deductible.
 
 ### Hire me
 
