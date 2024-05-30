@@ -66,3 +66,11 @@ You can also [improve it or write a better one]({filename}/pages/code.md).
 
 Great!
 See [💻 Code]({filename}/pages/code.md).
+
+### Wait, it is FOSS, I can pay for it *and* it is free? Why are you leaving money on the table? How can you afford to do this?
+
+Those are excellent questions.
+Briefly: Yes it is FOSS and you can pay what you're able & willing to to buy it, hopefully I'm not leaving money on the table; if I am it's because I'm prioritizing distribution over profit, and I kinda can't afford to do this.
+
+The detailed explanation is, well, detailed.
+If you're really interested I could explain it over coffee or on a podcast or something.

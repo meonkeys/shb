@@ -3,19 +3,23 @@ modified: 2024-05-29
 menu_order_key: 1
 
 Please buy a copy of my book if you can afford to.
-I worked hard on it and it's worth it.
-Anyone willing and able to buy it will help me continue this work.
+I worked hard on every part of this book, it's excellent, and book sales help me continue this work!
 
-No worries if you can't afford to pay: Free and discounted copies are available as well.
+No worries if you are unwilling or unable to pay: Free and discounted copies are available.
 I chose this flexible pricing structure to prioritize distribution over profit.
 
-### Ebook
+See [this chart](https://github.com/meonkeys/shb#%EF%B8%8F-book-formats) for details about each version and [discuss them](https://help.selfhostbook.com/t/read) if you like.
+
+### Ebook bundle
 
 [Available now for purchase and download on Gumroad](https://meonkeys.gumroad.com/l/shb).
 
+The suggested price is USD 25.00 (sliding scale *and* adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity)).
+The ebook bundle includes beautifully formatted EPUB, A4 PDF, and HTML versions.
+
 ### Paperback
 
-Coming soon.
+Coming very soon.
 
 ### Hardcover
 
@@ -25,9 +29,10 @@ I don't have plans to print a hardcover edition.
 
 If you'd like to send money directly to support me, thank you, that's awesome.
 It's helpful if you also [send me an email]({filename}/pages/contact.md) so I have some context.
-Include "Gift" in the email subject.
+Include **Gift** in the email subject.
 Tell me how much you're sending and why.
-If you're sending cryptocurrency, please tell me the equivalent USD amount.
+If the "why" is "to pay for the book", please [buy the book from Gumroad](https://meonkeys.gumroad.com/l/shb) instead (for tax reasons -- my publisher must deal with taxes when selling the book and Gumroad handles this).
+If you're sending cryptocurrency, please tell me the equivalent USD amount (this is really helpful for my taxes if/when I decide to convert it to fiat money).
 
 I've listed these in order of preference.
 Peercoin is especially interesting to me.

@@ -8,9 +8,6 @@ menu_order_key: 0
 This is the home for a most excellent book about self-hosting.
 Read on to realize data sovereignty for you and your beloved users.
 
-The book is in _early access_:
-see [👀 Beta]({filename}/news/beta.md).
-
 ### Welcome!
 
 _Steadfast_ is an authentic and inspiring self-hosting tutorial by seasoned tech entrepreneur and self-proclaimed self-hosting expert [Adam Monsen](https://adammonsen.com).
