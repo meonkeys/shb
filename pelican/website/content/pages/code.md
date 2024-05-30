@@ -4,7 +4,7 @@ menu_order_key: 1
 
 ### Source code
 
-Please [get a copy of the book]({filename}/pages/buy.md), [let me know]({filename}/pages/contact.md), and I'll give you the source code.
+See <https://github.com/meonkeys/shb>
 
 ### Install mario
 
