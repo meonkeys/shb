@@ -8,14 +8,18 @@ I worked hard on every part of this book, it's excellent, and book sales help me
 No worries if you are unwilling or unable to pay: Free and discounted copies are available.
 I chose this flexible pricing structure to prioritize distribution over profit.
 
-See [this chart](https://github.com/meonkeys/shb#%EF%B8%8F-book-formats) for details about each version and [discuss them](https://help.selfhostbook.com/t/read) if you like.
-
 ### Ebook bundle
 
-[Available now for purchase and download on Gumroad](https://meonkeys.gumroad.com/l/shb).
-
+This includes beautifully formatted EPUB, A4 PDF, and HTML versions.
 The suggested price is USD 25.00 (sliding scale *and* adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity)).
-The ebook bundle includes beautifully formatted EPUB, A4 PDF, and HTML versions.
+
+Buy on Gumroad:
+
+<a href="https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500"><button>Supporter: USD 25.00</button></a>
+
+<a href="https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0"><button>Scholarship: USD 0.00</button></a>
+
+Or [name your price here](https://meonkeys.gumroad.com/l/shb).
 
 ### Paperback
 
@@ -24,6 +28,11 @@ Coming very soon.
 ### Hardcover
 
 I don't have plans to print a hardcover edition.
+
+### Other book versions
+
+There are many other ways to read the book.
+See [this chart](https://github.com/meonkeys/shb#%EF%B8%8F-book-formats) for details about each version and [discuss them](https://help.selfhostbook.com/t/read) if you like.
 
 ### Donations
 
