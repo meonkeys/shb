@@ -11,15 +11,15 @@ I chose this flexible pricing structure to prioritize distribution over profit.
 ### Ebook bundle
 
 This includes beautifully formatted EPUB, A4 PDF, and HTML versions.
-The suggested ("Supporter") price is USD 25.00 (sliding scale *and* adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity)).
-
 Buy on Gumroad:
 
-[Supporter: USD 25.00](https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500)
+[Supporter: USD 25.00](https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500){:target="_blank"}
 
-[Scholarship: USD 0.00](https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0)
+[Scholarship: USD 0.00](https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0){:target="_blank"}
 
-Or [name a fair price here](https://meonkeys.gumroad.com/l/shb).
+[name a fair price here](https://meonkeys.gumroad.com/l/shb){:target="_blank"}
+
+The suggested ("Supporter") price is automatically adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity){:target="_blank"}.
 
 ### Paperback
 
