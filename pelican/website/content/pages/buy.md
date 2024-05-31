@@ -11,15 +11,15 @@ I chose this flexible pricing structure to prioritize distribution over profit.
 ### Ebook bundle
 
 This includes beautifully formatted EPUB, A4 PDF, and HTML versions.
-The suggested price is USD 25.00 (sliding scale *and* adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity)).
+The suggested ("Supporter") price is USD 25.00 (sliding scale *and* adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity)).
 
 Buy on Gumroad:
 
-<a href="https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500"><button>Supporter: USD 25.00</button></a>
+[Supporter: USD 25.00](https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500)
 
-<a href="https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0"><button>Scholarship: USD 0.00</button></a>
+[Scholarship: USD 0.00](https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0)
 
-Or [name your price here](https://meonkeys.gumroad.com/l/shb).
+Or [name a fair price here](https://meonkeys.gumroad.com/l/shb).
 
 ### Paperback
 
@@ -40,7 +40,7 @@ If you'd like to send money directly to support me, thank you, that's awesome.
 It's helpful if you also [send me an email]({filename}/pages/contact.md) so I have some context.
 Include **Gift** in the email subject.
 Tell me how much you're sending and why.
-If the "why" is "to pay for the book", please [buy the book from Gumroad](https://meonkeys.gumroad.com/l/shb) instead (for tax reasons -- my publisher must deal with taxes when selling the book and Gumroad handles this).
+If the "why" is "to pay for the book", please buy the book from Gumroad instead (for tax reasons -- my publisher must deal with taxes when selling the book and Gumroad handles this).
 If you're sending cryptocurrency, please tell me the equivalent USD amount (this is really helpful for my taxes if/when I decide to convert it to fiat money).
 
 I've listed these in order of preference.
@@ -63,7 +63,7 @@ I'm not a charity so these donations are not tax-deductible.
 Somewhat related: I'm looking for work!
 I'd like to write another book but I can't afford to right now.
 I'll either need this book to sell well, get an advance for my next book, or take on other work.
-If I take on other work, ideally I'd be able to do work related to the book, like speaking engagements, training, FOSS homelab/homeprod install/support/maintenance, FOSS desktop computing, home personal cloud appliances, or running a community data center.
+If I take on other work, ideally I'd be able to do work related to the book like speaking engagements, training, FOSS homelab/homeprod install/support/maintenance, FOSS desktop computing, home personal cloud appliances, nonprofit sustainable tech, or maybe running a community data center.
 
 If you have an another/unrelated job idea please [let me know]({filename}/pages/contact.md).
 I'm able to do a lot of things well.
