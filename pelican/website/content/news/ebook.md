@@ -1,6 +1,7 @@
 title: 📖 Ebook release
 category: announcement
 date: 2024-05-28
+modified: 2024-06-01
 
 The book is done and I'm excited to set it loose!
 
@@ -84,6 +85,6 @@ If you're interested I could explain it over coffee or on a podcast or something
 
 * [Hacker News](https://news.ycombinator.com/item?id=40547357)
 * [LinkedIn](https://www.linkedin.com/posts/chuckwolber_steadfast-self-hosting-rapid-rise-personal-activity-7202360270671814656-G9Ad)
-* [Mastodon](https://fosstodon.org/@meonkeys/112534116393793870)
+* Mastodon: [me](https://fosstodon.org/@meonkeys/112534116393793870), [Deb](https://freeradical.zone/@baconandcoconut/112537718845451626), [jcrabapple](https://dmv.community/@jcrabapple/112543680946006130)
 * [Reddit r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1d5uzhz/i_wrote_a_book_about_selfhosting_for_a_small/)
 * [#selfhosted:matrix.org chat](https://matrix.to/#/!IwubhcevMjjvNFdtfN:matrix.org/$o_LHAevL00Ai_8Tnxo_uG7LsZsZLW_WGP6qaBB19drQ?via=matrix.org&via=envs.net&via=tchncs.de)
