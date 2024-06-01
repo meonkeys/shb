@@ -85,3 +85,4 @@ If you're interested I could explain it over coffee or on a podcast or something
 * [Hacker News](https://news.ycombinator.com/item?id=40547357)
 * [LinkedIn](https://www.linkedin.com/posts/chuckwolber_steadfast-self-hosting-rapid-rise-personal-activity-7202360270671814656-G9Ad)
 * [Mastodon](https://fosstodon.org/@meonkeys/112534116393793870)
+* [Reddit r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1d5uzhz/i_wrote_a_book_about_selfhosting_for_a_small/)
