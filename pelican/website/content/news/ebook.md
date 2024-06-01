@@ -79,3 +79,9 @@ Briefly:
 
 The detailed explanation is, well, detailed.
 If you're interested I could explain it over coffee or on a podcast or something.
+
+### Where has this been mentioned?
+
+* [Hacker News](https://news.ycombinator.com/item?id=40547357)
+* [LinkedIn](https://www.linkedin.com/posts/chuckwolber_steadfast-self-hosting-rapid-rise-personal-activity-7202360270671814656-G9Ad)
+* [Mastodon](https://fosstodon.org/@meonkeys/112534116393793870)
