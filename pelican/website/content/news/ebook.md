@@ -88,3 +88,5 @@ If you're interested I could explain it over coffee or on a podcast or something
 * Mastodon: [me](https://fosstodon.org/@meonkeys/112534116393793870), [Deb](https://freeradical.zone/@baconandcoconut/112537718845451626), [jcrabapple](https://dmv.community/@jcrabapple/112543680946006130), [Darnell Clayton](https://one.darnell.one/@darnell/112543705880256496)
 * [Reddit r/selfhosted](https://www.reddit.com/r/selfhosted/comments/1d5uzhz/i_wrote_a_book_about_selfhosting_for_a_small/)
 * [#selfhosted:matrix.org chat](https://matrix.to/#/!IwubhcevMjjvNFdtfN:matrix.org/$o_LHAevL00Ai_8Tnxo_uG7LsZsZLW_WGP6qaBB19drQ?via=matrix.org&via=envs.net&via=tchncs.de)
+* [Facebook](https://www.facebook.com/adam.monsen/posts/pfbid02fegi9Jb2JJWDrz7m9Bnd4cmADecS3Epc2hjDjZC27u99K7ufS6okEbw6Zj9dgfHWl)
+* [𝕏](https://x.com/meonkeys/status/1797140109734838538)
