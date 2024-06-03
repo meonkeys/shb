@@ -383,7 +383,7 @@ I hope you find that here.
 
 === Who am I?
 
-I'm a dad, tech entrepreneur, and ((FOSS)) (free and open source software) enthusiast.
+I'm a dad, tech entrepreneur, and FOSS (free and open source software) enthusiast.
 I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write.
 I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
 
@@ -503,7 +503,7 @@ This book is for people who want to know where their data live, and to be able t
 It's a "`from scratch`" or "`the hard way`" approach, and it keeps the doors wide open to many possibilities with a principled self-hosting technique.
 I'll sometimes recount what worked for me rather than specifically recommend what you should do.
 
-This book is for people curious about or already biased towards ((FOSS)).
+This book is for people curious about or already biased towards FOSS.
 And--as much as I'll blather on about FOSS--I'm not here to judge.
 I'm here to _grow_, primarily by sharing and learning.
 
@@ -581,7 +581,7 @@ Why are you talking like a caveman?
 I wrote the book originally in Markdown plain text in my steadfast text editor, https://www.vim.org[Vim].
 (((Pandoc)))
 I applied generous amounts of https://pandoc.org[Pandoc], time, and love.
-Pandoc is a fantastic ((FOSS)) tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
+Pandoc is a fantastic FOSS tool which allowed me to use that single plain text file with fairly human-readable Markdown syntax to generate several different decent outputs.
 While revising, I came across the build system for https://github.com/progit/progit2[Pro Git 2] (thank you Scott and Ben!).
 In short order I converted the book to https://asciidoc.org[AsciiDoc] and ported my typsetting code to https://asciidoctor.org[Asciidoctor].
 This simplified the book build and gave me more and better output formats.
@@ -610,7 +610,7 @@ Admittedly, those last few sections exist so I could cover all https://en.wikipe
 
 === A note on FOSS
 
-(((FOSS, bias)))
+(((FOSS, author's bias towards)))
 I prefer FOSS over non-FOSS.
 This can be a polarizing topic.
 Heck, even using the term FOSS instead of the other variants can be polarizing.
@@ -881,7 +881,7 @@ These can be easily OCR'd and managed with tools like https://docs.paperless-ngx
 ===== Jellyfin works well
 
 ((Jellyfin)) is a personal streaming media server.
-I was stoked to see how Jellyfin showed up as an excellent and complete ((FOSS)) alternative to ((Plex)).
+I was stoked to see how Jellyfin showed up as an excellent and complete FOSS alternative to ((Plex)).
 
 ==== Bad surprises
 
@@ -906,7 +906,7 @@ See <<Customization>>.
 
 ===== Jitsi ports
 
-((Jitsi)) is a self-hostable ((FOSS)) video call platform.
+((Jitsi)) is a self-hostable FOSS video call platform.
 I gave up trying to get Jitsi running in Docker.
 I recall lots of open ports or port ranges being a problem.
 This service might be easier to self-host in a virtual machine.
@@ -3297,7 +3297,7 @@ https://github.com/OpenSignLabs/OpenSign[OpenSign] and https://github.com/docuse
 
 ===== Release script missing from source
 
-Nextcloud is ((FOSS)), although https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341[some release scripts are held back].
+Nextcloud is FOSS, although https://help.nextcloud.com/t/build-bzip-and-package-from-git/58341[some release scripts are held back].
 They may or may not be required to release those, I don't know.
 I hope they do decide to release them, for the same reasons the rest of Nextcloud is FOSS.
 
@@ -3481,7 +3481,7 @@ Why or why not?
 .. intermittent network
 .. local-only network
 .. clustered hardware
-. Consider ((FOSS)) with respect to human attention and focus.
+. Consider FOSS with respect to human attention and focus.
 Contrast with non-FOSS.
 . What approaches in this book may be conceptually dangerous or misleading?
 Why?
@@ -3615,7 +3615,7 @@ Thanks to my daughter for your fantastic illustrations.
 
 Thanks to Deb Nicholson for writing the meaningful Foreword.
 
-Thanks to my family and friends for tolerating my protracted ((FOSS)) self-hosting boondoggles, including this book.
+Thanks to my family and friends for tolerating my protracted FOSS self-hosting boondoggles, including this book.
 
 Thanks to _Pro Git 2_, my inspiration to switch to Asciidoctor.
 
