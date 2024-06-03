@@ -201,4 +201,4 @@ The EPUB loads on Kindle devices, but there are a few issues leading to the curr
 
 I don't use Kindle apps or devices; I've only seen these via the Kindle Previewer.
 
-Perhaps related, [the EPUB cannot be converted to KPF](https://github.com/asciidoctor/asciidoctor-epub3/issues/481).
+Perhaps related, KDP says a KPF created from Kindle Previewer https://github.com/asciidoctor/asciidoctor-epub3/issues/481[contains only images, is not reflowable, and fixed format is required].
