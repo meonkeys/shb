@@ -132,7 +132,7 @@ Adam showed up to our first event with a small pile of "`print on demand`" hats 
 Talk selection was, "`if you want to do a talk, do a talk.`" Adam gave some great intro talks on Git and Hadoop and I gave a policy talk and community organizing talk.
 We hadn't written it down yet, but SeaGL was destined to become a conference for beginners and experts, for coders and policy nerds and for talks about the ecosystem; the flaws, the potential and the opportunities for partnership with other efforts to empower people.
 
-After that chaotic first edition, we solidified that we wanted ((SeaGL)) to be for everyone, but especially for people who were looking for a way into open source in the diverse, expensive, and tech-heavy Seattle area.
+After that chaotic first edition, we solidified that we wanted SeaGL to be for everyone, but especially for people who were looking for a way into open source in the diverse, expensive, and tech-heavy Seattle area.
 We wanted SeaGL to be a great first tech conference for attendees and a welcoming platform for aspiring speakers.
 We later extended this to working towards finding lesser known speakers and offering them their first keynote opportunity.
 The whole SeaGL crew (including Adam of course!) have always been passionate about welcoming in newcomers and fastidious about hosting a friendly, safe and curiosity positive environment.
@@ -192,7 +192,7 @@ I am so glad you're here!
 I'd like to help you get a server up and running.
 The self-hosting ecosystem is crowded and confusing, so I've taken care of a number of difficult choices with sensible, tested defaults.
 I'll help you provision (set up) your own server and a few useful web services.
-Bring along whatever ((sysadmin)) experience you've got, some willing users, and a desire to gain self-hosting competency.
+Bring along whatever sysadmin experience you've got, some willing users, and a desire to gain self-hosting competency.
 
 The Internet is often a relentless cash-grab and attention vampire.
 Our actions are infinitely measured; _we_ are the product.
@@ -216,8 +216,7 @@ Experienced self-hosters can compare my choices to theirs.
 
 ==== Prerequisites
 
-(((router, network device)))
-To get the most out of this book, the sysadmin experience you bring along should include the ability to configure your router and ((LAN)) (local area network), install Linux on a computer (hereafter referred to as your _server_), connect to your server with ((SSH)) (secure shell), edit text files and run commands on your server, and transfer files to and from your server.
+To get the most out of this book, the sysadmin experience you bring along should include the ability to configure your ((router)) and ((LAN)) (local area network), install Linux on a computer (hereafter referred to as your _server_), connect to your server with ((SSH)) (secure shell), edit text files and run commands on your server, and transfer files to and from your server.
 
 If you're unfamiliar with any of these concepts, a quick trip to your favorite search engine or local user group should yield enough pointers to get started.
 
@@ -320,8 +319,6 @@ See <<More resources>> for contact information and how to share improvements.
 
 === Style
 
-(((style conventions)))
-(((typography)))
 Text formatting:
 
 [cols="2,3",id=style]
@@ -387,7 +384,6 @@ I'm a dad, tech entrepreneur, and FOSS (free and open source software) enthusias
 I love to parent, care, laugh, sing, listen, code, build, produce, debug, architect, debug, lead, manage, debug some more, lecture, and write.
 I'm good at administering and securing systems and processes while ensuring privacy, compliance, and reliability.
 
-(((SeaGL)))
 I'm most proud of my family, growing https://mifos.org[Mifos], founding https://seagl.org[SeaGL], selling https://csats.com[C-SATS], and writing this book.
 
 I've been running my own services for decades.
@@ -457,9 +453,10 @@ More on this:
 * https://defectivebydesign.org/what_is_drm[What is DRM?] by the Free Software Foundation
 * https://nytimes.com/2023/04/04/arts/dahl-christie-stine-kindle-edited.html[It's Their Content, You're Just Licensing it] by Reggie Ugwu
 
+(((source of truth)))
 Saving copies of data someone else is hosting for you is fine.
 Self-hosting goes a step beyond, giving you far-reaching control of how your data are used and shared.
-You'll gain agency over authoritative copies of your files, allowing you to know and control your ((source of truth)).
+You'll gain agency over authoritative copies of your files, allowing you to know and control your source of truth.
 All this with reliability and flexibility within a reasonable budget.
 
 Self-hosting means providing computing services by and for individuals, families, and hobbyists in ((SOHO)) (small office / home office) environments.
@@ -779,7 +776,6 @@ I can safely ignore their audit and its erroneous policy violation claim.
 image::YT-audit.png[align="center",scaledwidth=80%]
 
 I also no longer need to work with YouTube's API (application programming interface), including registering an API client and completing periodic audits.
-(((Nextcloud)))
 After standing up Nextcloud I deleted my YouTube API client to upload videos, cleaning up my code and simplifying its maintenance.
 Turns out the Nextcloud Talk API is easier for posting my chicken coop photos and videos anyway.
 
@@ -817,7 +813,6 @@ I'd love to know how this goes for you.
 You may also be surprised by how time-consuming and difficult some things are.
 Maybe you'll get held up with hardware (and its power, wires, cooling, failures).
 Maybe networking.
-(((Nextcloud)))
 Maybe "`change management`" (trying to convince your users to use Nextcloud instead of Dropbox).
 
 Here are some things that surprised me, both positively and negatively.
@@ -873,7 +868,6 @@ Running as `root` makes containers simpler but less secure.
 Another smile-worthy advancement is free ((OCR)) (optical character recognition).
 I keep trying to "`go paperless`" by scanning in all my paper files.
 After scanning papers I am shouldered with, unsurprisingly, a bunch of PDFs of images.
-(((Nextcloud, search)))
 (((Paperless-ngx)))
 These can be easily OCR'd and managed with tools like https://docs.paperless-ngx.com/[Paperless-ngx] and https://apps.nextcloud.com/apps/fulltextsearch[Nextcloud Full text search].
 
@@ -886,7 +880,7 @@ I was stoked to see how Jellyfin showed up as an excellent and complete FOSS alt
 
 ===== Traefik learning curve
 
-The ((Traefik)) ((reverse proxy)) was surprisingly challenging to set up because my networking fundamentals were rusty.
+The ((Traefik)) reverse proxy was surprisingly challenging to set up because my networking fundamentals were rusty.
 I've got it working reliably and I still need to keep improving my fundamental knowledge in networking.
 
 See <<Reverse Proxy>> for more about Traefik.
@@ -1007,6 +1001,7 @@ TIP: To learn more about gracefully transitioning users between systems, study _
 
 === Sysadmin mindset
 
+(((sysadmin, mindset of a Steadfast)))
 The server exists for the users.
 It is important to establish the right mindset to be able to provide an excellent user experience.
 
@@ -1091,7 +1086,8 @@ Once you've categorized your data, think about how people will get to it.
 At home you can generally just connect directly to your server.
 When you're away or you're trying to share with someone else, you're talking ((WAN access)).
 
-(((router, network device)))
+(((router)))
+(((port forward)))
 WAN access is--informally--remote access to services and data running in your LAN.
 One means of allowing WAN access to a service is by port forwarding HTTPS traffic through your router/firewall.
 Port forwarding without taking additional security measures is both risky and convenient.
@@ -1100,9 +1096,10 @@ NOTE: Consider alternatives to port forwarding, such as using a VPN.
 
 ==== Threat model
 
+(((threat model)))
 Let's back up a step and talk about threat modeling.
 Your _threat model_ is how you'll consider threats to your data and how you'll mitigate these threats.
-With your ((threat model)) in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
+With your threat model in mind, you'll be able to gain confidence in, for example, the decision of whether or not you should permit WAN access.
 
 WARNING: If you already know you are a valuable target (public figure, high net worth, wartime journalist, responsible for a server with information about many people), buckle up for a longer journey.
 This guide is not sufficient for your threat model.
@@ -1123,7 +1120,7 @@ Really just rolls off the tongue!
 
 ==== Example: WAN access
 
-Test ((WAN access)) with this ((threat model)).
+Test ((WAN access)) with this threat model.
 
 Assets::
   Files with personal information stored in out-of-date service (e.g. an old, vulnerable version of Nextcloud).
@@ -1162,7 +1159,6 @@ You'll have to enter a password on boot, though.
 This is inconvenient if you have intermittent power and/or no remote management capability.
 There's also the reasonable argument that full-disk encryption offers little for an always-on server: during normal operation you've already supplied the decryption key.
 
-(((OS)))
 If you decide you want full-disk encryption, choose it during <<OS install>>.
 Review the material earlier in this chapter if you want help with your decision.
 
@@ -1226,18 +1222,19 @@ Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacemen
 
 === Operating system
 
+(((operating system)))
 Linux is a popular and reasonable choice for self-hosting.
 I recommend a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
 ((Ubuntu)) ((LTS)) (long-term support) releases are the most stable and I recommend them.
 _Steadfast_ specifically mentions 24.04, the LTS release from April 2024.
 24.04 is stable today, and will receive updates https://ubuntu.com/about/release-cycle[until April 2034], promising many more years of stability until _Steadfast_ must be revised.
-Installing the ((OS)) is generally quick and painless, see <<OS install>>.
+Installing the OS is generally quick and painless, see <<OS install>>.
 
 ==== Customizations
 
-It's good practice to minimize and carefully track customizations to the ((operating system)) from a default install.
+It's good practice to minimize and carefully track customizations to the operating system from a default install.
 This eases maintenance, including eventual re-installs.
-Not mucking about on the server takes discipline, especially for old-school hands-on ((sysadmin))s like me.
+Not mucking about on the server takes discipline, especially for old-school hands-on sysadmins like me.
 
 Try to avoid SSH'ing into the server and making one-off changes.
 You'll learn how to instead modify mario's configuration files and re-provision the server in <<_mario>>.
@@ -1254,7 +1251,7 @@ Example read-only server-side operations:
 
 Example read-write server-side operations:
 
-* upgrade ((OS)) packages: `sudo apt full-upgrade`
+* upgrade OS packages: `sudo apt full-upgrade`
 * change permissions for a folder: `chmod 0700 ~/bin/`
 ****
 
@@ -1267,7 +1264,7 @@ This ensures every command is captured in `/var/log/auth.log` along with when it
 
 Upgrades may be automated.
 This is appropriate once you have sufficient scale (along with trust and control of the source of the upgrades).
-I usually do ((OS)) upgrades manually because I manage few systems so the burden is minimal and infrequent, and upgrading a package may require testing or manual intervention (e.g. rebooting).
+I usually do OS upgrades manually because I manage few systems so the burden is minimal and infrequent, and upgrading a package may require testing or manual intervention (e.g. rebooting).
 These reasons are similar to the reasons I install the OS itself by hand.
 
 My OS is more a pet than cattle (see "`cattle vs. pets`" in <<Glossary>>).
@@ -1320,7 +1317,7 @@ The `Dockerfile` should be tracked in source control.
 Since mario uses Docker Compose, another important file is `compose.yml`.
 Each service will have its own `compose.yml` file.
 These should be kept in source control too.
-For ((sysadmin))s these conventions provide reproducible images and containers.
+For sysadmins these conventions provide ((reproducible)) images and containers.
 For users: predictable, reliable services.
 
 (((cattle vs. pets)))
@@ -1350,7 +1347,7 @@ mario uses Traefik for its reverse proxy.
 
 ==== Traefik architecture
 
-Here's a bit about how ((Traefik)) works and how it works with ((Nextcloud)) and other self-hosted web services.
+Here's a bit about how ((Traefik)) works and how it works with Nextcloud and other self-hosted web services.
 
 We want ((HTTPS)) requests to port 443 bound for cloud.example.com to reach the Nextcloud service.
 Study the included Traefik architecture diagram to better understand this process along with the mario sources.
@@ -1374,7 +1371,7 @@ You may wish to use longer, more descriptive names.
 The routing labels wire together the entrypoint and router with the service under which they are defined.
 That is: `websecure` to `nc-https` to `app`.
 
-These two snippets of the mario source show how we set up Traefik for ((Nextcloud)).
+These two snippets of the mario source show how we set up Traefik for Nextcloud.
 
 .Traefik and Nextcloud configuration snippets (🏠 admin computer)
 [source#traefik-and-nextcloud-config,yaml]
@@ -1399,7 +1396,6 @@ services:
 
 <3> Use the hostname rule with the `nc-https` router.
 
-(((router, Traefik)))
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
 
@@ -1587,7 +1583,6 @@ image::bird-on-server.jpg[align="center",scaledwidth=50%]
 ==== Admin computer
 
 (((admin computer)))
-(((provision)))
 It's helpful to have a separate computer from your server to make changes.
 I usually run mario using a laptop as my admin computer.
 
@@ -1620,11 +1615,11 @@ HDDs are plenty fast when measured from the standpoint of self-hosted service re
 The OS (operating system) and services do well at caching data served, assuming the server has sufficient RAM.
 Remote backups can take a while, and that's fine.
 
-I use one ((SSD)) for the ((OS)) and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
+I use one SSD for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 (((data sovereignty)))
 An interesting alternative to HDDs is ((object storage)).
-((Nextcloud)) can use object storage directly, for example.
+Nextcloud can use object storage directly, for example.
 There are many aspects to consider when comparing the two options, such as:
 
 * cost of storage and ((egress)) (download)
@@ -1657,8 +1652,7 @@ I just made these up based on what works for me, then doubled that so you have s
 
 ===== Home router configuration
 
-(((router, network device)))
-Learn how to configure your router.
+Learn how to configure your ((router)).
 Keep it up to date and maintain a strict ((firewall)) with only the necessary ports open / forwarded.
 
 [%unbreakable]
@@ -1673,10 +1667,9 @@ Here's a simple diagram I created using https://asciiflow.com to plan cabling an
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 
 (((IPMI)))
-(((router, network device)))
 Arrows represent ethernet cable.
 The router provides electricity to the mini switch using PoE (power over ethernet).
-The server has two NICs (network interface cards): one for the ((OS)) and everything within (including all services), and one for a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
+The server has two NICs (network interface cards): one for the OS and everything within (including all services), and one for a network connection to the embedded OOB (out-of-band) remote management computer with IPMI (Intelligent Platform Management Interface).
 WAN traffic is allowed to flow to the main NIC and not to the IPMI NIC.
 
 ==== Electricity
@@ -1720,7 +1713,7 @@ See <<ZFS setup>>.
 ==== ZFS setup
 
 (((ZFS, setup)))
-The ((OS)) takes care of itself pretty well.
+The OS takes care of itself pretty well.
 For more robust data storage, you can add a couple of HDDs and manage them with ((ZFS)).
 
 ZFS adds many features and some complexity.
@@ -1810,7 +1803,6 @@ reboot
 === Server maintenance
 
 (((maintenance, server)))
-(((router, network device)))
 I use short monthly and yearly maintenance checklists.
 I update my checklists about as often as I use them.
 Here are examples you might use as starting points.
@@ -1818,7 +1810,7 @@ Here are examples you might use as starting points.
 .Checklist: Monthly Maintenance
 [%unbreakable#monthly-maintenance]
 ****
-* [ ] Upgrade ((OS)) packages.
+* [ ] Upgrade OS packages.
 * [ ] Check storage space remaining.
 * [ ] Back up router configuration.
 ****
@@ -1827,7 +1819,7 @@ Here are examples you might use as starting points.
 [%unbreakable#yearly-maintenance]
 ****
 * [ ] Test restore from backup.
-* [ ] Review and improve ((threat model)).
+* [ ] Review and improve threat model.
 * [ ] Open server chassis and vacuum dead spiders.
 ****
 
@@ -1905,6 +1897,8 @@ Have *1* remote backup.
 
 (((backups, using restic for)))
 (((backups, using Borg for)))
+(((Borg)))
+(((restic)))
 I recommend a backup strategy combining ZFS snapshots with either https://restic.net[restic] or https://borgbackup.org[Borg] for sending them offsite.
 https://reddit.com/r/BorgBackup/comments/v3bwfg/[Here's a decent comparison of restic vs. Borg].
 
@@ -1926,7 +1920,7 @@ sudo zfs destroy -R main/secure/data@$snapName
 <1> Running this command to create a snapshot takes 0.040 seconds on my server.
 Once it is done, a new read-only folder will appear under `/data/.zfs/snapshot` containing the snapshot.
 
-<2> This line assumes you have installed and configured ((restic)).
+<2> This line assumes you have installed and configured restic.
 It can send your snapshot offsite, following the 3-2-1 rule of thumb.
 
 == mario
@@ -2019,7 +2013,6 @@ Host mario_server
 ----
 
 You can add that to `~/.ssh/config`, adapting as necessary for the SSH client you use.
-(((provision)))
 Test it by running `ssh mario_server`.
 You may see something like this:
 
@@ -2214,7 +2207,6 @@ Similar to Traefik setting up HTTPS certs, this uses a DNS provider API.
 There are several options here, all left as exercises for the reader.
 One idea is to find and stand up a dynamic DNS client for your Docker image.
 These are generally very simple services to set up.
-(((router, network device)))
 Another idea is to see if your router will do the dynamic DNS updates.
 
 ==== Internal DNS
@@ -2366,7 +2358,6 @@ The DNS challenge is configured using labels in Traefik's `compose.yml` configur
 Traefik can accept HTTPS, decrypt it, and pass along unencrypted HTTP to web services.
 This is called SSL termination, and is configured by lines in Traefik's `compose.yml` mentioning `acme`.
 
-(((router, network device)))
 Take a look at a `compose.yml` file for any service included with mario.
 Every service has a `tls` section defined on its router to enable HTTPS encryption and SSL termination.
 
@@ -2449,7 +2440,7 @@ canceled
 TIP: For extra credit, incorporate your tiny test service into mario.
 
 This is the basis for adding more interesting services, too.
-It's only a few more lines of code and configuration to create a small ((API)) or web service and a few more to publish it with your ((reverse proxy)).
+It's only a few more lines of code and configuration to create a small ((API)) or web service and a few more to publish it with your reverse proxy.
 
 == Services
 
@@ -2688,7 +2679,7 @@ I think the Watchtower maintainers made the right decision to omit automatic rol
 You may experience an issue where a service is broken by Watchtower.
 If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
 I avoid this by only using Watchtower for non-critical services.
-I don't let Watchtower auto-upgrade my ((Nextcloud)) service, for example.
+I don't let Watchtower auto-upgrade my Nextcloud service, for example.
 
 <<<
 
@@ -2830,7 +2821,6 @@ Once you get that running, you can use the https://apps.nextcloud.com/apps/integ
 (((DNS)))
 Running a https://pi-hole.net[Pi-hole] service in your LAN helps block advertisements, trackers, and bad actors using DNS block lists.
 
-(((router, network device)))
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
 
 The Pi-hole translates domain names to IP addresses.
@@ -2844,7 +2834,6 @@ My Pi-hole server sits between my router's DNS server and all clients.
 .Pi-hole DNS traffic flow diagram.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
-(((router, network device)))
 Queries for domain names not on any block list will be answered directly or sent upstream.
 I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my LAN as necessary.
 
@@ -2914,7 +2903,6 @@ From now on, your server will require public key authentication for SSH logins.
 
 === Allow WAN access
 
-(((router, Traefik)))
 mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
@@ -3143,7 +3131,7 @@ The GitHub project repositories are pretty quiet. See:
 
 (((Nextcloud, mobile)))
 Nextcloud works OK as the backend for a mobile device.
-It can be your single reliable ((source of truth)) for contacts, calendars, tasks, and most everything else that matters on mobile.
+It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
 See <<Mobile text editing is hard>> for a couple workarounds.
 
@@ -3193,8 +3181,9 @@ Nice!
 
 ==== Nextcloud vs. ownCloud
 
+(((Nextcloud, ownCloud vs.)))
 At first glance it's a bit difficult to tell the difference between Nextcloud and ((ownCloud)).
-This follows since ((Nextcloud)) started as a fork of ownCloud.
+This follows since Nextcloud started as a fork of ownCloud.
 
 So why should you choose one over the other?
 A healthy FOSS project is generally also an active project, so one way to guide your decision is by comparing activity metrics on GitHub.
@@ -3208,7 +3197,7 @@ See also: <<traits-of-good-services>> and <<traits-of-bad-services>> in <<Choose
 
 ==== Nextcloud Office
 
-(((Nextcloud, Office)))
+(((Nextcloud, office)))
 https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "`office`" and their plans for it as a suite of related tools.
 They clearly intend a holistic, integrated office experience, and Nextcloud can be configured to be used in this manner.
 https://nextcloud.com/office/ covers editing office documents (rich text and spreadsheets) collaboratively, along with uses for the Notes, Collectives, and Tables apps.
@@ -3260,7 +3249,7 @@ See https://jenson.org/text/ for background on why mobile text editing is a comp
 
 To sync calendars, tasks, and contacts with your phone's storage of same on Android, you must install and configure the 3rd party DAVx5 app.
 https://help.nextcloud.com/t/what-does-android-file-sync-do-for-a-nextcloud-account/154330[I don't know why DAVx5 is required], but https://murena.com[Murena] figured it out for me.
-Their Android-derived /e/ ((OS)) includes native support for Nextcloud accounts, removing the requirement for DAVx5.
+Their Android-derived /e/ OS includes native support for Nextcloud accounts, removing the requirement for DAVx5.
 Users with iOS and other OSes besides Android can sync groupware-related data https://docs.nextcloud.com/server/stable/user_manual/en/groupware/[without DAVx5].
 
 ===== Spurious web text editor conflicts
@@ -3437,7 +3426,6 @@ Please let me know what you discover.
 If I missed something, I'd love to learn about it!
 
 (((Ansible)))
-(((NAS)))
 (((Clace)))
 (((Cosmos Cloud)))
 (((DockSTARTer)))
@@ -3507,7 +3495,7 @@ Hint: use `docker build` or https://buildah.io[Buildah].
 Hint: check if `/host/var/run/reboot-required` exists.
 . Stand up a second Nextcloud service for experiments.
 Use it to test out the latest release or a custom app.
-. Try Nextcloud with ((object storage)) for primary storage.
+. Try Nextcloud with object storage for primary storage.
 . Adapt this guide to a Linux distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
 . Set up periodic automatic offsite backups.
@@ -3528,7 +3516,7 @@ Feed it logs from various services.
 . Read up on other ways to isolate processes, e.g. FreeBSD jails and chroot.
 . Contribute to mario.
 . Move secrets used by mario into an Ansible vault or a self-hosted service intended for managing secrets.
-. Adapt mario to use ((podman)).
+. Adapt mario to use podman.
 . Adapt mario to use https://kubernetes.io[Kubernetes].
 . If you have a dynamic WAN IP address, create or use an existing dynamic DNS update client container.
 . Stand up a mail relay container such as https://github.com/crazy-max/docker-msmtpd or https://github.com/namshi/docker-smtp.
@@ -3549,7 +3537,7 @@ Work around this and share your solution with others.
 . Roll your own Linux distro.
 . Build, configure and deploy an https://opnsense.org[OPNsense firewall].
 . Set up your own https://headscale.net[headscale] VPN/tailnet for remote LAN access.
-. Improve preview/thumbnail generation in ((Nextcloud)).
+. Improve preview/thumbnail generation in Nextcloud.
 .. Research first: Will you and your users benefit from the change?
 Are there security implications?
 How does default preview generation work?
@@ -3765,7 +3753,7 @@ Specialists in computer science, security, administration, networking and so on 
 ((mario))::
   Provisioning system included with this book to assist with learning how to set up and maintain your own server. Consists of scripts, documentation, and configuration files.
 ((NAS))::
-  Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than mine, described in <<Server>>.
+  Network-attached storage. A server made for storing data. Usually has several HDD bays in a non-rackmount box-like form factor. Likely has less CPU and RAM (and less power usage) than what I describe in <<Server>>.
 ((NIC))::
   Network interface card, also called a network adapter. Hardware for receiving and sending data over a network.
 ((object storage))::
@@ -3773,8 +3761,9 @@ Specialists in computer science, security, administration, networking and so on 
 ((OCR))::
   Optical character recognition. The process of converting images of text to actual text.
 ((OOB))::
-  Out-of-band (management). A means of remote low-level server control including power cycling and console interaction, typically provided by an independently powered and networked embedded computer.
-((OS))::
+  Out-of-band (management). A means of remote low-level server control including power cycling and console interaction, typically provided by an independently powered and networked embedded computer. See also: IPMI.
+(((operating system)))
+OS::
   Operating system.
 ((OSI))::
   Open Source Initiative. More concerned with the "`OSS`" of FOSS.
@@ -3804,8 +3793,6 @@ Specialists in computer science, security, administration, networking and so on 
   The period of time when a software is running; when a set of machine instructions becomes a running process. Also used to describe a set of tools/libraries to facilitate same. May appear as "`runtime environment`" in the latter form.
 ((SeaGL))::
   Seattle GNU/Linux Conference. Held yearly since 2013.
-((self-host))::
-  Run your own server. See also: homelab.
 ((server))::
   A computer that generally stays powered on and uses networking for interaction instead of a monitor, keyboard, or mouse. Also called a "`host`".
 ((service))::
@@ -3813,15 +3800,15 @@ Specialists in computer science, security, administration, networking and so on 
 ((SOHO))::
   Small office / home office.
 ((source control))::
-  A system for tracking changes in source code along with who made the change, why, and when.
+  A system for tracking changes in source code along with who made the change, why, and when. Git is one such system.
 ((source of truth))::
-  The one true document or data point among some number of copies. Used as both plural and singular.
+  The authoritative (home for a) document, perhaps among some number of available choices/copies.
 ((SSD))::
   Solid-state drive. A hard drive that doesn't spin.
 ((SSH))::
   Secure Shell. Provides encrypted remote command line access to a server.
 ((SSL termination))::
-  Accepting encrypted traffic and passing along unencrypted traffic. Act performed by Traefik reverse proxy in a mario-provisioned server. More accurately but rarely called TLS termination--SSL is deprecated and rarely used.
+  Accepting encrypted traffic and passing along unencrypted traffic. Act performed by Traefik reverse proxy in a mario-provisioned server. More accurately and less often referred to as "`TLS termination`". Actual SSL is deprecated.
 ((sysadmin))::
   Portmanteau of "`systems administrator`". A party responsible for the upkeep of a computer system.
 ((threat model))::
