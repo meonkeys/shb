@@ -38,6 +38,8 @@ BUILD_DATE_TIME="$(date)"
 BUILD_LOCALE_LANG="${LANG:-en_US.UTF-8}"
 BUILD_GIT_COMMIT="$(git rev-parse --short HEAD || echo FIXME)"
 BUILD_GIT_BRANCH="$(git branch --show-current || echo FIXME)"
+# Seems to pull the most recent tag if the current commit has more than one.
+# We shouldn't count on this behavior, though.
 BUILD_GIT_TAG="$(git describe --tags --abbrev=0 || echo FIXME)"
 
 if [[ "$OSTYPE" =~ linux-gnu ]]; then
