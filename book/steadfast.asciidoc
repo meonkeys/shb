@@ -113,7 +113,7 @@ You can either lament progress or embrace it.
 I chose to embrace it and decided that I wanted to empower people and help them feel a sense of control over the way they use computers and technology.
 I started meeting all kinds of people from the free software movement, some were really interested in the way the code worked and others, like Adam, were the most interested in how freely available code could help people.
 
-We met in 2009 at LFNW (LinuxFest Northwest), a free community conference in Bellingham, Washington.
+We met in 2009 at ((LFNW)) (LinuxFest Northwest), a free community conference in Bellingham, Washington.
 A mutual friend had suggested that I should check out Seattle sometime when visiting Washington state for LFNW, which meant carpooling from Seattle to Bellingham.
 We'd all meet for lunch in Seattle and then do the two hour car ride up to Bellingham together.
 Those car rides are when we all really started talking about the lack of a free software event in Seattle.
@@ -530,7 +530,7 @@ This book is for people who want to _de-Google_, _de-iTunes_, _de-OneDrive_, _de
 === What is this book _not_?
 
 This is not a comprehensive guide to self-hosting.
-I won't attempt to enumerate the endless ways to mix and match hardware, operating systems, ((isolation)) techniques, and services.
+I won't attempt to enumerate the endless ways to mix and match hardware, operating systems, isolation techniques, and services.
 This book is for small scale.
 Look elsewhere for:
 
@@ -740,6 +740,7 @@ CAUTION: If you don't enjoy troubleshooting and debugging, self-hosting might no
 
 If you don't take care with ((backups)) and security, you'll risk time, energy, and trust with people you care about.
 
+(((HVAC)))
 On-premise self-hosting entails additional meatspace-specific considerations.
 You need to ensure sufficient power, connectivity, HVAC (heating, ventilation, and air conditioning), and security.
 Just don't keep your server outside.
@@ -855,9 +856,10 @@ They are fast and small compared with VMs, allowing higher non-conflicting servi
 That is, you can stand up more services per server and they don't interfere with one another (e.g. by requiring different versions of PHP (PHP: Hypertext Processor)).
 One container typically contains only one service.
 
+(((isolation)))
 Isolation of containers is limited compared to VMs.
 The kernel (the part of the OS that talks directly with the underlying hardware) is shared, for example.
-Limited ((isolation)) keeps the resource and maintenance costs of container-based isolation low compared with VMs.
+Limited isolation keeps the resource and maintenance costs of container-based isolation low compared with VMs.
 
 Containers are excellent for a consistent and resilient personal cloud.
 They are easy to declare (in code), build, deploy, test, and repeat.
@@ -904,7 +906,7 @@ Nextcloud seems more popular outside the USA.
 Not all Nextcloud apps are ready for prime time.
 See <<Customization>>.
 
-===== Jitsi ports
+===== Jitsi and ports
 
 ((Jitsi)) is a self-hostable FOSS video call platform.
 I gave up trying to get Jitsi running in Docker.
@@ -1093,8 +1095,8 @@ At home you can generally just connect directly to your server.
 When you're away or you're trying to share with someone else, you're talking ((WAN access)).
 
 (((router, network device)))
-WAN access is--informally--remote access to services and data running in your ((LAN)).
-One means of allowing WAN access to a service is by port forwarding ((HTTPS)) traffic through your router/firewall.
+WAN access is--informally--remote access to services and data running in your LAN.
+One means of allowing WAN access to a service is by port forwarding HTTPS traffic through your router/firewall.
 Port forwarding without taking additional security measures is both risky and convenient.
 
 NOTE: Consider alternatives to port forwarding, such as using a VPN.
@@ -1180,7 +1182,7 @@ See <<Backups>>.
 * Use firewalls.
 * Use strong passwords.
 * Be very careful when port forwarding or don't do it at all.
-* Be vigilant about all the usual stuff too: ((phishing)), ((malware)), SMS spoofing, and social attacks.
+* Be vigilant about all the usual stuff too: phishing, malware, SMS spoofing, and social attacks.
 ** Take caution with email links and attachments.
 ** Don't install untrusted software.
 Always use HTTPS.
@@ -1291,7 +1293,8 @@ If I needed high availability via clustering I'd be more likely to use Kubernete
 If one computer in a Kubernetes ((cluster)) breaks, services can automatically migrate to working hardware in the cluster.
 Regardless of your tech choices, set a clear expectation to your users as to how long your server might be down when something breaks.
 
-Docker balances features and usability well, making it easy to run one service in ((isolation)).
+(((isolation)))
+Docker balances features and usability well, making it easy to run one service in isolation.
 ((Docker Compose)) adds the ability to define and run the groups of processes necessary to support a whole service (e.g. a web server and its database).
 Kubernetes can do this too, along with everything you _don't_ need to learn unless you are building out an entire virtual data center.
 Docker Compose is a good fit for a single-server setup.
@@ -1310,6 +1313,7 @@ If dependencies are clothes, a Docker ((container)) is a strong and cheap suitca
 You check your suitcase and board the train, then rest easy knowing your suitcase is tucked neatly, separately, next to all the others.
 Docker containers are suitcases while the old way is everyones`' unfolded clothes in a giant pile in the caboose.
 
+(((image)))
 Containers are created from images.
 An image is the blueprint to magic a fresh new suitcase (container) into existence, all packed and ready with the right clothes for your trip.
 An image is built once, stamped with an identifier, and shared, where it can act as the basis for countless consistently-behaving containers.
@@ -1561,6 +1565,7 @@ image::racked-server.jpg[]
 
 The fans are _way_ louder than a desktop, especially when it is under load.
 It is supposed to have decent ventilation, temperature and humidity regulation yet has so far been extremely hardy even below freezing and above 100°F for extended periods of time.
+(((IPMI)))
 It has several enterprise features to ease maintenance such as redundant power supplies, hot-swap drive bays, lots of sensors, and remote management via a web browser or IPMI.
 
 Power consumption averages 130W, or about 1,140kWh per year; roughly $138.15 in Seattle.
@@ -1632,7 +1637,7 @@ There are many aspects to consider when comparing the two options, such as:
 * network availability
 * backups, versioning, security
 
-I went with ((HDD))s for direct, local access to my data.
+I went with HDDs for direct, local access to my data.
 I really wanted to know exactly where they were stored and for ultimate flexibility when I change or try new services.
 Most of my services require direct access anyway.
 
@@ -1644,6 +1649,7 @@ A wired LAN is more reliable and easier to troubleshoot.
 
 ===== Minimum requirements
 
+(((ISP)))
 Here are some typical minimums for hosting at home:
 
 * 100mbps up / 100mbps down ISP connection
@@ -1669,6 +1675,7 @@ Here's a simple diagram I created using https://asciiflow.com to plan cabling an
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
 
+(((IPMI)))
 (((router, network device)))
 Arrows represent ethernet cable.
 The router provides electricity to the mini switch using PoE (power over ethernet).
@@ -1708,7 +1715,7 @@ See <<Full-disk encryption>>.
 Congratulations, you just installed Linux!
 Next steps:
 
-. Optional: after installing Ubuntu, add two ((HDD))s and format them with ((ZFS)).
+. Optional: after installing Ubuntu, add two HDDs and format them with ((ZFS)).
 See <<ZFS setup>>.
 . Download mario onto your admin computer (a separate computer from your server). See <<More resources>>.
 . Run mario on your admin computer to provision your server. See <<_mario>>.
@@ -1717,7 +1724,7 @@ See <<ZFS setup>>.
 
 (((ZFS, setup)))
 The ((OS)) takes care of itself pretty well.
-For more robust data storage, you can add a couple of ((HDD))s and manage them with ((ZFS)).
+For more robust data storage, you can add a couple of HDDs and manage them with ((ZFS)).
 
 ZFS adds many features and some complexity.
 The learning curve is worth it.
@@ -1805,8 +1812,9 @@ reboot
 
 === Server maintenance
 
+(((maintenance, server)))
 (((router, network device)))
-I use short monthly and yearly ((maintenance)) checklists.
+I use short monthly and yearly maintenance checklists.
 I update my checklists about as often as I use them.
 Here are examples you might use as starting points.
 
@@ -1888,7 +1896,7 @@ For example: create a ZFS snapshot and back _that_ up.
 
 Backing up using ZFS snapshots _can_ still cause problems.
 For example, ZFS doesn't guarantee consistent state of backed-up data for running programs.
-Say you restored a ((MariaDB)) database from backup.
+Say you restored a MariaDB database from backup.
 Unless you flushed and locked tables before taking that ZFS snapshot, MariaDB might have been in the middle of a write operation with in-memory data not yet flushed to disk.
 It would need to recover, and the data MariaDB was trying to write may be lost.
 This manner of data loss is rare, and the risk is acceptable for the typical homelab.
@@ -1927,7 +1935,7 @@ It can send your snapshot offsite, following the 3-2-1 rule of thumb.
 == mario
 
 (((Ansible)))
-mario is a tool I built to help you set up and maintain a server.
+((mario)) is a tool I built to help you set up and maintain a server.
 It is mainly a wrapper around the well-established https://ansible.com[Ansible] system provisioner.
 Everything I'll do with mario can also be done manually, directly on the server.
 The advantage of using mario instead is that each change (say, installing a package) will be made consistently and with an audit trail.
@@ -1960,9 +1968,10 @@ mario configuration files are declarative: They contain the _state_ you want you
 mario's `provision.sh` runs Ansible, and Ansible runs the commands for you on the server (like running `chmod` on a file) in a predictable and repeatable manner.
 The desired end state, as declared in the configuration files, is reached and confirmed by Ansible.
 
+(((idempotent)))
 (((provision)))
 After getting mario up and running successfully once, run it again!
-Provisioning with mario is reassuringly ((idempotent)): The system will not change in any meaningful way after the desired state is reached.
+Provisioning with mario is reassuringly idempotent: The system will not change in any meaningful way after the desired state is reached.
 Once `provision.sh` completes successfully, it may be re-run to confirm the server is still in the desired state.
 Then, start tinkering.
 You can find some ideas in <<Exercises>>.
@@ -2105,7 +2114,7 @@ See <<Server domain name>> for details on how to obtain this.
 
 `DNS_API_PROVIDER`::
 Enter the name of your DNS provider here.
-mario configures ((Traefik)) to talk directly with your DNS server for issuing ((Let's Encrypt)) certs.
+mario configures ((Traefik)) to talk directly with your DNS server for issuing Let's Encrypt certs.
 `NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
 Enter credentials for only one provider, the same provider you specified in `DNS_API_PROVIDER`.
 `DNS_RESOLVER_EMAIL`::
@@ -2152,7 +2161,7 @@ Your server needs a name.
 It gets a hostname during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
 I recommend getting a domain name and naming all your services using subdomains (e.g. `cloud.example.com`).
 You can either use a free domain name or buy a domain name from a registrar.
-mario needs the domain name to be able to use a DNS provider with an API for setting up ((HTTPS)) web traffic encryption.
+mario needs the domain name to be able to use a DNS provider with an API for setting up HTTPS web traffic encryption.
 
 You may also want to be able to refer to your server by name when you're away from your LAN if you allow ((WAN access)) and/or if you have a dynamic WAN IP address.
 Check with your DNS provider about adding appropriate records for this purpose (e.g. `A` and `CNAME` records).
@@ -2203,8 +2212,8 @@ Here's a policy with way too much access that nevertheless works:
 
 ==== Dynamic DNS
 
-If you want ((WAN access)) and your ((IP address)) changes periodically, it's handy to have this updated in DNS automatically.
-Similar to Traefik setting up ((HTTPS)) certs, this uses a DNS provider API.
+If you want ((WAN access)) and your IP address changes periodically, it's handy to have this updated in DNS automatically.
+Similar to Traefik setting up HTTPS certs, this uses a DNS provider API.
 There are several options here, all left as exercises for the reader.
 One idea is to find and stand up a dynamic DNS client for your Docker image.
 These are generally very simple services to set up.
@@ -2300,7 +2309,7 @@ On your server, start ((Traefik)) with `dc traefik up -d`.
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser to see the Traefik dashboard.
 While you are waiting for the dashboard, tail the logs with `dc traefik logs -f`.
 
-It may take that minute or two for ((Traefik)) to set up ((Let's Encrypt)) ((HTTPS)) encryption certs, so don't worry if you get invalid cert warnings at first.
+It may take that minute or two for ((Traefik)) to set up Let's Encrypt HTTPS encryption certs, so don't worry if you get invalid cert warnings at first.
 You should see something like this for a working ((Traefik)) service:
 
 // These were some really long lines.
@@ -2349,14 +2358,16 @@ This is idempotent: running and up-to-date services are left unchanged.
 
 === Encryption certificates
 
+(((HTTPS)))
 (((encryption, HTTPS)))
 ((Traefik)) will automatically install ((Let's Encrypt)) ((cert))s to encrypt HTTP traffic.
 The certs are issued using a https://doc.traefik.io/traefik/https/acme/#dnschallenge[DNS challenge].
 This way to https://letsencrypt.org/docs/challenge-types/[authenticate a cert request] is especially handy for servers with zero public-facing inbound ports, allowing convenient HTTPS even within closed LANs.
 The DNS challenge is configured using labels in Traefik's `compose.yml` configuration file.
 
-Traefik can accept ((HTTPS)), decrypt it, and pass along unencrypted HTTP to web services.
-This is called ((SSL termination)), and is configured by lines in Traefik's `compose.yml` mentioning `acme`.
+(((SSL termination)))
+Traefik can accept HTTPS, decrypt it, and pass along unencrypted HTTP to web services.
+This is called SSL termination, and is configured by lines in Traefik's `compose.yml` mentioning `acme`.
 
 (((router, network device)))
 Take a look at a `compose.yml` file for any service included with mario.
@@ -2477,10 +2488,10 @@ The server-side commands for managing services are standardized: You'll see the 
 
 === Nextcloud: file sync and share
 
-(((Nextcloud, overview)))
+(((Nextcloud)))
 A _Steadfast_ personal cloud needs convenient file sharing and synchronization.
 Nextcloud is an excellent choice given its stability and popularity.
-It can be daunting to self-host, but ((mario)) makes it easy and fun.
+It can be daunting to self-host, but mario makes it easy and fun.
 
 [#image-screenshot-nextcloud]
 .Nextcloud Files app screenshot showing files, folders, and share buttons.
@@ -2511,7 +2522,7 @@ See <<Various issues>>.
 
 === Jellyfin: stream audio and video
 
-(((Jellyfin, overview)))
+(((Jellyfin)))
 https://jellyfin.org[Jellyfin] is a personal streaming media server.
 mario will set up a basic Jellyfin server.
 
@@ -2527,7 +2538,6 @@ image::jellyfin.png[align="center",scaledwidth=80%]
 . Follow web-based setup steps.
 
 (((Jellyfin, using a GPU with)))
-(((GPU)))
 If you have a GPU, look into https://jellyfin.org/docs/general/administration/hardware-acceleration/[hardware acceleration].
 This is useful if videos can't be played directly by a client and need to be transcoded on the fly.
 Jellyfin can transcode using only CPU, but it is way faster with a GPU.
@@ -2628,7 +2638,7 @@ The `exec` command says we want to run something in a container.
 This runs the `console` utility in the `app` service container.
 The second line indicates necessary database migrations (schema and data updates) should be run using `prod` settings, without interactive prompts.
 
-This is ((idempotent)), as database migrations should be.
+This is idempotent, as database migrations should be.
 After the first run, subsequent runs output: `[OK] Already at the latest version`.
 
 It's unclear why thes migration is not automatically performed during an upgrade.
@@ -2803,7 +2813,7 @@ networks:
     external: true
 ----
 
-Note the middleware to only allow traffic from your ((LAN)).
+Note the middleware to only allow traffic from your LAN.
 This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
 
 .label from Traefik configuration allowing only LAN access
@@ -2821,7 +2831,7 @@ Once you get that running, you can use the https://apps.nextcloud.com/apps/integ
 
 (((Pi-hole)))
 (((DNS)))
-Running a https://pi-hole.net[Pi-hole] service in your ((LAN)) helps block advertisements, trackers, and bad actors using DNS block lists.
+Running a https://pi-hole.net[Pi-hole] service in your LAN helps block advertisements, trackers, and bad actors using DNS block lists.
 
 (((router, network device)))
 Clients (laptops, phones, etc) on your network use the Pi-hole as their DNS server, generally as part of DHCP (Dynamic Host Configuration Protocol) auto-configuration by your router or Pi-hole itself (if you use Pi-hole as your DHCP server).
@@ -2839,16 +2849,15 @@ image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
 
 (((router, network device)))
 Queries for domain names not on any block list will be answered directly or sent upstream.
-I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my ((LAN)) as necessary.
+I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my LAN as necessary.
 
 It's easy to block individual domain names or entire lists as you see fit.
 I've used this as an "`impulse blocker`", helping the kids avoid distractions during remote school.
 
 The Pi-Hole also has a list of local DNS entries.
-I add a few domain names to this list for servers inside my ((LAN)).
+I add a few domain names to this list for servers inside my LAN.
 
 Note that some clients will by default bypass an auto-configured DNS server such as Pi-hole.
-(((HTTPS)))
 For example, https://support.mozilla.org/kb/firefox-dns-over-https[DNS over HTTPS in Firefox].
 
 === Single sign-on
@@ -2946,7 +2955,7 @@ I'll come back to mobile later in the following sections.
 
 Nextcloud is able to use ((object storage)) for primary data storage.
 This is an advanced topic left as an exercise to the reader.
-I'll assume primary storage on a local ((HDD)) set up by mario.
+I'll assume primary storage on a local HDD set up by mario.
 
 ==== Security
 
@@ -3004,11 +3013,11 @@ dc nextcloud exec app \
   curl -I https://cloud.example.com/apps/settings/js/esm-test.mjs
 ----
 
-Some ((maintenance)) requires the `occ` tool (short for "`ownCloud command`").
+Some maintenance requires the `occ` tool (short for "`ownCloud command`").
 Run it with `dc nextcloud exec --user www-data app php occ`.
 
 Add `/data/video` as an External storage.
-Media files uploaded there will automatically appear in ((Jellyfin)).
+Media files uploaded there will automatically appear in Jellyfin.
 First, visit `/settings/apps/featured` and install the "`External storage support`" app.
 Next, visit `/settings/admin/externalstorages` and install the "`External storage support`" app.
 
@@ -3023,7 +3032,7 @@ Add `/data/music` as an External storage, similar to `/data/video`.
 ==== More maintenance tips
 
 Visit `/settings/admin/overview` periodically to check for system and security issues that may require manual intervention.
-Perform any recommended ((maintenance)) on that page.
+Perform any recommended maintenance on that page.
 Ignore the Update section, it may disagree with Docker Hub.
 Visit `/settings/admin/logging` periodically to review all server-side log messages.
 
@@ -3061,7 +3070,7 @@ mario includes an author-approved selection of the https://docs.nextcloud.com/se
 
 I've only had one performance issue in the years I've hosted Nextcloud (knock wood!), so I'll mention it here.
 I was seeing slow web requests along with https://github.com/nextcloud/server/issues/35311[lots of database activity].
-This had me under the hood with ((MariaDB)) for a while.
+This had me under the hood with MariaDB for a while.
 They've since https://github.com/nextcloud/server/pull/33540[fixed the root cause] so it isn't a problem for new installations.
 
 ==== Customization
@@ -3423,7 +3432,7 @@ After brief reviews, I find existing self-hosting solutions generally:
 * make opinionated tech choices I don't agree with
 * have a limited list of apps in their app stores and exclude the ones I want
 * have too many apps in their app store, without good ways to compare quality, privacy, features
-* are ((GUI)) (graphical user interface)-focused where I prefer working on a command line
+* are GUI (graphical user interface)-focused where I prefer working on a command line
 
 Still, check `'em out.
 They might work better for you if you don't need the level of power and control provided by this book.
@@ -3503,11 +3512,11 @@ Hint: check if `/host/var/run/reboot-required` exists.
 . Stand up a second Nextcloud service for experiments.
 Use it to test out the latest release or a custom app.
 . Try Nextcloud with ((object storage)) for primary storage.
-. Adapt this guide to a ((Linux)) distribution besides Ubuntu.
+. Adapt this guide to a Linux distribution besides Ubuntu.
 . Help resolve a bug mentioned in this book.
 . Set up periodic automatic offsite backups.
 . Add a GPU to your server.
-. Enable ((GPU)) transcoding in ((Jellyfin)).
+. Enable GPU transcoding in Jellyfin.
 . Sign the open letter at https://publiccode.eu[Public Money, Public Code] because software paid for with taxes should be FOSS.
 . Aggregate logs.
 . Pick a Docker container that doesn't need to be able to initiate outbound network connections.
@@ -3521,7 +3530,7 @@ Feed it logs from various services.
 . Set up https://suricata.io[Suricata] network analysis and threat detection.
 . Try running containers with https://podman.io[podman].
 . Read up on other ways to isolate processes, e.g. FreeBSD jails and chroot.
-. Contribute to ((mario)).
+. Contribute to mario.
 . Move secrets used by mario into an Ansible vault or a self-hosted service intended for managing secrets.
 . Adapt mario to use ((podman)).
 . Adapt mario to use https://kubernetes.io[Kubernetes].
@@ -3541,9 +3550,9 @@ Review the Traefik docs on this topic and https://github.com/wollomatic/traefik-
 . https://docs.docker.com/network/packet-filtering-firewalls/#docker-and-ufw[Uncomplicated Firewall and Docker do not get along well].
 Work around this and share your solution with others.
 . Try https://nixos.org[Nix and NixOS].
-. Roll your own ((Linux)) distro.
+. Roll your own Linux distro.
 . Build, configure and deploy an https://opnsense.org[OPNsense firewall].
-. Set up your own https://headscale.net[headscale] VPN/tailnet for remote ((LAN)) access.
+. Set up your own https://headscale.net[headscale] VPN/tailnet for remote LAN access.
 . Improve preview/thumbnail generation in ((Nextcloud)).
 .. Research first: Will you and your users benefit from the change?
 Are there security implications?
@@ -3551,7 +3560,7 @@ How does default preview generation work?
 What file types are supported by the default previewer and other previewers?
 How much disk space is used?
 How fast is it, subjectively and objectively?
-What ((maintenance)) will it require once enabled?
+What maintenance will it require once enabled?
 .. Create a test bed with a clean install and many preview-able files of various file formats.
 Find or write code for recording objective performance metrics (e.g. time it takes to generate previews for a folder containing many files of various types).
 Consider both client- and server-side performance.
@@ -3673,6 +3682,8 @@ Specialists in computer science, security, administration, networking and so on 
   Noun: CPU or GPU resources expended when running software services.
 ((container))::
   Running instance of an image. Containers may also be referred to as "`guests`", although this is more commonly used to describe VMs.
+((CPU))::
+  Central processing unit. The main brain of the computer; the place where most of the math happens.
 ((data))::
   Noun, plural. Yes, I use the annoying plural form! Sorry, old habit.
 ((data sovereignty))::
@@ -3715,6 +3726,8 @@ Specialists in computer science, security, administration, networking and so on 
   A hand-wavy way of saying something is self-evidently wonderful.
 ((groupware))::
   Software for group collaboration. Loosely: mail, calendar, and contacts. Sometimes includes collborative editing of office documents and spreadsheets.
+((GPU))::
+  Graphics processing unit. Originally intended for graphics. Found to be useful for many specialized compute workloads including transcoding video.
 ((GUI))::
   Graphical user interface.
 ((HDD))::
@@ -3737,6 +3750,8 @@ Specialists in computer science, security, administration, networking and so on 
   Intelligent Platform Management Interface. Used for remote server management including reboots and OS installs.
 ((IPS))::
   Intrusion prevention system. Mitigates the risk of penetration.
+((isolation))::
+  For software services: Keep separate from others. Eases sysadmin tasks such as preventing dependency version conflicts.
 ((ISP))::
   Internet service provider.
 ((kernel))::
