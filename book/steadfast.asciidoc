@@ -724,9 +724,6 @@ This happens less often with FOSS because anyone can simply fork (copy, modify, 
 ** deploy trustworthy, offline generative AI (artificial intelligence) models
 ** enjoy features that don't exist in public services
 
-(((Nextcloud)))
-See https://nextcloud.com/athome/ for more self-hosting propaganda and app ideas.
-
 === Why you should not self-host
 
 Self-hosting is more complex and time-consuming than paying for the same functionality, especially at first.
