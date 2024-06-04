@@ -292,7 +292,6 @@ A copy of the AGPL is included in `mario/COPYING`.
 
 === Disclaimer
 
-(((warranty, none offered)))
 I offer no warranty and no guarantee.
 Buying or reading this text is not an agreement for support.
 
@@ -887,7 +886,7 @@ See <<Reverse Proxy>> for more about Traefik.
 
 ===== Nextcloud bugs
 
-(((Nextcloud, surprises)))
+(((Nextcloud, surprises with)))
 I was frustrated with some bugs in Nextcloud.
 These felt like the most urgent since I rely heavily on it.
 
@@ -1202,7 +1201,7 @@ You may optionally use ZFS for storage (`/data`) on your server following <<ZFS 
 
 For the root (`/`) partition, I recommend using ext4 instead of ZFS to:
 
-* stick as closely as possible to the default ((Ubuntu)) install
+* stick as closely as possible to the default Ubuntu install
 * avoid Docker filesystem clutter
 ** when `/var/lib/docker` is on ZFS, many Docker-related filesystems are created, cluttering up `zfs list` a bit
 * avoid taking ZFS snapshots of the OS, since
@@ -1223,9 +1222,10 @@ Other ZFS concepts worth learning about: fragmentation, ARC (adaptive replacemen
 === Operating system
 
 (((operating system)))
-Linux is a popular and reasonable choice for self-hosting.
-I recommend a 64-bit ((Ubuntu)) ((Linux)) server with at least 2GB memory and 30GB storage.
-((Ubuntu)) ((LTS)) (long-term support) releases are the most stable and I recommend them.
+(((Ubuntu)))
+((Linux)) is a popular and reasonable choice for self-hosting.
+I recommend a 64-bit Ubuntu Linux server with at least 2GB memory and 30GB storage.
+Ubuntu ((LTS)) (long-term support) releases are the most stable and I recommend them.
 _Steadfast_ specifically mentions 24.04, the LTS release from April 2024.
 24.04 is stable today, and will receive updates https://ubuntu.com/about/release-cycle[until April 2034], promising many more years of stability until _Steadfast_ must be revised.
 Installing the OS is generally quick and painless, see <<OS install>>.
@@ -1278,7 +1278,7 @@ mario uses ((Docker)) to run services in containers.
 Docker is but one of many valid choices for how to isolate and run services.
 ((VM))s are also often used for this purpose.
 See <<Containers == happy>> for a comparison of the two.
-If you're interested in ((VM))s (instead of or in addition to containers), check out https://proxmox.com[Proxmox].
+If you're interested in VMs (instead of or in addition to containers), check out https://proxmox.com[Proxmox].
 
 ((Kubernetes)) also works well for running services.
 Try Kubernetes (especially one of the interesting micro-versions) if you are more familiar or interested in that.
@@ -1329,7 +1329,7 @@ Think:
 ** containers are temporary
 ** temporary containers provide robust, reproducible services
 * cattle, not pets
-** hand-managed ((VM))s are burdensome pets
+** hand-managed VMs are burdensome pets
 ** apologies to the cattle--in this analogy they are expendable
 * stateless
 ** persistent data can and must be defined explicitly
@@ -1399,7 +1399,7 @@ services:
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
 
-HTTPS encryption is configured using other labels on the ((Traefik)) container.
+HTTPS encryption is configured using other labels on the Traefik container.
 See <<Encryption certificates>> for details.
 
 == Implementation
@@ -1427,7 +1427,7 @@ The good ones will likely share at least some of these traits.
 [#traits-of-good-services]
 ****
 * Easy to install and self-hosting instructions exist.
-* Works with your preferred deployment method, e.g. has a popular and well-maintained Docker image, has instructions for integrating with ((Docker Compose)) and ((Traefik)).
+* Works with your preferred deployment method, e.g. has a popular and well-maintained Docker image, has instructions for integrating with ((Docker Compose)) and Traefik.
 * Community uses tools such as moderated chats, forums, news, mailing lists, and meetups.
 * Recent source code activity: releases, contributions, news.
 * Uses a FOSS software license.
@@ -1712,7 +1712,7 @@ See <<ZFS setup>>.
 
 ==== ZFS setup
 
-(((ZFS, setup)))
+(((ZFS, setting up)))
 The OS takes care of itself pretty well.
 For more robust data storage, you can add a couple of HDDs and manage them with ((ZFS)).
 
@@ -1879,7 +1879,7 @@ Having useful backups is one critically important practice you'll rarely get cre
 
 Check your backups regularly to make sure they work.
 
-(((ZFS, snapshots)))
+(((ZFS, snapshots and)))
 Make consistent backups of everything on your server, such that the services running are unaware they are even being backed up.
 For example: create a ZFS snapshot and back _that_ up.
 
@@ -1967,7 +1967,7 @@ Once `provision.sh` completes successfully, it may be re-run to confirm the serv
 Then, start tinkering.
 You can find some ideas in <<Exercises>>.
 
-If you are familiar with and prefer using ((VM))s, you may want to first create a VM and run mario against that until you're ready to run mario pointed at your real server.
+If you are familiar with and prefer using VMs, you may want to first create a VM and run mario against that until you're ready to run mario pointed at your real server.
 Or perhaps your real server _is_ a VM--that'll work fine too.
 
 === SSH setup
@@ -2104,7 +2104,7 @@ See <<Server domain name>> for details on how to obtain this.
 
 `DNS_API_PROVIDER`::
 Enter the name of your DNS provider here.
-mario configures ((Traefik)) to talk directly with your DNS server for issuing Let's Encrypt certs.
+mario configures Traefik to talk directly with your DNS server for issuing Let's Encrypt certs.
 `NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
 Enter credentials for only one provider, the same provider you specified in `DNS_API_PROVIDER`.
 `DNS_RESOLVER_EMAIL`::
@@ -2293,13 +2293,14 @@ The `dc` script will run `sudo` for you.
 
 ==== Start reverse proxy
 
+(((Traefik)))
 Stand up the ((reverse proxy)) first.
-On your server, start ((Traefik)) with `dc traefik up -d`.
+On your server, start Traefik with `dc traefik up -d`.
 If that worked, wait a minute or two and visit `\https://traefik.example.com` in a web browser to see the Traefik dashboard.
 While you are waiting for the dashboard, tail the logs with `dc traefik logs -f`.
 
-It may take that minute or two for ((Traefik)) to set up Let's Encrypt HTTPS encryption certs, so don't worry if you get invalid cert warnings at first.
-You should see something like this for a working ((Traefik)) service:
+It may take that minute or two for Traefik to set up Let's Encrypt HTTPS encryption certs, so don't worry if you get invalid cert warnings at first.
+You should see something like this for a working Traefik service:
 
 // These were some really long lines.
 // I shortened the service name, removed dates and "INF" (info log level), and replaced https://acme-v02.api.letsencrypt.org/directory with an ellipsis.
@@ -2349,7 +2350,7 @@ This is idempotent: running and up-to-date services are left unchanged.
 
 (((HTTPS)))
 (((encryption, HTTPS)))
-((Traefik)) will automatically install ((Let's Encrypt)) ((cert))s to encrypt HTTP traffic.
+Traefik will automatically install ((Let's Encrypt)) ((cert))s to encrypt HTTP traffic.
 The certs are issued using a https://doc.traefik.io/traefik/https/acme/#dnschallenge[DNS challenge].
 This way to https://letsencrypt.org/docs/challenge-types/[authenticate a cert request] is especially handy for servers with zero public-facing inbound ports, allowing convenient HTTPS even within closed LANs.
 The DNS challenge is configured using labels in Traefik's `compose.yml` configuration file.
@@ -2802,7 +2803,7 @@ networks:
 ----
 
 Note the middleware to only allow traffic from your LAN.
-This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the ((Traefik)) container to set up the ((middleware)), for example:
+This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding label on the Traefik container to set up the ((middleware)), for example:
 
 .label from Traefik configuration allowing only LAN access
 [source#lan-only-traefik-conf-line,yaml]
@@ -2905,7 +2906,7 @@ From now on, your server will require public key authentication for SSH logins.
 
 mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
-You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's ((Traefik)) label.
+You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's Traefik label.
 For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
 
 .patch for WAN access to Nextcloud (🏠 admin computer)
@@ -2924,7 +2925,7 @@ I wanted to include a lot of additional details without cluttering up <<Services
 
 ==== Basic install
 
-(((Nextcloud, install)))
+(((Nextcloud, installing)))
 A basic (default, un-customized) Nextcloud install provides remote file storage, organization, and sharing.
 It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional metadata about those files and folders in a database.
 You access it via a web browser and there is a desktop client to sync files locally, similar to Dropbox, Google Drive, and OneDrive.
@@ -2944,7 +2945,7 @@ I'll assume primary storage on a local HDD set up by mario.
 
 ==== Security
 
-(((Nextcloud, security)))
+(((Nextcloud, security and)))
 A basic Nextcloud install appears to have excellent security.
 The source is in heavy use and is backed by a solid company with a reputation that depends on their commitment to security.
 They make it easy to lock down and vet (it is FOSS after all).
@@ -3035,7 +3036,7 @@ NOTE: Nextcloud's blog posts and marketing materials use different version names
 
 ===== Release cadence
 
-(((Nextcloud, release cadence)))
+(((Nextcloud, release cadence of)))
 https://docs.nextcloud.com/server/stable/admin_manual/release_schedule.html[A major release is shipped every four months].
 The Nextcloud apps I care about seem to keep up with this pace, but it does feel a bit aggressive to me.
 Developers need to modify their apps each time at least slightly, or heavily if breaking API changes occur.
@@ -3060,7 +3061,7 @@ They've since https://github.com/nextcloud/server/pull/33540[fixed the root caus
 
 ==== Customization
 
-(((Nextcloud, apps)))
+(((Nextcloud, apps for)))
 Nextcloud can be used as-is (see <<Basic install>>) or heavily customized.
 The simplest and safest way to customize is by installing an app from the built-in app store (`/settings/apps`), especially if an app is marked "`featured`".
 These _Nextcloud apps_ are installed on the server, expanding the functionality of a base Nextcloud instance.
@@ -3116,7 +3117,7 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 
 ==== Full text search
 
-(((Nextcloud, search)))
+(((Nextcloud, full text search and)))
 This app allows you to search through all content of all documents on your server.
 The search syntax is hard to get right.
 It https://github.com/nextcloud/fulltextsearch/issues/601[uses a lot of CPU] and is memory-hungry too.
@@ -3129,7 +3130,7 @@ The GitHub project repositories are pretty quiet. See:
 
 ==== Mobile
 
-(((Nextcloud, mobile)))
+(((Nextcloud, mobile and)))
 Nextcloud works OK as the backend for a mobile device.
 It can be your single reliable source of truth for contacts, calendars, tasks, and most everything else that matters on mobile.
 You can open files and edit them, but the UI/UX is bad.
@@ -3197,7 +3198,7 @@ See also: <<traits-of-good-services>> and <<traits-of-bad-services>> in <<Choose
 
 ==== Nextcloud Office
 
-(((Nextcloud, office)))
+(((Nextcloud, office and)))
 https://nextcloud.com/office/ gives some strong hints how the company behind Nextcloud wants us to think of "`office`" and their plans for it as a suite of related tools.
 They clearly intend a holistic, integrated office experience, and Nextcloud can be configured to be used in this manner.
 https://nextcloud.com/office/ covers editing office documents (rich text and spreadsheets) collaboratively, along with uses for the Notes, Collectives, and Tables apps.
@@ -3223,7 +3224,7 @@ Workarounds:
 
 ===== Mobile text editing is hard
 
-(((Nextcloud, mobile)))
+(((Nextcloud, mobile and)))
 Nextcloud makes it easy to get to your stuff via mobile devices, but editing is a pain.
 
 This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
@@ -3327,7 +3328,7 @@ Make sure it works with all clients you plan to use it with (e.g. desktop, mobil
 
 ==== AIO installer
 
-(((Nextcloud, install)))
+(((Nextcloud, installing)))
 Among the myriad Nextcloud install methods, there's a relatively new and interesting AIO ("`all-in-one`") installer (https://nextcloud.com/all-in-one).
 It's free for an instance with less than 100 users.
 The AIO takes a different approach than mario, it configures and manages multiple Nextcloud-related service containers for you.
@@ -3379,7 +3380,7 @@ https://yunohost.org[YunoHost]::
 https://casaos.io[CasaOS]::
   New, interesting, very little documentation.
 https://runtipi.io[Runtipi]::
-  New, interesting, uses ((Docker Compose)) and ((Traefik)).
+  New, interesting, uses ((Docker Compose)) and Traefik.
 
 These look intriguing, and it's hopeful (and overwhelming) to see many options in this space.
 I evaluated these only just enough to get the sense they didn't fit my wants and needs.
@@ -3614,7 +3615,7 @@ Thanks to _Pro Git 2_, my inspiration to switch to Asciidoctor.
 
 Thanks to the contributors to the myriad FOSS programs I used to create this book, especially John MacFarlane and the Pandoc team, Dan Allen and the Asciidoctor team, and Bram Moolenaar and the Vim team (rest in peace, Bram).
 
-Thanks to Rob Smith and all #underlug for help with hardware, networking, ((Ansible)), and ((Traefik)).
+Thanks to Rob Smith and all #underlug for help with hardware, networking, Ansible, and Traefik.
 
 Thanks to the "`Deadbeat Dads`" Bryan Daisley and Rob Floberg for your invaluable feedback.
 
