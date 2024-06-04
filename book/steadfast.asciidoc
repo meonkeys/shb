@@ -206,7 +206,7 @@ We will:
 * Save money by efficiently running lots of services on our own hardware with negligible incremental cost.
 * Do well by our friends, families, and social groups.
 * Do things we can't do with public services because we have full access to all our own raw data.
-* Adapt and grow as software evolves, taking our data and ((metadata)) along with us.
+* Adapt and grow as software evolves, taking our data and metadata along with us.
 * Share what and when it makes sense to share with whom we trust.
 
 This is the book I wish I'd had when I was struggling to provide a safe online experience for my kids.
@@ -792,7 +792,7 @@ Full speed ahead!
 === Photo search by location
 
 Here's one more pro-personal-cloud example.
-This one worked because I am comfortable storing location ((metadata)) in my self-hosted photos.
+This one worked because I am comfortable storing location metadata in my self-hosted photos.
 
 A while back I was trying to find some particular photos from a pile of thousands, taking up terabytes on disk.
 I knew where I was when I took the photos (within 10 miles or so) and my photos have embedded locations.
@@ -1186,7 +1186,7 @@ See <<Backups>>.
 ** Take caution with email links and attachments.
 ** Don't install untrusted software.
 Always use HTTPS.
-** Use a special passphrase with your ((mobile)) carrier as an extra layer of authentication.
+** Use a special passphrase with your mobile carrier as an extra layer of authentication.
 ** Question urgency and suspicious requests.
 * Send unrecognized calls to voicemail.
 * Pay attention to data breaches and protect your identity.
@@ -1572,7 +1572,7 @@ Power consumption averages 130W, or about 1,140kWh per year; roughly $138.15 in 
 That's about as much as a bright incandescent light bulb, and it's a bit wasteful for one user.
 Five users though?
 ~228kWh/year each.
-That's less than the cloud server hardware required for a ((mobile)) device making use of Google's or Apple's clouds.
+That's less than the cloud server hardware required for a mobile device making use of Google's or Apple's clouds.
 Further reading on this topic:
 
 * https://science.time.com/2013/08/14/power-drain-the-digital-cloud-is-using-more-energy-than-you-think/[The Surprisingly Large Energy Footprint of the Digital Economy] by Bryan Walsh
@@ -1596,7 +1596,7 @@ I usually run mario using a laptop as my admin computer.
 
 ==== Test devices
 
-Your users will have their own computers and ((mobile)) devices (their _clients_).
+Your users will have their own computers and mobile devices (their _clients_).
 Maintain a couple of different clients so you have comparable environments to better help your users.
 
 (((dogfooding)))
@@ -2566,7 +2566,7 @@ I think it would be just so cool to be able to https://features.jellyfin.org/pos
 
 ===== Feature: Offline mobile media
 
-I want a Jellyfin ((mobile)) app that will automatically cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
+I want a Jellyfin mobile app that will automatically cache media and https://features.jellyfin.org/posts/218/support-offline-mode-on-android-mobile[allow playing while offline].
 
 Workaround: there are two separate mobile apps that can download and cache media for offline playing.
 https://github.com/jmshrv/finamp[Finamp] for music, and https://github.com/jarnedemeulemeester/findroid[Findroid] for video.
@@ -2941,14 +2941,14 @@ I wanted to include a lot of additional details without cluttering up <<Services
 
 (((Nextcloud, install)))
 A basic (default, un-customized) Nextcloud install provides remote file storage, organization, and sharing.
-It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional ((metadata)) about those files and folders in a database.
+It keeps track of actual files and folders stored somewhere (local, remote, cloud, wherever) and tracks additional metadata about those files and folders in a database.
 You access it via a web browser and there is a desktop client to sync files locally, similar to Dropbox, Google Drive, and OneDrive.
 
 I've come to _really_ trust file sync with the Nextcloud desktop app.
 If I see a check mark on my desktop app, I know everything is properly synchronized with the server.
 I am constantly creating and editing content locally and counting on sync to work (usually on my desktop computer), or creating and editing directly in Nextcloud via the web UI.
 
-There are also apps for ((mobile)) devices.
+There are also apps for mobile devices.
 I'll come back to mobile later in the following sections.
 
 ==== Object storage
@@ -3108,7 +3108,7 @@ When in doubt, start small (default Nextcloud install), and roll these out thoug
 |Forms |Google Forms alternative |*Yes*.
 |Full text search |search through all documents |*Maybe*. Fast. Buggy. Likely dormant project. See <<Full text search>>.
 |Holiday Calendars |easily add public holiday calendars |*Yes*. The configuration for this app shows up under "`Personal`" -> "`Availability`" for me, not "`Groupware`" (although the URL path is `/settings/user/groupware`).
-|Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate ((metadata)).
+|Maps |maps and directions |*Yes*. Grab a cup of tea if you have lots of photos with GPS coordinate metadata.
 |Mail |email |*No opinion*. I tried it briefly and it choked on my bazillion Gmail messages. And yes, I do want to de-Gmail someday.
 |Memories |photos |*Yes*. Requires Photos.
 |News |track blogs and news via rss/atom feeds |*Yes*.
@@ -3227,7 +3227,7 @@ Here's a selection of my favorite bugs and feature requests for Nextcloud.
 
 ===== Spinner on mobile
 
-When you first open the Nextcloud ((mobile)) app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app.
+When you first open the Nextcloud mobile app, a loading spinner shows up in front of a cached view of whatever files and folders existed the last time you use the app.
 If you ignore it and tap to navigate your way into a folder or open a file, you may end up tapping a different one than you intended because the folder order can change _as you are tapping the screen_.
 
 Workarounds:
@@ -3238,7 +3238,7 @@ Workarounds:
 ===== Mobile text editing is hard
 
 (((Nextcloud, mobile)))
-Nextcloud makes it easy to get to your stuff via ((mobile)) devices, but editing is a pain.
+Nextcloud makes it easy to get to your stuff via mobile devices, but editing is a pain.
 
 This is not a Nextcloud-only problem; I find _all_ mobile text entry and editing cumbersome.
 This applies to email, plain text, Markdown, and office documents.
@@ -3337,7 +3337,6 @@ endif::[]
 
 Proceed carefully with the End-to-End Encryption Nextcloud app.
 Review https://github.com/nextcloud/end_to_end_encryption/issues[known issues], make sure you can live with all those, then test it out thoroughly using a throwaway/sandbox Nextcloud instance.
-(((mobile)))
 Make sure it works with all clients you plan to use it with (e.g. desktop, mobile).
 
 ==== AIO installer
