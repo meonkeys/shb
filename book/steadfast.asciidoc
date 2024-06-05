@@ -68,31 +68,29 @@ Seattle, Washington, USA.
 
 ifdef::backend-epub3[]
 --
-EPUB ISBN 979-8-9908615-0-3.
+EPUB ISBN: 979-8-9908615-0-3
 --
 endif::[]
 
 ifdef::shb-screenPDF[]
 --
-PDF ISBN 979-8-9908615-2-7.
+PDF ISBN: 979-8-9908615-2-7
 --
 endif::[]
 
-ifdef::shb-printPDF[]
+ifdef::shb-printPDF+printQuality-standard[]
 --
-ifdef::printQuality-standard[]
-Paperback ISBN 979-8-9908615-1-0.
-endif::[]
-ifdef::printQuality-premium[]
-Premium paperback ISBN 979-8-9908615-3-4.
-endif::[]
+Paperback ISBN: 979-8-9908615-1-0
 --
 
 --
-// This just for fun.
-// See https://en.wikipedia.org/wiki/Printer's_key
-[.text-center]
-10 9 8 7 6 5 4 3 2 1
+Library of Congress Control Number: 2024911437
+--
+endif::[]
+
+ifdef::shb-printPDF+printQuality-premium[]
+--
+Premium paperback ISBN: 979-8-9908615-3-4
 --
 endif::[]
 
