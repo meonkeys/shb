@@ -1,4 +1,4 @@
-title: 📖 Ebook release
+title: 📖 Ebook
 category: announcement
 date: 2024-05-28
 modified: 2024-06-01
