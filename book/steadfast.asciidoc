@@ -630,6 +630,11 @@ The impact spreads to the groups you are a part of, as does the opportunity for 
 
 I believe self-hosting ((FOSS)) is doable and affords many practical benefits over non-FOSS.
 
+// without this forced pagebreak we get a few orphaned words
+ifdef::shb-printPDF[]
+<<<
+endif::[]
+
 Hang in there and give me some feedback.
 You'll strike your own balance between idealism and practicality and I'm interested to know where you land.
 
@@ -1198,8 +1203,8 @@ Further reading:
 I recommend (and will demonstrate) starting with one ((ext4)) filesystem and, optionally, one ZFS filesystem.
 ext4 is the stable, simple, and default filesystem for Ubuntu.
 ZFS (originally: Zettabyte File System) provides encryption, lightweight snapshots and ((RAID)) (redundant array of inexpensive disks).
-You may optionally use ZFS for storage (`/data`) on your server following <<ZFS setup>>.
 
+You may optionally use ZFS for storage (`/data`) on your server following <<ZFS setup>>.
 For the root (`/`) partition, I recommend using ext4 instead of ZFS to:
 
 * stick as closely as possible to the default Ubuntu install
@@ -2473,6 +2478,8 @@ Mobile usage is high for the users I support, so that was also a factor when I c
 Nextcloud, Jellyfin, and Wallabag have mobile apps and integrations, and I use these often.
 
 The server-side commands for managing services are standardized: You'll see the pattern `dc SERVICE ACTION ARGS` repeated many times.
+
+// this forced page break was originally just to improve the print PDF layout, but I find it doesn't hurt the screen PDF layout so I don't use an ifdef::shb-printPDF[]
 
 <<<
 
