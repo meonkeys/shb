@@ -80,7 +80,12 @@ endif::[]
 
 ifdef::shb-printPDF[]
 --
+ifdef::printQuality-standard[]
 Paperback ISBN 979-8-9908615-1-0.
+endif::[]
+ifdef::printQuality-premium[]
+Premium paperback ISBN 979-8-9908615-3-4.
+endif::[]
 --
 
 --

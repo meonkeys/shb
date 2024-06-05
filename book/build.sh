@@ -41,6 +41,8 @@ BUILD_GIT_BRANCH="$(git branch --show-current || echo FIXME)"
 # Seems to pull the most recent tag if the current commit has more than one.
 # We shouldn't count on this behavior, though.
 BUILD_GIT_TAG="$(git describe --tags --abbrev=0 || echo FIXME)"
+# standard or premium - only applies to print PDF
+BUILD_PRINT_QUALITY="${SHB_FORCE_PRINT_QUALITY:-standard}"
 
 if [[ "$OSTYPE" =~ linux-gnu ]]; then
     BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
@@ -84,6 +86,7 @@ docker run \
     --env BUILD_GIT_TAG="$BUILD_GIT_TAG" \
     --env BUILD_OS_RELEASE="$BUILD_OS_RELEASE" \
     --env BUILD_TYPE="$BUILD_TYPE" \
+    --env BUILD_PRINT_QUALITY="$BUILD_PRINT_QUALITY" \
     shb-asciidoctor \
     "$@"
 

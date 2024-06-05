@@ -58,6 +58,11 @@ for arg in args:
         log('TARGET is one or more of ' + ' '.join(validBuildTargets))
         sys.exit(1)
 
+printQuality = os.environ['BUILD_PRINT_QUALITY']
+if printQuality not in ['standard', 'premium']:
+    log('⚠️\tinvalid print quality')
+    sys.exit(1)
+
 def typeset(command, outputType, outputName):
     log(f'🖨️\ttypeset {outputType}')
     subprocess.run(command, check=True)
@@ -76,8 +81,8 @@ for arg in args:
             command = ['asciidoctor'] + commonArgs + ['--attribute', 'data-uri', bookSrc]
             typeset(command, 'HTML', htmlOutput)
         case 'printPdf':
-            command = ['asciidoctor-pdf'] + commonArgs + extendConverter + ['--attribute', 'shb-printPDF', '--out-file', printPdfOutput, bookSrc]
-            typeset(command, 'print-ready PDF', printPdfOutput)
+            command = ['asciidoctor-pdf'] + commonArgs + extendConverter + ['--attribute', 'shb-printPDF', '--attribute', f'printQuality-{printQuality}', '--out-file', printPdfOutput, bookSrc]
+            typeset(command, f'{printQuality} print-ready PDF', printPdfOutput)
         case 'screenPdf':
             command = ['asciidoctor-pdf'] + commonArgs + extendConverter + ['--attribute', 'shb-screenPDF', '--out-file', screenPdfOutput, bookSrc]
             typeset(command, 'screen-optimized PDF', screenPdfOutput)
