@@ -77,7 +77,7 @@ None.
 == 🗨️ Feedback
 
 Please https://selfhostbook.com/contact/[send me feedback]!
-Originally shared with early reviewers; left here since I want to continue to iterate and improve in areas covered by these questions.
+This list of questions was originally shared with early reviewers; left here since I want to continue to iterate and improve in areas covered by these questions.
 
 * What are your first impressions? Cover, title, table of contents, font, style, page size, book length, etc.
 * Any/all factual, spelling, grammatical, and structural errors.
