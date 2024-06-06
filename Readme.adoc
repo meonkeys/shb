@@ -53,7 +53,7 @@ Run `./book/build.sh` to generate your own typeset outputs.
 See `book/Readme.md` for details.
 
 This build should be ported to more operating systems.
-See <<issues,am59>>, above.
+See <<issues,am59>>.
 
 == 🪡 Patches welcome
 
