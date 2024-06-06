@@ -37,7 +37,7 @@ You may also https://selfhostbook.com/donate/[donate] to support my efforts.
 |print PDF |evince PDF viewer |good 🙂 |Yes |No
 |print PDF |Firefox web browser |good 🙂 |Yes |No
 |standard quality paperback |ink & paper |good 🙂 |Yes |No
-|premium quality paperback |ink & paper |TBD, hoping for: great 😍🥹🤩 |Yes |No
+|premium quality paperback |ink & paper |great 🤩 |Yes |No
 |===
 
 The index is a section in the back of the book with references to select notable occurrences of terms and their page numbers.

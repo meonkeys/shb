@@ -61,3 +61,21 @@ He's most proud of his family, growing [Mifos](https://mifos.org), founding [Sea
 
 Adam is privileged and lucky to have given talks and workshops at a handful of conferences ([LFNW](https://lfnw.org/), [SeaGL](https://seagl.org), [LibrePlanet](https://libreplanet.org), [OSCON](https://en.wikipedia.org/wiki/O%27Reilly_Open_Source_Convention), [FOSSY](https://fossy.us/)) and various other engagements.
 There's a full list [here](https://adammonsen.com/talks/).
+
+### Identifiers
+
+* Standard quality paperback
+    * ISBN: `979-8-9908615-1-0`
+    * Library of Congress Control Number: `2024911437`
+    * commit: `b0eecd5a`
+* Premium quality paperback
+    * ISBN: `979-8-9908615-3-4`
+    * commit: `b0eecd5a`
+* EPUB
+    * ISBN: `979-8-9908615-0-3`
+    * commit: `d57d4275`
+* PDF
+    * ISBN: `979-8-9908615-2-7`
+    * commit: `d57d4275`
+* HTML
+    * commit: `d57d4275`

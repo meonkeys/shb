@@ -23,7 +23,17 @@ The Supporter price is automatically adjusted with [purchasing power parity](htt
 
 ### Paperback
 
-Coming very soon.
+The excellent, size A6, US Trade paperback full-color print with durable matte cover.
+160 pages of delicious paper and ink (warning: do not eat).
+Perfect for your offline reading pleasure.
+
+[Standard: USD 25.00](https://www.lulu.com/shop/adam-monsen-and-lenny-wondra/steadfast-self-hosting/paperback/product-w4z5ewj.html){:target="_blank"}
+
+[Premium: USD 35.00](https://www.lulu.com/shop/adam-monsen-and-lenny-wondra/steadfast-self-hosting/paperback/product-m24rye5.html){:target="_blank"}
+
+If you're not sure which one to get, go standard.
+If you want the best there is, go premium.
+The premium version promises better ink for [higher contrast and deeper saturation]({filename}/news/paperback.md), and less variance between prints/printers.
 
 ### Hardcover
 

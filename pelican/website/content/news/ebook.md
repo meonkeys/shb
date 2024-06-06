@@ -1,7 +1,7 @@
 title: 📖 Ebook
 category: announcement
 date: 2024-05-28
-modified: 2024-06-01
+modified: 2024-06-05
 
 The book is done and I'm excited to set it loose!
 
@@ -39,8 +39,8 @@ It's lot of work, some promote [DRM](https://en.wikipedia.org/wiki/Digital_right
 
 ### When can I get one printed on actual paper?
 
-Soon!
-Probably in a month or so.
+Now.
+See [💵 Buy]({filename}/pages/buy.md).
 
 ### Where's the party?
 

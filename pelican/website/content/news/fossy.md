@@ -7,4 +7,4 @@ date: 2023-10-20
 
 Check it out!
 
-[![logo for Sustain podcast #204]({static}/images/sustain204.jpg)](https://podcast.sustainoss.org/204)
+[![logo for Sustain podcast #204]({static}/images/sustain204.jpg){:style="max-width: 100%"}](https://podcast.sustainoss.org/204)
