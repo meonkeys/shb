@@ -93,3 +93,24 @@ This list of questions was originally shared with early reviewers; left here sin
 * What would you expect to pay for a print copy?
 * What would you expect to pay for a digital copy?
 * Any feedback on the https://selfhostbook.com[book website] and this readme?
+
+== 🏷️ Tags
+
+Git tags are used on notable commits.
+The most recent tag name is baked into formatted book outputs at build time.
+Hint: try `git log --simplify-by-decoration`.
+
+The most meaningful tags appear in `ChangeLog`.
+Here are explanations for a few others:
+
+paperback-NNN::
+Published paperbacks are built from these tags.
+`lulu-NNN` and `amazon-NNN` are deprecated.
+
+ebook-NNN::
+Published ebooks are built from these tags.
+`gumroad-NNN` is deprecated.
+
+start-tech-review::
+Commit: `2ac2b035`.
+This tag commemorates when Lenny and I started formal tech review.
