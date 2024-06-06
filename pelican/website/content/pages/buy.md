@@ -11,7 +11,6 @@ I chose this flexible pricing structure to prioritize distribution over profit.
 ### Ebook bundle
 
 This includes beautifully formatted EPUB, A4 PDF, and HTML versions.
-Now available on Gumroad:
 
 [Supporter: USD 25.00](https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500){:target="_blank"}
 
@@ -50,10 +49,10 @@ If you'd like to send money directly to support me, thank you, that's awesome.
 It's helpful if you also [send me an email]({filename}/pages/contact.md) so I have some context.
 Include **Gift** in the email subject.
 Tell me how much you're sending and why.
-If the "why" is "to pay for the book", please buy the book from Gumroad instead (for tax reasons -- my publisher must deal with taxes when selling the book and Gumroad handles this).
+If the "why" is "to pay for the book", please instead buy an ebook or paperback using the links above (this helps my publisher deal with taxes).
 If you're sending cryptocurrency, please tell me the equivalent USD amount (this is really helpful for my taxes if/when I decide to convert it to fiat money).
 
-I've listed these in order of preference.
+Here are ways to send me donations, in order of preference.
 Peercoin is especially interesting to me.
 I wish I could put it at the top, but it's too volatile and difficult to exchange for the flavor of fiat money I use to buy groceries.
 
