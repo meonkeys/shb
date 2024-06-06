@@ -23,7 +23,7 @@ The Supporter price is automatically adjusted with [purchasing power parity](htt
 
 ### Paperback
 
-The excellent, size A6, US Trade paperback full-color print with durable matte cover.
+The excellent, 6" x 9" (US Trade) paperback full-color print with durable matte cover.
 160 pages of delicious paper and ink (warning: do not eat).
 Perfect for your offline reading pleasure.
 
