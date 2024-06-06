@@ -6,7 +6,7 @@ This is the source code for a most excellent book about self-hosting.
 _Steadfast_ primarily targets aspiring self-hosters looking for a quick and reliable method to get started.
 
 Please https://selfhostbook.com/buy/[buy] or <<how_to_build,build>> a <<book_formats,nicely-formatted copy>> of the book for your reading pleasure.
-You may also https://selfhostbook.com/donate/[donate] to support my efforts.
+You may also https://selfhostbook.com/buy/#donations[donate] to support my efforts.
 
 == 📂 Directory structure
 
