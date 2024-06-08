@@ -38,7 +38,7 @@ I've been working on related technologies professionally and personally for the 
 
 I wrote this book after having realized the power and potential of self-hosting.
 I used the method it describes to provide a robust data haven for myself and my family.
-I haven't found other books like it and I want mine to be the first.
+I haven't found other books like it.
 
 I've given lectures on self-hosting and received feedback from attendees: they are already experienced at learning tech, they are seeking the motivation to self-host along with high-quality information on how to do it well.
 In response to this feedback I wrote a large Background chapter.
@@ -47,7 +47,7 @@ I use anecdotes, figures, and tenants of relatable value-based living to provide
 
 ### Audience
 
-*Steadfast* primarily targets aspiring self-hosters looking for a quick and reliable method to get started.
+*Steadfast Self-Hosting* primarily targets aspiring self-hosters looking for a quick and reliable method to get started.
 Some basic IT and networking skills are required.
 A reader should be familiar with Linux, command-line basics, and transferring files to and from a server.
 
