@@ -33,6 +33,12 @@ then
     exit 1
 fi
 
+if ! ansible --version | grep -q core
+then
+    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required, but was not found."
+    exit 1
+fi
+
 # Ensure minimum viable Ansible core version.
 # Example related issue: https://github.com/ansible/ansible/issues/81946
 thisAnsibleCoreVersion="$(ansible --version | grep core | sed --regexp-extended -e 's/^.+([0-9]+\.[0-9]+\.[0-9]+).+$/\1/')"
@@ -41,10 +47,12 @@ function verlte() {
     [[ "$1" = "$(echo -e "$1\n$2" | sort -V | head -n1)" ]]
 }
 if ! [[ "$thisAnsibleCoreVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+then
     echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Unable to determine version."
     exit 1
 fi
-if ! verlte "$minimumAnsibleCoreVersion" "$thisAnsibleCoreVersion"; then
+if ! verlte "$minimumAnsibleCoreVersion" "$thisAnsibleCoreVersion"
+then
     echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Version is too old."
     exit 1
 fi
