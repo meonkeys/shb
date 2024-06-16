@@ -20,6 +20,8 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+minimumAnsibleCoreVersion="2.16.1"
+
 # So we can refer back to the folder where this script lives.
 DIR="$( builtin cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -28,6 +30,18 @@ aprun="$(which ansible-playbook)" || true
 if ! [[ -x "$aprun" ]]
 then
     echo "ERROR: Ansible not installed or not found in path."
+    exit 1
+fi
+
+# Ensure minimum viable Ansible core version.
+# Example related issue: https://github.com/ansible/ansible/issues/81946
+thisAnsibleCoreVersion="$(ansible --version | grep core | sed --regexp-extended -e 's/^.+([0-9]+\.[0-9]+\.[0-9]+).+$/\1/')"
+# verlte is from kanaka's answer to https://stackoverflow.com/questions/4023830/how-to-compare-two-strings-in-dot-separated-version-format-in-bash
+function verlte() {
+    [[ "$1" = "$(echo -e "$1\n$2" | sort -V | head -n1)" ]]
+}
+if ! verlte "$minimumAnsibleCoreVersion" "$thisAnsibleCoreVersion"; then
+    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required."
     exit 1
 fi
 
