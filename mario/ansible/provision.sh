@@ -40,8 +40,12 @@ thisAnsibleCoreVersion="$(ansible --version | grep core | sed --regexp-extended 
 function verlte() {
     [[ "$1" = "$(echo -e "$1\n$2" | sort -V | head -n1)" ]]
 }
+if ! [[ "$thisAnsibleCoreVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Unable to determine version."
+    exit 1
+fi
 if ! verlte "$minimumAnsibleCoreVersion" "$thisAnsibleCoreVersion"; then
-    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required."
+    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Version is too old."
     exit 1
 fi
 
