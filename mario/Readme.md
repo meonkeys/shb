@@ -25,3 +25,11 @@ Copyright ©2023-2024 [Adam Monsen](https://adammonsen.com)
 ## Fix for `six.moves` module error on 22.04
 
 If your admin computer is Ubuntu 22.04 LTS you may see `ModuleNotFoundError: No module named 'ansible.module_utils.six.moves'`. The root cause may be [this issue](https://github.com/ansible/ansible/issues/81946). If so, the fix is to add the [ansible PPA](https://launchpad.net/~ansible/+archive/ubuntu/ansible) and install the `ansible-core` package.
+
+## Fix for missing `ufw` on 22.04
+
+If your admin computer is Ubuntu 22.04 LTS and you get an error that the `ufw` module is missing, make sure the `ansible` package is installed.
+
+## Fix for US/Pacific timezone error
+
+If `timedatectl set-timezone` fails during `provision.sh`, you may be using an invalid timezone. I've specifically seen `US/Pacific` fail. If that's your timezone, use `America/Los_Angeles` instead. I believe these timezone names recently.
