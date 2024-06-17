@@ -39,6 +39,11 @@ then
     exit 1
 fi
 
+# Only perform advanced Ansible version checks on GNU/Linux because it's more likely to have compatible versions of grep, sed, sort, etc.
+# I think the only real compatibility issue right here is "sort -V".
+# Alternatives to this verlte are available at https://stackoverflow.com/questions/4023830/how-to-compare-two-strings-in-dot-separated-version-format-in-bash
+# Or maybe a better solution would be to enforce GNU sort/coreutils as a dependency?
+# homebrew provides gsort on macOS when one installs coreutils.
 if [[ "$OSTYPE" =~ linux-gnu ]]; then
     # Ensure minimum viable Ansible core version.
     # Example related issue: https://github.com/ansible/ansible/issues/81946
