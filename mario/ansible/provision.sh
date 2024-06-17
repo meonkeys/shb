@@ -39,22 +39,24 @@ then
     exit 1
 fi
 
-# Ensure minimum viable Ansible core version.
-# Example related issue: https://github.com/ansible/ansible/issues/81946
-thisAnsibleCoreVersion="$(ansible --version | grep core | sed -e 's/^.\+\([0-9]\+\.[0-9]\+\.[0-9]\+\).\+$/\1/')"
-# verlte is from kanaka's answer to https://stackoverflow.com/questions/4023830/how-to-compare-two-strings-in-dot-separated-version-format-in-bash
-function verlte() {
-    [[ "$1" = "$(echo -e "$1\n$2" | sort -V | head -n1)" ]]
-}
-if ! [[ "$thisAnsibleCoreVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
-then
-    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Unable to determine version."
-    exit 1
-fi
-if ! verlte "$minimumAnsibleCoreVersion" "$thisAnsibleCoreVersion"
-then
-    echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Version is too old."
-    exit 1
+if [[ "$OSTYPE" =~ linux-gnu ]]; then
+    # Ensure minimum viable Ansible core version.
+    # Example related issue: https://github.com/ansible/ansible/issues/81946
+    thisAnsibleCoreVersion="$(ansible --version | grep core | sed -e 's/^.\+\([0-9]\+\.[0-9]\+\.[0-9]\+\).\+$/\1/')"
+    # verlte is from kanaka's answer to https://stackoverflow.com/questions/4023830/how-to-compare-two-strings-in-dot-separated-version-format-in-bash
+    function verlte() {
+        [[ "$1" = "$(echo -e "$1\n$2" | sort -V | head -n1)" ]]
+    }
+    if ! [[ "$thisAnsibleCoreVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+    then
+        echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Unable to determine version."
+        exit 1
+    fi
+    if ! verlte "$minimumAnsibleCoreVersion" "$thisAnsibleCoreVersion"
+    then
+        echo "ERROR: Ansible core $minimumAnsibleCoreVersion or later required. Version is too old."
+        exit 1
+    fi
 fi
 
 # Create customizable config file if it doesn't exist.
