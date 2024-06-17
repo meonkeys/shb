@@ -41,7 +41,7 @@ fi
 
 # Ensure minimum viable Ansible core version.
 # Example related issue: https://github.com/ansible/ansible/issues/81946
-thisAnsibleCoreVersion="$(ansible --version | grep core | sed --regexp-extended -e 's/^.+([0-9]+\.[0-9]+\.[0-9]+).+$/\1/')"
+thisAnsibleCoreVersion="$(ansible --version | grep core | sed -e 's/^.\+\([0-9]\+\.[0-9]\+\.[0-9]\+\).\+$/\1/')"
 # verlte is from kanaka's answer to https://stackoverflow.com/questions/4023830/how-to-compare-two-strings-in-dot-separated-version-format-in-bash
 function verlte() {
     [[ "$1" = "$(echo -e "$1\n$2" | sort -V | head -n1)" ]]
