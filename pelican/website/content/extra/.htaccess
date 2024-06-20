@@ -1,8 +1,13 @@
 ErrorDocument 404 /404.html
 
 RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI}
+
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^ %{REQUEST_SCHEME}://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+
 Redirect permanent "/src" "/code"
 Redirect permanent "/install" "/code"
 Redirect permanent "/translate" "/code"
