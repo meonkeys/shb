@@ -2081,7 +2081,7 @@ Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-31-generic x86_64)
 
 ... snip ...
 
-Last login: Fri May  3 16:44:52 2024 from 192.168.13.225
+Last login: Fri May  3 16:44:52 2024 from 192.168.1.225
 user@server:~$
 ----
 
