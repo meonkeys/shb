@@ -1,0 +1,12 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    # Usually something super fun like "enp2s0" -- to find yours try: `ls -d /sys/class/net/en*` on your server.
+    # If that output shows multiple names, try `ip addr show dev DEVICENAME` for each: the one that is UP and has a valid IP address for your LAN is the one to use in ETH_DEV_NAME in your config (so it will be substituted here).
+    {{ lookup('env', 'ETH_DEV_NAME') }}:
+      dhcp4: true
+      dhcp4-overrides:
+        use-dns: false
+      nameservers:
+        addresses: [{{ lookup('env', 'LAN_DNS_SERVER_IP') }}]
+  version: 2

@@ -1,0 +1,13 @@
+---
+- name: restart systemd-resolved
+  service:
+    name: systemd-resolved.service
+    state: restarted
+
+- name: restart docker
+  service:
+    name: docker.service
+    state: restarted
+
+- name: netplan apply
+  shell: netplan apply

@@ -11,3 +11,4 @@
     - base
     - docker
     - services
+    - pihole

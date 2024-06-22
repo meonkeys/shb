@@ -1,0 +1,47 @@
+version: "3"
+
+# no CAPs mentioned, because https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+
+# find image tags at https://github.com/pi-hole/docker-pi-hole/releases (latest on top)
+
+services:
+  default:
+    image: pihole/pihole:2024.06.0
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    environment:
+      TZ: {{ lookup('env', 'MARIO_DOMAIN_NAME') }}
+      WEBPASSWORD: "{{ lookup('env', 'PIHOLE_WEB_PASSWORD') }}"
+      # should match upstream DNS server on LAN (probably your router)
+      PIHOLE_DNS: {{ lookup('env', 'LAN_DNS_SERVER_IP') }}
+      TEMPERATUREUNIT: f
+      # IP address of server running Docker (and the Pi-hole container).
+      # This is what clients will use to reach it, so it can't be an internal/NATted Docker IP address.
+      FTLCONF_LOCAL_IPV4: {{ lookup('env', 'MARIO_SERVER_IP') }}
+      # not sure if this has any effect
+      PIHOLE_DOMAIN: {{ lookup('env', 'MARIO_DOMAIN_NAME') }}
+      VIRTUAL_HOST: pihole.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}
+      # I think this is easier?
+      IPv6: "false"
+      # because it runs nightly anyway
+      SKIPGRAVITYONBOOT: 1
+    volumes:
+      - /data/pihole/etc-pihole/:/etc/pihole/
+      - /data/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.pihole-https.entrypoints=websecure"
+      - "traefik.http.routers.pihole-https.rule=Host(`pihole.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.pihole-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.pihole-https.middlewares=lan-only"
+      # otherwise it tries to forward web traffic to port 53
+      - "traefik.http.services.default-pihole.loadbalancer.server.port=80"
+      # see https://github.com/pi-hole/docker-pi-hole#note-on-watchtower
+      - "com.centurylinklabs.watchtower.enable=false"
+    networks:
+      - traefik_default
+    restart: unless-stopped
+networks:
+  traefik_default:
+    external: true

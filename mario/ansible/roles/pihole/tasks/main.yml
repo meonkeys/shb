@@ -1,0 +1,44 @@
+- name: Create Pi-hole data and config folders
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /data/pihole
+    - /root/ops/pihole
+
+- name: Process and sync service config
+  template:
+    src: compose.yml
+    dest: /root/ops/pihole/compose.yml
+    validate: /usr/bin/docker compose --file %s config --quiet
+
+# more info: https://github.com/pi-hole/docker-pi-hole/#running-pi-hole-docker
+# also: https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245
+- name: disable systemd-resolved caching DNS stub resolver
+  replace:
+    path: /etc/systemd/resolved.conf
+    regexp: '^#?DNSStubListener=yes'
+    replace: 'DNSStubListener=no'
+    backup: yes
+  notify:
+    - restart systemd-resolved
+
+# DHCP clients should be told to go to the mario server's IP, per its DHCP name
+# server setting in your router's LAN config. This works for everything except
+# Docker containers. Workaround: force mario server to use the LAN router for
+# DNS lookups. The Docker host passes on this DNS preference to all spawned
+# containers.
+- name: Force use of gateway DNS server.
+  template:
+    src: netplan.yml
+    dest: /etc/netplan/00-installer-config.yaml
+    backup: yes
+  notify:
+    - netplan apply
+
+- name: fix /etc/resolv.conf symlink
+  file:
+    src: ../run/systemd/resolve/resolv.conf
+    dest: /etc/resolv.conf
+    state: link
+    force: yes
