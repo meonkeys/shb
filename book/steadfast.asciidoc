@@ -2122,8 +2122,9 @@ I'll assume you have a domain name and a DNS provider with an API.
 See <<Server domain name>> for details on how to obtain this.
 
 `DNS_API_PROVIDER`::
-Enter the name of your DNS provider here.
+Enter the name of your DNS provider here (the one with your DNS records).
 mario configures Traefik to talk directly with your DNS server for issuing Let's Encrypt certs.
+It doesn't need to know about your domain name registrar (the place you obtained your domain name), unless it is the same as your DNS provider.
 `NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
 Enter credentials for only one provider, the same provider you specified in `DNS_API_PROVIDER`.
 `DNS_RESOLVER_EMAIL`::
@@ -2167,10 +2168,11 @@ Proceed directly to <<Start services>>.
 
 (((DNS)))
 Your server needs a name.
-It gets a hostname during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
-I recommend getting a domain name and naming all your services using subdomains (e.g. `cloud.example.com`).
+You'll obtain a domain name from a registrar and input this hostname during <<OS install>>.
+I recommend using a single domain name and naming all your services with subdomains (e.g. `cloud.example.com`).
 You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up HTTPS web traffic encryption.
+Note that the registrar and DNS provider may differ.
 
 You may also want to be able to refer to your server by name when you're away from your LAN if you allow WAN access and/or if you have a dynamic WAN IP address.
 Check with your DNS provider about adding appropriate records for this purpose (e.g. `A` and `CNAME` records).
@@ -3805,6 +3807,8 @@ OS::
   As in, "`provision a server`". Set up a machine or otherwise bring it into alignment with a known/good configuration.
 ((RAID))::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
+((registrar))::
+  Domain name vendor. May also offer other name- and hosting-related services.
 ((reproducible))::
   Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from the same `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
 ((reverse proxy))::
