@@ -1829,6 +1829,11 @@ Here are examples you might use as starting points.
 * [ ] Back up router configuration.
 ****
 
+Note that Ubuntu server comes with the `unattended-upgrades` package, which automatically installs security updates for you.
+You may want to instead have "`confirm OS package upgrades worked`" on your checklist.
+
+Yearly tasks are typically more work and involve aspects of a system and its dependencies which should change less often.
+
 .Checklist: Yearly Maintenance
 [%unbreakable#yearly-maintenance]
 ****
