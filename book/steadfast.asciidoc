@@ -1509,22 +1509,22 @@ I go into detail about a few of these services later in the book.
 |===
 |Service |Purpose |Isolation |Cores |RAM
 
-|jellyfin |stream music |Docker |2 |2
-|kahoot-clone |quiz game |Docker |0 |0
-|poller |polls |Docker |0 |0
-|backuppc |backups |none |0 |0
-|taskd |task tracking |Docker |0 |0
-|sftp |file transfers |none |0 |0
-|syncthing |file sync |none |1 |1
-|nextcloud |file sharing |Docker |2 |2
-|minetest |game server |Docker |4 |8
-|irssi |chat client |none |0 |0
-|jitsi |video calls |Docker |2 |2
-|wallabag |article saver |Docker |1 |1
+|jellyfin |stream music |Docker |2 |2 GB
+|kahoot-clone |quiz game |Docker |0 |0 GB
+|poller |polls |Docker |0 |0 GB
+|backuppc |backups |none |0 |0 GB
+|taskd |task tracking |Docker |0 |0 GB
+|sftp |file transfers |none |0 |0 GB
+|syncthing |file sync |none |1 |1 GB
+|nextcloud |file sharing |Docker |2 |2 GB
+|minetest |game server |Docker |4 |8 GB
+|irssi |chat client |none |0 |0 GB
+|jitsi |video calls |Docker |2 |2 GB
+|wallabag |article saver |Docker |1 |1 GB
 |===
 
 "`Cores`" represents relative peak compute requirements.
-RAM: peak memory, in GB.
+RAM: peak memory.
 These were rough estimates based on published documentation.
 The estimates turned out to be accurate enough.
 I could see right quick I'd need something more powerful than the latest available Raspberry Pi.
