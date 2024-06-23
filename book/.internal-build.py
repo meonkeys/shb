@@ -35,7 +35,7 @@ commonArgs = [
     '--attribute', 'build_os_release=' + os.environ['BUILD_OS_RELEASE'],
     '--warnings',
     '--trace',
-    '--require', '/usr/local/bundle/gems/asciidoctor-lists-1.0.9/lib/asciidoctor-lists.rb'
+    '--require', '/usr/local/bundle/gems/asciidoctor-lists-1.1.2/lib/asciidoctor-lists.rb'
 ]
 
 title = 'steadfast'
