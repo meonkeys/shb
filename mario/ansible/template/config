@@ -38,7 +38,10 @@ export MARIO_DOMAIN_NAME='example.com'
 export DEFAULT_PHONE_REGION='US'
 
 # Your server's time zone.
-# Must be a value from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Must correspond with an available timezone data file in /usr/share/zoneinfo on your server.
+# For example, if you are in Seattle, use 'America/Los_Angeles', short for /usr/share/zoneinfo/America/Los_Angeles
+# Note that 'US/Pacific' is no longer valid.
+# Leaving this is 'Zulu' is fine too.
 export TZ='Zulu'
 
 # Value to use for the `lan-only` middleware, which is enabled by default.

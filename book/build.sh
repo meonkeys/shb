@@ -33,7 +33,6 @@ BUILD_TYPE=full
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 WORK_DIR=/usr/src/app/book
 GID="$(id -g)"
-GROUP="$(id -gn)"
 BUILD_DATE_TIME="$(date)"
 BUILD_LOCALE_LANG="${LANG:-en_US.UTF-8}"
 BUILD_GIT_COMMIT="$(git rev-parse --short HEAD || echo FIXME)"
@@ -46,15 +45,10 @@ BUILD_PRINT_QUALITY="${SHB_FORCE_PRINT_QUALITY:-standard}"
 
 if [[ "$OSTYPE" =~ linux-gnu ]]; then
     BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
-    imageDefinition=.Dockerfile
-    runContainerUserArg="--user $USER:$GROUP"
-elif [[ "$OSTYPE" =~ darwin ]]; then
-    BUILD_OS_RELEASE="$OSTYPE"
-    imageDefinition=.Dockerfile.insecure
-    runContainerUserArg=''
 else
-    echo "⚠️	sorry, $OSTYPE is not yet supported"
-    exit 1
+    # OSTYPE is intentionally coarse.
+    # There are surely better ways to get detailed build OS info.
+    BUILD_OS_RELEASE="${OSTYPE:-unknown}"
 fi
 
 echo '🚢	build image'
@@ -63,11 +57,7 @@ cd "$SCRIPT_DIR"
 docker build \
     --tag shb-asciidoctor \
     --build-arg WORK_DIR="$WORK_DIR" \
-    --build-arg USER="$USER" \
-    --build-arg UID="$UID" \
-    --build-arg GROUP="$GROUP" \
-    --build-arg GID="$GID" \
-    --file "$imageDefinition" \
+    --file .Dockerfile \
     --quiet \
     . \
     > /dev/null
@@ -77,7 +67,6 @@ docker run \
     --rm \
     --interactive \
     --tty \
-    $runContainerUserArg \
     --volume "$SCRIPT_DIR:$WORK_DIR" \
     --env BUILD_DATE_TIME="$BUILD_DATE_TIME" \
     --env BUILD_LOCALE_LANG="$BUILD_LOCALE_LANG" \
@@ -87,6 +76,8 @@ docker run \
     --env BUILD_OS_RELEASE="$BUILD_OS_RELEASE" \
     --env BUILD_TYPE="$BUILD_TYPE" \
     --env BUILD_PRINT_QUALITY="$BUILD_PRINT_QUALITY" \
+    --env BUILD_OUTPUT_UID="$UID" \
+    --env BUILD_OUTPUT_GID="$GID" \
     shb-asciidoctor \
     "$@"
 

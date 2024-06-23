@@ -35,6 +35,7 @@
 * use https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[one sentence] https://sive.rs/1s[per line]
 * shell scripts
 ** prefer long form for command line flags, e.g. `--attribute` instead of `-a`
+** prioritize portability and maintainability
 * release versioning
 ** use semver-like major, minor, patch version numbers
 * source control

@@ -21,10 +21,3 @@ Building without Docker is unsupported, but this might make it work for you:
 1. install prerequisites mentioned in `.Dockerfile`
 1. set environment variables mentioned in `build.sh`
 1. run `python3 .internal-build.py`
-
-## macOS notes
-
-See:
-
-1. `darwin` in `build.sh`
-1. `.Dockerfile.insecure`

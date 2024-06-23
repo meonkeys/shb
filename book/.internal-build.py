@@ -35,7 +35,7 @@ commonArgs = [
     '--attribute', 'build_os_release=' + os.environ['BUILD_OS_RELEASE'],
     '--warnings',
     '--trace',
-    '--require', '/usr/local/bundle/gems/asciidoctor-lists-1.0.9/lib/asciidoctor-lists.rb'
+    '--require', '/usr/local/bundle/gems/asciidoctor-lists-1.1.2/lib/asciidoctor-lists.rb'
 ]
 
 title = 'steadfast'
@@ -97,3 +97,7 @@ for arg in args:
             if 'epub' not in args:
                 log('⚠️\tEPUB was not built -- checking anyway')
             subprocess.run(['epubcheck', epubOutput], check=False)
+
+toUid = os.environ['BUILD_OUTPUT_UID']
+toGid = os.environ['BUILD_OUTPUT_UID']
+subprocess.run(['chown', '-R', f'{toUid}:{toGid}', '.'])

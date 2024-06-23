@@ -1382,28 +1382,32 @@ That is: `websecure` to `nc-https` to `app`.
 
 These two snippets of the mario source show how we set up Traefik for Nextcloud.
 
-.Traefik and Nextcloud configuration snippets (🏠 admin computer)
-[source#traefik-and-nextcloud-config,yaml]
+.Traefik configuration snippet (🏠 admin computer)
+[source#traefik-config,yaml]
 ----
-# snippet from traefik/compose.yml
+# from traefik/compose.yml
 services:
   reverse-proxy:
     command:
       - --entrypoints.websecure.address=:443 <1>
-
-# snippet from nextcloud/compose.yml
-services:
-  app:
-    labels:
-      - "traefik.http.routers.nc-https.entrypoints=websecure" <2>
-      - "traefik.http.routers.nc-https.rule=Host(`cloud.example.com`)" <3>
 ----
 
 <1> Define entrypoint `websecure` on the `reverse-proxy` service, accepting traffic over port 443.
 
-<2> Connect the `websecure` entrypoint with the `nc-https` router on the `app` service.
+.Nextcloud configuration snippet (🏠 admin computer)
+[source#nextcloud-config,yaml]
+----
+# from nextcloud/compose.yml
+services:
+  app:
+    labels:
+      - "traefik.http.routers.nc-https.entrypoints=websecure" <1>
+      - "traefik.http.routers.nc-https.rule=Host(`cloud.example.com`)" <2>
+----
 
-<3> Use the hostname rule with the `nc-https` router.
+<1> Connect the `websecure` entrypoint with the `nc-https` router on the `app` service.
+
+<2> Use the hostname rule with the `nc-https` router.
 
 Each self-hosted service will have its own router.
 Other web services will also use the `websecure` entrypoint.
@@ -1505,22 +1509,22 @@ I go into detail about a few of these services later in the book.
 |===
 |Service |Purpose |Isolation |Cores |RAM
 
-|jellyfin |stream music |Docker |2 |2
-|kahoot-clone |quiz game |Docker |0 |0
-|poller |polls |Docker |0 |0
-|backuppc |backups |none |0 |0
-|taskd |task tracking |Docker |0 |0
-|sftp |file transfers |none |0 |0
-|syncthing |file sync |none |1 |1
-|nextcloud |file sharing |Docker |2 |2
-|minetest |game server |Docker |4 |8
-|irssi |chat client |none |0 |0
-|jitsi |video calls |Docker |2 |2
-|wallabag |article saver |Docker |1 |1
+|jellyfin |stream music |Docker |2 |2 GB
+|kahoot-clone |quiz game |Docker |0 |0 GB
+|poller |polls |Docker |0 |0 GB
+|backuppc |backups |none |0 |0 GB
+|taskd |task tracking |Docker |0 |0 GB
+|sftp |file transfers |none |0 |0 GB
+|syncthing |file sync |none |1 |1 GB
+|nextcloud |file sharing |Docker |2 |2 GB
+|minetest |game server |Docker |4 |8 GB
+|irssi |chat client |none |0 |0 GB
+|jitsi |video calls |Docker |2 |2 GB
+|wallabag |article saver |Docker |1 |1 GB
 |===
 
 "`Cores`" represents relative peak compute requirements.
-RAM: peak memory, in GB.
+RAM: peak memory.
 These were rough estimates based on published documentation.
 The estimates turned out to be accurate enough.
 I could see right quick I'd need something more powerful than the latest available Raspberry Pi.
@@ -1627,12 +1631,13 @@ Remote backups can take a while, and that's fine.
 I use one SSD for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 (((data sovereignty)))
-An interesting alternative to HDDs is ((object storage)).
-Nextcloud can use object storage directly, for example.
+An interesting alternative to HDDs for special cases is ((object storage)).
+It's a very scalable cloud-based unstructured key-value store that the OS can't use directly, but Nextcloud can.
 There are many aspects to consider when comparing the two options, such as:
 
 * cost of storage and ((egress)) (download)
 * control, autonomy, sovereignty
+* software support for object storage
 * direct access to data
 * speed and means of access
 * network availability
@@ -1703,7 +1708,7 @@ At each step in the interactive Ubuntu installer, accept the default or write do
 
 . *Install Ubuntu* 24.04 LTS server.
 Refer to https://ubuntu.com/tutorials/install-ubuntu-server[this tutorial] for step-by-step instructions.
-. *Use a static IP address* when configuring networking.
+. *Use a static LAN IP address* when configuring networking.
 You may also be able to leave this as the default (DHCP/dynamic), and use your LAN router to assign an IP address that doesn't change.
 . Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
@@ -1731,8 +1736,8 @@ The guide below walks through creating a simple pool of two mirrored drives, vis
 This is a reasonable starting point, providing increased fault tolerance and better read performance than a single drive.
 
 On the server, run these commands as `root` (hint: use `sudo su -` first).
-The code below assumes you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`, so adjust device names as necessary.
-Use `lsblk` to figure out your device names.
+The code below assumes you started with one drive for the OS, the OS called that drive `/dev/sda`, then you added two more drives, and those were assigned `/dev/sdb` and `/dev/sdc`.
+Adjust these as necessary, using `lsblk` to figure out yours.
 
 // This code snippet is wrapped by Vim with textwidth=75 since this just happens to be what fits in the current print book margins. 😬
 
@@ -1823,6 +1828,11 @@ Here are examples you might use as starting points.
 * [ ] Check storage space remaining.
 * [ ] Back up router configuration.
 ****
+
+Note that Ubuntu server comes with the `unattended-upgrades` package, which automatically installs security updates for you.
+You may want to instead have "`confirm OS package upgrades worked`" on your checklist.
+
+Yearly tasks are typically more work and involve aspects of a system and its dependencies which should change less often.
 
 .Checklist: Yearly Maintenance
 [%unbreakable#yearly-maintenance]
@@ -2081,7 +2091,7 @@ Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-31-generic x86_64)
 
 ... snip ...
 
-Last login: Fri May  3 16:44:52 2024 from 192.168.13.225
+Last login: Fri May  3 16:44:52 2024 from 192.168.1.225
 user@server:~$
 ----
 
@@ -2112,8 +2122,9 @@ I'll assume you have a domain name and a DNS provider with an API.
 See <<Server domain name>> for details on how to obtain this.
 
 `DNS_API_PROVIDER`::
-Enter the name of your DNS provider here.
+Enter the name of your DNS provider here (the one with your DNS records).
 mario configures Traefik to talk directly with your DNS server for issuing Let's Encrypt certs.
+It doesn't need to know about your domain name registrar (the place you obtained your domain name), unless it is the same as your DNS provider.
 `NAMECHEAP_*`, `DUCKDNS_*`, `R53_DNS_*`, `DO_*`...::
 Enter credentials for only one provider, the same provider you specified in `DNS_API_PROVIDER`.
 `DNS_RESOLVER_EMAIL`::
@@ -2157,10 +2168,11 @@ Proceed directly to <<Start services>>.
 
 (((DNS)))
 Your server needs a name.
-It gets a hostname during <<OS install>>, but this one doesn't matter so much for a _Steadfast_ server.
-I recommend getting a domain name and naming all your services using subdomains (e.g. `cloud.example.com`).
+You'll obtain a domain name from a registrar and input this hostname during <<OS install>>.
+I recommend using a single domain name and naming all your services with subdomains (e.g. `cloud.example.com`).
 You can either use a free domain name or buy a domain name from a registrar.
 mario needs the domain name to be able to use a DNS provider with an API for setting up HTTPS web traffic encryption.
+Note that the registrar and DNS provider may differ.
 
 You may also want to be able to refer to your server by name when you're away from your LAN if you allow WAN access and/or if you have a dynamic WAN IP address.
 Check with your DNS provider about adding appropriate records for this purpose (e.g. `A` and `CNAME` records).
@@ -3795,6 +3807,8 @@ OS::
   As in, "`provision a server`". Set up a machine or otherwise bring it into alignment with a known/good configuration.
 ((RAID))::
   Redundant array of inexpensive disks. Allows flexible use of multiple drives for redundancy and/or speed, as desired.
+((registrar))::
+  Domain name vendor. May also offer other name- and hosting-related services.
 ((reproducible))::
   Able to be repeated following specific steps. E.g. "`repro`" a bug or "`a reproducible [software] build`". If two people try to repro a bug, they should have the same experience. If two people each build an image from the same `Dockerfile`, they should produce the same image. In practice, bug repros and build products are close enough and never exactly the same.
 ((reverse proxy))::
