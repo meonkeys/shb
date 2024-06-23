@@ -1736,8 +1736,8 @@ The guide below walks through creating a simple pool of two mirrored drives, vis
 This is a reasonable starting point, providing increased fault tolerance and better read performance than a single drive.
 
 On the server, run these commands as `root` (hint: use `sudo su -` first).
-The code below assumes you've added two drives and they were assigned `/dev/sda` and `/dev/sdb`, so adjust device names as necessary.
-Use `lsblk` to figure out your device names.
+The code below assumes you started with one drive for the OS, the OS called that drive `/dev/sda`, then you added two more drives, and those were assigned `/dev/sdb` and `/dev/sdc`.
+Adjust these as necessary, using `lsblk` to figure out yours.
 
 // This code snippet is wrapped by Vim with textwidth=75 since this just happens to be what fits in the current print book margins. 😬
 
