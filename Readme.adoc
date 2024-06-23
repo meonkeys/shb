@@ -8,6 +8,8 @@ _Steadfast_ primarily targets aspiring self-hosters looking for a quick and reli
 Please https://selfhostbook.com/buy/[buy] or <<how_to_build,build>> a <<book_formats,nicely-formatted copy>> of the book for your reading pleasure.
 You may also https://selfhostbook.com/buy/#donations[donate] to support my efforts.
 
+Commits here serve as errata corrected since the date and version mentioned in the "`Book version`" section of the "`Introduction`" chapter of the copy you own.
+
 == 📂 Directory structure
 
 [cols="1,2"]
