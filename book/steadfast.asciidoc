@@ -1708,7 +1708,7 @@ At each step in the interactive Ubuntu installer, accept the default or write do
 
 . *Install Ubuntu* 24.04 LTS server.
 Refer to https://ubuntu.com/tutorials/install-ubuntu-server[this tutorial] for step-by-step instructions.
-. *Use a static IP address* when configuring networking.
+. *Use a static LAN IP address* when configuring networking.
 You may also be able to leave this as the default (DHCP/dynamic), and use your LAN router to assign an IP address that doesn't change.
 . Optional: use full-disk encryption.
 See <<Full-disk encryption>>.
