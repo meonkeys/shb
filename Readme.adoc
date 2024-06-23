@@ -103,9 +103,9 @@ Hint: try `git log --simplify-by-decoration`.
 The most meaningful tags appear in `ChangeLog`.
 Here are explanations for a few others:
 
-paperback-NNN::
-Published paperbacks are built from these tags.
-`lulu-NNN` and `amazon-NNN` are deprecated.
+print-NNN::
+Published print books are built from these tags.
+`paperback-NNN`, `lulu-NNN`, and `amazon-NNN` are deprecated.
 
 ebook-NNN::
 Published ebooks are built from these tags.
