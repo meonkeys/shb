@@ -1631,12 +1631,13 @@ Remote backups can take a while, and that's fine.
 I use one SSD for the OS and everything besides my photos/documents/etc, since start-up time for the OS is important and realizes far less benefit from the OS filesystem cache (especially at boot time).
 
 (((data sovereignty)))
-An interesting alternative to HDDs is ((object storage)).
-Nextcloud can use object storage directly, for example.
+An interesting alternative to HDDs for special cases is ((object storage)).
+It's a very scalable cloud-based unstructured key-value store that the OS can't use directly, but Nextcloud can.
 There are many aspects to consider when comparing the two options, such as:
 
 * cost of storage and ((egress)) (download)
 * control, autonomy, sovereignty
+* software support for object storage
 * direct access to data
 * speed and means of access
 * network availability
