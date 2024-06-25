@@ -72,6 +72,7 @@ If you're interested I could explain it over coffee or on a podcast or something
 
 ### Where has this been mentioned?
 
+* [Lemmy](https://lemmy.world/post/16595344){:target="_blank"}
 * [Hacker News](https://news.ycombinator.com/item?id=40547357){:target="_blank"}
 * [LinkedIn](https://www.linkedin.com/posts/chuckwolber_steadfast-self-hosting-rapid-rise-personal-activity-7202360270671814656-G9Ad){:target="_blank"}
 * Mastodon: [me](https://fosstodon.org/@meonkeys/112534116393793870){:target="_blank"}, [Deb](https://freeradical.zone/@baconandcoconut/112537718845451626){:target="_blank"}, [jcrabapple](https://dmv.community/@jcrabapple/112543680946006130){:target="_blank"}, [Darnell Clayton](https://one.darnell.one/@darnell/112543705880256496){:target="_blank"}
