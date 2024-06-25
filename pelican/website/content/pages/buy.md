@@ -1,24 +1,16 @@
 title: 💵 Buy
-modified: 2024-05-29
+modified: 2024-06-24
 menu_order_key: 1
-
-Please buy a copy of my book if you can afford to.
-I worked hard on every part of this book, it's excellent, and book sales help me continue this work!
-
-No worries if you are unwilling or unable to pay: Free and discounted copies are available.
-I chose this flexible pricing structure to prioritize distribution over profit.
 
 ### Ebook bundle
 
-This includes beautifully formatted EPUB, A4 PDF, and HTML versions.
+Includes beautifully formatted EPUB, A4 PDF, and HTML versions of the book.
 
 [Supporter: USD 25.00](https://app.gumroad.com/checkout?product=ytngr&option=4ymYtQpoQGxnNCS30-PCTg==&quantity=1&price=2500){:target="_blank"}
 
-[Scholarship: USD 0.00](https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0){:target="_blank"}
+This Supporter price is automatically adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity){:target="_blank"}.
 
-[name a fair price here](https://meonkeys.gumroad.com/l/shb){:target="_blank"}
-
-The Supporter price is automatically adjusted with [purchasing power parity](https://help.gumroad.com/article/327-purchasing-power-parity){:target="_blank"}.
+You may also claim a [full scholarship (USD 0.00)](https://app.gumroad.com/checkout?product=ytngr&option=6rbC0iSQuez1GyQ7Px_JSw==&quantity=1&price=0){:target="_blank"} or [name your price](https://meonkeys.gumroad.com/l/shb){:target="_blank"}.
 
 ### Paperback
 
