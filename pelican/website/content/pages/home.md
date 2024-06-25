@@ -1,15 +1,14 @@
 title: 📖 Home
-modified: 2024-04-24
+modified: 2024-06-24
 URL:
 save_as: index.html
 menu_order_key: 0
-
 
 This is the home for a most excellent book about self-hosting.
 
 ### Welcome!
 
-_Steadfast Self-Hosting_ is an authentic and inspiring self-hosting tutorial by seasoned tech entrepreneur and self-hosting expert [Adam Monsen](https://adammonsen.com).
+_Steadfast Self-Hosting_ is an authentic and inspiring self-hosting tutorial by seasoned tech entrepreneur and self-hosting expert Adam Monsen.
 Benefit from Adam's decades of applied effort distilled into this quick and exciting initiation to data sovereignty.
 
 Save money, time, and sanity
@@ -29,7 +28,7 @@ The book details why and how to use these tools to self-host:
 * Docker container manager
 * Docker Compose service manager
 
-It comes with mario, a program to help you set up your server and install a few services recommended by the author.
+It comes with mario, a program to help you set up your server and install a few services recommended by the author: Nextcloud, Jellyfin, Wallabag, Watchtower, and Scratch.
 
 ### Origin story
 
