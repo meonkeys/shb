@@ -41,8 +41,8 @@ export DEFAULT_PHONE_REGION='US'
 # Must correspond with an available timezone data file in /usr/share/zoneinfo on your server.
 # For example, if you are in Seattle, use 'America/Los_Angeles', short for /usr/share/zoneinfo/America/Los_Angeles
 # Note that 'US/Pacific' is no longer valid.
-# Leaving this is 'Zulu' is fine too.
-export TZ='Zulu'
+# Leaving this is 'Etc/Zulu' is fine too.
+export TZ='Etc/Zulu'
 
 # Value to use for the `lan-only` middleware, which is enabled by default.
 # This is a range of IP addresses in CIDR notation.
