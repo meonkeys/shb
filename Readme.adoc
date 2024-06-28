@@ -27,7 +27,7 @@ Commits here serve as errata corrected since the date and version mentioned in t
 |===
 |version |device |quality |index |_Cross references_ chapter
 
-|EPUB |calibre e-book viewer |good 🙂 |No |Yes
+|EPUB |calibre e-book viewer |great 🤩 |No |Yes
 |EPUB |Kobo e-reader |ok 😐 |No |Yes
 |EPUB |FBReader |bad ☹️ |No |Yes
 |EPUB |macOS Books |good 🙂 |No |Yes
@@ -41,6 +41,8 @@ Commits here serve as errata corrected since the date and version mentioned in t
 |standard quality paperback |ink & paper |good 🙂 |Yes |No
 |premium quality paperback |ink & paper |great 🤩 |Yes |No
 |===
+
+The quality ratings are opinions/guesses by the author.
 
 The index is a section in the back of the book with references to select notable occurrences of terms and their page numbers.
 Asciidoctor https://docs.asciidoctor.org/asciidoc/latest/sections/user-index/[only generates an index for PDF output].
