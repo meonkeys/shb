@@ -7,11 +7,13 @@ That means my printer will get it out to many places folks can actually pick it 
 
 I learned the hard way that self-publishing is hard (ok, I was warned, I did it anyway).
 One challenge is distributing the actual printed book.
-You have to interface with various places with various printing requirements.
+You usually have to interface with various places with various printing requirements.
 Each collects various amounts of money to get your book in front of customers.
 
 So whew, Lulu is taking care of distribution and saving me a lot of time and hassle.
-I'll get less money than if folks bought the print book directly from Lulu, but hopefully more readers, and I had already prioritized readership.
+Jury's out on the _quality_ of their distribution... so far all I see is a listing on Amazon with many typos introduced by their distribution system.
+Hopefully they'll fix this soon (I'm waiting to hear back on multiple support tickets).
+And I'll get less money than if folks bought the print book directly from Lulu, but hopefully more readers, and I had already prioritized readership.
 
 This whole print distribution pipeline is still a bit cumbersome on my end, and this matters for errata.
 It takes a while to update everything so new prints have the latest improvements.
