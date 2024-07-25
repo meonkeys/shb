@@ -425,7 +425,7 @@ Also, I wanted to write the book I wish _I_ had when I started self-hosting.
 Also, so there's a _book_ about this.
 There are countless videos, articles, and chunks of code online for doing everything in this book and more.
 Many are excellent.
-This book is your to keep, hold, and refer back to as you try, test, and learn.
+This book is yours to keep, hold, and refer back to as you try, test, and learn.
 
 Also, there's a stark gap between useful individual computers and useful ((cloud)) services.
 It's easy to pay for cloud, but the true price is obscured: surveillance, lock-in, inflexibility.
