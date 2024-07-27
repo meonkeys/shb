@@ -36,6 +36,16 @@ See [💵 Buy]({filename}/pages/buy.md).
 We should do one!
 I was kinda waiting for printed copies to be ready; those would be really handy for in-person gatherings.
 
+### Who's the superhero on the cover?
+
+They don't have a name yet!
+Maybe suggest one to me?
+They are described in an image alt attribute for `book-cover.png` like so:
+
+> Book cover art with title text, author name, and featuring our Steadfast hero in a cartoon fantasy rolling-hills landscape on a partly cloudy day, holding up their hand in triumph with the apps they successfully self-host magically extending into the air. Our hero has brown-skin, a half-shaved head of dark hair, purple cape, teal shoulder puffs, white sleeves, blue gloves, brown shirt, tan equipment strap and belt, red upper leggings, teal lower leggings, and light brown boots.
+
+Thanks to my daughter for colorfully bringing them to life.
+
 ### Yay, AGPL / ugh, AGPL
 
 Yep, I hear you!
