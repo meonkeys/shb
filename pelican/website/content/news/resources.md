@@ -20,9 +20,7 @@ Here's the first:
 
 This demo walks through creating a server VM for use with the book.
 
-<!-- FIXME - add youtube video link here -->
-
-Watch with ads and other distractions: (coming soon)
+[Watch with ads and other distractions](https://www.youtube.com/watch?v=Qi0uq_VCxiA).
 
 In the installer I use the default auto DHCP networking option to minimize customizations. I use my LAN router to assign an IP address that doesn't change instead of configuring a static IP address in the server OS (this technique is mentioned in the book under "OS Install").
 
