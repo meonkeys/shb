@@ -16,7 +16,7 @@ Here's the first:
 
 #### How to create a test VM for your self-hosting homelab
 
-<video controls width="640">
+<video class="howto-video" controls>
   <source src="/video/2024-07-31-make-VM.mp4" />
   <p>Sorry, I am unable to stream this video to you. Please <a href="/video/2024-07-31-make-VM.mp4" download="/video/2024-07-31-make-VM.mp4">download it</a> or try playing it from a different browser or device.</p>
 </video>

@@ -92,6 +92,10 @@ nav li :not(.active), .sidebar a:not(.active) {
     text-align: center;
 }
 
+.howto-video {
+    width: 660px;
+}
+
 @media screen and (max-width: 1000px) {
 	.container {
 		display: block;
@@ -104,6 +108,10 @@ nav li :not(.active), .sidebar a:not(.active) {
 	main {
 		width: auto;
 	}
+
+    .howto-video {
+        width: 320px;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
