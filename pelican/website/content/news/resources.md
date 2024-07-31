@@ -16,14 +16,18 @@ Here's the first:
 
 #### How to create a test VM for your self-hosting homelab
 
-[![thumbnail for VM creation video tip]({static}/images/2024-07-31-VM-howto.jpg){:style="max-width: 100%"}](/video/2024-07-31-make-VM.mp4)
+<video controls width="640">
+  <source src="/video/2024-07-31-make-VM.mp4" />
+  <p>Sorry, I am unable to stream this video to you. Please <a href="/video/2024-07-31-make-VM.mp4" download="/video/2024-07-31-make-VM.mp4">download it</a> or try playing it from a different browser or device.</p>
+</video>
 
 This demo walks through creating a server VM for use with the book.
+You may watch it here or [elsewhere, with ads and other distractions](https://www.youtube.com/watch?v=Qi0uq_VCxiA).
 
-[Watch with ads and other distractions](https://www.youtube.com/watch?v=Qi0uq_VCxiA).
+In the installer I use the default auto DHCP networking option to minimize customizations.
+I use my LAN router to assign an IP address that doesn't change instead of configuring a static IP address in the server OS (this technique is mentioned in the book under "OS Install").
 
-In the installer I use the default auto DHCP networking option to minimize customizations. I use my LAN router to assign an IP address that doesn't change instead of configuring a static IP address in the server OS (this technique is mentioned in the book under "OS Install").
-
-Take care to download the correct Ubuntu server ISO image for your hardware. See [this issue](https://github.com/meonkeys/shb/issues/5) if your VM host is a mac and you run into poor performance.
+Take care to download the correct Ubuntu server ISO image for your hardware.
+See [this issue](https://github.com/meonkeys/shb/issues/5) if your VM host is a mac and you run into poor performance.
 
 Please forgive my terrible video cropping and editing. I wanted to make sure and leave room for improvement. 😉
