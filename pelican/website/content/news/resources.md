@@ -8,3 +8,24 @@ Here are some resources I recommend for self-hosters besides what you'll find in
 
 selfh.st is a great place to keep up on self-hostable software.
 Ethan Sholly ships an excellent email newsletter once a week.
+
+### videos
+
+I'm making short videos to illustrate some concepts from the book.
+Here's the first:
+
+#### How to create a test VM for your self-hosting homelab
+
+[![thumbnail for VM creation video tip]({static}/images/2024-07-31-VM-howto.jpg){:style="max-width: 100%"}](/video/2024-07-31-make-VM.mp4)
+
+This demo walks through creating a server VM for use with the book.
+
+<!-- FIXME - add youtube video link here -->
+
+Watch with ads and other distractions: (coming soon)
+
+In the installer I use the default auto DHCP networking option to minimize customizations. I use my LAN router to assign an IP address that doesn't change instead of configuring a static IP address in the server OS (this technique is mentioned in the book under "OS Install").
+
+Take care to download the correct Ubuntu server ISO image for your hardware. See [this issue](https://github.com/meonkeys/shb/issues/5) if your VM host is a mac and you run into poor performance.
+
+Please forgive my terrible video cropping and editing. I wanted to make sure and leave room for improvement. 😉
