@@ -8,6 +8,6 @@ The workshops will focus on fundamental concepts, tools, and techniques from the
 
 | Event | Title | Location | Date |
 |-------|-------|----------|------|
-| [FOSSY 2024](https://2024.fossy.us) | [Steadfast Self-Hosting Workshop](https://2024.fossy.us/schedule/presentation/219/) | Portland, OR | Aug 1 - 4 2024 |
+| [FOSSY 2024](https://2024.fossy.us) | [Steadfast Self-Hosting Workshop](https://2024.fossy.us/schedule/presentation/219/) | Portland, OR | Sat Aug 3, 2024 |
 
 More to come.
