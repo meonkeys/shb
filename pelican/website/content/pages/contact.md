@@ -7,7 +7,9 @@ These methods/resources exist to supplement (not substitue for) reading the book
 
 ### Subscribe to updates
 
-Submit the form at <https://meonkeys.gumroad.com> to get on my mailing list.
+[Join my mailing list](https://meonkeys.gumroad.com).
+
+[Subscribe to news posted on this website](https://selfhostbook.com/feeds/all.atom.xml).
 
 ### Email the author
 
