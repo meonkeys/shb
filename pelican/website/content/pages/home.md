@@ -1,5 +1,5 @@
 title: 📖 Home
-modified: 2024-06-24
+modified: 2024-08-01
 URL:
 save_as: index.html
 menu_order_key: 0
@@ -54,11 +54,11 @@ Experienced self-hosters will also benefit when they read, compare, and improve 
 
 ### Author
 
-[Adam](https://adammonsen.com) is a kind and savvy [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) enthusiast.
+Adam is a kind and savvy [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) enthusiast.
 He's been in tech for over 20 years: building, producing, coding, debugging, architecting, leading, managing, debugging some more, lecturing, writing, administering and securing systems and processes, ensuring privacy and compliance; in markets of all maturities, sizes, and scales; startups to big enterprise.
 He's most proud of his family, growing [Mifos](https://mifos.org), founding [SeaGL](https://seagl.org), selling [C-SATS](https://csats.com), and writing a FOSS book about self-hosting FOSS.
 
-Adam is privileged and lucky to have given talks and workshops at a handful of conferences ([LFNW](https://lfnw.org/), [SeaGL](https://seagl.org), [LibrePlanet](https://libreplanet.org), [OSCON](https://en.wikipedia.org/wiki/O%27Reilly_Open_Source_Convention), [FOSSY](https://fossy.us/)) and various other engagements.
+Adam (<a rel="me" href="https://fosstodon.org/@meonkeys">Mastodon</a>) is privileged and lucky to have given talks and workshops at a handful of conferences ([LFNW](https://lfnw.org/), [SeaGL](https://seagl.org), [LibrePlanet](https://libreplanet.org), [OSCON](https://en.wikipedia.org/wiki/O%27Reilly_Open_Source_Convention), [FOSSY](https://fossy.us/)) and various other engagements.
 There's a full list [here](https://adammonsen.com/talks/).
 
 ### Identifiers

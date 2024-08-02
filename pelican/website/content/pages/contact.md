@@ -11,6 +11,8 @@ These methods/resources exist to supplement (not substitue for) reading the book
 
 [Subscribe to news posted on this website](https://selfhostbook.com/feeds/all.atom.xml).
 
+<a rel="me" href="https://fosstodon.org/@meonkeys">Follow Adam on Mastodon</a>.
+
 ### Email the author
 
 Feedback welcome!
