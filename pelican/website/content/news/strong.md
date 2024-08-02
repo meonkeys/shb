@@ -2,8 +2,6 @@ title: 🏋️ Strong
 category: announcement
 date: 2024-07-31
 
-_Note: I also emailed this to folks who bought the book._
-
 📬 If you want to stay in touch, [join my mailing list](https://meonkeys.gumroad.com). Imagine the sound of me cheering as you do.
 
 🏗️ How's your self-hosting journey going? Is your server running? Is it awesome? [I'd like to hear all about it]({filename}/pages/contact.md)!
@@ -29,3 +27,7 @@ _Note: I also emailed this to folks who bought the book._
 
 Heart,<br/>
 -Adam
+
+---
+
+_Author's note: I also emailed this to readers and [posted it on Gumroad](https://meonkeys.gumroad.com/p/testing-5bdb4248-258a-445c-9986-4cddfe195cb2)._
