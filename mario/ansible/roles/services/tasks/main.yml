@@ -22,6 +22,7 @@
     - /root/ops/traefik
     - /root/ops/wallabag
     - /root/ops/watchtower
+    - /root/ops/e-sign
 
 - name: Process and sync service configs
   template:
@@ -36,6 +37,7 @@
     - { src: 'ops/traefik/compose.yml', dest: '/root/ops/traefik/compose.yml' }
     - { src: 'ops/wallabag/compose.yml', dest: '/root/ops/wallabag/compose.yml' }
     - { src: 'ops/watchtower/compose.yml', dest: '/root/ops/watchtower/compose.yml' }
+    - { src: 'ops/e-sign/compose.yml', dest: '/root/ops/e-sign/compose.yml' }
 
 - name: Create jellyfin group
   group:
@@ -153,3 +155,26 @@
     owner: root
     group: root
     mode: 0644
+
+- name: Create docuseal group
+  group:
+    name: "{{ docuseal_group }}"
+    gid: "{{ docuseal_gid }}"
+
+- name: Create docuseal user
+  user:
+    name: docuseal
+    create_home: false
+    password_lock: yes
+    uid: "{{ docuseal_uid }}"
+    group: "{{ docuseal_group }}"
+    shell: /usr/sbin/nologin
+
+- name: Create docuseal-owned directories
+  file:
+    path: "{{ item }}"
+    owner: "{{ docuseal_user }}"
+    group: "{{ docuseal_group }}"
+    state: directory
+  with_items:
+    - /data/docuseal/data

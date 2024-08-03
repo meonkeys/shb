@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  app:
+    build: https://github.com/meonkeys/docuseal.git
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.docuseal-https.entrypoints=websecure"
+      - "traefik.http.routers.docuseal-https.rule=Host(`e-sign.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
+      - "traefik.http.routers.docuseal-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.docuseal-https.middlewares=lan-only"
+      # watchtower can't auto-update this container because we build it locally
+      - "com.centurylinklabs.watchtower.enable=false"
+    volumes:
+      - /data/docusign/data:/data
+    networks:
+      - traefik_default
+    restart: unless-stopped
+
+networks:
+  traefik_default:
+    external: true
