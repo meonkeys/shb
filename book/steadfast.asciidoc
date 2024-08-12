@@ -2930,7 +2930,7 @@ From now on, your server will require public key authentication for SSH logins.
 mario blocks ((WAN access)) by default.
 Read <<Digital security>> to decide if you want this or not.
 You may remove this protection by removing the `lan-only` ((middleware)) from the corresponding router's Traefik label.
-For example, to allow WAN access to Nextcloud, make this change in Traefik's `compose.yml`:
+For example, to allow WAN access to Nextcloud, make this change in Nextcloud's `compose.yml`:
 
 .patch for WAN access to Nextcloud (🏠 admin computer)
 [source%unbreakable#open-wan-access,diff]
