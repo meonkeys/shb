@@ -23,7 +23,7 @@ date: 2024-07-31
 
 🖋️ Want me to sign your book? I'd love to. Come to a workshop, like the one this weekend at FOSSY.
 
-📖 [Paperbacks are available direct from the printer](https://selfhostbook.com/buy/). You can buy a copy from many other booksellers as well or request it at your local library.
+📖 [Paperbacks are available direct from the printer]({filename}/pages/buy.md). You can buy a copy from many other booksellers as well or request it at your local library.
 
 Heart,<br/>
 -Adam
