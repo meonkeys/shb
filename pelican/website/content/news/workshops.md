@@ -16,7 +16,7 @@ These workshops focus on fundamental concepts, tools, and techniques from the bo
 If you want me to speak somewhere not listed above, connect me with an organizer for the event.
 
 Attendees: Please consider [buying your own physical or digital copy of the book]({filename}/pages/buy.md).
-This is the best way to show your support.
+This is the best way to participate and support the author.
 If you're unable to afford a copy, scholarships are available.
 
 As you read the book, you're encouraged to [join in the community chat and forum to get help and share your improvements with other readers]({filename}/pages/contact.md).
