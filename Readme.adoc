@@ -77,8 +77,9 @@ None.
 
 == ⚖️ Copyright and license
 
-* the book: see copyright and license info in `book/steadfast.asciidoc`
-* mario: see `mario/Readme.md`
+The book is (C)2024 Adam Monsen. Some rights reserved. License is https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License]. This notice also appears in `book/steadfast.asciidoc` and typeset outputs.
+
+mario is (C)2023-2024 Adam Monsen. License is https://www.gnu.org/licenses/agpl-3.0.html[GNU Affero General Public License] as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This notice also appears in `mario/Readme.md` and source code.
 
 == 🗨️ Feedback
 
