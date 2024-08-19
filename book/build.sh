@@ -28,8 +28,6 @@ set -o pipefail
 SECONDS=0
 echo "🏗️	start at $(date)"
 
-BUILD_TYPE=full
-
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 WORK_DIR=/usr/src/app/book
 GID="$(id -g)"
@@ -74,7 +72,6 @@ docker run \
     --env BUILD_GIT_BRANCH="$BUILD_GIT_BRANCH" \
     --env BUILD_GIT_TAG="$BUILD_GIT_TAG" \
     --env BUILD_OS_RELEASE="$BUILD_OS_RELEASE" \
-    --env BUILD_TYPE="$BUILD_TYPE" \
     --env BUILD_PRINT_QUALITY="$BUILD_PRINT_QUALITY" \
     --env BUILD_OUTPUT_UID="$UID" \
     --env BUILD_OUTPUT_GID="$GID" \
