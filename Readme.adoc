@@ -1,7 +1,9 @@
 = 📖 Steadfast Self-Hosting
 :hide-uri-scheme:
 
-This is the source code for a most excellent book about self-hosting.
+Source code for a most excellent book about self-hosting.
+
+image::pelican/website/theme/static/media/book-cover.png[align="center",alt="Book cover art with title text, author name, and featuring our Steadfast hero in a cartoon fantasy rolling-hills landscape on a partly cloudy day, holding up their hand in triumph with the apps they successfully self-host magically extending into the air. Our hero has brown-skin, a half-shaved head of dark hair, purple cape, teal shoulder puffs, white sleeves, blue gloves, brown shirt, tan equipment strap and belt, red upper leggings, teal lower leggings, and light brown boots."]
 
 _Steadfast_ primarily targets aspiring self-hosters looking for a quick and reliable method to get started.
 
