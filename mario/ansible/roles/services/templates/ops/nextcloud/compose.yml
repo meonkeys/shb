@@ -8,7 +8,7 @@ services:
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: nextcloud
       MYSQL_PASSWORD: nextcloud
-      REDIS_HOST: redis
+      REDIS_HOST: valkey
       REDIS_HOST_PASSWORD: redispassword
       OVERWRITEPROTOCOL: https
       OVERWRITECLIURL: https://cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}
@@ -46,10 +46,10 @@ services:
     restart: unless-stopped
     volumes:
       - /data/nextcloud/db:/var/lib/mysql
-  redis:
-    image: redis:alpine
+  valkey:
+    image: valkey/valkey
     restart: unless-stopped
-    command: redis-server --requirepass redispassword
+    command: valkey-server --requirepass redispassword
     networks:
       - nextcloud
 networks:

@@ -6,12 +6,12 @@ services:
     # wallabag's root/entrypoint.sh drops privileges
     user: root:root
     depends_on:
-      - redis
+      - valkey
     environment:
       # detailed documentation at https://github.com/wallabag/docker#environment-variables
       # remove MYSQL_ROOT_PASSWORD after first startup, or you'll see this in the logs:
       # "WARN: MySQL database is already configured. Remove the environment variable with root password."
-      SYMFONY__ENV__REDIS_HOST: redis
+      SYMFONY__ENV__REDIS_HOST: valkey
       SYMFONY__ENV__REDIS_PASSWORD: redispassword
       SYMFONY__ENV__TWOFACTOR_AUTH: 'true'
       SYMFONY__ENV__FOSUSER_REGISTRATION: 'true'
@@ -31,11 +31,11 @@ services:
       - wallabag
       - traefik_default
     restart: unless-stopped
-  redis:
-    image: redis:alpine
+  valkey:
+    image: valkey/valkey
     user: {{ wallabag_user }}:{{ wallabag_group }}
     restart: unless-stopped
-    command: redis-server --requirepass redispassword
+    command: valkey-server --requirepass redispassword
     networks:
       - wallabag
 networks:
