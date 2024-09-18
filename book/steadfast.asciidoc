@@ -3551,7 +3551,7 @@ Upload the roles to https://galaxy.ansible.com[Ansible Galaxy] as a playbook bun
 . Traefik's Docker integration has https://doc.traefik.io/traefik/providers/docker/#docker-api-access[security implications].
 Test these risks against your security considerations following <<Threat model>>.
 If you should mitigate this risk based on your threat model, harden mario so even if Traefik were compromised it would not compromise the whole server.
-Review the Traefik docs on this topic and https://github.com/wollomatic/traefik-hardened[tearfik-hardened] to get some ideas.
+Review the Traefik docs on this topic and https://github.com/wollomatic/traefik-hardened[traefik-hardened] to get some ideas.
 . Modify mario to https://docs.docker.com/engine/security/userns-remap/[always run containers as unprivileged (non-root) users].
 . Use appropriate ownership and permissions for persistent container data.
 . Set up https://github.com/strukturag/nextcloud-spreed-signaling#running-with-docker[Nextcloud Talk high-performance backend].
