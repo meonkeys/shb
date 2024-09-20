@@ -1,7 +1,7 @@
 title: ⁉️ FAQ
 category: announcement
 date: 2024-05-28
-modified: 2024-06-25
+modified: 2024-09-20
 
 ### Great job!
 
@@ -60,7 +60,7 @@ Talk to your local school or public librarian to request a copy or buy one for t
 Dang!
 I tried my best.
 Please [let me know]({filename}/pages/contact.md) why you didn't like it.
-Consider [sharing your thoughts publicly](https://help.selfhostbook.com/t/reviews).
+Consider [sharing your thoughts publicly](https://help.selfhostbook.com/t/review).
 You can also [improve it or write a better one]({filename}/pages/code.md).
 
 ### I can translate this, and I want to!
