@@ -27,4 +27,6 @@ Heart,<br/>
 
 ---
 
+I also emailed this to readers and [posted it on Gumroad](https://meonkeys.gumroad.com/p/reviews-808dfd45-8056-4002-9cb3-e8e3a5b5e0e9).
+
 Looks like the book is on its way to the [Seattle Public Library](https://seattle.bibliocommons.com/v2/record/S30C3996752), too!
