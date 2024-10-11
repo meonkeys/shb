@@ -2,7 +2,7 @@ version: '3'
 
 services:
   reverse-proxy:
-    image: traefik:beaufort
+    image: traefik:v3.1
     environment:
       AWS_ACCESS_KEY_ID: "{{ lookup('env', 'DNS_API_KEY') }}"
       AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'DNS_API_SECRET') }}"
