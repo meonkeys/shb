@@ -1,7 +1,7 @@
 title: 🛠️ Workshops
 category: announcement
 date: 2024-07-01
-modified: 2024-09-24
+modified: 2024-10-12
 
 Come join a hands-on session to help each other get unblocked wherever we're at, from curious consideration about standing up a server to adding and improving smooth-running services.
 These workshops focus on fundamental concepts, tools, and techniques from the book, although having and having read the book is not required.
