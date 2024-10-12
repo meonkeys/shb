@@ -12,7 +12,7 @@ These workshops focus on fundamental concepts, tools, and techniques from the bo
 | [BELUG](https://belug.us) meeting ([Presented by Dave Compton](https://homeservernotes.info/2024/08/12/walkthrough-steadfast-self-hosting-rapid-rise-personal-cloud.html)) | Bellevue, WA, USA and online | Tue Aug 13, 2024 at 6:30pm Pacific |
 | [BELUG](https://belug.us) meeting | Bellevue, WA, USA and online | Tue Sep 10, 2024 at 6:30pm Pacific |
 | [BLU](https://blu.org) meeting | online | Wed Sep 18, 2024 at 6:30pm Eastern |
-| [SeaGL 2024](https://seagl.org) conference | Seattle, WA, USA and online | Sat Nov 10, 2024 |
+| [SeaGL 2024](https://seagl.org) conference | Seattle, WA, USA and online | Sat Nov 9, 2024 at 11:00am Pacific |
 
 If you want me to speak somewhere not listed above, connect me with an organizer for the event.
 
