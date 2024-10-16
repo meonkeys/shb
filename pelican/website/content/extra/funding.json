@@ -10,34 +10,49 @@
             "url": "https://selfhostbook.com"
         }
     },
+    "projects": [{
+        "guid": "shb",
+        "name": "Steadfast Self-Hosting",
+        "description": "This book exists! People love it so far, but not everyone knows about it that should. And it needs to be maintained. Help keep it going!",
+        "webpageUrl": {
+            "url": "https://selfhostbook.com"
+        },
+        "repositoryUrl": {
+            "url": "https://selfhostbook.com/code/"
+        },
+        "licenses": ["spdx:AGPL-3.0-or-later", "spdx:CC-BY-SA-4.0"],
+        "tags": ["artificial-intelligence", "cloud", "computers", "data", "devops", "knowledge", "linux", "networking", "server", "storage"]
+    }],
     "funding": {
         "channels": [{
-            "guid": "pp",
-            "type": "paypal",
+            "guid": "ppl",
+            "type": "payment-provider",
             "address": "haircut@gmail.com"
         },
         {
             "guid": "btc",
-            "type": "bitcoin",
+            "type": "other",
             "address": "18XjpBwNccX9cvC2qiUgXLeeyY1jj3g5QW"
         }],
         "plans": [{
             "guid": "maintain-shb",
             "status": "active",
-            "name": "Pay author to maintain and improve the book Steadfast Self-Hosting.",
+            "name": "Pay author to maintain the book Steadfast Self-Hosting.",
+            "description": "Funds will be used for book promotion, marketing, maintenance, and community development.",
             "amount": 10000,
             "currency": "USD",
             "frequency": "yearly",
-            "channels": ["pp", "btc"]
+            "channels": ["ppl", "btc"]
         },
         {
-            "guid": "write-another-book",
+            "guid": "next-book",
             "status": "active",
             "name": "Advance payment for author to write another book.",
+            "description": "Writing a book is expensive! Funds will be used for new book research, developement, writing, and publishing of a new non-fiction technical book.",
             "amount": 10000,
             "currency": "USD",
             "frequency": "one-time",
-            "channels": ["pp", "btc"]
+            "channels": ["ppl", "btc"]
         }]
     }
 }
