@@ -1,0 +1,43 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+        "type": "individual",
+        "role": "maintainer",
+        "name": "Adam Monsen",
+        "email": "haircut@gmail.com",
+        "description": "Adam wrote the book Steadfast Self-Hosting.",
+        "webpageUrl": {
+            "url": "https://selfhostbook.com"
+        }
+    },
+    "funding": {
+        "channels": [{
+            "guid": "pp",
+            "type": "paypal",
+            "address": "haircut@gmail.com"
+        },
+        {
+            "guid": "btc",
+            "type": "bitcoin",
+            "address": "18XjpBwNccX9cvC2qiUgXLeeyY1jj3g5QW"
+        }],
+        "plans": [{
+            "guid": "maintain-shb",
+            "status": "active",
+            "name": "Pay author to maintain and improve the book Steadfast Self-Hosting.",
+            "amount": 10000,
+            "currency": "USD",
+            "frequency": "yearly",
+            "channels": ["pp", "btc"]
+        },
+        {
+            "guid": "write-another-book",
+            "status": "active",
+            "name": "Advance payment for author to write another book.",
+            "amount": 10000,
+            "currency": "USD",
+            "frequency": "one-time",
+            "channels": ["pp", "btc"]
+        }]
+    }
+}

@@ -66,6 +66,7 @@ STATIC_PATHS = [
     'extra/favicon-32x32.png',
     'extra/favicon-credit.txt',
     'extra/favicon.ico',
+    'extra/funding.json',
     'extra/robots.txt',
     'extra/site.webmanifest',
 ]
@@ -79,6 +80,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon-32x32.png': {'path': 'favicon-32x32.png'},
     'extra/favicon-credit.txt': {'path': 'favicon-credit.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/funding.json': {'path': 'funding.json'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/site.webmanifest': {'path': 'site.webmanifest'},
 }
