@@ -94,7 +94,7 @@ See: https://github.com/Alwinator/asciidoctor-lists/issues/25
 [#am66_detail]
 == ℹ️ am66: improve Kindle compatibility
 
-The EPUB loads on Kindle devices, but there are a few issues leading to the current quality ranking:
+The EPUB loads on Kindle devices, but there are a few issues:
 
 * smooshed SVG: _WAN into LAN traffic flow diagram_
 * cross-references to sidebars are dead links (not clickable / touchable)
@@ -105,6 +105,8 @@ I don't use Kindle apps or devices; I've only seen these via the Kindle Previewe
 Perhaps related, KDP says a KPF created from Kindle Previewer https://github.com/asciidoctor/asciidoctor-epub3/issues/481[contains only images, is not reflowable, and fixed format is required].
 
 https://asciidoctor.zulipchat.com/#narrow/stream/346540-users.2Fasciidoctor-epub3/[Discussion about same].
+
+See "EPUB" → "Kindle" in `Readme.adoc` for all book format quality rankings.
 
 [#am67_detail]
 == ℹ️ am67: more resilient, secure book build
