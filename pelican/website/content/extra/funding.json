@@ -25,12 +25,22 @@
     }],
     "funding": {
         "channels": [{
-            "guid": "ppl",
+            "guid": "paypal",
             "type": "payment-provider",
-            "address": "haircut@gmail.com"
+            "address": "https://paypal.me/meonkeys"
         },
         {
-            "guid": "btc",
+            "guid": "github-sponsors",
+            "type": "payment-provider",
+            "address": "https://github.com/sponsors/meonkeys/"
+        },
+        {
+            "guid": "peercoin",
+            "type": "other",
+            "address": "PRHQk8tcyvBmgkm9nfbLg7LJoZ48v8nciB"
+        },
+        {
+            "guid": "bitcoin",
             "type": "other",
             "address": "18XjpBwNccX9cvC2qiUgXLeeyY1jj3g5QW"
         }],
@@ -42,7 +52,7 @@
             "amount": 10000,
             "currency": "USD",
             "frequency": "yearly",
-            "channels": ["ppl", "btc"]
+            "channels": ["paypal", "github-sponsors", "peercoin", "bitcoin"]
         },
         {
             "guid": "next-book",
@@ -52,7 +62,7 @@
             "amount": 10000,
             "currency": "USD",
             "frequency": "one-time",
-            "channels": ["ppl", "btc"]
+            "channels": ["paypal", "github-sponsors", "peercoin", "bitcoin"]
         }]
     }
 }
