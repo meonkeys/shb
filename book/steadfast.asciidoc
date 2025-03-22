@@ -3727,7 +3727,7 @@ Specialists in computer science, security, administration, networking and so on 
 ((full-disk encryption))::
   When an entire storage area is cryptographically protected.
 ((GB))::
-  Gigabyte. 1,000^3^ (1,000,000,000) bytes for HDDs, or 1,024^3^ (1,073,741,824) bytes for RAM.
+  Gigabyte. Typically 1,000^3^ (1,000,000,000) bytes for HDDs, or 1,024^3^ (1,073,741,824) bytes for RAM, for historical reasons. Cloud storage providers use the second (powers of two) form.
 ((good, fast, and cheap))::
   Used with a wink in this text because https://en.wikipedia.org/wiki/Project_management_triangle[typically we must pick two].
 ((Good Thing))::
