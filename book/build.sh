@@ -32,7 +32,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 WORK_DIR=/usr/src/app/book
 GID="$(id -g)"
 BUILD_DATE_TIME="$(date)"
-BUILD_LOCALE_LANG="${LANG:-en_US.UTF-8}"
+BUILD_LOCALE_LANG="en_US.UTF-8"
 BUILD_GIT_COMMIT="$(git rev-parse --short HEAD || echo FIXME)"
 BUILD_GIT_BRANCH="$(git branch --show-current || echo FIXME)"
 # Seems to pull the most recent tag if the current commit has more than one.
