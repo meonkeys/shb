@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Typeset book _Steadfast Self-Hosting_
-# Copyright (C) 2024  Adam Monsen
+# Copyright (C) 2024-2025  Adam Monsen
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by

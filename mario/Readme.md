@@ -21,7 +21,7 @@ Check out the mario chapter in the book for further instructions.
 
 ## Copyright and license
 
-Copyright ©2023-2024 [Adam Monsen](https://adammonsen.com)
+Copyright ©2023-2025 [Adam Monsen](https://adammonsen.com)
 
 [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See `COPYING`.
 
