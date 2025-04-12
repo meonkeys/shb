@@ -24,7 +24,6 @@ ifdef::shb-printPDF[]
 :pdf-theme: print.yml
 :media: prepress
 endif::[]
-// EPUB3
 ifdef::backend-epub3[]
 // https://github.com/asciidoctor/asciidoctor-epub3/issues/492
 :toclevels: 1
