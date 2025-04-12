@@ -1676,9 +1676,16 @@ Read <<Digital security>> before forwarding any ports.
 Make a sketch to better understand your network.
 Here's a simple diagram I created using https://asciiflow.com to plan cabling and visualize the flow of traffic through my network devices:
 
+ifdef::backend-html5,backend-pdf[]
 [#image-WAN-to-LAN-traffic]
 .WAN into LAN traffic flow diagram.
 image::WAN-to-LAN-traffic.svg[align="center",scaledwidth=80%]
+endif::[]
+ifdef::backend-epub3[]
+[#image-WAN-to-LAN-traffic]
+.WAN into LAN traffic flow diagram.
+image::WAN-to-LAN-traffic.png[,472,320,align="center"]
+endif::[]
 
 (((IPMI)))
 Arrows represent ethernet cable.
@@ -2854,9 +2861,16 @@ The technique is imperfect, yet simple and effective.
 
 My Pi-hole server sits between my router's DNS server and all clients.
 
+ifdef::backend-html5,backend-pdf[]
 [#image-DNS-traffic-diagram]
 .Pi-hole DNS traffic flow diagram.
 image::DNS-traffic-diagram.svg[align="center",scaledwidth=80%]
+endif::[]
+ifdef::backend-epub3[]
+[#image-DNS-traffic-diagram]
+.Pi-hole DNS traffic flow diagram.
+image::DNS-traffic-diagram.png[,571,651,align="center"]
+endif::[]
 
 Queries for domain names not on any block list will be answered directly or sent upstream.
 I set up my Pi-hole to pass queries on to my home router, which will then query a DNS server outside my LAN as necessary.
