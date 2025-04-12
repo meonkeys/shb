@@ -96,9 +96,10 @@ See: https://github.com/Alwinator/asciidoctor-lists/issues/25
 
 The EPUB loads on Kindle devices, but there are a few issues:
 
-* smooshed SVG: _WAN into LAN traffic flow diagram_
 * cross-references to sidebars are dead links (not clickable / touchable)
-* no text visible in _Pi-hole DNS traffic flow diagram_
+* emoji don't appear
+* definition list terms (e.g. Glossary) are italic instead of bold
+* figure captions aren't centered
 
 I don't use Kindle apps or devices; I've only seen these via the Kindle Previewer.
 
