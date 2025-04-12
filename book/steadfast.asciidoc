@@ -34,6 +34,17 @@ endif::[]
 // see https://docs.asciidoctor.org/asciidoc/latest/blocks/add-title/#captioned-titles
 :listing-caption: Listing
 
+ifdef::backend-html5[]
+// https://github.com/asciidoctor/asciidoctor/issues/857
+++++
+<style>
+  .imageblock > .title {
+    text-align: inherit;
+  }
+</style>
+++++
+endif::backend-html5[]
+
 [colophon%notitle%nonfacing]
 == Colophon
 
@@ -1567,7 +1578,7 @@ Mine has two 24-core CPUs and 128 GB RAM.
 
 [#image-racked-server]
 .DIY rackmount server attached to garage ceiling. It's fun to look at and is out of the way, but I need a ladder for maintenance and it weighs about 50lbs.
-image::racked-server.jpg[]
+image::racked-server.jpg[align="center"]
 
 The fans are _way_ louder than a desktop, especially when it is under load.
 It is supposed to have decent ventilation, temperature and humidity regulation yet has so far been extremely hardy even below freezing and above 100°F for extended periods of time.

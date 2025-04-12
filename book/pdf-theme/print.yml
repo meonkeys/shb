@@ -41,3 +41,8 @@ link:
 
 toc:
   h2-font-style: bold
+
+image:
+  caption:
+    align: inherit
+    text-align: center
