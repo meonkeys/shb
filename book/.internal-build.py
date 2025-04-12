@@ -99,5 +99,5 @@ for arg in args:
             subprocess.run(['epubcheck', epubOutput], check=False)
 
 toUid = os.environ['BUILD_OUTPUT_UID']
-toGid = os.environ['BUILD_OUTPUT_UID']
+toGid = os.environ['BUILD_OUTPUT_GID']
 subprocess.run(['chown', '-R', f'{toUid}:{toGid}', '.'])
