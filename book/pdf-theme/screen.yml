@@ -9,3 +9,8 @@ footer:
   recto:
     center:
       content: '{chapter-title}'
+
+image:
+  caption:
+    align: inherit
+    text-align: center
