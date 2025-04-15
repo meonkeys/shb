@@ -12,7 +12,3 @@ In other news:
 
 * We're working on a German translation 🇩🇪. ETA September.
 * I made a conscious effort to use zero exclamation marks in this post but believe me, I am _stoked_.
-
----
-
-I also emailed this to subscribers and [posted it on Gumroad](https://meonkeys.gumroad.com/p/steadfast-self-hosting-evergreen).
