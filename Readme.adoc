@@ -7,6 +7,8 @@ image::pelican/website/theme/static/media/book-cover.png[align="center",alt="Boo
 
 _Steadfast_ primarily targets aspiring self-hosters looking for a quick and reliable method to get started.
 
+== 📖 Get the book
+
 Please https://selfhostbook.com/buy/[buy] or <<how_to_build,build>> a <<book_formats,nicely-formatted copy>> of the book for your reading pleasure.
 You may also https://selfhostbook.com/buy/#donations[donate] to support my efforts.
 
