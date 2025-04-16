@@ -22,8 +22,9 @@ When we communicate with each other, we promise to:
 * Not spam, stay on-topic, and gracefully/calmly accept feedback on same.
 * Follow the [SeaGL code of conduct](https://seagl.org/code_of_conduct).
 
-We have a lot of [i18n and L10n](https://en.wikipedia.org/wiki/Internationalization_and_localization) work to do.
-We currently only use English.
+!!! note "English only"
+    Sorry, we have a lot of [i18n and L10n](https://en.wikipedia.org/wiki/Internationalization_and_localization) work to do.
+    We currently only support written and spoken English.
 
 ### Terms of Service
 

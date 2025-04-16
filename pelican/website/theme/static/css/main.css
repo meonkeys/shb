@@ -141,3 +141,34 @@ h3:hover a.headerlink, h4:hover a.headerlink {
 code {
     font-size: +1.3em;
 }
+
+.admonition {
+  padding: 0 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.admonition-title {
+  font-weight: bold;
+  text-align: left;
+}
+
+.admonition.note, .admonition.info, .admonition.tips {
+  color: #1d6fa5;
+  background-color: #a0cfee;
+  border-color: #3498db;
+}
+
+.admonition.warning, .admonition.warn, .admonition.important {
+  color: #a85913;
+  background-color: #f3c195;
+  border-color: #e67e22;
+}
+
+.admonition.danger, .admonition.critical {
+  color: #bf2718;
+  background-color: #f5b4ae;
+  border-color: #e74c3c;
+}

@@ -93,6 +93,7 @@ MARKDOWN = {
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
         'markdown.extensions.toc': {'permalink': True},
+        'markdown.extensions.admonition': {},
     },
     'output_format': 'html5',
 }
