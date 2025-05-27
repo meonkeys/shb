@@ -76,7 +76,7 @@ https://github.com/meonkeys/print-this/commit/91e31471fdb848c2ff8ab8f2fc31c5adcf
 
 Unfortunately for me, [.line-through]#URLs and# inline code spans are also hyphenated.
 
-See https://asciidoctor.zulipchat.com/#narrow/stream/288690-users.2Fasciidoctor-pdf/topic/.E2.9C.94.20In-line.20hyphen.20overrides.20for.20.22Special.22.20text.3F[this chat thread] and https://github.com/asciidoctor/asciidoctor-pdf/pull/2513[this patch] (merged on May 26, 2024).
+See https://asciidoctor.zulipchat.com/#narrow/stream/288690-users.2Fasciidoctor-pdf/topic/.E2.9C.94.20In-line.20hyphen.20overrides.20for.20.22Special.22.20text.3F[this chat thread], https://github.com/asciidoctor/asciidoctor-pdf/issues/1805[this closed issue], and https://github.com/asciidoctor/asciidoctor-pdf/pull/2513[this patch] (merged on May 26, 2024).
 
 [#am64_detail]
 == ℹ️ am64: add _Cross references_ to print PDF
