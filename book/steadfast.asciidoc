@@ -142,8 +142,9 @@ No keynotes, lots of shared power strips and a few friends that had gotten roped
 We had chosen a Friday to possibly attract students while the campus was open and a Saturday to make the second day easy for people whose jobs wouldn't support their attendance during the work week.
 The event was and remains both free to attend and open to everyone.
 
-Adam showed up to our first event with a small pile of "`print on demand`" hats and shirts with our brand new logo (a seagull of course.)
-Talk selection was, "`if you want to do a talk, do a talk.`" Adam gave some great intro talks on Git and Hadoop and I gave a policy talk and community organizing talk.
+Adam showed up to our first event with a small pile of "`print on demand`" hats and shirts with our brand new logo (a seagull of course).
+Talk selection was, "`if you want to do a talk, do a talk.`"
+Adam gave some great intro talks on Git and Hadoop and I gave a policy talk and community organizing talk.
 We hadn't written it down yet, but SeaGL was destined to become a conference for beginners and experts, for coders and policy nerds and for talks about the ecosystem; the flaws, the potential and the opportunities for partnership with other efforts to empower people.
 
 After that chaotic first edition, we solidified that we wanted SeaGL to be for everyone, but especially for people who were looking for a way into open source in the diverse, expensive, and tech-heavy Seattle area.
