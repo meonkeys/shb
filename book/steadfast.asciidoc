@@ -118,7 +118,8 @@ toc::[]
 
 == Foreword
 
-Before I started working in open source in 2006, I was working as a community organizer in Massachusetts. I was very well acquainted with how a lack of access to information or not having the "`real`" instruction manual keeps people from having a say in how they live their lives. As a community organizer, I taught people to lobby.
+Before I started working in open source in 2006, I was working as a community organizer in Massachusetts.
+I was very well acquainted with how a lack of access to information or not having the "`real`" instruction manual keeps people from having a say in how they live their lives. As a community organizer, I taught people to lobby.
 Our organization invited people to work with legislators to draft laws that would address their needs and make their lives better.
 We taught people to fundraise and we taught them how to organize themselves and their neighbors.
 And then everything started to move online and important conversations about how we should protect the vulnerable and empower the next generation started happening through our computers.
@@ -402,8 +403,7 @@ I'm most proud of my family, growing https://mifos.org[Mifos], founding https://
 
 I've been running my own services for decades.
 I started with a blog and photo album running on a buddy's machine.
-The feeling of freedom and control was exciting and it complemented my effec­tiveness at work, so I kept on, running 
-many of my own services, although rarely on my own hardware.
+The feeling of freedom and control was exciting and it complemented my effectiveness at work, so I kept on, running many of my own services, although rarely on my own hardware.
 
 Once I had a family, our data storage and capability needs increased.
 A simple network drive and file sync were no longer enough.
