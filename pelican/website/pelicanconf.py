@@ -6,7 +6,7 @@ SITEURL = ""
 
 PATH = "content"
 
-TIMEZONE = 'US/Pacific'
+TIMEZONE = 'America/Los_Angeles'
 
 # I don't intend to post too often.
 DEFAULT_DATE_FORMAT = '%B %Y'
