@@ -35,7 +35,7 @@ If your admin computer is Ubuntu 22.04 LTS and you get an error that the `ufw` m
 
 ## Fix for US/Pacific timezone error
 
-If `timedatectl set-timezone` fails during `provision.sh`, you may be using an invalid timezone. I've specifically seen `US/Pacific` fail. If that's your timezone, use `America/Los_Angeles` instead. I believe these timezone names recently.
+If `timedatectl set-timezone` fails during `provision.sh`, you may be using an invalid timezone. I've specifically seen `US/Pacific` fail. If that's your timezone, use `America/Los_Angeles` instead. I believe these timezone names recently changed.
 
 ## Missing advanced Ansible version checks on macOS
 
