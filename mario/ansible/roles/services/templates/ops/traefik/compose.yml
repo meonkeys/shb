@@ -4,6 +4,9 @@ services:
   reverse-proxy:
     image: traefik:v3.1
     environment:
+      # Hardcode a region here so Traefik can set up Let’s Encrypt HTTPS encryption certs.
+      # Without this, Route53 tells Traefik: "error, Invalid Configuration: Missing Region".
+      AWS_REGION: us-east-1
       AWS_ACCESS_KEY_ID: "{{ lookup('env', 'R53_DNS_API_KEY') }}"
       AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'R53_DNS_API_SECRET') }}"
       DUCKDNS_TOKEN: "{{ lookup('env', 'DUCKDNS_TOKEN') }}"
