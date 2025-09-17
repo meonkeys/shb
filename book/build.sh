@@ -40,6 +40,7 @@ BUILD_GIT_BRANCH="$(git branch --show-current || echo FIXME)"
 BUILD_GIT_TAG="$(git describe --tags --abbrev=0 || echo FIXME)"
 # standard or premium - only applies to print PDF
 BUILD_PRINT_QUALITY="${SHB_FORCE_PRINT_QUALITY:-standard}"
+DOCKER_TAG=shb-asciidoctor
 
 if [[ "$OSTYPE" =~ linux-gnu ]]; then
     BUILD_OS_RELEASE="$(lsb_release --short --description || echo FIXME)"
@@ -53,7 +54,7 @@ echo '🚢	build image'
 cd "$SCRIPT_DIR"
 # discard container checksum
 docker build \
-    --tag shb-asciidoctor \
+    --tag $DOCKER_TAG \
     --build-arg WORK_DIR="$WORK_DIR" \
     --file .Dockerfile \
     --quiet \
@@ -75,7 +76,7 @@ docker run \
     --env BUILD_PRINT_QUALITY="$BUILD_PRINT_QUALITY" \
     --env BUILD_OUTPUT_UID="$UID" \
     --env BUILD_OUTPUT_GID="$GID" \
-    shb-asciidoctor \
+    $DOCKER_TAG \
     "$@"
 
 echo "🏗️	done (${SECONDS}s elapsed)"
