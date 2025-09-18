@@ -83,6 +83,10 @@ The book is (C)2024-2025 Adam Monsen. Some rights reserved. License is https://c
 
 mario is (C)2023-2025 Adam Monsen. License is https://www.gnu.org/licenses/agpl-3.0.html[GNU Affero General Public License] as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This notice also appears in `mario/Readme.md` and source code.
 
+Markdeep is (C)2015-2019 Morgan McGuire.
+Markdeep includes highlight.js, which is (C)2006 Ivan Sagalaev.
+Both use variants of the https://casual-effects.com/markdeep/#license[BSD license].
+
 == 🗨️ Feedback
 
 Please https://selfhostbook.com/contact/[send me feedback]!
