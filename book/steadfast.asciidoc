@@ -1617,7 +1617,8 @@ Your users will have their own computers and mobile devices (their _clients_).
 Maintain a couple of different clients so you have comparable environments to better help your users.
 
 (((dogfooding)))
-TIP: Be a user of the services you self-host.
+[TIP]
+Be a user of the services you self-host.
 This is _dogfooding_.
 Dogfooding keeps you honest and helps you empathize with others.
 
