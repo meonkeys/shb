@@ -112,14 +112,6 @@ See "EPUB" → "Kindle" in `Readme.adoc` for all book format quality rankings.
 [#am67_detail]
 == ℹ️ am67: more resilient, secure book build
 
-`sudo book/build.sh` fails on Linux at `addgroup` failure - The group `root` already exists.
-This is documented in `book/Readme.md` but is still annoying and unnecessary.
-
-Even as non-root, building the books appears to fail on Ubuntu 22.04 LTS unless the `docker-buildx` package is installed.
-
-The main thing making `book/build.sh` brittle is that it's trying to be more secure by matching the non-root host user with an in-container non-root user.
-Does this appreciably help security?
-I don't know.
-If it doesn't, we should just collapse `book/.Dockerfile` and `book/.Dockerfile.insecure`, use `root`, and simplify `book/build.sh`.
+Building the books appears to fail on Ubuntu 22.04 LTS unless the `docker-buildx` package is installed.
 
 We should also explore/recommend https://docs.docker.com/engine/security/rootless/[rootless Docker] and https://docs.docker.com/engine/security/userns-remap/[user namespaces] when we seek to improve `book/build.sh`.
