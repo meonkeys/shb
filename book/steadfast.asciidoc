@@ -3725,14 +3725,14 @@ Specialists in computer science, security, administration, networking and so on 
   Full control of your data. For example, having original copies of your files.
 ((deploy))::
   Prepare a service for use. Typically involves building or copying files before a service is started.
-((dogfooding))::
-  Being a user of something you also created and/or maintain. "`Eat your own dogfood.`"
 ((DHCP))::
   Dynamic Host Configuration Protocol. This is one way computers get IP addresses and related networking settings.
 ((DIY))::
   Do it yourself. Said of activities involving some amount of learning and tinkering you'd otherwise pay for. Cooking, for example. Also: self-hosting.
 ((DNS))::
   Domain Name System. Maps domain names to IP addresses.
+((dogfooding))::
+  Being a user of something you also created and/or maintain. "`Eat your own dogfood.`"
 ((domain name))::
   How a server, service, or group of services are identified, e.g. `example.com`.
 ((DRM))::
@@ -3747,10 +3747,10 @@ Specialists in computer science, security, administration, networking and so on 
   Verb: to split one software project into two. Noun: a derivative software work. The fork diverges from the original (otherwise it would simply be a copy). One or many software projects may succeed the original. Forking software is a useful and common activity.
 ((FOSS))::
   Free and open-source software. An acronym designed to unite the goals of the FSF and the OSI.
-((FSF))::
-  Free Software Foundation. They strongly defend the "`F`" in FOSS.
 ((frontend))::
   The UI for a system or service.
+((FSF))::
+  Free Software Foundation. They strongly defend the "`F`" in FOSS.
 ((full-disk encryption))::
   When an entire storage area is cryptographically protected.
 ((GB))::
@@ -3759,10 +3759,10 @@ Specialists in computer science, security, administration, networking and so on 
   Used with a wink in this text because https://en.wikipedia.org/wiki/Project_management_triangle[typically we must pick two].
 ((Good Thing))::
   A hand-wavy way of saying something is self-evidently wonderful.
-((groupware))::
-  Software for group collaboration. Loosely: mail, calendar, and contacts. Sometimes includes collborative editing of office documents and spreadsheets.
 ((GPU))::
   Graphics processing unit. Originally intended for graphics. Found to be useful for many specialized compute workloads including transcoding video.
+((groupware))::
+  Software for group collaboration. Loosely: mail, calendar, and contacts. Sometimes includes collborative editing of office documents and spreadsheets.
 ((GUI))::
   Graphical user interface.
 ((HDD))::
@@ -3818,14 +3818,14 @@ OS::
   Operating system.
 ((OSI))::
   Open Source Initiative. More concerned with the "`OSS`" of FOSS.
+((partition))::
+  Delineated section of a HDD or block storage, formatted with a filesystem such as ext4 or ZFS.
 ((PHP))::
   PHP: Hypertext Processor. Programming language built for the web.
 ((PoE))::
   Power over ethernet. Utilizes an ethernet cable for electricity as well as data.
 ((port))::
   Along with an IP address, a number used to connect to a service. Reserved port numbers such as 80 for HTTP are listed in `/etc/services`.
-((partition))::
-  Delineated section of a HDD or block storage, formatted with a filesystem such as ext4 or ZFS.
 ((port forward))::
   Router configuration to send traffic for a particular port to a computer inside a LAN.
 ((process))::
@@ -3864,10 +3864,10 @@ OS::
   Accepting encrypted traffic and passing along unencrypted traffic. Act performed by Traefik reverse proxy in a mario-provisioned server. More accurately and less often referred to as "`TLS termination`". Actual SSL is deprecated.
 ((sysadmin))::
   Portmanteau of "`systems administrator`". A party responsible for the upkeep of a computer system.
-((threat model))::
-  Analysis of risks and defenses of digital assets.
 ((TB))::
   Terabyte. Like GB, can be either base-10 or base-2, so: 1,000^4^ (1,000,000,000,000) bytes for HDDs and 1,024^4^ (1,099,511,627,776) bytes for RAM.
+((threat model))::
+  Analysis of risks and defenses of digital assets.
 ((TLD))::
   Top-level domain. For "`example.com`", "`.com`" is the TLD.
 ((UI))::
@@ -3876,10 +3876,10 @@ OS::
   Uninterruptible power supply. A battery that sits between your server and an outlet, often with extra features such as a power outage alarm or surge suppressor.
 ((UX))::
   User experience. The nature of interaction between a user and a system they are using. Includes ease of use and steps involved to complete a task. Often considered along with user interface and written as "`UI/UX`".
-((volume))::
-  Docker facility to mount a folder on the server to a folder inside a container. This is a common means of persisting container data that would otherwise be ephemeral.
 ((VM))::
   Virtual machine. OS isolation technique simulating nearly all aspects of hardware including power, input, and output.
+((volume))::
+  Docker facility to mount a folder on the server to a folder inside a container. This is a common means of persisting container data that would otherwise be ephemeral.
 ((VPN))::
   Virtual private network. Useful to "`teleport home`" and behave (from a networking perspective) as if you are inside your home LAN.
 ((WAN))::
