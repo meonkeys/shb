@@ -2514,7 +2514,10 @@ Nextcloud, Jellyfin, and Wallabag have mobile apps and integrations, and I use t
 
 The server-side commands for managing services are standardized: You'll see the pattern `dc SERVICE ACTION ARGS` repeated many times.
 
-// this forced page break was originally just to improve the print PDF layout, but I find it doesn't hurt the screen PDF layout so I don't use an ifdef::shb-printPDF[]
+// 📑 SERVICES_FORCED_PAGEBREAKS
+// Force new page for each service in Services (Dienste). These were originally
+// just to improve the print PDF layout, but I find it doesn't hurt the screen
+// PDF layout so I let it apply to both.
 
 <<<
 
@@ -2549,6 +2552,8 @@ Run `dc nextcloud pull && dc nextcloud up -d` on your server to upgrade and repl
 ==== Issues
 
 See <<Various issues>>.
+
+// see SERVICES_FORCED_PAGEBREAKS
 
 <<<
 
@@ -2623,6 +2628,8 @@ To see the Nextcloud-managed media files in Jellyfin, add two media libraries:
 . Choose content type "`Movies`", click the "`+`" icon next to "`Folders`", and choose `/data/video`.
 . Choose content type "`Music`", click the "`+`" icon next to "`Folders`", and choose `/data/music`.
 
+// see SERVICES_FORCED_PAGEBREAKS
+
 <<<
 
 === Wallabag: save and read articles
@@ -2680,6 +2687,8 @@ Perhaps it is only necessary in special cases--I've only had to do it twice in a
 
 I want to be able to https://github.com/wallabag/wallabag/issues/679[share content with other Wallabag users, within Wallabag].
 
+// see SERVICES_FORCED_PAGEBREAKS
+
 <<<
 
 === Watchtower: service updater
@@ -2724,6 +2733,8 @@ You may experience an issue where a service is broken by Watchtower.
 If you suspect this is the case and you know when the service started breaking, try to correlate that with any upgrades appearing in `dc watchtower logs`.
 I avoid this by only using Watchtower for non-critical services.
 I don't let Watchtower auto-upgrade my Nextcloud service, for example.
+
+// see SERVICES_FORCED_PAGEBREAKS
 
 <<<
 
