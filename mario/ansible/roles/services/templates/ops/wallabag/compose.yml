@@ -1,5 +1,3 @@
-version: '3.5'
-
 services:
   app:
     image: wallabag/wallabag
@@ -22,11 +20,11 @@ services:
       - /data/wallabag/main:/var/www/wallabag/data
       - /data/wallabag/images:/var/www/wallabag/web/assets/images
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.wallabag-https.entrypoints=websecure"
-      - "traefik.http.routers.wallabag-https.rule=Host(`wallabag.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
-      - "traefik.http.routers.wallabag-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.wallabag-https.middlewares=lan-only"
+      traefik.enable: true
+      traefik.http.routers.wallabag-https.entrypoints: websecure
+      traefik.http.routers.wallabag-https.rule: Host(`wallabag.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)
+      traefik.http.routers.wallabag-https.tls.certresolver: myresolver
+      traefik.http.routers.wallabag-https.middlewares: lan-only
     networks:
       - wallabag
       - traefik_default

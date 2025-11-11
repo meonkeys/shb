@@ -1,18 +1,16 @@
-version: '3.5'
-
 services:
   web:
     build: ./custom
     environment:
       TZ: "{{ lookup('env', 'TZ') }}"
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.scratch-https.entrypoints=websecure"
-      - "traefik.http.routers.scratch-https.rule=Host(`scratch.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
-      - "traefik.http.routers.scratch-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.scratch-https.middlewares=lan-only"
+      traefik.enable: true
+      traefik.http.routers.scratch-https.entrypoints: websecure
+      traefik.http.routers.scratch-https.rule: Host(`scratch.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)
+      traefik.http.routers.scratch-https.tls.certresolver: myresolver
+      traefik.http.routers.scratch-https.middlewares: lan-only
       # hey watchtower, don't try to auto-update this custom-built container
-      - "com.centurylinklabs.watchtower.enable=false"
+      com.centurylinklabs.watchtower.enable: false
     networks:
       - traefik_default
     restart: unless-stopped

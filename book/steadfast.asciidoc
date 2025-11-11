@@ -1413,8 +1413,8 @@ services:
 services:
   app:
     labels:
-      - "traefik.http.routers.nc-https.entrypoints=websecure" <1>
-      - "traefik.http.routers.nc-https.rule=Host(`cloud.example.com`)" <2>
+      traefik.http.routers.nc-https.entrypoints: websecure <1>
+      traefik.http.routers.nc-https.rule: Host(`cloud.example.com`) <2>
 ----
 
 <1> Connect the `websecure` entrypoint with the `nc-https` router on the `app` service.
@@ -2445,8 +2445,6 @@ Create a file `compose.yml` in that folder, containing:
 .tiny test service config (🚀 server)
 [source%unbreakable#tiny-test-service-config,yaml]
 ----
-version: '3'
-
 services:
   test:
     image: alpine
@@ -2832,22 +2830,17 @@ Here's a `compose.yml` that'll work with mario to stand up https://localai.io[Lo
 .example LocalAI service config
 [source#example-localai-svc,yaml]
 ----
-version: '3.6'
-
 services:
   api:
-    image: quay.io/go-skynet/local-ai:latest
-    environment:
-      MODELS_PATH: /models
+    image: localai/localai:latest
     volumes:
       - /data/localai/models:/models:cached
-    command: ["/usr/bin/local-ai" ]
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.localai-https.entrypoints=websecure"
-      - "traefik.http.routers.localai-https.rule=Host(`localai.example.com`)"
-      - "traefik.http.routers.localai-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.localai-https.middlewares=lan-only"
+      traefik.enable: true
+      traefik.http.routers.localai-https.entrypoints: websecure
+      traefik.http.routers.localai-https.rule: Host(`localai.example.com`)
+      traefik.http.routers.localai-https.tls.certresolver: myresolver
+      traefik.http.routers.localai-https.middlewares: lan-only
     networks:
       - traefik_default
     restart: unless-stopped
@@ -2862,7 +2855,7 @@ This assumes your LAN uses 192.168.1.* addresses, and expects a corresponding la
 .label from Traefik configuration allowing only LAN access
 [source#lan-only-traefik-conf-line,yaml]
 ----
-"traefik.http.middlewares.lan-only.ipallowlist.sourcerange=192.168.1.0/24"
+traefik.http.middlewares.lan-only.ipallowlist.sourcerange: 192.168.1.0/24
 ----
 
 TIP: Use mario to provision your LocalAI service.

@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   reverse-proxy:
     image: traefik:v3.1
@@ -43,13 +41,13 @@ services:
       # For storing Let's Encrypt cert
       - /data/traefik/etc:/etc/traefik:rw
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.dashboard-https.entrypoints=websecure"
-      - "traefik.http.routers.dashboard-https.rule=Host(`traefik.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
-      - "traefik.http.routers.dashboard-https.service=api@internal"
-      - "traefik.http.routers.dashboard-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.dashboard-https.tls.domains[0].main={{ lookup('env', 'MARIO_DOMAIN_NAME') }}"
-      - "traefik.http.routers.dashboard-https.tls.domains[0].sans=*.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}"
-      - "traefik.http.routers.dashboard-https.middlewares=lan-only"
-      - "traefik.http.middlewares.lan-only.ipallowlist.sourcerange={{ lookup('env', 'LAN_ONLY_ALLOWED') }}"
+      traefik.enable: true
+      traefik.http.routers.dashboard-https.entrypoints: websecure
+      traefik.http.routers.dashboard-https.rule: Host(`traefik.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)
+      traefik.http.routers.dashboard-https.service: api@internal
+      traefik.http.routers.dashboard-https.tls.certresolver: myresolver
+      traefik.http.routers.dashboard-https.tls.domains[0].main: {{ lookup('env', 'MARIO_DOMAIN_NAME') }}
+      traefik.http.routers.dashboard-https.tls.domains[0].sans: "*.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}"
+      traefik.http.routers.dashboard-https.middlewares: lan-only
+      traefik.http.middlewares.lan-only.ipallowlist.sourcerange: {{ lookup('env', 'LAN_ONLY_ALLOWED') }}
     restart: unless-stopped

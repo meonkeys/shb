@@ -1,5 +1,3 @@
-version: '3.5'
-
 services:
   app:
     image: nextcloud:stable
@@ -14,17 +12,17 @@ services:
       OVERWRITECLIURL: https://cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}
       TRUSTED_PROXIES: 172.18.0.0/16
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.nc-https.entrypoints=websecure"
-      - "traefik.http.routers.nc-https.rule=Host(`cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
-      - "traefik.http.routers.nc-https.tls.certresolver=myresolver"
-      - "traefik.http.routers.nc-https.middlewares=nc-head,nc-redir,lan-only"
-      - "traefik.http.middlewares.nc-head.headers.stsSeconds=155520011"
-      - "traefik.http.middlewares.nc-head.headers.stsIncludeSubdomains=true"
-      - "traefik.http.middlewares.nc-head.headers.stsPreload=true"
+      traefik.enable: true
+      traefik.http.routers.nc-https.entrypoints: websecure
+      traefik.http.routers.nc-https.rule: Host(`cloud.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)
+      traefik.http.routers.nc-https.tls.certresolver: myresolver
+      traefik.http.routers.nc-https.middlewares: nc-head,nc-redir,lan-only
+      traefik.http.middlewares.nc-head.headers.stsSeconds: 155520011
+      traefik.http.middlewares.nc-head.headers.stsIncludeSubdomains: true
+      traefik.http.middlewares.nc-head.headers.stsPreload: true
       # These are required for groupware (calendar, contacts, tasks)
-      - "traefik.http.middlewares.nc-redir.redirectregex.regex=/.well-known/(card|cal)dav"
-      - "traefik.http.middlewares.nc-redir.redirectregex.replacement=/remote.php/dav/"
+      traefik.http.middlewares.nc-redir.redirectregex.regex: /.well-known/(card|cal)dav
+      traefik.http.middlewares.nc-redir.redirectregex.replacement: /remote.php/dav/
     volumes:
       - /data/nextcloud/root:/var/www/html:rw
       - /data/shared/media/video:/data/video:rw

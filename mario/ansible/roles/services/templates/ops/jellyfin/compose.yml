@@ -1,5 +1,3 @@
-version: '3.5'
-
 services:
   app:
     image: linuxserver/jellyfin
@@ -8,11 +6,11 @@ services:
       PGID: "{{ jellyfin_gid }}"
       TZ: "{{ lookup('env', 'TZ') }}"
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.jellyfin-https.entrypoints=websecure"
-      - "traefik.http.routers.jellyfin-https.rule=Host(`jellyfin.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)"
-      - "traefik.http.routers.jellyfin-https.middlewares=lan-only"
-      - "traefik.http.routers.jellyfin-https.tls.certresolver=myresolver"
+      traefik.enable: true
+      traefik.http.routers.jellyfin-https.entrypoints: websecure
+      traefik.http.routers.jellyfin-https.rule: Host(`jellyfin.{{ lookup('env', 'MARIO_DOMAIN_NAME') }}`)
+      traefik.http.routers.jellyfin-https.middlewares: lan-only
+      traefik.http.routers.jellyfin-https.tls.certresolver: myresolver
     volumes:
       - /data/shared/media/video:/data/video:ro
       - /data/shared/media/music:/data/music:ro

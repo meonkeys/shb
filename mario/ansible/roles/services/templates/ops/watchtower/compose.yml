@@ -1,5 +1,3 @@
-version: '3'
-
 # Watchtower fetches updated Docker images and automatically restarts containers
 # Documentation: https://containrrr.dev/watchtower/
 services:
