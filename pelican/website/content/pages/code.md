@@ -4,7 +4,8 @@ menu_order_key: 1
 
 ### Source code
 
-See <https://github.com/meonkeys/shb>
+* [Original English version](https://github.com/meonkeys/shb)
+* [German translation](https://github.com/meonkeys/shb-de)
 
 ### Install mario
 
