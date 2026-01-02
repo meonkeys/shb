@@ -1,1 +1,0 @@
-To create `../WAN-to-LAN-traffic.svg`, open `source.md.html` in a web browser, then manually save / munge the svg code into `../WAN-to-LAN-traffic.svg` below the `<defs>` element. Keep the `<defs>` element as-is.
