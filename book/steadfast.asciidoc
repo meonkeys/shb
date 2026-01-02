@@ -3411,7 +3411,7 @@ Here are a few ideas for when you get stuck.
 Don't expect much from these, although you may get lucky from time to time.
 ** https://reddit.com/r/selfhosted/[selfhosted subreddit]
 ** https://reddit.com/r/homelab/[homelab subreddit]
-** https://matrix.to/#/#Nextcloud:matrix.org[Nextcloud chat]
+** https://matrix.to/#/#nextcloud:matrix.org[Nextcloud chat]
 ** https://matrix.to/#/#selfhosted:matrix.org[self-hosted chat]
 * Hire me to help you out.
 
