@@ -6,9 +6,9 @@ menu_order_key: 1
 
 Includes beautifully formatted EPUB, A4 PDF, and HTML versions of the book.
 
-[Original English version - USD 10.00](https://meonkeys.gumroad.com/l/shb){:target="_blank"}
+[Original English version: USD 10.00](https://meonkeys.gumroad.com/l/shb){:target="_blank"}
 
-[German translation - USD 10.00](https://meonkeys.gumroad.com/l/shb-de){:target="_blank"}
+[German translation: USD 10.00](https://meonkeys.gumroad.com/l/shb-de){:target="_blank"}
 
 The price is automatically adjusted with [purchasing power parity](https://gumroad.com/help/article/327-purchasing-power-parity){:target="_blank"}.
 
