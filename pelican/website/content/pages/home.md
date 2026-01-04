@@ -83,3 +83,6 @@ You can follow Adam on <a rel="me" href="https://fosstodon.org/@meonkeys">Mastod
 * German Ebook bundle (EPUB, HTML, PDF)
     * ISBN: `979-8-9908615-5-8`
     * commit: `5d497e2c`
+* German paperback
+    * ISBN: `979-8-9908615-4-1`
+    * commit: `5d497e2c`
