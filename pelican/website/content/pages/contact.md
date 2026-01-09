@@ -1,17 +1,18 @@
 title: 📫 Contact
-modified: 2024-07-31
+date: 2024-02-29
+modified: 2026-01-09
 menu_order_key: 1
 
 Here's how to keep in touch.
 These methods/resources exist to supplement (not substitue for) reading the book.
 
-### Subscribe to updates
+### Subscription channels
 
-[Join my mailing list](https://meonkeys.gumroad.com).
+[✉️ Mailing list](https://meonkeys.gumroad.com)
 
-[🗞️ News feed link](/feeds/all.atom.xml).
+[🗞️ Atom news feed](/feeds/all.atom.xml)
 
-<a rel="me" href="https://fosstodon.org/@meonkeys">Follow Adam on Mastodon</a>.
+<a rel="me" href="https://fosstodon.org/@meonkeys">🐘 Mastodon microblog</a>
 
 ### Email the author
 
