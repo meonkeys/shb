@@ -1,7 +1,7 @@
 title: 🇩🇪 Deutsch
 category: announcement
 date: 2026-01-02
-modified: 2026-01-04
+modified: 2026-01-09
 
 The German translation is available for purchase in [ebook](https://meonkeys.gumroad.com/l/shb-de) and [paperback](https://www.lulu.com/shop/adam-monsen-and-fiona-burkart/zuverlässiges-self-hosting/paperback/product-jej7qjn.html).
 Happy new year!
@@ -13,3 +13,12 @@ If you want the ebook and cannot afford it, [contact me]({filename}/pages/contac
 The $25 paperback is a 6" x 9" (US Trade) paperback full-color print with durable matte cover, available direct from the printer now, and eventually available most places you can buy books (it takes a while for Lulu's "global distribution" to kick in).
 
 [![German edition cover]({static}/images/cover-de_DE.jpg){:style="max-width: 80%"}](https://meonkeys.gumroad.com/l/shb-de)
+
+### Table of contents
+
+See [📑 Content]({filename}/news/toc.md).
+Chapters in the German translation match one to one.
+
+### Sample pages
+
+See screenshots on the [ebook product page](https://meonkeys.gumroad.com/l/shb-de).

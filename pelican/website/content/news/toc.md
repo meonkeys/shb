@@ -1,7 +1,7 @@
 title: 📑 Content
 category: announcement
 date: 2024-01-12
-modified: 2024-05-16
+modified: 2026-01-09
 
 ### Table of contents
 
@@ -43,3 +43,7 @@ modified: 2024-05-16
 
 1. **Exercises**
 : Applied usage ideas for a group of readers.
+
+### Sample pages
+
+See screenshots on the [ebook product page](https://meonkeys.gumroad.com/l/shb).
