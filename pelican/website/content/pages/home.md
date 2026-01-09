@@ -1,6 +1,6 @@
 title: 📖 Home
 date: 2024-02-29
-modified: 2026-01-04
+modified: 2026-01-09
 URL:
 save_as: index.html
 menu_order_key: 0
@@ -66,24 +66,26 @@ You can follow Adam on <a rel="me" href="https://fosstodon.org/@meonkeys">Mastod
 
 ### Identifiers
 
-* Standard quality paperback
+Including canonical links to purchase from recommended distributors.
+
+* [Standard quality paperback](https://www.lulu.com/shop/adam-monsen-and-lenny-wondra/steadfast-self-hosting/paperback/product-w4z5ewj.html)
     * ISBN: `979-8-9908615-1-0`
     * Library of Congress Control Number: `2024911437`
     * commit: `b0eecd5a`
-* Premium quality paperback
+* [Premium quality paperback](https://www.lulu.com/shop/adam-monsen-and-lenny-wondra/steadfast-self-hosting/paperback/product-m24rye5.html)
     * ISBN: `979-8-9908615-3-4`
     * commit: `b0eecd5a`
-* EPUB
+* [EPUB](https://meonkeys.gumroad.com/l/shb)
     * ISBN: `979-8-9908615-0-3`
     * commit: `d57d4275`
-* PDF
+* [PDF](https://meonkeys.gumroad.com/l/shb)
     * ISBN: `979-8-9908615-2-7`
     * commit: `d57d4275`
-* HTML
+* [HTML](https://meonkeys.gumroad.com/l/shb)
     * commit: `d57d4275`
-* German Ebook bundle (EPUB, HTML, PDF)
+* [German Ebook bundle (EPUB, HTML, PDF)](https://meonkeys.gumroad.com/l/shb-de)
     * ISBN: `979-8-9908615-5-8`
     * commit: `5d497e2c`
-* German paperback
+* [German paperback](https://www.lulu.com/shop/adam-monsen-and-fiona-burkart/zuverl%C3%A4ssiges-self-hosting/paperback/product-jej7qjn.html)
     * ISBN: `979-8-9908615-4-1`
     * commit: `5d497e2c`

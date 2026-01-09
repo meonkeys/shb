@@ -1,4 +1,5 @@
 title: 💵 Buy
+date: 2024-02-29
 modified: 2026-01-02
 menu_order_key: 1
 
@@ -27,6 +28,8 @@ Perfect for your offline reading pleasure.
 If you're not sure which one to get, go standard.
 If you want the best there is, go premium.
 The premium version promises better ink for [higher contrast and deeper saturation]({filename}/news/paperback.md), and less variance between prints/printers.
+
+[German translation: USD 25.00](https://www.lulu.com/shop/adam-monsen-and-fiona-burkart/zuverl%C3%A4ssiges-self-hosting/paperback/product-jej7qjn.html){:target="_blank"}
 
 ### Hardcover
 
