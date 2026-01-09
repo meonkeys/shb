@@ -4,6 +4,9 @@
 <h2>🗞️ News</h2>
 {% endblock %}
 
+<div style="text-align: right;">
+    <a class="feed-subscribe-link" href="/feeds/all.atom.xml">🗞️ News feed link</a>
+</div>
 
 {% for article in articles_page.object_list %}
     <article>

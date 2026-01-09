@@ -9,7 +9,7 @@ These methods/resources exist to supplement (not substitue for) reading the book
 
 [Join my mailing list](https://meonkeys.gumroad.com).
 
-[Subscribe to news posted on this website](https://selfhostbook.com/feeds/all.atom.xml).
+[🗞️ News feed link](/feeds/all.atom.xml).
 
 <a rel="me" href="https://fosstodon.org/@meonkeys">Follow Adam on Mastodon</a>.
 
