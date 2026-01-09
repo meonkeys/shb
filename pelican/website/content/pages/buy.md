@@ -59,7 +59,7 @@ I wish I could put it at the top, but it's too volatile and difficult to exchang
 | PayPal   | haircut@gmail.com                  |
 | Venmo    | haircut@gmail.com or @meonkeys     |
 | Bitcoin  | 18XjpBwNccX9cvC2qiUgXLeeyY1jj3g5QW |
-| Peercoin | PRHQk8tcyvBmgkm9nfbLg7LJoZ48v8nciB |
+| Peercoin | PHmoZs42PK4gn4nnsZRjiTtaDtgtxhHTQb |
 
 I sincerely appreciate these gifts.
 I'm not a charity so these donations are not tax-deductible.
