@@ -1362,7 +1362,7 @@ Think:
 A ((reverse proxy)) sits in front of containers and directs traffic to the right service based on arbitrary rules.
 
 Say you've purchased the domain example.com and want to host Nextcloud at cloud.example.com and Jellyfin at jellyfin.example.com.
-Your sever uses a reverse proxy and a single IP address to direct incoming traffic to each of these services based on the hostname.
+Your server uses a reverse proxy and a single IP address to direct incoming traffic to each of these services based on the hostname.
 
 mario uses Traefik for its reverse proxy.
 
@@ -1628,7 +1628,7 @@ Dogfooding keeps you honest and helps you empathize with others.
 I use ((HDD))s (hard disk drives) for data storage, mainly as a cost-saving measure vs. public cloud storage or ((SSD))s (solid-state drives).
 The cost of public cloud ((block storage)) far exceeds the gigabyte-hour cost of my HDDs.
 I priced out one month of 5TB HDD block storage on AWS at $228.10.
-With ZFS I'm also taking a snapshot (bascially a full local backup) _every fifteen minutes_.
+With ZFS I'm also taking a snapshot (basically a full local backup) _every fifteen minutes_.
 One month's worth of hourly snapshots (the closest comparable I could find) is another $310.68 on AWS.
 That's $535.67 total, which is about what I spent on my drives.
 So I broke even in a month and the drives should last _years_.
@@ -2678,7 +2678,7 @@ The second line indicates necessary database migrations (schema and data updates
 This is idempotent, as database migrations should be.
 After the first run, subsequent runs output: `[OK] Already at the latest version`.
 
-It's unclear why thes migration is not automatically performed during an upgrade.
+It's unclear why this migration is not automatically performed during an upgrade.
 Perhaps it is only necessary in special cases--I've only had to do it twice in a few years.
 
 ===== Feature: Share with other users
@@ -3025,7 +3025,7 @@ Test configuring a mail server and sending an email at `/settings/admin` (Basic 
 
 Add users at `/settings/users`.
 
-Check logs for all containers related to Netcloud with `dc nextcloud logs -f`.
+Check logs for all containers related to Nextcloud with `dc nextcloud logs -f`.
 
 Check Nextcloud internal logs at `/settings/admin/logging` in the web UI or `/data/nextcloud/root/data/nextcloud.log` on the server.
 These include specific Nextcloud internal server messages and are often more useful to me than the container logs.
@@ -3522,7 +3522,7 @@ How might it be improved?
 . What are some pitfalls of self-hosting?
 . What is the future of self-hosting?
 . What is the ideal number of users to support with a single self-hosted server?
-. Is the _Steadfast_ method useful for larger groups, big families, church congregations, schools, businesses, and governements?
+. Is the _Steadfast_ method useful for larger groups, big families, church congregations, schools, businesses, and governments?
 Why or why not?
 . How might this book be adapted for:
 .. intermittent power
@@ -3772,7 +3772,7 @@ Specialists in computer science, security, administration, networking and so on 
 ((HDD))::
   Hard disk drive. Stores ones and zeros on spinning metal platters.
 ((homelab))::
-  A physical or conceptional space for do-it-yourself flexible systems administration leaning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ server (or "`personal cloud`") should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
+  A physical or conceptional space for do-it-yourself flexible systems administration learning and experimentation. A homelab is not quite what this book describes, it is more of an at-home hardware, software, and electronics maker-space. A _Steadfast_ server (or "`personal cloud`") should be nearly always online and useful--at least the user-facing part. Some self-hosters call this environment "`homeprod`". Far from this level of hair-splitting detail, I'll use "`homelab`" as a shortcut for "`self-hosting setup`" and/or "`homeprod`".
 ((host))::
   The computer where Docker containers run. Also called a "`server`" in this text.
 ((hostname))::
